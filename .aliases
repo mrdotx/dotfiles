@@ -1,0 +1,46 @@
+# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
+
+# Path:     ~/.aliases
+# User:     klassiker [mrdotx]
+# GitHub:   https://github.com/mrdotx/dotfiles
+
+# tools {{{
+alias cp='cp -i'                                    # confirm before overwriting something
+alias more='less'                                   # show file
+alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
+alias nf='neofetch'                                 # systeminformation
+
+alias rg='ranger'                                   # filemanager
+alias rs='sudo ranger'                              # filemanager root
+alias nb='newsboat -q'                              # rss reader
+alias we='weechat'                                  # irc chat
+alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
+alias cm='cmatrix -su 7'                            # matrix screensaver
+alias wt='curl -H "Accept-Language: de" wttr.in'    # weather
+alias sw='telnet towel.blinkenlights.nl'            # star wars
+# }}}
+
+# git {{{
+alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+# }}}
+
+# maintenance {{{
+alias ch='sudo systemctl --failed && sudo journalctl -p 3 -xb'
+alias up='yay -Syu'
+alias cc='yay -Yc && sudo paccache -rvk2'
+alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
+alias cu='ch && up'
+
+alias sy='cloudsync.sh'
+alias dm='delmetafiles.sh'
+alias hm='historymaintenance.sh'
+# }}}
+
+# ssh {{{
+alias pi='ssh hermes'
+alias pi2='ssh prometheus'
+alias p9='ssh p9'
+alias m3='ssh m3'
+alias firetv='ssh firetv'
+alias firetv4k='ssh firetv4k'
+# }}}

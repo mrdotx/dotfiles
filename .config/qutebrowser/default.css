@@ -1,0 +1,68 @@
+/* vim:fileencoding=utf-8:ft=css:foldmethod=marker
+
+   Path:     ~/.config/qutebrowser/default.css
+   User:     klassiker [mrdotx] 
+   GitHub:   https://github.com/mrdotx/dotfiles */
+
+/* base blocks */
+header,
+div,
+li,
+p,
+span,
+td,
+/* content blocks */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+section,
+summary,
+#content,
+.section,
+.global,
+.u-backgroundWhite
+ {
+  background-color: #191919 !important;
+/*  background-image: none !important; */
+  color: #cecece !important;
+}
+
+/* specific content (like quote) */
+strong {
+  background-color: #020202 !important;
+/*  background-image: none !important; */
+  color: #c5c4ed !important;
+}
+
+/* title */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: #191919 !important;
+}
+
+/* navigation */
+nav,
+#mainbar,
+#archnavbar,
+ {
+  background-color: #f94109 !important;
+}
+
+/* TODO not good, comment in git  */
+.blob-code span {
+  background-color: #191919 !important;
+}
+/* code in flask doc */
+.highlight span {
+  background-color: #296187 !important;
+}

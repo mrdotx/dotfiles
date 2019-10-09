@@ -1,0 +1,58 @@
+#!/bin/bash
+# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
+
+# Path:     ~/.config/sxiv/exec/key-handler
+# User:     klassiker [mrdotx]
+# GitHub:   https://github.com/mrdotx/dotfiles
+
+# rotate function {{{
+rotate() {
+    degree="$1"
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+        case "$(file -b -i "$file")" in
+        image/jpeg*) jpegtran -rotate "$degree" -copy all -outfile "$file" "$file" ;;
+        *)           mogrify  -rotate "$degree" "$file" ;;
+        esac
+    done
+}
+# }}}
+
+# flip function {{{
+flip() {
+    direction="$1"
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+        case "$(file -b -i "$file")" in
+        image/jpeg*) jpegtran -flip "$direction" -copy all -outfile "$file" "$file" ;;
+        *)           if [ "$direction" == "horizontal" ]; then
+                        mogrify -flop "$file"
+                     elif [ "$direction" == "vertical" ]; then
+                        mogrify -flip "$file"
+                     fi ;;
+        esac
+    done
+}
+# }}}
+
+# trash function {{{
+trash() {
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+        case "$(file -b -i "$file")" in
+        *) gio trash "$file" && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning ;;
+        esac
+    done
+}
+
+# keybindings {{{
+case "$1" in
+"C-e")          while read file; do urxvt -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
+"C-w")          while read file; do nitrogen --save --set-zoom-fill "$file" & done && notify-send "sxiv" "wallpaper changed" --icon=messagebox_info ;;
+"C-g")          tr '\n' '\0' | xargs -0 gimp & ;;
+"C-n")          tr '\n' '\0' | xargs -0 nomacs & ;;
+"C-comma")      rotate 270 ;;
+"C-period")     rotate  90 ;;
+"C-slash")      rotate 180 ;;
+"C-semicolon")  flip 'horizontal' ;;
+"C-apostrophe") flip 'vertical' ;;
+"C-d")          trash ;;
+esac
+# }}}

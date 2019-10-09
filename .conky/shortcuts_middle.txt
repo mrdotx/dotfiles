@@ -1,0 +1,68 @@
+${color1}st${color0}
+    ctrl+shift+y        paste from primary selection (middle mouse button)
+    ctrl+shift+c        copy from selected text to clipboard selection
+    ctrl+shift+v        paste from the clipboard selection
+    ctrl+[+,-,=]        zoom (grow, shrink, standard)
+    shift+[pg_up,pg_dn] Scrollback (mouse scroll)
+    alt+l               open url from rofi
+    alt+y               copy url to xclip
+    ctrl+t              paste the selected files and directories
+    ctrl+r              paste selected command from history
+    alt-c               cd into the selected directory
+
+${color1}Ranger - tab navigation${color0}
+    ctrl+n              create new tab
+    ctrl+w              close active tab
+    tab                 next tab
+    shift+tab           previous tab
+    alt+[1-9]           switch to tab 1...9
+
+${color1}Ranger - miscelleneous${color0}
+    ?                   show help menus
+    i                   show file information
+    r                   open file with
+    o                   change sort order
+    z                   change settings (zh show hidden files)
+    space               mark active file
+    t                   tag files
+    cw[a,A]             rename active file
+    /                   search files
+    n                   next hit from search
+    yy                  yank, copy file
+    dd                  move file
+    pp                  paste file
+    u                   show undo-functions
+    dD                  delete files
+
+${color1}tmux - general${color0}
+    ctrl+b              initiate command sequence
+    ?                   show active shortcuts
+    r                   reload config
+    d                   detach current session
+    s                   switch session
+    c                   create new window
+    &                   close active window
+    ,                   rename active window
+    l                   switch to last active window (marked as -)
+    p                   switch to previous window
+    n                   switch to next window
+    [0-9]               switch to window 1...9
+    " or shift+h        tile active window horizontally
+    % or shift+v        tile active window vertically
+    w                   show list of windows
+    &                   close active container
+    [←,↑,↓,→]           change active container
+    ctrl+[←,↑,↓,→]      change active container size
+    space               switch windows devision
+    {,}                 move active container left, right
+    !                   open active container in new window
+    [                   activate scroll-mode (arrow keys)
+
+
+
+
+
+
+
+
+

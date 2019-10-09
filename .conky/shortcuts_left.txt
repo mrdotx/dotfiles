@@ -1,0 +1,65 @@
+${color1}i3 - workspaces${color0}
+    super+[1-0]         switch to workspace 1...10
+    super+ctrl+[1-0]    move focused container to workspace 1...10
+    super+shift+[1-0]   move to workspace with focused to container 1...10
+    alt+tab             workspace back and forth
+    super+tab           workspace back and forth with container
+    super+ctrl+[←,→]    workspace (previous,next)
+
+${color1}i3 - windows|containers${color0}
+    super+ctrl+[↑,↓]    tile container (horizontally,vertically)
+    super+[←,→,↑,↓]     container focus (left,right,up,down)
+    super+alt+[←,→,↑,↓] resize window (shrink-,grow width,shrink-,grow height)
+    alt+space           toggle tiling/floating
+    super+space         change focus between tiling/floating windows
+    super+shift+s       toggle sticky
+    super+-             move currently focused window to scratchpad
+    alt+-               show the next scratchpad window or hide the focused
+
+${color1}i3 - system management${color0}
+    alt+f1              start program launcher (press and release super key)
+    ctrl+q              kill focused window
+    super+f             toggle fullscreen mode for focused container
+    super+shift+f       toggle fullscreen mode global
+    super+l             lock screen
+    super+shift+l       lock screen and suspend
+    ctrl+alt+x          kill X window
+    super+shift+r       restart i3 inplace (preserves layout/session
+    super+shift+e       exit i3 (log out from X session)
+    super+shift+d       dunst restart
+    super+t             compton stop
+    super+shift+t       compton start
+    super+/             show shortcuts in foreground (conky shortcutsforeground)
+    super+shift+/       show system monitor in background (conky vertical)
+
+${color1}i3 - multimedia keys${color0}
+    super+p             start rofi screen selection (screen key)
+    print               screenshot full screen
+    super+print         screenshot window
+    super+shift+print   screenshot selection
+
+${color1}i3 - applications${color0}
+    super+return        primary terminal (st)
+    super+shift+return  secondary terminal (urxvtc)
+    super+a             alsamixer
+    super+b             bmenu
+    super+c             cmus
+    super+e             vim
+    super+g             gimp
+    super+h             htop
+    super+i             inkscape
+    super+j             jameica
+    super+k             keepassxc
+    super+m             thunderbird
+    super+o             libreoffice
+    super+r             ranger
+    super+s             scribus
+    super+v             code-oss
+    super+w             secondary browser (firefox-development-edition)
+    super+shift+w       primary browser (qutebrowser)
+    super+z             filezilla
+    super+f2            pcmanfm
+    super+f3            pcmanfm (root)
+
+
+

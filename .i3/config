@@ -1,0 +1,264 @@
+# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
+
+# Path:     ~/i3/config
+# User:     klassiker [mrdotx]
+# GitHub:   https://github.com/mrdotx/dotfiles
+
+# basic definitions {{{
+set $mod Mod4
+set $modalt Mod1
+set $main eDP1
+set $hdmi HDMI2
+floating_modifier $mod
+focus_follows_mouse no
+mouse_warping none
+font xft:Source Code Pro 11
+default_border pixel 3
+default_floating_border normal
+hide_edge_borders none
+workspace_auto_back_and_forth yes
+for_window [urgent=latest] focus
+gaps inner 5
+gaps outer -2
+smart_gaps on
+smart_borders on
+# }}}
+
+# autostart applications {{{
+exec --no-startup-id nitrogen --restore; sleep 1; compton -b; screenlayout.sh
+exec --no-startup-id ksuperkey
+#exec --no-startup-id libinput-gestures
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id xautolock -detectsleep
+exec --no-startup-id unclutter --timeout 10
+#exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id polybar.sh
+# }}}
+
+# applications in floating mode {{{
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="Calculator"] floating enable border pixel 1
+for_window [title="Network Manager"] floating enable border pixel 1
+for_window [title="(?i)floating"] floating enable, resize set 1024 768, move position center
+for_window [title="File Transfer*"] floating enable
+for_window [class="Arandr"] floating enable sticky enable border normal, resize set 800 600, move position center
+for_window [class="GParted"] floating enable border normal
+for_window [class="Lightdm-settings"] floating enable
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Manjaro-hello"] floating enable
+for_window [class="Manjaro Settings Manager"] floating enable border normal
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Pamac-manager"] floating enable
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="Skype"] floating enable border normal
+for_window [class="Xfburn"] floating enable
+for_window [class="Gcolor3"] floating enable sticky enable
+for_window [class="gmic_qt"] floating enable
+# }}}
+
+# workspace names {{{
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+# }}}
+
+# workspace output {{{
+workspace $ws1 output $main $hdmi
+workspace $ws2 output $hdmi $main
+workspace $ws3 output $main $hdmi
+workspace $ws4 output $hdmi $main
+workspace $ws5 output $main $hdmi
+workspace $ws6 output $hdmi $main
+workspace $ws7 output $main $hdmi
+workspace $ws8 output $hdmi $main
+workspace $ws9 output $main $hdmi
+workspace $ws10 output $hdmi $main
+# }}}
+
+# open applications on specific workspaces (xprop) {{{
+assign [class="VirtualBox"] $ws2
+assign [class="code-oss"] $ws3
+assign [class="firefoxdeveloperedition"] $ws4
+assign [title="GIMP Startup"] $ws5
+assign [class="Gimp"] $ws5
+assign [class="Thunderbird"] $ws6
+assign [class="Inkscape"] $ws7
+assign [class="scribus"] $ws7
+assign [title="LibreOffice"] $ws8
+assign [class="libreoffice"] $ws8
+assign [class="Jameica"] $ws9
+assign [title="cmus"] $ws10
+assign [class="Kodi"] $ws10
+for_window [class="Kodi"] fullscreen
+# }}}
+
+# keybindings workspaces {{{
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+0 move container to workspace $ws10
+
+# move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+
+# workspace back and forth
+bindsym $modalt+Tab workspace back_and_forth
+bindsym $mod+Tab move container to workspace back_and_forth; workspace back_and_forth
+
+# navigate workspaces next/previous
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Ctrl+Right workspace next
+# }}}
+
+# keybindings windows/container {{{
+# split orientation
+bindsym $mod+Ctrl+Up split h;exec --no-startup-id notify-send 'i3' 'tile container horizontally'
+bindsym $mod+Ctrl+Down split v;exec --no-startup-id notify-send 'i3' 'tile container vertically'
+#bindsym $mod+Ctrl+Down split toggle
+
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Down move down
+
+# resize window
+bindsym $mod+$modalt+Left resize shrink width 10 px or 5 ppt
+bindsym $mod+$modalt+Right resize grow width 10 px or 5 ppt
+bindsym $mod+$modalt+Up resize shrink height 10 px or 5 ppt
+bindsym $mod+$modalt+Down resize grow height 10 px or 5 ppt
+
+# toggle tiling/floating
+bindsym $modalt+space floating toggle
+
+# change focus between tiling/floating windows
+bindsym $mod+space focus mode_toggle
+
+# toggle sticky
+bindsym $mod+Shift+s sticky toggle
+
+# move the currently focused window to the scratchpad
+bindsym $mod+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $modalt+minus scratchpad show
+# }}}
+
+# keybindings system managment {{{
+# start program launcher
+bindsym $modalt+F1 exec --no-startup-id rofi -show
+
+# kill focused window
+bindsym Ctrl+q kill
+
+# toggle fullscreen mode for the focused container or global
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle global
+
+# Lock screen or suspend
+bindsym $mod+l exec --no-startup-id i3exit lock
+bindsym $mod+Shift+l exec --no-startup-id suspend.sh
+
+# x window kill
+bindsym Ctrl+$modalt+x --release exec --no-startup-id xkill
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your x session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# dunst restart
+bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
+
+# compton start/stop
+bindsym $mod+t exec --no-startup-id "pkill compton; exec notify-send 'i3' 'compton stopped'"
+bindsym $mod+Shift+t exec --no-startup-id "compton -b; exec notify-send 'i3' 'compton started'"
+
+# conky start/stop (61=/?)
+bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
+bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
+# }}}
+
+# keybindings multimedia keys {{{
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 1- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh up
+bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh down
+bindsym $mod+p exec rofidisplay.sh
+#bindsym $mod+p exec screenlayout.sh
+bindsym Print exec --no-startup-id i3-scrot
+bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# }}}
+
+# keybindings applications {{{
+bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
+bindsym $mod+a exec --no-startup-id $TERMINAL -e 'alsamixer'
+bindsym $mod+b exec --no-startup-id $TERMINAL -e 'bmenu'
+bindsym $mod+c exec --no-startup-id $TERMINAL -e 'cmus'
+bindsym $mod+e exec --no-startup-id $TERMINAL -e 'vim'
+bindsym $mod+g exec gimp
+bindsym $mod+h exec --no-startup-id $TERMINAL -e 'htop'
+bindsym $mod+i exec inkscape
+bindsym $mod+j exec jameica
+bindsym $mod+k exec keepassxc
+bindsym $mod+m exec thunderbird
+bindsym $mod+o exec libreoffice
+bindsym $mod+r exec --no-startup-id $TERMINAL -e 'ranger'
+bindsym $mod+s exec scribus
+bindsym $mod+v exec code-oss
+bindsym $mod+w exec firefox-developer-edition
+bindsym $mod+Shift+w exec --no-startup-id qutebrowser
+bindsym $mod+z exec filezilla
+
+bindsym $mod+F2 exec pcmanfm
+bindsym $mod+F3 exec gksu pcmanfm
+# }}}

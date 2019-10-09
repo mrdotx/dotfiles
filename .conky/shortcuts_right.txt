@@ -1,0 +1,65 @@
+${color1}vim - General${color0}
+    :q                  close
+    :w                  write/saves
+    :wa                 write/save all windows
+    :wq                 write/save and close
+    :x                  save and quit, same as wq
+    :q                  force close if file has changed and not save changes
+
+    v                   enter visual mode for selection of LINES
+    ctrl+v              enter visual mode for selection of BLOCKS
+    y                   yank/copy selected region
+    yy                  yank/copy entire line
+    "<reg>y             yank/copy marked region into register <reg> (register from a-z)
+    c                   cut selection
+    p                   paste yanked content
+    "<reg>p             paste yanked content in register <reg> (from a-z)
+    P                   paste yanked content BEFORE
+
+    u                   undo
+    ctrl+r              redo
+
+    :!<cmd>             execute shell command <cmd>
+    ctrl+z              send vim to background (fg brings it to front again)
+
+${color1}vim - Entering insert mode${color0}
+    a                   append text after the cursor
+    A                   append text at the end of the line
+    i                   insert text before the cursor
+    I                   insert text before the first non-blank in the line
+    o                   begin a new line BELOW the cursor and insert text
+    O                   begin a new line ABOVE the cursor and insert text
+    s                   erase the current letter under the cursor, set insert-mode
+    S                   erase the whole line, set insert-mode
+    cc                  delete the current line, set insert-mode
+    cw                  delete word, set insert-mode
+    dd                  delete line under curser
+
+${color1}vimdiff - General${color0}
+    dp                  diffput puts changes under the cursor
+    do                  diffget (o => obtain) change under the cursor
+
+    ]c                  jump to the next diff
+    [c                  jump to the previous diff
+
+${color1}qutebrowser${color0}
+    ctrl+[H,L]          walks back or forward in history
+    ctrl+[T,J,K]        go to next or previous tab
+    ctrl+[+,-,=]        zoom in, out or reset
+    ctrl+[n,N]          go to next or previous search result
+    ctrl+[o,O]          opens the url-bar or in new tab
+    ctrl+[r,R]          reloads the website, without using the cache
+    ctrl+[y,Y]          copies current url or title
+    ctrl+[p,P]          paste url
+    ctrl+[b,B]          open quickmarks
+    ctrl+[m,M]          save quickmark or bookmark
+    ctrl+h              open main startpage in current tab
+    ctrl+p              pin/unpin the current tab
+    ctrl+alt+p          print the current tab
+
+    alt+[1-0]           switch to tab
+    g                   misc. commands
+
+
+
+

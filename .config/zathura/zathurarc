@@ -1,0 +1,46 @@
+# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
+
+# Path:     ~/.config/zathura/zathurarc
+# User:     klassiker [mrdotx]
+# GitHub:   https://github.com/mrdotx/dotfiles
+
+# General {{{
+set selection-clipboard clipboard
+set adjust-open best-fit
+#set window-title-basename true
+#set window-title-home-tilde true
+set statusbar-home-tilde true
+#set window-height 800
+#set window-width 600
+# }}}
+
+# Shortcuts {{{
+map [normal]        f       toggle_fullscreen
+map [fullscreen]    f       toggle_fullscreen
+map [normal]        l       follow
+map [fullscreen]    l       follow
+map [normal]        n       navigate next
+map [fullscreen]    n       navigate next
+map [normal]        N       navigate previous
+map [fullscreen]    N       navigate previous
+map [normal]        u       scroll half-up
+map [fullscreen]    u       scroll half-up
+map [normal]        d       scroll half-down
+map [fullscreen]    d       scroll half-down
+map [normal]        r       rotate
+map [fullscreen]    r       retate
+map [normal]        <C-r>   reload
+map [fullscreen]    <C-r>   reload
+map [normal]        a       adjust_window best-fit
+map [fullscreen]    a       adjust_window best-fit
+map [normal]        s       adjust_window width
+map [fullscreen]    s       adjust_window width
+map [normal]        <Tab>   toggle_index
+map [fullscreen]    <Tab>   toggle_index
+map [normal]        D       toggle_page_mode
+map [fullscreen]    D       toggle_page_mode
+map [normal]        p       print
+map [fullscreen]    p       print
+map [normal]        i       recolor
+map [fullscreen]    i       recolor
+# }}}

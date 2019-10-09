@@ -1,0 +1,452 @@
+; vim:fileencoding=utf-8:ft=dosini:foldmethod=marker
+
+; Path:     ~/.config/polybar/config
+; User:     klassiker [mrdotx]
+; GitHub:   https://github.com/mrdotx/dotfiles
+
+; global/wm {{{
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+; }}}
+
+; settings {{{
+[settings]
+screenchange-reload = false
+; }}}
+
+; colors {{{
+[colors]
+background = #00000000
+background-alt = #3f3f3f
+foreground = #dfdfdf
+foreground-alt = #666666
+
+white = #ffffff
+black = #000000
+grey = #cbcbcb
+blue = #4084d6
+blue-alt = #3476a4
+green = #00ff00
+red = #ff0000
+yellow = #ffff00
+; }}}
+
+; bar/i3 {{{
+[bar/i3]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 26
+radius = 0.0
+fixed-center = false
+
+tray-position = right
+tray-reparent = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.blue}
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-4 = "FontAwesome:pixelsize=10;1"
+
+modules-left = i3 window
+modules-center = 
+modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit alsa backlight battery keyboard date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+; }}}
+
+; module/i3 {{{
+[module/i3]
+type = internal/i3
+
+pin-workspaces = false
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = true
+fuzzy-match = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+format = <label-state>
+
+label-focused = %icon% %index%
+label-focused-foreground = ${colors.white}
+label-focused-background = ${colors.blue}
+label-focused-overline = ${colors.blue-alt}
+label-focused-padding = 1
+
+label-unfocused = %icon% %index%
+label-unfocused-overline = ${colors.foreground-alt}
+label-unfocused-padding = 1
+
+label-visible = %icon% %index%
+label-visible-overline = ${colors.foreground-alt}
+label-visible-padding = 1
+
+label-urgent = %icon% %index%
+label-urgent-foreground = ${colors.black}
+label-urgent-background = ${colors.red}
+label-urgent-overline = ${colors.red}
+label-urgent-padding = 1
+
+; }}}
+
+; module/window {{{
+[module/window]
+type = internal/xwindow
+label = %title:0:75:...%
+label-foreground = ${colors.blue}
+; }}}
+
+; module/temp {{{
+[module/temp]
+type = internal/temperature
+interval = 2.0
+thermal-zone = 0
+warn-temperature = 90
+
+format = <ramp> <label>
+format-overline = ${colors.blue}
+format-warn = <ramp> <label-warn>
+format-warn-overline = ${colors.red}
+
+label = %temperature-c%
+label-foreground = ${colors.foreground}
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.red}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.foreground}
+; }}}
+
+; module/cpu {{{
+[module/cpu]
+type = internal/cpu
+interval = 2.0
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = ${colors.blue}
+label = %percentage%%
+label-foreground = ${colors.foreground}
+; }}}
+
+; module/ram {{{
+[module/ram]
+type = internal/memory
+interval = 2.0
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = ${colors.blue}
+label = %percentage_used%% %gb_used%/%gb_total%
+label-foreground = ${colors.foreground}
+; }}}
+
+; module/swap {{{
+[module/swap]
+type = internal/memory
+interval = 10.0
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-overline = ${colors.blue}
+label = %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
+label-foreground = ${colors.foreground}
+; }}}
+
+; module/ssd {{{
+[module/ssd]
+type = internal/fs
+interval = 30.0
+fixed-values = true
+
+mount-0 = /
+
+label-mounted =  %percentage_used%% %used%/%total%
+label-mounted-foreground = ${colors.foreground}
+label-mounted-overline = ${colors.blue}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground}
+label-unmountet-overline = ${colors.red}
+; }}}
+
+; module/wlan {{{
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected = <label-connected>
+format-connected-overline = ${colors.blue}
+label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
+;label-connected = %signal%% %essid%  %downspeed%  %upspeed%
+label-connected-foreground = ${colors.foreground}
+
+format-disconnected-prefix = " "
+format-disconnected = <label-disconnected>
+format-disconnected-overline = ${colors.red}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground}
+; }}}
+
+; module/vpnhades {{{
+[module/vpnhades]
+type = custom/script
+exec = ~/.config/polybar/vpnhades.sh
+interval = 10.0
+click-left = ~/.config/polybar/vpnhadestoggle.sh
+click-right = ~/.config/polybar/vpnhadestoggle.sh
+; }}}
+
+; module/firewall {{{
+[module/firewall]
+type = custom/script
+exec = ~/.config/polybar/firewall.sh
+interval = 10.0
+click-left = ~/.config/polybar/firewalltoggle.sh
+click-right = ~/.config/polybar/firewalltoggle.sh
+; }}}
+
+; module/bluetooth {{{
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/bluetooth.sh
+interval = 10.0
+click-left = ~/.config/polybar/bluetoothtoggle.sh
+click-right = ~/.config/polybar/bluetoothtoggle.sh
+; }}}
+
+; module/printer {{{
+[module/printer]
+type = custom/script
+exec = ~/.config/polybar/printer.sh
+interval = 10.0
+click-left = ~/.config/polybar/printertoggle.sh
+click-right = ~/.config/polybar/printertoggle.sh
+; }}}
+
+; module/gestures {{{
+[module/gestures]
+type = custom/script
+exec = ~/.config/polybar/gestures.sh
+interval = 10.0
+click-left = ~/.config/polybar/gesturestoggle.sh
+click-right = ~/.config/polybar/gesturestoggle.sh
+; }}}
+
+; module/polkit {{{
+[module/polkit]
+type = custom/script
+exec = ~/.config/polybar/polkit.sh
+interval = 10.0
+click-left = ~/.config/polybar/polkittoggle.sh
+click-right = ~/.config/polybar/polkittoggle.sh
+; }}}
+
+; module/alsa {{{
+[module/alsa]
+type = internal/alsa
+mapped = true
+interval = 1.0
+format-volume = <ramp-volume> <label-volume>
+format-volume-overline = ${colors.blue}
+
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground}
+format-muted-overline = ${colors.red}
+label-muted = mute
+label-muted-foreground = ${colors.foreground}
+label-muted-overline = ${colors.red}
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+; }}}
+
+; module/backlight {{{
+[module/backlight]
+type = internal/xbacklight
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format = <label>
+format-overline = ${colors.blue}
+
+label = %percentage%%
+label-foreground = ${colors.foreground}
+; }}}
+
+; module/battery {{{
+[module/battery]
+type = internal/battery
+poll-interval = 10.0
+battery = BAT0
+adapter = ADP0
+full-at = 100
+
+label-charging = %percentage%% %time%
+label-charging-foreground = ${colors.foreground}
+format-charging = <animation-charging> <label-charging>
+format-charging-overline = ${colors.yellow}
+
+label-discharging = %percentage%% %time%
+label-discharging-foreground = ${colors.foreground}
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-overline = ${colors.red}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground}
+format-full-overline = ${colors.blue}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-foreground = ${colors.foreground}
+animation-discharging-framerate = 750
+; }}}
+
+; module/keyboard {{{
+[module/keyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-overline = ${colors.blue}
+
+label-layout = %layout%
+label-layout-foreground = ${colors.foreground}
+label-layout-overline = ${colors.blue}
+; }}}
+
+; module/date {{{
+[module/date]
+type = internal/date
+interval = 60.0
+
+date = 
+date-alt =  %a %e.%m.%G
+
+time = %k:%M
+time-alt = %k:%M
+
+label = %date% %time%
+label-foreground = ${colors.foreground}
+label-overline = ${colors.blue}
+; }}}
+
+; module/powermenu {{{
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+;format-overline = ${colors.blue}
+
+label-open = 
+label-open-foreground = ${colors.foreground}
+label-open-overline = ${colors.red}
+label-close = 
+label-close-foreground = ${colors.foreground}
+label-close-overline = ${colors.red}
+label-separator = |
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = 
+menu-0-0-exec = menu-open-1
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-overline = ${colors.yellow}
+menu-0-1 = 
+menu-0-1-exec = menu-open-2
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-overline = ${colors.yellow}
+menu-0-2 = 
+menu-0-2-exec = menu-open-3
+menu-0-2-foreground = ${colors.foreground}
+menu-0-2-overline = ${colors.yellow}
+
+menu-1-0 = 
+menu-1-0-exec =
+menu-1-0-foreground = ${colors.foreground}
+menu-1-0-overline = ${colors.yellow}
+menu-1-1 = 
+menu-1-1-exec = i3exit logout
+menu-1-1-foreground = ${colors.foreground}
+menu-1-1-overline = ${colors.green}
+menu-1-2 = 
+menu-1-2-foreground = ${colors.foreground}
+menu-1-2-exec = menu-open-0
+menu-1-2-overline = ${colors.red}
+
+menu-2-0 = 
+menu-2-0-exec = i3exit reboot
+menu-2-0-foreground = ${colors.foreground}
+menu-2-0-overline = ${colors.green}
+menu-2-1 = 
+menu-2-1-exec =
+menu-2-1-foreground = ${colors.foreground}
+menu-2-1-overline = ${colors.yellow}
+menu-2-2 = 
+menu-2-2-foreground = ${colors.foreground}
+menu-2-2-exec = menu-open-0
+menu-2-2-overline = ${colors.red}
+
+menu-3-0 = 
+menu-3-0-exec = i3exit shutdown
+menu-3-0-foreground = ${colors.foreground}
+menu-3-0-overline = ${colors.green}
+menu-3-1 = 
+menu-3-1-exec = menu-open-0
+menu-3-1-foreground = ${colors.foreground}
+menu-3-1-overline = ${colors.red}
+menu-3-2 = 
+menu-3-2-exec =
+menu-3-2-foreground = ${colors.foreground}
+menu-3-2-overline = ${colors.yellow}
+; }}}

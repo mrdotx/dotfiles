@@ -1,0 +1,47 @@
+# vim:fileencoding=utf-8:ft=gitconfig:foldmethod=marker
+
+# Path:     ~/.gitconfig
+# User:     klassiker [mrdotx]
+# GitHub:   https://github.com/mrdotx/dotfiles
+
+[user]
+    name = mrdotx
+    email = klassiker@gmx.de
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = auto
+[color "status"]
+    branch = magenta
+    untracked = cyan
+    unmerged = yellow
+#    header = bold black
+[format]
+#    pretty = oneline
+[pack]
+    threads = 0
+[credential]
+#    helper = cache --timeout 7200
+#    helper = libsecret
+[core]
+    editor = vim
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[mergetool "vimdiff"]
+    cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+[diff]
+    tool = vimdiff
+    conflictstyle = diff
+[difftool]
+    prompt = true
+    trustExitCode = true
+[difftool "vimdiff"]
+    cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+[alias]
+    m = mergetool
+    d = difftool
