@@ -4,10 +4,8 @@
 # User:     klassiker [mrdotx]
 # GitHub:   https://github.com/mrdotx/dotfiles
 
-# special files {{{
-.config/ranger/__pycache__/
-.config/ranger/plugins/__pycache__/
-.config/ranger/plugins/__init__.py
+# special folders/files {{{
+.config/ranger/plugins/
 .config/qutebrowser/bookmarks/
 .config/qutebrowser/qsettings/
 .config/qutebrowser/autoconfig.yml
