@@ -1,0 +1,19 @@
+[Default Applications]
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/ftp=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/chrome=org.qutebrowser.qutebrowser.desktop
+text/html=org.qutebrowser.qutebrowser.desktop
+application/x-extension-htm=org.qutebrowser.qutebrowser.desktop
+application/x-extension-html=org.qutebrowser.qutebrowser.desktop
+application/x-extension-shtml=org.qutebrowser.qutebrowser.desktop
+application/xhtml+xml=org.qutebrowser.qutebrowser.desktop
+application/x-extension-xhtml=org.qutebrowser.qutebrowser.desktop
+application/x-extension-xht=org.qutebrowser.qutebrowser.desktop
+image/jpeg=nomacs.desktop;
+image/png=nomags.desktop;
+text/plain=nvim.desktop
+application/x-desktop=nvim.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird.desktop
+message/rfc822=userapp-Thunderbird.desktop
+application/pdf=org.pwmt.zathura.desktop
