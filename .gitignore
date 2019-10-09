@@ -26,7 +26,6 @@
 .java/
 .kodi/
 .links/
-.local/
 .mozilla/
 .mysql/
 .newsboat/
@@ -80,7 +79,7 @@ Videos
 .zsh_history
 # }}}
 
-# config folders {{{
+# .config folders {{{
 .config/asunder/
 .config/autostart/
 .config/balena-etcher-electron/
@@ -124,7 +123,7 @@ Videos
 .config/youtube-dlg/
 # }}}
 
-# config files {{{
+# .config files {{{
 .config/compton.conf
 .config/i3-scrot.conf
 .config/kid3rc
@@ -132,4 +131,24 @@ Videos
 .config/QtProject.conf
 .config/user-dirs.dirs
 .config/user-dirs.locale
+# }}}
+
+# .local folders {{{
+.local/share/gegl-0.4
+.local/share/gvfs-metadata
+.local/share/icons
+.local/share/keyrings
+.local/share/mc
+.local/share/nomacs
+.local/share/nvim
+.local/share/qutebrowser
+.local/share/ranger
+.local/share/scribus
+.local/share/Trash
+.local/share/zathura
+# }}}
+
+# .local files {{{
+.local/share/gsettings-data-convert
+.local/share/recently-used.xbel
 # }}}
