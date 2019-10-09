@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Service
+Comment=Services de-/activate
+Icon=shellscript
+Exec=rofiservice.sh
+Actions=
+Categories=Utility;

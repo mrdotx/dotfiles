@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Calc
+Comment=Calculate with python
+Icon=accessories-calculator
+Exec=st -T "Calculator" -e python -ic "from __future__ import division; from math import *; from random import *"
+Actions=
+Categories=Utility;

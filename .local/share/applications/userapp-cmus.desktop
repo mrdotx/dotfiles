@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=cmus
+Comment=C* Music Player
+Icon=multimedia-player
+Exec=st -e cmus
+Actions=
+Categories=AudioVideo;ConsoleOnly;
