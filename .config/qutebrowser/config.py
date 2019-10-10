@@ -741,7 +741,7 @@ c.content.headers.do_not_track = True
 ## Enable host blocking.
 ## Type: Bool
 # c.content.host_blocking.enabled = True
-c.content.host_blocking.enabled = True
+c.content.host_blocking.enabled = False
 
 ## List of URLs of lists which contain hosts to block.  The file can be
 ## in one of the following formats:  - An `/etc/hosts`-like file - One
