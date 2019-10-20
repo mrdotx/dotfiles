@@ -94,6 +94,7 @@ assign [class="Gimp"] $ws5
 assign [class="Thunderbird"] $ws6
 assign [class="Inkscape"] $ws7
 assign [class="scribus"] $ws7
+assign [class="Darktable"] $ws7
 assign [title="LibreOffice"] $ws8
 assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
@@ -244,6 +245,7 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $mod+a exec --no-startup-id $TERMINAL -e 'alsamixer'
 bindsym $mod+b exec --no-startup-id $TERMINAL -e 'bmenu'
 bindsym $mod+c exec --no-startup-id $TERMINAL -e 'cmus'
+bindsym $mod+d exec darktable
 bindsym $mod+e exec --no-startup-id $TERMINAL -e 'vim'
 bindsym $mod+g exec gimp
 bindsym $mod+h exec --no-startup-id $TERMINAL -e 'htop'
