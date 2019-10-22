@@ -114,6 +114,7 @@ Videos
 .config/rclone/
 .config/scribus/
 .config/skypeforlinux/
+.config/tlpui/
 .config/VirtualBox/
 .config/xfburn/
 .config/yay/
