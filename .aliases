@@ -12,7 +12,7 @@ alias nf='neofetch'                                 # systeminformation
 
 alias rg='ranger'                                   # filemanager
 alias rs='sudo ranger'                              # filemanager root
-alias nb='newsboat -q'                              # rss reader
+alias nb='newsboat -q && newsboat -qX'              # rss reader
 alias we='weechat'                                  # irc chat
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'                            # matrix screensaver
