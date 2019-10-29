@@ -914,6 +914,7 @@ c.content.host_blocking.whitelist = None
 ##   - false
 ##   - ask
 # c.content.ssl_strict = 'ask'
+c.content.ssl_strict = True
 
 ## List of user stylesheet filenames to use.
 ## Type: List of File, or File
