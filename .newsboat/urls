@@ -37,6 +37,7 @@
 #https://rss.golem.de/rss.php?feed=ATOM1.0 "~Golem" "Technic"
 #https://feeds2.feedburner.com/stadt-bremerhaven/dqXM "~Caschy" "Technic"
 #https://www.linux.com/rss/ "~Linux" "Technic"
+#https://www.howtoforge.com/node/feed "~Howtoforge" "Technic"
 #https://www.tecmint.com/feed "~Tecmint" "Technic"
 #https://forum.manjaro.org/c/announcements.rss "~Manjaro" "Technic"
 #https://www.archlinux.org/feeds/news/ "~Arch" "Technic"
@@ -53,13 +54,13 @@
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCF3cDM_hQMtIEJvEW1BZugg "Youtube"
 #
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCyHDQ5C6z1NDmJ4g6SerW8g "Youtube"
+#https://www.youtube.com/feeds/videos.xml?channel_id=UCZHpIFMfoJJ_1QxNGLJTzyA "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UC5E9-r42JlymhLPnDv2wHuA "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCE2hJ9CYR57BYhk3TjGVG6w "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UC1Y7onDsPyfP-lu--SXF-ew "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCXdfGoYTQq5eQXP6OJwWSQw "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UChkVOG0PqkXIHHmkBGG15Ig "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCo4693Ony4slDY5hR0ny-bw "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCZHpIFMfoJJ_1QxNGLJTzyA "Youtube"
 # }}}
 
 #: Twitter {{{
