@@ -19,7 +19,7 @@ external-url-viewer "linkhandler.sh %u"
 # Inoreader {{{
 urls-source "inoreader"
 inoreader-login "klassiker"
-inoreader-passwordfile "~/coding/secrets/newsboat/inoreader-pw.txt"
+inoreader-passwordeval "gpg --decrypt ~/coding/secrets/newsboat/inoreader-pw.txt.asc"
 inoreader-flag-share "a"
 inoreader-flag-star "b"
 inoreader-show-special-feeds no
