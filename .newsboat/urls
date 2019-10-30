@@ -27,8 +27,8 @@
 #https://www.elmshorn.de/media/rss/VeranstaltungenElmshorn.xml "~Elmshorn - Veranstaltungen" "Local"
 #https://www.elmshorn.de/media/rss/PressemitteilungenderStadtverwaltungElmshorn.xml "~Elmshorn - Pressemitteilungen" "Local"
 #https://www.shz.de/lokales/elmshorner-nachrichten/rss "~SHZ EN" "Local"
-#http://www.ndr.de/nachrichten/schleswig-holstein/index-rss.xml "~NDR SH" "Local"
-#http://www.ndr.de/nachrichten/hamburg/index-rss.xml "~NDR HH" "Local"
+#https://www.ndr.de/nachrichten/schleswig-holstein/index-rss.xml "~NDR SH" "Local"
+#https://www.ndr.de/nachrichten/hamburg/index-rss.xml "~NDR HH" "Local"
 # }}}
 
 #: Technic {{{
