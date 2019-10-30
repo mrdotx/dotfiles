@@ -10,6 +10,10 @@
 .config/qutebrowser/qsettings/
 .config/qutebrowser/autoconfig.yml
 .config/qutebrowser/quickmarks
+.newsboat/cache.db
+.newsboat/cache.db.lock
+.newsboat/history.cmdline
+.newsboat/history.search
 # }}}
 
 # root folders {{{
@@ -26,7 +30,6 @@
 .links/
 .mozilla/
 .mysql/
-.newsboat/
 .oh-my-zsh/
 .pki
 .putty/
