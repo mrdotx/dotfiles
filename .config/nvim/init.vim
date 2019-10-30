@@ -19,11 +19,17 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'z0mbix/vim-shfmt'
     Plug 'edkolev/tmuxline.vim'
     Plug 'flazz/vim-colorschemes'
+    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'molokai'
 let g:shfmt_extra_args = '-i 4'
+let g:vimwiki_list = [{'path':'~/coding/secrets/notes', 
+                        \ 'path_html':'~/coding/secrets/notes/html/',
+                        \ 'syntax': 'markdown',
+                        \ 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
 " }}}
 
 " colors {{{
@@ -62,6 +68,8 @@ let g:shfmt_extra_args = '-i 4'
     set showcmd
 " highlight current line
     "set cursorline
+" to ward off unexpected things
+    set nocompatible
 " visual autocomplete for command menu
     set wildmenu
     set wildmode=longest,list,full
@@ -117,4 +125,6 @@ let g:shfmt_extra_args = '-i 4'
     "map         <leader>n       :cnext<CR>
 " format shellscript
     map         <leader>f       :Shfmt<CR>
+" markdown preview
+    map         <leader>m       :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
 " }}}
