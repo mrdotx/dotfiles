@@ -26,7 +26,7 @@
 #    helper = cache --timeout 7200
 #    helper = libsecret
 [core]
-    editor = vim
+    editor = vim -c startinsert
 [merge]
     tool = vimdiff
     conflictstyle = diff3
