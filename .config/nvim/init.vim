@@ -24,11 +24,15 @@ call plug#end()
 
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'molokai'
+
 let g:shfmt_extra_args = '-i 4'
-let g:vimwiki_list = [{'path':'~/coding/secrets/notes', 
-                        \ 'path_html':'~/coding/secrets/notes/html/',
-                        \ 'syntax': 'markdown',
-                        \ 'ext': '.md'}]
+
+let notes = {}
+let notes.path = '~/coding/secrets/notes'
+let notes.path_html = '~/coding/secrets/notes/html/'
+let notes.syntax = 'markdown'
+let notes.ext = '.md'
+let g:vimwiki_list = [notes]
 let g:vimwiki_global_ext = 0
 " }}}
 
