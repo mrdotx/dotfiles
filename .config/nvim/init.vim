@@ -119,6 +119,15 @@ let g:vimwiki_global_ext = 0
     filetype indent on
 " }}}
 
+" templates {{{
+    if has("autocmd")
+        augroup templates
+            autocmd BufNewFile *.sh 0r $HOME/.config/nvim/templates/skeleton.sh
+            autocmd BufNewFile *.md 0r $HOME/.config/nvim/templates/skeleton.md
+        augroup END
+    endif
+" }}}
+
 " shortcuts {{{
 " leader is comma
     let mapleader=","
