@@ -63,6 +63,3 @@ ${color1}tmux - general${color0}
 
 
 
-
-
-

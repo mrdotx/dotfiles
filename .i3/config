@@ -242,19 +242,20 @@ bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # keybindings applications {{{
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
-bindsym $mod+a exec --no-startup-id $TERMINAL -e 'alsamixer'
-bindsym $mod+b exec --no-startup-id $TERMINAL -e 'bmenu'
-bindsym $mod+c exec --no-startup-id $TERMINAL -e 'cmus'
+bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
+bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
+bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus
 bindsym $mod+d exec darktable
-bindsym $mod+e exec --no-startup-id $TERMINAL -e 'vim'
+bindsym $mod+e exec --no-startup-id $TERMINAL -e vim
 bindsym $mod+g exec gimp
-bindsym $mod+h exec --no-startup-id $TERMINAL -e 'htop'
+bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
 bindsym $mod+i exec inkscape
 bindsym $mod+j exec jameica
 bindsym $mod+k exec keepassxc
 bindsym $mod+m exec thunderbird
+bindsym $mod+n exec --no-startup-id $TERMINAL -e vim -c VimwikiIndex
 bindsym $mod+o exec libreoffice
-bindsym $mod+r exec --no-startup-id $TERMINAL -e 'ranger'
+bindsym $mod+r exec --no-startup-id $TERMINAL -e ranger
 bindsym $mod+s exec scribus
 bindsym $mod+v exec code-oss
 bindsym $mod+w exec firefox-developer-edition
