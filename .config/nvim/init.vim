@@ -32,12 +32,12 @@ let notes.path = '$HOME/coding/secrets/notes'
 let notes.path_html = '$HOME/coding/secrets/notes/html/'
 let notes.syntax = 'markdown'
 let notes.ext = '.md'
-
+let notes.auto_export = 1
+let notes.automatic_nested_syntaxes = 1
 let notes.template_path = '$HOME/coding/secrets/notes/template/'
 let notes.template_default = 'github'
 let notes.template_ext = '.html5'
 let notes.custom_wiki2html = '$HOME/coding/secrets/notes/wiki2html.sh'
-
 let g:vimwiki_list = [notes]
 let g:vimwiki_global_ext = 0
 " }}}
