@@ -129,11 +129,11 @@ let g:vimwiki_global_ext = 0
 " spell-check and shellcheck
     map         <leader>g       :setlocal spell! spelllang=de_de<CR>
     map         <leader>e       :setlocal spell! spelllang=en_us<CR>
-    map         <leader>s       :!clear && shellcheck %<CR>
+    map         <leader>s       :!shellcheck %<CR>
 " format shellscript
     map         <leader>f       :Shfmt<CR>
 " copy vimwiki to webserver
-    map         <leader>n       :!clear && $HOME/coding/secrets/notes/copy.sh<CR>
+    map         <leader>n       :!$HOME/coding/secrets/notes/copy.sh<CR>
 " markdown preview
     map         <leader>m       :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
 " }}}
