@@ -14,12 +14,12 @@ endif
 
 " plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
+    Plug 'vimwiki/vimwiki'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'z0mbix/vim-shfmt'
     Plug 'edkolev/tmuxline.vim'
     Plug 'flazz/vim-colorschemes'
-    Plug 'vimwiki/vimwiki'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
