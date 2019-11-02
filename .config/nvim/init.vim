@@ -28,16 +28,16 @@ let g:airline_powerline_fonts = 1
 let g:shfmt_extra_args = '-i 4'
 
 let notes = {}
-let notes.path = '$HOME/coding/secrets/notes'
-let notes.path_html = '$HOME/coding/secrets/notes/html/'
+let notes.path = '$HOME/coding/hidden/notes'
+let notes.path_html = '$HOME/coding/hidden/notes/html/'
 let notes.syntax = 'markdown'
 let notes.ext = '.md'
 let notes.auto_export = 1
 let notes.automatic_nested_syntaxes = 1
-let notes.template_path = '$HOME/coding/secrets/notes/sh/template/'
+let notes.template_path = '$HOME/coding/hidden/notes/sh/template/'
 let notes.template_default = 'github'
 let notes.template_ext = '.html5'
-let notes.custom_wiki2html = '$HOME/coding/secrets/notes/sh/wiki2html.sh'
+let notes.custom_wiki2html = '$HOME/coding/hidden/notes/sh/wiki2html.sh'
 let g:vimwiki_list = [notes]
 let g:vimwiki_global_ext = 0
 " }}}
@@ -142,7 +142,7 @@ let g:vimwiki_global_ext = 0
 " format shellscript
     map         <leader>f       :Shfmt<CR>
 " copy vimwiki to webserver
-    map         <leader>n       :!$HOME/coding/secrets/notes/sh/copy.sh<CR>
+    map         <leader>n       :!$HOME/coding/hidden/notes/sh/copy.sh<CR>
 " markdown preview
     map         <leader>m       :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
 " }}}
