@@ -3,11 +3,11 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:38:31
+# date:       2019-11-03 18:30:26
 
 # General {{{
 auto-reload yes
-reload-time 10
+reload-time 15
 prepopulate-query-feeds no
 show-read-feeds yes
 keep-articles-days 30

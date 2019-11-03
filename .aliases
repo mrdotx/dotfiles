@@ -3,7 +3,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:42:17
+# date:       2019-11-03 18:21:37
 
 # tools {{{
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -19,6 +19,7 @@ alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'                            # matrix screensaver
 alias wt='curl -H "Accept-Language: de" wttr.in'    # weather
 alias sw='telnet towel.blinkenlights.nl'            # star wars
+alias xn='vim $HOME/coding/hidden/notes/index.md'   # notes
 # }}}
 
 # git {{{
