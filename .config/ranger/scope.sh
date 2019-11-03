@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/ranger/scope.sh
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/ranger/scope.sh
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:59:19
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'

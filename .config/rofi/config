@@ -1,7 +1,8 @@
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/rofi/config
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/rofi/config
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 18:01:02
 
 rofi.theme:                     arc-dark-horizontal.rasi

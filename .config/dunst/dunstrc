@@ -1,5 +1,11 @@
 [global]
-    # vim:fileencoding=utf-8:ft=cfg:foldmethod=marker
+# vim:fileencoding=utf-8:ft=cfg:foldmethod=marker
+
+# path:       ~/.config/polybar/dunstrc
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 18:04:11
+
     ### Display ###
 
     # Which monitor should the notifications be displayed on.

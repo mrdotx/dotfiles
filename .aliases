@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.aliases
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.aliases
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:42:17
 
 # tools {{{
 alias cp='cp -i'                                    # confirm before overwriting something

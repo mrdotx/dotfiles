@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=config:foldmethod=marker
 
-#
-# ~/.newsboat/urls
-#
+# path:       ~/.newsboat/urls
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:39:22
 
 #: Querys {{{ 
 "query: Afd:title =~ \"AfD\""

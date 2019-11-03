@@ -1,9 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/polybar/gesturestoggle.sh
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/polybar/gesturestoggle.sh
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:54:20
 
 if [ "$(pgrep -f /usr/bin/libinput-gestures)" ]
 then

@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=python:foldmethod=marker
 
-# Path:     ~/.config/qutebrowser/config.py
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/qutebrowser/config.py
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:56:23
 
 ## Documentation:
 ##   qute://help/configuring.html

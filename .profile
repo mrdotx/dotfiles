@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.profile
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.profile
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:44:14
 
 # path {{{
 if [ -d "$HOME/.conky" ] ; then

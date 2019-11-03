@@ -1,9 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/polybar/bluetoothtoggle.sh
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/polybar/bluetoothtoggle.sh
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:53:23
 
 if [ "$(systemctl is-active bluetooth.service)" != "active" ]
 then

@@ -1,10 +1,13 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/polybar/vpnhadestoggle.sh
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/polybar/vpnhadestoggle.sh
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:55:41
+
 VPN=hades
+
 if [ "$(nmcli connection show --active $VPN)" ]
 then
         nmcli con down id $VPN && notify-send "VPN" "$VPN disconnected!" && exit 0

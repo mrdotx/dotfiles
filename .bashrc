@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.bashrc
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.bashrc
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:43:30
 
 # colors {{{
 [[ $- != *i* ]] && return

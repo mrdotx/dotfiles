@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=gitconfig:foldmethod=marker
 
-# Path:     ~/.gitconfig
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.gitconfig
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:43:45
 
 [user]
     name = mrdotx

@@ -1,9 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/polybar/firewalltoggle.sh
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/polybar/firewalltoggle.sh
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:54:02
 
 if [ "$(systemctl is-active ufw.service)" != "active" ]
 then

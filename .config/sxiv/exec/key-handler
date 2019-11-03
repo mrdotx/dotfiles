@@ -1,9 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# Path:     ~/.config/sxiv/exec/key-handler
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/sxiv/exec/key-handler
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 18:01:43
 
 # rotate function {{{
 rotate() {

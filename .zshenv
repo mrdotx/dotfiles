@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
 
-# Path:     ~/.zshenv
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.zshenv
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:45:49
 
 # export {{{
 export TERMINAL="st"

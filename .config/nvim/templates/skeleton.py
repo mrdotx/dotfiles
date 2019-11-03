@@ -3,7 +3,7 @@
 
 # path:       ~/coding/shell/<++>.py
 # user:       klassiker [mrdotx]
-# date:       2019-11-03 16:52:12
 # github:     https://github.com/mrdotx/python
+# date:       2019-11-03 18:06:24
 
 <++>

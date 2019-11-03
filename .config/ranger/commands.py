@@ -1,8 +1,9 @@
 # vim:fileencoding=utf-8:ft=python:foldmethod=marker
 
-# Path:     ~/.config/ranger/commands.py
-# User:     klassiker [mrdotx]
-# GitHub:   https://github.com/mrdotx/dotfiles
+# path:       ~/.config/ranger/commands.py
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-03 17:58:39
 
 # This is a sample commands.py.  You can add your own commands here.
 #
