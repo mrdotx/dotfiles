@@ -133,6 +133,23 @@ let g:vimwiki_global_ext = 0
 " jump mark <++>
 " }}}
 
+" last modfied {{{
+" If buffer modified, update any 'date: ' in the first 10 lines.
+" 'date: ' can have up to 4 characters before (they are retained).
+" Restores cursor and window position using save_cursor variable.
+function! LastModified()
+  if &modified
+    let save_cursor = getpos(".")
+    let n = min([10, line("$")])
+    keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
+          \ strftime('      %F %T') . '#e'
+    call histdel('search', -1)
+    call setpos('.', save_cursor)
+  endif
+endfun
+autocmd BufWritePre * call LastModified()
+" }}}
+
 " shortcuts {{{
 " leader is comma
     let mapleader=","
