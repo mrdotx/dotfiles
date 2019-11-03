@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-03 18:05:36
+" date:       2019-11-03 20:06:41
 
 " vim-plug autoinstall {{{
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -23,24 +23,25 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'flazz/vim-colorschemes'
 call plug#end()
 
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 "let g:airline_theme = 'molokai'
 
-let g:shfmt_extra_args = '-i 4'
+let g:shfmt_extra_args='-i 4'
 
-let notes = {}
-let notes.path = '$HOME/coding/hidden/notes'
-let notes.path_html = '$HOME/coding/hidden/notes/html/'
-let notes.syntax = 'markdown'
-let notes.ext = '.md'
-let notes.auto_export = 1
-let notes.automatic_nested_syntaxes = 1
-let notes.template_path = '$HOME/coding/hidden/notes/sh/template/'
-let notes.template_default = 'github'
-let notes.template_ext = '.html5'
-let notes.custom_wiki2html = '$HOME/coding/hidden/notes/sh/wiki2html.sh'
-let g:vimwiki_list = [notes]
-let g:vimwiki_global_ext = 0
+let notes={}
+let notes.path='$HOME/coding/hidden/notes'
+let notes.path_html='$HOME/coding/hidden/notes/html/'
+let notes.syntax='markdown'
+let notes.ext='.md'
+let notes.auto_export=1
+let notes.automatic_nested_syntaxes=1
+let notes.template_path='$HOME/coding/hidden/notes/sh/template/'
+let notes.template_default='github'
+let notes.template_ext='.html5'
+let notes.custom_wiki2html='$HOME/coding/hidden/notes/sh/wiki2html.sh'
+let g:vimwiki_list=[notes]
+let g:vimwiki_global_ext=0
+let g:vimwiki_use_mouse=1
 " }}}
 
 " colors {{{
@@ -50,8 +51,14 @@ let g:vimwiki_global_ext = 0
 " enable syntax processing
     syntax on
 " enable all Python syntax highlighting features
-    let python_highlight_all = 1
+    let python_highlight_all=1
     hi Normal ctermbg=NONE
+" }}}
+
+" mouse {{{
+    if has('mouse')
+        set mouse=a
+    endif
 " }}}
 
 " spaces & tabs {{{
@@ -131,7 +138,6 @@ let g:vimwiki_global_ext = 0
             autocmd BufNewFile *.py inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
         augroup END
     endif
-" jump mark <++>
 " }}}
 
 " last modfied {{{
@@ -140,8 +146,8 @@ let g:vimwiki_global_ext = 0
 " Restores cursor and window position using save_cursor variable.
 function! LastModified()
   if &modified
-    let save_cursor = getpos(".")
-    let n = min([10, line("$")])
+    let save_cursor=getpos(".")
+    let n=min([10, line("$")])
     keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
           \ strftime('      %F %T') . '#e'
     call histdel('search', -1)
