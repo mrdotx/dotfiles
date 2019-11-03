@@ -123,9 +123,12 @@ let g:vimwiki_global_ext = 0
     if has("autocmd")
         augroup templates
             autocmd BufNewFile *.sh 0r $HOME/.config/nvim/templates/skeleton.sh
+            autocmd BufNewFile *.sh inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
             autocmd BufNewFile *.md 0r $HOME/.config/nvim/templates/skeleton.md
+            autocmd BufNewFile *.md inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
         augroup END
     endif
+" jump mark <++>
 " }}}
 
 " shortcuts {{{
