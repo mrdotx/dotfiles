@@ -51,7 +51,7 @@ ${color1}i3 - applications${color0}
     super+j             jameica
     super+k             keepassxc
     super+m             thunderbird
-    super+n             vimwiki (notes)
+    super+n             newsboat
     super+o             libreoffice
     super+r             ranger
     super+s             scribus
