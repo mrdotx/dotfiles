@@ -3,7 +3,7 @@
 # path:       ~/.gitignore
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-05 13:33:30
+# date:       2019-11-05 16:47:18
 
 # special folders/files {{{
 .config/nvim/.netrwhist
@@ -39,7 +39,6 @@
 .thumbnails/
 .thunderbird/
 .urxvt/
-.vscode-oss/
 .w3m/
 .weechat/
 cloud/
@@ -86,7 +85,6 @@ Videos
 .config/autostart/
 .config/balena-etcher-electron/
 .config/cmus/
-.config/Code - OSS/
 .config/darktable/
 .config/dconf/
 .config/enchant/
