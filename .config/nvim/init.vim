@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-05 17:48:42
+" date:       2019-11-05 23:44:49
 
 " vim-plug autoinstall {{{
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -141,7 +141,7 @@ call plug#end()
     let g:netrw_liststyle = 0
     let g:netrw_browse_split = 4
     let g:netrw_altv = 1
-    let g:netrw_winsize = -25
+    let g:netrw_winsize = -28
     let g:netrw_sort_sequence = '[\/]$,*'
     let g:netrw_ftp_cmd = 'ftp -p'
 " }}}
@@ -201,11 +201,9 @@ autocmd BufWritePre * call LastModified()
     let mapleader=","
 " file explore in split window
     map         <leader><leader>    :Lexplore<CR>
-" window navigation
-    nnoremap    <leader><left>      <C-w>h
-    nnoremap    <leader><down>      <C-w>j
-    nnoremap    <leader><up>        <C-w>k
-    nnoremap    <leader><right>     <C-w>l
+" switch cursor window
+    nnoremap    <tab>               <C-w>w
+    nnoremap    <S-tab>             <C-w>W
 " turn off search highlight
     nnoremap    <leader><space>     :nohlsearch<CR>
 " show hidden characters
