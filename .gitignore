@@ -3,7 +3,7 @@
 # path:       ~/.gitignore
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-05 10:30:01
+# date:       2019-11-05 13:33:30
 
 # special folders/files {{{
 .config/nvim/.netrwhist
@@ -69,6 +69,7 @@ Videos
 .jameica.properties
 .lesshst
 .lynxrc
+.netrc
 .python_history
 .wavemonrc
 .Xauthority

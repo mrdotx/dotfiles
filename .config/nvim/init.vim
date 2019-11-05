@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-05 12:34:46
+" date:       2019-11-05 14:23:12
 
 " vim-plug autoinstall {{{
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -143,6 +143,7 @@ call plug#end()
     let g:netrw_altv = 1
     let g:netrw_winsize = -28
     let g:netrw_sort_sequence = '[\/]$,*'
+    let g:netrw_ftp_cmd = 'ftp -p'
 " }}}
 
 " searching {{{
