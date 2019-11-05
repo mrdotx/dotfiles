@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-03 20:06:41
+" date:       2019-11-05 12:34:46
 
 " vim-plug autoinstall {{{
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -23,25 +23,25 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'flazz/vim-colorschemes'
 call plug#end()
 
-let g:airline_powerline_fonts=1
-"let g:airline_theme = 'molokai'
-
-let g:shfmt_extra_args='-i 4'
-
-let notes={}
-let notes.path='$HOME/coding/hidden/notes'
-let notes.path_html='$HOME/coding/hidden/notes/html/'
-let notes.syntax='markdown'
-let notes.ext='.md'
-let notes.auto_export=1
-let notes.automatic_nested_syntaxes=1
-let notes.template_path='$HOME/coding/hidden/notes/sh/template/'
-let notes.template_default='github'
-let notes.template_ext='.html5'
-let notes.custom_wiki2html='$HOME/coding/hidden/notes/sh/wiki2html.sh'
-let g:vimwiki_list=[notes]
-let g:vimwiki_global_ext=0
-let g:vimwiki_use_mouse=1
+    let g:airline_powerline_fonts=1
+    "let g:airline_theme = 'molokai'
+    
+    let g:shfmt_extra_args='-i 4'
+    
+    let notes={}
+    let notes.path='$HOME/coding/hidden/notes'
+    let notes.path_html='$HOME/coding/hidden/notes/html/'
+    let notes.syntax='markdown'
+    let notes.ext='.md'
+    let notes.auto_export=1
+    let notes.automatic_nested_syntaxes=1
+    let notes.template_path='$HOME/coding/hidden/notes/sh/template/'
+    let notes.template_default='github'
+    let notes.template_ext='.html5'
+    let notes.custom_wiki2html='$HOME/coding/hidden/notes/sh/wiki2html.sh'
+    let g:vimwiki_list=[notes]
+    let g:vimwiki_global_ext=0
+    let g:vimwiki_use_mouse=1
 " }}}
 
 " colors {{{
@@ -107,6 +107,44 @@ let g:vimwiki_use_mouse=1
     autocmd BufWritePost *Xresources !xrdb -merge % 
 " }}}
 
+" file explore {{{
+    com!  -nargs=* -bar -bang -complete=dir  Lexplore  call netrw#Lexplore(<q-args>, <bang>0)
+
+    fun! Lexplore(dir, right)
+        if exists("t:netrw_lexbufnr")
+        " close down netrw explorer window
+        let lexwinnr = bufwinnr(t:netrw_lexbufnr)
+        if lexwinnr != -1
+            let curwin = winnr()
+            exe lexwinnr."wincmd w"
+            close
+            exe curwin."wincmd w"
+        endif
+        unlet t:netrw_lexbufnr
+
+        else
+            " open netrw explorer window in the dir of current file
+            " (even on remote files)
+            let path = substitute(exists("b:netrw_curdir")? b:netrw_curdir : expand("%:p"), '^\(.*[/\\]\)[^/\\]*$','\1','e')
+            exe (a:right? "botright" : "topleft")." vertical ".((g:netrw_winsize > 0)? (g:netrw_winsize*winwidth(0))/100 : -g:netrw_winsize) . " new"
+            if a:dir != ""
+                exe "Explore ".a:dir
+            else
+                exe "Explore ".path
+            endif
+            setlocal winfixwidth
+            let t:netrw_lexbufnr = bufnr("%")
+        endif
+    endfun
+
+    let g:netrw_banner = 0
+    let g:netrw_liststyle = 0
+    let g:netrw_browse_split = 4
+    let g:netrw_altv = 1
+    let g:netrw_winsize = -28
+    let g:netrw_sort_sequence = '[\/]$,*'
+" }}}
+
 " searching {{{
 " search as characters are entered
     set incsearch
@@ -160,18 +198,25 @@ autocmd BufWritePre * call LastModified()
 " shortcuts {{{
 " leader is comma
     let mapleader=","
+" file explore in split window
+    map         <leader><leader>    :Lexplore<CR>
+" window navigation
+    nnoremap    <leader><left>      <C-w>h
+    nnoremap    <leader><down>      <C-w>j
+    nnoremap    <leader><up>        <C-w>k
+    nnoremap    <leader><right>     <C-w>l
 " turn off search highlight
-    nnoremap    <leader><space> :nohlsearch<CR>
+    nnoremap    <leader><space>     :nohlsearch<CR>
 " show hidden characters
-    map         <leader>l       :set list! list?<CR>
+    map         <leader>l           :set list! list?<CR>
 " spell-check and shellcheck
-    map         <leader>g       :setlocal spell! spelllang=de_de<CR>
-    map         <leader>e       :setlocal spell! spelllang=en_us<CR>
-    map         <leader>s       :!shellcheck %<CR>
+    map         <leader>d           :setlocal spell! spelllang=de_de<CR>
+    map         <leader>e           :setlocal spell! spelllang=en_us<CR>
+    map         <leader>s           :!shellcheck %<CR>
 " format shellscript
-    map         <leader>f       :Shfmt<CR>
+    map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
-    map         <leader>n       :!$HOME/coding/hidden/notes/sh/copy.sh<CR>
+    map         <leader>n           :!$HOME/coding/hidden/notes/sh/copy.sh<CR>
 " markdown preview
-    map         <leader>m       :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
+    map         <leader>m           :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
 " }}}

@@ -3,9 +3,10 @@
 # path:       ~/.gitignore
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:43:55
+# date:       2019-11-05 10:30:01
 
 # special folders/files {{{
+.config/nvim/.netrwhist
 .config/ranger/plugins/
 .config/qutebrowser/bookmarks/
 .config/qutebrowser/qsettings/
