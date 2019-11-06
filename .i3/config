@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-05 16:33:38
+# date:       2019-11-06 16:59:49
 
 # basic definitions {{{
 set $mod Mod4
@@ -228,8 +228,8 @@ bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
 # }}}
 
 # keybindings multimedia keys {{{
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 5+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 5- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 1+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 1- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh down

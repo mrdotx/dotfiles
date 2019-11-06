@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-04 15:28:21
+; date:       2019-11-06 16:59:25
 
 ; global/wm {{{
 [global/wm]
@@ -281,7 +281,7 @@ click-right = ~/.config/polybar/polkittoggle.sh
 type = internal/alsa
 
 mapped = true
-interval = 5.0
+interval = 1.0
 format-volume = <ramp-volume> <label-volume>
 format-volume-overline = ${colors.blue}
 
