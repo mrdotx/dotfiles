@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-05 23:48:21
+" date:       2019-11-06 19:42:38
 
 " vim-plug autoinstall {{{
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -16,9 +16,9 @@ endif
 " plugins {{{
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
+    Plug 'z0mbix/vim-shfmt'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'z0mbix/vim-shfmt'
     Plug 'edkolev/tmuxline.vim'
     Plug 'flazz/vim-colorschemes'
 call plug#end()
