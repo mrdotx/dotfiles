@@ -3,31 +3,33 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-06 19:42:38
+" date:       2019-11-06 23:32:21
 
 " vim-plug autoinstall {{{
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+    if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+        silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+            \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
 " }}}
 
 " plugins {{{
-call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'vimwiki/vimwiki'
-    Plug 'z0mbix/vim-shfmt'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'edkolev/tmuxline.vim'
-    Plug 'flazz/vim-colorschemes'
-call plug#end()
+    call plug#begin('~/.local/share/nvim/plugged')
+        Plug 'vimwiki/vimwiki'
+        Plug 'tpope/vim-fugitive'
+        Plug 'z0mbix/vim-shfmt'
+        Plug 'norcalli/nvim-colorizer.lua'
+        Plug 'flazz/vim-colorschemes'
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+        Plug 'edkolev/tmuxline.vim'
+    call plug#end()
 
     let g:airline_powerline_fonts=1
-    "let g:airline_theme = 'molokai'
-    
+    let g:airline_theme = 'jellybeans'
+
     let g:shfmt_extra_args='-i 4'
-    
+
     let notes={}
     let notes.path='$HOME/coding/hidden/notes'
     let notes.path_html='$HOME/coding/hidden/notes/html/'
@@ -44,34 +46,30 @@ call plug#end()
     let g:vimwiki_use_mouse=1
 " }}}
 
-" colors {{{
-" color theme
-    "colorscheme darkblue
-    colorscheme monokai-phoenix
-" enable syntax processing
-    syntax on
-" enable all Python syntax highlighting features
-    let python_highlight_all=1
-    hi Normal ctermbg=NONE
-" }}}
-
 " mouse {{{
     if has('mouse')
         set mouse=a
     endif
 " }}}
 
-" spaces & tabs {{{
-" number of visual spaces per TAB
-    set tabstop=4
-" number of spaces in tab when editing
-    set softtabstop=4
-" tabs are spaces
-    set expandtab
-" the size of an indent
-    set shiftwidth=4
+" colors {{{
+" true color
+    set termguicolors
+" color theme
+    colorscheme monokai-phoenix
+" enable syntax processing
+    syntax on
+" enable all Python syntax highlighting features
+    let python_highlight_all=1
+    hi Normal ctermbg=NONE
+" transparent background
+    hi Normal guibg=NONE
+    hi Folded guibg=NONE
+    hi FoldedColumn guibg=NONE
+" color codes
+    lua require'colorizer'.setup()
 " }}}
-
+    
 " ui config {{{
 " clipboard
     set clipboard=unnamedplus
@@ -104,7 +102,38 @@ call plug#end()
 " disables automatic commenting on newline
     autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " run xrdb whenever Xresources are updated.
-    autocmd BufWritePost *Xresources !xrdb -merge % 
+    autocmd BufWritePost *Xresources !xrdb -merge %
+" }}}
+
+" spaces & tabs {{{
+" number of visual spaces per TAB
+    set tabstop=4
+" number of spaces in tab when editing
+    set softtabstop=4
+" tabs are spaces
+    set expandtab
+" the size of an indent
+    set shiftwidth=4
+" }}}
+
+" searching {{{
+" search as characters are entered
+    set incsearch
+" highlight matches
+    set hlsearch
+" do case insensitive search
+    set ignorecase
+" ...unless capital letters are used
+    set smartcase
+" }}}
+
+" file type specific settings {{{
+" enable file type detection
+    filetype on
+" load the plugins for specific file types
+    filetype plugin on
+" automatically indent code
+    filetype indent on
 " }}}
 
 " file explore {{{
@@ -137,33 +166,13 @@ call plug#end()
         endif
     endfun
 
-    let g:netrw_banner = 0
-    let g:netrw_liststyle = 3
-    let g:netrw_browse_split = 4
-    let g:netrw_altv = 1
-    let g:netrw_winsize = -28
-    let g:netrw_sort_sequence = '[\/]$,*'
-    let g:netrw_ftp_cmd = 'ftp -p'
-" }}}
-
-" searching {{{
-" search as characters are entered
-    set incsearch
-" highlight matches
-    set hlsearch
-" do case insensitive search
-    set ignorecase
-" ...unless capital letters are used
-    set smartcase
-" }}}
-
-" file type specific settings {{{
-" enable file type detection
-    filetype on
-" load the plugins for specific file types
-    filetype plugin on
-" automatically indent code
-    filetype indent on
+    let g:netrw_banner=0
+    let g:netrw_liststyle=3
+    let g:netrw_browse_split=4
+    let g:netrw_altv=1
+    let g:netrw_winsize=-28
+    let g:netrw_sort_sequence='[\/]$,*'
+    let g:netrw_ftp_cmd='ftp -p'
 " }}}
 
 " templates {{{
@@ -183,17 +192,17 @@ call plug#end()
 " If buffer modified, update any 'date: ' in the first 10 lines.
 " 'date: ' can have up to 4 characters before (they are retained).
 " Restores cursor and window position using save_cursor variable.
-function! LastModified()
-  if &modified
-    let save_cursor=getpos(".")
-    let n=min([10, line("$")])
-    keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-          \ strftime('      %F %T') . '#e'
-    call histdel('search', -1)
-    call setpos('.', save_cursor)
-  endif
-endfun
-autocmd BufWritePre * call LastModified()
+    function! ModifiedDate()
+        if &modified
+            let save_cursor=getpos(".")
+            let n=min([10, line("$")])
+            keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
+                \ strftime('      %F %T') . '#e'
+            call histdel('search', -1)
+            call setpos('.', save_cursor)
+        endif
+    endfun
+    autocmd BufWritePre * call ModifiedDate()
 " }}}
 
 " shortcuts {{{
@@ -216,6 +225,4 @@ autocmd BufWritePre * call LastModified()
     map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
     map         <leader>n           :!$HOME/coding/hidden/notes/sh/copy.sh<CR>
-" markdown preview
-    map         <leader>m           :w!<CR>:w!/tmp/vim-markdown.md<CR>:!pandoc -s -f markdown -t html -o /tmp/vim-markdown.html /tmp/vim-markdown.md<CR>:!qutebrowser /tmp/vim-markdown.html > /dev/null 2> /dev/null&<CR><CR>
 " }}}
