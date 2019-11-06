@@ -3,11 +3,14 @@
 # path:       ~/.gitconfig
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:43:45
+# date:       2019-11-06 11:37:44
 
 [user]
     name = mrdotx
     email = klassiker@hotmail.com
+    signingkey = 433F70E636E6EB87
+[commit]
+    gpgsign = true
 [color]
     diff = auto
     status = auto

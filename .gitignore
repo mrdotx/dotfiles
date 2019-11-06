@@ -3,7 +3,7 @@
 # path:       ~/.gitignore
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-05 16:47:18
+# date:       2019-11-06 11:47:29
 
 # special folders/files {{{
 .config/nvim/.netrwhist
@@ -62,6 +62,8 @@ Videos
 .esd_auth
 .face
 .face.icon
+.gitconfig
+.gitignore
 .gtkrc-2.0
 .history
 .icon
