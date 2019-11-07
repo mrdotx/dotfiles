@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-06 23:32:21
+" date:       2019-11-07 01:29:16
 
 " vim-plug autoinstall {{{
     if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -220,7 +220,7 @@
 " spell-check and shellcheck
     map         <leader>d           :setlocal spell! spelllang=de_de<CR>
     map         <leader>e           :setlocal spell! spelllang=en_us<CR>
-    map         <leader>s           :!shellcheck %<CR>
+    map         <leader>s           :vs term://shellcheck -s sh %<CR>
 " format shellscript
     map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
