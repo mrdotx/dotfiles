@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-07 01:29:16
+" date:       2019-11-09 09:26:27
 
 " vim-plug autoinstall {{{
     if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -69,7 +69,7 @@
 " color codes
     lua require'colorizer'.setup()
 " }}}
-    
+
 " ui config {{{
 " clipboard
     set clipboard=unnamedplus
