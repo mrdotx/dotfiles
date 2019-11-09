@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-09 13:15:24
+# date:       2019-11-09 14:17:28
 
 # basic definitions {{{
 set $mod Mod4
@@ -29,7 +29,7 @@ smart_borders on
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b; screenlayout.sh
 exec --no-startup-id ksuperkey
 #exec --no-startup-id libinput-gestures
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xautolock -detectsleep
 exec --no-startup-id unclutter --timeout 10
 #exec_always --no-startup-id fix_xcursor
