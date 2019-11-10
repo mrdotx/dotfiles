@@ -3,9 +3,9 @@
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:45:59
+# date:       2019-11-10 17:44:30
 
-# oh-my-zsh {{{
+# oh-my-zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,9 +70,8 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-# }}}
 
-# oh-my-zsh plugins {{{
+# oh-my-zsh plugins
 # zsh-autosuggestion
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1f5393,bg=black,bold,underline"
 
@@ -104,9 +103,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-# }}}
 
-# oh-my-zsh user configuration {{{
+# oh-my-zsh user configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -121,9 +119,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-# }}}
 
-# oh-my-zsh aliases {{{
+# oh-my-zsh aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -133,9 +130,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source "$HOME"/.aliases
-# }}}
 
-# completion {{{
+# completion
 # pip zsh completion
 function _pip_completion {
   local words cword
@@ -146,10 +142,8 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] ) )
 }
 compctl -K _pip_completion pip
-# }}}
 
-# autostart {{{
+# autostart
 if [[ ! "$TERM" =~ ^(st-256color|tmux-256color|linux)$ ]]; then
     tx
 fi
-# }}}

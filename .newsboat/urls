@@ -3,26 +3,24 @@
 # path:       ~/.newsboat/urls
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:39:22
+# date:       2019-11-10 17:33:17
 
-#: Querys {{{ 
+#: querys
 "query: Afd:title =~ \"AfD\""
 "query: Brexit:title =~ \"Brexit\""
 "query: Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
 "query: Erdogan:title =~ \"Erdogan\""
 "query: DSGVO:title =~ \"DSGVO\""
 "query: Unread:unread = \"yes\""
-# }}}
 
-#: News {{{
+#: news
 #"query:----------News-------------:tags # \"News\" and unread = \"yes\""
 #https://www.tagesschau.de/xml/atom/ "~tagesschau" "News"
 #https://www.spiegel.de/schlagzeilen/tops/index.rss "~SPON" "News"
 #https://www.welt.de/feeds/topnews.rss "~WELT" "News"
 #https://newsfeed.zeit.de/index "~ZEIT" "News"
-# }}}
 
-#: Local {{{
+#: local
 #"query:----------Local------------:tags # \"Local\" and unread = \"yes\""
 #https://www.elmshorn.de/media/rss/PressemitteilungenderStadtverwaltungElmshorn.xml "~Elmshorn - Aktuelles" "Local"
 #https://www.elmshorn.de/media/rss/VeranstaltungenElmshorn.xml "~Elmshorn - Veranstaltungen" "Local"
@@ -30,9 +28,8 @@
 #https://www.shz.de/lokales/elmshorner-nachrichten/rss "~SHZ EN" "Local"
 #https://www.ndr.de/nachrichten/schleswig-holstein/index-rss.xml "~NDR SH" "Local"
 #https://www.ndr.de/nachrichten/hamburg/index-rss.xml "~NDR HH" "Local"
-# }}}
 
-#: Technic {{{
+#: technic
 #"query:----------Technic----------:tags # \"Technic\" and unread = \"yes\""
 #https://www.heise.de/newsticker/heise-atom.xml "~heise" "Technic"
 #https://rss.golem.de/rss.php?feed=ATOM1.0 "~Golem" "Technic"
@@ -42,9 +39,8 @@
 #https://www.tecmint.com/feed "~Tecmint" "Technic"
 #https://forum.manjaro.org/c/announcements.rss "~Manjaro" "Technic"
 #https://www.archlinux.org/feeds/news/ "~Arch" "Technic"
-# }}}
 
-#: Youtube {{{
+#: youtube
 #"query:----------Youtube----------:tags # \"Youtube\" and unread = \"yes\""
 #https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "Youtube"
@@ -62,16 +58,13 @@
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCXdfGoYTQq5eQXP6OJwWSQw "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UChkVOG0PqkXIHHmkBGG15Ig "Youtube"
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCo4693Ony4slDY5hR0ny-bw "Youtube"
-# }}}
 
-#: Twitter {{{
+#: twitter
 #"query:----------Twitter----------:tags # \"Twitter\" and unread = \"yes\""
 #https://twitrss.me/twitter_user_to_rss/?user=potus "~@POTUS" "Twitter"
 #https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump "~@realDonaldTrump" "Twitter"
-# }}}
 
-#: Business {{{
+#: business
 #"query:----------Business---------:tags # \"Business\" and unread = \"yes\""
 #https://www.prinzipal-kreuzberg.com/website/feed/ "Business"
 #https://www.middlefinger-streetwear.com/feed/ "Business"
-# }}}

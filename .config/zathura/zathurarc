@@ -3,9 +3,8 @@
 # path:       ~/.config/zathura/zathurarc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 18:02:10
+# date:       2019-11-10 16:44:38
 
-# General {{{
 set selection-clipboard clipboard
 set adjust-open best-fit
 #set window-title-basename true
@@ -13,9 +12,8 @@ set adjust-open best-fit
 set statusbar-home-tilde true
 #set window-height 800
 #set window-width 600
-# }}}
 
-# Shortcuts {{{
+# Shortcuts
 map [normal]        f       toggle_fullscreen
 map [fullscreen]    f       toggle_fullscreen
 map [normal]        l       follow
@@ -44,4 +42,3 @@ map [normal]        p       print
 map [fullscreen]    p       print
 map [normal]        i       recolor
 map [fullscreen]    i       recolor
-# }}}

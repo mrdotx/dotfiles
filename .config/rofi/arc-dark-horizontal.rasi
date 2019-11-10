@@ -3,9 +3,9 @@
 // path:       ~/.config/rofi/arc-dark-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-03 18:00:52
+// date:       2019-11-10 16:56:12
 
-// config {{{
+// config
 configuration {
     show-icons:             false;
     click-to-exit:          true;
@@ -32,9 +32,8 @@ configuration {
     parse-hosts:            false;
     parse-known-hosts:      false;
 }
-// }}}
 
-// general {{{
+// general
 * {
     regular:                "Source Sans Pro Regular 10";
     bold:                   "Source Sans Pro Bold 10";
@@ -49,9 +48,8 @@ configuration {
     red:                    rgba (220,50,47,100%);
     green:                  rgba (0,255,0,100%);
 }
-// }}}
 
-// menu {{{
+// menu
 #window {
     background-color:       @black;
     anchor:                 north;
@@ -146,4 +144,3 @@ configuration {
     width:                  7em;
     font:                   @regular;
 }
-// }}}

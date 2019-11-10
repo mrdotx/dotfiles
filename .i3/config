@@ -3,9 +3,9 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-09 16:20:26
+# date:       2019-11-10 17:30:12
 
-# basic definitions {{{
+# basic definitions
 set $mod Mod4
 set $modalt Mod1
 set $main eDP1
@@ -23,9 +23,8 @@ gaps inner 5
 gaps outer -2
 smart_gaps on
 smart_borders on
-# }}}
 
-# autostart applications {{{
+# autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b; screenlayout.sh
 exec --no-startup-id ksuperkey
 #exec --no-startup-id libinput-gestures
@@ -34,9 +33,8 @@ exec --no-startup-id unclutter --timeout 10
 #exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id polybar.sh
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# }}}
 
-# applications in floating mode {{{
+# applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="Calculator"] floating enable border pixel 1
 for_window [title="Network Manager"] floating enable border pixel 1
@@ -58,9 +56,8 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Gcolor3"] floating enable sticky enable
 for_window [class="gmic_qt"] floating enable
-# }}}
 
-# workspace names {{{
+# workspace names
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -71,9 +68,8 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
-# }}}
 
-# workspace output {{{
+# workspace output
 workspace $ws1 output $main $hdmi
 workspace $ws2 output $hdmi $main
 workspace $ws3 output $main $hdmi
@@ -84,9 +80,8 @@ workspace $ws7 output $main $hdmi
 workspace $ws8 output $hdmi $main
 workspace $ws9 output $main $hdmi
 workspace $ws10 output $hdmi $main
-# }}}
 
-# open applications on specific workspaces (xprop) {{{
+# open applications on specific workspaces (xprop)
 assign [class="VirtualBox"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="firefoxdeveloperedition"] $ws4
@@ -102,9 +97,8 @@ assign [class="Jameica"] $ws9
 assign [title="cmus"] $ws10
 assign [class="Kodi"] $ws10
 for_window [class="Kodi"] fullscreen
-# }}}
 
-# keybindings workspaces {{{
+# keybindings workspaces
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -148,9 +142,8 @@ bindsym $mod+Tab move container to workspace back_and_forth; workspace back_and_
 # navigate workspaces next/previous
 bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Ctrl+Right workspace next
-# }}}
 
-# keybindings windows/container {{{
+# keybindings windows/container
 # split orientation
 bindsym $mod+Ctrl+Up split h;exec --no-startup-id notify-send 'i3' 'tile container horizontally'
 bindsym $mod+Ctrl+Down split v;exec --no-startup-id notify-send 'i3' 'tile container vertically'
@@ -189,9 +182,8 @@ bindsym $mod+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $modalt+minus scratchpad show
-# }}}
 
-# keybindings system managment {{{
+# keybindings system managment
 # start program launcher
 bindsym $modalt+F1 exec --no-startup-id rofi -show
 
@@ -225,9 +217,8 @@ bindsym $mod+Shift+t exec --no-startup-id "compton -b; exec notify-send 'i3' 'co
 # conky start/stop (61=/?)
 bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
 bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
-# }}}
 
-# keybindings multimedia keys {{{
+# keybindings multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 1+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 1- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
@@ -238,9 +229,8 @@ bindsym $mod+p exec rofidisplay.sh
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# }}}
 
-# keybindings applications {{{
+# keybindings applications
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
@@ -264,4 +254,3 @@ bindsym $mod+z exec filezilla
 
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+F3 exec gksu pcmanfm
-# }}}

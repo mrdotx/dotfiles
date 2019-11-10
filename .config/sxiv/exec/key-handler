@@ -4,9 +4,9 @@
 # path:       ~/.config/sxiv/exec/key-handler
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 18:01:43
+# date:       2019-11-10 16:55:22
 
-# rotate function {{{
+# rotate function
 rotate() {
     degree="$1"
     tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
@@ -16,9 +16,8 @@ rotate() {
         esac
     done
 }
-# }}}
 
-# flip function {{{
+# flip function
 flip() {
     direction="$1"
     tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
@@ -32,9 +31,9 @@ flip() {
         esac
     done
 }
-# }}}
 
-# trash function {{{
+
+# trash function
 trash() {
     tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
         case "$(file -b -i "$file")" in
@@ -43,9 +42,9 @@ trash() {
     done
 }
 
-# keybindings {{{
+# keybindings
 case "$1" in
-"C-e")          while read file; do urxvt -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
+"C-e")          while read file; do $TERMINAL -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
 "C-w")          while read file; do nitrogen --save --set-zoom-fill "$file" & done && notify-send "sxiv" "wallpaper changed" --icon=messagebox_info ;;
 "C-g")          tr '\n' '\0' | xargs -0 gimp & ;;
 "C-n")          tr '\n' '\0' | xargs -0 nomacs & ;;
@@ -56,4 +55,3 @@ case "$1" in
 "C-apostrophe") flip 'vertical' ;;
 "C-d")          trash ;;
 esac
-# }}}

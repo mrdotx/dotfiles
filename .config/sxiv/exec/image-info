@@ -4,9 +4,10 @@
 # path:       ~/.config/sxiv/exec/image-info
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 18:01:32
+# date:       2019-11-10 16:47:22
 
-s="  " # field separator
+# field separator
+s="  "
 
 exec 2>/dev/null
 

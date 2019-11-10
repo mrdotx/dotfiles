@@ -3,9 +3,9 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:44:14
+# date:       2019-11-10 17:39:32
 
-# path {{{
+# path
 if [ -d "$HOME/.conky" ] ; then
     PATH="$HOME/.conky:$PATH"
 fi
@@ -15,9 +15,8 @@ fi
 if [ -d "$HOME/coding/shell" ] ; then
     PATH="$HOME/coding/shell:$PATH"
 fi
-# }}}
 
-# export {{{
+# export
 export TERMINAL="st"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
@@ -31,4 +30,3 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
-# }}}

@@ -3,9 +3,9 @@
 !! path:       ~/.Xresources.conf
 !! user:       klassiker [mrdotx]
 !! gitgub:     https://github.com/mrdotx/dotfiles
-!! date:       2019-11-03 17:45:27
+!! date:       2019-11-10 17:42:53
 
-!! general {{{
+!! general
 *background:                        #000000
 *foreground:                        #ffffff
 *fading:                            8
@@ -47,14 +47,12 @@
 ! white normal/bright
 *color7:                            #cccccc
 *color15:                           #ffffff
-!! }}}
 
-!! xcursor {{{
+!! xcursor
 Xcursor.theme:                      xcursor-breeze
 Xcursor.size:                       0
-!! }}}
 
-!! Xft {{{
+!! xft
 Xft.dpi:                            96
 Xft.antialias:                      true
 Xft.hinting:                        true
@@ -62,22 +60,19 @@ Xft.rgba:                           rgb
 Xft.autohint:                       false
 Xft.hintstyle:                      hintslight
 Xft.lcdfilter:                      lcddefault
-!! }}}
 
-!! Xautolock {{{
+!! xautolock
 Xautolock.corners:                  ----
 Xautolock.time:                     10
 Xautolock.locker:                   suspend.sh
 Xautolock.notify:                   30
 Xautolock.notifier:                 notify-send 'i3' 'Locking screen and suspend pc in 30 s' --icon=messagebox_warning
-!! }}}
 
-!! Sxiv {{{
+!! sxiv
 Sxiv*background:                    #ffffff
 Sxiv*foreground:                    #000000
-!! }}}
 
-!! XTerm {{{
+!! xterm
 XTerm*background:                   #000000
 XTerm*foreground:                   #ffffff
 XTerm*pointerColor:                 #4084d6
@@ -86,9 +81,8 @@ XTerm*faceSize:                     12
 XTerm*renderFont:                   true
 XTerm*reverseVideo:                 off
 XTerm*selectToClipboard:            true
-!! }}}
 
-!! URxvt {{{
+!! urxvt
 URxvt*font:                         xft:DejaVuSansMono Nerd Font Mono:size=12:antialias=true:hinting=true
 URxvt*boldFont:                     xft:DejaVuSansMono Nerd Font Mono:bold:size=12:antialias=true:hinting=true
 URxvt*letterspacing:                -2
@@ -101,23 +95,23 @@ URxvt*mouseWheelScrollPage:         false
 URxvt*cursorBlink:                  true
 URxvt*saveLines:                    5000
 
-! Perl extensions
+! perl extensions
 URxvt.perl-ext:                     default,url-select,keyboard-select,resize-font
 
-! URL copy or open
+! url copy or open
 URxvt.keysym.M-u:                   perl:url-select:select_next
 URxvt.url-select.launcher:          /usr/bin/xdg-open
 URxvt.url-select.underline:         true
 
-! Keyboard select
+! keyboard select
 URxvt.keysym.M-Escape:              perl:keyboard-select:activate
 
-! Normal copy-paste keybindings without perls
+! normal copy-paste keybindings without perls
 URxvt.iso14755:                     false
 URxvt.keysym.Shift-Control-V:       eval:paste_clipboard
 URxvt.keysym.Shift-Control-C:       eval:selection_to_clipboard
 
-! Xterm escape codes, word by word movement
+! xterm escape codes, word by word movement
 URxvt.keysym.Control-Left:          \033[1;5D
 URxvt.keysym.Shift-Control-Left:    \033[1;6D
 URxvt.keysym.Control-Right:         \033[1;5C
@@ -126,11 +120,9 @@ URxvt.keysym.Control-Up:            \033[1;5A
 URxvt.keysym.Shift-Control-Up:      \033[1;6A
 URxvt.keysym.Control-Down:          \033[1;5B
 URxvt.keysym.Shift-Control-Down:    \033[1;6B
-!! }}}
 
-!! simple terminal {{{
+!! simple terminal
 st.alpha:                           0.90
 st.font:                            DejaVuSansMono Nerd Font Mono:size=12
 st.termname:                        st-256color
 st.borderpx:                        2
-!! }}}

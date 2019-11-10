@@ -3,9 +3,9 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:43:30
+# date:       2019-11-10 17:37:04
 
-# colors {{{
+# colors
 [[ $- != *i* ]] && return
 
 use_color=true
@@ -53,26 +53,22 @@ else
 fi
 
 unset use_color
-# }}}
 
-# xhost {{{
+# xhost
 xhost +local:root > /dev/null 2>&1
-# }}}
 
-# SIGWINCH {{{
+# SIGWINCH
 # Bash won't get SIGWINCH if another process is in the foreground.
 # Enable checkwinsize so that bash will check the terminal size when
 # it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
-# }}}
 
-# alias {{{
+# alias
 shopt -s expand_aliases
 source "$HOME"/.aliases
-# }}}
 
-# completion {{{
+# completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 source /usr/share/fzf/completion.bash && source /usr/share/fzf/key-bindings.bash
 #complete -cf sudo
@@ -84,10 +80,8 @@ _pip_completion()
                    PIP_AUTO_COMPLETE=1 $1 ) )
 }
 complete -o default -F _pip_completion pip
-# }}}
 
-# autostart {{{
+# autostart
 if [[ ! "$TERM" =~ ^(linux|st-256color|tmux-256color)$ ]]; then
     tx
 fi
-# }}}
