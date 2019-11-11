@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-10 17:57:20
+; date:       2019-11-11 19:02:37
 
 ; global/wm
 [global/wm]
@@ -64,7 +64,7 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
 modules-center = 
-modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit alsa backlight battery keyboard date powermenu
+modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -257,16 +257,20 @@ interval = 10.0
 click-left = ~/.config/polybar/polkittoggle.sh
 click-right = ~/.config/polybar/polkittoggle.sh
 
-; module/alsa
-[module/alsa]
-type = internal/alsa
+; module/pulseaudio
+[module/pulseaudio]
+type = internal/pulseaudio
 
-mapped = true
-interval = 1.0
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+interval = 5.0
+use-ui-max = false
+
 format-volume = <ramp-volume> <label-volume>
+#format-volume = <label-volume> <bar-volume>
 format-volume-overline = ${colors.blue}
 
 label-volume = %percentage%%
+#label-volume = ""
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
@@ -280,6 +284,11 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
+bar-volume-width = 10
+bar-volume-indicator = |
+bar-volume-fill = |
+bar-volume-empty = -
+
 ; module/backlight
 [module/backlight]
 type = internal/xbacklight
@@ -287,10 +296,16 @@ type = internal/xbacklight
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format = <label>
+#format = <bar>
 format-overline = ${colors.blue}
 
 label = %percentage%%
 label-foreground = ${colors.foreground}
+
+bar-width = 10
+bar-indicator = |
+bar-fill = |
+bar-empty = -
 
 ; module/battery
 [module/battery]

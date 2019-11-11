@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-11 17:28:06
+# date:       2019-11-11 18:38:58
 
 # basic definitions
 set $mod Mod4
@@ -219,9 +219,12 @@ bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
 bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
 
 # keybindings multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 1+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 1- unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -M set Master 5+ unmute
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -M set Master 5- unmute
+#bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh down
 bindsym $mod+p exec rofidisplay.sh
