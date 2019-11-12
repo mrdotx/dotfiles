@@ -4,13 +4,13 @@
 # path:       ~/.config/polybar/vpnhadestoggle.sh
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:55:41
+# date:       2019-11-12 22:23:57
 
-VPN=hades
+vpnname=hades
 
-if [ "$(nmcli connection show --active $VPN)" ]
+if [ "$(nmcli connection show --active $vpnname)" ]
 then
-        nmcli con down id $VPN && notify-send "VPN" "$VPN disconnected!" && exit 0
+        nmcli con down id $vpnname && notify-send "VPN" "$vpnname disconnected!" && exit 0
 else
-        nmcli con up id $VPN passwd-file "$HOME"/coding/secrets/vpn/$VPN && notify-send "VPN" "$VPN connected!" && exit 0
+        nmcli con up id $vpnname passwd-file "$HOME"/coding/hidden/vpn/$vpnname && notify-send "VPN" "$vpnname connected!" && exit 0
 fi

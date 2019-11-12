@@ -4,11 +4,11 @@
 # path:       ~/.config/polybar/vpnhades.sh
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-12 21:23:06
+# date:       2019-11-12 22:24:18
 
-VPN=hades
+vpnname=hades
 
-if [ "$(nmcli connection show --active $VPN)" ]
+if [ "$(nmcli connection show --active $vpnname)" ]
 then
 	echo "%{F#dfdfdf}%{o#00b200}%{o-}%{F-}"
 else
