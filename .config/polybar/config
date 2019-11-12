@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-11 19:02:37
+; date:       2019-11-12 21:17:39
 
 ; global/wm
 [global/wm]
@@ -23,12 +23,12 @@ foreground-alt = #666666
 
 white = #ffffff
 black = #000000
-grey = #cbcbcb
-blue = #4084d6
+grey = #cccccc
+blue = #4185d7
 blue-alt = #3476a4
-green = #00ff00
-red = #ff0000
-yellow = #ffff00
+green = #00b200
+red = #ff5555
+yellow = #b0b200
 
 ; bar/i3
 [bar/i3]
@@ -63,7 +63,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
-modules-center = 
+modules-center =
 modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
@@ -126,7 +126,7 @@ label-foreground = ${colors.blue}
 type = internal/temperature
 interval = 2.0
 thermal-zone = 0
-warn-temperature = 90
+warn-temperature = 70
 
 format = <ramp> <label>
 format-overline = ${colors.blue}

@@ -3,7 +3,7 @@
 // path:       ~/.config/rofi/arc-dark-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-10 16:56:12
+// date:       2019-11-12 21:06:44
 
 // config
 configuration {
@@ -73,19 +73,19 @@ configuration {
 #element {
     padding:                1px 0px 5px 2px;
 }
-#element.normal.normal {     
+#element.normal.normal {
     background-color:       @black;
     text-color:             @white;
     border:                 2px 0px 0px 0px;
     border-color:           @blue;
 }
-#element.normal.urgent {    
+#element.normal.urgent {
     background-color:       @black;
     text-color:             @red;
     border:                 2px 0px 0px 0px;
     border-color:           @red;
 }
-#element.normal.active {    
+#element.normal.active {
     background-color:       @black;
     text-color:             @blue;
     border:                 2px 0px 0px 0px;

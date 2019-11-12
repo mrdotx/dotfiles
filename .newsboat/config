@@ -3,7 +3,7 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:31:33
+# date:       2019-11-12 21:37:04
 
 # general
 auto-reload yes
@@ -36,7 +36,7 @@ color background        white   black
 color listnormal        green   black
 color listfocus         cyan    blue    bold
 color listnormal_unread red     black
-color listfocus_unread  white   blue    bold    
+color listfocus_unread  white   blue    bold
 color info              cyan    black
 color article           white   black
 

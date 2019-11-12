@@ -3,7 +3,7 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:37:04
+# date:       2019-11-12 21:43:05
 
 # colors
 [[ $- != *i* ]] && return
@@ -11,12 +11,12 @@
 use_color=true
 
 if ${use_color} ; then
-	# directory
-	if type -P dircolors >/dev/null ; then
-		if [[ -f ~/.dir_colors ]] ; then
-			eval $(dircolors -b ~/.dir_colors)
-		fi
-	fi
+    # directory
+    if type -P dircolors >/dev/null ; then
+        if [[ -f ~/.dir_colors ]] ; then
+            eval $(dircolors -b ~/.dir_colors)
+        fi
+    fi
 
     # command
     alias ls='ls --color=auto'
@@ -37,19 +37,19 @@ if ${use_color} ; then
     export LESS_TERMCAP_us=$'\e[1;4;31m'
 
     # prompt
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
-	else
-		PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\[\033[00m\] '
-	fi
+    if [[ ${EUID} == 0 ]] ; then
+        PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+    else
+        PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\[\033[00m\] '
+    fi
 
 else
-	if [[ ${EUID} == 0 ]] ; then
-		# show root@ when we don't have colors
-		PS1='\u@\h \W \$ '
-	else
-		PS1='\u@\h \w \$ '
-	fi
+    if [[ ${EUID} == 0 ]] ; then
+        # show root@ when we don't have colors
+        PS1='\u@\h \W \$ '
+    else
+        PS1='\u@\h \w \$ '
+    fi
 fi
 
 unset use_color
