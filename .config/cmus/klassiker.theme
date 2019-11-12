@@ -1,0 +1,63 @@
+# vim:fileencoding=utf-8:ft=config:foldmethod=marker
+
+# path:       ~/.config/cmus/klassiker.theme
+# user:       klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-12 11:16:37
+
+# directory colors
+set color_win_dir=default
+
+# normal text
+set color_win_fg=default
+
+# window background color
+set color_win_bg=default
+
+# command line color
+set color_cmdline_bg=default
+set color_cmdline_fg=default
+
+# color of error messages displayed on the command line
+set color_error=lightred
+
+# color of informational messages displayed on the command line
+set color_info=lightblue
+
+# color of currently playing track
+set color_win_cur=lightblue
+
+# color of the separator line between windows in view (1)
+set color_separator=blue
+
+# color of window titles (topmost line of the screen)
+set color_win_title_bg=lightblue
+set color_win_title_fg=white
+
+# status line color
+set color_statusline_bg=default
+set color_statusline_fg=gray
+
+# color of the line displaying currently playing track
+set color_titleline_bg=lightblue
+set color_titleline_fg=white
+
+# color of the selected row which is also the currently playing track in active window
+set color_win_cur_sel_bg=lightblue
+set color_win_cur_sel_fg=white
+
+# color of the selected row which is also the currently playing track in inactive window
+set color_win_inactive_cur_sel_bg=blue
+set color_win_inactive_cur_sel_fg=white
+
+# color of selected row in inactive window
+set color_win_inactive_sel_bg=blue
+set color_win_inactive_sel_fg=gray
+
+# color of selected row in active window
+set color_win_sel_bg=blue
+set color_win_sel_fg=white
+
+# command line color
+set color_cmdline_bg=default
+set color_cmdline_fg=default
