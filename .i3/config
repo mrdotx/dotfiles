@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-12 21:36:28
+# date:       2019-11-12 23:25:51
 
 # basic definitions
 set $mod Mod4
@@ -225,7 +225,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh down
 bindsym $mod+p exec rofidisplay.sh
-#bindsym $mod+p exec screenlayout.sh
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
