@@ -4,12 +4,12 @@
 # path:       ~/.conky/conky.sh
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:49:29
+# date:       2019-11-12 11:20:59
 
 service=conky
-conky1=$HOME/.conky/arc-dark-horizontal.conf
-conky2=$HOME/.conky/arc-dark-slim-horizontal.conf
-conky3=$HOME/.conky/arc-dark-vertical.conf
+conky1=$HOME/.conky/klassiker-horizontal.conf
+conky2=$HOME/.conky/klassiker-slim-horizontal.conf
+conky3=$HOME/.conky/klassiker-vertical.conf
 conky4=$HOME/.conky/shortcuts_foreground_left.conf
 conky5=$HOME/.conky/shortcuts_foreground_middle.conf
 conky6=$HOME/.conky/shortcuts_foreground_right.conf
