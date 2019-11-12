@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-11 18:38:58
+# date:       2019-11-12 12:07:42
 
 # basic definitions
 set $mod Mod4
@@ -40,6 +40,7 @@ for_window [title="Calculator"] floating enable border pixel 1
 for_window [title="Network Manager"] floating enable border pixel 1
 for_window [title="(?i)floating"] floating enable, resize set 1024 768, move position center
 for_window [title="File Transfer*"] floating enable
+for_window [title="cmus"] floating enable, resize set 1024 768, move position center, move scratchpad, scratchpad show
 for_window [class="Arandr"] floating enable sticky enable border normal, resize set 800 600, move position center
 for_window [class="GParted"] floating enable border normal
 for_window [class="Lightdm-settings"] floating enable
@@ -94,7 +95,6 @@ assign [class="Darktable"] $ws7
 assign [title="LibreOffice"] $ws8
 assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
-assign [title="cmus"] $ws10
 assign [class="Kodi"] $ws10
 for_window [class="Kodi"] fullscreen
 
@@ -238,7 +238,7 @@ bindsym $mod+Return exec --no-startup-id $TERMINAL
 bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
 bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
-bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus
+bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus.sh
 bindsym $mod+d exec darktable
 bindsym $mod+e exec --no-startup-id rofivim.sh
 bindsym $mod+g exec gimp
