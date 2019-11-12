@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-12 18:20:47
+" date:       2019-11-12 19:00:21
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -25,7 +25,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 call plug#end()
 
 let g:airline_powerline_fonts=1
-let g:airline_theme = 'base16_spacemacs'
+let g:airline_theme = 'base16_klassiker'
 
 let g:shfmt_extra_args='-i 4'
 
