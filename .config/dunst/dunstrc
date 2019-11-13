@@ -4,7 +4,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-12 21:32:00
+# date:       2019-11-13 12:01:06
 
 ### Display ###
 
@@ -22,7 +22,7 @@ monitor = 0
 #
 # If this option is set to mouse or keyboard, the monitor option
 # will be ignored.
-follow = mouse
+follow = none
 
 # The geometry of the window:
 #   [{width}]x{height}[+/-{x}+/-{y}]

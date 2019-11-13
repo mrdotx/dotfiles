@@ -3,7 +3,7 @@
 !! path:       ~/.Xresources.conf
 !! user:       klassiker [mrdotx]
 !! gitgub:     https://github.com/mrdotx/dotfiles
-!! date:       2019-11-10 17:42:53
+!! date:       2019-11-13 11:37:58
 
 !! general
 *background:                        #000000
@@ -63,10 +63,10 @@ Xft.lcdfilter:                      lcddefault
 
 !! xautolock
 Xautolock.corners:                  ----
-Xautolock.time:                     10
-Xautolock.locker:                   suspend.sh
+Xautolock.time:                     9
+Xautolock.locker:                   $(/usr/bin/i3exit lock && /usr/bin/i3exit suspend)
 Xautolock.notify:                   30
-Xautolock.notifier:                 notify-send 'i3' 'Locking screen and suspend pc in 30 s' --icon=messagebox_warning
+Xautolock.notifier:                 notify-send 'i3' 'Locking screen and suspend in 30 seconds' --icon=messagebox_warning
 
 !! sxiv
 Sxiv*background:                    #ffffff
