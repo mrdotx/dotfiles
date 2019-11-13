@@ -3,7 +3,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:35:41
+# date:       2019-11-13 18:29:42
 
 # tools
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -33,7 +33,7 @@ alias cu='ch && up'
 
 alias sy='cloudsync.sh'
 alias dm='delmetafiles.sh'
-alias hm='historymaintenance.sh'
+alias hm='maintenance.sh'
 
 # ssh
 alias pi='ssh hermes'
