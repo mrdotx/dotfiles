@@ -3,7 +3,7 @@
 # path:       ~/.gitconfig
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-06 11:52:25
+# date:       2019-11-14 14:12:28
 
 [user]
     name = mrdotx
@@ -26,9 +26,6 @@
 #    pretty = oneline
 [pack]
     threads = 0
-[credential]
-#    helper = cache --timeout 7200
-#    helper = libsecret
 [core]
     editor = vim -c startinsert
 [merge]
