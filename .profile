@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:39:32
+# date:       2019-11-14 11:22:22
 
 # path
 if [ -d "$HOME/.conky" ] ; then
@@ -30,3 +30,9 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
+
+# enable gnome keyring for terminal applications
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
