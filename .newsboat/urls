@@ -3,68 +3,20 @@
 # path:       ~/.newsboat/urls
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:33:17
+# date:       2019-11-15 16:16:14
 
 #: querys
-"query: Afd:title =~ \"AfD\""
-"query: Brexit:title =~ \"Brexit\""
-"query: Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
-"query: Erdogan:title =~ \"Erdogan\""
-"query: DSGVO:title =~ \"DSGVO\""
-"query: Unread:unread = \"yes\""
-
-#: news
-#"query:----------News-------------:tags # \"News\" and unread = \"yes\""
-#https://www.tagesschau.de/xml/atom/ "~tagesschau" "News"
-#https://www.spiegel.de/schlagzeilen/tops/index.rss "~SPON" "News"
-#https://www.welt.de/feeds/topnews.rss "~WELT" "News"
-#https://newsfeed.zeit.de/index "~ZEIT" "News"
-
-#: local
-#"query:----------Local------------:tags # \"Local\" and unread = \"yes\""
-#https://www.elmshorn.de/media/rss/PressemitteilungenderStadtverwaltungElmshorn.xml "~Elmshorn - Aktuelles" "Local"
-#https://www.elmshorn.de/media/rss/VeranstaltungenElmshorn.xml "~Elmshorn - Veranstaltungen" "Local"
-#https://www.elmshorn.de/media/rss/PressemitteilungenderStadtverwaltungElmshorn.xml "~Elmshorn - Pressemitteilungen" "Local"
-#https://www.shz.de/lokales/elmshorner-nachrichten/rss "~SHZ EN" "Local"
-#https://www.ndr.de/nachrichten/schleswig-holstein/index-rss.xml "~NDR SH" "Local"
-#https://www.ndr.de/nachrichten/hamburg/index-rss.xml "~NDR HH" "Local"
-
-#: technic
-#"query:----------Technic----------:tags # \"Technic\" and unread = \"yes\""
-#https://www.heise.de/newsticker/heise-atom.xml "~heise" "Technic"
-#https://rss.golem.de/rss.php?feed=ATOM1.0 "~Golem" "Technic"
-#https://feeds2.feedburner.com/stadt-bremerhaven/dqXM "~Caschy" "Technic"
-#https://www.linux.com/rss/ "~Linux" "Technic"
-#https://www.howtoforge.com/node/feed "~Howtoforge" "Technic"
-#https://www.tecmint.com/feed "~Tecmint" "Technic"
-#https://forum.manjaro.org/c/announcements.rss "~Manjaro" "Technic"
-#https://www.archlinux.org/feeds/news/ "~Arch" "Technic"
-
-#: youtube
-#"query:----------Youtube----------:tags # \"Youtube\" and unread = \"yes\""
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCkf4VIqu3Acnfzuk3kRIFwA "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC8uT9cgJorJPWu7ITLGo9Ww "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCftUpOO4h9EgH0eDOZtjzcA "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCCXFKQimXJEC-E2evTDwT9g "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCF3cDM_hQMtIEJvEW1BZugg "Youtube"
-#
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCyHDQ5C6z1NDmJ4g6SerW8g "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCZHpIFMfoJJ_1QxNGLJTzyA "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC5E9-r42JlymhLPnDv2wHuA "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCE2hJ9CYR57BYhk3TjGVG6w "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC1Y7onDsPyfP-lu--SXF-ew "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCXdfGoYTQq5eQXP6OJwWSQw "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UChkVOG0PqkXIHHmkBGG15Ig "Youtube"
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCo4693Ony4slDY5hR0ny-bw "Youtube"
-
-#: twitter
-#"query:----------Twitter----------:tags # \"Twitter\" and unread = \"yes\""
-#https://twitrss.me/twitter_user_to_rss/?user=potus "~@POTUS" "Twitter"
-#https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump "~@realDonaldTrump" "Twitter"
-
-#: business
-#"query:----------Business---------:tags # \"Business\" and unread = \"yes\""
-#https://www.prinzipal-kreuzberg.com/website/feed/ "Business"
-#https://www.middlefinger-streetwear.com/feed/ "Business"
+"query:┌ Unread:unread = \"yes\""
+"query:├ All News:tags != \"\""
+"query:├┬ Keywords:title =~ \"AfD|Brexit|Trump|Erdogan|DSGVO\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
+"query:│├─ Afd:title =~ \"AfD\""
+"query:│├─ Brexit:title =~ \"Brexit\""
+"query:│├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
+"query:│├─ Erdogan:title =~ \"Erdogan\""
+"query:│└─ DSGVO:title =~ \"DSGVO\""
+"query:├─ News:tags # \"News\""
+"query:├─ Local:tags # \"Local\""
+"query:├─ Technic:tags # \"Technic\""
+"query:├─ Youtube:tags # \"Youtube\""
+"query:├─ Twitter:tags # \"Twitter\""
+"query:└─ Business:tags # \"Business\""
