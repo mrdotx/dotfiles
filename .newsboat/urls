@@ -3,17 +3,17 @@
 # path:       ~/.newsboat/urls
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-15 16:16:14
+# date:       2019-11-16 00:29:53
 
 #: querys
 "query:┌ Unread:unread = \"yes\""
-"query:├ All News:tags != \"\""
 "query:├┬ Keywords:title =~ \"AfD|Brexit|Trump|Erdogan|DSGVO\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
 "query:│├─ Afd:title =~ \"AfD\""
 "query:│├─ Brexit:title =~ \"Brexit\""
 "query:│├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
 "query:│├─ Erdogan:title =~ \"Erdogan\""
 "query:│└─ DSGVO:title =~ \"DSGVO\""
+"query:├ All News:tags != \"\""
 "query:├─ News:tags # \"News\""
 "query:├─ Local:tags # \"Local\""
 "query:├─ Technic:tags # \"Technic\""
