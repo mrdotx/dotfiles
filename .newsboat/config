@@ -3,7 +3,7 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-15 16:15:17
+# date:       2019-11-15 17:33:04
 
 # general
 auto-reload yes
@@ -29,7 +29,6 @@ inoreader-min-items 999
 macro , open-in-browser
 macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "linkhandler.sh %u"
 macro m set browser "mpv %u"; open-in-browser ; set browser "linkhandler.sh %u"
-
 
 # colors
 color background        white   black
