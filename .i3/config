@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-16 00:14:52
+# date:       2019-11-16 20:01:29
 
 # basic definitions
 set $mod Mod4
@@ -25,15 +25,15 @@ smart_gaps on
 smart_borders on
 
 # autostart applications
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec_always --no-startup-id fix_xcursor
-#exec --no-startup-id libinput-gestures
 exec --no-startup-id ksuperkey
-exec --no-startup-id xautolock -detectsleep
+#exec --no-startup-id libinput-gestures
 exec --no-startup-id unclutter --timeout 10
+exec --no-startup-id xautolock -detectsleep
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id polybar.sh
-exec --no-startup-id compton -b
 exec --no-startup-id sleep 1; screenlayout.sh
+exec --no-startup-id compton -b
 
 # applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

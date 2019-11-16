@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-12 21:17:39
+; date:       2019-11-16 22:53:47
 
 ; global/wm
 [global/wm]
@@ -118,7 +118,7 @@ label-urgent-padding = 1
 ; module/window
 [module/window]
 type = internal/xwindow
-label = %title:0:75:...%
+label = %title:0:50:...%
 label-foreground = ${colors.blue}
 
 ; module/temp
@@ -126,7 +126,7 @@ label-foreground = ${colors.blue}
 type = internal/temperature
 interval = 2.0
 thermal-zone = 0
-warn-temperature = 70
+warn-temperature = 80
 
 format = <ramp> <label>
 format-overline = ${colors.blue}
@@ -182,6 +182,7 @@ interval = 30.0
 fixed-values = true
 
 mount-0 = /
+mount-1 = /home/klassiker/mount/data
 
 label-mounted =  %percentage_used%% %used%/%total%
 label-mounted-foreground = ${colors.foreground}
@@ -193,7 +194,7 @@ label-unmountet-overline = ${colors.red}
 ; module/wlan
 [module/wlan]
 type = internal/network
-interface = wlp1s0
+interface = wlp2s0
 interval = 3.0
 
 format-connected-prefix = " "
