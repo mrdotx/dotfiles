@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-16 20:01:29
+# date:       2019-11-17 13:25:26
 
 # basic definitions
 set $mod Mod4
@@ -146,8 +146,8 @@ bindsym $mod+Ctrl+Right workspace next
 
 # keybindings windows/container
 # split orientation
-bindsym $mod+Ctrl+Up split h;exec --no-startup-id notify-send 'i3' 'tile container horizontally'
-bindsym $mod+Ctrl+Down split v;exec --no-startup-id notify-send 'i3' 'tile container vertically'
+bindsym $mod+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/.i3/icons/i3.png' 'i3' 'tile container horizontally'
+bindsym $mod+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/.i3/icons/i3.png' 'i3' 'tile container vertically'
 #bindsym $mod+Ctrl+Down split toggle
 
 # change focus
@@ -209,11 +209,11 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # dunst restart
-bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
+bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec notify-send -i '~/.i3/icons/i3.png' 'i3' 'restart dunst'"
 
 # compton start/stop
-bindsym $mod+t exec --no-startup-id "pkill compton; exec notify-send 'i3' 'compton stopped'"
-bindsym $mod+Shift+t exec --no-startup-id "compton -b; exec notify-send 'i3' 'compton started'"
+bindsym $mod+t exec --no-startup-id "pkill compton; exec notify-send -i '~/.i3/icons/i3.png' 'i3' 'compton stopped'"
+bindsym $mod+Shift+t exec --no-startup-id "compton -b; exec notify-send -i '~/.i3/icons/i3.png' 'i3' 'compton started'"
 
 # conky start/stop (61=/?)
 bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
