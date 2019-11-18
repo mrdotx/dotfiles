@@ -24,7 +24,7 @@ ${color1}i3 - system management${color0}
     super+l             lock screen
     super+shift+l       lock screen and suspend
     ctrl+alt+x          kill X window
-    super+shift+r       restart i3 inplace (preserves layout/session
+    super+shift+r       restart i3 inplace (preserves layout/session)
     super+shift+e       exit i3 (log out from X session)
     super+shift+d       dunst restart
     super+t             compton stop
