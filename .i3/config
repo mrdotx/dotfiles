@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-18 15:27:54
+# date:       2019-11-19 12:01:19
 
 # basic definitions
 set $mod Mod4
@@ -197,7 +197,7 @@ bindsym $mod+Shift+f fullscreen toggle global
 
 # Lock screen or suspend
 bindsym $mod+l exec --no-startup-id i3exit lock
-bindsym $mod+Shift+l exec --no-startup-id $(i3exit lock && i3exit suspend)
+bindsym $mod+Shift+l exec --no-startup-id i3exit suspend
 
 # x window kill
 bindsym Ctrl+$modalt+x --release exec --no-startup-id xkill
