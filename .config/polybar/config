@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-19 11:58:20
+; date:       2019-11-19 17:45:27
 
 ; global/wm
 [global/wm]
@@ -378,7 +378,7 @@ label-overline = ${colors.blue}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
 format-spacing = 1
 ;format-overline = ${colors.blue}
@@ -409,44 +409,44 @@ menu-0-3-exec = menu-open-4
 menu-0-3-foreground = ${colors.foreground}
 menu-0-3-overline = ${colors.yellow}
 
-menu-1-0 =  sign out
-menu-1-0-exec =
+menu-1-0 = 
+menu-1-0-exec = i3exit logout
 menu-1-0-foreground = ${colors.foreground}
-menu-1-0-overline = ${colors.yellow}
-menu-1-1 = 
-menu-1-1-exec = i3exit logout
+menu-1-0-overline = ${colors.green}
+menu-1-1 = 
 menu-1-1-foreground = ${colors.foreground}
-menu-1-1-overline = ${colors.green}
-menu-1-2 = 
+menu-1-1-exec = menu-open-0
+menu-1-1-overline = ${colors.red}
+menu-1-2 =  sign out
+menu-1-2-exec =
 menu-1-2-foreground = ${colors.foreground}
-menu-1-2-exec = menu-open-0
-menu-1-2-overline = ${colors.red}
+menu-1-2-overline = ${colors.yellow}
 
-menu-2-0 =  hibernate
-menu-2-0-exec =
+menu-2-0 = 
+menu-2-0-exec = i3exit hibernate
 menu-2-0-foreground = ${colors.foreground}
-menu-2-0-overline = ${colors.yellow}
-menu-2-1 = 
-menu-2-1-exec = i3exit hibernate
+menu-2-0-overline = ${colors.green}
+menu-2-1 = 
 menu-2-1-foreground = ${colors.foreground}
-menu-2-1-overline = ${colors.green}
-menu-2-2 = 
+menu-2-1-exec = menu-open-0
+menu-2-1-overline = ${colors.red}
+menu-2-2 =  hibernate
+menu-2-2-exec =
 menu-2-2-foreground = ${colors.foreground}
-menu-2-2-exec = menu-open-0
-menu-2-2-overline = ${colors.red}
+menu-2-2-overline = ${colors.yellow}
 
-menu-3-0 =  restart
-menu-3-0-exec =
+menu-3-0 = 
+menu-3-0-exec = i3exit reboot
 menu-3-0-foreground = ${colors.foreground}
-menu-3-0-overline = ${colors.yellow}
-menu-3-1 = 
-menu-3-1-exec = i3exit reboot
+menu-3-0-overline = ${colors.green}
+menu-3-1 = 
 menu-3-1-foreground = ${colors.foreground}
-menu-3-1-overline = ${colors.green}
-menu-3-2 = 
+menu-3-1-exec = menu-open-0
+menu-3-1-overline = ${colors.red}
+menu-3-2 =  restart
+menu-3-2-exec =
 menu-3-2-foreground = ${colors.foreground}
-menu-3-2-exec = menu-open-0
-menu-3-2-overline = ${colors.red}
+menu-3-2-overline = ${colors.yellow}
 
 menu-4-0 = 
 menu-4-0-exec = i3exit shutdown
