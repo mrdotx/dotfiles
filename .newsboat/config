@@ -3,7 +3,7 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-20 20:47:03
+# date:       2019-11-20 22:46:56
 
 # general
 auto-reload yes
@@ -30,18 +30,33 @@ macro , open-in-browser
 macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "linkhandler.sh %u"
 macro m set browser "mpv %u"; open-in-browser ; set browser "linkhandler.sh %u"
 
+# color table
+#black      color0 = #000000    color8  = #333333
+#red        color1 = #fe0000    color9  = #ff5555
+#green      color2 = #4185d7    color10 = #3476a4
+#yellow     color3 = #b0b200    color11 = #ffff55
+#blue       color4 = #1f5393    color12 = #4084d6
+#magenta    color5 = #980096    color13 = #ff55ff
+#cyan       color6 = #009698    color14 = #55ffff
+#white      color7 = #cccccc    color15 = #ffffff
+
 # colors
-color background        white   black
-color listnormal        green   black
-color listfocus         cyan    blue    bold
-color listnormal_unread red     black
-color listfocus_unread  white   blue    bold
-color info              cyan    black
-color article           white   black
+color background            white   black
+color listnormal            green   black
+color listfocus             cyan    blue    bold
+color listnormal_unread     red     black
+color listfocus_unread      white   blue    bold
+color info                  cyan    black
+color article               white   black
 
 # Highlight
-search-highlight-colors black   yellow  bold
+search-highlight-colors     black   yellow  bold
 
-highlight all "Afd|Brexit|Trump|Erdogan|DSGVO" yellow black
-#highlight-article "title =~ \"Afd|Brexit|Trump|Erdogan|DSGVO\"" magenta black
-highlight article "^(Feed|Titel|Author|Link|Datum):" blue black underline
+highlight all \bAfd\b       color14 black   underline
+highlight all \bBrexit\b    color6  black   underline
+highlight all \bTrump\b     color13 black   underline
+highlight all \bErdogan\b   color5  black   underline
+highlight all \bDSGVO\b     color11 black   underline
+
+highlight article "^(Feed|Titel|Author|Link|Datum):"                blue    black   underline
+#highlight-article "title =~ \"Afd|Brexit|Trump|Erdogan|DSGVO\""    magenta black
