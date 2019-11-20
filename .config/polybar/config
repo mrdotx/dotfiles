@@ -3,9 +3,9 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-19 17:45:27
+; date:       2019-11-20 13:26:52
 
-; global/wm
+; wm
 [global/wm]
 margin-top = 0
 margin-bottom = 0
@@ -30,7 +30,7 @@ green = #00b200
 red = #ff5555
 yellow = #b0b200
 
-; bar/i3
+; i3
 [bar/i3]
 monitor = ${env:MONITOR:}
 width = 100%
@@ -63,13 +63,13 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
-modules-center =
+#modules-center = cmus
 modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-; module/i3
+; i3
 [module/i3]
 type = internal/i3
 
@@ -115,13 +115,22 @@ label-urgent-background = ${colors.red}
 label-urgent-overline = ${colors.red}
 label-urgent-padding = 1
 
-; module/window
+; window
 [module/window]
 type = internal/xwindow
 label = %title:0:50:...%
 label-foreground = ${colors.blue}
 
-; module/temp
+; /cmus
+#[module/cmus]
+#type = custom/script
+#exec = ~/.config/polybar/cmus.sh
+#interval = 5
+#click-left = cmus-remote -n &
+#click-right = cmus-remote -r &
+#click-middle = cmus-remote -u &
+
+; temp
 [module/temp]
 type = internal/temperature
 interval = 2.0
@@ -145,7 +154,7 @@ ramp-3 = 
 ramp-4 = 
 ramp-foreground = ${colors.foreground}
 
-; module/cpu
+; cpu
 [module/cpu]
 type = internal/cpu
 interval = 2.0
@@ -155,7 +164,7 @@ format-overline = ${colors.blue}
 label = %percentage%%
 label-foreground = ${colors.foreground}
 
-; module/ram
+; ram
 [module/ram]
 type = internal/memory
 interval = 2.0
@@ -165,7 +174,7 @@ format-overline = ${colors.blue}
 label = %percentage_used%% %gb_used%/%gb_total%
 label-foreground = ${colors.foreground}
 
-; module/swap
+; swap
 [module/swap]
 type = internal/memory
 interval = 10.0
@@ -175,7 +184,7 @@ format-overline = ${colors.blue}
 label = %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
 label-foreground = ${colors.foreground}
 
-; module/ssd
+; ssd
 [module/ssd]
 type = internal/fs
 interval = 30.0
@@ -191,7 +200,7 @@ label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground}
 label-unmountet-overline = ${colors.red}
 
-; module/wlan
+; wlan
 [module/wlan]
 type = internal/network
 interface = wlp2s0
@@ -210,55 +219,55 @@ format-disconnected-overline = ${colors.red}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground}
 
-; module/vpnhades
+; vpnhades
 [module/vpnhades]
 type = custom/script
-exec = ~/.config/polybar/vpnhades.sh
+exec = ~/.config/polybar/vpnhades.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/vpnhadestoggle.sh
-click-right = ~/.config/polybar/vpnhadestoggle.sh
+click-left = ~/.config/polybar/vpnhades.sh
+click-right = ~/.config/polybar/vpnhades.sh
 
-; module/firewall
+; firewall
 [module/firewall]
 type = custom/script
-exec = ~/.config/polybar/firewall.sh
+exec = ~/.config/polybar/firewall.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/firewalltoggle.sh
-click-right = ~/.config/polybar/firewalltoggle.sh
+click-left = ~/.config/polybar/firewall.sh
+click-right = ~/.config/polybar/firewall.sh
 
-; module/bluetooth
+; bluetooth
 [module/bluetooth]
 type = custom/script
-exec = ~/.config/polybar/bluetooth.sh
+exec = ~/.config/polybar/bluetooth.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/bluetoothtoggle.sh
-click-right = ~/.config/polybar/bluetoothtoggle.sh
+click-left = ~/.config/polybar/bluetooth.sh
+click-right = ~/.config/polybar/bluetooth.sh
 
-; module/printer
+; printer
 [module/printer]
 type = custom/script
-exec = ~/.config/polybar/printer.sh
+exec = ~/.config/polybar/printer.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/printertoggle.sh
-click-right = ~/.config/polybar/printertoggle.sh
+click-left = ~/.config/polybar/printer.sh
+click-right = ~/.config/polybar/printer.sh
 
-; module/gestures
+; gestures
 [module/gestures]
 type = custom/script
-exec = ~/.config/polybar/gestures.sh
+exec = ~/.config/polybar/gestures.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/gesturestoggle.sh
-click-right = ~/.config/polybar/gesturestoggle.sh
+click-left = ~/.config/polybar/gestures.sh
+click-right = ~/.config/polybar/gestures.sh
 
-; module/polkit
+; polkit
 [module/polkit]
 type = custom/script
-exec = ~/.config/polybar/polkit.sh
+exec = ~/.config/polybar/polkit.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/polkittoggle.sh
-click-right = ~/.config/polybar/polkittoggle.sh
+click-left = ~/.config/polybar/polkit.sh
+click-right = ~/.config/polybar/polkit.sh
 
-; module/pulseaudio
+; pulseaudio
 [module/pulseaudio]
 type = internal/pulseaudio
 
@@ -285,12 +294,12 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-bar-volume-width = 10
-bar-volume-indicator = |
-bar-volume-fill = |
-bar-volume-empty = -
+#bar-volume-width = 10
+#bar-volume-indicator = |
+#bar-volume-fill = |
+#bar-volume-empty = -
 
-; module/backlight
+; backlight
 [module/backlight]
 type = internal/xbacklight
 
@@ -303,12 +312,12 @@ format-overline = ${colors.blue}
 label = %percentage%%
 label-foreground = ${colors.foreground}
 
-bar-width = 10
-bar-indicator = |
-bar-fill = |
-bar-empty = -
+#bar-width = 10
+#bar-indicator = |
+#bar-fill = |
+#bar-empty = -
 
-; module/battery
+; battery
 [module/battery]
 type = internal/battery
 poll-interval = 10.0
@@ -346,7 +355,7 @@ animation-discharging-4 = 
 animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
 
-; module/keyboard
+; keyboard
 [module/keyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
@@ -359,7 +368,7 @@ label-layout = %layout%
 label-layout-foreground = ${colors.foreground}
 label-layout-overline = ${colors.blue}
 
-; module/date
+; date
 [module/date]
 type = internal/date
 interval = 60.0
@@ -374,7 +383,7 @@ label = %date% %time%
 label-foreground = ${colors.foreground}
 label-overline = ${colors.blue}
 
-; module/powermenu
+; powermenu
 [module/powermenu]
 type = custom/menu
 
