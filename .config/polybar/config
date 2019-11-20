@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-20 13:26:52
+; date:       2019-11-20 16:11:11
 
 ; wm
 [global/wm]
@@ -118,10 +118,14 @@ label-urgent-padding = 1
 ; window
 [module/window]
 type = internal/xwindow
-label = %title:0:50:...%
-label-foreground = ${colors.blue}
 
-; /cmus
+format = <label>
+format-foreground = ${colors.blue}
+
+label = %title%
+label-maxlen = 50
+
+; cmus
 #[module/cmus]
 #type = custom/script
 #exec = ~/.config/polybar/cmus.sh
@@ -158,9 +162,11 @@ ramp-foreground = ${colors.foreground}
 [module/cpu]
 type = internal/cpu
 interval = 2.0
+
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
+
 label = %percentage%%
 label-foreground = ${colors.foreground}
 
@@ -168,9 +174,11 @@ label-foreground = ${colors.foreground}
 [module/ram]
 type = internal/memory
 interval = 2.0
+
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
+
 label = %percentage_used%% %gb_used%/%gb_total%
 label-foreground = ${colors.foreground}
 
@@ -178,9 +186,11 @@ label-foreground = ${colors.foreground}
 [module/swap]
 type = internal/memory
 interval = 10.0
+
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
+
 label = %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
 label-foreground = ${colors.foreground}
 
