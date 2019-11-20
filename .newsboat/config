@@ -3,7 +3,7 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-17 15:54:57
+# date:       2019-11-20 20:05:52
 
 # general
 auto-reload yes
@@ -44,4 +44,4 @@ search-highlight-colors black   yellow  bold
 
 highlight all "Afd|Brexit|Trump|Erdogan|DSGVO" yellow
 #highlight-article "title =~ \"Afd|Brexit|Trump|Erdogan|DSGVO\"" magenta black
-highlight article "^(Feed|Titel|Author|Link|Datum):" magenta black underline
+highlight article "^(Feed|Titel|Author|Link|Datum):" blue black underline
