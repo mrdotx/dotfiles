@@ -1,10 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# path:       ~/coding/shell/cmus.sh
+# path:       ~/.config/polybar/cmus.sh
 # user:       klassiker [mrdotx]
-# github:     https://github.com/mrdotx/shell
-# date:       2019-11-20 13:15:56
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-21 21:58:13
 
 if info=$(cmus-remote -Q 2> /dev/null); then
 	status=$(echo "$info" | grep -v "set " | grep -v "tag " | grep "status " | cut -d ' ' -f 2)

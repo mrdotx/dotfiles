@@ -1,10 +1,10 @@
 #!/bin/bash
 # vim:fileencoding=utf-8:ft=sh:foldmethod=marker
 
-# path:       ~/coding/shell/cmus_status_display.sh
+# path:       ~/.config/cmus/cmus_status_display.sh
 # user:       klassiker [mrdotx]
-# github:     https://github.com/mrdotx/shell
-# date:       2019-11-21 21:37:30
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2019-11-21 21:58:40
 
 if ps -C cmus > /dev/null; then
 
