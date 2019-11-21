@@ -4,7 +4,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-13 12:01:06
+# date:       2019-11-21 21:22:44
 
 ### Display ###
 
@@ -36,7 +36,7 @@ follow = none
 # the top and down respectively.
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
-geometry = "300x5-2+27"
+geometry = "350x5-2+27"
 
 # Show how many messages are currently hidden (because of geometry).
 indicate_hidden = yes
