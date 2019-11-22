@@ -55,11 +55,11 @@ ${color1}i3 - applications${color0}
     super+o             libreoffice
     super+r             ranger
     super+s             scribus
+    super+v             virtualbox
     super+w             secondary browser (firefox-development-edition)
     super+shift+w       primary browser (qutebrowser)
     super+y             polybar toggle
     super+z             filezilla
     super+f2            pcmanfm
     super+f3            pcmanfm (root)
-
 

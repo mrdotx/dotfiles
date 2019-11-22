@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-22 21:15:56
+# date:       2019-11-22 21:43:48
 
 # basic definitions
 set $mod Mod4
@@ -225,7 +225,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh up
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh down
-bindsym $mod+p exec rofidisplay.sh
+bindsym $mod+p exec --no-startup-id rofidisplay.sh
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -242,12 +242,13 @@ bindsym $mod+g exec gimp
 bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
 bindsym $mod+i exec inkscape
 bindsym $mod+j exec jameica
-bindsym $mod+k exec $(keepasssync.sh && keepassxc && keepasssync.sh)
+bindsym $mod+k exec --no-startup-id $(keepasssync.sh && keepassxc && keepasssync.sh)
 bindsym $mod+m exec thunderbird
 bindsym $mod+n exec --no-startup-id "$TERMINAL -e newsboat -q"
 bindsym $mod+o exec libreoffice
 bindsym $mod+r exec --no-startup-id $TERMINAL -e ranger
 bindsym $mod+s exec scribus
+bindsym $mod+v exec VirtualBox
 bindsym $mod+w exec firefox-developer-edition
 bindsym $mod+Shift+w exec --no-startup-id qutebrowser
 bindsym $mod+y exec --no-startup-id polybar.sh
