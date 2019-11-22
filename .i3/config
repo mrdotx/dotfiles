@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-22 21:43:48
+# date:       2019-11-22 22:01:48
 
 # basic definitions
 set $mod Mod4
@@ -26,7 +26,7 @@ smart_borders on
 
 # autostart applications
 exec_always --no-startup-id screenlayout.sh
-exec_always --no-startup-id polybar.sh
+exec_always --no-startup-id polybar.sh i3slim
 exec_always --no-startup-id pkill compton; sleep 1; compton -b
 #exec_always --no-startup-id fix_xcursor
 exec --no-startup-id ksuperkey
