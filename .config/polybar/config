@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-22 16:14:38
+; date:       2019-11-22 17:11:18
 
 ; wm
 [global/wm]
@@ -64,7 +64,7 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
 #modules-center = cmus
-modules-right = temp cpu ram swap ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
+modules-right = temp cpu ram ssd wlan vpnhades firewall bluetooth printer gestures polkit backlight pulseaudio battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -103,7 +103,7 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
 #modules-center = cmus
-modules-right = temp cpu ramslim swapslim ssdslim wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
+modules-right = temp cpu ramslim ssdslim wlan vpnhades firewall bluetooth printer gestures polkit backlight pulseaudio battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -218,7 +218,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
 
-label = %percentage_used%% %gb_used%/%gb_total%
+label = %percentage_used%% %gb_used%/%gb_total% [%percentage_swap_used%% %gb_swap_used%/%gb_swap_total%]
 label-foreground = ${colors.foreground}
 
 ; ramslim
@@ -230,31 +230,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
 
-label = %percentage_used%%
-label-foreground = ${colors.foreground}
-
-; swap
-[module/swap]
-type = internal/memory
-interval = 10.0
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-overline = ${colors.blue}
-
-label = %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
-label-foreground = ${colors.foreground}
-
-; swaplim
-[module/swapslim]
-type = internal/memory
-interval = 10.0
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-overline = ${colors.blue}
-
-label = %percentage_swap_used%%
+label = %percentage_used%% [%percentage_swap_used%%]
 label-foreground = ${colors.foreground}
 
 ; ssd
@@ -356,6 +332,23 @@ interval = 10.0
 click-left = ~/.config/polybar/polkit.sh
 click-right = ~/.config/polybar/polkit.sh
 
+; backlight
+[module/backlight]
+type = internal/xbacklight
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format = <bar>
+format-overline = ${colors.blue}
+
+label = %percentage%%
+label-foreground = ${colors.foreground}
+
+bar-width = 20
+bar-indicator = 
+bar-fill = .
+bar-empty = .
+
 ; pulseaudio
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -364,47 +357,23 @@ sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 interval = 5.0
 use-ui-max = false
 
-format-volume = <ramp-volume> <label-volume>
-#format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> <bar-volume>
 format-volume-overline = ${colors.blue}
 
-label-volume = %percentage%%
-#label-volume = ""
+label-volume = " "
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = ""
 format-muted-foreground = ${colors.foreground}
 format-muted-overline = ${colors.red}
-label-muted = mute
+label-muted = " "
 label-muted-foreground = ${colors.foreground}
 label-muted-overline = ${colors.red}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-#bar-volume-width = 10
-#bar-volume-indicator = |
-#bar-volume-fill = |
-#bar-volume-empty = -
-
-; backlight
-[module/backlight]
-type = internal/xbacklight
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format = <label>
-#format = <bar>
-format-overline = ${colors.blue}
-
-label = %percentage%%
-label-foreground = ${colors.foreground}
-
-#bar-width = 10
-#bar-indicator = |
-#bar-fill = |
-#bar-empty = -
+bar-volume-width = 20
+bar-volume-indicator = 
+bar-volume-fill = .
+bar-volume-empty = .
 
 ; battery
 [module/battery]
@@ -424,7 +393,9 @@ label-discharging-foreground = ${colors.foreground}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-overline = ${colors.red}
 
-format-full-prefix = " "
+label-full = " "
+label-full-foreground = ${colors.foreground}
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground}
 format-full-overline = ${colors.blue}
 
