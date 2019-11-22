@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-21 23:40:04
+# date:       2019-11-22 21:15:56
 
 # basic definitions
 set $mod Mod4
@@ -49,6 +49,7 @@ for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Kodi"] fullscreen
 for_window [class="Pamac-manager"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
@@ -84,8 +85,8 @@ workspace $ws9 output $main $hdmi
 workspace $ws10 output $hdmi $main
 
 # open applications on specific workspaces (xprop)
-assign [class="VirtualBox"] $ws2
-assign [class="code-oss"] $ws3
+assign [title="newsboat"] $ws2
+assign [class="VirtualBox"] $ws3
 assign [class="firefoxdeveloperedition"] $ws4
 assign [title="GIMP Startup"] $ws5
 assign [class="Gimp"] $ws5
@@ -97,7 +98,6 @@ assign [title="LibreOffice"] $ws8
 assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
 assign [class="Kodi"] $ws10
-for_window [class="Kodi"] fullscreen
 
 # keybindings workspaces
 # switch to workspace
