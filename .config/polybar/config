@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-22 01:03:58
+; date:       2019-11-22 01:10:39
 
 ; wm
 [global/wm]
@@ -101,7 +101,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 windowslim
+modules-left = i3 window
 #modules-center = cmus
 modules-right = temp cpu ramslim swapslim ssdslim wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
 
@@ -163,16 +163,6 @@ format-foreground = ${colors.blue}
 
 label = %title%
 label-maxlen = 50
-
-; windowslim
-[module/windowslim]
-type = internal/xwindow
-
-format = <label>
-format-foreground = ${colors.blue}
-
-label = %title%
-label-maxlen = 100
 
 ; cmus
 [module/cmus]
