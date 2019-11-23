@@ -4,7 +4,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-22 12:17:04
+# date:       2019-11-23 16:16:05
 
 ### Display ###
 
@@ -260,7 +260,7 @@ timeout = 10
 #icon = /path/to/icon
 
 [urgency_normal]
-background = "#4185d7"
+background = "#4084d6"
 foreground = "#ffffff"
 timeout = 10
 # Icon for notifications with normal urgency, uncomment to enable

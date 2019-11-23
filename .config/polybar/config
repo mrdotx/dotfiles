@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-23 15:59:49
+; date:       2019-11-23 16:19:32
 
 ; wm
 [global/wm]
@@ -24,8 +24,8 @@ foreground-alt = #666666
 white = #ffffff
 black = #000000
 grey = #cccccc
-blue = #4185d7
-blue-alt = #3476a4
+blue = #4084d6
+blue-alt = #4185d7
 green = #00b200
 red = #ff5555
 yellow = #b0b200
