@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-22 21:52:26
+; date:       2019-11-23 15:59:49
 
 ; wm
 [global/wm]
@@ -343,26 +343,26 @@ use-ui-max = false
 format-volume = <label-volume> <bar-volume>
 format-volume-overline = ${colors.blue}
 
-label-volume = " "
+label-volume = ""
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = ""
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground}
 format-muted-overline = ${colors.red}
-label-muted = " "
+label-muted = "ıııııııııııııııııııı"
 label-muted-foreground = ${colors.foreground}
 label-muted-overline = ${colors.red}
 
 bar-volume-width = 20
-bar-volume-indicator = 
-bar-volume-fill = .
-bar-volume-empty = .
+bar-volume-fill = ı
+bar-volume-indicator = ¦
+bar-volume-empty = ı
 
 ; backlight
 [module/backlight]
 type = internal/xbacklight
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format = <bar>
 format-overline = ${colors.blue}
@@ -371,9 +371,9 @@ label = %percentage%%
 label-foreground = ${colors.foreground}
 
 bar-width = 20
-bar-indicator = 
-bar-fill = .
-bar-empty = .
+bar-fill = ı
+bar-indicator = ¦
+bar-empty = ı
 
 ; battery
 [module/battery]
@@ -393,9 +393,9 @@ label-discharging-foreground = ${colors.foreground}
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-overline = ${colors.red}
 
-label-full = " "
+label-full = ""
 label-full-foreground = ${colors.foreground}
-format-full-prefix = ""
+format-full-prefix =
 format-full-prefix-foreground = ${colors.foreground}
 format-full-overline = ${colors.blue}
 
