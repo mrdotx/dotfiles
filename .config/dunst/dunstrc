@@ -4,7 +4,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-23 16:16:05
+# date:       2019-11-24 15:24:37
 
 ### Display ###
 
@@ -22,7 +22,7 @@ monitor = 0
 #
 # If this option is set to mouse or keyboard, the monitor option
 # will be ignored.
-follow = none
+follow = "keyboard"
 
 # The geometry of the window:
 #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -36,7 +36,7 @@ follow = none
 # the top and down respectively.
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
-geometry = "350x5-2+27"
+geometry = "350x5-7-7"
 
 # Show how many messages are currently hidden (because of geometry).
 indicate_hidden = yes
