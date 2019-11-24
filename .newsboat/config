@@ -3,7 +3,7 @@
 # path:       ~/.newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-20 22:46:56
+# date:       2019-11-24 21:22:30
 
 # general
 auto-reload yes
@@ -41,22 +41,21 @@ macro m set browser "mpv %u"; open-in-browser ; set browser "linkhandler.sh %u"
 #white      color7 = #cccccc    color15 = #ffffff
 
 # colors
-color background            white   black
-color listnormal            green   black
-color listfocus             cyan    blue    bold
-color listnormal_unread     red     black
-color listfocus_unread      white   blue    bold
-color info                  cyan    black
-color article               white   black
+color background                    white   black
+color listnormal                    green   black
+color listfocus                     cyan    blue    bold
+color listnormal_unread             red     black
+color listfocus_unread              white   blue    bold
+color info                          cyan    black
+color article                       white   black
 
 # Highlight
-search-highlight-colors     black   yellow  bold
+search-highlight-colors             black   yellow  bold
 
-highlight all \bAfd\b       color14 black   underline
-highlight all \bBrexit\b    color6  black   underline
-highlight all \bTrump\b     color13 black   underline
-highlight all \bErdogan\b   color5  black   underline
-highlight all \bDSGVO\b     color11 black   underline
+highlight all "Afd"                 color14 black   underline
+highlight all "Brexit"              color6  black   underline
+highlight all "Trump"               color13 black   underline
+highlight all "Erdogan"             color5  black   underline
+highlight all "DSGVO|Datenschutz"   color11 black   underline
 
-highlight article "^(Feed|Titel|Author|Link|Datum):"                blue    black   underline
-#highlight-article "title =~ \"Afd|Brexit|Trump|Erdogan|DSGVO\""    magenta black
+highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    black   underline
