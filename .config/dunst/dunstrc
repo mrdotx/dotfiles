@@ -4,7 +4,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-24 15:24:37
+# date:       2019-11-24 20:53:35
 
 ### Display ###
 
@@ -36,7 +36,7 @@ follow = "keyboard"
 # the top and down respectively.
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
-geometry = "350x5-7-7"
+geometry = "350x5-6-6"
 
 # Show how many messages are currently hidden (because of geometry).
 indicate_hidden = yes
@@ -48,7 +48,7 @@ shrink = no
 # The transparency of the window.  Range: [0; 100].
 # This option will only work if a compositing window manager is
 # present (e.g. xcompmgr, compiz, etc.).
-transparency = 5
+transparency = 10
 
 # The height of the entire notification.  If the height is smaller
 # than the font height and padding combined, it will be raised
@@ -71,7 +71,7 @@ horizontal_padding = 8
 frame_width = 2
 
 # Defines color of the frame around the notification window.
-frame_color = "#cccccc"
+frame_color = "#4084d6"
 
 # Define a color for the separator.
 # possible values are:
@@ -136,7 +136,7 @@ format = "<b>%s</b>\n%b"
 
 # Alignment of message text.
 # Possible values are "left", "center" and "right".
-alignment = right
+alignment = left
 
 # Show age of message if message is older than show_age_threshold
 # seconds.
@@ -190,7 +190,7 @@ history_length = 20
 dmenu = /usr/bin/rofi -dmenu -i -p 
 
 # Browser for opening urls in context menu.
-browser = /usr/bin/surf
+browser = /usr/bin/qutebrowser
 
 # Always run rule-defined scripts, even if the notification is suppressed
 always_run_script = true
@@ -260,7 +260,7 @@ timeout = 10
 #icon = /path/to/icon
 
 [urgency_normal]
-background = "#4084d6"
+background = "#000000"
 foreground = "#ffffff"
 timeout = 10
 # Icon for notifications with normal urgency, uncomment to enable
