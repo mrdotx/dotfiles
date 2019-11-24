@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-23 14:54:33
+# date:       2019-11-25 00:43:03
 
 # basic definitions
 set $mod Mod4
@@ -23,6 +23,14 @@ gaps inner 5
 gaps outer -2
 smart_gaps on
 smart_borders on
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4084d6 #4185d7 #ffffff #1f5393   #3476a4
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #ff5555 #ffffff #ff5555   #ff5555
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
 
 # autostart applications
 exec_always --no-startup-id screenlayout.sh
