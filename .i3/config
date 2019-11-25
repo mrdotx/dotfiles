@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-25 00:43:03
+# date:       2019-11-25 18:57:44
 
 # basic definitions
 set $mod Mod4
@@ -262,5 +262,6 @@ bindsym $mod+Shift+w exec --no-startup-id qutebrowser
 bindsym $mod+y exec --no-startup-id polybar.sh
 bindsym $mod+z exec filezilla
 
+bindsym $mod+F1 exec --no-startup-id conky.sh shortcutsforeground
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+F3 exec gksu pcmanfm
