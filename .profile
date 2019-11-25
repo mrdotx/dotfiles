@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-14 11:22:22
+# date:       2019-11-25 18:15:01
 
 # path
 if [ -d "$HOME/.conky" ] ; then
@@ -14,6 +14,9 @@ if [ -d "$HOME/coding/python" ] ; then
 fi
 if [ -d "$HOME/coding/shell" ] ; then
     PATH="$HOME/coding/shell:$PATH"
+fi
+if [ -d "$HOME/coding/st" ] ; then
+    PATH="$HOME/coding/st:$PATH"
 fi
 
 # export

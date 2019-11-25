@@ -6,6 +6,7 @@ ${color1}st${color0}
     shift+[pg_up,pg_dn] Scrollback (mouse scroll)
     alt+l               open url from rofi
     alt+y               copy url to xclip
+    alt+o               copy command output to xclip
     ctrl+t              paste the selected files and directories
     ctrl+r              paste selected command from history
     alt-c               cd into the selected directory
@@ -57,7 +58,6 @@ ${color1}tmux - general${color0}
     {,}                 move active container left, right
     !                   open active container in new window
     [                   activate scroll-mode (arrow keys)
-
 
 
 
