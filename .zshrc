@@ -3,7 +3,7 @@
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 17:44:30
+# date:       2019-11-25 19:30:57
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -73,7 +73,7 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # oh-my-zsh plugins
 # zsh-autosuggestion
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1f5393,bg=black,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#980096,bg=black,bold,underline"
 
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
