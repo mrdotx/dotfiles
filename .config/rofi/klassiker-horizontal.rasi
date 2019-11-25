@@ -1,9 +1,9 @@
 // vim:fileencoding=utf-8:ft=css:foldmethod=marker
 
-// path:       ~/.config/rofi/arc-dark-horizontal.rasi
+// path:       ~/.config/rofi/klassiker-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-12 21:06:44
+// date:       2019-11-25 22:38:27
 
 // config
 configuration {

@@ -3,6 +3,6 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 18:01:02
+# date:       2019-11-25 20:31:06
 
-rofi.theme:                     arc-dark-horizontal.rasi
+rofi.theme:                     klassiker-horizontal.rasi
