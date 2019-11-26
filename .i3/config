@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-25 18:57:44
+# date:       2019-11-26 10:46:32
 
 # basic definitions
 set $mod Mod4
@@ -194,7 +194,7 @@ bindsym $modalt+minus scratchpad show
 
 # keybindings system managment
 # start program launcher
-bindsym $modalt+F1 exec --no-startup-id rofi -monitor primary -show
+bindsym $modalt+F1 exec --no-startup-id rofi -show
 
 # kill focused window
 bindsym Ctrl+q kill
