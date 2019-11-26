@@ -3,9 +3,9 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-26 12:00:14
+# date:       2019-11-26 12:16:13
 
-rofi.theme:                     klassiker-horizontal.rasi
+rofi.theme:                     klassiker-horizontal
 rofi.monitor:                   primary
 
 rofi.show-icons:                false
