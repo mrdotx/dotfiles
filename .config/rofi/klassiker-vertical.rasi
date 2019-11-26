@@ -3,7 +3,7 @@
 // path:       ~/.config/rofi/klassiker-vertical.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-26 13:32:51
+// date:       2019-11-26 16:52:24
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -33,7 +33,6 @@
 #box {
     layout:                 horizontal;
     orientation:            horizontal;
-    lines:                  1;
     spacing:                0;
     width:                  100%;
     expand:                 false;
@@ -56,7 +55,6 @@
     scrollbar:              true;
     cycle:                  false;
     width:                  100%;
-    lines:                  5;
     spacing:                5;
     padding:                2px 0px 0px 0px;
 }
