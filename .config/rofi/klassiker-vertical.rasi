@@ -3,7 +3,7 @@
 // path:       ~/.config/rofi/klassiker-vertical.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-26 13:08:34
+// date:       2019-11-26 13:27:36
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -53,24 +53,31 @@
     padding:                2px 10px 0px 5px;
 }
 #listview {
-    scrollbar:              false;
+    scrollbar:              true;
     cycle:                  false;
     width:                  100%;
     lines:                  5;
     spacing:                5;
     padding:                2px 0px 0px 0px;
 }
+#scrollbar {
+    width:                  4px;
+    border:                 0;
+    handle-color:           @blue;
+    handle-width:           8px;
+    padding:                0;
+}
 #element {
     padding:                2px 10px 2px 10px;
 }
 #element.normal.normal {
-    background-color:       @black;
+    background-color:       transparent;
     text-color:             @white;
     border:                 1px 0px 0px 0px;
     border-color:           @blue;
 }
 #element.normal.urgent {
-    background-color:       @black;
+    background-color:       transparent;
     text-color:             @red;
     border:                 1px 0px 0px 0px;
     border-color:           @red;
@@ -79,7 +86,6 @@
     background-color:       @black;
     text-color:             @blue;
     border:                 1px 0px 0px 0px;
-//    border-color:           @green;
 }
 #element.selected.normal {
     background-color:       @blue;
@@ -97,23 +103,21 @@
     background-color:       @blue;
     text-color:             @black;
     border:                 1px 0px 0px 0px;
-//    border-color:           @green;
 }
 #element.alternate.normal {
-    background-color:       @black;
+    background-color:       transparent;
     text-color:             @white;
     border:                 1px 0px 0px 0px;
     border-color:           @blue;
 }
 #element.alternate.urgent {
-    background-color:       @black;
+    background-color:       transparent;
     text-color:             @red;
     border:                 1px 0px 0px 0px;
     border-color:           @red;
 }
 #element.alternate.active {
-    background-color:       @black;
+    background-color:       transparent;
     text-color:             @blue;
     border:                 1px 0px 0px 0px;
-//    border-color:           @green;
 }
