@@ -3,7 +3,7 @@
 // path:       ~/.config/rofi/klassiker-vertical.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-26 12:07:12
+// date:       2019-11-26 13:06:24
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -12,7 +12,7 @@
 
     background-color:       transparent;
 
-    black:                  rgba (0,0,0,100%);
+    black:                  rgba (0,0,0,90%);
     grey:                   rgba (203,203,203,100%);
     white:                  rgba (255,255,255,100%);
     blue:                   rgba (64,132,214,100%);
@@ -41,12 +41,12 @@
     font:                   @regular;
 }
 #listview {
-    scrollbar:              true;
-    cycle:                  true;
+    scrollbar:              false;
+    cycle:                  false;
     width:                  100%;
     lines:                  5;
     spacing:                5;
-    padding:                2px 0px 0px 10px;
+    padding:                2px 0px 0px 0px;
 }
 #element {
     padding:                2px 10px 2px 10px;
