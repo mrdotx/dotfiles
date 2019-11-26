@@ -3,37 +3,8 @@
 // path:       ~/.config/rofi/klassiker-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-25 22:38:27
+// date:       2019-11-26 12:07:06
 
-// config
-configuration {
-    show-icons:             false;
-    click-to-exit:          true;
-
-    modi:                   "combi,ssh,window";
-    combi-modi:             "drun,ssh,window";
-    combi-hide-mode-prefix: true;
-    drun-match-fields:      "name,generic,exec,categories,comment";
-    drun-display-format:    "{name}";
-
-    display-drun:           "";
-    display-ssh:            "";
-    display-window:         "";
-    display-combi:          "";
-
-    disable-history:        false;
-    window-format:          "[{w}] {t}";
-
-    terminal:               "st";
-    run-command:            "{cmd}";
-    run-shell-command:      "{terminal} -e {cmd}";
-    ssh-client:             "ssh";
-    ssh-command:            "{terminal} -e {ssh-client} {host}";
-    parse-hosts:            false;
-    parse-known-hosts:      false;
-}
-
-// general
 * {
     regular:                "Source Sans Pro Regular 10";
     bold:                   "Source Sans Pro Bold 10";

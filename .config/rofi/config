@@ -3,7 +3,32 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-26 11:28:29
+# date:       2019-11-26 12:00:14
 
-rofi.theme:                 klassiker-horizontal.rasi
-rofi.monitor:               primary
+rofi.theme:                     klassiker-horizontal.rasi
+rofi.monitor:                   primary
+
+rofi.show-icons:                false
+rofi.click-to-exit:             true
+
+rofi.modi:                      combi,ssh,window
+rofi.combi-modi:                drun,ssh,window
+rofi.combi-hide-mode-prefix:    true
+rofi.drun-match-fields:         name,generic,exec,categories,comment
+rofi.drun-display-format:       {name}
+
+rofi.display-drun:              
+rofi.display-ssh:               
+rofi.display-window:            
+rofi.display-combi:             
+
+rofi.disable-history:           false
+rofi.window-format:             [{w}] {t}
+
+rofi.terminal:                  st
+rofi.run-command:               {cmd}
+rofi.run-shell-command:         {terminal} -e {cmd}
+rofi.ssh-client:                ssh
+rofi.ssh-command:               {terminal} -e {ssh-client} {host}
+rofi.parse-hosts:               false
+rofi.parse-known-hosts:         false
