@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-23 16:19:32
+; date:       2019-11-27 15:50:47
 
 ; wm
 [global/wm]
@@ -461,7 +461,7 @@ label-close-overline = ${colors.red}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 =  sign out
+menu-0-0 =  lock out
 menu-0-0-exec = menu-open-1
 menu-0-0-foreground = ${colors.foreground}
 menu-0-0-overline = ${colors.yellow}
@@ -478,37 +478,25 @@ menu-1-0 = 
 menu-1-0-exec = i3exit logout
 menu-1-0-foreground = ${colors.foreground}
 menu-1-0-overline = ${colors.green}
-menu-1-1 = 
-menu-1-1-foreground = ${colors.foreground}
+menu-1-1 =  lock out
 menu-1-1-exec = menu-open-0
-menu-1-1-overline = ${colors.red}
-menu-1-2 =  sign out
-menu-1-2-exec =
-menu-1-2-foreground = ${colors.foreground}
-menu-1-2-overline = ${colors.yellow}
+menu-1-1-foreground = ${colors.foreground}
+menu-1-1-overline = ${colors.yellow}
 
 menu-2-0 = 
 menu-2-0-exec = i3exit reboot
 menu-2-0-foreground = ${colors.foreground}
 menu-2-0-overline = ${colors.green}
-menu-2-1 = 
-menu-2-1-foreground = ${colors.foreground}
+menu-2-1 =  restart
 menu-2-1-exec = menu-open-0
-menu-2-1-overline = ${colors.red}
-menu-2-2 =  restart
-menu-2-2-exec =
-menu-2-2-foreground = ${colors.foreground}
-menu-2-2-overline = ${colors.yellow}
+menu-2-1-foreground = ${colors.foreground}
+menu-2-1-overline = ${colors.yellow}
 
 menu-3-0 = 
 menu-3-0-exec = i3exit shutdown
 menu-3-0-foreground = ${colors.foreground}
 menu-3-0-overline = ${colors.green}
-menu-3-1 = 
+menu-3-1 =  shutdown
 menu-3-1-exec = menu-open-0
 menu-3-1-foreground = ${colors.foreground}
-menu-3-1-overline = ${colors.red}
-menu-3-2 =  shutdown
-menu-3-2-exec =
-menu-3-2-foreground = ${colors.foreground}
-menu-3-2-overline = ${colors.yellow}
+menu-3-1-overline = ${colors.yellow}
