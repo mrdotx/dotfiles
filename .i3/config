@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-28 13:54:58
+# date:       2019-11-28 15:21:04
 
 # basic definitions
 set $mod Mod4
@@ -251,7 +251,7 @@ bindsym $mod+g exec gimp
 bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
 bindsym $mod+i exec inkscape
 bindsym $mod+j exec jameica
-bindsym $mod+k exec --no-startup-id $(keepasssync.sh && keepassxc && keepasssync.sh)
+bindsym $mod+k exec --no-startup-id $(sync_keepass.sh && keepassxc && sync_keepass.sh)
 bindsym $mod+m exec thunderbird
 bindsym $mod+n exec --no-startup-id $TERMINAL -e newsboat -q
 bindsym $mod+o exec libreoffice

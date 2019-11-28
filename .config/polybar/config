@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-28 13:43:51
+; date:       2019-11-28 15:12:12
 
 ; wm
 [global/wm]
@@ -167,7 +167,7 @@ label-maxlen = 50
 ; cmus
 [module/cmus]
 type = custom/script
-exec = ~/.config/polybar/cmus.sh
+exec = polybar_cmus.sh
 interval = 1
 click-left = cmus-remote -n &
 click-right = cmus-remote -r &
@@ -287,50 +287,50 @@ label-disconnected-foreground = ${colors.foreground}
 ; vpnhades
 [module/vpnhades]
 type = custom/script
-exec = ~/.config/polybar/vpnhades.sh --polybar
+exec = polybar_vpn_hades.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/vpnhades.sh
-click-right = ~/.config/polybar/vpnhades.sh
+click-left = polybar_vpn_hades.sh
+click-right = polybar_vpn_hades.sh
 
 ; firewall
 [module/firewall]
 type = custom/script
-exec = ~/.config/polybar/firewall.sh --polybar
+exec = polybar_firewall.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/firewall.sh
-click-right = ~/.config/polybar/firewall.sh
+click-left = polybar_firewall.sh
+click-right = polybar_firewall.sh
 
 ; bluetooth
 [module/bluetooth]
 type = custom/script
-exec = ~/.config/polybar/bluetooth.sh --polybar
+exec = polybar_bluetooth.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/bluetooth.sh
-click-right = ~/.config/polybar/bluetooth.sh
+click-left = polybar_bluetooth.sh
+click-right = polybar_bluetooth.sh
 
 ; printer
 [module/printer]
 type = custom/script
-exec = ~/.config/polybar/printer.sh --polybar
+exec = polybar_printer.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/printer.sh
-click-right = ~/.config/polybar/printer.sh
+click-left = polybar_printer.sh
+click-right = polybar_printer.sh
 
 ; gestures
 [module/gestures]
 type = custom/script
-exec = ~/.config/polybar/gestures.sh --polybar
+exec = polybar_gestures.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/gestures.sh
-click-right = ~/.config/polybar/gestures.sh
+click-left = polybar_gestures.sh
+click-right = polybar_gestures.sh
 
 ; polkit
 [module/polkit]
 type = custom/script
-exec = ~/.config/polybar/polkit.sh --polybar
+exec = polybar_polkit.sh --polybar
 interval = 10.0
-click-left = ~/.config/polybar/polkit.sh
-click-right = ~/.config/polybar/polkit.sh
+click-left = polybar_polkit.sh
+click-right = polybar_polkit.sh
 
 ; pulseaudio
 [module/pulseaudio]
