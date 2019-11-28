@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-26 17:10:44
+# date:       2019-11-28 12:39:16
 
 # basic definitions
 set $mod Mod4
@@ -244,6 +244,7 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
 bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
 bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus.sh
+bindsym $mod+shift+c exec --no-startup-id cmusnotify.sh
 bindsym $mod+d exec darktable
 bindsym $mod+e exec --no-startup-id rofivim.sh
 bindsym $mod+g exec gimp
