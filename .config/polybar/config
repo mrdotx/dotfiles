@@ -3,7 +3,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-11-27 21:18:51
+; date:       2019-11-28 13:43:51
 
 ; wm
 [global/wm]
