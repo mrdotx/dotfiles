@@ -3,12 +3,9 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-25 18:15:01
+# date:       2019-11-28 15:31:59
 
 # path
-if [ -d "$HOME/.conky" ] ; then
-    PATH="$HOME/.conky:$PATH"
-fi
 if [ -d "$HOME/coding/python" ] ; then
     PATH="$HOME/coding/python:$PATH"
 fi
