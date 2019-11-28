@@ -4,6 +4,6 @@ Type=Application
 Name=Mount
 Comment=Mount drives
 Icon=udiskie-mount
-Exec=rofimount.sh
+Exec=rofi_mount.sh
 Actions=
 Categories=Utility;

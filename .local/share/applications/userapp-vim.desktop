@@ -4,6 +4,6 @@ Type=Application
 Name=vim
 Comment=shortcuts to start vim
 Icon=nvim
-Exec=rofivim.sh
+Exec=rofi_vim.sh
 Actions=
 Categories=Utility;

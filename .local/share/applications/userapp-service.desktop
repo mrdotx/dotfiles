@@ -4,6 +4,6 @@ Type=Application
 Name=Service
 Comment=Services de-/activate
 Icon=shellscript
-Exec=rofiservice.sh
+Exec=rofi_service.sh
 Actions=
 Categories=Utility;

@@ -4,6 +4,6 @@ Type=Application
 Name=Unmount
 Comment=Unmount drives
 Icon=udiskie-unmount
-Exec=rofiunmount.sh
+Exec=rofi_unmount.sh
 Actions=
 Categories=Utility;

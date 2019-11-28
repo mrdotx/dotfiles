@@ -4,6 +4,6 @@ Type=Application
 Name=Display Settings
 Comment=Select and config display settings
 Icon=cs-display
-Exec=rofidisplay.sh
+Exec=rofi_display.sh
 Actions=
 Categories=Utility;
