@@ -3,7 +3,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-28 12:39:16
+# date:       2019-11-28 13:54:58
 
 # basic definitions
 set $mod Mod4
@@ -233,7 +233,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh -inc 20
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh -dec 20
-bindsym $mod+p exec --no-startup-id rofidisplay.sh
+bindsym $mod+p exec --no-startup-id rofi_display.sh
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -244,9 +244,9 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
 bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
 bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus.sh
-bindsym $mod+shift+c exec --no-startup-id cmusnotify.sh
+bindsym $mod+Shift+c exec --no-startup-id cmus_notify.sh
 bindsym $mod+d exec darktable
-bindsym $mod+e exec --no-startup-id rofivim.sh
+bindsym $mod+e exec --no-startup-id rofi_vim.sh
 bindsym $mod+g exec gimp
 bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
 bindsym $mod+i exec inkscape
@@ -262,7 +262,7 @@ bindsym $mod+w exec firefox-developer-edition
 bindsym $mod+Shift+w exec --no-startup-id qutebrowser
 bindsym $mod+y exec --no-startup-id polybar.sh
 bindsym $mod+z exec filezilla
-bindsym $mod+equal exec --no-startup-id roficalc.sh
+bindsym $mod+equal exec --no-startup-id rofi_calc.sh
 
 bindsym $mod+F1 exec --no-startup-id conky.sh shortcutsforeground
 bindsym $mod+F2 exec pcmanfm
