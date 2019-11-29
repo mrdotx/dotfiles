@@ -3,14 +3,14 @@
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-25 19:30:57
+# date:       2019-11-29 12:15:52
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/klassiker/.oh-my-zsh"
+export ZSH="/home/klassiker/.config/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

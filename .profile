@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 11:28:13
+# date:       2019-11-29 11:53:41
 
 # path
 if [ -d "$HOME/coding/python" ] ; then
@@ -33,6 +33,7 @@ export READER="zathura"
 export BROWSER="qutebrowser"
 
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.7/site-packages
+export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 export QT_QPA_PLATFORMTHEME="qt5ct"

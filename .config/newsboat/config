@@ -1,9 +1,9 @@
 # vim:fileencoding=utf-8:ft=config:foldmethod=marker
 
-# path:       ~/.newsboat/config
+# path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-24 21:22:30
+# date:       2019-11-29 12:26:19
 
 # general
 auto-reload yes
