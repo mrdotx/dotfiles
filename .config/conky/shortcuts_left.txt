@@ -17,7 +17,6 @@ ${color1}i3 - windows|containers${color0}
     alt+-               show the next scratchpad window or hide the focused
 
 ${color1}i3 - system management${color0}
-    alt+f1              start program launcher (press and release super key)
     ctrl+q              kill focused window
     super+f             toggle fullscreen mode for focused container
     super+shift+f       toggle fullscreen mode global
@@ -60,6 +59,7 @@ ${color1}i3 - applications${color0}
     super+y             polybar toggle
     super+z             filezilla
     super+=             calculator
+    super+`             font symbols
     super+f1            help shortcuts
     super+f2            pcmanfm
     super+f3            pcmanfm (root)
