@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 13:53:27
+# date:       2019-11-29 14:53:13
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then
@@ -27,7 +27,7 @@ export XDG_CONFIG_DIRS=/etc/xdg
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
-# app paths
+# apps
 export TERMINAL="st"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
