@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-28 15:31:59
+# date:       2019-11-29 11:28:13
 
 # path
 if [ -d "$HOME/coding/python" ] ; then
@@ -16,6 +16,13 @@ if [ -d "$HOME/coding/st" ] ; then
     PATH="$HOME/coding/st:$PATH"
 fi
 
+# xdg paths
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CONFIG_DIRS=/etc/xdg
+
 # export
 export TERMINAL="st"
 export VISUAL="vim"
@@ -24,7 +31,10 @@ export SUDO_EDITOR="$VISUAL"
 export FILE="ranger"
 export READER="zathura"
 export BROWSER="qutebrowser"
+
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.7/site-packages
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
