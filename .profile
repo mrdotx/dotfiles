@@ -3,7 +3,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 14:53:13
+# date:       2019-11-30 19:12:08
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then
@@ -24,6 +24,7 @@ export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
 # xdg config paths
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
@@ -39,7 +40,6 @@ export BROWSER="qutebrowser"
 # app settings
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.7/site-packages
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
