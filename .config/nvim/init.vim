@@ -3,7 +3,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-12 19:00:21
+" date:       2019-12-01 11:23:30
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -17,6 +17,10 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'tpope/vim-fugitive'
     Plug 'z0mbix/vim-shfmt'
+    Plug 'tmhedberg/SimpylFold'
+    Plug 'vim-scripts/indentpython.vim'
+    Plug 'Valloric/YouCompleteMe'
+    Plug 'vim-syntastic/syntastic'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'flazz/vim-colorschemes'
     Plug 'vim-airline/vim-airline'
@@ -28,6 +32,19 @@ let g:airline_powerline_fonts=1
 let g:airline_theme = 'base16_klassiker'
 
 let g:shfmt_extra_args='-i 4'
+
+let g:SimpylFold_docstring_preview=1
+
+let g:ycm_autoclose_preview_window_after_completion=1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 let notes={}
 let notes.path='$HOME/coding/hidden/notes'
@@ -80,13 +97,13 @@ set number relativenumber
 set showcmd
 " highlight current line
 "set cursorline
+" highlight extra white space
+:highlight ExtraWhitespace ctermbg=red guibg=red
 " to ward off unexpected things
 set nocompatible
 " visual autocomplete for command menu
 set wildmenu
 set wildmode=longest,list,full
-" indent when moving to the next line while writing code
-set autoindent
 " redraw only when we need to
 set lazyredraw
 " highlight matching [{()}]
@@ -95,20 +112,36 @@ set showmatch
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 " splits open at the bottom and right
 set splitbelow splitright
+" enable folding
+set foldmethod=indent
+set foldlevel=99
+" file encoding
+set encoding=utf-8
 " disables automatic commenting on newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " run xrdb whenever Xresources are updated.
 autocmd BufWritePost *Xresources !xrdb -merge %
+" mark extra white space as bad and color it red
+autocmd BufRead,BufNewFile *.sh,*.py,*.pyw,*.c,*.h match ExtraWhitespace /\s\+$/
 
-" spaces & tabs
+" style guide
 " number of visual spaces per TAB
 set tabstop=4
 " number of spaces in tab when editing
 set softtabstop=4
-" tabs are spaces
-set expandtab
 " the size of an indent
 set shiftwidth=4
+" tabs are spaces
+set expandtab
+" indent when moving to the next line while writing code
+set autoindent
+
+" python pep 8 style guide
+function! AutoPy()
+    set textwidth=79
+    set fileformat=unix
+endfunction
+autocmd BufNewFile,BufRead *.py call AutoPy()
 
 " searching
 " search as characters are entered
@@ -199,6 +232,8 @@ autocmd BufWritePre * call ModifiedDate()
 let mapleader=","
 " file explore in split window
 map         <leader><leader>    :Lexplore<CR>
+" autocomplete goto
+map         <leader>g           :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " switch cursor window
 nnoremap    <tab>               <C-w>w
 nnoremap    <S-tab>             <C-w>W
