@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=config:foldmethod=marker
-
 # path:       ~/.config/newsboat/urls
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 12:26:08
+# date:       2019-12-01 23:24:30
 
 #: querys
 "query:┌ Unread:unread = \"yes\""

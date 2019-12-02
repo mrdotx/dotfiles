@@ -1,10 +1,9 @@
 [global]
-# vim:fileencoding=utf-8:ft=cfg:foldmethod=marker
 
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-28 15:05:23
+# date:       2019-12-02 01:27:18
 
 ### Display ###
 

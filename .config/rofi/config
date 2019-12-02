@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
-
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-26 12:16:13
+# date:       2019-12-02 00:48:29
 
 rofi.theme:                     klassiker-horizontal
 rofi.monitor:                   primary

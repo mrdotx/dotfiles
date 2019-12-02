@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=config:foldmethod=marker
-
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 12:26:19
+# date:       2019-12-01 23:24:18
 
 # general
 auto-reload yes
@@ -13,8 +11,8 @@ show-read-feeds yes
 keep-articles-days 30
 cleanup-on-quit yes
 
-browser "linkhandler.sh %u"
-external-url-viewer "linkhandler.sh %u"
+browser "link_handler.sh %u"
+external-url-viewer "link_handler.sh %u"
 
 # inoreader
 urls-source "inoreader"
@@ -27,8 +25,8 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "linkhandler.sh %u"
-macro m set browser "mpv %u"; open-in-browser ; set browser "linkhandler.sh %u"
+macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro m set browser "mpv %u"; open-in-browser ; set browser "link_handler.sh %u"
 
 # color table
 #black      color0 = #000000    color8  = #333333

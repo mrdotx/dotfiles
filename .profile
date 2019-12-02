@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
-
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-30 19:12:08
+# date:       2019-12-02 00:37:51
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then

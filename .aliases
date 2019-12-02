@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
-
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-28 22:07:01
+# date:       2019-12-01 12:00:22
 
 # tools
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -22,7 +20,7 @@ alias wt='curl -H "Accept-Language: de" wttr.in'    # weather
 alias sw='telnet towel.blinkenlights.nl'            # star wars
 
 # git
-alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # maintenance
 alias ch='sudo systemctl --failed && sudo journalctl -p 3 -xb'

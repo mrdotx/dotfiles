@@ -1,15 +1,14 @@
-#!/bin/bash
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
+#!/bin/sh
 
 # path:       ~/.config/sxiv/exec/key-handler
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 16:55:22
+# date:       2019-12-02 01:17:10
 
 # rotate function
 rotate() {
     degree="$1"
-    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read -r file; do
         case "$(file -b -i "$file")" in
         image/jpeg*) jpegtran -rotate "$degree" -copy all -outfile "$file" "$file" ;;
         *)           mogrify  -rotate "$degree" "$file" ;;
@@ -20,12 +19,12 @@ rotate() {
 # flip function
 flip() {
     direction="$1"
-    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read -r file; do
         case "$(file -b -i "$file")" in
         image/jpeg*) jpegtran -flip "$direction" -copy all -outfile "$file" "$file" ;;
-        *)           if [ "$direction" == "horizontal" ]; then
+        *)           if [ "$direction" = "horizontal" ]; then
                         mogrify -flop "$file"
-                     elif [ "$direction" == "vertical" ]; then
+                     elif [ "$direction" = "vertical" ]; then
                         mogrify -flip "$file"
                      fi ;;
         esac
@@ -35,7 +34,7 @@ flip() {
 
 # trash function
 trash() {
-    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
+    tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read -r file; do
         case "$(file -b -i "$file")" in
         *) gio trash "$file" && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning ;;
         esac
@@ -44,8 +43,8 @@ trash() {
 
 # keybindings
 case "$1" in
-"C-e")          while read file; do $TERMINAL -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
-"C-w")          while read file; do nitrogen --save --set-zoom-fill "$file" & done && notify-send "sxiv" "wallpaper changed" --icon=messagebox_info ;;
+"C-e")          while read -r file; do $TERMINAL -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
+"C-w")          while read -r file; do nitrogen --save --set-zoom-fill "$file" & done && notify-send "sxiv" "wallpaper changed" --icon=messagebox_info ;;
 "C-g")          tr '\n' '\0' | xargs -0 gimp & ;;
 "C-n")          tr '\n' '\0' | xargs -0 nomacs & ;;
 "C-comma")      rotate 270 ;;

@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
-
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-12 21:43:05
+# date:       2019-12-02 00:35:51
 
 # colors
 [[ $- != *i* ]] && return
@@ -66,7 +64,7 @@ shopt -s checkwinsize
 
 # alias
 shopt -s expand_aliases
-source "$HOME"/.aliases
+source "$HOME/.aliases"
 
 # completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion

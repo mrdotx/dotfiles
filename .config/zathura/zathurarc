@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=sh:foldmethod=marker
-
 # path:       ~/.config/zathura/zathurarc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-10 16:44:38
+# date:       2019-12-02 00:46:17
 
 set selection-clipboard clipboard
 set adjust-open best-fit

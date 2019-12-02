@@ -1,9 +1,7 @@
-" vim:fileencoding=utf-8:ft=vim:foldmethod=marker
-
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-12-01 11:23:30
+" date:       2019-12-02 01:23:07
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))

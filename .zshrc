@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=zsh:foldmethod=marker
-
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-29 12:15:52
+# date:       2019-12-02 00:39:34
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.

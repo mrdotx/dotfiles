@@ -1,9 +1,7 @@
-" vim:fileencoding=utf-8:ft=vim:foldmethod=marker
-
 " path:       ~/.config/nvim/autoload/airline/themes/base16_klassiker.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-11-12 21:24:50
+" date:       2019-12-02 01:23:58
 
 let s:gui00 = "#1f2022"
 let s:gui01 = "#282828"

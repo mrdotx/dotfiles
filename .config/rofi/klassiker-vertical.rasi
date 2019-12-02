@@ -1,9 +1,7 @@
-// vim:fileencoding=utf-8:ft=css:foldmethod=marker
-
 // path:       ~/.config/rofi/klassiker-vertical.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-11-26 16:52:24
+// date:       2019-12-02 00:49:12
 
 * {
     regular:                "Source Sans Pro Regular 10";

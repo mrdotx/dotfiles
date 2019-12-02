@@ -1,9 +1,7 @@
-# vim:fileencoding=utf-8:ft=config:foldmethod=marker
-
 # path:       ~/.config/cmus/klassiker.theme
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-12 11:16:37
+# date:       2019-12-02 01:28:46
 
 # directory colors
 set color_win_dir=default

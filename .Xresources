@@ -1,9 +1,7 @@
-!! vim:fileencoding=utf-8:ft=xdefaults:foldmethod=marker
-
 !! path:       ~/.Xresources.conf
 !! user:       klassiker [mrdotx]
 !! gitgub:     https://github.com/mrdotx/dotfiles
-!! date:       2019-11-19 12:10:34
+!! date:       2019-12-02 00:38:43
 
 !! general
 *background:                        #000000

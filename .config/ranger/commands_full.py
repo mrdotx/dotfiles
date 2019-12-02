@@ -1,9 +1,9 @@
-# vim:fileencoding=utf-8:ft=python:foldmethod=marker
-
-# path:       ~/.config/ranger/commands_full.py
-# user:       klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2019-11-03 17:58:46
+"""
+path:       ~/.config/ranger/commands_full.py
+user:       klassiker [mrdotx]
+github:     https://github.com/mrdotx/dotfiles
+date:       2019-12-02 00:51:46
+"""
 
 # This file is part of ranger, the console file manager.
 # This configuration file is licensed under the same terms as ranger.
