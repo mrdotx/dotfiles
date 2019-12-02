@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-12-02 01:23:07
+" date:       2019-12-02 19:22:14
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -26,24 +26,24 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
+" airline
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'base16_klassiker'
-
+" shfmt
 let g:shfmt_extra_args='-i 4'
-
+" simplyfold
 let g:SimpylFold_docstring_preview=1
-
+" youcompleteme
 let g:ycm_autoclose_preview_window_after_completion=1
-
+" syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+" vimwiki
 let notes={}
 let notes.path='$HOME/coding/hidden/notes'
 let notes.path_html='$HOME/coding/hidden/notes/html/'
@@ -235,14 +235,17 @@ map         <leader>g           :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " switch cursor window
 nnoremap    <tab>               <C-w>w
 nnoremap    <S-tab>             <C-w>W
+" buffer cycle
+:nnoremap   <leader>b           :bprevious<CR>
 " turn off search highlight
 nnoremap    <leader><space>     :nohlsearch<CR>
 " show hidden characters
 map         <leader>l           :set list! list?<CR>
-" spell-check and shellcheck
+" spell-check, shellcheck, syntastic
 map         <leader>d           :setlocal spell! spelllang=de_de<CR>
 map         <leader>e           :setlocal spell! spelllang=en_us<CR>
-map         <leader>s           :vs term://shellcheck -s sh %<CR>
+map         <leader>S           :vs term://shellcheck -s sh %<CR>
+map         <leader>s           :SyntasticToggleMode<CR>
 " format shellscript
 map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
