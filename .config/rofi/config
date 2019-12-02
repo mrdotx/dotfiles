@@ -1,7 +1,7 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:48:29
+# date:       2019-12-02 20:25:09
 
 rofi.theme:                     klassiker-horizontal
 rofi.monitor:                   primary
@@ -30,3 +30,5 @@ rofi.ssh-client:                ssh
 rofi.ssh-command:               {terminal} -e {ssh-client} {host}
 rofi.parse-hosts:               false
 rofi.parse-known-hosts:         false
+
+# vim:ft=css

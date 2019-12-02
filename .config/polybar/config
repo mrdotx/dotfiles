@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-02 01:22:41
+; date:       2019-12-02 20:32:44
 
 ; wm
 [global/wm]
@@ -500,3 +500,5 @@ menu-3-1 =  shutdown
 menu-3-1-exec = menu-open-0
 menu-3-1-foreground = ${colors.foreground}
 menu-3-1-overline = ${colors.yellow}
+
+; vim:ft=dosini

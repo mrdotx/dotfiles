@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-01 12:00:22
+# date:       2019-12-02 20:09:49
 
 # tools
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -40,3 +40,5 @@ alias p9='ssh p9'
 alias m3='ssh m3'
 alias firetv='ssh firetv'
 alias firetv4k='ssh firetv4k'
+
+# vim:ft=sh

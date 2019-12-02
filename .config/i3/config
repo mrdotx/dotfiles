@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 01:25:46
+# date:       2019-12-02 20:39:40
 
 # basic definitions
 set $mod Mod4
@@ -266,3 +266,5 @@ bindsym $mod+grave exec --no-startup-id rofi_font_symbols.sh
 bindsym $mod+F1 exec --no-startup-id conky.sh shortcutsforeground
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+F3 exec gksu pcmanfm
+
+# vim:ft=sh

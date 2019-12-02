@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:37:51
+# date:       2019-12-02 20:02:43
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then
@@ -44,6 +44,6 @@ export NO_AT_BRIDGE=1
 
 # enable gnome keyring for terminal applications
 if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
+    eval "$(gnome-keyring-daemon --start)"
     export SSH_AUTH_SOCK
 fi

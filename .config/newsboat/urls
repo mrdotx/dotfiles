@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/urls
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-01 23:24:30
+# date:       2019-12-02 20:35:32
 
 #: querys
 "query:┌ Unread:unread = \"yes\""
@@ -19,3 +19,5 @@
 "query:│├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
 "query:│├─ Erdogan:title =~ \"Erdogan\""
 "query:↓└─ DSGVO:title =~ \"DSGVO|Datenschutz\""
+
+# vim:ft=config

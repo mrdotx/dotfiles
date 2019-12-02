@@ -3,7 +3,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 01:27:18
+# date:       2019-12-02 20:42:40
 
 ### Display ###
 
@@ -329,3 +329,5 @@ timeout = 0
 #    appname = Pidgin
 #    summary = *twitter.com*
 #    urgency = normal
+
+# vim:ft=config

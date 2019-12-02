@@ -1,7 +1,7 @@
 # path:       ~/.config/zathura/zathurarc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:46:17
+# date:       2019-12-02 20:21:57
 
 set selection-clipboard clipboard
 set adjust-open best-fit
@@ -40,3 +40,5 @@ map [normal]        p       print
 map [fullscreen]    p       print
 map [normal]        i       recolor
 map [fullscreen]    i       recolor
+
+# vim:ft=config

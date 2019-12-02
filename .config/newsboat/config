@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-01 23:24:18
+# date:       2019-12-02 20:34:57
 
 # general
 auto-reload yes
@@ -57,3 +57,5 @@ highlight all "Erdogan"             color5  black   underline
 highlight all "DSGVO|Datenschutz"   color11 black   underline
 
 highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    black   underline
+
+# vim:ft=config
