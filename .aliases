@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 20:09:49
+# date:       2019-12-04 22:47:47
 
 # tools
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -35,7 +35,9 @@ alias ms='maintenance_system.sh'
 
 # ssh
 alias pi='ssh hermes'
+alias pi_ch='ssh hermes sys_stat.sh'
 alias pi2='ssh prometheus'
+alias pi2_ch='ssh prometheus sys_stat.sh'
 alias p9='ssh p9'
 alias m3='ssh m3'
 alias firetv='ssh firetv'
