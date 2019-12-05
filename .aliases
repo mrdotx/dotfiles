@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-04 22:47:47
+# date:       2019-12-05 23:54:55
 
 # tools
 alias cp='cp -i'                                    # confirm before overwriting something
@@ -23,7 +23,7 @@ alias sw='telnet towel.blinkenlights.nl'            # star wars
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # maintenance
-alias ch='sudo systemctl --failed && sudo journalctl -p 3 -xb'
+alias ch='systemctl --failed && journalctl -p 3 -xb'
 alias up='yay -Syu'
 alias cc='yay -Yc && sudo paccache -rvk2'
 alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
