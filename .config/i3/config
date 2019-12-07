@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-07 14:02:37
+# date:       2019-12-07 22:19:29
 
 # basic definitions
 set $mod Mod4
@@ -226,9 +226,9 @@ bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
 bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
 
 # keybindings multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id audio.sh -inc 5
+bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
+bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh -dec 5
 bindsym $mod+p exec --no-startup-id rofi_display.sh
