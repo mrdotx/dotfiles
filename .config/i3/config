@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-08 12:21:12
+# date:       2019-12-08 20:44:53
 
 # basic definitions
 set $mod Mod4
@@ -45,6 +45,7 @@ exec --no-startup-id xautolock -detectsleep
 for_window [title="alsamixer" instance="st"] floating enable border pixel 1
 for_window [title="Calculator" instance="st"] floating enable border pixel 1
 for_window [title="Network Manager" instance="st"] floating enable border pixel 1
+for_window [class="Nm-connection-editor"] floating enable border normal
 for_window [title="floating" instance="st"] floating enable, resize set 1024 768, move position center
 for_window [title="cmus" instance="st"] floating enable sticky enable, move scratchpad, scratchpad show, resize set 1024 768, move position center
 for_window [title="File Transfer*"] floating enable
