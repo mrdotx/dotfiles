@@ -1,7 +1,7 @@
-// path:       ~/.config/rofi/klassiker-vertical.rasi
+// path:       ~/.config/rofi/klassiker-center.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-12-08 19:31:08
+// date:       2019-12-08 19:31:24
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -21,10 +21,10 @@
 // menu
 #window {
     background-color:       @black;
-    anchor:                 south;
-    location:               south;
-    width:                  100%;
-    children:               [listview,box];
+    //anchor:                 south;
+    //location:               south;
+    width:                  40%;
+    children:               [box,listview];
     font:                   @symbol;
     border:                 0px 0px 0px 6px;
 }
