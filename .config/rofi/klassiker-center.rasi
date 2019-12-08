@@ -1,7 +1,7 @@
 // path:       ~/.config/rofi/klassiker-center.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-12-08 22:10:46
+// date:       2019-12-08 22:58:17
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -93,7 +93,7 @@
     background-color:       @blue;
     text-color:             @white;
     border:                 1px 0px 0px 0px;
-    border-color:           @blue;
+    border-color:           @white;
 }
 #element.selected.urgent {
     background-color:       @blue;

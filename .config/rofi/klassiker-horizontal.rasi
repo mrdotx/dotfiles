@@ -1,7 +1,7 @@
 // path:       ~/.config/rofi/klassiker-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-12-08 22:06:33
+// date:       2019-12-08 22:59:00
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -79,13 +79,12 @@
     background-color:       @black;
     text-color:             @blue;
     border:                 2px 0px 0px 0px;
-//    border-color:           @green;
 }
 #element.selected.normal {
     background-color:       @blue;
     text-color:             @white;
     border:                 2px 0px 0px 0px;
-    border-color:           @blue;
+    border-color:           @white;
 }
 #element.selected.urgent {
     background-color:       @blue;
@@ -97,7 +96,6 @@
     background-color:       @blue;
     text-color:             @black;
     border:                 2px 0px 0px 0px;
-//    border-color:           @green;
 }
 #element.alternate.normal {
     background-color:       @black;
@@ -115,8 +113,6 @@
     background-color:       @black;
     text-color:             @blue;
     border:                 2px 0px 0px 0px;
-//    border-color:           @green;
 }
-
 
 // vim:ft=css
