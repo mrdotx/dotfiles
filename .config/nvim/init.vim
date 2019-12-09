@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-12-02 19:22:14
+" date:       2019-12-09 12:30:30
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -15,8 +15,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'tpope/vim-fugitive'
     Plug 'z0mbix/vim-shfmt'
-    Plug 'tmhedberg/SimpylFold'
-    Plug 'vim-scripts/indentpython.vim'
     Plug 'Valloric/YouCompleteMe'
     Plug 'vim-syntastic/syntastic'
     Plug 'norcalli/nvim-colorizer.lua'
@@ -31,8 +29,6 @@ let g:airline_powerline_fonts=1
 let g:airline_theme = 'base16_klassiker'
 " shfmt
 let g:shfmt_extra_args='-i 4'
-" simplyfold
-let g:SimpylFold_docstring_preview=1
 " youcompleteme
 let g:ycm_autoclose_preview_window_after_completion=1
 " syntastic
@@ -244,8 +240,8 @@ map         <leader>l           :set list! list?<CR>
 " spell-check, shellcheck, syntastic
 map         <leader>d           :setlocal spell! spelllang=de_de<CR>
 map         <leader>e           :setlocal spell! spelllang=en_us<CR>
-map         <leader>S           :vs term://shellcheck -s sh %<CR>
-map         <leader>s           :SyntasticToggleMode<CR>
+map         <leader>s           :vs term://shellcheck -s sh %<CR>
+map         <leader>S           :SyntasticToggleMode<CR>
 " format shellscript
 map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
