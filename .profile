@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-09 13:52:01
+# date:       2019-12-10 16:11:04
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then
@@ -37,7 +37,7 @@ export READER="zathura"
 export BROWSER="qutebrowser"
 
 # app settings
-export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.7/site-packages
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
