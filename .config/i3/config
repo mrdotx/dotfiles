@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-08 20:44:53
+# date:       2019-12-10 15:19:45
 
 # basic definitions
 set $mod Mod4
@@ -33,7 +33,7 @@ client.background       #ffffff
 # autostart applications
 exec_always --no-startup-id screenlayout.sh
 exec_always --no-startup-id polybar.sh i3slim
-exec_always --no-startup-id pkill compton; sleep 1; compton -b
+exec_always --no-startup-id pkill picom; sleep 1; picom -b
 #exec_always --no-startup-id fix_xcursor
 exec --no-startup-id ksuperkey
 #exec --no-startup-id libinput-gestures
@@ -218,9 +218,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # dunst restart
 bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'restart dunst'"
 
-# compton start/stop
-bindsym $mod+t exec --no-startup-id "pkill compton; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'compton stopped'"
-bindsym $mod+Shift+t exec --no-startup-id "compton -b; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'compton started'"
+# picom start/stop
+bindsym $mod+t exec --no-startup-id "pkill picom; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom stopped'"
+bindsym $mod+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
 bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
