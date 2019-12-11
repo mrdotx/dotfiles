@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-10 15:19:45
+# date:       2019-12-11 12:34:47
 
 # basic definitions
 set $mod Mod4
@@ -193,7 +193,7 @@ bindsym $modalt+minus scratchpad show
 
 # keybindings system managment
 # start program launcher
-bindsym $modalt+F1 exec --no-startup-id rofi -monitor -1 -show
+bindsym $modalt+F1 --release exec --no-startup-id rofi -monitor -1 -show
 
 # kill focused window
 bindsym Ctrl+q kill
@@ -232,8 +232,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
 bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh -dec 5
-bindsym $mod+p exec --no-startup-id rofi_display.sh
-bindsym Print exec --no-startup-id i3-scrot
+bindsym $mod+p --release exec --no-startup-id rofi_display.sh
+bindsym Print exec --release --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
@@ -245,7 +245,7 @@ bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
 bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus.sh
 bindsym $mod+Shift+c exec --no-startup-id cmus_notify.sh
 bindsym $mod+d exec darktable
-bindsym $mod+e exec --no-startup-id rofi_vim.sh
+bindsym $mod+e --release exec --no-startup-id rofi_vim.sh
 bindsym $mod+g exec gimp
 bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
 bindsym $mod+i exec inkscape
@@ -261,8 +261,8 @@ bindsym $mod+w exec firefox-developer-edition
 bindsym $mod+Shift+w exec --no-startup-id qutebrowser
 bindsym $mod+y exec --no-startup-id polybar.sh
 bindsym $mod+z exec filezilla
-bindsym $mod+equal exec --no-startup-id rofi_calc.sh
-bindsym $mod+grave exec --no-startup-id rofi_font_symbols.sh
+bindsym $mod+equal --release exec --no-startup-id rofi_calc.sh
+bindsym $mod+grave --release exec --no-startup-id rofi_font_symbols.sh
 
 bindsym $mod+F1 exec --no-startup-id conky.sh shortcutsforeground
 bindsym $mod+F2 exec pcmanfm
