@@ -1,14 +1,14 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-11 12:34:47
+# date:       2019-12-12 15:28:13
 
 # basic definitions
-set $mod Mod4
-set $modalt Mod1
+set $sup Mod4
+set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
-floating_modifier $mod
+floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
 font xft:Source Code Pro 11
@@ -35,7 +35,6 @@ exec_always --no-startup-id screenlayout.sh
 exec_always --no-startup-id polybar.sh i3slim
 exec_always --no-startup-id pkill picom; sleep 1; picom -b
 #exec_always --no-startup-id fix_xcursor
-exec --no-startup-id ksuperkey
 #exec --no-startup-id libinput-gestures
 exec --no-startup-id unclutter --timeout 10
 exec --no-startup-id xautolock -detectsleep
@@ -108,123 +107,123 @@ assign [class="Kodi"] $ws10
 
 # keybindings workspaces
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $sup+1 workspace $ws1
+bindsym $sup+2 workspace $ws2
+bindsym $sup+3 workspace $ws3
+bindsym $sup+4 workspace $ws4
+bindsym $sup+5 workspace $ws5
+bindsym $sup+6 workspace $ws6
+bindsym $sup+7 workspace $ws7
+bindsym $sup+8 workspace $ws8
+bindsym $sup+9 workspace $ws9
+bindsym $sup+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
-bindsym $mod+Ctrl+9 move container to workspace $ws9
-bindsym $mod+Ctrl+0 move container to workspace $ws10
+bindsym $sup+Ctrl+1 move container to workspace $ws1
+bindsym $sup+Ctrl+2 move container to workspace $ws2
+bindsym $sup+Ctrl+3 move container to workspace $ws3
+bindsym $sup+Ctrl+4 move container to workspace $ws4
+bindsym $sup+Ctrl+5 move container to workspace $ws5
+bindsym $sup+Ctrl+6 move container to workspace $ws6
+bindsym $sup+Ctrl+7 move container to workspace $ws7
+bindsym $sup+Ctrl+8 move container to workspace $ws8
+bindsym $sup+Ctrl+9 move container to workspace $ws9
+bindsym $sup+Ctrl+0 move container to workspace $ws10
 
 # move to workspace with focused container
-bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $sup+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $sup+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $sup+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $sup+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $sup+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $sup+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $sup+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $sup+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $sup+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $sup+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # workspace back and forth
-bindsym $modalt+Tab workspace back_and_forth
-bindsym $mod+Tab move container to workspace back_and_forth; workspace back_and_forth
+bindsym $alt+Tab workspace back_and_forth
+bindsym $sup+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # navigate workspaces next/previous
-bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+Right workspace next
+bindsym $sup+Ctrl+Left workspace prev
+bindsym $sup+Ctrl+Right workspace next
 
 # keybindings windows/container
 # split orientation
-bindsym $mod+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container horizontally'
-bindsym $mod+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container vertically'
-#bindsym $mod+Ctrl+Down split toggle
+bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container horizontally'
+bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container vertically'
+#bindsym $sup+Ctrl+Down split toggle
 
 # change focus
-bindsym $mod+Left focus left
-bindsym $mod+Right focus right
-bindsym $mod+Up focus up
-bindsym $mod+Down focus down
+bindsym $sup+Left focus left
+bindsym $sup+Right focus right
+bindsym $sup+Up focus up
+bindsym $sup+Down focus down
 
 # move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Down move down
+bindsym $sup+Shift+Left move left
+bindsym $sup+Shift+Right move right
+bindsym $sup+Shift+Up move up
+bindsym $sup+Shift+Down move down
 
 # resize window
-bindsym $mod+$modalt+Left resize shrink width 10 px or 5 ppt
-bindsym $mod+$modalt+Right resize grow width 10 px or 5 ppt
-bindsym $mod+$modalt+Up resize shrink height 10 px or 5 ppt
-bindsym $mod+$modalt+Down resize grow height 10 px or 5 ppt
+bindsym $sup+$alt+Left resize shrink width 10 px or 5 ppt
+bindsym $sup+$alt+Right resize grow width 10 px or 5 ppt
+bindsym $sup+$alt+Up resize shrink height 10 px or 5 ppt
+bindsym $sup+$alt+Down resize grow height 10 px or 5 ppt
 
 # toggle tiling/floating
-bindsym $modalt+space floating toggle
+bindsym $alt+space floating toggle
 
 # change focus between tiling/floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $sup+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $sup+Shift+s sticky toggle
 
 # move the currently focused window to the scratchpad
-bindsym $mod+minus move scratchpad
+bindsym $sup+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $modalt+minus scratchpad show
+bindsym $alt+minus scratchpad show
 
 # keybindings system managment
 # start program launcher
-bindsym $modalt+F1 --release exec --no-startup-id rofi -monitor -1 -show
+bindsym Super_L --release exec --no-startup-id rofi -monitor -1 -show
 
 # kill focused window
 bindsym Ctrl+q kill
 
 # toggle fullscreen mode for the focused container or global
-bindsym $mod+f fullscreen toggle
-bindsym $mod+Shift+f fullscreen toggle global
+bindsym $sup+f fullscreen toggle
+bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend
-bindsym $mod+l exec --no-startup-id i3exit lock
-bindsym $mod+Shift+l exec --no-startup-id i3exit suspend
+bindsym $sup+l exec --no-startup-id i3exit lock
+bindsym $sup+Shift+l exec --no-startup-id i3exit suspend
 
 # x window kill
-bindsym Ctrl+$modalt+x --release exec --no-startup-id xkill
+bindsym Ctrl+$alt+x --release exec --no-startup-id xkill
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $sup+Shift+r restart
 
 # exit i3 (logs you out of your x session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # dunst restart
-bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'restart dunst'"
+bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'restart dunst'"
 
 # picom start/stop
-bindsym $mod+t exec --no-startup-id "pkill picom; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom stopped'"
-bindsym $mod+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom started'"
+bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom stopped'"
+bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
-bindcode $mod+61 exec --no-startup-id conky.sh shortcutsforeground
-bindcode $mod+Shift+61 exec --no-startup-id conky.sh vertical
+bindcode $sup+61 exec --no-startup-id conky.sh shortcutsforeground
+bindcode $sup+Shift+61 exec --no-startup-id conky.sh vertical
 
 # keybindings multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id audio.sh -inc 5
@@ -232,40 +231,40 @@ bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
 bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh -dec 5
-bindsym $mod+p --release exec --no-startup-id rofi_display.sh
-bindsym Print exec --release --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $sup+p exec --no-startup-id rofi_display.sh
+bindsym Print exec --no-startup-id i3-scrot
+bindsym $sup+Print exec --no-startup-id i3-scrot -w
+bindsym $sup+Shift+Print exec --no-startup-id i3-scrot -s
 
 # keybindings applications
-bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+Return exec --no-startup-id urxvtc.sh
-bindsym $mod+a exec --no-startup-id $TERMINAL -e alsamixer
-bindsym $mod+b exec --no-startup-id $TERMINAL -e bmenu
-bindsym $mod+c exec --no-startup-id $TERMINAL -e cmus.sh
-bindsym $mod+Shift+c exec --no-startup-id cmus_notify.sh
-bindsym $mod+d exec darktable
-bindsym $mod+e --release exec --no-startup-id rofi_vim.sh
-bindsym $mod+g exec gimp
-bindsym $mod+h exec --no-startup-id $TERMINAL -e htop
-bindsym $mod+i exec inkscape
-bindsym $mod+j exec jameica
-bindsym $mod+k exec --no-startup-id $(sync_keepass.sh && keepassxc && sync_keepass.sh)
-bindsym $mod+m exec thunderbird
-bindsym $mod+n exec --no-startup-id $TERMINAL -e newsboat -q
-bindsym $mod+o exec libreoffice
-bindsym $mod+r exec --no-startup-id $TERMINAL -e ranger
-bindsym $mod+s exec scribus
-bindsym $mod+v exec VirtualBox
-bindsym $mod+w exec firefox-developer-edition
-bindsym $mod+Shift+w exec --no-startup-id qutebrowser
-bindsym $mod+y exec --no-startup-id polybar.sh
-bindsym $mod+z exec filezilla
-bindsym $mod+equal --release exec --no-startup-id rofi_calc.sh
-bindsym $mod+grave --release exec --no-startup-id rofi_font_symbols.sh
+bindsym $sup+Return exec --no-startup-id $TERMINAL
+bindsym $sup+Shift+Return exec --no-startup-id urxvtc.sh
+bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
+bindsym $sup+b exec --no-startup-id $TERMINAL -e bmenu
+bindsym $sup+c exec --no-startup-id $TERMINAL -e cmus.sh
+bindsym $sup+Shift+c exec --no-startup-id cmus_notify.sh
+bindsym $sup+d exec darktable
+bindsym $sup+e exec --no-startup-id rofi_vim.sh
+bindsym $sup+g exec gimp
+bindsym $sup+h exec --no-startup-id $TERMINAL -e htop
+bindsym $sup+i exec inkscape
+bindsym $sup+j exec jameica
+bindsym $sup+k exec --no-startup-id $(sync_keepass.sh && keepassxc && sync_keepass.sh)
+bindsym $sup+m exec thunderbird
+bindsym $sup+n exec --no-startup-id $TERMINAL -e newsboat -q
+bindsym $sup+o exec libreoffice
+bindsym $sup+r exec --no-startup-id $TERMINAL -e ranger
+bindsym $sup+s exec scribus
+bindsym $sup+v exec VirtualBox
+bindsym $sup+w exec firefox-developer-edition
+bindsym $sup+Shift+w exec --no-startup-id qutebrowser
+bindsym $sup+y exec --no-startup-id polybar.sh
+bindsym $sup+z exec filezilla
+bindsym $sup+equal exec --no-startup-id rofi_calc.sh
+bindsym $sup+grave exec --no-startup-id rofi_font_symbols.sh
 
-bindsym $mod+F1 exec --no-startup-id conky.sh shortcutsforeground
-bindsym $mod+F2 exec pcmanfm
-bindsym $mod+F3 exec gksu pcmanfm
+bindsym $sup+F1 exec --no-startup-id conky.sh shortcutsforeground
+bindsym $sup+F2 exec pcmanfm
+bindsym $sup+F3 exec gksu pcmanfm
 
 # vim:ft=sh
