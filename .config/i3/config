@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-12 22:57:09
+# date:       2019-12-13 12:49:37
 
 # basic definitions
 set $sup Mod4
@@ -251,7 +251,7 @@ bindsym $sup+i exec inkscape
 bindsym $sup+j exec jameica
 bindsym $sup+k exec --no-startup-id $(sync_keepass.sh && keepassxc && sync_keepass.sh)
 bindsym $sup+m exec thunderbird
-bindsym $sup+n exec --no-startup-id $($TERMINAL -e newsboat -q && polybar-msg hook module/rss 1)
+bindsym $sup+n exec --no-startup-id $($TERMINAL -e newsboat -q && polybar-msg hook module/rss 2)
 bindsym $sup+o exec libreoffice
 bindsym $sup+r exec --no-startup-id $TERMINAL -e ranger
 bindsym $sup+s exec scribus
