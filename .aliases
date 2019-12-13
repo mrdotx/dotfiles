@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-13 12:54:46
+# date:       2019-12-13 14:06:05
 
 # tools
 alias cp='cp -i'                                            # confirm before overwriting something
@@ -12,7 +12,7 @@ alias nf='neofetch'                                         # systeminformation
 alias rg='ranger'                                           # filemanager
 alias rs='sudo ranger'                                      # filemanager root
 alias xn='vim $HOME/coding/hidden/notes/index.md'           # notes
-alias nb='newsboat -q && && polybar-msg hook module/rss 2'  # rss reader
+alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'  # rss reader
 alias we='weechat'                                          # irc chat
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'                                    # matrix screensaver
