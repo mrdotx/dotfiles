@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-02 20:32:44
+; date:       2019-12-13 00:39:59
 
 ; wm
 [global/wm]
@@ -36,6 +36,8 @@ height = 26
 radius = 0.0
 fixed-center = false
 
+enable-ipc = true
+
 tray-position = right
 tray-reparent = true
 
@@ -62,7 +64,7 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
 #modules-center = cmus
-modules-right = temp cpu ram ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
+modules-right = temp cpu ram ssd wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery rss keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -75,6 +77,8 @@ height = 26
 radius = 0.0
 fixed-center = false
 
+enable-ipc = true
+
 tray-position = right
 tray-reparent = true
 
@@ -101,7 +105,7 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 window
 #modules-center = cmus
-modules-right = temp cpu ramslim ssdslim wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery keyboard date powermenu
+modules-right = temp cpu ramslim ssdslim wlan vpnhades firewall bluetooth printer gestures polkit pulseaudio backlight battery rss keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -135,7 +139,7 @@ format = <label-state>
 label-focused = %icon% %index%
 label-focused-foreground = ${colors.white}
 label-focused-background = ${colors.blue}
-label-focused-overline = ${colors.blue-alt}
+label-focused-overline = ${colors.white}
 label-focused-padding = 1
 
 label-unfocused = %icon% %index%
@@ -284,51 +288,63 @@ label-disconnected-foreground = ${colors.foreground}
 
 ; vpnhades
 [module/vpnhades]
-type = custom/script
-exec = polybar_vpn_hades.sh --polybar
-interval = 10.0
-click-left = polybar_vpn_hades.sh
-click-right = polybar_vpn_hades.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_vpn_hades.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook vpnhades 2
+click-right = polybar-msg -p %pid% hook vpnhades 2
 
 ; firewall
 [module/firewall]
-type = custom/script
-exec = polybar_firewall.sh --polybar
-interval = 10.0
-click-left = polybar_firewall.sh
-click-right = polybar_firewall.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_firewall.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook firewall 2
+click-right = polybar-msg -p %pid% hook firewall 2
 
 ; bluetooth
 [module/bluetooth]
-type = custom/script
-exec = polybar_bluetooth.sh --polybar
-interval = 10.0
-click-left = polybar_bluetooth.sh
-click-right = polybar_bluetooth.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_bluetooth.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook bluetooth 2
+click-right = polybar-msg -p %pid% hook bluetooth 2
 
 ; printer
 [module/printer]
-type = custom/script
-exec = polybar_printer.sh --polybar
-interval = 10.0
-click-left = polybar_printer.sh
-click-right = polybar_printer.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_printer.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook printer 2
+click-right = polybar-msg -p %pid% hook printer 2
 
 ; gestures
 [module/gestures]
-type = custom/script
-exec = polybar_gestures.sh --polybar
-interval = 10.0
-click-left = polybar_gestures.sh
-click-right = polybar_gestures.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_gestures.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook gestures 2
+click-right = polybar-msg -p %pid% hook gestures 2
 
 ; polkit
 [module/polkit]
-type = custom/script
-exec = polybar_polkit.sh --polybar
-interval = 10.0
-click-left = polybar_polkit.sh
-click-right = polybar_polkit.sh
+type = custom/ipc
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = polybar_polkit.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook polkit 2
+click-right = polybar-msg -p %pid% hook polkit 2
 
 ; pulseaudio
 [module/pulseaudio]
@@ -415,6 +431,20 @@ animation-discharging-4 = 
 animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
 
+; rss
+[module/rss]
+type = custom/ipc
+
+format = <output>
+format-overline = ${colors.blue}
+format-foreground = ${colors.foreground}
+
+hook-0 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
+hook-1 = newsboat -x reload && newsboat -q -X > /dev/null 2>&1 && newsboat -x print-unread | awk '!/^0/ {print "",$1}'
+initial = 1
+click-left = polybar-msg -p %pid% hook rss 2
+click-right = polybar-msg -p %pid% hook rss 2
+
 ; keyboard
 [module/keyboard]
 type = internal/xkeyboard
@@ -447,14 +477,12 @@ label-overline = ${colors.blue}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 
 format-spacing = 1
-;format-overline = ${colors.blue}
 
 label-open = 
 label-open-foreground = ${colors.foreground}
-label-open-overline = ${colors.red}
 label-close = 
 label-close-foreground = ${colors.foreground}
 label-close-overline = ${colors.red}
@@ -464,41 +492,35 @@ label-separator-foreground = ${colors.foreground}
 menu-0-0 =  lock out
 menu-0-0-exec = menu-open-1
 menu-0-0-foreground = ${colors.foreground}
-menu-0-0-overline = ${colors.yellow}
 menu-0-1 =  restart
 menu-0-1-exec = menu-open-2
 menu-0-1-foreground = ${colors.foreground}
-menu-0-1-overline = ${colors.yellow}
 menu-0-2 =  shutdown
 menu-0-2-exec = menu-open-3
 menu-0-2-foreground = ${colors.foreground}
-menu-0-2-overline = ${colors.yellow}
 
 menu-1-0 = 
 menu-1-0-exec = i3exit logout
 menu-1-0-foreground = ${colors.foreground}
 menu-1-0-overline = ${colors.green}
-menu-1-1 =  lock out
+menu-1-1 =  lock out? 
 menu-1-1-exec = menu-open-0
 menu-1-1-foreground = ${colors.foreground}
-menu-1-1-overline = ${colors.yellow}
 
 menu-2-0 = 
 menu-2-0-exec = i3exit reboot
 menu-2-0-foreground = ${colors.foreground}
 menu-2-0-overline = ${colors.green}
-menu-2-1 =  restart
+menu-2-1 =  restart? 
 menu-2-1-exec = menu-open-0
 menu-2-1-foreground = ${colors.foreground}
-menu-2-1-overline = ${colors.yellow}
 
 menu-3-0 = 
 menu-3-0-exec = i3exit shutdown
 menu-3-0-foreground = ${colors.foreground}
 menu-3-0-overline = ${colors.green}
-menu-3-1 =  shutdown
+menu-3-1 =  shutdown? 
 menu-3-1-exec = menu-open-0
 menu-3-1-foreground = ${colors.foreground}
-menu-3-1-overline = ${colors.yellow}
 
 ; vim:ft=dosini

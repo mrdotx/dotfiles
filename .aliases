@@ -1,23 +1,23 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-09 20:33:54
+# date:       2019-12-12 23:00:38
 
 # tools
-alias cp='cp -i'                                    # confirm before overwriting something
-alias more='less'                                   # show file
+alias cp='cp -i'                                            # confirm before overwriting something
+alias more='less'                                           # show file
 alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
-alias nf='neofetch'                                 # systeminformation
+alias nf='neofetch'                                         # systeminformation
 
-alias rg='ranger'                                   # filemanager
-alias rs='sudo ranger'                              # filemanager root
-alias xn='vim $HOME/coding/hidden/notes/index.md'   # notes
-alias nb='newsboat -q'                              # rss reader
-alias we='weechat'                                  # irc chat
+alias rg='ranger'                                           # filemanager
+alias rs='sudo ranger'                                      # filemanager root
+alias xn='vim $HOME/coding/hidden/notes/index.md'           # notes
+alias nb='newsboat -q && && polybar-msg hook module/rss 1'  # rss reader
+alias we='weechat'                                          # irc chat
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
-alias cm='cmatrix -su 7'                            # matrix screensaver
-alias wt='curl -H "Accept-Language: de" wttr.in'    # weather
-alias sw='telnet towel.blinkenlights.nl'            # star wars
+alias cm='cmatrix -su 7'                                    # matrix screensaver
+alias wt='curl -H "Accept-Language: de" wttr.in'            # weather
+alias sw='telnet towel.blinkenlights.nl'                    # star wars
 
 # git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
