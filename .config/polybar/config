@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-13 00:39:59
+; date:       2019-12-13 01:08:28
 
 ; wm
 [global/wm]
@@ -439,7 +439,7 @@ format = <output>
 format-overline = ${colors.blue}
 format-foreground = ${colors.foreground}
 
-hook-0 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
+hook-0 = echo ""
 hook-1 = newsboat -x reload && newsboat -q -X > /dev/null 2>&1 && newsboat -x print-unread | awk '!/^0/ {print "",$1}'
 initial = 1
 click-left = polybar-msg -p %pid% hook rss 2
