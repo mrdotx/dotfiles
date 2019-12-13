@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-13 01:08:28
+; date:       2019-12-13 10:22:39
 
 ; wm
 [global/wm]
@@ -290,61 +290,61 @@ label-disconnected-foreground = ${colors.foreground}
 [module/vpnhades]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_vpn_hades.sh --status
 hook-1 = polybar_vpn_hades.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook vpnhades 2
-click-right = polybar-msg -p %pid% hook vpnhades 2
+click-right = polybar-msg -p %pid% hook vpnhades 1
 
 ; firewall
 [module/firewall]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_firewall.sh --status
 hook-1 = polybar_firewall.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook firewall 2
-click-right = polybar-msg -p %pid% hook firewall 2
+click-right = polybar-msg -p %pid% hook firewall 1
 
 ; bluetooth
 [module/bluetooth]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_bluetooth.sh --status
 hook-1 = polybar_bluetooth.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook bluetooth 2
-click-right = polybar-msg -p %pid% hook bluetooth 2
+click-right = polybar-msg -p %pid% hook bluetooth 1
 
 ; printer
 [module/printer]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_printer.sh --status
 hook-1 = polybar_printer.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook printer 2
-click-right = polybar-msg -p %pid% hook printer 2
+click-right = polybar-msg -p %pid% hook printer 1
 
 ; gestures
 [module/gestures]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_gestures.sh --status
 hook-1 = polybar_gestures.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook gestures 2
-click-right = polybar-msg -p %pid% hook gestures 2
+click-right = polybar-msg -p %pid% hook gestures 1
 
 ; polkit
 [module/polkit]
 type = custom/ipc
 
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-0 = polybar_polkit.sh --status
 hook-1 = polybar_polkit.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook polkit 2
-click-right = polybar-msg -p %pid% hook polkit 2
+click-right = polybar-msg -p %pid% hook polkit 1
 
 ; pulseaudio
 [module/pulseaudio]
