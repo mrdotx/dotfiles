@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-14 13:15:48
+; date:       2019-12-14 15:56:27
 
 ; wm
 [global/wm]
@@ -30,7 +30,7 @@ yellow = #b0b200
 
 ; i3
 [bar/i3]
-monitor = ${env:MONITOR:}
+monitor = eDP1
 width = 100%
 height = 26
 radius = 0.0
