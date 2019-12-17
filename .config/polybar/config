@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-14 22:46:52
+; date:       2019-12-17 18:36:27
 
 ; wm
 [global/wm]
@@ -61,11 +61,11 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades
+modules-left = i3 polkit printer bluetooth gestures firewall rss vpnhades window
 fixed-center = true
 #not used: window cmus
 modules-center = temp cpu ram ssd wlan
-modules-right = rss pulseaudio backlight battery keyboard date powermenu
+modules-right = pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -103,11 +103,11 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
 fixed-center = true
 #not used: cmus
 modules-center = temp cpu ramslim ssdslim wlan
-modules-right = rss pulseaudio backlight battery keyboard date powermenu
+modules-right = pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
