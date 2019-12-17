@@ -19,7 +19,7 @@ ${color1}vim - General${color0}
     u                   undo
     ctrl+r              redo
 
-    :!<cmd>             execute shell command <cmd>
+    :![cmd]             execute shell command [cmd]
     ctrl+z              send vim to background (fg brings it to front again)
 
 ${color1}vim - Entering insert mode${color0}
@@ -34,6 +34,8 @@ ${color1}vim - Entering insert mode${color0}
     cc                  delete the current line, set insert-mode
     cw                  delete word, set insert-mode
     dd                  delete line under curser
+    q+[a-z]+[cmds]+q    enter a macro
+    [n]+@+[a-z]         execute macro n times
 
 ${color1}vimdiff - General${color0}
     dp                  diffput puts changes under the cursor
@@ -59,7 +61,5 @@ ${color1}qutebrowser${color0}
 
     alt+[1-0]           switch to tab
     g                   misc. commands
-
-
 
 
