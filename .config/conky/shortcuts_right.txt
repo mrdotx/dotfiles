@@ -36,6 +36,7 @@ ${color1}vim - Entering insert mode${color0}
     dd                  delete line under curser
     q+[a-z]+[cmds]+q    enter a macro
     [n]+@+[a-z]         execute macro n times
+    @+@                 rerun last run macro
 
 ${color1}vimdiff - General${color0}
     dp                  diffput puts changes under the cursor
@@ -61,5 +62,4 @@ ${color1}qutebrowser${color0}
 
     alt+[1-0]           switch to tab
     g                   misc. commands
-
 
