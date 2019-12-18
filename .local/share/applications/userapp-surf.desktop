@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=surf
+Comment=Suckless Surf Browser
+Icon=web-browser
+Exec=surf
+Actions=
+Categories=Network;WebBrowser;
