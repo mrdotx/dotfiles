@@ -1,15 +1,15 @@
 [Default Applications]
-x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/ftp=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/chrome=org.qutebrowser.qutebrowser.desktop
-text/html=org.qutebrowser.qutebrowser.desktop
-application/x-extension-htm=org.qutebrowser.qutebrowser.desktop
-application/x-extension-html=org.qutebrowser.qutebrowser.desktop
-application/x-extension-shtml=org.qutebrowser.qutebrowser.desktop
-application/xhtml+xml=org.qutebrowser.qutebrowser.desktop
-application/x-extension-xhtml=org.qutebrowser.qutebrowser.desktop
-application/x-extension-xht=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/http=userapp-surf.desktop
+x-scheme-handler/https=userapp-surf.desktop
+x-scheme-handler/ftp=userapp-surf.desktop
+x-scheme-handler/chrome=userapp-surf.desktop
+text/html=userapp-surf.desktop
+application/x-extension-htm=userapp-surf.desktop
+application/x-extension-html=userapp-surf.desktop
+application/x-extension-shtml=userapp-surf.desktop
+application/xhtml+xml=userapp-surf.desktop
+application/x-extension-xhtml=userapp-surf.desktop
+application/x-extension-xht=userapp-surf.desktop
 image/jpeg=nomacs.desktop;
 image/png=nomags.desktop;
 text/plain=nvim.desktop

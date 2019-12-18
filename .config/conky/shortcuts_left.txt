@@ -55,7 +55,7 @@ ${color1}i3 - applications${color0}
     super+s             scribus
     super+v             virtualbox
     super+w             secondary browser (firefox-development-edition)
-    super+shift+w       primary browser (qutebrowser)
+    super+shift+w       primary browser (surf)
     super+y             polybar toggle
     super+z             filezilla
     super+=             calculator
