@@ -45,21 +45,21 @@ ${color1}vimdiff - General${color0}
     ]c                  jump to the next diff
     [c                  jump to the previous diff
 
-${color1}qutebrowser${color0}
-    ctrl+[H,L]          walks back or forward in history
-    ctrl+[T,J,K]        go to next or previous tab
-    ctrl+[+,-,=]        zoom in, out or reset
-    ctrl+[n,N]          go to next or previous search result
-    ctrl+[o,O]          opens the url-bar or in new tab
+${color1}surf${color0}
+    escape              stops loading current page or download
+    ctrl+[h,l]          walks back or forward in history
+    ctrl+[k,j]          scroll page up and down
+    ctrl+space          scroll down one page
+    ctrl+[i,u]          scroll horizontally to right and left
+    ctrl+[K,J,Q]        zoom in, out or reset
+    ctrl+[f,/]          open search bar
+    ctrl+[n,N]          next and previous search result
+    ctrl+g              open url bar
+    ctrl+p              loads uri from primary selection
+    ctrl+P              open print page dialog
     ctrl+[r,R]          reloads the website, without using the cache
-    ctrl+[y,Y]          copies current url or title
-    ctrl+[p,P]          paste url
-    ctrl+[b,B]          open quickmarks
-    ctrl+[m,M]          save quickmark or bookmark
-    ctrl+h              open main startpage in current tab
-    ctrl+p              pin/unpin the current tab
-    ctrl+alt+p          print the current tab
-
-    alt+[1-0]           switch to tab
-    g                   misc. commands
+    ctrl+y              copies current uri to primary selection
+    ctrl+t              display the current tls certificate
+    ctrl+[A,C,I,M]      cookies, caret browsing, images, styles
+    ctrl+[S,T,V]        scripts, tls, plugins
 
