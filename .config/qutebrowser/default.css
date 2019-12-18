@@ -2,17 +2,16 @@
 path:       ~/.config/qutebrowser/default.css
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-02 01:20:29
+date:       2019-12-18 12:00:15
 */
 
-/* base blocks */
+/* additional overall settings */
 header,
 div,
 li,
 p,
 span,
 td,
-/* content blocks */
 article,
 aside,
 details,
@@ -34,14 +33,12 @@ summary,
   color: #cecece !important;
 }
 
-/* specific content (like quote) */
 strong {
   background-color: #020202 !important;
 /*  background-image: none !important; */
   color: #c5c4ed !important;
 }
 
-/* title */
 h1,
 h2,
 h3,
@@ -51,7 +48,6 @@ h6 {
   background-color: #191919 !important;
 }
 
-/* navigation */
 nav,
 #mainbar,
 #archnavbar,
@@ -59,11 +55,9 @@ nav,
   background-color: #f94109 !important;
 }
 
-/* TODO not good, comment in git  */
 .blob-code span {
   background-color: #191919 !important;
 }
-/* code in flask doc */
 .highlight span {
   background-color: #296187 !important;
 }
