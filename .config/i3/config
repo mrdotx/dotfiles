@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-18 21:08:26
+# date:       2019-12-19 11:04:41
 
 # basic definitions
 set $sup Mod4
@@ -257,7 +257,7 @@ bindsym $sup+r exec --no-startup-id $TERMINAL -e ranger
 bindsym $sup+s exec scribus
 bindsym $sup+v exec VirtualBox
 bindsym $sup+w exec firefox-developer-edition
-bindsym $sup+Shift+w exec --no-startup-id surf
+bindsym $sup+Shift+w exec --no-startup-id surf.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
 bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh

@@ -4,6 +4,6 @@ Type=Application
 Name=surf
 Comment=Suckless Surf Browser
 Icon=web-browser
-Exec=surf
+Exec=surf.sh
 Actions=
 Categories=Network;WebBrowser;

@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-18 21:19:31
+# date:       2019-12-19 10:54:31
 
 # dev paths
 if [ -d "$HOME/coding/python" ] ; then
@@ -34,7 +34,7 @@ export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 export FILE="ranger"
 export READER="zathura"
-export BROWSER="surf"
+export BROWSER="surf.sh"
 export TERMINALBROWSER="w3m"
 
 # app settings
