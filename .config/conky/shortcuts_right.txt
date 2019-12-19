@@ -51,6 +51,7 @@ ${color1}surf${color0}
     ctrl+[f,/]          open search bar
     ctrl+[n,N]          next and previous search result
     crtl+s              search duckduckdo.com
+    ctrl+d              open download console
     ctrl+g              open url bar with bookmarks
     ctrl+p              loads uri from primary selection
     ctrl+P              open print page dialog
@@ -61,5 +62,4 @@ ${color1}surf${color0}
     ctrl+[S,T,V]        scripts, tls, plugins
     ctrl+m              save as bookmark
     ctrl+~              switch open tabs
-
 
