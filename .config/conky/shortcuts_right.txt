@@ -5,7 +5,8 @@ ${color1}vim - General${color0}
     :wq                 write/save and close
     :x                  save and quit, same as wq
     :q                  force close if file has changed and not save changes
-
+    :![cmd]             execute shell command [cmd]
+    ctrl+z              send vim to background (fg brings it to front again)
     v                   enter visual mode for selection of LINES
     ctrl+v              enter visual mode for selection of BLOCKS
     y                   yank/copy selected region
@@ -15,12 +16,8 @@ ${color1}vim - General${color0}
     p                   paste yanked content
     "<reg>p             paste yanked content in register <reg> (from a-z)
     P                   paste yanked content BEFORE
-
     u                   undo
     ctrl+r              redo
-
-    :![cmd]             execute shell command [cmd]
-    ctrl+z              send vim to background (fg brings it to front again)
 
 ${color1}vim - Entering insert mode${color0}
     a                   append text after the cursor
@@ -41,7 +38,6 @@ ${color1}vim - Entering insert mode${color0}
 ${color1}vimdiff - General${color0}
     dp                  diffput puts changes under the cursor
     do                  diffget (o => obtain) change under the cursor
-
     ]c                  jump to the next diff
     [c                  jump to the previous diff
 
@@ -54,7 +50,8 @@ ${color1}surf${color0}
     ctrl+[K,J,Q]        zoom in, out or reset
     ctrl+[f,/]          open search bar
     ctrl+[n,N]          next and previous search result
-    ctrl+g              open url bar
+    crtl+s              search duckduckdo.com
+    ctrl+g              open url bar with bookmarks
     ctrl+p              loads uri from primary selection
     ctrl+P              open print page dialog
     ctrl+[r,R]          reloads the website, without using the cache
@@ -62,4 +59,7 @@ ${color1}surf${color0}
     ctrl+t              display the current tls certificate
     ctrl+[A,C,I,M]      cookies, caret browsing, images, styles
     ctrl+[S,T,V]        scripts, tls, plugins
+    ctrl+m              save as bookmark
+    ctrl+~              switch open tabs
+
 
