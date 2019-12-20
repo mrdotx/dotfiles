@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-17 18:36:27
+; date:       2019-12-20 20:40:28
 
 ; wm
 [global/wm]
@@ -443,11 +443,12 @@ format-overline = ${colors.blue}
 format-foreground = ${colors.foreground}
 
 hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
-hook-1 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
-hook-2 = polybar_rss.sh
+hook-1 = echo "%{F#dfdfdf}%{o#ff5555}%{o-}%{F-}"
+hook-2 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
+hook-3 = polybar_rss.sh
 initial = 1
-click-left = polybar-msg -p %pid% hook rss 3
-click-right = polybar-msg -p %pid% hook rss 2
+click-left = polybar-msg -p %pid% hook rss 4
+click-right = polybar-msg -p %pid% hook rss 3
 
 ; keyboard
 [module/keyboard]
