@@ -1,17 +1,17 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-19 10:54:31
+# date:       2019-12-21 14:30:28
 
 # dev paths
-if [ -d "$HOME/coding/python" ] ; then
-    PATH="$HOME/coding/python:$PATH"
+if [ -d "$HOME/projects/python" ] ; then
+    PATH="$HOME/projects/python:$PATH"
 fi
-if [ -d "$HOME/coding/shell" ] ; then
-    PATH="$HOME/coding/shell:$PATH"
+if [ -d "$HOME/projects/shell" ] ; then
+    PATH="$HOME/projects/shell:$PATH"
 fi
-if [ -d "$HOME/coding/st" ] ; then
-    PATH="$HOME/coding/st:$PATH"
+if [ -d "$HOME/projects/st" ] ; then
+    PATH="$HOME/projects/st:$PATH"
 fi
 
 # xdg paths

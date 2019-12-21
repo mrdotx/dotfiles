@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-21 14:03:49
+# date:       2019-12-21 15:11:41
 
 # basic definitions
 set $sup Mod4
@@ -152,8 +152,8 @@ bindsym $sup+Ctrl+Right workspace next
 
 # keybindings windows/container
 # split orientation
-bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container horizontally'
-bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'tile container vertically'
+bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container horizontally'
+bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container vertically'
 #bindsym $sup+Ctrl+Down split toggle
 
 # change focus
@@ -215,11 +215,11 @@ bindsym $sup+Shift+r restart
 bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # dunst restart
-bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'restart dunst'"
+bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'restart dunst'"
 
 # picom start/stop
-bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom stopped'"
-bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/coding/shell/icons/i3.png' 'i3' 'picom started'"
+bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom stopped'"
+bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
 bindcode $sup+61 exec --no-startup-id conky.sh shortcutsforeground

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:       ~/coding/shell/<++>.sh
+# path:       ~/projects/shell/<++>.sh
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/shell
-# date:       2019-12-04 15:12:16
+# date:       2019-12-21 14:34:56
 
 script=$(basename "$0")
 help="$script [-h/--help] -- script to <++>

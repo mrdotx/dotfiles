@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-18 21:19:05
+# date:       2019-12-21 15:32:34
 
 # general
 auto-reload yes
@@ -17,7 +17,7 @@ external-url-viewer "link_handler.sh %u"
 # inoreader
 urls-source "inoreader"
 inoreader-login "klassiker"
-inoreader-passwordeval "gpg --decrypt ~/coding/hidden/keys/newsboat-inoreader.txt.gpg"
+inoreader-passwordeval "gpg --decrypt ~/projects/hidden/keys/newsboat-inoreader.txt.gpg"
 inoreader-flag-share "a"
 inoreader-flag-star "b"
 inoreader-show-special-feeds no
