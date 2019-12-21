@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2019-12-09 12:30:30
+" date:       2019-12-21 10:45:18
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -79,7 +79,7 @@ lua require'colorizer'.setup()
 
 " ui config
 " clipboard
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 " show hybrid line numbers and numbertoggle
 set number relativenumber
     augroup numbertoggle
