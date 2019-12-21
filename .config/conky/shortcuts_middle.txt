@@ -5,8 +5,8 @@ ${color1}st${color0}
     ctrl+[+,-,=]        zoom (grow, shrink, standard)
     shift+[pg_up,pg_dn] Scrollback (mouse scroll)
     alt+l               open url from rofi
-    alt+y               copy url to xclip
-    alt+o               copy command output to xclip
+    alt+y               copy url to xsel
+    alt+o               copy command output to xsel
     ctrl+t              paste the selected files and directories
     ctrl+r              paste selected command from history
     alt-c               cd into the selected directory

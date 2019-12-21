@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-20 20:40:34
+# date:       2019-12-21 14:03:49
 
 # basic definitions
 set $sup Mod4
@@ -231,6 +231,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
 bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
 bindsym XF86MonBrightnessUp exec --no-startup-id backlight.sh -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id backlight.sh -dec 5
+bindsym XF86Cut exec --no-startup-id xsel.sh
 bindsym $sup+p exec --no-startup-id rofi_display.sh
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $sup+Print exec --no-startup-id i3-scrot -w
