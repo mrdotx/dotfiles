@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-23 14:56:06
+; date:       2019-12-23 16:00:22
 
 ; wm
 [global/wm]
@@ -494,7 +494,7 @@ label-close-overline = ${colors.red}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 =  logout
+menu-0-0 =  logout 
 menu-0-0-exec = menu-open-1
 menu-0-0-foreground = ${colors.foreground}
 menu-0-1 =  reboot
