@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-20 20:40:28
+; date:       2019-12-23 14:56:06
 
 ; wm
 [global/wm]
@@ -494,10 +494,10 @@ label-close-overline = ${colors.red}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 =  lock out
+menu-0-0 =  logout
 menu-0-0-exec = menu-open-1
 menu-0-0-foreground = ${colors.foreground}
-menu-0-1 =  restart
+menu-0-1 =  reboot
 menu-0-1-exec = menu-open-2
 menu-0-1-foreground = ${colors.foreground}
 menu-0-2 =  shutdown
@@ -505,23 +505,23 @@ menu-0-2-exec = menu-open-3
 menu-0-2-foreground = ${colors.foreground}
 
 menu-1-0 = 
-menu-1-0-exec = i3exit logout
+menu-1-0-exec = knockout.sh -logout
 menu-1-0-foreground = ${colors.foreground}
 menu-1-0-overline = ${colors.green}
-menu-1-1 =  lock out? 
+menu-1-1 =  logout? 
 menu-1-1-exec = menu-open-0
 menu-1-1-foreground = ${colors.foreground}
 
 menu-2-0 = 
-menu-2-0-exec = i3exit reboot
+menu-2-0-exec = knockout.sh -reboot
 menu-2-0-foreground = ${colors.foreground}
 menu-2-0-overline = ${colors.green}
-menu-2-1 =  restart? 
+menu-2-1 =  reboot? 
 menu-2-1-exec = menu-open-0
 menu-2-1-foreground = ${colors.foreground}
 
 menu-3-0 = 
-menu-3-0-exec = i3exit shutdown
+menu-3-0-exec = knockout.sh -shutdown
 menu-3-0-foreground = ${colors.foreground}
 menu-3-0-overline = ${colors.green}
 menu-3-1 =  shutdown? 
