@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-21 14:30:28
+# date:       2019-12-25 22:42:11
 
 # dev paths
 if [ -d "$HOME/projects/python" ] ; then
@@ -43,6 +43,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
+export LESSHISTFILE=-
 
 # enable gnome keyring for terminal applications
 if [ -n "$DESKTOP_SESSION" ];then
