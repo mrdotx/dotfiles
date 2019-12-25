@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:35:51
+# date:       2019-12-25 22:04:00
 
 # colors
 [[ $- != *i* ]] && return
@@ -9,12 +9,6 @@
 use_color=true
 
 if ${use_color} ; then
-    # directory
-    if type -P dircolors >/dev/null ; then
-        if [[ -f ~/.dir_colors ]] ; then
-            eval $(dircolors -b ~/.dir_colors)
-        fi
-    fi
 
     # command
     alias ls='ls --color=auto'
