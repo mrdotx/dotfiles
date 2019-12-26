@@ -42,24 +42,24 @@ ${color1}vimdiff - General${color0}
     [c                  jump to the previous diff
 
 ${color1}surf${color0}
-    escape              stops loading current page or download
-    ctrl+[h,l]          walks back or forward in history
-    ctrl+[k,j]          scroll page up and down
-    ctrl+space          scroll down one page
-    ctrl+[i,u]          scroll horizontally to right and left
-    ctrl+[K,J,Q]        zoom in, out or reset
-    ctrl+[f,/]          open search bar
-    ctrl+[n,N]          next and previous search result
-    crtl+s              search duckduckdo.com
-    ctrl+d              open download console
-    ctrl+g              open url bar with bookmarks
-    ctrl+p              loads uri from primary selection
+    [i,Escape]          insert, normal mode
+    c                   stops loading current page or download
+    [h,l]               back or forward in history
+    [k,j]               scroll page up and down
+    space               scroll down one page
+    [i,u]               scroll horizontally to right and left
+    [plus,minus,equal]  zoom in, out or reset
+    /                   open search bar
+    [n,N]               next and previous search result
+    s                   search duckduckdo.com
+    f                   show links to follow
+    d                   open download console
+    g                   open url bar with bookmarks
+    m                   save as bookmark
     ctrl+P              open print page dialog
-    ctrl+[r,R]          reloads the website, without using the cache
-    ctrl+y              copies current uri to primary selection
+    [r,ctrl+r]          reloads the website, without using the cache
+    [y,p]               copies/loads current uri to primary selection
     ctrl+t              display the current tls certificate
     ctrl+[A,C,I,M]      cookies, caret browsing, images, styles
     ctrl+[S,T,V]        scripts, tls, plugins
-    ctrl+m              save as bookmark
     ctrl+~              switch open tabs
-
