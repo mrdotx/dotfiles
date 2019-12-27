@@ -1,13 +1,14 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-24 18:16:15
+# date:       2019-12-27 23:34:56
 
 # basic definitions
 set $sup Mod4
 set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
+
 floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
@@ -34,37 +35,33 @@ client.background       #ffffff
 exec_always --no-startup-id screenlayout.sh
 exec_always --no-startup-id polybar.sh i3slim
 exec_always --no-startup-id pkill picom; sleep 1; picom -b
-#exec_always --no-startup-id fix_xcursor
-#exec --no-startup-id libinput-gestures
 exec --no-startup-id xbanish
 exec --no-startup-id xautolock -detectsleep
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # applications in floating mode
-for_window [title="alsamixer" instance="st"] floating enable border pixel 1
-for_window [title="Calculator" instance="st"] floating enable border pixel 1
-for_window [title="Network Manager" instance="st"] floating enable border pixel 1
-for_window [class="Nm-connection-editor"] floating enable border normal
 for_window [title="floating" instance="st"] floating enable, resize set 1024 768, move position center
-for_window [title="cmus" instance="st"] floating enable sticky enable, move scratchpad, scratchpad show, resize set 1024 768, move position center
+for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set 1024 768, move position center
+for_window [title="alsamixer" instance="st"] floating enable
+for_window [title="Calculator" instance="st"] floating enable
+for_window [title="Network Manager" instance="st"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="Arandr"] floating enable sticky enable border normal, resize set 800 600, move position center
-for_window [class="GParted"] floating enable border normal
+
+for_window [class="Arandr"] floating enable, sticky enable, resize set 800 600, move position center
+for_window [class="Lxappearance"] floating enable, sticky enable
+for_window [class="Nitrogen"] floating enable, sticky enable
+for_window [class="Gcolor3"] floating enable, sticky enable
+for_window [class="qt5ct"] floating enable, sticky enable
+for_window [class="Qtconfig-qt4"] floating enable, sticky enable
+for_window [class="Nm-connection-editor"] floating enable
+for_window [class="GParted"] floating enable
 for_window [class="Lightdm-settings"] floating enable
-for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Kodi"] fullscreen
+for_window [class="Manjaro Settings Manager"] floating enable
 for_window [class="Pamac-manager"] floating enable
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="Simple-scan"] floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
+for_window [class="System-config-printer.py"] floating enable
 for_window [class="Xfburn"] floating enable
-for_window [class="Gcolor3"] floating enable sticky enable
 for_window [class="gmic_qt"] floating enable
+for_window [class="Kodi"] fullscreen
 
 # workspace names
 set $ws1 1
@@ -154,7 +151,7 @@ bindsym $sup+Ctrl+Right workspace next
 # split orientation
 bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container horizontally'
 bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container vertically'
-#bindsym $sup+Ctrl+Down split toggle
+#bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'toggle tile container direction'
 
 # change focus
 bindsym $sup+Left focus left
@@ -264,7 +261,7 @@ bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
 bindsym $sup+grave exec --no-startup-id rofi_font_symbols.sh
 
-bindsym $sup+F1 exec --no-startup-id conky.sh shortcutsforeground
+bindsym $sup+F1 exec --no-startup-id conky.sh shortcutsbackground
 bindsym $sup+F2 exec pcmanfm
 bindsym $sup+F3 exec gksu pcmanfm
 
