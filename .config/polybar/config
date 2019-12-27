@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-24 12:13:28
+; date:       2019-12-27 10:49:34
 
 ; wm
 [global/wm]
@@ -245,7 +245,7 @@ interval = 30.0
 fixed-values = true
 
 mount-0 = /
-mount-1 = /home/klassiker/mount/data
+mount-1 = /media/disk1
 
 label-mounted =  %percentage_used%% %used%/%total%
 label-mounted-foreground = ${colors.foreground}
@@ -261,7 +261,7 @@ interval = 30.0
 fixed-values = true
 
 mount-0 = /
-mount-1 = /home/klassiker/mount/data
+mount-1 = /media/disk1
 
 label-mounted =  %free%
 label-mounted-foreground = ${colors.foreground}
