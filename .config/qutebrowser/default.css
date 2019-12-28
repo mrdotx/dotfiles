@@ -2,66 +2,9 @@
 path:       ~/.config/qutebrowser/default.css
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-28 13:37:22
+date:       2019-12-28 13:54:49
 */
 
-header,
-div,
-li,
-p,
-span,
-td,
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-section,
-summary,
-#content,
-.section,
-.global,
-.u-backgroundWhite
- {
-    background-color: #191919 !important;
-    /* background-image: none !important; */
-    color: #cecece !important;
-}
-
-strong {
-    background-color: #020202 !important;
-    /* background-image: none !important; */
-    color: #c5c4ed !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    background-color: #191919 !important;
-}
-
-nav,
-#mainbar,
-#archnavbar,
- {
-    background-color: #f94109 !important;
-}
-
-.blob-code span {
-    background-color: #191919 !important;
-}
-.highlight span {
-    background-color: #296187 !important;
-}
-
-/* detailed settings */
 * {
     border-color: #657b83 !important;
 }
@@ -1710,4 +1653,61 @@ a.comment-user.owner {
 .answer-votes {
     background-color: #586e75 !important;
     color: #191919 !important;
+}
+
+/* additional overall settings */
+header,
+div,
+li,
+p,
+span,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+section,
+summary,
+#content,
+.section,
+.global,
+.u-backgroundWhite
+ {
+    background-color: #2e2e2e!important;
+/*  background-image: none !important; */
+    color: #cecece !important;
+}
+
+strong {
+    background-color: #020202 !important;
+/*  background-image: none !important; */
+    color: #c5c4ed !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    background-color: #2e2e2e !important;
+}
+
+nav,
+#mainbar,
+#archnavbar,
+ {
+    background-color: #f94109 !important;
+}
+
+.blob-code span {
+    background-color: #2e2e2e !important;
+}
+.highlight span {
+    background-color: #296187 !important;
 }
