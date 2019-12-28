@@ -2,7 +2,7 @@
 path:       ~/.config/qutebrowser/config.py
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-02 01:19:14
+date:       2019-12-28 13:37:59
 """
 
 ## Documentation:
@@ -920,7 +920,7 @@ c.content.ssl_strict = True
 ## List of user stylesheet filenames to use.
 ## Type: List of File, or File
 # c.content.user_stylesheets = []
-c.content.user_stylesheets = ['dark.css','default.css']
+c.content.user_stylesheets = ['default.css']
 
 ## Enable WebGL.
 ## Type: Bool
