@@ -3,7 +3,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-21 11:38:29
+# date:       2019-12-28 15:13:52
 
 ### Display ###
 
@@ -189,7 +189,7 @@ history_length = 20
 dmenu = /usr/bin/rofi -dmenu -i -p 
 
 # Browser for opening urls in context menu.
-browser = /usr/bin/st
+browser = surf.sh
 
 # Always run rule-defined scripts, even if the notification is suppressed
 always_run_script = true
