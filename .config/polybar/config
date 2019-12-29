@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-27 10:49:34
+; date:       2019-12-29 16:55:43
 
 ; wm
 [global/wm]
@@ -30,6 +30,48 @@ yellow = #b0b200
 
 ; i3
 [bar/i3]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 26
+radius = 0.0
+
+enable-ipc = true
+
+tray-position = right
+tray-reparent = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.blue}
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-4 = "FontAwesome:pixelsize=10;1"
+
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss windowlarge
+#fixed-center = true
+#not used: cmus
+#modules-center = windowlarge
+modules-right = pulseaudio backlight battery keyboard date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; i3stat
+[bar/i3stat]
 monitor = eDP1
 width = 100%
 height = 26
@@ -65,48 +107,6 @@ modules-left = i3 polkit printer bluetooth gestures firewall rss vpnhades window
 fixed-center = true
 #not used: window cmus
 modules-center = temp cpu ram ssd wlan
-modules-right = pulseaudio backlight battery keyboard date powermenu
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-; i3slim
-[bar/i3slim]
-monitor = ${env:MONITOR:}
-width = 100%
-height = 26
-radius = 0.0
-
-enable-ipc = true
-
-tray-position = right
-tray-reparent = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = ${colors.blue}
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
-font-4 = "FontAwesome:pixelsize=10;1"
-
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
-fixed-center = true
-#not used: cmus
-modules-center = temp cpu ramslim ssdslim wlan
 modules-right = pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
@@ -169,6 +169,17 @@ format-overline = ${colors.blue}
 label = %title%
 label-maxlen = 50
 
+; windowlarge
+[module/windowlarge]
+type = internal/xwindow
+
+format = <label>
+format-foreground = ${colors.white}
+format-overline = ${colors.blue}
+
+label = %title%
+label-maxlen = 200
+
 ; cmus
 [module/cmus]
 type = custom/script
@@ -226,18 +237,6 @@ format-overline = ${colors.blue}
 label = %percentage_used%% %gb_used%/%gb_total% [%percentage_swap_used%% %gb_swap_used%/%gb_swap_total%]
 label-foreground = ${colors.foreground}
 
-; ramslim
-[module/ramslim]
-type = internal/memory
-interval = 2.0
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-overline = ${colors.blue}
-
-label = %percentage_used%% [%percentage_swap_used%%]
-label-foreground = ${colors.foreground}
-
 ; ssd
 [module/ssd]
 type = internal/fs
@@ -248,22 +247,6 @@ mount-0 = /
 mount-1 = /media/disk1
 
 label-mounted =  %percentage_used%% %used%/%total%
-label-mounted-foreground = ${colors.foreground}
-label-mounted-overline = ${colors.blue}
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground}
-label-unmountet-overline = ${colors.red}
-
-; ssdslim
-[module/ssdslim]
-type = internal/fs
-interval = 30.0
-fixed-values = true
-
-mount-0 = /
-mount-1 = /media/disk1
-
-label-mounted =  %free%
 label-mounted-foreground = ${colors.foreground}
 label-mounted-overline = ${colors.blue}
 label-unmounted = %mountpoint% not mounted
@@ -500,7 +483,7 @@ menu-0-0-foreground = ${colors.foreground}
 menu-0-1 =  reboot
 menu-0-1-exec = menu-open-2
 menu-0-1-foreground = ${colors.foreground}
-menu-0-2 =  knockout 
+menu-0-2 =  knockout
 menu-0-2-exec = rofi_exit.sh
 menu-0-2-foreground = ${colors.foreground}
 
