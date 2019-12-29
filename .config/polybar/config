@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-29 16:55:43
+; date:       2019-12-29 20:12:38
 
 ; wm
 [global/wm]
@@ -62,10 +62,7 @@ font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss windowlarge
-#fixed-center = true
-#not used: cmus
-#modules-center = windowlarge
-modules-right = pulseaudio backlight battery keyboard date powermenu
+modules-right = cmus pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -105,7 +102,6 @@ font-4 = "FontAwesome:pixelsize=10;1"
 
 modules-left = i3 polkit printer bluetooth gestures firewall rss vpnhades window
 fixed-center = true
-#not used: window cmus
 modules-center = temp cpu ram ssd wlan
 modules-right = pulseaudio backlight battery keyboard date powermenu
 
@@ -179,15 +175,6 @@ format-overline = ${colors.blue}
 
 label = %title%
 label-maxlen = 200
-
-; cmus
-[module/cmus]
-type = custom/script
-exec = polybar_cmus.sh
-interval = 1
-click-left = cmus-remote -n &
-click-right = cmus-remote -r &
-click-middle = cmus-remote -u &
 
 ; temp
 [module/temp]
@@ -432,6 +419,21 @@ hook-3 = polybar_rss.sh
 initial = 1
 click-left = polybar-msg -p %pid% hook rss 4
 click-right = polybar-msg -p %pid% hook rss 3
+
+; cmus
+[module/cmus]
+type = custom/ipc
+
+format = <output>
+format-overline = ${colors.blue}
+format-foreground = ${colors.foreground}
+
+hook-0 = echo ""
+hook-1 = cmus_notify.sh --polybar
+initial = 2
+click-left = cmus-remote -r &
+click-middle = cmus-remote -u &
+click-right = cmus-remote -n &
 
 ; keyboard
 [module/keyboard]
