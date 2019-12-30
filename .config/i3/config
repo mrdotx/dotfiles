@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-29 19:51:57
+# date:       2019-12-30 14:50:26
 
 # basic definitions
 set $sup Mod4
@@ -199,8 +199,8 @@ bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
-bindsym $sup+l exec --no-startup-id $(sleep 0.3 && knockout.sh -lock simple)
-bindsym $sup+Shift+l exec --no-startup-id $(sleep 0.3 && knockout.sh -suspend simple)
+bindsym $sup+l exec --no-startup-id $(sleep 0.3 && knockout.sh -lock blur)
+bindsym $sup+Shift+l exec --no-startup-id $(sleep 0.3 && knockout.sh -suspend)
 
 # x window kill
 bindsym Ctrl+$alt+x --release exec --no-startup-id xkill
