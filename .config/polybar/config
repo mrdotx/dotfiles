@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-29 20:12:38
+; date:       2019-12-30 09:53:01
 
 ; wm
 [global/wm]
@@ -61,7 +61,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss windowlarge
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
 modules-right = cmus pulseaudio backlight battery keyboard date powermenu
 
 cursor-click = pointer
@@ -100,7 +100,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 font-4 = "FontAwesome:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall rss vpnhades window
+modules-left = i3 polkit printer bluetooth gestures firewall rss vpnhades windowsmall
 fixed-center = true
 modules-center = temp cpu ram ssd wlan
 modules-right = pulseaudio backlight battery keyboard date powermenu
@@ -154,6 +154,82 @@ label-urgent-background = ${colors.red}
 label-urgent-overline = ${colors.red}
 label-urgent-padding = 1
 
+; polkit
+[module/polkit]
+type = custom/ipc
+
+hook-0 = polybar_polkit.sh --status
+hook-1 = polybar_polkit.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook polkit 2
+click-right = polybar-msg -p %pid% hook polkit 1
+
+; printer
+[module/printer]
+type = custom/ipc
+
+hook-0 = polybar_printer.sh --status
+hook-1 = polybar_printer.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook printer 2
+click-right = polybar-msg -p %pid% hook printer 1
+
+; bluetooth
+[module/bluetooth]
+type = custom/ipc
+
+hook-0 = polybar_bluetooth.sh --status
+hook-1 = polybar_bluetooth.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook bluetooth 2
+click-right = polybar-msg -p %pid% hook bluetooth 1
+
+; gestures
+[module/gestures]
+type = custom/ipc
+
+hook-0 = polybar_gestures.sh --status
+hook-1 = polybar_gestures.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook gestures 2
+click-right = polybar-msg -p %pid% hook gestures 1
+
+; firewall
+[module/firewall]
+type = custom/ipc
+
+hook-0 = polybar_firewall.sh --status
+hook-1 = polybar_firewall.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook firewall 2
+click-right = polybar-msg -p %pid% hook firewall 1
+
+; vpnhades
+[module/vpnhades]
+type = custom/ipc
+
+hook-0 = polybar_vpn_hades.sh --status
+hook-1 = polybar_vpn_hades.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook vpnhades 2
+click-right = polybar-msg -p %pid% hook vpnhades 1
+
+; rss
+[module/rss]
+type = custom/ipc
+
+format = <output>
+format-overline = ${colors.blue}
+format-foreground = ${colors.foreground}
+
+hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
+hook-1 = echo "%{F#dfdfdf}%{o#ff5555}%{o-}%{F-}"
+hook-2 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
+hook-3 = polybar_rss.sh
+initial = 1
+click-left = polybar-msg -p %pid% hook rss 4
+click-right = polybar-msg -p %pid% hook rss 3
+
 ; window
 [module/window]
 type = internal/xwindow
@@ -163,10 +239,10 @@ format-foreground = ${colors.white}
 format-overline = ${colors.blue}
 
 label = %title%
-label-maxlen = 50
+label-maxlen = 100
 
-; windowlarge
-[module/windowlarge]
+; windowsmall
+[module/windowsmall]
 type = internal/xwindow
 
 format = <label>
@@ -174,7 +250,7 @@ format-foreground = ${colors.white}
 format-overline = ${colors.blue}
 
 label = %title%
-label-maxlen = 200
+label-maxlen = 50
 
 ; temp
 [module/temp]
@@ -259,65 +335,20 @@ format-disconnected-overline = ${colors.red}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground}
 
-; vpnhades
-[module/vpnhades]
+; cmus
+[module/cmus]
 type = custom/ipc
 
-hook-0 = polybar_vpn_hades.sh --status
-hook-1 = polybar_vpn_hades.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook vpnhades 2
-click-right = polybar-msg -p %pid% hook vpnhades 1
+format = <output>
+format-overline = ${colors.blue}
+format-foreground = ${colors.foreground}
 
-; firewall
-[module/firewall]
-type = custom/ipc
-
-hook-0 = polybar_firewall.sh --status
-hook-1 = polybar_firewall.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook firewall 2
-click-right = polybar-msg -p %pid% hook firewall 1
-
-; bluetooth
-[module/bluetooth]
-type = custom/ipc
-
-hook-0 = polybar_bluetooth.sh --status
-hook-1 = polybar_bluetooth.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook bluetooth 2
-click-right = polybar-msg -p %pid% hook bluetooth 1
-
-; printer
-[module/printer]
-type = custom/ipc
-
-hook-0 = polybar_printer.sh --status
-hook-1 = polybar_printer.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook printer 2
-click-right = polybar-msg -p %pid% hook printer 1
-
-; gestures
-[module/gestures]
-type = custom/ipc
-
-hook-0 = polybar_gestures.sh --status
-hook-1 = polybar_gestures.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook gestures 2
-click-right = polybar-msg -p %pid% hook gestures 1
-
-; polkit
-[module/polkit]
-type = custom/ipc
-
-hook-0 = polybar_polkit.sh --status
-hook-1 = polybar_polkit.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook polkit 2
-click-right = polybar-msg -p %pid% hook polkit 1
+hook-0 = echo ""
+hook-1 = cmus_notify.sh --polybar
+initial = 2
+click-left = cmus-remote -r &
+click-middle = cmus-remote -u &
+click-right = cmus-remote -n &
 
 ; pulseaudio
 [module/pulseaudio]
@@ -403,37 +434,6 @@ animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
-
-; rss
-[module/rss]
-type = custom/ipc
-
-format = <output>
-format-overline = ${colors.blue}
-format-foreground = ${colors.foreground}
-
-hook-0 = echo "%{F#dfdfdf}%{o#666666}%{o-}%{F-}"
-hook-1 = echo "%{F#dfdfdf}%{o#ff5555}%{o-}%{F-}"
-hook-2 = newsboat -x print-unread | awk '!/^0/ {print "",$1}'
-hook-3 = polybar_rss.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook rss 4
-click-right = polybar-msg -p %pid% hook rss 3
-
-; cmus
-[module/cmus]
-type = custom/ipc
-
-format = <output>
-format-overline = ${colors.blue}
-format-foreground = ${colors.foreground}
-
-hook-0 = echo ""
-hook-1 = cmus_notify.sh --polybar
-initial = 2
-click-left = cmus-remote -r &
-click-middle = cmus-remote -u &
-click-right = cmus-remote -n &
 
 ; keyboard
 [module/keyboard]
