@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-25 22:42:11
+# date:       2019-12-30 20:48:24
 
 # dev paths
 if [ -d "$HOME/projects/python" ] ; then
@@ -26,6 +26,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export PYLINTHOME="$XDG_DATA_HOME"/pylint.d
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # apps
 export TERMINAL="st"
