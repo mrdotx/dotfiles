@@ -2,7 +2,7 @@
 path:       ~/.config/qutebrowser/default.css
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-28 14:11:56
+date:       2019-12-30 20:33:28
 */
 
 * {
@@ -1700,9 +1700,8 @@ h6 {
 
 nav,
 #mainbar,
-#archnavbar,
- {
-    background-color: #f94109 !important;
+#archnavbar {
+    background-color: #191919 !important;
 }
 
 .blob-code span {
