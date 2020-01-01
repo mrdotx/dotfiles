@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-01 17:41:28
+; date:       2020-01-01 19:41:34
 
 ; wm
 [global/wm]
@@ -28,7 +28,7 @@ yellow = ${xrdb:color3:#b0b200}
 
 ; i3
 [bar/i3]
-monitor = ${env:MONITOR:}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
 radius = 0.0
@@ -70,7 +70,7 @@ cursor-scroll = ns-resize
 
 ; i3_top
 [bar/i3_top]
-monitor = ${env:MONITOR:}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
 radius = 0.0
@@ -112,7 +112,7 @@ cursor-scroll = ns-resize
 
 ; i3_btm
 [bar/i3_btm]
-monitor = ${env:MONITOR:}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
 radius = 0.0
