@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-30 14:50:26
+# date:       2020-01-01 01:06:30
 
 # basic definitions
 set $sup Mod4
@@ -160,16 +160,16 @@ bindsym $sup+Up focus up
 bindsym $sup+Down focus down
 
 # move focused window
-bindsym $sup+Shift+Left move left
-bindsym $sup+Shift+Right move right
-bindsym $sup+Shift+Up move up
-bindsym $sup+Shift+Down move down
+bindsym $sup+Shift+Left move left 25 px
+bindsym $sup+Shift+Right move right 25 px
+bindsym $sup+Shift+Up move up 25 px
+bindsym $sup+Shift+Down move down 25 px
 
 # resize window
-bindsym $sup+$alt+Left resize shrink width 10 px or 5 ppt
-bindsym $sup+$alt+Right resize grow width 10 px or 5 ppt
-bindsym $sup+$alt+Up resize shrink height 10 px or 5 ppt
-bindsym $sup+$alt+Down resize grow height 10 px or 5 ppt
+bindsym $sup+$alt+Left resize shrink width 25 px or 5 ppt
+bindsym $sup+$alt+Right resize grow width 25 px or 5 ppt
+bindsym $sup+$alt+Up resize shrink height 25 px or 5 ppt
+bindsym $sup+$alt+Down resize grow height 25 px or 5 ppt
 
 # toggle tiling/floating
 bindsym $alt+space floating toggle
