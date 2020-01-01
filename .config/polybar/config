@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2019-12-31 11:40:46
+; date:       2020-01-01 09:55:41
 
 ; wm
 [global/wm]
@@ -24,7 +24,7 @@ grey = ${xrdb:color7:#cccccc}
 blue = ${xrdb:color12:#4084d6}
 green = ${xrdb:color2:#00b200}
 red = ${xrdb:color9:#ff5555}
-yellow = $xrdb:color3:#b0b200}
+yellow = ${xrdb:color3:#b0b200}
 
 ; i3
 [bar/i3]
