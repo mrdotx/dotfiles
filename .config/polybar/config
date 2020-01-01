@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-01 09:55:41
+; date:       2020-01-01 10:37:40
 
 ; wm
 [global/wm]
@@ -28,10 +28,11 @@ yellow = ${xrdb:color3:#b0b200}
 
 ; i3
 [bar/i3]
-monitor = ${env:MONITOR:eDP1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 26
 radius = 0.0
+bottom = false
 
 locale = de_DE.UTF-8
 
@@ -69,10 +70,11 @@ cursor-scroll = ns-resize
 
 ; i3stat
 [bar/i3stat]
-monitor = eDP1
+monitor = ${env:MONITOR:}
 width = 100%
 height = 26
 radius = 0.0
+bottom = false
 
 locale = de_DE.UTF-8
 
@@ -275,7 +277,7 @@ label-maxlen = 50
 ; temp
 [module/temp]
 type = internal/temperature
-interval = 1.0
+interval = 2.0
 thermal-zone = 0
 warn-temperature = 80
 
@@ -299,7 +301,7 @@ ramp-foreground = ${colors.foreground}
 ; cpu
 [module/cpu]
 type = internal/cpu
-interval = 1.0
+interval = 2.0
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
@@ -311,7 +313,7 @@ label-foreground = ${colors.foreground}
 ; ram
 [module/ram]
 type = internal/memory
-interval = 1.0
+interval = 2.0
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
@@ -340,7 +342,7 @@ label-unmountet-overline = ${colors.red}
 [module/wlan]
 type = internal/network
 interface = wlp2s0
-interval = 1.0
+interval = 3.0
 
 format-connected-prefix = " "
 format-connected = <label-connected>
@@ -358,7 +360,7 @@ label-disconnected-foreground = ${colors.foreground}
 [module/wlansmall]
 type = internal/network
 interface = wlp2s0
-interval = 15.0
+interval = 30.0
 
 format-connected-prefix = " "
 format-connected = <label-connected>
