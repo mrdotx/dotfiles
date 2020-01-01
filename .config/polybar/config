@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-01 10:37:40
+; date:       2020-01-01 17:41:28
 
 ; wm
 [global/wm]
@@ -68,8 +68,8 @@ modules-right = cmus pulseaudio backlight wlansmall battery keyboard date powerm
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-; i3stat
-[bar/i3stat]
+; i3_top
+[bar/i3_top]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 26
@@ -104,10 +104,50 @@ font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss windowsmall
-fixed-center = true
-modules-center = temp cpu ram ssd wlan
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
 modules-right = pulseaudio backlight battery keyboard date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; i3_btm
+[bar/i3_btm]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 26
+radius = 0.0
+bottom = true
+
+locale = de_DE.UTF-8
+
+enable-ipc = true
+
+tray-position = right
+tray-reparent = true
+tray-scale = 0.90
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.blue}
+
+border-size = 0
+border-color = ${xrdb:Polybar.background:#00000000}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-right = cmus
+modules-left = temp cpu ram ssd wlan
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -262,17 +302,6 @@ format-overline = ${colors.blue}
 
 label = %title%
 label-maxlen = 100
-
-; windowsmall
-[module/windowsmall]
-type = internal/xwindow
-
-format = <label>
-format-foreground = ${colors.white}
-format-overline = ${colors.blue}
-
-label = %title%
-label-maxlen = 50
 
 ; temp
 [module/temp]
