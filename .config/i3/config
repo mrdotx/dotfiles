@@ -1,9 +1,9 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-01 01:06:30
+# date:       2020-01-01 16:04:54
 
-# basic definitions
+# i3 config file (v4)
 set $sup Mod4
 set $alt Mod1
 set $main eDP1
@@ -264,5 +264,3 @@ bindsym $sup+grave exec --no-startup-id rofi_font_symbols.sh
 bindsym $sup+F1 exec --no-startup-id conky.sh shortcutsbackground
 bindsym $sup+F2 exec pcmanfm
 bindsym $sup+F3 exec gksu pcmanfm
-
-# vim:ft=sh
