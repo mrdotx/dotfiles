@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-01 19:41:34
+; date:       2020-01-01 20:32:13
 
 ; wm
 [global/wm]
@@ -348,7 +348,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-overline = ${colors.blue}
 
-label = %percentage_used%% %gb_used%/%gb_total% [%percentage_swap_used%% %gb_swap_used%/%gb_swap_total%]
+label = %percentage_used%% %gb_used%/%gb_total%  %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
 label-foreground = ${colors.foreground}
 
 ; ssd
