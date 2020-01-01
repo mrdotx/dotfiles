@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-01 20:32:13
+; date:       2020-01-01 21:53:21
 
 ; wm
 [global/wm]
@@ -147,7 +147,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-right = cmus
-modules-left = temp cpu ram ssd wlan
+modules-left = wlan ssd ram temp cpu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
