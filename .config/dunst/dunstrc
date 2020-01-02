@@ -3,7 +3,7 @@
 # path:       ~/.config/polybar/dunstrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-28 15:13:52
+# date:       2020-01-02 20:59:54
 
 ### Display ###
 
@@ -168,7 +168,7 @@ show_indicators = yes
 icon_position = left
 
 # Scale larger icons down to this size, set to 0 to disable
-max_icon_size = 32
+max_icon_size = 100
 
 # Paths to default icons.
 #icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/
