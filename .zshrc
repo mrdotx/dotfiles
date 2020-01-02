@@ -1,7 +1,7 @@
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:39:34
+# date:       2020-01-02 10:37:51
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -91,13 +91,11 @@ export FZF_BASE=/usr/bin/fzf
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    fzf
-    colored-man-pages
-    cp
-    history
     zsh-autosuggestions
     zsh-syntax-highlighting
     history-substring-search
+    fzf
+    colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
