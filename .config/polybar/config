@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-03 12:52:45
+; date:       2020-01-04 15:56:54
 
 ; wm
 [global/wm]
@@ -556,7 +556,7 @@ type = internal/date
 interval = 60.0
 
 date = 
-date-alt =  %a %e.%m.%G
+date-alt =  %a %d.%m.%Y
 
 time = %k:%M
 time-alt = %k:%M
