@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.1
-Type=Application
-Name=Unmount
-Comment=Unmount drives
-Icon=drive-removable-media
-Exec=rofi_unmount.sh
-Actions=
-Categories=Utility;
