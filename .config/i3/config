@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-06 18:38:37
+# date:       2020-01-06 23:55:42
 
 # i3 config file (v4)
 set $sup Mod4
@@ -33,7 +33,7 @@ client.background       #ffffff
 
 # autostart applications
 exec_always --no-startup-id screenlayout.sh
-exec_always --no-startup-id polybar.sh i3
+exec_always --no-startup-id polybar.sh
 exec_always --no-startup-id pkill picom; sleep 1; picom -b
 exec --no-startup-id xbanish
 exec --no-startup-id xautolock -detectsleep
