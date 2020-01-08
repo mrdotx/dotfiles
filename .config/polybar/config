@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-06 23:33:44
+; date:       2020-01-08 20:51:17
 
 ; wm
 [global/wm]
@@ -26,8 +26,8 @@ green = ${xrdb:color2:#00b200}
 red = ${xrdb:color9:#ff5555}
 yellow = ${xrdb:color3:#b0b200}
 
-; i3
-[bar/i3]
+; i3_pri
+[bar/i3_pri]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
@@ -62,56 +62,14 @@ font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
-modules-right = cmus pulseaudio backlight wlansmall battery keyboard date powermenu
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+modules-right = cmus pulseaudio backlight rss wlansmall battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-; i3_top
-[bar/i3_top]
-monitor = ${env:MONITOR:eDP1}
-width = 100%
-height = 26
-radius = 0.0
-bottom = false
-
-locale = de_DE.UTF-8
-
-enable-ipc = true
-
-tray-position = right
-tray-reparent = true
-tray-scale = 0.90
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = ${colors.blue}
-
-border-size = 0
-border-color = ${xrdb:Polybar.background:#00000000}
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 1
-
-font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
-
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades rss window
-modules-right = wlan pulseaudio backlight battery keyboard date powermenu
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-; i3_btm_pri
-[bar/i3_btm_pri]
+; i3_pri_btm
+[bar/i3_pri_btm]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
@@ -148,8 +106,50 @@ modules-right = temp cpu ram ssd
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-; i3_top_sec
-[bar/i3_top_sec]
+; i3_sec
+[bar/i3_sec]
+monitor = ${env:MONITOR:eDP1}
+width = 100%
+height = 26
+radius = 0.0
+bottom = false
+
+locale = de_DE.UTF-8
+
+enable-ipc = true
+
+tray-position = right
+tray-reparent = true
+tray-scale = 0.90
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.blue}
+
+border-size = 0
+border-color = ${xrdb:Polybar.background:#00000000}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+modules-right = pulseaudio backlight rss wlan battery keyboard date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; i3_sec_top
+[bar/i3_sec_top]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
