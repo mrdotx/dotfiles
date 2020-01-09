@@ -4,6 +4,6 @@ Type=Application
 Name=Network Manager
 Comment=connect WLAN
 Icon=preferences-system-network
-Exec=st -T "Network Manager" -e wlan.sh
+Exec=st -T "Network Manager" -e wlan.sh -nm
 Actions=
 Categories=Network;
