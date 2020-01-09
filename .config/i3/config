@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-06 23:55:42
+# date:       2020-01-09 12:43:53
 
 # i3 config file (v4)
 set $sup Mod4
@@ -42,8 +42,8 @@ exec --no-startup-id xautolock -detectsleep
 for_window [title="floating" instance="st"] floating enable, resize set 1024 768, move position center
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set 1024 768, move position center
 for_window [title="alsamixer" instance="st"] floating enable
-for_window [title="Calculator" instance="st"] floating enable
-for_window [title="Network Manager" instance="st"] floating enable
+for_window [title="Calculator" instance="st"] floating enable, resize set 800 600, move position center
+for_window [title="Network Manager" instance="st"] floating enable, resize set 800 600, move position center
 for_window [title="File Transfer*"] floating enable
 
 for_window [class="Arandr"] floating enable, sticky enable, resize set 800 600, move position center
