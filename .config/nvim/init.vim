@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-04 22:33:18
+" date:       2020-01-10 09:40:19
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -146,16 +146,16 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " vimwiki
 let notes={}
-let notes.path='$HOME/projects/hidden/notes'
-let notes.path_html='$HOME/projects/hidden/notes/html/'
+let notes.path='$HOME/Dokumente/Notes'
+let notes.path_html='$HOME/Dokumente/Notes/html/'
 let notes.syntax='markdown'
 let notes.ext='.md'
 let notes.auto_export=1
 let notes.automatic_nested_syntaxes=1
-let notes.template_path='$HOME/projects/hidden/notes/sh/template/'
+let notes.template_path='$HOME/projects/miscellaneous/pandoc/template/'
 let notes.template_default='github'
 let notes.template_ext='.html5'
-let notes.custom_wiki2html='$HOME/projects/hidden/notes/sh/wiki2html.sh'
+let notes.custom_wiki2html='$HOME/projects/miscellaneous/pandoc/wiki2html.sh'
 let g:vimwiki_list=[notes]
 let g:vimwiki_global_ext=0
 let g:vimwiki_use_mouse=1
@@ -350,4 +350,4 @@ map         <leader>S           :SyntasticToggleMode<CR>
 " format shellscript
 map         <leader>f           :Shfmt<CR>
 " copy vimwiki to webserver
-map         <leader>n           :!$HOME/projects/hidden/notes/sh/copy.sh<CR>
+map         <leader>n           :!$HOME/projects/miscellaneous/pandoc/copy.sh<CR>

@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-30 21:36:25
+# date:       2020-01-10 09:44:49
 
 # tools
 alias cp='cp -i'                                            # confirm before overwriting something
@@ -11,7 +11,7 @@ alias nf='neofetch'                                         # systeminformation
 
 alias rg='ranger'                                           # filemanager
 alias rs='sudo ranger'                                      # filemanager root
-alias xn='vim $HOME/projects/hidden/notes/index.md'         # notes
+alias xn='vim $HOME/Dokumente/Notes/index.md'               # notes
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'  # rss reader
 alias we='weechat'                                          # irc chat
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
