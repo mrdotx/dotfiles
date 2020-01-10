@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-09 12:43:53
+# date:       2020-01-10 18:29:07
 
 # i3 config file (v4)
 set $sup Mod4
@@ -90,7 +90,7 @@ workspace $ws10 output $hdmi $main
 # open applications on specific workspaces (xprop)
 assign [title="newsboat"] $ws2
 assign [class="VirtualBox"] $ws3
-assign [class="firefoxdeveloperedition"] $ws4
+assign [class="firefox"] $ws4
 assign [title="GIMP Startup"] $ws5
 assign [class="Gimp"] $ws5
 assign [class="Thunderbird"] $ws6
@@ -254,7 +254,7 @@ bindsym $sup+o exec libreoffice
 bindsym $sup+r exec --no-startup-id $TERMINAL -e ranger
 bindsym $sup+s exec scribus
 bindsym $sup+v exec VirtualBox
-bindsym $sup+w exec firefox-developer-edition
+bindsym $sup+w exec firefox
 bindsym $sup+Shift+w exec --no-startup-id surf.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
 bindsym $sup+z exec filezilla
