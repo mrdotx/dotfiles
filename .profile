@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-30 20:48:24
+# date:       2020-01-11 13:52:16
 
 # dev paths
 if [ -d "$HOME/projects/python" ] ; then
@@ -12,6 +12,9 @@ if [ -d "$HOME/projects/shell" ] ; then
 fi
 if [ -d "$HOME/projects/st" ] ; then
     PATH="$HOME/projects/st:$PATH"
+fi
+if [ -d "$HOME/projects/surf" ] ; then
+    PATH="$HOME/projects/surf:$PATH"
 fi
 
 # xdg paths
