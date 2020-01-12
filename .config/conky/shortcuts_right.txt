@@ -52,7 +52,7 @@ ${color1}surf${color0}
     /                   open search bar
     [n,N]               next and previous search result
     s                   search duckduckdo.com
-    f                   show links to follow
+    ctrl+f              show links to follow
     d                   open download console
     g                   open url bar with bookmarks
     m                   save as bookmark
