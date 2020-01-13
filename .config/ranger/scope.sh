@@ -3,7 +3,7 @@
 # path:       ~/.config/ranger/scope.sh
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 00:52:11
+# date:       2020-01-13T12:39:38+0100
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'

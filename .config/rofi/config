@@ -1,7 +1,7 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 20:25:09
+# date:       2020-01-13T12:39:57+0100
 
 rofi.theme:                     klassiker-horizontal
 rofi.monitor:                   primary

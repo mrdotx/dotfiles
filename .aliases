@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-10 09:44:49
+# date:       2020-01-13T12:29:01+0100
 
 # tools
 alias cp='cp -i'                                            # confirm before overwriting something

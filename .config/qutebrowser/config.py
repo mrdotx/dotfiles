@@ -2,7 +2,7 @@
 path:       ~/.config/qutebrowser/config.py
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-28 13:37:59
+date:       2020-01-13T12:38:44+0100
 """
 
 ## Documentation:

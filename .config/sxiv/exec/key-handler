@@ -3,7 +3,7 @@
 # path:       ~/.config/sxiv/exec/key-handler
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2019-12-02 22:09:45
+# date:       2020-01-13T12:41:17+0100
 
 # rotate function
 rotate() {

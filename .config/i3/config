@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-10 18:29:07
+# date:       2020-01-13T12:34:57+0100
 
 # i3 config file (v4)
 set $sup Mod4

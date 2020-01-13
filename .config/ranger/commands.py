@@ -2,7 +2,7 @@
 path:       ~/.config/ranger/commands.py
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-02 00:50:50
+date:       2020-01-13T12:39:12+0100
 """
 
 # This is a sample commands.py.  You can add your own commands here.

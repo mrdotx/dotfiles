@@ -3,7 +3,7 @@
 path:       ~/projects/shell/<++>.py
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/python
-date:       2019-12-21 14:34:38
+date:       2020-01-13T12:37:16+0100
 """
 
 <++>

@@ -1,7 +1,7 @@
 # path:       ~/.config/youtube-dl/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-12 15:45:46
+# date:       2020-01-13T12:41:33+0100
 
 -o "~/Downloads/[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s"
 --external-downloader aria2c

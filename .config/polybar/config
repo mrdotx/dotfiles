@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-08 20:51:17
+; date:       2020-01-13T12:38:17+0100
 
 ; wm
 [global/wm]

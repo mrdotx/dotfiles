@@ -2,7 +2,7 @@
 path:       ~/.config/ranger/commands_full.py
 user:       klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2019-12-02 00:51:46
+date:       2020-01-13T12:39:24+0100
 """
 
 # This file is part of ranger, the console file manager.

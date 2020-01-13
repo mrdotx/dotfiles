@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-10 09:40:19
+" date:       2020-01-13T12:37:33+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -319,7 +319,7 @@ function! ModifiedDate()
         let save_cursor=getpos(".")
         let n=min([10, line("$")])
         keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-            \ strftime('      %F %T') . '#e'
+            \ strftime('      %FT%T%z') . '#e'
         call histdel('search', -1)
         call setpos('.', save_cursor)
     endif

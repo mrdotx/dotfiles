@@ -1,7 +1,7 @@
 // path:       ~/.config/rofi/klassiker-horizontal.rasi
 // user:       klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2019-12-08 22:59:00
+// date:       2020-01-13T12:40:06+0100
 
 * {
     regular:                "Source Sans Pro Regular 10";

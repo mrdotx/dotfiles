@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-11 13:52:16
+# date:       2020-01-13T12:30:00+0100
 
 # dev paths
 if [ -d "$HOME/projects/python" ] ; then
