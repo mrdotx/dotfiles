@@ -1,23 +1,23 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:29:01+0100
+# date:       2020-01-13T21:54:22+0100
 
 # tools
-alias cp='cp -i'                                            # confirm before overwriting something
-alias more='less'                                           # show file
+alias more='less'
 alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
-alias nf='neofetch'                                         # systeminformation
+alias cp='cp -i'
+alias nf='neofetch'
 
-alias rg='ranger'                                           # filemanager
-alias rs='sudo ranger'                                      # filemanager root
-alias xn='vim $HOME/Dokumente/Notes/index.md'               # notes
-alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'  # rss reader
-alias we='weechat'                                          # irc chat
+alias rg='ranger'
+alias rs='sudo ranger'
+alias xn='vim $HOME/Dokumente/Notes/index.md'
+alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
+alias we='weechat'
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
-alias cm='cmatrix -su 7'                                    # matrix screensaver
-alias wt='curl -H "Accept-Language: de" wttr.in'            # weather
-alias sw='telnet towel.blinkenlights.nl'                    # star wars
+alias cm='cmatrix -su 7'
+alias wt='curl -H "Accept-Language: de" wttr.in'
+alias sw='telnet towel.blinkenlights.nl'
 
 # git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
@@ -38,9 +38,9 @@ alias ms='maintenance_system.sh'
 
 # ssh
 alias pi='ssh hermes'
-alias pi_ch='pi sys_stat.sh'
+alias ch_pi='pi sys_stat.sh'
 alias pi2='ssh prometheus'
-alias pi2_ch='pi2 sys_stat.sh'
+alias ch_pi2='pi2 sys_stat.sh'
 alias p9='ssh p9'
 alias m3='ssh m3'
 alias firetv='ssh firetv'
