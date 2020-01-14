@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:34:57+0100
+# date:       2020-01-14T17:25:10+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -219,7 +219,7 @@ bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/project
 bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
-bindcode $sup+61 exec --no-startup-id conky.sh shortcutsforeground
+bindcode $sup+61 exec --no-startup-id sent ~/Dokumente/Slides/shortcuts.txt
 bindcode $sup+Shift+61 exec --no-startup-id conky.sh vertical
 
 # keybindings multimedia keys
@@ -261,6 +261,6 @@ bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
 bindsym $sup+grave exec --no-startup-id rofi_font_symbols.sh
 
-bindsym $sup+F1 exec --no-startup-id conky.sh shortcutsbackground
+bindsym $sup+F1 exec --no-startup-id sent ~/Dokumente/Slides/shortcuts.txt
 bindsym $sup+F2 exec pcmanfm
 bindsym $sup+F3 exec gksu pcmanfm
