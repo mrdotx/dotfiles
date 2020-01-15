@@ -1,7 +1,7 @@
 # path:       ~/.config/rofi/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:39:57+0100
+# date:       2020-01-15T17:49:02+0100
 
 rofi.theme:                     klassiker-horizontal
 rofi.monitor:                   primary
@@ -9,8 +9,8 @@ rofi.monitor:                   primary
 rofi.show-icons:                false
 rofi.click-to-exit:             true
 
-rofi.modi:                      combi,ssh,window
-rofi.combi-modi:                drun,ssh,window
+rofi.modi:                      combi,ssh
+rofi.combi-modi:                drun,ssh
 rofi.combi-hide-mode-prefix:    true
 rofi.drun-match-fields:         name,generic,exec,categories,comment
 rofi.drun-display-format:       {name}

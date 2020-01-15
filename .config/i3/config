@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-15T14:56:07+0100
+# date:       2020-01-15T17:43:48+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -141,7 +141,6 @@ bindsym $sup+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # workspace back and forth
 bindsym $alt+Tab workspace back_and_forth
-bindsym $sup+Tab move container to workspace back_and_forth; workspace back_and_forth
 
 # navigate workspaces next/previous
 bindsym $sup+Ctrl+Left workspace prev
@@ -190,6 +189,9 @@ bindsym $alt+minus scratchpad show
 # keybindings system managment
 # start program launcher
 bindsym Super_L --release exec --no-startup-id rofi -monitor -1 -show
+
+# window switcher
+bindsym $sup+Tab exec --no-startup-id rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons
 
 # kill focused window
 bindsym Ctrl+q kill
