@@ -1,7 +1,7 @@
 # path:       ~/.config/zathura/zathurarc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:41:46+0100
+# date:       2020-01-15T11:40:44+0100
 
 set selection-clipboard clipboard
 set adjust-open best-fit
@@ -10,6 +10,7 @@ set adjust-open best-fit
 set statusbar-home-tilde true
 #set window-height 800
 #set window-width 600
+set database null
 
 # Shortcuts
 map [normal]        f       toggle_fullscreen
