@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-15T13:00:27+0100
+# date:       2020-01-15T14:56:07+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -259,7 +259,7 @@ bindsym $sup+Shift+w exec --no-startup-id surf.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
 bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
-bindsym $sup+grave exec --no-startup-id rofi_font_symbols.sh
+bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
 
 bindsym $sup+F1 exec --no-startup-id sent ~/Dokumente/Slides/shortcuts.txt
 bindsym $sup+F2 exec pcmanfm
