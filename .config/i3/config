@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-15T17:43:48+0100
+# date:       2020-01-16T23:40:57+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -45,6 +45,7 @@ for_window [title="alsamixer" instance="st"] floating enable
 for_window [title="Calculator" instance="st"] floating enable, resize set 800 600, move position center
 for_window [title="Network Manager" instance="st"] floating enable, resize set 800 600, move position center
 for_window [title="File Transfer*"] floating enable
+for_window [title="stopwatch.sh"] floating enable, resize set 200 400, move position center
 
 for_window [class="Arandr"] floating enable, sticky enable, resize set 800 600, move position center
 for_window [class="Lxappearance"] floating enable, sticky enable
@@ -258,6 +259,7 @@ bindsym $sup+s exec scribus
 bindsym $sup+v exec VirtualBox
 bindsym $sup+w exec firefox
 bindsym $sup+Shift+w exec --no-startup-id surf.sh
+bindsym $sup+x exec --no-startup-id $TERMINAL -e stopwatch.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
 bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
