@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-13T12:37:33+0100
+" date:       2020-01-16T09:31:13+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -337,7 +337,7 @@ map         <leader>g           :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap    <tab>               <C-w>w
 nnoremap    <S-tab>             <C-w>W
 " buffer cycle
-:nnoremap   <leader>b           :bprevious<CR>
+nnoremap    <leader>b           :bprevious<CR>
 " turn off search highlight
 nnoremap    <leader><space>     :nohlsearch<CR>
 " show hidden characters
