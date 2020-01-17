@@ -1,15 +1,12 @@
 # path:       ~/.config/zathura/zathurarc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-15T11:40:44+0100
+# date:       2020-01-17T16:18:51+0100
 
 set selection-clipboard clipboard
 set adjust-open best-fit
-#set window-title-basename true
-#set window-title-home-tilde true
+set window-title-home-tilde true
 set statusbar-home-tilde true
-#set window-height 800
-#set window-width 600
 set database null
 
 # Shortcuts
