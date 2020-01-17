@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:30:00+0100
+# date:       2020-01-18T00:13:09+0100
 
 # dev paths
 if [ -d "$HOME/projects/python" ] ; then
@@ -42,6 +42,7 @@ export BROWSER="surf.sh"
 export TERMINALBROWSER="w3m"
 
 # app settings
+export RANGER_LOAD_DEFAULT_RC=false
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
