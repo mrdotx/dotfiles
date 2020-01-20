@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-20T23:24:48+0100
+# date:       2020-01-21T00:01:24+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -15,7 +15,6 @@ mouse_warping none
 font xft:Source Code Pro 11
 default_border pixel 2
 default_floating_border normal
-hide_edge_borders none
 workspace_auto_back_and_forth yes
 for_window [urgent=latest] focus
 gaps inner 8
@@ -151,6 +150,7 @@ bindsym $sup+Ctrl+Right workspace next
 # split orientation
 bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container horizontally'
 bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container vertically'
+#bindsym $sup+Ctrl+Up split toggle;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'toggle tile container direction'
 #bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'toggle tile container direction'
 
 # change focus
