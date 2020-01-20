@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/config/plugins.vimrc
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-17T10:06:25+0100
+" date:       2020-01-20T17:31:14+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -14,7 +14,6 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'tpope/vim-fugitive'
-    Plug 'z0mbix/vim-shfmt'
     Plug 'vim-syntastic/syntastic'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'norcalli/nvim-colorizer.lua'
@@ -27,9 +26,6 @@ call plug#end()
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'base16_klassiker'
-
-" shfmt
-let g:shfmt_extra_args='-i 4'
 
 " syntastic
 set statusline+=%#warningmsg#
