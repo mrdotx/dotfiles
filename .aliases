@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T21:54:22+0100
+# date:       2020-01-20T12:48:12+0100
 
 # tools
 alias more='less'
@@ -32,7 +32,6 @@ alias cu='ch && up'
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
-alias sy='sync_rclone.sh'
 alias dm='delete_metafiles.sh'
 alias ms='maintenance_system.sh'
 
