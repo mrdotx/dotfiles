@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-21T00:01:24+0100
+# date:       2020-01-21T11:25:58+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -222,7 +222,7 @@ bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/project
 bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
-bindcode $sup+61 exec --no-startup-id sent ~/Dokumente/Slides/shortcuts.txt
+bindcode $sup+61 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
 bindcode $sup+Shift+61 exec --no-startup-id conky.sh vertical
 
 # keybindings multimedia keys
@@ -238,23 +238,23 @@ bindsym $sup+Print exec --no-startup-id scrot.sh -window
 bindsym $sup+Shift+Print exec --no-startup-id $(sleep 0.5 && scrot.sh -select)
 
 # keybindings applications
-bindsym $sup+Return exec --no-startup-id $TERMINAL
+bindsym $sup+Return exec --no-startup-id i3_tiling.sh $TERMINAL
 bindsym $sup+Shift+Return exec --no-startup-id urxvtc.sh
 bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
-bindsym $sup+b exec --no-startup-id $TERMINAL -e bmenu
+bindsym $sup+b exec --no-startup-id i3_tiling.sh $TERMINAL -e bmenu
 bindsym $sup+c exec --no-startup-id $TERMINAL -e cmus.sh
 bindsym $sup+Shift+c exec --no-startup-id cmus_notify.sh --notify-send
 bindsym $sup+d exec darktable
 bindsym $sup+e exec --no-startup-id rofi_vim.sh
 bindsym $sup+g exec gimp
-bindsym $sup+h exec --no-startup-id $TERMINAL -e htop
+bindsym $sup+h exec --no-startup-id i3_tiling.sh $TERMINAL -e htop
 bindsym $sup+i exec inkscape
 bindsym $sup+j exec jameica
-bindsym $sup+k exec --no-startup-id $(sync_keepass.sh && keepassxc && sync_keepass.sh)
+bindsym $sup+k exec --no-startup-id i3_tiling.sh sync_keepass.sh && keepassxc && sync_keepass.sh
 bindsym $sup+m exec thunderbird
 bindsym $sup+n exec --no-startup-id $(polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1)
 bindsym $sup+o exec libreoffice
-bindsym $sup+r exec --no-startup-id $TERMINAL -e ranger
+bindsym $sup+r exec --no-startup-id i3_tiling.sh $TERMINAL -e ranger
 bindsym $sup+s exec scribus
 bindsym $sup+u exec --no-startup-id rofi_mount.sh
 bindsym $sup+v exec VirtualBox
@@ -266,6 +266,6 @@ bindsym $sup+z exec filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
 bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
 
-bindsym $sup+F1 exec --no-startup-id sent ~/Dokumente/Slides/shortcuts.txt
+bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
 bindsym $sup+F2 exec pcmanfm
 bindsym $sup+F3 exec gksu pcmanfm
