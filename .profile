@@ -1,21 +1,14 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-18T00:13:09+0100
+# date:       2020-01-23T13:26:04+0100
 
 # dev paths
-if [ -d "$HOME/projects/python" ] ; then
-    PATH="$HOME/projects/python:$PATH"
-fi
-if [ -d "$HOME/projects/shell" ] ; then
-    PATH="$HOME/projects/shell:$PATH"
-fi
-if [ -d "$HOME/projects/st" ] ; then
-    PATH="$HOME/projects/st:$PATH"
-fi
-if [ -d "$HOME/projects/surf" ] ; then
-    PATH="$HOME/projects/surf:$PATH"
-fi
+PATH="$HOME/projects/shell:$PATH"
+PATH="$HOME/projects/python:$PATH"
+PATH="$HOME/projects/polybar:$PATH"
+PATH="$HOME/projects/st:$PATH"
+PATH="$HOME/projects/surf:$PATH"
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME"/.config
