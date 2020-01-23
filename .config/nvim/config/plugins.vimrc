@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/config/plugins.vimrc
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-22T12:30:00+0100
+" date:       2020-01-23T23:29:10+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -17,7 +17,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-syntastic/syntastic'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'flazz/vim-colorschemes'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'edkolev/tmuxline.vim'

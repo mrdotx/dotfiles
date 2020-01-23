@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/config/general.vimrc
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-17T10:19:40+0100
+" date:       2020-01-23T22:45:29+0100
 
 " mouse
 if has('mouse')
@@ -12,7 +12,7 @@ endif
 " true color
 set termguicolors
 " color theme
-colorscheme monokai-phoenix
+colorscheme klassiker
 " enable syntax processing
 syntax on
 " enable all Python syntax highlighting features
