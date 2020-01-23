@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; user:       klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-01-23T11:09:28+0100
+; date:       2020-01-23T16:41:40+0100
 
 ; wm
 [global/wm]
@@ -342,7 +342,7 @@ label-maxlen = 100
 type = internal/temperature
 interval = 2.0
 thermal-zone = 0
-warn-temperature = 80
+warn-temperature = 82
 
 format = <ramp> <label>
 format-overline = ${colors.blue}
