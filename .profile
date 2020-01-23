@@ -1,9 +1,9 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-23T13:50:25+0100
+# date:       2020-01-23T16:50:10+0100
 
-# dev paths
+# projects paths
 PATH="$HOME/projects/shell:$PATH"
 PATH="$HOME/projects/python:$PATH"
 PATH="$HOME/projects/polybar:$PATH"
