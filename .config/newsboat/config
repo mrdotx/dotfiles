@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:36:02+0100
+# date:       2020-01-23T19:55:33+0100
 
 # general
 auto-reload yes
@@ -11,8 +11,8 @@ show-read-feeds yes
 keep-articles-days 30
 cleanup-on-quit yes
 
-browser "link_handler.sh %u"
-external-url-viewer "link_handler.sh %u"
+browser "~/projects/newsboat/link_handler.sh %u"
+external-url-viewer "~/projects/newsboat/link_handler.sh %u"
 
 # inoreader
 urls-source "inoreader"
@@ -25,9 +25,9 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro f set browser "firefox %u"; open-in-browser ; set browser "link_handler.sh %u"
-macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "link_handler.sh %u"
-macro m set browser "mpv %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro f set browser "firefox %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
+macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
+macro m set browser "mpv %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 
 # color table
 #black      color0 = #000000    color8  = #333333
