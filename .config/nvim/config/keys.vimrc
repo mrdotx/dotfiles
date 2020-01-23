@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/config/keys.vimrc
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-20T17:30:46+0100
+" date:       2020-01-22T12:35:45+0100
 
 " shortcuts
 " leader is comma
@@ -25,4 +25,4 @@ map         <leader>e           :setlocal spell! spelllang=en_us<CR>
 map         <leader>s           :vs term://shellcheck -s sh %<CR>
 map         <leader>S           :SyntasticToggleMode<CR>
 " copy vimwiki to webserver
-map         <leader>n           :!$HOME/projects/miscellaneous/pandoc/copy.sh<CR>
+map         <leader>n           :!$HOME/projects/vimwiki-pandoc/copy.sh<CR>

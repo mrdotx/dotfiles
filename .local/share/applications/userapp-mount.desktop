@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=Mount
-Comment=Mount drives
+Comment=Mount unmount drives
 Icon=drive-removable-media
 Exec=rofi_mount.sh
 Actions=

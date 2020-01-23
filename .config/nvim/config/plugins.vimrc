@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/config/plugins.vimrc
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-20T17:31:14+0100
+" date:       2020-01-22T12:30:00+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -148,10 +148,10 @@ let notes.syntax='markdown'
 let notes.ext='.md'
 let notes.auto_export=1
 let notes.automatic_nested_syntaxes=1
-let notes.template_path='$HOME/projects/miscellaneous/pandoc/template/'
+let notes.template_path='$HOME/projects/vimwiki-pandoc/template/'
 let notes.template_default='github'
 let notes.template_ext='.html5'
-let notes.custom_wiki2html='$HOME/projects/miscellaneous/pandoc/wiki2html.sh'
+let notes.custom_wiki2html='$HOME/projects/vimwiki-pandoc/wiki2html.sh'
 let g:vimwiki_list=[notes]
 let g:vimwiki_global_ext=0
 let g:vimwiki_use_mouse=1
