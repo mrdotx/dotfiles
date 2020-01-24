@@ -1,7 +1,7 @@
 # path:       ~/.aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-20T12:48:12+0100
+# date:       2020-01-24T19:14:41+0100
 
 # tools
 alias more='less'
@@ -33,7 +33,7 @@ alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
 alias dm='delete_metafiles.sh'
-alias ms='maintenance_system.sh'
+alias sc='system_cleanup.sh'
 
 # ssh
 alias pi='ssh hermes'
