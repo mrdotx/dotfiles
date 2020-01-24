@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-23T20:58:43+0100
+# date:       2020-01-24T17:25:42+0100
 
 # projects paths
 PATH="$HOME/projects/shell:$PATH"
@@ -10,6 +10,7 @@ PATH="$HOME/projects/polybar:$PATH"
 PATH="$HOME/projects/rofi:$PATH"
 PATH="$HOME/projects/st:$PATH"
 PATH="$HOME/projects/surf:$PATH"
+PATH="$HOME/projects/system:$PATH"
 PATH="$HOME/projects/cmus:$PATH"
 PATH="$HOME/projects/stopwatch:$PATH"
 
