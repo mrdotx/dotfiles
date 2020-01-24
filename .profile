@@ -1,21 +1,22 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-24T20:09:28+0100
+# date:       2020-01-24T22:17:21+0100
 
 # projects paths
-PATH="$HOME/projects/shell:$PATH"
-PATH="$HOME/projects/python:$PATH"
-PATH="$HOME/projects/polybar:$PATH"
-PATH="$HOME/projects/rofi:$PATH"
-PATH="$HOME/projects/st:$PATH"
-PATH="$HOME/projects/surf:$PATH"
-PATH="$HOME/projects/i3:$PATH"
-PATH="$HOME/projects/system:$PATH"
-PATH="$HOME/projects/maintenance:$PATH"
-PATH="$HOME/projects/rclone:$PATH"
 PATH="$HOME/projects/cmus:$PATH"
+PATH="$HOME/projects/conky:$PATH"
+PATH="$HOME/projects/i3:$PATH"
+PATH="$HOME/projects/maintenance:$PATH"
+PATH="$HOME/projects/polybar:$PATH"
+PATH="$HOME/projects/python:$PATH"
+PATH="$HOME/projects/rclone:$PATH"
+PATH="$HOME/projects/rofi:$PATH"
+PATH="$HOME/projects/shell:$PATH"
+PATH="$HOME/projects/st:$PATH"
 PATH="$HOME/projects/stopwatch:$PATH"
+PATH="$HOME/projects/surf:$PATH"
+PATH="$HOME/projects/system:$PATH"
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME"/.config
