@@ -1,7 +1,7 @@
-# path:       ~/.aliases
+# path:       ~/.config/aliases
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-24T19:14:41+0100
+# date:       2020-01-25T14:34:56+0100
 
 # tools
 alias more='less'

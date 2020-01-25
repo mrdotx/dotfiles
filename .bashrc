@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-25T13:14:56+0100
+# date:       2020-01-25T14:36:01+0100
 
 # colors
 [[ $- != *i* ]] && return
@@ -49,7 +49,7 @@ shopt -s checkwinsize
 
 # alias
 shopt -s expand_aliases
-source "$HOME/.aliases"
+[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
 
 # completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
