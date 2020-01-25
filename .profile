@@ -1,9 +1,9 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-25T14:24:24+0100
+# date:       2020-01-25T14:55:08+0100
 
-# projects paths
+# project paths
 PATH="$HOME/projects/cmus:$PATH"
 PATH="$HOME/projects/conky:$PATH"
 PATH="$HOME/projects/i3:$PATH"
@@ -33,7 +33,7 @@ export PYLINTHOME="$XDG_DATA_HOME"/pylint.d
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
-# apps
+# standard apps
 export TERMINAL="st"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
