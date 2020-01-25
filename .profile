@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-24T22:17:21+0100
+# date:       2020-01-25T13:04:00+0100
 
 # projects paths
 PATH="$HOME/projects/cmus:$PATH"
@@ -34,7 +34,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # apps
 export TERMINAL="st"
-export VISUAL="vim"
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 export FILE="ranger"
