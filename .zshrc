@@ -1,7 +1,7 @@
 # path:       ~/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-23T09:24:07+0100
+# date:       2020-01-25T13:08:00+0100
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -95,7 +95,6 @@ plugins=(
     zsh-syntax-highlighting
     history-substring-search
     fzf
-    colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-13T12:29:39+0100
+# date:       2020-01-25T13:14:56+0100
 
 # colors
 [[ $- != *i* ]] && return
@@ -18,15 +18,6 @@ if ${use_color} ; then
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias tree='tree -C'
-
-    # man pages
-    export LESS_TERMCAP_mb=$'\e[1;32m'
-    export LESS_TERMCAP_md=$'\e[1;32m'
-    export LESS_TERMCAP_me=$'\e[0m'
-    export LESS_TERMCAP_se=$'\e[0m'
-    export LESS_TERMCAP_so=$'\e[01;33m'
-    export LESS_TERMCAP_ue=$'\e[0m'
-    export LESS_TERMCAP_us=$'\e[1;4;31m'
 
     # prompt
     if [[ ${EUID} == 0 ]] ; then

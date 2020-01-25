@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-25T13:04:00+0100
+# date:       2020-01-25T13:40:24+0100
 
 # projects paths
 PATH="$HOME/projects/cmus:$PATH"
@@ -50,6 +50,22 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
+
+# colored man pages
+blink_start="$(printf '%b' '[1;31m')"
+bold_start="$(printf '%b' '[1;36m')"
+turn_off="$(printf '%b' '[0m')"
+standout_start="$(printf '%b' '[01;44;33m')"
+standout_stop="$(printf '%b' '[0m')"
+underline_start="$(printf '%b' '[1;32m')"
+underline_stop="$(printf '%b' '[0m')"
+export LESS_TERMCAP_mb=$blink_start
+export LESS_TERMCAP_md=$bold_start
+export LESS_TERMCAP_me=$turn_off
+export LESS_TERMCAP_so=$standout_start
+export LESS_TERMCAP_se=$standout_stop
+export LESS_TERMCAP_us=$underline_start
+export LESS_TERMCAP_ue=$underline_stop
 
 # enable gnome keyring for terminal applications
 if [ -n "$DESKTOP_SESSION" ];then
