@@ -1,12 +1,12 @@
 # path:       ~/.bashrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-26T17:48:37+0100
+# date:       2020-01-26T18:22:35+0100
 
 # colors
 [[ $- != *i* ]] && return
 
-use_color=false
+use_color=true
 
 if ${use_color} ; then
 
