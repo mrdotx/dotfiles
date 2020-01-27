@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-26T12:55:55+0100
+# date:       2020-01-27T12:29:53+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -150,10 +150,10 @@ bindsym $sup+Ctrl+Right workspace next
 
 # keybindings windows/container
 # split orientation
-#bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container horizontally'
-#bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'tile container vertically'
+#bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send 'i3' 'tile container horizontally'
+#bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send 'i3' 'tile container vertically'
 bindsym $sup+Ctrl+Up exec --no-startup-id i3_tiling.sh
-bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'toggle tile container direction'
+bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id notify-send 'i3' 'toggle tile container direction'
 
 # change focus
 bindsym $sup+Left focus left
@@ -217,11 +217,11 @@ bindsym $sup+Shift+r restart
 bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # dunst restart
-bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'restart dunst'"
+bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
 
 # picom start/stop
-bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom stopped'"
-bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send -i '~/projects/shell/icons/i3.png' 'i3' 'picom started'"
+bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send 'i3' 'picom stopped'"
+bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send 'i3' 'picom started'"
 
 # conky start/stop (61=/?)
 bindcode $sup+61 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
