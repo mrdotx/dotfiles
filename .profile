@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-26T18:27:34+0100
+# date:       2020-01-27T17:58:54+0100
 
 # project paths
 PATH="$HOME/projects/cmus:$PATH"
@@ -41,7 +41,7 @@ export SUDO_EDITOR="$VISUAL"
 export FILE="ranger"
 export READER="zathura"
 export BROWSER="surf.sh"
-export TERMINALBROWSER="w3m"
+export TERMINALBROWSER="links"
 
 # app settings
 export RANGER_LOAD_DEFAULT_RC=false
