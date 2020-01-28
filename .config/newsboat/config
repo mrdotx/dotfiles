@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-23T19:55:33+0100
+# date:       2020-01-27T23:58:37+0100
 
 # general
 auto-reload yes
@@ -25,7 +25,7 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro f set browser "firefox %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
+macro b set browser "brave %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 macro m set browser "mpv %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 

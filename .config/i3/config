@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-27T12:29:53+0100
+# date:       2020-01-28T00:03:04+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -92,7 +92,7 @@ workspace $ws10 output $hdmi $main
 # open applications on specific workspaces (xprop)
 assign [title="newsboat"] $ws2
 assign [class="VirtualBox"] $ws3
-assign [class="firefox"] $ws4
+assign [class="Brave-browser"] $ws4
 assign [title="GIMP Startup"] $ws5
 assign [class="Gimp"] $ws5
 assign [class="Thunderbird"] $ws6
@@ -260,7 +260,7 @@ bindsym $sup+r exec --no-startup-id i3_tiling.sh $TERMINAL -e ranger
 bindsym $sup+s exec scribus
 bindsym $sup+u exec --no-startup-id rofi_mount.sh
 bindsym $sup+v exec VirtualBox
-bindsym $sup+w exec firefox
+bindsym $sup+w exec brave
 bindsym $sup+Shift+w exec --no-startup-id surf.sh
 bindsym $sup+x exec --no-startup-id $TERMINAL -T "stopwatch floating" -e stopwatch.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
