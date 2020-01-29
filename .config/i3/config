@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-28T00:03:04+0100
+# date:       2020-01-29T09:58:39+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -16,7 +16,7 @@ font xft:Source Code Pro 11
 default_border pixel 2
 default_floating_border normal
 workspace_auto_back_and_forth yes
-for_window [urgent=latest] focus
+#for_window [urgent=latest] focus
 gaps inner 8
 gaps outer -2
 smart_gaps on
