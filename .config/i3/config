@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-29T09:58:39+0100
+# date:       2020-01-30T00:04:40+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -237,7 +237,7 @@ bindsym XF86Cut exec --no-startup-id xsel.sh
 bindsym $sup+p exec --no-startup-id rofi_display.sh
 bindsym Print exec --no-startup-id scrot.sh -desk
 bindsym $sup+Print exec --no-startup-id scrot.sh -window
-bindsym $sup+Shift+Print exec --no-startup-id $(sleep 0.5 && scrot.sh -select)
+bindsym $sup+Shift+Print exec --no-startup-id $(sleep 1 && scrot.sh -select)
 
 # keybindings applications
 bindsym $sup+Return exec --no-startup-id i3_tiling.sh $TERMINAL
