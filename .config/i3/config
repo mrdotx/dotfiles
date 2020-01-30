@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-30T00:04:40+0100
+# date:       2020-01-30T12:59:41+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -204,7 +204,7 @@ bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
-bindsym $sup+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -lock blur)
+bindsym $sup+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -lock simple)
 bindsym $sup+Shift+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -suspend)
 
 # x window kill
