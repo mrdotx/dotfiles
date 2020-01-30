@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-25T14:36:45+0100
+# date:       2020-01-31T00:07:17+0100
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -70,12 +70,6 @@ HIST_STAMPS="dd.mm.yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # oh-my-zsh plugins
-# zsh-autosuggestion
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#980096,bg=black,bold,underline"
-
-# zsh-syntax-highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-
 # Set fzf installation directory path
 export FZF_BASE=/usr/bin/fzf
 
@@ -85,16 +79,22 @@ export FZF_BASE=/usr/bin/fzf
 # Uncomment the following line to disable key bindings (CTRL-T, CTRL-R, ALT-C)
 # export DISABLE_FZF_KEY_BINDINGS="true"
 
+# zsh-autosuggestion
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#980096,bg=black,bold,underline"
+
+# zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    fzf
+    history-substring-search
     zsh-autosuggestions
     zsh-syntax-highlighting
-    history-substring-search
-    fzf
 )
 
 source $ZSH/oh-my-zsh.sh

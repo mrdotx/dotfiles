@@ -1,22 +1,22 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-27T17:58:54+0100
+# date:       2020-01-31T00:23:38+0100
 
 # project paths
-PATH="$HOME/projects/cmus:$PATH"
-PATH="$HOME/projects/conky:$PATH"
-PATH="$HOME/projects/i3:$PATH"
-PATH="$HOME/projects/maintenance:$PATH"
-PATH="$HOME/projects/polybar:$PATH"
-PATH="$HOME/projects/python:$PATH"
-PATH="$HOME/projects/rclone:$PATH"
-PATH="$HOME/projects/rofi:$PATH"
-PATH="$HOME/projects/shell:$PATH"
-PATH="$HOME/projects/st:$PATH"
-PATH="$HOME/projects/stopwatch:$PATH"
-PATH="$HOME/projects/surf:$PATH"
-PATH="$HOME/projects/system:$PATH"
+[ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
+[ -d "$HOME/projects/conky" ] && PATH="$HOME/projects/conky:$PATH"
+[ -d "$HOME/projects/i3" ] && PATH="$HOME/projects/i3:$PATH"
+[ -d "$HOME/projects/maintenance" ] && PATH="$HOME/projects/maintenance:$PATH"
+[ -d "$HOME/projects/polybar" ] && PATH="$HOME/projects/polybar:$PATH"
+[ -d "$HOME/projects/python" ] && PATH="$HOME/projects/python:$PATH"
+[ -d "$HOME/projects/rclone" ] && PATH="$HOME/projects/rclone:$PATH"
+[ -d "$HOME/projects/rofi" ] && PATH="$HOME/projects/rofi:$PATH"
+[ -d "$HOME/projects/shell" ] && PATH="$HOME/projects/shell:$PATH"
+[ -d "$HOME/projects/st" ] && PATH="$HOME/projects/st:$PATH"
+[ -d "$HOME/projects/stopwatch" ] && PATH="$HOME/projects/stopwatch:$PATH"
+[ -d "$HOME/projects/surf" ] && PATH="$HOME/projects/surf:$PATH"
+[ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME"/.config
