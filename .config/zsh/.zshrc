@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-31T14:35:52+0100
+# date:       2020-01-31T18:29:00+0100
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -91,6 +91,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    autoupdate
     fzf
     zsh-autosuggestions
     zsh-syntax-highlighting
