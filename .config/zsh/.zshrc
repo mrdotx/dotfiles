@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-31T00:07:17+0100
+# date:       2020-01-31T14:35:52+0100
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.
@@ -92,9 +92,9 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     fzf
-    history-substring-search
     zsh-autosuggestions
     zsh-syntax-highlighting
+    history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
