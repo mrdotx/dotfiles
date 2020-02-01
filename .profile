@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-31T22:42:18+0100
+# date:       2020-01-31T23:46:42+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -57,7 +57,7 @@ export WWW_HOME=duckduckgo.com
 blink_start="$(printf '%b' '[1;31m')"
 bold_start="$(printf '%b' '[1;34m')"
 turn_off="$(printf '%b' '[0m')"
-standout_start="$(printf '%b' '[1;32m')"
+standout_start="$(printf '%b' '[01;44;37m')"
 standout_stop="$(printf '%b' '[0m')"
 underline_start="$(printf '%b' '[1;36m')"
 underline_stop="$(printf '%b' '[0m')"
