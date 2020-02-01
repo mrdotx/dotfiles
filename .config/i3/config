@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-30T12:59:41+0100
+# date:       2020-02-01T09:17:03+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -247,7 +247,7 @@ bindsym $sup+b exec --no-startup-id i3_tiling.sh $TERMINAL -e bmenu
 bindsym $sup+c exec --no-startup-id $TERMINAL -e cmus.sh
 bindsym $sup+Shift+c exec --no-startup-id cmus_notify.sh --notify-send
 bindsym $sup+d exec darktable
-bindsym $sup+e exec --no-startup-id rofi_vim.sh
+bindsym $sup+e exec --no-startup-id i3_tiling.sh rofi_vim.sh
 bindsym $sup+g exec gimp
 bindsym $sup+h exec --no-startup-id i3_tiling.sh $TERMINAL -e htop
 bindsym $sup+i exec inkscape
