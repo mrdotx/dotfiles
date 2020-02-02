@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-27T23:58:37+0100
+# date:       2020-02-02T12:44:54+0100
 
 # general
 auto-reload yes
@@ -28,16 +28,6 @@ macro , open-in-browser
 macro b set browser "brave %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
 macro m set browser "mpv %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
-
-# color table
-#black      color0 = #000000    color8  = #333333
-#red        color1 = #fe0000    color9  = #ff5555
-#green      color2 = #4185d7    color10 = #3476a4
-#yellow     color3 = #b0b200    color11 = #ffff55
-#blue       color4 = #1f5393    color12 = #4084d6
-#magenta    color5 = #980096    color13 = #ff55ff
-#cyan       color6 = #009698    color14 = #55ffff
-#white      color7 = #cccccc    color15 = #ffffff
 
 # colors
 color background                    white   black
