@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " user:       klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-01-25T08:59:15+0100
+" date:       2020-02-02T22:00:42+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -138,6 +138,25 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" coc config
+call coc#config('languageserver', {
+    \ 'ccls': {
+    \   "command": "ccls",
+    \   "filetypes": ["c", "cpp", "objc", "objcpp"],
+    \   "rootPatterns": [".ccls-root", "compile_commands.json"],
+    \   "initializationOptions": {
+    \     "cache": {
+    \       "directory": "/home/klassiker/.cache/ccls"
+    \     }
+    \   }
+    \ },
+    \ "bash": {
+    \   "command": "bash-language-server",
+    \   "args": ["start"],
+    \   "filetypes": ["sh"],
+    \   "ignoredRootPaths": ["~"]
+    \ }
+    \})
 
 " vimwiki
 let notes={}

@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # user:       klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-31T23:46:42+0100
+# date:       2020-02-02T22:02:27+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -29,7 +29,7 @@ export XDG_CONFIG_DIRS=/etc/xdg
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
-export PYLINTHOME="$XDG_DATA_HOME"/pylint.d
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
