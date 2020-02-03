@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-path:       ~/projects/shell/<++>.py
-user:       klassiker [mrdotx]
+path:       ~/projects/python/<++>.py
+author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/python
-date:       2020-01-13T12:37:16+0100
+date:       2020-02-03T13:57:47+0100
 """
 
 <++>

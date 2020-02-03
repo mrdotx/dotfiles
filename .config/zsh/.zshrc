@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
-# user:       klassiker [mrdotx]
+# author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-31T18:29:00+0100
+# date:       2020-02-03T14:01:48+0100
 
 # oh-my-zsh
 # If you come from bash you might have to change your $PATH.

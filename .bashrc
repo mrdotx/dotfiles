@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
-# user:       klassiker [mrdotx]
+# author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-01-26T18:22:35+0100
+# date:       2020-02-03T14:22:10+0100
 
 # colors
 [[ $- != *i* ]] && return

@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
-" user:       klassiker [mrdotx]
+" author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-02T22:00:42+0100
+" date:       2020-02-03T14:12:06+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -321,6 +321,8 @@ if has("autocmd")
         autocmd BufNewFile *.sh inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
         autocmd BufNewFile *.py 0r $HOME/.config/nvim/templates/skeleton.py
         autocmd BufNewFile *.py inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+        autocmd BufNewFile *.c 0r $HOME/.config/nvim/templates/skeleton.c
+        autocmd BufNewFile *.c inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
     augroup END
 endif
 

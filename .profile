@@ -1,7 +1,7 @@
 # path:       ~/.profile
-# user:       klassiker [mrdotx]
+# author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-02T22:02:27+0100
+# date:       2020-02-03T14:22:29+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
