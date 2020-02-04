@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; author:     klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-02-03T14:10:12+0100
+; date:       2020-02-03T22:06:58+0100
 
 ; wm
 [global/wm]
@@ -63,7 +63,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
-modules-right = cmus pulseaudio backlight wlansmall rss battery keyboard date powermenu
+modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -143,7 +143,7 @@ font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
-modules-right = wlan rss pulseaudio backlight battery keyboard date powermenu
+modules-right = wlan rss alsa backlight battery keyboard date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -451,6 +451,37 @@ initial = 2
 click-left = cmus-remote -r &
 click-middle = cmus-remote -u &
 click-right = cmus-remote -n &
+
+; alsa
+[module/alsa]
+type = internal/alsa
+
+master-soundcard = default
+headphone-soundcard = default
+master-mixer = Master
+headphone-mixer = Headphone
+headphone-id = 13
+mapped = false
+interval = 5.0
+
+format-volume = <label-volume> <bar-volume>
+format-volume-overline = ${colors.blue}
+
+label-volume = ""
+label-volume-foreground = ${colors.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground}
+format-muted-overline = ${colors.red}
+label-muted = "ıııııııııııııııııııı"
+label-muted-foreground = ${colors.red}
+label-muted-overline = ${colors.red}
+
+bar-volume-width = 20
+bar-volume-fill = ı
+bar-volume-fill-foreground = ${colors.blue}
+bar-volume-indicator = |
+bar-volume-empty = ı
 
 ; pulseaudio
 [module/pulseaudio]
