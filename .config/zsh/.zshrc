@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T14:16:02+0100
+# date:       2020-02-06T18:21:12+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
@@ -20,11 +20,6 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto verbose name"
 #GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
-
-# history file configuration
-#HISTFILE="$HOME/.zsh_history"
-#HISTSIZE=5000
-#SAVEHIST=5000
 
 # history command configuration
 #setopt extended_history       # record timestamp of command in HISTFILE
@@ -61,7 +56,7 @@ source /usr/share/git/completion/git-prompt.sh
 # zsh-autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#980096,bg=black,bold,underline"
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # history-substring-search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -70,6 +65,7 @@ bindkey '^[[B' history-substring-search-down
 
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # autostart
 if [[ ! "$TERM" =~ ^(st-256color|tmux-256color|linux)$ ]]; then

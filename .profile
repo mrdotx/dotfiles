@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T14:27:18+0100
+# date:       2020-02-06T18:26:28+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -19,25 +19,25 @@
 [ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
 
 # zsh and bash history merge
-export HISTFILE="$HOME"/.config/cmd_history
+export HISTFILE="$HOME/.config/cmd_history"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export SAVEHIST=5000
 
 # xdg paths
-export XDG_CONFIG_HOME="$HOME"/.config
-export XDG_CACHE_HOME="$HOME"/.cache
-export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
 # xdg config paths
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
-export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
-export PYLINTHOME="$XDG_CACHE_HOME"/pylint
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
-export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
+export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
+export PYLINTHOME="$XDG_CACHE_HOME/pylint"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # standard apps
 export TERMINAL="st"

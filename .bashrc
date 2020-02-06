@@ -1,10 +1,11 @@
 # path:       ~/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T14:18:10+0100
+# date:       2020-02-06T18:22:30+0100
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
+# shellcheck disable=SC1090
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
 
 # if shell is not running interactive, break up
