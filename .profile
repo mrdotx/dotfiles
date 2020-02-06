@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T18:26:28+0100
+# date:       2020-02-07T00:17:49+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -58,6 +58,7 @@ export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
 export WWW_HOME=duckduckgo.com
+export LIBVA_DRIVER_NAME=iHD
 
 # colored man pages
 blink_start="$(printf '%b' '[1;31m')"
