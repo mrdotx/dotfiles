@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T11:17:10+0100
+# date:       2020-02-06T14:18:10+0100
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
@@ -27,6 +27,9 @@ else
     fi
 fi
 unset use_color
+
+# history command configuration
+shopt -s histappend
 
 # xhost
 xhost +local:root > /dev/null 2>&1
