@@ -1,7 +1,7 @@
 ! path:       ~/.Xresources.conf
 ! author:     klassiker [mrdotx]
 ! gitgub:     https://github.com/mrdotx/dotfiles
-! date:       2020-02-03T14:22:46+0100
+! date:       2020-02-07T09:05:10+0100
 
 ! general
 *background:                        #000000
@@ -72,8 +72,8 @@ Polybar.foreground:                 #dfdfdf
 Polybar.foreground1:                #666666
 
 ! sxiv
-Sxiv*background:                    #ffffff
-Sxiv*foreground:                    #000000
+Sxiv*background:                    #000000
+Sxiv*foreground:                    #ffffff
 
 ! xterm
 XTerm*background:                   #000000
