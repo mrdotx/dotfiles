@@ -1,0 +1,24 @@
+// path:       ~/.config/nvim/coc-settings.json
+// author:     klassiker [mrdotx]
+// github:     https://github.com/mrdotx/dotfiles
+// date:       2020-02-07T21:16:48+0100
+
+{
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/home/klassiker/.cache/ccls"
+                }
+            }
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"]
+        }
+    }
+}
