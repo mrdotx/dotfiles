@@ -3,7 +3,7 @@
 # path:       ~/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:02:30+0100
+# date:       2020-02-07T10:07:45+0100
 
 # rotate function
 rotate() {
@@ -36,7 +36,7 @@ flip() {
 trash() {
     tr '\n' '\0' | xargs -0 realpath | sort -u | while read -r file; do
         case "$(file -b -i "$file")" in
-        *) gio trash "$file" && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning ;;
+        *) trash-put "$file" && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning ;;
         esac
     done
 }
