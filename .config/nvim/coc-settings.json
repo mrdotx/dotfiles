@@ -1,7 +1,7 @@
 // path:       ~/.config/nvim/coc-settings.json
 // author:     klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2020-02-07T21:16:48+0100
+// date:       2020-02-07T21:31:18+0100
 
 {
     "languageserver": {
@@ -18,7 +18,8 @@
         "bash": {
             "command": "bash-language-server",
             "args": ["start"],
-            "filetypes": ["sh"]
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
         }
     }
 }
