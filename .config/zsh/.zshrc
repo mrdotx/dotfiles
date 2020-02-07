@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T18:21:12+0100
+# date:       2020-02-07T01:09:31+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
@@ -32,6 +32,7 @@ setopt share_history          # share command history data
 # completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # case insensitive
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # hidden files
