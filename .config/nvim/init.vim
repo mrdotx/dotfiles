@@ -1,7 +1,10 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-07T21:00:56+0100
+" date:       2020-02-08T20:05:58+0100
+
+" leader is comma
+let mapleader=","
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -324,8 +327,6 @@ endfun
 autocmd BufWritePre * call ModifiedDate()
 
 " shortcuts
-" leader is comma
-let mapleader=","
 " file explore in split window
 map         <leader><leader>    :Lexplore<CR>
 " autocomplete goto
