@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-07T20:47:14+0100
+# date:       2020-02-08T20:52:40+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -19,7 +19,7 @@
 [ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
 
 # zsh and bash history merge
-export HISTFILE="$HOME/.config/cmd_history"
+export HISTFILE="$HOME/.cmd_history"
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export SAVEHIST=5000
