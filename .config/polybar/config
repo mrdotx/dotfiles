@@ -1,439 +1,439 @@
-; path:       ~/.config/polybar/config_extended
-; author:     klassiker [mrdotx]
-; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-02-09T21:03:22+0100
+# path:       ~/.config/polybar/config
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-02-09T23:03:42+0100
 
-; wm
+# wm
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+    margin-top = 0
+    margin-bottom = 0
 
-; settings
+# settings
 [settings]
-screenchange-reload = false
+    screenchange-reload = false
 
-; colors
+# colors
 [colors]
-background = ${xrdb:Polybar.background:#00000000}
-foreground = ${xrdb:Polybar.foreground:#dfdfdf}
-foreground1 = ${xrdb:Polybar.foreground1:#666666}
-white = ${xrdb:color15:#ffffff}
-black = ${xrdb:color0:#000000}
-grey = ${xrdb:color7:#cccccc}
-blue = ${xrdb:color12:#4084d6}
-green = ${xrdb:color2:#00b200}
-red = ${xrdb:color9:#ff5555}
-yellow = ${xrdb:color3:#b0b200}
+    background = ${xrdb:Polybar.background:#00000000}
+    foreground = ${xrdb:Polybar.foreground:#dfdfdf}
+    foreground1 = ${xrdb:Polybar.foreground1:#666666}
+    white = ${xrdb:color15:#ffffff}
+    black = ${xrdb:color0:#000000}
+    grey = ${xrdb:color7:#cccccc}
+    blue = ${xrdb:color12:#4084d6}
+    green = ${xrdb:color2:#00b200}
+    red = ${xrdb:color9:#ff5555}
+    yellow = ${xrdb:color3:#b0b200}
 
-; i3
+# i3
 [bar/i3_gen]
-monitor = ${env:MONITOR:eDP1}
-width = 100%
-height = 26
-radius = 0.0
-locale = de_DE.UTF-8
-enable-ipc = true
-background = ${colors.background}
-foreground = ${colors.foreground}
-line-size = 2
-line-color = ${colors.blue}
-border-size = 0
-border-color = ${xrdb:Polybar.background:#00000000}
-padding-left = 0
-padding-right = 2
-module-margin-left = 1
-module-margin-right = 1
-font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
-cursor-click = pointer
-cursor-scroll = ns-resize
+    monitor = ${env:MONITOR:eDP1}
+    width = 100%
+    height = 26
+    radius = 0.0
+    locale = de_DE.UTF-8
+    enable-ipc = true
+    background = ${colors.background}
+    foreground = ${colors.foreground}
+    line-size = 2
+    line-color = ${colors.blue}
+    border-size = 0
+    border-color = ${xrdb:Polybar.background:#00000000}
+    padding-left = 0
+    padding-right = 2
+    module-margin-left = 1
+    module-margin-right = 1
+    font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
+    font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+    font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+    font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+    cursor-click = pointer
+    cursor-scroll = ns-resize
 
 [bar/i3_pri]
-inherit = bar/i3_gen
-bottom = false
-tray-position = right
-tray-reparent = true
-tray-scale = 0.90
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
-modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermenu
+    inherit = bar/i3_gen
+    bottom = false
+    tray-position = right
+    tray-reparent = true
+    tray-scale = 0.90
+    modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+    modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermenu
 
 [bar/i3_pri_btm]
-inherit = bar/i3_gen
-bottom = true
-modules-left = cmus
-modules-right = temp cpu ram ssd
+    inherit = bar/i3_gen
+    bottom = true
+    modules-left = cmus
+    modules-right = temp cpu ram ssd
 
 [bar/i3_sec]
-inherit = bar/i3_gen
-bottom = false
-tray-position = right
-tray-reparent = true
-tray-scale = 0.90
-modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades window
-modules-right = wlan rss alsa backlight battery keyboard date powermenu
+    inherit = bar/i3_gen
+    bottom = false
+    tray-position = right
+    tray-reparent = true
+    tray-scale = 0.90
+    modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades window
+    modules-right = wlan rss alsa backlight battery keyboard date powermenu
 
 [bar/i3_sec_top]
-inherit = bar/i3_gen
-bottom = false
-modules-left = i3_pin cmus
-modules-right = temp cpu ram ssd
+    inherit = bar/i3_gen
+    bottom = false
+    modules-left = i3_pin cmus
+    modules-right = temp cpu ram ssd
 
-; i3
+# i3
 [module/i3_generell]
-type = internal/i3
-index-sort = true
-enable-click = true
-enable-scroll = true
-wrapping-scroll = false
-reverse-scroll = true
-fuzzy-match = false
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = 
-format = <label-state>
-label-focused = %icon% %index%
-label-focused-foreground = ${colors.white}
-label-focused-background = ${colors.blue}
-label-focused-overline = ${colors.white}
-label-focused-padding = 1
-label-unfocused = %icon% %index%
-label-unfocused-foreground = ${colors.grey}
-label-unfocused-background = ${colors.black}
-label-unfocused-overline = ${colors.foreground1}
-label-unfocused-padding = 1
-label-visible = %icon% %index%
-label-visible-foreground = ${colors.white}
-label-visible-background = ${colors.foreground1}
-label-visible-overline = ${colors.white}
-label-visible-padding = 1
-label-urgent = %icon% %index%
-label-urgent-foreground = ${colors.black}
-label-urgent-background = ${colors.red}
-label-urgent-overline = ${colors.red}
-label-urgent-padding = 1
+    type = internal/i3
+    index-sort = true
+    enable-click = true
+    enable-scroll = true
+    wrapping-scroll = false
+    reverse-scroll = true
+    fuzzy-match = false
+    ws-icon-0 = 1;
+    ws-icon-1 = 2;
+    ws-icon-2 = 3;
+    ws-icon-3 = 4;
+    ws-icon-4 = 5;
+    ws-icon-5 = 6;
+    ws-icon-6 = 7;
+    ws-icon-7 = 8;
+    ws-icon-8 = 9;
+    ws-icon-9 = 10;
+    ws-icon-default = 
+    format = <label-state>
+    label-focused = %icon% %index%
+    label-focused-foreground = ${colors.white}
+    label-focused-background = ${colors.blue}
+    label-focused-overline = ${colors.white}
+    label-focused-padding = 1
+    label-unfocused = %icon% %index%
+    label-unfocused-foreground = ${colors.grey}
+    label-unfocused-background = ${colors.black}
+    label-unfocused-overline = ${colors.foreground1}
+    label-unfocused-padding = 1
+    label-visible = %icon% %index%
+    label-visible-foreground = ${colors.white}
+    label-visible-background = ${colors.foreground1}
+    label-visible-overline = ${colors.white}
+    label-visible-padding = 1
+    label-urgent = %icon% %index%
+    label-urgent-foreground = ${colors.black}
+    label-urgent-background = ${colors.red}
+    label-urgent-overline = ${colors.red}
+    label-urgent-padding = 1
 
 [module/i3]
-inherit = module/i3_generell
-pin-workspaces = false
+    inherit = module/i3_generell
+    pin-workspaces = false
 
 [module/i3_pin]
-inherit = module/i3_generell
-pin-workspaces = true
+    inherit = module/i3_generell
+    pin-workspaces = true
 
-; wlan
+# wlan
 [module/wlan_generell]
-type = internal/network
-interface = wlp2s0
-format-connected-prefix = " "
-format-connected = <label-connected>
-format-connected-overline = ${colors.blue}
-label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
-label-connected-foreground = ${colors.foreground}
-format-disconnected-prefix = " "
-format-disconnected = <label-disconnected>
-format-disconnected-overline = ${colors.red}
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground}
+    type = internal/network
+    interface = wlp2s0
+    format-connected-prefix = " "
+    format-connected = <label-connected>
+    format-connected-overline = ${colors.blue}
+    label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
+    label-connected-foreground = ${colors.foreground}
+    format-disconnected-prefix = " "
+    format-disconnected = <label-disconnected>
+    format-disconnected-overline = ${colors.red}
+    label-disconnected = %ifname% disconnected
+    label-disconnected-foreground = ${colors.foreground}
 
 [module/wlan]
-inherit = module/wlan_generell
-interval = 3.0
-label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
+    inherit = module/wlan_generell
+    interval = 3.0
+    label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
 
 [module/wlansmall]
-inherit = module/wlan_generell
-interval = 30.0
-label-connected = %signal%% %essid%
+    inherit = module/wlan_generell
+    interval = 30.0
+    label-connected = %signal%% %essid%
 
-; audio
+# audio
 [module/audio]
-interval = 5.0
-format-volume = <ramp-volume> <bar-volume>
-format-volume-overline = ${colors.blue}
-ramp-volume-0 = ""
-ramp-volume-foreground = ${colors.foreground}
-ramp-headphones-0 = ""
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground}
-format-muted-overline = ${colors.red}
-label-muted = "ıııııııııııııııııııı"
-label-muted-foreground = ${colors.red}
-label-muted-overline = ${colors.red}
-bar-volume-width = 20
-bar-volume-fill = ı
-bar-volume-fill-foreground = ${colors.blue}
-bar-volume-indicator = |
-bar-volume-empty = ı
+    interval = 5.0
+    format-volume = <ramp-volume> <bar-volume>
+    format-volume-overline = ${colors.blue}
+    ramp-volume-0 = ""
+    ramp-volume-foreground = ${colors.foreground}
+    ramp-headphones-0 = ""
+    format-muted-prefix = " "
+    format-muted-foreground = ${colors.foreground}
+    format-muted-overline = ${colors.red}
+    label-muted = "ıııııııııııııııııııı"
+    label-muted-foreground = ${colors.red}
+    label-muted-overline = ${colors.red}
+    bar-volume-width = 20
+    bar-volume-fill = ı
+    bar-volume-fill-foreground = ${colors.blue}
+    bar-volume-indicator = |
+    bar-volume-empty = ı
 
 [module/alsa]
-type = internal/alsa
-inherit = module/audio
-headphone-mixer = Headphone
-headphone-id = 13
-mapped = false
+    type = internal/alsa
+    inherit = module/audio
+    headphone-mixer = Headphone
+    headphone-id = 13
+    mapped = false
 
 [module/pulseaudio]
-type = internal/pulseaudio
-inherit = module/audio
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
-use-ui-max = false
+    type = internal/pulseaudio
+    inherit = module/audio
+    sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+    use-ui-max = false
 
-; custom
+# custom
 [module/custom]
-type = custom/ipc
-format = <output>
-format-foreground = ${colors.foreground}
+    type = custom/ipc
+    format = <output>
+    format-foreground = ${colors.foreground}
 
 [module/polkit]
-inherit = module/custom
-hook-0 = polybar_polkit.sh --status
-hook-1 = polybar_polkit.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook polkit 2
-click-right = polybar-msg -p %pid% hook polkit 1
+    inherit = module/custom
+    hook-0 = polybar_polkit.sh --status
+    hook-1 = polybar_polkit.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook polkit 2
+    click-right = polybar-msg -p %pid% hook polkit 1
 
 [module/printer]
-inherit = module/custom
-hook-0 = polybar_printer.sh --status
-hook-1 = polybar_printer.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook printer 2
-click-right = polybar-msg -p %pid% hook printer 1
+    inherit = module/custom
+    hook-0 = polybar_printer.sh --status
+    hook-1 = polybar_printer.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook printer 2
+    click-right = polybar-msg -p %pid% hook printer 1
 
 [module/bluetooth]
-inherit = module/custom
-hook-0 = polybar_bluetooth.sh --status
-hook-1 = polybar_bluetooth.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook bluetooth 2
-click-right = polybar-msg -p %pid% hook bluetooth 1
+    inherit = module/custom
+    hook-0 = polybar_bluetooth.sh --status
+    hook-1 = polybar_bluetooth.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook bluetooth 2
+    click-right = polybar-msg -p %pid% hook bluetooth 1
 
 [module/gestures]
-inherit = module/custom
-hook-0 = polybar_gestures.sh --status
-hook-1 = polybar_gestures.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook gestures 2
-click-right = polybar-msg -p %pid% hook gestures 1
+    inherit = module/custom
+    hook-0 = polybar_gestures.sh --status
+    hook-1 = polybar_gestures.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook gestures 2
+    click-right = polybar-msg -p %pid% hook gestures 1
 
 [module/firewall]
-inherit = module/custom
-hook-0 = polybar_firewall.sh --status
-hook-1 = polybar_firewall.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook firewall 2
-click-right = polybar-msg -p %pid% hook firewall 1
+    inherit = module/custom
+    hook-0 = polybar_firewall.sh --status
+    hook-1 = polybar_firewall.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook firewall 2
+    click-right = polybar-msg -p %pid% hook firewall 1
 
 [module/vpnhades]
-inherit = module/custom
-hook-0 = polybar_vpn_hades.sh --status
-hook-1 = polybar_vpn_hades.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook vpnhades 2
-click-right = polybar-msg -p %pid% hook vpnhades 1
+    inherit = module/custom
+    hook-0 = polybar_vpn_hades.sh --status
+    hook-1 = polybar_vpn_hades.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook vpnhades 2
+    click-right = polybar-msg -p %pid% hook vpnhades 1
 
 [module/rss]
-inherit = module/custom
-format-overline = ${colors.blue}
-hook-0 = echo "%{o#666666}%{o-}"
-hook-1 = echo "%{o#ff5555}%{o-}"
-hook-2 = newsboat -x print-unread | awk '{print "",$1}'
-hook-3 = polybar_rss.sh
-initial = 1
-click-left = polybar-msg -p %pid% hook rss 4
-click-right = polybar-msg -p %pid% hook rss 3
+    inherit = module/custom
+    format-overline = ${colors.blue}
+    hook-0 = echo "%{o#666666}%{o-}"
+    hook-1 = echo "%{o#ff5555}%{o-}"
+    hook-2 = newsboat -x print-unread | awk '{print "",$1}'
+    hook-3 = polybar_rss.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook rss 4
+    click-right = polybar-msg -p %pid% hook rss 3
 
 [module/cmus]
-inherit = module/custom
-format-overline = ${colors.blue}
-hook-0 = echo ""
-hook-1 = cmus_notify.sh --polybar
-initial = 2
-click-left = cmus-remote -r &
-click-middle = cmus-remote -u &
-click-right = cmus-remote -n &
+    inherit = module/custom
+    format-overline = ${colors.blue}
+    hook-0 = echo ""
+    hook-1 = cmus_notify.sh --polybar
+    initial = 2
+    click-left = cmus-remote -r &
+    click-middle = cmus-remote -u &
+    click-right = cmus-remote -n &
 
-; powermenu
+# powermenu
 [module/powermenu]
-type = custom/menu
-expand-right = false
-format-spacing = 1
-label-open = 
-label-open-foreground = ${colors.foreground}
-label-close = 
-label-close-foreground = ${colors.foreground}
-label-close-overline = ${colors.red}
-label-separator = |
-label-separator-foreground = ${colors.foreground}
-menu-0-0 =  shutdown
-menu-0-0-exec = menu-open-1
-menu-0-0-foreground = ${colors.foreground}
-menu-0-1 =  reboot
-menu-0-1-exec = menu-open-2
-menu-0-1-foreground = ${colors.foreground}
-menu-0-2 =  knockout
-menu-0-2-exec = rofi_exit.sh
-menu-0-2-foreground = ${colors.foreground}
-menu-1-0 = 
-menu-1-0-exec = i3_knockout.sh -shutdown
-menu-1-0-foreground = ${colors.foreground}
-menu-1-0-overline = ${colors.green}
-menu-1-1 =  shutdown? 
-menu-1-1-exec = menu-open-0
-menu-1-1-foreground = ${colors.foreground}
-menu-2-0 = 
-menu-2-0-exec = i3_knockout.sh -reboot
-menu-2-0-foreground = ${colors.foreground}
-menu-2-0-overline = ${colors.green}
-menu-2-1 =  reboot? 
-menu-2-1-exec = menu-open-0
-menu-2-1-foreground = ${colors.foreground}
+    type = custom/menu
+    expand-right = false
+    format-spacing = 1
+    label-open = 
+    label-open-foreground = ${colors.foreground}
+    label-close = 
+    label-close-foreground = ${colors.foreground}
+    label-close-overline = ${colors.red}
+    label-separator = |
+    label-separator-foreground = ${colors.foreground}
+    menu-0-0 =  shutdown
+    menu-0-0-exec = menu-open-1
+    menu-0-0-foreground = ${colors.foreground}
+    menu-0-1 =  reboot
+    menu-0-1-exec = menu-open-2
+    menu-0-1-foreground = ${colors.foreground}
+    menu-0-2 =  knockout
+    menu-0-2-exec = rofi_exit.sh
+    menu-0-2-foreground = ${colors.foreground}
+    menu-1-0 = 
+    menu-1-0-exec = i3_knockout.sh -shutdown
+    menu-1-0-foreground = ${colors.foreground}
+    menu-1-0-overline = ${colors.green}
+    menu-1-1 =  shutdown? 
+    menu-1-1-exec = menu-open-0
+    menu-1-1-foreground = ${colors.foreground}
+    menu-2-0 = 
+    menu-2-0-exec = i3_knockout.sh -reboot
+    menu-2-0-foreground = ${colors.foreground}
+    menu-2-0-overline = ${colors.green}
+    menu-2-1 =  reboot? 
+    menu-2-1-exec = menu-open-0
+    menu-2-1-foreground = ${colors.foreground}
 
-; battery
+# battery
 [module/battery]
-type = internal/battery
-poll-interval = 10.0
-battery = BAT0
-adapter = ADP0
-full-at = 100
-label-charging = %percentage%% %time%
-label-charging-foreground = ${colors.foreground}
-format-charging = <animation-charging> <label-charging>
-format-charging-overline = ${colors.yellow}
-label-discharging = %percentage%% %time%
-label-discharging-foreground = ${colors.foreground}
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-overline = ${colors.red}
-label-full = ""
-label-full-foreground = ${colors.foreground}
-format-full-prefix =
-format-full-prefix-foreground = ${colors.foreground}
-format-full-overline = ${colors.blue}
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 750
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-3 = 
-animation-discharging-4 = 
-animation-discharging-foreground = ${colors.foreground}
-animation-discharging-framerate = 750
+    type = internal/battery
+    poll-interval = 10.0
+    battery = BAT0
+    adapter = ADP0
+    full-at = 100
+    label-charging = %percentage%% %time%
+    label-charging-foreground = ${colors.foreground}
+    format-charging = <animation-charging> <label-charging>
+    format-charging-overline = ${colors.yellow}
+    label-discharging = %percentage%% %time%
+    label-discharging-foreground = ${colors.foreground}
+    format-discharging = <animation-discharging> <label-discharging>
+    format-discharging-overline = ${colors.red}
+    label-full = ""
+    label-full-foreground = ${colors.foreground}
+    format-full-prefix =
+    format-full-prefix-foreground = ${colors.foreground}
+    format-full-overline = ${colors.blue}
+    animation-charging-0 = 
+    animation-charging-1 = 
+    animation-charging-2 = 
+    animation-charging-3 = 
+    animation-charging-4 = 
+    animation-charging-foreground = ${colors.foreground}
+    animation-charging-framerate = 750
+    animation-discharging-0 = 
+    animation-discharging-1 = 
+    animation-discharging-2 = 
+    animation-discharging-3 = 
+    animation-discharging-4 = 
+    animation-discharging-foreground = ${colors.foreground}
+    animation-discharging-framerate = 750
 
-; temp
+# temp
 [module/temp]
-type = internal/temperature
-interval = 2.0
-thermal-zone = 0
-warn-temperature = 82
-format = <ramp> <label>
-format-overline = ${colors.blue}
-format-warn = <ramp> <label-warn>
-format-warn-overline = ${colors.red}
-label = %temperature-c%
-label-foreground = ${colors.foreground}
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.red}
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-foreground = ${colors.foreground}
+    type = internal/temperature
+    interval = 2.0
+    thermal-zone = 0
+    warn-temperature = 82
+    format = <ramp> <label>
+    format-overline = ${colors.blue}
+    format-warn = <ramp> <label-warn>
+    format-warn-overline = ${colors.red}
+    label = %temperature-c%
+    label-foreground = ${colors.foreground}
+    label-warn = %temperature-c%
+    label-warn-foreground = ${colors.red}
+    ramp-0 = 
+    ramp-1 = 
+    ramp-2 = 
+    ramp-3 = 
+    ramp-4 = 
+    ramp-foreground = ${colors.foreground}
 
-; window
+# window
 [module/window]
-type = internal/xwindow
-format = <label>
-format-foreground = ${colors.white}
-format-overline = ${colors.blue}
-label = %title%
-label-maxlen = 100
+    type = internal/xwindow
+    format = <label>
+    format-foreground = ${colors.white}
+    format-overline = ${colors.blue}
+    label = %title%
+    label-maxlen = 100
 
-; cpu
+# cpu
 [module/cpu]
-type = internal/cpu
-interval = 2.0
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-overline = ${colors.blue}
-label = %percentage%%
-label-foreground = ${colors.foreground}
+    type = internal/cpu
+    interval = 2.0
+    format-prefix = " "
+    format-prefix-foreground = ${colors.foreground}
+    format-overline = ${colors.blue}
+    label = %percentage%%
+    label-foreground = ${colors.foreground}
 
-; ram
+# ram
 [module/ram]
-type = internal/memory
-interval = 2.0
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-overline = ${colors.blue}
-label = %percentage_used%% %gb_used%/%gb_total%  %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
-label-foreground = ${colors.foreground}
+    type = internal/memory
+    interval = 2.0
+    format-prefix = " "
+    format-prefix-foreground = ${colors.foreground}
+    format-overline = ${colors.blue}
+    label = %percentage_used%% %gb_used%/%gb_total%  %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
+    label-foreground = ${colors.foreground}
 
-; ssd
+# ssd
 [module/ssd]
-type = internal/fs
-interval = 30.0
-fixed-values = true
-mount-0 = /
-mount-1 = /media/disk1
-label-mounted =  %percentage_used%% %used%/%total%
-label-mounted-foreground = ${colors.foreground}
-label-mounted-overline = ${colors.blue}
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground}
-label-unmountet-overline = ${colors.red}
+    type = internal/fs
+    interval = 30.0
+    fixed-values = true
+    mount-0 = /
+    mount-1 = /media/disk1
+    label-mounted =  %percentage_used%% %used%/%total%
+    label-mounted-foreground = ${colors.foreground}
+    label-mounted-overline = ${colors.blue}
+    label-unmounted = %mountpoint% not mounted
+    label-unmounted-foreground = ${colors.foreground}
+    label-unmountet-overline = ${colors.red}
 
-; backlight
+# backlight
 [module/backlight]
-type = internal/xbacklight
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format = <bar>
-format-overline = ${colors.blue}
-label = %percentage%%
-label-foreground = ${colors.foreground}
-bar-width = 20
-bar-fill = ı
-bar-fill-foreground = ${colors.blue}
-bar-indicator = |
-bar-empty = ı
+    type = internal/xbacklight
+    format-prefix = " "
+    format-prefix-foreground = ${colors.foreground}
+    format = <bar>
+    format-overline = ${colors.blue}
+    label = %percentage%%
+    label-foreground = ${colors.foreground}
+    bar-width = 20
+    bar-fill = ı
+    bar-fill-foreground = ${colors.blue}
+    bar-indicator = |
+    bar-empty = ı
 
-; keyboard
+# keyboard
 [module/keyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-overline = ${colors.blue}
-label-layout = %layout%
-label-layout-foreground = ${colors.foreground}
-label-layout-overline = ${colors.blue}
+    type = internal/xkeyboard
+    blacklist-0 = num lock
+    format-prefix = " "
+    format-prefix-foreground = ${colors.foreground}
+    format-prefix-overline = ${colors.blue}
+    label-layout = %layout%
+    label-layout-foreground = ${colors.foreground}
+    label-layout-overline = ${colors.blue}
 
-; date
+# date
 [module/date]
-type = internal/date
-interval = 60.0
-date = 
-date-alt =  %a %d.%m.%Y
-time = %k:%M
-time-alt = %k:%M
-label = %date% %time%
-label-foreground = ${colors.foreground}
-label-overline = ${colors.blue}
+    type = internal/date
+    interval = 60.0
+    date = 
+    date-alt =  %a %d.%m.%Y
+    time = %k:%M
+    time-alt = %k:%M
+    label = %date% %time%
+    label-foreground = ${colors.foreground}
+    label-overline = ${colors.blue}
 
-; vim:ft=dosini
+# vim:ft=cfg
