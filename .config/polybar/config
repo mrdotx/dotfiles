@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; author:     klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-02-04T17:22:21+0100
+; date:       2020-02-09T15:47:36+0100
 
 ; wm
 [global/wm]
@@ -142,7 +142,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades window
 modules-right = wlan rss alsa backlight battery keyboard date powermenu
 
 cursor-click = pointer
@@ -180,7 +180,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = cmus
+modules-left = i3_pin cmus
 modules-right = temp cpu ram ssd
 
 cursor-click = pointer
@@ -191,6 +191,52 @@ cursor-scroll = ns-resize
 type = internal/i3
 
 pin-workspaces = false
+index-sort = true
+enable-click = true
+enable-scroll = true
+wrapping-scroll = false
+reverse-scroll = true
+fuzzy-match = false
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+format = <label-state>
+
+label-focused = %icon% %index%
+label-focused-foreground = ${colors.white}
+label-focused-background = ${colors.blue}
+label-focused-overline = ${colors.white}
+label-focused-padding = 1
+
+label-unfocused = %icon% %index%
+label-unfocused-overline = ${colors.foreground1}
+label-unfocused-padding = 1
+
+label-visible = %icon% %index%
+label-visible-overline = ${colors.foreground1}
+label-visible-padding = 1
+
+label-urgent = %icon% %index%
+label-urgent-foreground = ${colors.black}
+label-urgent-background = ${colors.red}
+label-urgent-overline = ${colors.red}
+label-urgent-padding = 1
+
+; i3_pin
+[module/i3_pin]
+type = internal/i3
+
+pin-workspaces = true
 index-sort = true
 enable-click = true
 enable-scroll = true
