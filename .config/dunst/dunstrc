@@ -1,9 +1,9 @@
-[global]
-
 # path:       ~/.config/polybar/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-09T22:49:02+0100
+# date:       2020-02-09T23:02:15+0100
+
+[global]
 
     ### Display ###
 
