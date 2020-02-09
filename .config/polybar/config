@@ -1,7 +1,7 @@
 ; path:       ~/.config/polybar/config_extended
 ; author:     klassiker [mrdotx]
 ; github:     https://github.com/mrdotx/dotfiles
-; date:       2020-02-09T20:22:10+0100
+; date:       2020-02-09T21:03:22+0100
 
 ; wm
 [global/wm]
@@ -31,7 +31,6 @@ monitor = ${env:MONITOR:eDP1}
 width = 100%
 height = 26
 radius = 0.0
-bottom = false
 locale = de_DE.UTF-8
 enable-ipc = true
 background = ${colors.background}
@@ -53,6 +52,7 @@ cursor-scroll = ns-resize
 
 [bar/i3_pri]
 inherit = bar/i3_gen
+bottom = false
 tray-position = right
 tray-reparent = true
 tray-scale = 0.90
@@ -61,11 +61,13 @@ modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermen
 
 [bar/i3_pri_btm]
 inherit = bar/i3_gen
+bottom = true
 modules-left = cmus
 modules-right = temp cpu ram ssd
 
 [bar/i3_sec]
 inherit = bar/i3_gen
+bottom = false
 tray-position = right
 tray-reparent = true
 tray-scale = 0.90
@@ -74,6 +76,7 @@ modules-right = wlan rss alsa backlight battery keyboard date powermenu
 
 [bar/i3_sec_top]
 inherit = bar/i3_gen
+bottom = false
 modules-left = i3_pin cmus
 modules-right = temp cpu ram ssd
 
@@ -104,10 +107,14 @@ label-focused-background = ${colors.blue}
 label-focused-overline = ${colors.white}
 label-focused-padding = 1
 label-unfocused = %icon% %index%
+label-unfocused-foreground = ${colors.grey}
+label-unfocused-background = ${colors.black}
 label-unfocused-overline = ${colors.foreground1}
 label-unfocused-padding = 1
 label-visible = %icon% %index%
-label-visible-overline = ${colors.foreground1}
+label-visible-foreground = ${colors.white}
+label-visible-background = ${colors.foreground1}
+label-visible-overline = ${colors.white}
 label-visible-padding = 1
 label-urgent = %icon% %index%
 label-urgent-foreground = ${colors.black}
