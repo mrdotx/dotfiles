@@ -1,7 +1,9 @@
-// path:       ~/.config/rofi/klassiker-vertical.rasi
-// author:     klassiker [mrdotx]
-// github:     https://github.com/mrdotx/dotfiles
-// date:       2020-02-03T14:04:56+0100
+/*
+ * path:       ~/.config/rofi/klassiker-vertical.rasi
+ * author:     klassiker [mrdotx]
+ * github:     https://github.com/mrdotx/dotfiles
+ * date:       2020-02-10T12:33:45+0100
+ */
 
 * {
     regular:                "Source Sans Pro Regular 10";
@@ -18,7 +20,7 @@
     green:                  rgba (0,255,0,100%);
 }
 
-// menu
+/* menu */
 #window {
     background-color:       @black;
     anchor:                 south;
@@ -124,4 +126,4 @@
     border:                 1px 0px 0px 0px;
 }
 
-// vim:ft=css
+/* vim:ft=css

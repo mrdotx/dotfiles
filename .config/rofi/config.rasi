@@ -1,7 +1,9 @@
-// path:       ~/.config/rofi/config.rasi
-// author:     klassiker [mrdotx]
-// github:     https://github.com/mrdotx/dotfiles
-// date:       2020-02-10T12:23:56+0100
+/*
+ * path:       ~/.config/rofi/config.rasi
+ * author:     klassiker [mrdotx]
+ * github:     https://github.com/mrdotx/dotfiles
+ * date:       2020-02-10T12:30:08+0100
+ */
 
 configuration {
     theme:                      "klassiker-horizontal";
@@ -33,4 +35,4 @@ configuration {
     parse-known-hosts:          false;
 }
 
-// vim:ft=css
+/* vim:ft=css
