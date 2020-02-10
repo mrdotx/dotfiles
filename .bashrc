@@ -1,7 +1,7 @@
 # path:       ~/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T18:22:30+0100
+# date:       2020-02-10T20:48:49+0100
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
@@ -30,7 +30,8 @@ fi
 unset use_color
 
 # history command configuration
-shopt -s histappend
+shopt -s histverify # show command with history expansion to user before running it
+shopt -s histappend # add commands to HISTFILE in order of execution
 
 # xhost
 xhost +local:root > /dev/null 2>&1

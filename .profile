@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-08T20:52:40+0100
+# date:       2020-02-10T20:48:38+0100
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -19,10 +19,11 @@
 [ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
 
 # zsh and bash history merge
-export HISTFILE="$HOME/.cmd_history"
-export HISTSIZE=10000
-export HISTFILESIZE=10000
-export SAVEHIST=5000
+export HISTFILE="$HOME/.cmd_history"    # for zsh and bash
+export HISTSIZE=10000                   # for zsh and bash
+export SAVEHIST=5000                    # for zsh
+export HISTFILESIZE=$SAVEHIST           # for bash
+export HISTCONTROL=ignoreboth           # for bash ignore duplicated commands and commands start with space
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME/.config"

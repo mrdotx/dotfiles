@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-07T01:09:31+0100
+# date:       2020-02-10T20:33:13+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
@@ -22,12 +22,10 @@ GIT_PS1_SHOWUPSTREAM="auto verbose name"
 GIT_PS1_SHOWCOLORHINTS=1
 
 # history command configuration
-#setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt inc_append_history     # add commands to HISTFILE in order of execution
-setopt share_history          # share command history data
 
 # completion
 autoload -Uz compinit
