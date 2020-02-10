@@ -1,7 +1,7 @@
-// path:       ~/.config/rofi/config
+// path:       ~/.config/rofi/config.rasi
 // author:     klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2020-02-10T12:21:54+0100
+// date:       2020-02-10T12:23:56+0100
 
 configuration {
     theme:                      "klassiker-horizontal";
