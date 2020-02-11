@@ -1,7 +1,11 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-10T20:48:38+0100
+# date:       2020-02-12T00:24:37+0100
+
+# hardware settings
+# gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
+export LIBVA_DRIVER_NAME=i965
 
 # project paths
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
@@ -17,13 +21,6 @@
 [ -d "$HOME/projects/stopwatch" ] && PATH="$HOME/projects/stopwatch:$PATH"
 [ -d "$HOME/projects/surf" ] && PATH="$HOME/projects/surf:$PATH"
 [ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
-
-# zsh and bash history merge
-export HISTFILE="$HOME/.cmd_history"    # for zsh and bash
-export HISTSIZE=10000                   # for zsh and bash
-export SAVEHIST=5000                    # for zsh
-export HISTFILESIZE=$SAVEHIST           # for bash
-export HISTCONTROL=ignoreboth           # for bash ignore duplicated commands and commands start with space
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -45,6 +42,7 @@ export TERMINAL="st"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
+export PAGER="less -s -M +Gg"
 export FILE="ranger"
 export READER="zathura"
 export BROWSER="surf.sh"
@@ -60,9 +58,18 @@ export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
 export WWW_HOME=duckduckgo.com
 
-# hardware settings
-# gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
-export LIBVA_DRIVER_NAME=i965
+# enable gnome keyring for terminal applications
+if [ -n "$DESKTOP_SESSION" ];then
+    eval "$(gnome-keyring-daemon --start)"
+    export SSH_AUTH_SOCK
+fi
+
+# zsh and bash history merge
+export HISTFILE="$HOME/.cmd_history"    # for zsh and bash
+export HISTSIZE=10000                   # for zsh and bash
+export SAVEHIST=5000                    # for zsh
+export HISTFILESIZE=$SAVEHIST           # for bash
+export HISTCONTROL=ignoreboth           # for bash ignore duplicated commands and commands start with space
 
 # colored man pages
 blink_start="$(printf '%b' '[1;31m')"
@@ -70,7 +77,7 @@ bold_start="$(printf '%b' '[1;34m')"
 turn_off="$(printf '%b' '[0m')"
 standout_start="$(printf '%b' '[01;44;37m')"
 standout_stop="$(printf '%b' '[0m')"
-underline_start="$(printf '%b' '[1;36m')"
+underline_start="$(printf '%b' '[1;4;36m')"
 underline_stop="$(printf '%b' '[0m')"
 export LESS_TERMCAP_mb=$blink_start
 export LESS_TERMCAP_md=$bold_start
@@ -79,9 +86,3 @@ export LESS_TERMCAP_so=$standout_start
 export LESS_TERMCAP_se=$standout_stop
 export LESS_TERMCAP_us=$underline_start
 export LESS_TERMCAP_ue=$underline_stop
-
-# enable gnome keyring for terminal applications
-if [ -n "$DESKTOP_SESSION" ];then
-    eval "$(gnome-keyring-daemon --start)"
-    export SSH_AUTH_SOCK
-fi
