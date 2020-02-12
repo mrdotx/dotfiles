@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-12T00:24:37+0100
+# date:       2020-02-12T08:15:17+0100
 
 # hardware settings
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
@@ -42,7 +42,6 @@ export TERMINAL="st"
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
-export PAGER="less -s -M +Gg"
 export FILE="ranger"
 export READER="zathura"
 export BROWSER="surf.sh"
