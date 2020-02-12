@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:13:49+0100
+# date:       2020-02-12T09:26:57+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -241,7 +241,7 @@ bindsym $sup+Shift+Print exec --no-startup-id $(sleep 1 && scrot.sh -select)
 
 # keybindings applications
 bindsym $sup+Return exec --no-startup-id i3_tiling.sh $TERMINAL
-bindsym $sup+Shift+Return exec --no-startup-id urxvtc.sh
+bindsym $sup+Shift+Return exec --no-startup-id i3_tiling.sh urxvtc.sh
 bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
 bindsym $sup+b exec --no-startup-id i3_tiling.sh $TERMINAL -e bmenu
 bindsym $sup+c exec --no-startup-id $TERMINAL -e cmus.sh
@@ -260,14 +260,14 @@ bindsym $sup+r exec --no-startup-id i3_tiling.sh $TERMINAL -e ranger
 bindsym $sup+s exec scribus
 bindsym $sup+u exec --no-startup-id rofi_mount.sh
 bindsym $sup+v exec VirtualBox
-bindsym $sup+w exec brave
-bindsym $sup+Shift+w exec --no-startup-id surf.sh
+bindsym $sup+w exec --no-startup-id i3_tiling.sh brave
+bindsym $sup+Shift+w exec --no-startup-id i3_tiling.sh surf.sh
 bindsym $sup+x exec --no-startup-id $TERMINAL -T "stopwatch floating" -e stopwatch.sh
 bindsym $sup+y exec --no-startup-id polybar.sh
-bindsym $sup+z exec filezilla
+bindsym $sup+z exec --no-startup-id i3_tiling.sh filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
 bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
 
 bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
-bindsym $sup+F2 exec pcmanfm
-bindsym $sup+F3 exec gksu pcmanfm
+bindsym $sup+F2 exec --no-startup-id i3_tiling.sh pcmanfm
+bindsym $sup+F3 exec --no-startup-id i3_tiling.sh pcmanfm_pkexec
