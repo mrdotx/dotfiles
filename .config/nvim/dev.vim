@@ -1,8 +1,10 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T19:43:00+0100
+" date:       2020-02-13T23:43:27+0100
 
+" enable all python syntax highlighting features
+let python_highlight_all=1
 " enable folding
 set foldmethod=indent
 set foldlevel=99

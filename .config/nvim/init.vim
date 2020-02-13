@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T19:42:14+0100
+" date:       2020-02-13T23:40:12+0100
 
 " leader is comma
 let mapleader=","
@@ -18,10 +18,8 @@ set termguicolors
 colorscheme klassiker
 " enable syntax processing
 syntax on
-" enable all python syntax highlighting features
-let python_highlight_all=1
-hi Normal ctermbg=NONE
 " transparent background
+hi Normal ctermbg=NONE
 hi Normal guibg=NONE
 hi Folded guibg=NONE
 hi FoldedColumn guibg=NONE
