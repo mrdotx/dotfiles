@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T16:50:16+0100
+" date:       2020-02-13T19:42:14+0100
 
 " leader is comma
 let mapleader=","
@@ -10,15 +10,6 @@ let mapleader=","
 if has('mouse')
     set mouse=a
 endif
-
-" plugins
-source ~/.config/nvim/plugins.vim
-
-" netrw
-source ~/.config/nvim/netrw.vim
-
-" dev
-source ~/.config/nvim/dev.vim
 
 " colors
 " true color
@@ -34,8 +25,6 @@ hi Normal ctermbg=NONE
 hi Normal guibg=NONE
 hi Folded guibg=NONE
 hi FoldedColumn guibg=NONE
-" color codes
-lua require'colorizer'.setup()
 
 " ui config
 " clipboard
@@ -51,8 +40,6 @@ set number relativenumber
 set showcmd
 " highlight current line
 "set cursorline
-" highlight extra white space
-:highlight ExtraWhitespace ctermbg=red guibg=red
 " to ward off unexpected things
 set nocompatible
 " visual autocomplete for command menu
@@ -66,15 +53,6 @@ set showmatch
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 " splits open at the bottom and right
 set splitbelow splitright
-" enable folding
-set foldmethod=indent
-set foldlevel=99
-" file encoding
-set encoding=utf-8
-" disables automatic commenting on newline
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
-" mark extra white space as bad and color it red
-autocmd BufRead,BufNewFile *.sh,*.py,*.pyw,*.c,*.h match ExtraWhitespace /\s\+$/
 " run xrdb whenever Xresources are updated.
 autocmd BufWritePost *Xresources !xrdb -merge %
 
@@ -95,6 +73,15 @@ filetype on
 filetype plugin on
 " automatically indent code
 filetype indent on
+
+" plugins
+source ~/.config/nvim/plugins.vim
+
+" netrw
+source ~/.config/nvim/netrw.vim
+
+" dev
+source ~/.config/nvim/dev.vim
 
 " shortcuts
 " file explore in split window

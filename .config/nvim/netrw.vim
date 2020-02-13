@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T16:42:50+0100
+" date:       2020-02-13T20:45:23+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -10,6 +10,7 @@ let g:netrw_altv=1
 let g:netrw_winsize=-28
 let g:netrw_sort_sequence='[\/]$,*'
 let g:netrw_ftp_cmd='ftp -p'
+let g:netrw_dirhistmax=0
 
 function! ToggleNetrw()
     if g:NetrwIsOpen

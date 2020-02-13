@@ -1,7 +1,19 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T16:37:13+0100
+" date:       2020-02-13T19:43:00+0100
+
+" enable folding
+set foldmethod=indent
+set foldlevel=99
+" file encoding
+set encoding=utf-8
+" disables automatic commenting on newline
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+" highlight extra white space
+:highlight ExtraWhitespace ctermbg=red guibg=red
+" mark extra white space as bad and color it red
+autocmd BufRead,BufNewFile *.sh,*.py,*.pyw,*.c,*.h match ExtraWhitespace /\s\+$/
 
 " style guide
 " number of visual spaces per TAB

@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T15:57:30+0100
+" date:       2020-02-13T19:16:53+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -25,6 +25,9 @@ call plug#end()
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme = 'base16_klassiker'
+
+" colorizer
+lua require'colorizer'.setup()
 
 " syntastic
 set statusline+=%#warningmsg#
