@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:12:59+0100
+# date:       2020-02-14T12:04:26+0100
 
 # general
 auto-reload yes
@@ -11,8 +11,8 @@ show-read-feeds yes
 keep-articles-days 30
 cleanup-on-quit yes
 
-browser "~/projects/newsboat/link_handler.sh %u"
-external-url-viewer "~/projects/newsboat/link_handler.sh %u"
+browser "i3_tiling.sh link_handler.sh %u"
+external-url-viewer "i3_tiling.sh link_handler.sh %u"
 
 # inoreader
 urls-source "inoreader"
@@ -25,9 +25,9 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro b set browser "brave %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
-macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
-macro m set browser "mpv %u"; open-in-browser ; set browser "~/projects/newsboat/link_handler.sh %u"
+macro b set browser "brave %u"; open-in-browser ; set browser "i3_tiling.sh link_handler.sh %u"
+macro w set browser "i3_tiling.sh $TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "i3_tiling.sh link_handler.sh %u"
+macro m set browser "mpv %u"; open-in-browser ; set browser "i3_tiling.sh link_handler.sh %u"
 
 # colors
 color background                    white   black
