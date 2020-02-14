@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-14T00:06:57+0100
+" date:       2020-02-14T01:11:15+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -141,6 +141,14 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" multiple cursor session
+nmap <expr> <silent> <C-c> <SID>select_current_word()
+function! s:select_current_word()
+    if !get(g:, 'coc_cursors_activated', 0)
+        return "\<Plug>(coc-cursors-word)"
+    endif
+    return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+endfunc
 
 " vimwiki
 let notes={}

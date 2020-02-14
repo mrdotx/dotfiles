@@ -1,10 +1,12 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-13T23:43:27+0100
+" date:       2020-02-14T00:44:14+0100
 
 " enable all python syntax highlighting features
 let python_highlight_all=1
+" get correct comment highlighting for json
+autocmd FileType json syntax match Comment +\/\/.\+$+
 " enable folding
 set foldmethod=indent
 set foldlevel=99
