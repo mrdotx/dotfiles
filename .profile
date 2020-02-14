@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-12T08:15:17+0100
+# date:       2020-02-14T09:29:59+0100
 
 # hardware settings
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
@@ -11,6 +11,7 @@ export LIBVA_DRIVER_NAME=i965
 [ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
 [ -d "$HOME/projects/conky" ] && PATH="$HOME/projects/conky:$PATH"
 [ -d "$HOME/projects/i3" ] && PATH="$HOME/projects/i3:$PATH"
+[ -d "$HOME/projects/newsboat" ] && PATH="$HOME/projects/newsboat:$PATH"
 [ -d "$HOME/projects/maintenance" ] && PATH="$HOME/projects/maintenance:$PATH"
 [ -d "$HOME/projects/polybar" ] && PATH="$HOME/projects/polybar:$PATH"
 [ -d "$HOME/projects/python" ] && PATH="$HOME/projects/python:$PATH"

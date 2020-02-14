@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-06T09:33:49+0100
+# date:       2020-02-14T09:33:09+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -28,6 +28,7 @@ alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'
 alias wt='curl -H "Accept-Language: de" wttr.in'
 alias sw='telnet towel.blinkenlights.nl'
+alias rb='link_handler.sh $(link_parser.py https://www.youtube.com/user/ROCKETBEANSTV | grep watch | sed "q1")'
 
 # git
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
