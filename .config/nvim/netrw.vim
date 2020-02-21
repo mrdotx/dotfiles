@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-17T12:44:14+0100
+" date:       2020-02-21T11:10:56+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -52,8 +52,8 @@ augroup END
 function! NetrwMappings()
     " hack fix to make ctrl-l work properly
     noremap <buffer> <C-l> <C-w>l
-    noremap <buffer> V :call OpenBelow()<cr>
-    noremap <buffer> H :call OpenToRight()<cr>
+    noremap <buffer> H :call OpenBelow()<cr>
+    noremap <buffer> v :call OpenToRight()<cr>
 endfunction
 
 " close netrw if it's the only buffer open
