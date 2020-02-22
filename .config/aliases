@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-22T18:38:21+0100
+# date:       2020-02-22T23:04:57+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -19,7 +19,7 @@ alias calc='python -ic "from __future__ import division; from math import *; fro
 alias cp='cp -i'
 alias nf='neofetch'
 
-alias rg='ranger'
+alias rg='. ranger'
 alias rs='sudo ranger'
 alias xn='vim $HOME/Dokumente/Notes/index.md'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
