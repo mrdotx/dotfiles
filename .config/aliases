@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-20T10:19:17+0100
+# date:       2020-02-22T13:04:10+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -42,7 +42,7 @@ alias cu='ch && up'
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
-alias dm='delete_metafiles.sh'
+alias dm='sudo delete_metafiles.sh'
 alias sc='system_cleanup.sh'
 
 # ssh
