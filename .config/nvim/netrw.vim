@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-21T11:10:56+0100
+" date:       2020-02-25T23:46:15+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -50,8 +50,6 @@ augroup netrw_mappings
 augroup END
 
 function! NetrwMappings()
-    " hack fix to make ctrl-l work properly
-    noremap <buffer> <C-l> <C-w>l
     noremap <buffer> H :call OpenBelow()<cr>
     noremap <buffer> v :call OpenToRight()<cr>
 endfunction
