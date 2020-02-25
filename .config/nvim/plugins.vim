@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-14T01:11:15+0100
+" date:       2020-02-25T19:07:25+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -149,6 +149,24 @@ function! s:select_current_word()
     endif
     return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
+call coc#config('languageserver', {
+\   'ccls': {
+\       "command": "ccls",
+\       "filetypes": ["c", "cpp", "objc", "objcpp"],
+\       "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+\           "initializationOptions": {
+\               "cache": {
+\                   "directory": "/home/klassiker/.cache/ccls"
+\               }
+\           }
+\   },
+\   'bash': {
+\       "command": "bash-language-server",
+\       "args": ["start"],
+\       "filetypes": ["sh"],
+\       "ignoredRootPaths": ["~"]
+\   }
+\})
 
 " vimwiki
 let notes={}
