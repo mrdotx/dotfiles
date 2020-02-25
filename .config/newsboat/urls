@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/urls
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:13:07+0100
+# date:       2020-02-25T12:06:22+0100
 
 #: querys
 "query:┌ Unread:unread = \"yes\""
@@ -13,10 +13,10 @@
 "query:│├─ Podcast:tags # \"Podcast\""
 "query:│├─ Twitter:tags # \"Twitter\""
 "query:│└─ Business:tags # \"Business\""
-"query:├┬ Keywords:title =~ \"AfD|Brexit|Trump|Erdogan|DSGVO|Datenschutz\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
+"query:├┬ Keywords:title =~ \"AfD|Brexit|Trump|Erdogan|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
 "query:│├─ Afd:title =~ \"AfD\""
 "query:│├─ Brexit:title =~ \"Brexit\""
-"query:│├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@POTUS|@realDonaldTrump\""
+"query:│├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@realDonaldTrump\""
 "query:│├─ Erdogan:title =~ \"Erdogan\""
 "query:↓└─ DSGVO:title =~ \"DSGVO|Datenschutz\""
 
