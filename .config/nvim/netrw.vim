@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-26T13:34:48+0100
+" date:       2020-02-26T13:57:59+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -40,7 +40,7 @@ augroup netrw_mappings
     autocmd filetype netrw call NetrwMappings()
 augroup END
 
-" Allow for netrw to be toggled
+" allow for netrw to be toggled
 function! ToggleNetrw()
     if g:NetrwIsOpen
         let i = bufnr("$")
@@ -59,5 +59,8 @@ endfunction
 
 " close netrw if it's the only buffer open
 autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+
+" change directory to the current buffer when opening files.
+set autochdir
 
 let g:NetrwIsOpen=0
