@@ -2,7 +2,7 @@
  * path:       ~/.config/rofi/klassiker-vertical.rasi
  * author:     klassiker [mrdotx]
  * github:     https://github.com/mrdotx/dotfiles
- * date:       2020-02-10T12:33:45+0100
+ * date:       2020-02-26T12:26:26+0100
  */
 
 * {
@@ -28,7 +28,7 @@
     width:                  100%;
     children:               [listview,box];
     font:                   @regular;
-    border:                 0px 0px 0px 6px;
+    border:                 0px 0px 0px 4px;
 }
 #box {
     layout:                 horizontal;
