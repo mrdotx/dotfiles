@@ -1,27 +1,27 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-14T09:29:59+0100
+# date:       2020-02-28T08:40:09+0100
 
 # hardware settings
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
 export LIBVA_DRIVER_NAME=i965
 
 # project paths
-[ -d "$HOME/projects/cmus" ] && PATH="$HOME/projects/cmus:$PATH"
-[ -d "$HOME/projects/conky" ] && PATH="$HOME/projects/conky:$PATH"
-[ -d "$HOME/projects/i3" ] && PATH="$HOME/projects/i3:$PATH"
-[ -d "$HOME/projects/newsboat" ] && PATH="$HOME/projects/newsboat:$PATH"
-[ -d "$HOME/projects/maintenance" ] && PATH="$HOME/projects/maintenance:$PATH"
-[ -d "$HOME/projects/polybar" ] && PATH="$HOME/projects/polybar:$PATH"
-[ -d "$HOME/projects/python" ] && PATH="$HOME/projects/python:$PATH"
-[ -d "$HOME/projects/rclone" ] && PATH="$HOME/projects/rclone:$PATH"
-[ -d "$HOME/projects/rofi" ] && PATH="$HOME/projects/rofi:$PATH"
-[ -d "$HOME/projects/shell" ] && PATH="$HOME/projects/shell:$PATH"
-[ -d "$HOME/projects/st" ] && PATH="$HOME/projects/st:$PATH"
-[ -d "$HOME/projects/stopwatch" ] && PATH="$HOME/projects/stopwatch:$PATH"
-[ -d "$HOME/projects/surf" ] && PATH="$HOME/projects/surf:$PATH"
-[ -d "$HOME/projects/system" ] && PATH="$HOME/projects/system:$PATH"
+[ -d "$HOME/repos/cmus" ] && PATH="$HOME/repos/cmus:$PATH"
+[ -d "$HOME/repos/conky" ] && PATH="$HOME/repos/conky:$PATH"
+[ -d "$HOME/repos/i3" ] && PATH="$HOME/repos/i3:$PATH"
+[ -d "$HOME/repos/newsboat" ] && PATH="$HOME/repos/newsboat:$PATH"
+[ -d "$HOME/repos/maintenance" ] && PATH="$HOME/repos/maintenance:$PATH"
+[ -d "$HOME/repos/polybar" ] && PATH="$HOME/repos/polybar:$PATH"
+[ -d "$HOME/repos/python" ] && PATH="$HOME/repos/python:$PATH"
+[ -d "$HOME/repos/rclone" ] && PATH="$HOME/repos/rclone:$PATH"
+[ -d "$HOME/repos/rofi" ] && PATH="$HOME/repos/rofi:$PATH"
+[ -d "$HOME/repos/shell" ] && PATH="$HOME/repos/shell:$PATH"
+[ -d "$HOME/repos/st" ] && PATH="$HOME/repos/st:$PATH"
+[ -d "$HOME/repos/stopwatch" ] && PATH="$HOME/repos/stopwatch:$PATH"
+[ -d "$HOME/repos/surf" ] && PATH="$HOME/repos/surf:$PATH"
+[ -d "$HOME/repos/system" ] && PATH="$HOME/repos/system:$PATH"
 
 # xdg paths
 export XDG_CONFIG_HOME="$HOME/.config"
