@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-29T16:25:29+0100
+# date:       2020-02-29T22:38:26+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -39,8 +39,8 @@ exec --no-startup-id xbanish
 exec --no-startup-id xautolock -detectsleep
 
 # floating applications
-for_window [title="floating" instance="st"] floating enable, resize set $res, move position center
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
+for_window [title="floating" instance="st"] floating enable, resize set $res, move position center
 for_window [title="alsamixer" instance="st"] floating enable, move position center
 for_window [title="Calculator" instance="st"] floating enable, resize set $res, move position center
 for_window [title="Network Manager" instance="st"] floating enable, resize set $res, move position center
@@ -48,17 +48,19 @@ for_window [title="File Transfer*"] floating enable, move position center
 for_window [title="stopwatch floating"] floating enable, resize set 250 500, move position center
 
 for_window [class="Arandr"] floating enable, sticky enable, resize set $res, move position center
+for_window [class="Polkit-gnome-authentication-agent-1"] floating enable, sticky enable, border pixel 2, move position center
+for_window [class="Dragon-drag-and-drop"] floating enable, sticky enable, border pixel 2, move position center
+for_window [class="Gcolor3"] floating enable, sticky enable, border pixel 2, move position center
 for_window [class="Lxappearance"] floating enable, sticky enable, move position center
 for_window [class="Nitrogen"] floating enable, sticky enable, move position center
-for_window [class="Gcolor3"] floating enable, sticky enable, move position center
 for_window [class="qt5ct"] floating enable, sticky enable, move position center
 for_window [class="Qtconfig-qt4"] floating enable, sticky enable, move position center
+for_window [class="Manjaro-hello"] floating enable, border pixel 2, move position center
+for_window [class="Pamac-manager"] floating enable, border pixel 2, move position center
 for_window [class="Nm-connection-editor"] floating enable, move position center
 for_window [class="GParted"] floating enable, move position center
 for_window [class="Lightdm-settings"] floating enable, move position center
-for_window [class="Manjaro-hello"] floating enable, move position center
 for_window [class="Manjaro Settings Manager"] floating enable, move position center
-for_window [class="Pamac-manager"] floating enable, move position center
 for_window [class="System-config-printer.py"] floating enable, move position center
 for_window [class="Xfburn"] floating enable, move position center
 for_window [class="gmic_qt"] floating enable, move position center
