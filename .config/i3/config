@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-22T10:22:19+0100
+# date:       2020-02-29T15:51:24+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -268,7 +268,7 @@ bindsym $sup+y exec --no-startup-id polybar.sh
 bindsym $sup+z exec --no-startup-id i3_tiling.sh filezilla
 bindsym $sup+equal exec --no-startup-id rofi_calc.sh
 bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
+bindsym $sup+period exec --no-startup-id i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)
+bindsym $sup+comma exec --no-startup-id dragon-drag-and-drop -t -k
 
 bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
-bindsym $sup+F2 exec --no-startup-id i3_tiling.sh pcmanfm
-bindsym $sup+F3 exec --no-startup-id i3_tiling.sh pcmanfm_pkexec
