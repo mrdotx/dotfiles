@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-23T11:51:58+0100
+# date:       2020-03-01T17:38:52+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -12,6 +12,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias diff='diff --color=auto'
 alias tree='tree -C'
+alias ncdu='ncdu --color dark'
 
 # tools
 alias more='less'
