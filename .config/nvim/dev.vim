@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-14T00:44:14+0100
+" date:       2020-03-01T22:23:21+0100
 
 " enable all python syntax highlighting features
 let python_highlight_all=1
@@ -30,6 +30,8 @@ set shiftwidth=4
 set expandtab
 " indent when moving to the next line while writing code
 set autoindent
+" show width indicator
+set colorcolumn=80
 
 " python pep 8 style guide
 function! AutoPy()
