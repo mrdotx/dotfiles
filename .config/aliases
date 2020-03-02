@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-01T17:49:06+0100
+# date:       2020-03-02T10:17:13+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -36,15 +36,16 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
 alias up='yay -Syu'
-alias cc='yay -Yc && sudo paccache -rvk2 && sudo paccache -ruk0'
 alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
 alias cu='ch && up'
+alias cc='yay -Yc && sudo paccache -rvk2 && sudo paccache -ruk0'
+alias sc='system_cleanup.sh'
+alias cs='cc && sc'
 
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
 alias dm='sudo delete_metafiles.sh'
-alias sc='system_cleanup.sh'
 
 # ssh
 alias pi='ssh hermes'
