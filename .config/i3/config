@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T09:21:55+0100
+# date:       2020-03-03T12:09:38+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -22,21 +22,6 @@ gaps inner 8
 gaps outer -2
 smart_gaps on
 smart_borders on
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #4084d6 #4185d7 #ffffff #ffffff   #3476a4
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #ff5555 #ffffff #ff5555   #ff5555
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
-
-# autostart applications
-exec_always --no-startup-id screenlayout.sh
-exec_always --no-startup-id polybar.sh
-exec_always --no-startup-id pkill picom; sleep 1; picom -b
-exec --no-startup-id xbanish
-exec --no-startup-id xautolock -detectsleep
 
 # floating applications
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
@@ -273,3 +258,18 @@ bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
 bindsym $sup+period exec --no-startup-id $TERMINAL -T "stopwatch floating" -e stopwatch.sh
 
 bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4084d6 #4185d7 #ffffff #ffffff   #3476a4
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #ff5555 #ffffff #ff5555   #ff5555
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.background       #ffffff
+
+# autostart applications
+exec_always --no-startup-id screenlayout.sh
+exec_always --no-startup-id polybar.sh
+exec_always --no-startup-id pkill picom; sleep 1; picom -b
+exec --no-startup-id xbanish
+exec --no-startup-id xautolock -detectsleep
