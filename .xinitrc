@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T03:43:26+0100
+# date:       2020-03-03T09:10:57+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -56,33 +56,33 @@ export SSH_AUTH_SOCK
 session=${1:-i3}
 
 case $session in
-    i3|i3wm         ) exec i3;;
-    awesome         ) exec awesome;;
-    bspwm           ) exec bspwm;;
-    budgie          ) exec budgie-desktop;;
-    cinnamon        ) exec cinnamon-session;;
-    deepin          ) exec startdde;;
-    enlightenment   ) exec enlightenment_start;;
-    fluxbox         ) exec startfluxbox;;
-    gnome           ) exec gnome-session;;
-    gnome-classic   ) exec gnome-session --session=gnome-classic;;
-    jwm             ) exec jwm;;
-    kde             ) exec startplasma-x11;;
-    kdew            ) exec startplasma-wayland;;
-    lxde            ) exec startlxde;;
-    lxqt            ) exec startlxqt;;
-    mate            ) exec mate-session;;
-    xfce|xfce4      ) exec startxfce4;;
-    openbox         ) exec openbox-session;;
-    xmonad          ) exec xmonad;;
-    pekwm           ) exec pekwm;;
-    catwm           ) exec catwm;;
-    dwm             ) exec dwm;;
-    startede        ) exec startede;;
-    icewm           ) exec icewm-session;;
-    monsterwm       ) exec monsterwm;;
-    notion          ) exec notion;;
-    kodi            ) exec kodi-standalone;;
+    i3|i3wm) exec i3 ;;
+    awesome) exec awesome ;;
+    bspwm) exec bspwm ;;
+    budgie) exec budgie-desktop ;;
+    cinnamon) exec cinnamon-session ;;
+    deepin) exec startdde ;;
+    enlightenment) exec enlightenment_start ;;
+    fluxbox) exec startfluxbox ;;
+    gnome) exec gnome-session ;;
+    gnome-classic) exec gnome-session --session=gnome-classic ;;
+    jwm) exec jwm ;;
+    kde) exec startplasma-x11 ;;
+    kdew) exec startplasma-wayland ;;
+    lxde) exec startlxde ;;
+    lxqt) exec startlxqt ;;
+    mate) exec mate-session ;;
+    xfce|xfce4) exec startxfce4 ;;
+    openbox) exec openbox-session ;;
+    xmonad) exec xmonad ;;
+    pekwm) exec pekwm ;;
+    catwm) exec catwm ;;
+    dwm) exec dwm ;;
+    startede) exec startede ;;
+    icewm) exec icewm-session ;;
+    monsterwm) exec monsterwm ;;
+    notion) exec notion ;;
+    kodi) exec kodi-standalone ;;
     # no known session, try to run it as command
-    *               ) exec "$1";;
+    *) exec "$1" ;;
 esac
