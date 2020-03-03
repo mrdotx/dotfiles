@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T18:14:29+0100
+# date:       2020-03-03T22:39:48+0100
 
 # hardware settings (check vainfo)
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
@@ -57,7 +57,7 @@ export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
 export WWW_HOME=duckduckgo.com
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority"
 
 # zsh and bash history merge
 export HISTFILE="$HOME/.cmd_history"    # for zsh and bash
