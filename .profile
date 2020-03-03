@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T22:39:48+0100
+# date:       2020-03-03T23:20:43+0100
 
 # hardware settings (check vainfo)
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
@@ -36,6 +36,8 @@ export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
 export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export FONTCONFIG_PATH=/etc/fonts
+export FONTCONFIG_FILE=fonts.conf
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # standard apps
