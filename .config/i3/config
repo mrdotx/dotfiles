@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-01T23:21:31+0100
+# date:       2020-03-03T09:21:55+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -211,13 +211,13 @@ bindsym $sup+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -lock simple)
 bindsym $sup+Shift+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -suspend)
 
 # x window kill
-bindsym Ctrl+$alt+x --release exec --no-startup-id xkill
+bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 
 # exit i3 (logs you out of your x session)
-bindsym $sup+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # dunst restart
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
