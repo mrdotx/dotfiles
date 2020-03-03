@@ -1,9 +1,9 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T03:40:14+0100
+# date:       2020-03-03T18:14:29+0100
 
-# hardware settings
+# hardware settings (check vainfo)
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
 export LIBVA_DRIVER_NAME=i965
 
