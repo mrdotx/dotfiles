@@ -1,7 +1,7 @@
 # path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T01:08:15+0100
+# date:       2020-03-03T03:40:14+0100
 
 # hardware settings
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
@@ -58,12 +58,6 @@ export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
 export WWW_HOME=duckduckgo.com
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
-
-# enable gnome keyring for terminal applications
-if [ -n "$DESKTOP_SESSION" ];then
-    eval "$(gnome-keyring-daemon --start)"
-    export SSH_AUTH_SOCK
-fi
 
 # zsh and bash history merge
 export HISTFILE="$HOME/.cmd_history"    # for zsh and bash
