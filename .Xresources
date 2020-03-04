@@ -1,7 +1,7 @@
 ! path:       ~/.Xresources.conf
 ! author:     klassiker [mrdotx]
 ! gitgub:     https://github.com/mrdotx/dotfiles
-! date:       2020-02-07T11:44:28+0100
+! date:       2020-03-04T10:49:14+0100
 
 ! general
 *background:                        #000000
@@ -75,16 +75,6 @@ Polybar.foreground1:                #666666
 Sxiv.font:                          Source Sans Pro:size=8
 Sxiv.background:                    #000000
 Sxiv.foreground:                    #ffffff
-
-! xterm
-XTerm*background:                   #000000
-XTerm*foreground:                   #ffffff
-XTerm*pointerColor:                 #4084d6
-XTerm*faceName:                     DejavuSansMono Nerd Font Mono
-XTerm*faceSize:                     12
-XTerm*renderFont:                   true
-XTerm*reverseVideo:                 off
-XTerm*selectToClipboard:            true
 
 ! urxvt
 URxvt*font:                         xft:DejaVuSansMono Nerd Font Mono:size=12:antialias=true:hinting=true
