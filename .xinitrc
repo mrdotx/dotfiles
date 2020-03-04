@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T09:10:57+0100
+# date:       2020-03-04T16:24:49+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -21,22 +21,12 @@ if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
 fi
 
-if [ -f $sysxprofile ]; then
-    # shellcheck disable=SC1090
-    . $sysxprofile
-fi
-
 if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
 fi
 
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
-fi
-
-if [ -f "$userxprofile" ]; then
-    # shellcheck disable=SC1090
-    . "$userxprofile"
 fi
 
 # start some nice programs
@@ -52,10 +42,21 @@ fi
 eval "$(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
 export SSH_AUTH_SOCK
 
-# default session
-session=${1:-i3}
+# start programs before window manager
+if [ -f $sysxprofile ]; then
+    # shellcheck disable=SC1090
+    . $sysxprofile
+fi
 
-case $session in
+if [ -f "$userxprofile" ]; then
+    # shellcheck disable=SC1090
+    . "$userxprofile"
+fi
+
+# default window manager
+wm=${1:-i3}
+
+case $wm in
     i3|i3wm) exec i3 ;;
     awesome) exec awesome ;;
     bspwm) exec bspwm ;;

@@ -1,0 +1,7 @@
+# path:       ~/.xprofile
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-03-04T16:18:55+0100
+
+xautolock -detectsleep &    # auto lock/suspend device
+xbanish &                   # remove mouse cursor on keypress
