@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-03T12:09:38+0100
+# date:       2020-03-04T08:55:07+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -259,12 +259,12 @@ bindsym $sup+period exec --no-startup-id $TERMINAL -T "stopwatch floating" -e st
 
 bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #4084d6 #4185d7 #ffffff #ffffff   #3476a4
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #ff5555 #ffffff #ff5555   #ff5555
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# class                 border  backgr. text    indi.   child
+client.focused          #4084d6 #4185d7 #ffffff #ffffff #3476a4
+client.focused_inactive #333333 #333333 #ffffff #555555 #333333
+client.unfocused        #333333 #000000 #888888 #333333 #000000
+client.urgent           #222222 #ff5555 #ffffff #ff5555 #ff5555
+client.placeholder      #000000 #111111 #ffffff #000000 #111111
 client.background       #ffffff
 
 # autostart applications
