@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-05T10:28:51+0100
+# date:       2020-03-05T15:18:56+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -78,7 +78,6 @@ workspace $ws9 output $main $hdmi
 workspace $ws10 output $hdmi $main
 
 # open applications on specific workspaces (xprop)
-assign [title="newsboat"] $ws2
 assign [class="VirtualBox"] $ws3
 assign [class="Brave-browser"] $ws4
 assign [title="GIMP Startup"] $ws5
