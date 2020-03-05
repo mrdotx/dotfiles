@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-04T16:26:45+0100
+# date:       2020-03-05T10:28:51+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -138,10 +138,10 @@ bindsym $sup+Ctrl+Right workspace next
 
 # keybindings windows/container
 # split orientation
-#bindsym $sup+Ctrl+Up split h;exec --no-startup-id notify-send 'i3' 'tile container horizontally'
-#bindsym $sup+Ctrl+Down split v;exec --no-startup-id notify-send 'i3' 'tile container vertically'
-bindsym $sup+Ctrl+Up exec --no-startup-id i3_tiling.sh
-bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id notify-send 'i3' 'toggle tile container direction'
+#bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
+#bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
+bindsym $sup+Ctrl+Up exec --no-startup-id "i3_tiling.sh"
+bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
 
 # change focus
 bindsym $sup+Left focus left
@@ -179,7 +179,7 @@ bindsym $alt+minus scratchpad show
 
 # keybindings system managment
 # start program launcher
-bindsym Super_L --release exec --no-startup-id rofi -monitor -1 -show
+bindsym Super_L --release exec --no-startup-id "rofi -monitor -1 -show"
 
 # window switcher
 bindsym $sup+Tab exec --no-startup-id rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons
@@ -192,11 +192,11 @@ bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
-bindsym $sup+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -lock simple)
-bindsym $sup+Shift+l exec --no-startup-id $(sleep 0.5 && i3_knockout.sh -suspend)
+bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -lock simple"
+bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -suspend"
 
 # x window kill
-bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
+bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
@@ -208,56 +208,55 @@ bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit sho
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
 
 # picom start/stop
-bindsym $sup+t exec --no-startup-id "pkill picom; exec notify-send 'i3' 'picom stopped'"
-bindsym $sup+Shift+t exec --no-startup-id "picom -b; exec notify-send 'i3' 'picom started'"
+bindsym $sup+shift+t exec --no-startup-id "if [ $(pgrep -x picom) ]; then pkill picom && notify-send 'i3' 'picom stopped'; else picom -b && notify-send 'i3' 'picom started'; fi"
 
 # conky start/stop (61=/?)
-bindcode $sup+61 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
-bindcode $sup+Shift+61 exec --no-startup-id conky.sh vertical
+bindcode $sup+61 exec --no-startup-id "i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt"
+bindcode $sup+Shift+61 exec --no-startup-id "conky.sh vertical"
 
 # keybindings multimedia keys
-bindsym XF86AudioRaiseVolume exec --no-startup-id audio.sh -inc 5
-bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
-bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo backlight.sh -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo backlight.sh -dec 5
-bindsym XF86Cut exec --no-startup-id xsel.sh
-bindsym $sup+p exec --no-startup-id rofi_display.sh
-bindsym Print exec --no-startup-id scrot.sh -desk
-bindsym $sup+Print exec --no-startup-id scrot.sh -window
-bindsym $sup+Shift+Print exec --no-startup-id $(sleep 1 && scrot.sh -select)
+bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
+bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
+bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
+bindsym XF86MonBrightnessUp exec --no-startup-id "sudo backlight.sh -inc 5"
+bindsym XF86MonBrightnessDown exec --no-startup-id "sudo backlight.sh -dec 5"
+bindsym XF86Cut exec --no-startup-id "xsel.sh"
+bindsym $sup+p exec --no-startup-id "rofi_display.sh"
+bindsym Print exec --no-startup-id "scrot.sh -desk"
+bindsym $sup+Print exec --no-startup-id "scrot.sh -window"
+bindsym $sup+Shift+Print exec --no-startup-id "sleep 1 && scrot.sh -select"
 
 # keybindings applications
-bindsym $sup+Return exec --no-startup-id i3_tiling.sh $TERMINAL
-bindsym $sup+Shift+Return exec --no-startup-id i3_tiling.sh urxvtc.sh
-bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
-bindsym $sup+b exec --no-startup-id i3_tiling.sh $TERMINAL -e bmenu
-bindsym $sup+c exec --no-startup-id $TERMINAL -e cmus.sh
-bindsym $sup+Shift+c exec --no-startup-id cmus_notify.sh --notify-send
-bindsym $sup+d exec darktable
-bindsym $sup+e exec --no-startup-id i3_tiling.sh rofi_vim.sh
-bindsym $sup+g exec gimp
-bindsym $sup+h exec --no-startup-id i3_tiling.sh $TERMINAL -e htop
-bindsym $sup+i exec inkscape
-bindsym $sup+j exec jameica
-bindsym $sup+k exec --no-startup-id i3_tiling.sh sync_keepass.sh && keepassxc && sync_keepass.sh
-bindsym $sup+m exec thunderbird
-bindsym $sup+n exec --no-startup-id $(polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1)
-bindsym $sup+o exec libreoffice
-bindsym $sup+r exec --no-startup-id i3_tiling.sh $TERMINAL -e ranger
-bindsym $sup+s exec scribus
-bindsym $sup+u exec --no-startup-id rofi_mount.sh
-bindsym $sup+v exec VirtualBox
-bindsym $sup+w exec --no-startup-id i3_tiling.sh brave
-bindsym $sup+Shift+w exec --no-startup-id i3_tiling.sh surf.sh
-bindsym $sup+x exec --no-startup-id i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)
-bindsym $sup+y exec --no-startup-id polybar.sh
-bindsym $sup+z exec --no-startup-id i3_tiling.sh filezilla
-bindsym $sup+equal exec --no-startup-id rofi_calc.sh
-bindsym $sup+grave exec --no-startup-id rofi_unicode_symbols.sh
-bindsym $sup+period exec --no-startup-id $TERMINAL -T "stopwatch floating" -e stopwatch.sh
+bindsym $sup+Return exec --no-startup-id "i3_tiling.sh $TERMINAL"
+bindsym $sup+Shift+Return exec --no-startup-id "i3_tiling.sh urxvtc.sh"
+bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
+bindsym $sup+b exec --no-startup-id "i3_tiling.sh $TERMINAL -e bmenu"
+bindsym $sup+c exec --no-startup-id "$TERMINAL -e cmus.sh"
+bindsym $sup+Shift+c exec --no-startup-id "cmus_notify.sh --notify-send"
+bindsym $sup+d exec "darktable"
+bindsym $sup+e exec --no-startup-id "i3_tiling.sh rofi_vim.sh"
+bindsym $sup+g exec "gimp"
+bindsym $sup+h exec --no-startup-id "i3_tiling.sh $TERMINAL -e htop"
+bindsym $sup+i exec "inkscape"
+bindsym $sup+j exec "jameica"
+bindsym $sup+k exec --no-startup-id "i3_tiling.sh sync_keepass.sh && keepassxc && sync_keepass.sh"
+bindsym $sup+m exec "thunderbird"
+bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1"
+bindsym $sup+o exec "libreoffice"
+bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e ranger"
+bindsym $sup+s exec "scribus"
+bindsym $sup+t exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
+bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
+bindsym $sup+v exec "VirtualBox"
+bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
+bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh surf.sh"
+bindsym $sup+x exec --no-startup-id i3_tiling.sh "link_handler.sh $(dragon-drag-and-drop -t -x)"
+bindsym $sup+y exec --no-startup-id "polybar.sh"
+bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
+bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
+bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 
-bindsym $sup+F1 exec --no-startup-id i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt
+bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt"
 
 # class                 border  backgr. text    indi.   child
 client.focused          #4084d6 #4185d7 #ffffff #ffffff #3476a4
@@ -267,7 +266,5 @@ client.urgent           #222222 #ff5555 #ffffff #ff5555 #ff5555
 client.placeholder      #000000 #111111 #ffffff #000000 #111111
 client.background       #ffffff
 
-# autostart applications
-exec_always --no-startup-id screenlayout.sh
-exec_always --no-startup-id polybar.sh
-exec_always --no-startup-id pkill picom; sleep 1; picom -b
+# setup default monitors
+exec_always --no-startup-id "screenlayout.sh"
