@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-05T15:18:56+0100
+# date:       2020-03-06T19:30:51+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -249,7 +249,7 @@ bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
 bindsym $sup+v exec "VirtualBox"
 bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
 bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh surf.sh"
-bindsym $sup+x exec --no-startup-id i3_tiling.sh "link_handler.sh $(dragon-drag-and-drop -t -x)"
+bindsym $sup+x exec --no-startup-id "i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "polybar.sh"
 bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
