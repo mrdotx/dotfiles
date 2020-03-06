@@ -1,7 +1,7 @@
 ! path:       ~/.Xresources.conf
 ! author:     klassiker [mrdotx]
-! gitgub:     https://github.com/mrdotx/dotfiles
-! date:       2020-03-04T10:49:14+0100
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2020-03-06T15:16:07+0100
 
 ! general
 *background:                        #000000
