@@ -1,10 +1,10 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T12:58:37+0100
+# date:       2020-03-06T21:20:54+0100
 
 # aliases
-[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
+[ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
 
 # if shell is not running interactive, break up
 [[ $- != *i* ]] && return

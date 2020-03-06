@@ -1,15 +1,15 @@
 # path:       ~/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T19:39:20+0100
-
-# if shell is not running interactive, break up
-[[ $- != *i* ]] && return
+# date:       2020-03-06T21:20:27+0100
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
 # shellcheck disable=SC1090
-[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
+[ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
+
+# if shell is not running interactive, break up
+[[ $- != *i* ]] && return
 
 # prompt
 use_color=true
