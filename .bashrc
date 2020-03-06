@@ -1,15 +1,15 @@
 # path:       ~/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-10T20:48:49+0100
+# date:       2020-03-06T19:39:20+0100
+
+# if shell is not running interactive, break up
+[[ $- != *i* ]] && return
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
 # shellcheck disable=SC1090
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
-
-# if shell is not running interactive, break up
-[[ $- != *i* ]] && return
 
 # prompt
 use_color=true
@@ -42,8 +42,3 @@ xhost +local:root > /dev/null 2>&1
 # it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
-
-# autostart
-if [[ ! "$TERM" =~ ^(linux|st-256color|tmux-256color)$ ]]; then
-    tx
-fi
