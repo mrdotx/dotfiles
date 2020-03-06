@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-09T23:03:42+0100
+# date:       2020-03-06T22:30:32+0100
 
 # wm
 [global/wm]
@@ -423,6 +423,9 @@
     label-layout = %layout%
     label-layout-foreground = ${colors.foreground}
     label-layout-overline = ${colors.blue}
+    label-indicator = %name%
+    label-indicator-foreground = ${colors.foreground}
+    label-indicator-overline = ${colors.red}
 
 # date
 [module/date]
