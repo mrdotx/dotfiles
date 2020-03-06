@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-10T20:33:13+0100
+# date:       2020-03-06T12:58:37+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
@@ -11,8 +11,6 @@
 
 # prompt
 autoload -U colors && colors
-#precmd () { __git_ps1 "%{$fg_bold[green]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[green]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
-precmd () { __git_ps1 "%{$fg_bold[green]%}[%{$reset_color%}%3~%{$fg_bold[green]%}]%{$reset_color%}" "%B$%b " }
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
@@ -20,6 +18,10 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto verbose name"
 #GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
+
+#precmd () { __git_ps1 "%{$fg_bold[green]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[green]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
+precmd () { __git_ps1 "%{$fg_bold[green]%}[%{$reset_color%}%3~%{$fg_bold[green]%}]%{$reset_color%}" "%B$%b " }
+RPROMPT='%F{green}[%f%?%F{green}]%f'
 
 # history command configuration
 setopt hist_ignore_dups       # ignore duplicated commands history list
