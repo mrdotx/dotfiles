@@ -1,7 +1,7 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-07T18:20:12+0100
+# date:       2020-03-07T19:16:19+0100
 
 # project paths
 typeset -U PATH path
@@ -46,6 +46,7 @@ export VISUAL="nvim"
 export EDITOR="$VISUAL"
 export SUDO_EDITOR="$VISUAL"
 export FILE="ranger"
+export PAGER="less"
 export READER="zathura"
 export BROWSER="surf.sh"
 export TERMINALBROWSER="links"
