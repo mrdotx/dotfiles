@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-07T17:08:06+0100
+# date:       2020-03-07T19:19:32+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -16,7 +16,6 @@ alias ncdu='ncdu --color dark'
 
 # tools
 alias tmux='tmux -f $HOME/.config/tmux.conf'
-alias more='less'
 alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
 alias cp='cp -i'
 alias nf='neofetch'
