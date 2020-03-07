@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T20:53:09+0100
+# date:       2020-03-07T22:48:48+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -210,7 +210,6 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 
 bindsym $sup+shift+t exec --no-startup-id "if [ $(pgrep -x picom) ]; then pkill picom && notify-send 'i3' 'picom stopped'; else picom -b && notify-send 'i3' 'picom started'; fi"
 
 # conky start/stop (61=/?)
-bindcode $sup+61 exec --no-startup-id "i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt"
 bindcode $sup+Shift+61 exec --no-startup-id "conky.sh vertical"
 
 # keybindings multimedia keys
@@ -255,7 +254,9 @@ bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 
-bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh sent ~/Dokumente/Slides/shortcuts.txt"
+# start help page (61=/?)
+bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e less -P 'Help page line %l/%L %P\% (press h for help or q for quit)' ~/Dokumente/Stuff/help"
+bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh $TERMINAL -e less -P 'Help page line %l/%L %P\% (press h for help or q for quit)' ~/Dokumente/Stuff/help"
 
 # class                 border  backgr. text    indi.   child
 client.focused          #4084d6 #4185d7 #ffffff #ffffff #3476a4
