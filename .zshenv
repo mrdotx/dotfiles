@@ -1,7 +1,7 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-07T19:16:19+0100
+# date:       2020-03-08T12:02:07+0100
 
 # project paths
 typeset -U PATH path
@@ -38,6 +38,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
+export LESS="-P %F line %l/%L %P\% (press h for help or q for quit)"
 export WWW_HOME=duckduckgo.com
 
 # standard apps
