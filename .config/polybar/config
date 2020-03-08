@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T22:30:32+0100
+# date:       2020-03-08T18:56:11+0100
 
 # wm
 [global/wm]
@@ -10,7 +10,7 @@
 
 # settings
 [settings]
-    screenchange-reload = false
+    screenchange-reload = true
 
 # colors
 [colors]

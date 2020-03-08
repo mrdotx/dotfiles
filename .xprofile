@@ -1,9 +1,7 @@
 # path:       ~/.xprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-05T10:30:37+0100
+# date:       2020-03-08T18:44:52+0100
 
 xautolock -detectsleep &    # auto lock/suspend device
 xbanish &                   # remove mouse cursor on keypress
-polybar.sh &                # start status bar
-sleep 1 && picom -b &       # start compositor for xorg

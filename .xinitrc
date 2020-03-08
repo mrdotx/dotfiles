@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-07T14:42:14+0100
+# date:       2020-03-08T18:44:39+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -13,21 +13,10 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 sysxprofile=/etc/xprofile
 
 # merge in defaults and keymaps
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-fi
-
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
-
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
-
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
+[ -f $sysresources ] && xrdb -merge $sysresources
+[ -f $sysmodmap ] && xmodmap $sysmodmap
+[ -f "$userresources" ] && xrdb -merge "$userresources"
+[ -f "$usermodmap" ] && xmodmap "$usermodmap"
 
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -43,15 +32,10 @@ eval "$(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
 export SSH_AUTH_SOCK
 
 # start programs before window manager
-if [ -f $sysxprofile ]; then
-    # shellcheck disable=SC1090
-    . $sysxprofile
-fi
-
-if [ -f "$userxprofile" ]; then
-    # shellcheck disable=SC1090
-    . "$userxprofile"
-fi
+# shellcheck disable=SC1090
+[ -f $sysxprofile ] && . $sysxprofile
+# shellcheck disable=SC1090
+[ -f "$userxprofile" ] && . "$userxprofile"
 
 # default window manager
 wm=${1:-i3}
@@ -59,6 +43,6 @@ wm=${1:-i3}
 case $wm in
     i3|i3wm) exec i3 ;;
     kodi) exec kodi-standalone ;;
-    # if $wm not known, try to run it as command
+    # if $wm not known, try to run string as command
     *) exec "$1" ;;
 esac

@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-08T12:07:34+0100
+# date:       2020-03-08T19:10:26+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -268,3 +268,5 @@ client.background       #ffffff
 
 # setup default monitors
 exec_always --no-startup-id "screenlayout.sh"
+exec_always --no-startup-id "pkill picom; sleep 1; picom -b"
+exec --no-startup-id "polybar.sh"
