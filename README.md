@@ -1,6 +1,10 @@
 # dotfiles
 
-| name              | comment                                    |
+I try to minimize what's directly in ```$HOME```, so most configs can be found
+in ```$HOME/.config```. Usefull scripts in addition to this configs can be
+found in my other repositories.
+
+| config            | description                                |
 | :---------------- | :----------------------------------------- |
 | aria2             | download manager                           |
 | bash              | shell                                      |
@@ -21,10 +25,6 @@
 | youtube-dl        | youtube downloader                         |
 | zathura           | document viewer                            |
 | zsh               | shell                                      |
-
-I try to minimize what's directly in ```$HOME```, so most configs can be found
-in ```$HOME/.config```. Usefull scripts in addition to this configs can be
-found in my other repositories.
 
 ![monitor1](screenshot_monitor1.png)
 ![monitor2](screenshot_monitor2.png)
