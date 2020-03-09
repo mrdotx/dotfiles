@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T10:07:59+0100
+# date:       2020-03-09T22:39:51+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -46,10 +46,10 @@ alias dm='sudo delete_metafiles.sh'
 
 # ssh
 alias pi='ssh hermes'
-alias pi_c='pi sys_stat.sh | $PAGER'
+alias pi_c='pi sys_stat.sh'
 alias pi_w='ssh -t hermes "watch -n2 sys_stat.sh -s"'
 alias pi2='ssh prometheus'
-alias pi2_c='pi2 sys_stat.sh | $PAGER'
+alias pi2_c='pi2 sys_stat.sh'
 alias pi2_w='ssh -t prometheus "watch -n2 sys_stat.sh -s"'
 alias p9='ssh p9'
 alias m3='ssh m3'
