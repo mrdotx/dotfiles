@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T11:59:50+0100
+# date:       2020-03-09T12:20:43+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -255,8 +255,8 @@ bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
 
 # start shortcuts page (61=/?)
-bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e $PAGER ~/Dokumente/Notes/shortcuts.md"
-bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh $BROWSER ~/Dokumente/Notes/html/shortcuts.html"
+bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e $PAGER $HOME/Dokumente/Notes/shortcuts.md"
+bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
 
 # class                 border  backgr. text    indi.   child
 client.focused          #4084d6 #4185d7 #ffffff #ffffff #3476a4
