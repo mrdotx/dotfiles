@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T12:20:43+0100
+# date:       2020-03-09T17:47:17+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -22,6 +22,25 @@ gaps inner 8
 gaps outer -2
 smart_gaps on
 smart_borders on
+
+# colors
+set $white #ffffff
+set $red #ff5555
+set $lblue #4185d7
+set $blue #4084d6
+set $dblue #3476a4
+set $lgrey #555555
+set $grey #333333
+set $dgrey #111111
+set $black #000000
+
+# class                 border  backgr. text    indi.   child
+client.focused          $blue   $lblue  $white  $white  $dblue
+client.focused_inactive $grey   $grey   $white  $lgrey  $grey
+client.unfocused        $grey   $black  $lgrey  $grey   $black
+client.urgent           $dgrey  $red    $white  $red    $red
+client.placeholder      $black  $dgrey  $white  $black  $dgrey
+client.background       $white
 
 # floating applications
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
@@ -258,15 +277,7 @@ bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e s
 bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e $PAGER $HOME/Dokumente/Notes/shortcuts.md"
 bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
 
-# class                 border  backgr. text    indi.   child
-client.focused          #4084d6 #4185d7 #ffffff #ffffff #3476a4
-client.focused_inactive #333333 #333333 #ffffff #555555 #333333
-client.unfocused        #333333 #000000 #888888 #333333 #000000
-client.urgent           #222222 #ff5555 #ffffff #ff5555 #ff5555
-client.placeholder      #000000 #111111 #ffffff #000000 #111111
-client.background       #ffffff
-
-# setup default monitors
+# autostart
 exec_always --no-startup-id "screenlayout.sh"
 exec_always --no-startup-id "pkill picom; sleep 1; picom -b"
 exec --no-startup-id "polybar.sh"
