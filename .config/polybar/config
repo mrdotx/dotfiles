@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-08T18:56:11+0100
+# date:       2020-03-09T16:38:35+0100
 
 # wm
 [global/wm]
@@ -281,8 +281,8 @@
     menu-0-1 =  reboot
     menu-0-1-exec = menu-open-2
     menu-0-1-foreground = ${colors.foreground}
-    menu-0-2 =  knockout
-    menu-0-2-exec = rofi_exit.sh
+    menu-0-2 =  log out
+    menu-0-2-exec = menu-open-3
     menu-0-2-foreground = ${colors.foreground}
     menu-1-0 = 
     menu-1-0-exec = i3_knockout.sh -shutdown
@@ -298,6 +298,13 @@
     menu-2-1 =  reboot? 
     menu-2-1-exec = menu-open-0
     menu-2-1-foreground = ${colors.foreground}
+    menu-3-0 = 
+    menu-3-0-exec = i3_knockout.sh -logout
+    menu-3-0-foreground = ${colors.foreground}
+    menu-3-0-overline = ${colors.green}
+    menu-3-1 =  log out? 
+    menu-3-1-exec = menu-open-0
+    menu-3-1-foreground = ${colors.foreground}
 
 # battery
 [module/battery]
