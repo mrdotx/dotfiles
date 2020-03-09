@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-08T19:10:26+0100
+# date:       2020-03-09T11:59:50+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -186,6 +186,9 @@ bindsym $sup+Tab exec --no-startup-id rofi -monitor -1 -lines 10 -theme klassike
 # kill focused window
 bindsym Ctrl+q kill
 
+# x window kill
+bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
+
 # toggle fullscreen mode for the focused container or global
 bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
@@ -193,9 +196,6 @@ bindsym $sup+Shift+f fullscreen toggle global
 # Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
 bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -lock simple"
 bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -suspend"
-
-# x window kill
-bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
@@ -207,7 +207,7 @@ bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit sho
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
 
 # picom start/stop
-bindsym $sup+shift+t exec --no-startup-id "if [ $(pgrep -x picom) ]; then pkill picom && notify-send 'i3' 'picom stopped'; else picom -b && notify-send 'i3' 'picom started'; fi"
+bindsym $sup+shift+p exec --no-startup-id "if [ $(pgrep -x picom) ]; then pkill picom && notify-send 'i3' 'picom stopped'; else picom -b && notify-send 'i3' 'picom started'; fi"
 
 # conky start/stop (61=/?)
 bindcode $sup+Shift+61 exec --no-startup-id "conky.sh vertical"
@@ -241,18 +241,18 @@ bindsym $sup+k exec --no-startup-id "i3_tiling.sh sync_keepass.sh && keepassxc &
 bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
-bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e ranger"
+bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e $FILE"
 bindsym $sup+s exec "scribus"
-bindsym $sup+t exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
 bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
 bindsym $sup+v exec "VirtualBox"
 bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
-bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh surf.sh"
+bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh $BROWSER"
 bindsym $sup+x exec --no-startup-id "i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "polybar.sh"
 bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
+bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
 
 # start shortcuts page (61=/?)
 bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e $PAGER ~/Dokumente/Notes/shortcuts.md"
