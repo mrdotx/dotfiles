@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-11T19:34:27+0100
+# date:       2020-03-11T20:13:18+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -28,7 +28,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # enable gnome keyring for terminal applications
-eval "$(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
+eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
 export SSH_AUTH_SOCK
 
 # start applications, before graphical environment is launched
@@ -42,9 +42,9 @@ if [ "$TERM" = linux ] ; then
     # default session
     session=${1:-i3}
     case $session in
-        i3|i3wm) exec dbus-launch --sh-syntax --exit-with-session i3 ;;
-        kodi) exec dbus-launch --sh-syntax --exit-with-session kodi-standalone ;;
+        i3|i3wm) exec i3 ;;
+        kodi) exec kodi-standalone ;;
         # if $session is not known, try to run string as command
-        *) exec dbus-launch --sh-syntax --exit-with-session "$1" ;;
+        *) exec "$1" ;;
     esac
 fi
