@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-11T18:41:35+0100
+# date:       2020-03-11T19:34:27+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -43,7 +43,6 @@ if [ "$TERM" = linux ] ; then
     session=${1:-i3}
     case $session in
         i3|i3wm) exec dbus-launch --sh-syntax --exit-with-session i3 ;;
-        bspwm) exec dbus-launch --sh-syntax --exit-with-session bspwm ;;
         kodi) exec dbus-launch --sh-syntax --exit-with-session kodi-standalone ;;
         # if $session is not known, try to run string as command
         *) exec dbus-launch --sh-syntax --exit-with-session "$1" ;;
