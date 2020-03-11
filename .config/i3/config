@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T17:47:17+0100
+# date:       2020-03-11T23:55:08+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -200,7 +200,7 @@ bindsym $alt+minus scratchpad show
 bindsym Super_L --release exec --no-startup-id "rofi -monitor -1 -show"
 
 # window switcher
-bindsym $sup+Tab exec --no-startup-id rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons
+bindsym $sup+Tab exec --no-startup-id "rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons"
 
 # kill focused window
 bindsym Ctrl+q kill
