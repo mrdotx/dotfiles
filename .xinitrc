@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-11T11:50:13+0100
+# date:       2020-03-11T14:19:48+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -31,20 +31,21 @@ fi
 eval "$(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
 export SSH_AUTH_SOCK
 
-# start programs before 
+# start applications, before graphical environment is launched
 # shellcheck disable=SC1090
 [ -f $sysxprofile ] && . $sysxprofile
 # shellcheck disable=SC1090
 [ -f "$userxprofile" ] && . "$userxprofile"
 
-if [ "$TERM" = linux ] || [ systemctl -q is-active graphical.target ] ; then
+# start graphical environment
+if [ "$TERM" = linux ] ; then
     # default session
     session=${1:-i3}
     case $session in
         i3|i3wm) exec dbus-launch --sh-syntax --exit-with-session i3 ;;
         bspwm) exec dbus-launch --sh-syntax --exit-with-session bspwm-session ;;
         kodi) exec dbus-launch --sh-syntax --exit-with-session kodi-standalone ;;
-        # if $wm not known, try to run string as command
+        # if $session is not known, try to run string as command
         *) exec dbus-launch --sh-syntax --exit-with-session "$1" ;;
     esac
 fi
