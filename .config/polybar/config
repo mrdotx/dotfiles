@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T16:38:35+0100
+# date:       2020-03-12T23:29:55+0100
 
 # wm
 [global/wm]
@@ -397,7 +397,7 @@
     interval = 30.0
     fixed-values = true
     mount-0 = /
-    mount-1 = /media/disk1
+    mount-1 = /tmp/media/disk1
     label-mounted =  %percentage_used%% %used%/%total%
     label-mounted-foreground = ${colors.foreground}
     label-mounted-overline = ${colors.blue}
