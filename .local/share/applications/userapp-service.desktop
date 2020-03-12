@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.1
 Type=Application
-Name=Service
-Comment=Services de-/activate
+Name=service
+Comment=dervices de-/activate
 Icon=system-config-services
 Exec=rofi_service.sh
 Actions=

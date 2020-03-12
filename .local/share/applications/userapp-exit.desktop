@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=exit
-Comment=shutdown, reboot, logout, switch user, suspend, lock
+Comment=shutdown, reboot, logout, suspend, lock
 Icon=system-log-out
 Exec=rofi_exit.sh
 Actions=

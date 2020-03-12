@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.1
 Type=Application
-Name=Network Manager
-Comment=connect WLAN
+Name=network manager
+Comment=connect wlan
 Icon=preferences-system-network
-Exec=st -T "Network Manager" -e wlan.sh -nm
+Exec=st -T "network manager" -e wlan.sh -nm
 Actions=
 Categories=Network;

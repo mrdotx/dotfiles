@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.1
 Type=Application
-Name=Display Settings
-Comment=Select and config display settings
+Name=display settings
+Comment=select and config display settings
 Icon=cs-display
 Exec=rofi_display.sh
 Actions=

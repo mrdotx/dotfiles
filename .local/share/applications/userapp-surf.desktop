@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=surf
-Comment=Suckless Surf Browser
+Comment=suckless surf browser
 Icon=web-browser
 Exec=surf.sh %u
 Actions=

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=urxvt (client)
-Comment=An unicode capable rxvt clone client for urxvtd
+Comment=an unicode capable rxvt clone client for urxvtd
 Exec=urxvtc.sh
 Icon=utilities-terminal
 Terminal=false

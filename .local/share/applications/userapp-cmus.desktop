@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=cmus
-Comment=C* Music Player
+Comment=c* music player
 Icon=multimedia-player
 Exec=st -e cmus
 Actions=

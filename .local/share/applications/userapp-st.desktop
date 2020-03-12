@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=st
-Comment=Suckless Simple Terminal
+Comment=suckless simple terminal
 Icon=terminal
 Exec=st
 Actions=
