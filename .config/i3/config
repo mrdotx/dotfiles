@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-12T12:43:36+0100
+# date:       2020-03-12T14:53:34+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -48,6 +48,7 @@ for_window [title="floating" instance="st"] floating enable, resize set $res, mo
 for_window [title="alsamixer" instance="st"] floating enable, move position center
 for_window [title="Calculator" instance="st"] floating enable, resize set $res, move position center
 for_window [title="Network Manager" instance="st"] floating enable, resize set $res, move position center
+for_window [title="cdw" instance="st"] floating enable, resize set $res, move position center
 for_window [title="File Transfer*"] floating enable, move position center
 for_window [title="stopwatch floating"] floating enable, resize set 250 500, move position center
 
