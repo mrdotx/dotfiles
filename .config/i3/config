@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-11T23:55:08+0100
+# date:       2020-03-12T12:43:36+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -65,7 +65,6 @@ for_window [class="Nm-connection-editor"] floating enable, move position center
 for_window [class="GParted"] floating enable, move position center
 for_window [class="Lightdm-settings"] floating enable, move position center
 for_window [class="Manjaro Settings Manager"] floating enable, move position center
-for_window [class="System-config-printer.py"] floating enable, move position center
 for_window [class="Xfburn"] floating enable, move position center
 for_window [class="gmic_qt"] floating enable, move position center
 
