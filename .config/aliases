@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-09T22:39:51+0100
+# date:       2020-03-13T18:36:02+0100
 
 # color commands
 alias ls='ls --color=auto'
@@ -11,8 +11,9 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias diff='diff --color=auto'
-alias tree='tree -C'
+alias watch='watch --color'
 alias ncdu='ncdu --color dark'
+alias tree='tree -C'
 
 # tools
 alias tmux='tmux -f $HOME/.config/tmux.conf'
