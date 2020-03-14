@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-13T17:09:27+0100
+# date:       2020-03-14T10:15:24+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -235,8 +235,8 @@ bindcode $sup+Shift+61 exec --no-startup-id "conky.sh vertical"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
 bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
-bindsym XF86MonBrightnessUp exec --no-startup-id "sudo backlight.sh -inc 5"
-bindsym XF86MonBrightnessDown exec --no-startup-id "sudo backlight.sh -dec 5"
+bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -time 200 -steps 10 -inc 5"
+bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -time 200 -steps 10 -dec 5"
 bindsym XF86Cut exec --no-startup-id "xsel.sh"
 bindsym $sup+p exec --no-startup-id "rofi_display.sh"
 bindsym Print exec --no-startup-id "i3_tiling.sh scrot.sh -desk"
