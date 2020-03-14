@@ -1,7 +1,7 @@
 ! path:       ~/.Xresources.conf
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-03-06T15:16:07+0100
+! date:       2020-03-14T14:55:08+0100
 
 ! general
 *background:                        #000000
@@ -46,11 +46,11 @@
 *color7:                            #cccccc
 *color15:                           #ffffff
 
-! xcursor
-Xcursor.theme:                      xcursor-breeze
-Xcursor.size:                       0
+! xcursor (size default 24, remommendend values 32,48,64)
+Xcursor.theme:                      posy-white
+Xcursor.size:                       24
 
-! xft
+! xft (dpi default 96, recommended values 120 [125%], 144 [150%], 168 [175%], 192 [200%])
 Xft.dpi:                            96
 Xft.antialias:                      true
 Xft.hinting:                        true
