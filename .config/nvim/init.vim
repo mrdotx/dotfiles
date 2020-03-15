@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-28T08:48:36+0100
+" date:       2020-03-15T12:17:56+0100
 
 " leader is comma
 let mapleader=","
@@ -98,5 +98,3 @@ map                     <leader>d           :setlocal spell! spelllang=de_de<CR>
 map                     <leader>e           :setlocal spell! spelllang=en_us<CR>
 map         <silent>    <leader>s           :vs term://shellcheck -s sh %<CR>
 map                     <leader>S           :SyntasticToggleMode<CR>
-" copy vimwiki to webserver
-nnoremap    <silent>    <leader>n           :!$HOME/repos/vimwiki-pandoc/copy.sh<CR>
