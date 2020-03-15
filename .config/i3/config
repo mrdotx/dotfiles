@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-14T22:42:09+0100
+# date:       2020-03-15T12:44:55+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -227,9 +227,6 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 
 # picom start/stop
 bindsym $sup+shift+p exec --no-startup-id "if [ $(pgrep -x picom) ]; then pkill picom && notify-send 'i3' 'picom stopped'; else picom -b && notify-send 'i3' 'picom started'; fi"
 
-# conky start/stop (61=/?)
-bindcode $sup+Shift+61 exec --no-startup-id "conky.sh vertical"
-
 # keybindings multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
 bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
@@ -245,6 +242,7 @@ bindsym $sup+Shift+Print exec --no-startup-id "sleep 1 && i3_tiling.sh scrot.sh 
 # keybindings applications
 bindsym $sup+Return exec --no-startup-id "i3_tiling.sh $TERMINAL"
 bindsym $sup+Shift+Return exec --no-startup-id "i3_tiling.sh urxvtc.sh"
+
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "i3_tiling.sh $TERMINAL -e bmenu"
 bindsym $sup+c exec --no-startup-id "$TERMINAL -e cmus.sh"
@@ -268,13 +266,14 @@ bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh $BROWSER"
 bindsym $sup+x exec --no-startup-id "i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "polybar.sh"
 bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
+
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
+bindsym $sup+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/index.html"
+bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
 
-# start shortcuts page (61=/?)
-bindcode $sup+61 exec --no-startup-id "i3_tiling.sh $TERMINAL -e $PAGER $HOME/Dokumente/Notes/shortcuts.md"
-bindsym $sup+F1 exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
+bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # autostart
 exec_always --no-startup-id "screenlayout.sh"
