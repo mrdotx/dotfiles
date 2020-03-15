@@ -1,0 +1,11 @@
+[Unit]
+Description=run rss.service every 15 minutes
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=15m
+AccuracySec=5m
+Unit=rss.service
+
+[Install]
+WantedBy=timers.target

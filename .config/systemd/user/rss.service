@@ -1,0 +1,11 @@
+[Unit]
+Description=receive rss feeds with newsboat
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/repos/polybar/polybar_rss.sh
+
+[Install]
+WantedBy=default.target
