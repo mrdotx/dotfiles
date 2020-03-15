@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-11T20:13:18+0100
+# date:       2020-03-16T00:11:58+0100
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -28,8 +28,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # enable gnome keyring for terminal applications
-eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
-export SSH_AUTH_SOCK
+#eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
+#export SSH_AUTH_SOCK
+export SSH_AGENT_PID=
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 
 # start applications, before graphical environment is launched
 # shellcheck disable=SC1090
