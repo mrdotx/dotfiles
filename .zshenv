@@ -1,7 +1,7 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-15T22:28:11+0100
+# date:       2020-03-16T00:59:02+0100
 
 # project paths
 typeset -U PATH path
@@ -32,6 +32,8 @@ export FONTCONFIG_PATH=/etc/fonts
 export FONTCONFIG_FILE=fonts.conf
 
 # app settings
+export SSH_AGENT_PID=
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 export RANGER_LOAD_DEFAULT_RC=false
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
