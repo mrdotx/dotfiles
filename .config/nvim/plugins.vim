@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-06T12:17:05+0100
+" date:       2020-03-16T09:09:47+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -25,6 +25,18 @@ call plug#end()
 " airline
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16_klassiker'
+let g:airline_left_sep=''
+let g:airline_left_alt_sep=''
+let g:airline_right_sep=''
+let g:airline_right_alt_sep=''
+let g:airline#extensions#tmuxline#enabled=0
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
+    \ 'space' : ' '}
 
 " colorizer
 lua require'colorizer'.setup()
