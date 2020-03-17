@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-16T23:58:30+0100
+# date:       2020-03-18T00:00:09+0100
 
 # wm
 [global/wm]
@@ -56,7 +56,7 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3 polkit printer bluetooth gestures firewall vpnhades window
+    modules-left = i3 polkit printer bluetooth gestures firewall vpnhades resolver window
     modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermenu
 
 [bar/i3_pri_btm]
@@ -71,7 +71,7 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades window
+    modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades resolver window
     modules-right = wlan rss alsa backlight battery keyboard date powermenu
 
 [bar/i3_sec_top]
@@ -241,6 +241,14 @@
     initial = 1
     click-left = polybar-msg -p %pid% hook vpnhades 2
     click-right = polybar-msg -p %pid% hook vpnhades 1
+
+[module/resolver]
+    inherit = module/custom
+    hook-0 = polybar_resolver.sh --status
+    hook-1 = polybar_resolver.sh
+    initial = 1
+    click-left = polybar-msg -p %pid% hook resolver 2
+    click-right = polybar-msg -p %pid% hook resolver 1
 
 [module/rss]
     inherit = module/custom
