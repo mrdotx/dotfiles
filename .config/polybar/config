@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-12T23:29:55+0100
+# date:       2020-03-16T23:58:30+0100
 
 # wm
 [global/wm]
@@ -133,7 +133,7 @@
 # wlan
 [module/wlan_generell]
     type = internal/network
-    interface = wlp2s0
+    interface = wlan0
     format-connected-prefix = " "
     format-connected = <label-connected>
     format-connected-overline = ${colors.blue}
