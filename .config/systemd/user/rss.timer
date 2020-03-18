@@ -1,5 +1,5 @@
 [Unit]
-Description=run rss.service every 15 minutes
+Description=run rss.service every 30 minutes
 
 [Timer]
 OnActiveSec=30s
