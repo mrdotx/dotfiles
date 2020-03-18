@@ -2,9 +2,9 @@
 Description=run rss.service every 15 minutes
 
 [Timer]
-OnBootSec=2m
 OnUnitActiveSec=15m
 AccuracySec=5m
+Persistent=true
 Unit=rss.service
 
 [Install]
