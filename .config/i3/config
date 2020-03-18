@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-15T12:44:55+0100
+# date:       2020-03-18T19:44:58+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -258,7 +258,7 @@ bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
 bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e $FILE"
-bindsym $sup+s exec "scribus"
+bindsym $sup+s exec "seahorse"
 bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
 bindsym $sup+v exec "VirtualBox"
 bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
@@ -270,8 +270,8 @@ bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
-bindsym $sup+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/index.html"
-bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
+bindsym $sup+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
+bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/index.html"
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
