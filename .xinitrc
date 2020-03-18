@@ -3,20 +3,20 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-16T00:54:15+0100
+# date:       2020-03-19T00:57:17+0100
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-userxprofile=$HOME/.xprofile
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
-sysxprofile=/etc/xprofile
+user_resources=$HOME/.Xresources
+user_modmap=$HOME/.Xmodmap
+user_xprofile=$HOME/.xprofile
+sys_resources=/etc/X11/xinit/.Xresources
+sys_modmap=/etc/X11/xinit/.Xmodmap
+sys_xprofile=/etc/xprofile
 
 # merge in defaults and keymaps
-[ -f $sysresources ] && xrdb -merge $sysresources
-[ -f $sysmodmap ] && xmodmap $sysmodmap
-[ -f "$userresources" ] && xrdb -merge "$userresources"
-[ -f "$usermodmap" ] && xmodmap "$usermodmap"
+[ -f $sys_resources ] && xrdb -merge $sys_resources
+[ -f $sys_modmap ] && xmodmap $sys_modmap
+[ -f "$user_resources" ] && xrdb -merge "$user_resources"
+[ -f "$user_modmap" ] && xmodmap "$user_modmap"
 
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -27,14 +27,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-# start applications, before graphical environment is launched
-# shellcheck disable=SC1090
-[ -f $sysxprofile ] && . $sysxprofile
-# shellcheck disable=SC1090
-[ -f "$userxprofile" ] && . "$userxprofile"
-
 # start graphical environment
 if [ "$TERM" = linux ] ; then
+    # shellcheck disable=SC1090
+    [ -f $sys_xprofile ] && . $sys_xprofile
+    # shellcheck disable=SC1090
+    [ -f "$user_xprofile" ] && . "$user_xprofile"
     # default session
     session=${1:-i3}
     case $session in
