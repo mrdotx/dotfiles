@@ -1,0 +1,23 @@
+{
+    "languageserver": {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+            "rootPatterns": [".ccls-root", ".ccls", "compile_commands.json", ".git/", ".hg/"],
+                "initializationOptions": {
+                    "cache": {
+                        "directory": "/home/klassiker/.cache/ccls"
+                    },
+                    "client": {
+                        "snippetSupport": true
+                    }
+                }
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        }
+    }
+}
