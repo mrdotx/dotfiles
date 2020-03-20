@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-18T19:44:58+0100
+# date:       2020-03-20T14:10:15+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -255,7 +255,7 @@ bindsym $sup+i exec "inkscape"
 bindsym $sup+j exec "jameica"
 bindsym $sup+k exec --no-startup-id "i3_tiling.sh sync_keepass.sh && keepassxc && sync_keepass.sh"
 bindsym $sup+m exec "thunderbird"
-bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 2 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 3 > /dev/null 2>&1"
+bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 4 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
 bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e $FILE"
 bindsym $sup+s exec "seahorse"

@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-18T00:00:09+0100
+# date:       2020-03-20T14:30:00+0100
 
 # wm
 [global/wm]
@@ -56,8 +56,8 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3 polkit printer bluetooth gestures firewall vpnhades resolver window
-    modules-right = cmus alsa backlight wlansmall rss battery keyboard date powermenu
+    modules-left = i3 polkit printer bluetooth gestures firewall vpnhades resolver rss window
+    modules-right = cmus alsa backlight wlansmall battery keyboard date powermenu
 
 [bar/i3_pri_btm]
     inherit = bar/i3_gen
@@ -71,8 +71,8 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades resolver window
-    modules-right = wlan rss alsa backlight battery keyboard date powermenu
+    modules-left = i3_pin polkit printer bluetooth gestures firewall vpnhades resolver rss window
+    modules-right = wlan alsa backlight battery keyboard date powermenu
 
 [bar/i3_sec_top]
     inherit = bar/i3_gen
@@ -253,13 +253,14 @@
 [module/rss]
     inherit = module/custom
     format-overline = ${colors.blue}
-    hook-0 = echo "%{o#666666}%{o-}"
-    hook-1 = echo "%{o#ff5555}%{o-}"
-    hook-2 = newsboat -x print-unread | awk '{print "",$1}'
-    hook-3 = polybar_rss.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook rss 4
-    click-right = polybar-msg -p %pid% hook rss 3
+    hook-0 = polybar_rss.sh --status
+    hook-1 = polybar_rss
+    hook-2 = polybar_rss.sh --toggle
+    hook-3 = echo "%{o$(xrdb -query | grep color11: | cut -f2)}%{o-}"
+    hook-4 = echo "%{o$(xrdb -query | grep Polybar.foreground1: | cut -f2)}%{o-}"
+    initial = 5
+    click-left = polybar-msg -p %pid% hook rss 3
+    click-right = polybar-msg -p %pid% hook rss 1
 
 [module/cmus]
     inherit = module/custom
