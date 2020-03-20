@@ -1,9 +1,9 @@
 [Unit]
-Description=run rss.service every 30 minutes
+Description=run rss.service every 15 minutes
 
 [Timer]
 OnActiveSec=30s
-OnUnitActiveSec=30m
+OnUnitActiveSec=15m
 AccuracySec=5m
 Unit=rss.service
 
