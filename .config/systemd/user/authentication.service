@@ -1,5 +1,5 @@
 [Unit]
-Description=polkit gonome authentication agent
+Description=polkit gnome authentication agent
 
 [Service]
 Type=simple
