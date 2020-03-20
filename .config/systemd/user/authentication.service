@@ -1,0 +1,11 @@
+[Unit]
+Description=polkit gonome authentication agent
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/sleep 2
+ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+ExecStartPost=/usr/bin/polybar-msg hook module/polkit 1
+
+[Install]
+WantedBy=default.target

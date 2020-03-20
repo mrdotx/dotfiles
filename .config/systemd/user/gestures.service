@@ -1,0 +1,12 @@
+[Unit]
+Description=libinput gestures for synaptics touchpad
+
+[Service]
+Type=forking
+ExecStartPre=/usr/bin/sleep 2
+ExecStart=/usr/bin/libinput-gestures-setup start
+ExecStartPost=/usr/bin/polybar-msg hook module/gestures 1
+ExecStop=/usr/bin/libinput-gestures-setup stop
+
+[Install]
+WantedBy=default.target
