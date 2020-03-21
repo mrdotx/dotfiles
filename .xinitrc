@@ -3,7 +3,7 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-21T14:30:44+0100
+# date:       2020-03-21T19:26:41+0100
 
 user_resources=$HOME/.Xresources
 user_modmap=$HOME/.Xmodmap
@@ -24,6 +24,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     done
     unset f
 fi
+
+# autostart applications
+xautolock -detectsleep &    # auto lock/suspend device
+xbanish &                   # remove mouse cursor on keypress
 
 # start graphical environment
 if [ "$TERM" = linux ] ; then
