@@ -1,0 +1,10 @@
+[Unit]
+Description=setup screen layouts
+PartOf=default.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/repos/system/screenlayout.sh
+
+[Install]
+WantedBy=window-manager.target

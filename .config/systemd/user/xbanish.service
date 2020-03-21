@@ -1,0 +1,10 @@
+[Unit]
+Description=xbanish to remove mouse cursor on keypress
+PartOf=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xbanish
+
+[Install]
+WantedBy=window-manager.target

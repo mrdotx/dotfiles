@@ -1,0 +1,12 @@
+[Unit]
+Description=picom compositor
+PartOf=default.target
+After=screenlayout.service
+
+[Service]
+Type=forking
+ExecStartPre=/usr/bin/sleep 1
+ExecStart=/usr/bin/picom -b
+
+[Install]
+WantedBy=window-manager.target

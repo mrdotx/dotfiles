@@ -1,0 +1,10 @@
+[Unit]
+Description=xautolock to auto lock/suspend device
+PartOf=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xautolock -detectsleep
+
+[Install]
+WantedBy=window-manager.target

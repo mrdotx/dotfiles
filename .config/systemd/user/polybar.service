@@ -1,0 +1,10 @@
+[Unit]
+Description=polybar status bars
+PartOf=default.target
+
+[Service]
+Type=forking
+ExecStart=%h/repos/polybar/polybar.sh
+
+[Install]
+WantedBy=window-manager.target

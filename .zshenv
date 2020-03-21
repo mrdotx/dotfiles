@@ -1,12 +1,15 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-16T00:59:02+0100
+# date:       2020-03-21T23:17:56+0100
 
 # project paths
 typeset -U PATH path
 path=("$HOME/repos/cmus" "$HOME/repos/conky" "$HOME/repos/i3" "$HOME/repos/newsboat" "$HOME/repos/maintenance" "$HOME/repos/polybar" "$HOME/repos/python" "$HOME/repos/rclone" "$HOME/repos/rofi" "$HOME/repos/shell" "$HOME/repos/st" "$HOME/repos/stopwatch" "$HOME/repos/surf" "$HOME/repos/system" "$path[@]")
 export PATH
+
+# systemd environment
+systemctl --user import-environment PATH
 
 # hardware settings (check vainfo)
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver

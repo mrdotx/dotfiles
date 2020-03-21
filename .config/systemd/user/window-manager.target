@@ -1,0 +1,4 @@
+[Unit]
+Description=window manager session
+BindsTo=default.target
+After=window-manager-pre.target

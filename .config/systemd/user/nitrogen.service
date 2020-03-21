@@ -1,0 +1,11 @@
+[Unit]
+Description=nitrogen wallpaper management
+PartOf=default.target
+After=screenlayout.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nitrogen --restore
+
+[Install]
+WantedBy=window-manager.target
