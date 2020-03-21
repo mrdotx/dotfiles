@@ -3,14 +3,12 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-19T00:57:17+0100
+# date:       2020-03-21T14:30:44+0100
 
 user_resources=$HOME/.Xresources
 user_modmap=$HOME/.Xmodmap
-user_xprofile=$HOME/.xprofile
 sys_resources=/etc/X11/xinit/.Xresources
 sys_modmap=/etc/X11/xinit/.Xmodmap
-sys_xprofile=/etc/xprofile
 
 # merge in defaults and keymaps
 [ -f $sys_resources ] && xrdb -merge $sys_resources
@@ -29,10 +27,6 @@ fi
 
 # start graphical environment
 if [ "$TERM" = linux ] ; then
-    # shellcheck disable=SC1090
-    [ -f $sys_xprofile ] && . $sys_xprofile
-    # shellcheck disable=SC1090
-    [ -f "$user_xprofile" ] && . "$user_xprofile"
     # default session
     session=${1:-i3}
     case $session in
