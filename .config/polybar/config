@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-21T22:13:30+0100
+# date:       2020-03-22T00:04:44+0100
 
 # wm
 [global/wm]
@@ -56,8 +56,8 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3 rss printer bluetooth gestures rss authentication firewall resolver vpnhades window
-    modules-right = cmus alsa backlight wlansmall battery keyboard date powermenu
+    modules-left = i3 rss printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-right = cmus alsa xbacklight wlansmall battery xkeyboard date powermenu
 
 [bar/i3_2_mon_pri]
     inherit = bar/i3_gen
@@ -65,8 +65,8 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3_pin printer bluetooth gestures rss authentication firewall resolver vpnhades window
-    modules-right = wlan alsa backlight battery keyboard date powermenu
+    modules-left = i3_pin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-right = wlan alsa xbacklight battery xkeyboard date powermenu
 
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
@@ -365,8 +365,8 @@
     ramp-4 = 
     ramp-foreground = ${colors.foreground}
 
-# window
-[module/window]
+# xwindow
+[module/xwindow]
     type = internal/xwindow
     format = <label>
     format-foreground = ${colors.white}
@@ -408,8 +408,8 @@
     label-unmounted-foreground = ${colors.foreground}
     label-unmountet-overline = ${colors.red}
 
-# backlight
-[module/backlight]
+# xbacklight
+[module/xbacklight]
     type = internal/xbacklight
     format-prefix = " "
     format-prefix-foreground = ${colors.foreground}
@@ -423,19 +423,19 @@
     bar-indicator = |
     bar-empty = ı
 
-# keyboard
-[module/keyboard]
+# xkeyboard
+[module/xkeyboard]
     type = internal/xkeyboard
     blacklist-0 = num lock
+    blacklist-1 = scroll lock
     format-prefix = " "
     format-prefix-foreground = ${colors.foreground}
     format-prefix-overline = ${colors.blue}
     label-layout = %layout%
     label-layout-foreground = ${colors.foreground}
     label-layout-overline = ${colors.blue}
-    label-indicator-on = %name%
-    label-indicator-foreground-on = ${colors.foreground}
-    label-indicator-overline-on = ${colors.red}
+    indicator-icon-0 = caps lock;;
+    label-indicator-on = %icon%
 
 # date
 [module/date]
