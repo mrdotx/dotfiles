@@ -1,0 +1,10 @@
+[Unit]
+Description=remove mouse cursor on keypress
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/sleep 5
+ExecStart=/usr/bin/xbanish
+
+[Install]
+WantedBy=default.target
