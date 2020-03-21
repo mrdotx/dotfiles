@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-21T13:24:32+0100
+# date:       2020-03-21T22:13:30+0100
 
 # wm
 [global/wm]
@@ -50,7 +50,7 @@
     cursor-click = pointer
     cursor-scroll = ns-resize
 
-[bar/i3_pri]
+[bar/i3_1_mon]
     inherit = bar/i3_gen
     bottom = false
     tray-position = right
@@ -59,13 +59,7 @@
     modules-left = i3 rss printer bluetooth gestures rss authentication firewall resolver vpnhades window
     modules-right = cmus alsa backlight wlansmall battery keyboard date powermenu
 
-[bar/i3_pri_btm]
-    inherit = bar/i3_gen
-    bottom = true
-    modules-left = cmus
-    modules-right = temp cpu ram ssd
-
-[bar/i3_sec]
+[bar/i3_2_mon_pri]
     inherit = bar/i3_gen
     bottom = false
     tray-position = right
@@ -74,7 +68,7 @@
     modules-left = i3_pin printer bluetooth gestures rss authentication firewall resolver vpnhades window
     modules-right = wlan alsa backlight battery keyboard date powermenu
 
-[bar/i3_sec_top]
+[bar/i3_2_mon_sec]
     inherit = bar/i3_gen
     bottom = false
     modules-left = i3_pin cmus
@@ -439,9 +433,9 @@
     label-layout = %layout%
     label-layout-foreground = ${colors.foreground}
     label-layout-overline = ${colors.blue}
-    label-indicator = %name%
-    label-indicator-foreground = ${colors.foreground}
-    label-indicator-overline = ${colors.red}
+    label-indicator-on = %name%
+    label-indicator-foreground-on = ${colors.foreground}
+    label-indicator-overline-on = ${colors.red}
 
 # date
 [module/date]
