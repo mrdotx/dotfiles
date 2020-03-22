@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-02T14:11:40+0100
+" date:       2020-03-22T19:00:07+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -53,7 +53,7 @@ function! ToggleNetrw()
         let g:NetrwIsOpen=0
     else
         let g:NetrwIsOpen=1
-        silent Lexplore!
+        silent Lexplore
     endif
 endfunction
 
