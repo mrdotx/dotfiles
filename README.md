@@ -15,12 +15,14 @@ found in my other repositories.
 | libinput-gestures | gestures on touchpad via libinput          |
 | mpv               | media player                               |
 | newsboat          | rss/atom feedreader                        |
+| nvim              | text editor ,ide                           |
 | picom             | compositor                                 |
 | polybar           | status bar                                 |
 | qutebrowser       | web browser                                |
 | ranger            | file manager                               |
 | rofi              | application launcher and dmenu replacement |
 | sxiv              | image viewser                              |
+| systemd           | units, timers and targets                  |
 | tmux              | terminal multiplexer                       |
 | youtube-dl        | youtube downloader                         |
 | zathura           | document viewer                            |
