@@ -1,6 +1,7 @@
 [Unit]
 Description=polybar status bars
 PartOf=default.target
+After=Screenlayout.service
 
 [Service]
 Type=forking

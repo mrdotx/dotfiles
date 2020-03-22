@@ -1,11 +1,11 @@
 [Unit]
 Description=picom compositor
 PartOf=default.target
-After=screenlayout.service
+After=nitrogen.service
 
 [Service]
 Type=forking
-ExecStartPre=/usr/bin/sleep 1
+ExecStartPre=/usr/bin/sleep 2
 ExecStart=/usr/bin/picom -b
 
 [Install]
