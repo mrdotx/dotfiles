@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-23T21:19:35+0100
+" date:       2020-03-23T23:20:15+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -15,7 +15,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'vim-syntastic/syntastic'
-    Plug 'tpope/vim-fugitive'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'vim-airline/vim-airline'
     Plug 'edkolev/tmuxline.vim'
@@ -24,26 +23,15 @@ call plug#end()
 " airline
 let g:airline_powerline_fonts=0
 let g:airline_theme='base16_klassiker'
-let g:airline_left_sep=''
-let g:airline_left_alt_sep=''
-let g:airline_right_sep=''
-let g:airline_right_alt_sep=''
+let g:airline#extensions#syntastic#enabled=1
+let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tmuxline#enabled=0
-let g:tmuxline_powerline_separators = 0
-let g:tmuxline_separators = {
-    \ 'left' : '',
-    \ 'left_alt': '',
-    \ 'right' : '',
-    \ 'right_alt' : '',
-    \ 'space' : ' '}
+let g:tmuxline_powerline_separators=0
 
 " colorizer
 lua require'colorizer'.setup()
 
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
