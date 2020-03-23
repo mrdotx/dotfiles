@@ -1,7 +1,7 @@
 ! path:       ~/.Xresources.conf
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-03-14T14:55:08+0100
+! date:       2020-03-23T12:18:07+0100
 
 ! general
 *background:                        #000000
@@ -77,8 +77,8 @@ Sxiv.background:                    #000000
 Sxiv.foreground:                    #ffffff
 
 ! urxvt
-URxvt*font:                         xft:DejaVuSansMono Nerd Font Mono:size=12:antialias=true:hinting=true
-URxvt*boldFont:                     xft:DejaVuSansMono Nerd Font Mono:bold:size=12:antialias=true:hinting=true
+URxvt*font:                         xft:DejaVu Sans Mono:size=12:antialias=true:hinting=true
+URxvt*boldFont:                     xft:DejaVu Sans Mono:bold:size=12:antialias=true:hinting=true
 URxvt*letterspacing:                -2
 
 URxvt*depth:                        32
@@ -117,6 +117,7 @@ URxvt.keysym.Shift-Control-Down:    \033[1;6B
 
 ! simple terminal
 st.alpha:                           0.90
-st.font:                            DejaVuSansMono Nerd Font Mono:size=12
+st.font:                            DejaVu Sans Mono:size=12
+st.fontalt0:                        JoyPixels:size 8
 st.termname:                        st-256color
 st.borderpx:                        2
