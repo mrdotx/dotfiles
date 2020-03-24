@@ -3,10 +3,10 @@
 # path:       ~/.zprofile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-21T20:32:23+0100
+# date:       2020-03-24T18:43:43+0100
 
-user_resources=$HOME/.Xresources
-user_modmap=$HOME/.Xmodmap
+user_resources=$HOME/.config/Xresources
+user_modmap=$HOME/.config/Xmodmap
 sys_resources=/etc/X11/xinit/.Xresources
 sys_modmap=/etc/X11/xinit/.Xmodmap
 
@@ -23,6 +23,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
         [ -x "$f" ] && . "$f"
     done
     unset f
+fi
+
+# gnupg ssh agent support
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
 # start graphical environment
