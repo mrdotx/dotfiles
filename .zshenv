@@ -1,7 +1,7 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-21T23:17:56+0100
+# date:       2020-03-24T18:48:59+0100
 
 # project paths
 typeset -U PATH path
@@ -33,10 +33,10 @@ export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export FONTCONFIG_PATH=/etc/fonts
 export FONTCONFIG_FILE=fonts.conf
+export KODI_DATA="$XDG_DATA_HOME/kodi"
 
 # app settings
-export SSH_AGENT_PID=
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+export GPG_TTY=$(tty)
 export RANGER_LOAD_DEFAULT_RC=false
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
@@ -58,7 +58,7 @@ export BROWSER="surf.sh"
 export TERMINALBROWSER="links"
 
 # history (same functionality as bash)
-export HISTFILE="$HOME/.cmd_history"
+export HISTFILE="$HOME/.local/share/cmd_history"
 export HISTSIZE=10000
 export SAVEHIST=5000
 
