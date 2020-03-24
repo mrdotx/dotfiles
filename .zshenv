@@ -1,11 +1,11 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-24T18:48:59+0100
+# date:       2020-03-24T20:28:25+0100
 
 # project paths
 typeset -U PATH path
-path=("$HOME/repos/cmus" "$HOME/repos/conky" "$HOME/repos/i3" "$HOME/repos/newsboat" "$HOME/repos/maintenance" "$HOME/repos/polybar" "$HOME/repos/python" "$HOME/repos/rclone" "$HOME/repos/rofi" "$HOME/repos/shell" "$HOME/repos/st" "$HOME/repos/stopwatch" "$HOME/repos/surf" "$HOME/repos/system" "$path[@]")
+path=("$HOME/.local/share/repos/cmus" "$HOME/.local/share/repos/conky" "$HOME/.local/share/repos/i3" "$HOME/.local/share/repos/newsboat" "$HOME/.local/share/repos/maintenance" "$HOME/.local/share/repos/polybar" "$HOME/.local/share/repos/python" "$HOME/.local/share/repos/rclone" "$HOME/.local/share/repos/rofi" "$HOME/.local/share/repos/shell" "$HOME/.local/share/repos/st" "$HOME/.local/share/repos/stopwatch" "$HOME/.local/share/repos/surf" "$HOME/.local/share/repos/system" "$path[@]")
 export PATH
 
 # systemd environment

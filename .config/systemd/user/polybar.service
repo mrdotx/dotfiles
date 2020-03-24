@@ -5,7 +5,7 @@ After=Screenlayout.service
 
 [Service]
 Type=forking
-ExecStart=%h/repos/polybar/polybar.sh
+ExecStart=%h/.local/share/repos/polybar/polybar.sh
 
 [Install]
 WantedBy=window-manager.target

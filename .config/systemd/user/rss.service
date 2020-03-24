@@ -5,7 +5,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=%h/repos/polybar/polybar_rss.sh
+ExecStart=%h/.local/share/repos/polybar/polybar_rss.sh
 
 [Install]
 WantedBy=default.target
