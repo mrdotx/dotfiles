@@ -1,7 +1,7 @@
-# path:       ~/.bashrc
+# path:       ~/.config/bash/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T21:20:27+0100
+# date:       2020-03-24T23:14:28+0100
 
 # aliases
 shopt -s expand_aliases # expand aliases in non interactive shell
