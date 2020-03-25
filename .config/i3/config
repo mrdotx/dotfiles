@@ -1,7 +1,7 @@
 # path:       ~/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-24T23:37:00+0100
+# date:       2020-03-25T15:42:51+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -225,10 +225,10 @@ bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit sho
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
 
 # picom restart
-bindsym $sup+shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
+bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
 
 # polybar restart
-bindsym $sup+shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
+bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
 
 # keybindings multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
