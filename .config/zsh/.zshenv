@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-25T10:30:14+0100
+# date:       2020-03-25T12:42:11+0100
 
 # project paths
 typeset -U PATH path
@@ -23,7 +23,8 @@ export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
 # config paths
-export XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority"
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+export XAUTHORITY="$XDG_DATA_HOME/X11/Xauthority"
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"

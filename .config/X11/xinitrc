@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# path:       ~/.zprofile
+# path:       ~/.config/X11/xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-24T18:43:43+0100
+# date:       2020-03-25T12:35:00+0100
 
-user_resources=$HOME/.config/Xresources
-user_modmap=$HOME/.config/Xmodmap
+user_resources=$HOME/.config/X11/Xresources
+user_modmap=$HOME/.config/X11/Xmodmap
 sys_resources=/etc/X11/xinit/.Xresources
 sys_modmap=/etc/X11/xinit/.Xmodmap
 
