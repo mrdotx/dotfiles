@@ -1,7 +1,7 @@
 ! path:       ~/.config/X11/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-03-27T10:19:51+0100
+! date:       2020-03-27T12:22:11+0100
 
 ! general
 *background:                        #000000
@@ -76,7 +76,14 @@ Sxiv.font:                          Source Sans Pro:size=8
 Sxiv.background:                    #000000
 Sxiv.foreground:                    #ffffff
 
-! urxvt
+! simple terminal
+st.alpha:                           0.90
+st.font:                            DejaVu Sans Mono:size=12
+st.fontalt0:                        JoyPixels:size 8
+st.termname:                        st-256color
+st.borderpx:                        2
+
+! rxvt-unicode
 URxvt*font:                         xft:DejaVu Sans Mono:size=12,xft:JoyPixels:size=8
 URxvt*boldFont:                     xft:DejaVu Sans Mono:bold:size=12
 
@@ -89,16 +96,17 @@ URxvt*cursorBlink:                  true
 URxvt*saveLines:                    5000
 
 ! perl extensions
-URxvt.perl-ext:                     default,matcher
+URxvt.perl-ext:                     default,clipboard,matcher
 
+! copy to primary
+URxvt.clipboard.autocopy:           true
+URxvt.keysym.M-c:                   perl:clipboard:copy
+URxvt.keysym.M-v:                   perl:clipboard:paste
+
+! url open with matcher
+URxvt.url-launcher:                 /usr/bin/xdg-open
 URxvt.keysym.C-Delete:              perl:matcher:last
 URxvt.keysym.M-Delete:              perl:matcher:list
+URxvt.matcher.button:               1
 URxvt.matcher.rend.0:               Uline Bold fg5
 URxvt.colorUL:                      #4185d7
-
-! simple terminal
-st.alpha:                           0.90
-st.font:                            DejaVu Sans Mono:size=12
-st.fontalt0:                        JoyPixels:size 8
-st.termname:                        st-256color
-st.borderpx:                        2
