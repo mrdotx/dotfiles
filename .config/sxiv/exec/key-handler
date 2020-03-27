@@ -3,7 +3,7 @@
 # path:       ~/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-07T10:07:45+0100
+# date:       2020-03-27T17:28:49+0100
 
 # rotate function
 rotate() {
@@ -31,7 +31,6 @@ flip() {
     done
 }
 
-
 # trash function
 trash() {
     tr '\n' '\0' | xargs -0 realpath | sort -u | while read -r file; do
@@ -44,7 +43,7 @@ trash() {
 # keybindings
 case "$1" in
     "C-e")          while read -r file; do $TERMINAL -T "$file" -e sh -c "exiftool '$file' | less" & done ;;
-    "C-w")          while read -r file; do nitrogen --save --set-zoom-fill "$file" & done && notify-send "sxiv" "wallpaper changed" --icon=messagebox_info ;;
+    "C-w")          while read -r file; do wallpaper.sh "$file" & done ;;
     "C-g")          tr '\n' '\0' | xargs -0 gimp & ;;
     "C-n")          tr '\n' '\0' | xargs -0 nomacs & ;;
     "C-comma")      rotate 270 ;;
