@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-06T21:20:54+0100
+# date:       2020-03-27T10:17:39+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -67,8 +67,3 @@ bindkey '^[[B' history-substring-search-down
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-
-# autostart
-if [[ ! "$TERM" =~ ^(st-256color|tmux-256color|linux)$ ]]; then
-    tx
-fi
