@@ -1,7 +1,7 @@
 # path:       ~/.config/zsh/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-25T12:42:11+0100
+# date:       2020-03-27T11:30:25+0100
 
 # project paths
 typeset -U PATH path
@@ -55,7 +55,6 @@ export FILE="ranger"
 export PAGER="less"
 export READER="zathura"
 export BROWSER="surf.sh"
-export TERMINALBROWSER="links"
 
 # history (same functionality as bash)
 export HISTFILE="$HOME/.local/share/cmd_history"
