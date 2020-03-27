@@ -1,7 +1,7 @@
 [Unit]
 Description=picom compositor
 PartOf=default.target
-After=nitrogen.service
+After=xwallpaper.service
 
 [Service]
 Type=forking
