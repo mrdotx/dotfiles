@@ -1,11 +1,11 @@
 [Unit]
-Description=nitrogen wallpaper management
+Description=set wallpaper with xwallpaper
 PartOf=default.target
 After=screenlayout.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/nitrogen --restore
+ExecStart=/usr/bin/xwallpaper --zoom %h/.local/share/wallpaper.jpg
 
 [Install]
 WantedBy=window-manager.target
