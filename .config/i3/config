@@ -1,7 +1,7 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-29T00:33:30+0100
+# date:       2020-03-29T00:43:10+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -278,4 +278,4 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # start systemd target
 exec --no-startup-id systemctl --user start window-manager.target
-exec_always --no-startup-id systemctl --user start polybar.service
+exec --no-startup-id systemctl --user start polybar.service
