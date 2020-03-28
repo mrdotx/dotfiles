@@ -1,7 +1,7 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-27T17:22:06+0100
+# date:       2020-03-29T00:33:30+0100
 
 # i3 config file (v4)
 set $sup Mod4
@@ -219,6 +219,7 @@ bindsym $sup+Shift+r restart
 
 # exit i3 (logs you out of your x session)
 bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 
 # dunst restart
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
@@ -277,3 +278,4 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # start systemd target
 exec --no-startup-id systemctl --user start window-manager.target
+exec_always --no-startup-id systemctl --user start polybar.service
