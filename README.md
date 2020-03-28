@@ -11,6 +11,7 @@ found in my other repositories.
 | cmus              | music player                               |
 | conky             | infotainment system monitor                |
 | dunst             | notification daemon                        |
+| dwm               | dynamic window manager                     |
 | i3                | tiling window manager                      |
 | libinput-gestures | gestures on touchpad via libinput          |
 | mpv               | media player                               |
