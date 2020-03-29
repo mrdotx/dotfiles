@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-22T00:23:16+0100
+# date:       2020-03-29T13:51:17+0200
 
 # wm
 [global/wm]
@@ -56,7 +56,7 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3_upin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
     modules-right = cmus alsa xbacklight wlansmall battery xkeyboard date powermenu
 
 [bar/i3_2_mon_pri]
@@ -65,19 +65,18 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3_pin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
     modules-right = wlan alsa xbacklight battery xkeyboard date powermenu
 
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
     bottom = false
-    modules-left = i3 cmus
+    modules-left = i3_pin cmus
     modules-right = temp cpu ram ssd
 
 # i3
-[module/i3]
+[module/i3_generell]
     type = internal/i3
-    pin-workspaces = true
     index-sort = true
     enable-click = true
     enable-scroll = true
@@ -116,6 +115,14 @@
     label-urgent-background = ${colors.red}
     label-urgent-overline = ${colors.red}
     label-urgent-padding = 1
+
+[module/i3_pin]
+    inherit = module/i3_generell
+    pin-workspaces = true
+
+[module/i3_upin]
+    inherit = module/i3_generell
+    pin-workspaces = false
 
 # wlan
 [module/wlan_generell]
