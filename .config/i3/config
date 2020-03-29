@@ -1,7 +1,11 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-29T00:43:10+0100
+# date:       2020-03-29T12:28:42+0200
+
+###############################################################################
+# generell config                                                             #
+###############################################################################
 
 # i3 config file (v4)
 set $sup Mod4
@@ -42,6 +46,10 @@ client.urgent           $dgrey  $red    $white  $red    $red
 client.placeholder      $black  $dgrey  $white  $black  $dgrey
 client.background       $white
 
+###############################################################################
+# application windows                                                         #
+###############################################################################
+
 # floating applications
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
 for_window [title="floating" instance="st"] floating enable, resize set $res, move position center
@@ -68,6 +76,10 @@ for_window [class="gmic_qt"] floating enable, move position center
 
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
+
+###############################################################################
+# Workspace                                                                   #
+###############################################################################
 
 # workspace names
 set $ws1 1
@@ -108,7 +120,95 @@ assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
 assign [class="Kodi"] $ws10
 
-# keybindings workspaces
+###############################################################################
+# keybindings system managment                                                #
+###############################################################################
+
+# start program launcher
+bindsym Super_L --release exec --no-startup-id "rofi -monitor -1 -show"
+
+# window switcher
+bindsym $sup+Tab exec --no-startup-id "rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons"
+
+# kill focused window
+bindsym Ctrl+q kill
+
+# x window kill
+bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
+
+# toggle fullscreen mode for the focused container or global
+bindsym $sup+f fullscreen toggle
+bindsym $sup+Shift+f fullscreen toggle global
+
+# Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
+bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -lock simple"
+bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -suspend"
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $sup+Shift+r restart
+
+# exit i3 (logs you out of your x session)
+bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
+
+# dunst restart
+bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
+
+# picom restart
+bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
+
+# polybar restart
+bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
+
+
+###############################################################################
+# keybindings windows/container                                               #
+###############################################################################
+
+# split orientation
+#bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
+#bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
+bindsym $sup+Ctrl+Up exec --no-startup-id "i3_tiling.sh"
+bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
+
+# change focus
+bindsym $sup+Left focus left
+bindsym $sup+Right focus right
+bindsym $sup+Up focus up
+bindsym $sup+Down focus down
+
+# move focused window
+bindsym $sup+Shift+Left move left 25 px
+bindsym $sup+Shift+Right move right 25 px
+bindsym $sup+Shift+Up move up 25 px
+bindsym $sup+Shift+Down move down 25 px
+
+# resize window
+bindsym $sup+$alt+Left resize shrink width 25 px or 5 ppt
+bindsym $sup+$alt+Right resize grow width 25 px or 5 ppt
+bindsym $sup+$alt+Up resize shrink height 25 px or 5 ppt
+bindsym $sup+$alt+Down resize grow height 25 px or 5 ppt
+
+# toggle tiling/floating
+bindsym $alt+space floating toggle
+
+# change focus between tiling/floating windows
+bindsym $sup+space focus mode_toggle
+
+# toggle sticky
+bindsym $sup+Shift+s sticky toggle
+
+# move the currently focused window to the scratchpad
+bindsym $sup+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $alt+minus scratchpad show
+
+###############################################################################
+# keybindings workspaces                                                      #
+###############################################################################
+
 # switch to workspace
 bindsym $sup+1 workspace $ws1
 bindsym $sup+2 workspace $ws2
@@ -152,85 +252,10 @@ bindsym $alt+Tab workspace back_and_forth
 bindsym $sup+Ctrl+Left workspace prev
 bindsym $sup+Ctrl+Right workspace next
 
-# keybindings windows/container
-# split orientation
-#bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
-#bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
-bindsym $sup+Ctrl+Up exec --no-startup-id "i3_tiling.sh"
-bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
+###############################################################################
+# keybindings xf86 keys                                                       #
+###############################################################################
 
-# change focus
-bindsym $sup+Left focus left
-bindsym $sup+Right focus right
-bindsym $sup+Up focus up
-bindsym $sup+Down focus down
-
-# move focused window
-bindsym $sup+Shift+Left move left 25 px
-bindsym $sup+Shift+Right move right 25 px
-bindsym $sup+Shift+Up move up 25 px
-bindsym $sup+Shift+Down move down 25 px
-
-# resize window
-bindsym $sup+$alt+Left resize shrink width 25 px or 5 ppt
-bindsym $sup+$alt+Right resize grow width 25 px or 5 ppt
-bindsym $sup+$alt+Up resize shrink height 25 px or 5 ppt
-bindsym $sup+$alt+Down resize grow height 25 px or 5 ppt
-
-# toggle tiling/floating
-bindsym $alt+space floating toggle
-
-# change focus between tiling/floating windows
-bindsym $sup+space focus mode_toggle
-
-# toggle sticky
-bindsym $sup+Shift+s sticky toggle
-
-# move the currently focused window to the scratchpad
-bindsym $sup+minus move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $alt+minus scratchpad show
-
-# keybindings system managment
-# start program launcher
-bindsym Super_L --release exec --no-startup-id "rofi -monitor -1 -show"
-
-# window switcher
-bindsym $sup+Tab exec --no-startup-id "rofi -monitor -1 -lines 10 -theme klassiker-center -modi window -show window -show-icons"
-
-# kill focused window
-bindsym Ctrl+q kill
-
-# x window kill
-bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
-
-# toggle fullscreen mode for the focused container or global
-bindsym $sup+f fullscreen toggle
-bindsym $sup+Shift+f fullscreen toggle global
-
-# Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
-bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -lock simple"
-bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_knockout.sh -suspend"
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $sup+Shift+r restart
-
-# exit i3 (logs you out of your x session)
-bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
-
-# dunst restart
-bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
-
-# picom restart
-bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
-
-# polybar restart
-bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
-
-# keybindings multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
 bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
@@ -238,11 +263,19 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -time 200 -steps 10
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -time 200 -steps 10 -dec 5"
 bindsym XF86Cut exec --no-startup-id "xsel.sh"
 bindsym $sup+p exec --no-startup-id "rofi_display.sh"
+
+###############################################################################
+# keybindings screenshot                                                      #
+###############################################################################
+
 bindsym Print exec --no-startup-id "i3_tiling.sh scrot.sh -desk"
 bindsym $sup+Print exec --no-startup-id "i3_tiling.sh scrot.sh -window"
 bindsym $sup+Shift+Print exec --no-startup-id "sleep 1 && i3_tiling.sh scrot.sh -select"
 
-# keybindings applications
+###############################################################################
+# keybindings applications                                                    #
+###############################################################################
+
 bindsym $sup+Return exec --no-startup-id "i3_tiling.sh $TERMINAL"
 bindsym $sup+Shift+Return exec --no-startup-id "i3_tiling.sh urxvtc.sh"
 
@@ -276,6 +309,9 @@ bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokum
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
-# start systemd target
+###############################################################################
+# start systemd target                                                        #
+###############################################################################
+
 exec --no-startup-id systemctl --user start window-manager.target
 exec --no-startup-id systemctl --user start polybar.service
