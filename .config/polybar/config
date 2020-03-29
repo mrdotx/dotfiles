@@ -1,7 +1,7 @@
 # path:       ~/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-29T13:51:17+0200
+# date:       2020-03-29T17:25:38+0200
 
 # wm
 [global/wm]
@@ -25,9 +25,10 @@
     red = ${xrdb:color9:#ff5555}
     yellow = ${xrdb:color3:#b0b200}
 
-# i3
+# bar i3
 [bar/i3_gen]
     monitor = ${env:MONITOR:eDP1}
+    bottom = false
     width = 100%
     height = 26
     radius = 0.0
@@ -52,7 +53,6 @@
 
 [bar/i3_1_mon]
     inherit = bar/i3_gen
-    bottom = false
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
@@ -61,22 +61,21 @@
 
 [bar/i3_2_mon_pri]
     inherit = bar/i3_gen
-    bottom = false
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3_pin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
     modules-right = wlan alsa xbacklight battery xkeyboard date powermenu
 
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
-    bottom = false
-    modules-left = i3_pin cmus
+    modules-left = i3 cmus
     modules-right = temp cpu ram ssd
 
-# i3
-[module/i3_generell]
+# module i3
+[module/i3]
     type = internal/i3
+    pin-workspaces = true
     index-sort = true
     enable-click = true
     enable-scroll = true
@@ -116,17 +115,14 @@
     label-urgent-overline = ${colors.red}
     label-urgent-padding = 1
 
-[module/i3_pin]
-    inherit = module/i3_generell
-    pin-workspaces = true
-
 [module/i3_upin]
-    inherit = module/i3_generell
+    inherit = module/i3
     pin-workspaces = false
 
 # wlan
-[module/wlan_generell]
+[module/wlan]
     type = internal/network
+    interval = 3.0
     interface = wlan0
     format-connected-prefix = " "
     format-connected = <label-connected>
@@ -139,13 +135,8 @@
     label-disconnected = %ifname% disconnected
     label-disconnected-foreground = ${colors.foreground}
 
-[module/wlan]
-    inherit = module/wlan_generell
-    interval = 3.0
-    label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
-
 [module/wlansmall]
-    inherit = module/wlan_generell
+    inherit = module/wlan
     interval = 30.0
     label-connected = %signal%% %essid%
 
@@ -164,7 +155,7 @@
     label-muted-foreground = ${colors.red}
     label-muted-overline = ${colors.red}
     bar-volume-width = 20
-    bar-volume-fill = ı
+    bar-volume-fill = |
     bar-volume-fill-foreground = ${colors.blue}
     bar-volume-indicator = |
     bar-volume-empty = ı
@@ -418,7 +409,7 @@
     label = %percentage%%
     label-foreground = ${colors.foreground}
     bar-width = 20
-    bar-fill = ı
+    bar-fill = |
     bar-fill-foreground = ${colors.blue}
     bar-indicator = |
     bar-empty = ı
