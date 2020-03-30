@@ -1,0 +1,11 @@
+[Unit]
+Description=i3 optimal tiling
+PartOf=default.target
+After=Screenlayout.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/repos/i3/i3_tiling.sh
+
+[Install]
+WantedBy=window-manager.target
