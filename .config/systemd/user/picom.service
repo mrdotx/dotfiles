@@ -5,7 +5,7 @@ After=xwallpaper.service
 
 [Service]
 Type=forking
-ExecStartPre=/usr/bin/sleep 2
+ExecStartPre=/usr/bin/sleep 1
 ExecStart=/usr/bin/picom -b
 
 [Install]
