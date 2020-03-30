@@ -1,10 +1,10 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-30T13:17:17+0200
+# date:       2020-03-30T22:02:41+0200
 
 ###############################################################################
-# generell config                                                             #
+# generell config
 ###############################################################################
 
 # i3 config file (v4)
@@ -13,6 +13,32 @@ set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
 set $res 1024 768
+
+# colors
+set_from_resource $black i3wm.color0 #000000
+set_from_resource $blackb i3wm.color8 #333333
+set_from_resource $red i3wm.color1 #fe0000
+set_from_resource $redb i3wm.color9 #ff5555
+set_from_resource $green i3wm.color2 #00b200
+set_from_resource $greenb i3wm.color10 #00ff00
+set_from_resource $yellow i3wm.color3 #b0b200
+set_from_resource $yellowb i3wm.color11 #ffff55
+set_from_resource $blue i3wm.color4 #1f5393
+set_from_resource $blueb i3wm.color12 #4084d6
+set_from_resource $purple i3wm.color5 #980096
+set_from_resource $purpleb i3wm.color13 #ff55ff
+set_from_resource $cyan i3wm.color6 #009698
+set_from_resource $cyanb i3wm.color14 #55ffff
+set_from_resource $white i3wm.color7 #cccccc
+set_from_resource $whiteb i3wm.color15 #ffffff
+
+# class                 border   backgr.  text     indi.    child
+client.focused          $blueb   $green   $whiteb  $whiteb  $greenb
+client.focused_inactive $blackb  $blackb  $whiteb  $blackb  $blackb
+client.unfocused        $blackb  $black   $blackb  $blackb  $black
+client.urgent           $blackb  $redb    $whiteb  $redb    $redb
+client.placeholder      $black   $blackb  $whiteb  $black   $blackb
+client.background       $whiteb
 
 floating_modifier $sup
 focus_follows_mouse no
@@ -27,27 +53,8 @@ gaps outer -2
 smart_gaps on
 smart_borders on
 
-# colors
-set $white #ffffff
-set $red #ff5555
-set $lblue #4185d7
-set $blue #4084d6
-set $dblue #3476a4
-set $lgrey #555555
-set $grey #333333
-set $dgrey #111111
-set $black #000000
-
-# class                 border  backgr. text    indi.   child
-client.focused          $blue   $lblue  $white  $white  $dblue
-client.focused_inactive $grey   $grey   $white  $lgrey  $grey
-client.unfocused        $grey   $black  $lgrey  $grey   $black
-client.urgent           $dgrey  $red    $white  $red    $red
-client.placeholder      $black  $dgrey  $white  $black  $dgrey
-client.background       $white
-
 ###############################################################################
-# application windows                                                         #
+# application windows
 ###############################################################################
 
 # floating applications
@@ -78,7 +85,7 @@ for_window [class="gmic_qt"] floating enable, move position center
 for_window [class="Kodi"] fullscreen
 
 ###############################################################################
-# Workspace                                                                   #
+# workspace
 ###############################################################################
 
 # workspace names
@@ -121,7 +128,7 @@ assign [class="Jameica"] $ws9
 assign [class="Kodi"] $ws10
 
 ###############################################################################
-# keybindings system managment                                                #
+# keybindings system managment
 ###############################################################################
 
 # start program launcher
@@ -161,7 +168,7 @@ bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.servic
 bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
 
 ###############################################################################
-# keybindings windows/container                                               #
+# keybindings windows/container
 ###############################################################################
 
 # split orientation
@@ -205,7 +212,7 @@ bindsym $sup+minus move scratchpad
 bindsym $alt+minus scratchpad show
 
 ###############################################################################
-# keybindings workspaces                                                      #
+# keybindings workspaces
 ###############################################################################
 
 # switch to workspace
@@ -252,7 +259,7 @@ bindsym $sup+Ctrl+Left workspace prev
 bindsym $sup+Ctrl+Right workspace next
 
 ###############################################################################
-# keybindings xf86 keys                                                       #
+# keybindings xf86 keys
 ###############################################################################
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
@@ -264,7 +271,7 @@ bindsym XF86Cut exec --no-startup-id "xsel.sh"
 bindsym $sup+p exec --no-startup-id "rofi_display.sh"
 
 ###############################################################################
-# keybindings screenshot                                                      #
+# keybindings screenshot
 ###############################################################################
 
 bindsym Print --release exec --no-startup-id "i3_tiling.sh scrot.sh -desk"
@@ -272,7 +279,7 @@ bindsym $sup+Print --release exec --no-startup-id "i3_tiling.sh scrot.sh -window
 bindsym $sup+Shift+Print --release exec --no-startup-id "sleep 1 && i3_tiling.sh scrot.sh -select"
 
 ###############################################################################
-# keybindings applications                                                    #
+# keybindings applications
 ###############################################################################
 
 bindsym $sup+Return exec --no-startup-id "i3_tiling.sh $TERMINAL"
@@ -309,7 +316,7 @@ bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokum
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 ###############################################################################
-# start systemd target                                                        #
+# start systemd target
 ###############################################################################
 
 exec --no-startup-id systemctl --user start window-manager.target
