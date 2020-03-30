@@ -4,6 +4,7 @@ PartOf=default.target
 
 [Service]
 Type=oneshot
+RemainAfterExit=yes
 ExecStart=%h/.local/share/repos/system/screenlayout.sh
 
 [Install]

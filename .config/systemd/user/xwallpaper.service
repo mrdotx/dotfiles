@@ -5,6 +5,7 @@ After=screenlayout.service
 
 [Service]
 Type=oneshot
+RemainAfterExit=yes
 ExecStart=/usr/bin/xwallpaper --zoom %h/.local/share/wallpaper.jpg
 
 [Install]
