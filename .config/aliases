@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-25T13:22:58+0100
+# date:       2020-03-31T22:30:37+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -22,7 +22,7 @@ alias cp='cp -i'
 alias nf='neofetch'
 
 alias rg='. ranger'
-alias rs='sudo ranger'
+alias rs='doas ranger'
 alias xn='vim $HOME/Dokumente/Notes/index.md'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 alias we='weechat'
@@ -35,16 +35,16 @@ alias cv20='curl "https://corona-stats.online?source=1&top=20"'
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
 alias up='yay -Syu --devel'
-alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
+alias mu='doas -- pacman-mirrors -c Germany && doas -- pacman -Syyu'
 alias cu='ch && up'
-alias cc='yay -Yc && sudo paccache -rvk2 && sudo paccache -ruk0'
+alias cc='yay -Yc && doas -- paccache -rvk2 && doas -- paccache -ruk0'
 alias sc='system_cleanup.sh'
 alias cs='cc && sc'
 
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
-alias dm='sudo delete_metafiles.sh'
+alias dm='doas delete_metafiles.sh'
 
 # ssh
 alias pi='ssh hermes'
