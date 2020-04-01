@@ -25,6 +25,7 @@ found in my other repositories.
 | sxiv              | image viewser                              |
 | systemd           | units, timers and targets                  |
 | tmux              | terminal multiplexer                       |
+| X11               | x window system                            |
 | youtube-dl        | youtube downloader                         |
 | zathura           | document viewer                            |
 | zsh               | shell                                      |
