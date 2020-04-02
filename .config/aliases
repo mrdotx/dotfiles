@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-02T13:30:05+0200
+# date:       2020-04-02T19:09:46+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -22,7 +22,7 @@ alias cp='cp -i'
 alias nf='neofetch'
 
 alias rg='. ranger'
-alias rs='sudo ranger'
+alias rs='sudo -E ranger'
 alias xn='vim $HOME/Dokumente/Notes/index.md'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 alias we='weechat'
@@ -44,7 +44,7 @@ alias cs='cc && sc'
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
-alias dm='sudo delete_metafiles.sh'
+alias dm='sudo -E delete_metafiles.sh'
 
 # ssh
 alias pi='ssh hermes'
