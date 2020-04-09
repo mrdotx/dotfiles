@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=chameleon
+Comment=choose colors from the screen and show hex value
+Icon=preferences-color
+Exec=st -T "chameleon" -e terminal_wrapper.sh chameleon
+Actions=
+Categories=Utility;Graphics
