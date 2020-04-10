@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-02T19:09:46+0200
+# date:       2020-04-10T18:58:35+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -34,7 +34,7 @@ alias cv20='curl "https://corona-stats.online?source=1&top=20"'
 
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
-alias up='yay -Syu --devel'
+alias up='yay -Syu --devel --needed'
 alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
 alias cu='ch && up'
 alias cc='yay -Yc && sudo paccache -rvk2 && sudo paccache -ruk0'
