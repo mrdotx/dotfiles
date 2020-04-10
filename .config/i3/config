@@ -1,7 +1,7 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-09T18:13:36+0200
+# date:       2020-04-10T12:32:08+0200
 
 ###############################################################################
 # generell config
@@ -64,7 +64,6 @@ for_window [title="alsamixer" instance="st"] floating enable, move position cent
 for_window [title="calculator" instance="st"] floating enable, resize set $res, move position center
 for_window [title="network manager" instance="st"] floating enable, resize set $res, move position center
 for_window [title="cdw" instance="st"] floating enable, resize set $res, move position center
-for_window [title="chameleon" instance="st"] floating enable, resize set $res, move position center
 for_window [title="File Transfer*"] floating enable, move position center
 for_window [title="stopwatch floating"] floating enable, resize set 250 500, move position center
 
