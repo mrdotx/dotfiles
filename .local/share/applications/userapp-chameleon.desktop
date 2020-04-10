@@ -4,6 +4,6 @@ Type=Application
 Name=chameleon
 Comment=pick colors from screen and show hex value
 Icon=preferences-color
-Exec=st -T "chameleon" -e terminal_wrapper.sh chameleon
+Exec=chameleon.sh
 Actions=
 Categories=Utility;Graphics
