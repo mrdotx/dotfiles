@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-10T18:58:35+0200
+# date:       2020-04-14T14:41:22+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -30,7 +30,7 @@ alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'
 alias wt='curl -H "Accept-Language: de" wttr.in'
 alias sw='telnet towel.blinkenlights.nl'
-alias cv20='curl "https://corona-stats.online?source=1&top=20"'
+alias cv25='curl "https://corona-stats.online?top=25&source=1&minimal=true"'
 
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
