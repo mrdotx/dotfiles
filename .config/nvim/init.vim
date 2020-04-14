@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-14T07:41:56+0200
+" date:       2020-04-14T09:08:56+0200
 
 " leader is comma
 let mapleader=","
@@ -82,6 +82,8 @@ source ~/.config/nvim/netrw.vim
 source ~/.config/nvim/dev.vim
 
 " automatic actions
+" enable spell check
+autocmd FileType tex,latex,markdown setlocal spell spelllang=en_us,de_de
 " run xrdb whenever Xresources are updated.
 autocmd BufWritePost *Xresources !xrdb -merge %
 
@@ -97,7 +99,7 @@ nnoremap    <silent>    <leader>b           :bprevious<CR>
 nnoremap    <silent>    <leader><space>     :nohlsearch<CR>
 " show hidden characters
 map                     <leader>l           :set list! list?<CR>
-" spell-check, shellcheck, syntastic
+" spell check, shell check, syntastic
 map                     <leader>d           :setlocal spell! spelllang=de_de<CR>
 map                     <leader>e           :setlocal spell! spelllang=en_us<CR>
 map         <silent>    <leader>s           :vs term://shellcheck -s sh %<CR>
