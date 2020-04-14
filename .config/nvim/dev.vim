@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-01T22:23:21+0100
+" date:       2020-04-14T07:35:22+0200
 
 " enable all python syntax highlighting features
 let python_highlight_all=1
@@ -14,10 +14,8 @@ set foldlevel=99
 set encoding=utf-8
 " disables automatic commenting on newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
-" highlight extra white space
-:highlight ExtraWhitespace ctermbg=red guibg=red
-" mark extra white space as bad and color it red
-autocmd BufRead,BufNewFile *.sh,*.py,*.pyw,*.c,*.h match ExtraWhitespace /\s\+$/
+" mark extra white space
+autocmd BufNewFile,BufRead * match ExtraWhitespace /\s\+$/
 
 " style guide
 " number of visual spaces per TAB

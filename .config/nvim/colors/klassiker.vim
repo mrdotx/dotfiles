@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/colors/klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-02-03T13:59:54+0100
+" date:       2020-04-14T07:40:05+0200
 
 set background=dark
 hi clear
@@ -85,18 +85,12 @@ hi Folded guifg=#778899 guibg=#211F1C gui=NONE ctermfg=103 ctermbg=00 cterm=NONE
 hi FoldColumn guifg=NONE guibg=#211F1C gui=NONE ctermfg=NONE ctermbg=00 cterm=NONE
 
 " cursor colors
-hi ColorColumn guifg=NONE guibg=#383A3E gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
-hi CursorColumn guifg=NONE guibg=#383A3E gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
-hi CursorLine guifg=NONE guibg=#383A3E gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
+hi ColorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
+hi CursorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
+hi CursorLine guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi Cursor guifg=#111111 guibg=#F8F8F8 gui=NONE ctermfg=233 ctermbg=15 cterm=NONE
 hi Visual guifg=NONE guibg=#49483E gui=NONE ctermfg=NONE ctermbg=59 cterm=NONE
 hi MatchParen guifg=#111111 guibg=#B0B200 gui=NONE ctermfg=233 ctermbg=185 cterm=NONE
-
-if has("nvim")
-  " neovim terminal
-  hi TermCursor guifg=#111111 guibg=#F8F8F8 gui=NONE ctermfg=233 ctermbg=15 cterm=NONE
-  hi TermCursorNC guifg=#111111 guibg=#778899 gui=NONE ctermfg=233 ctermbg=103 cterm=NONE
-endif
 
 " general highlighting
 hi Constant guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
@@ -130,115 +124,10 @@ hi Underlined guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=N
 hi Ignore guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Todo guifg=#F8F8F8 guibg=#111111 gui=bold ctermfg=15 ctermbg=233 cterm=bold
 hi Error guifg=#F8F8F8 guibg=#960020 gui=NONE ctermfg=15 ctermbg=88 cterm=NONE
+hi ExtraWhitespace guifg=#960020 guibg=#960020 gui=NONE ctermfg=88 ctermbg=88 cterm=NONE
 
-function! s:cppFiletype()
-  " vim-cpp-enhanced-highlight syntax
-  hi cppSTLnamespace guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi cppSTLtype guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi cppModifier guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-endfunction
-
-function! s:jsFiletype()
-  " vim-javascript syntax
-  hi jsStorageClass guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsOperator guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsBooleanTrue guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi jsBooleanFalse guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi jsModules guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsModuleWords guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsOf guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsArgsObj guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsImportContainer guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsExportContainer guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsCommentTodo guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsLineComment guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
-  hi jsEnvComment guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
-  hi jsCvsTag guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
-  hi jsComment guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
-  hi jsBlockComment guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
-  hi jsDocTags guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsDocType guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsDocTypeNoParam guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsDocParam guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsDocSeeTag guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
-  hi jsTemplateVar guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsStringD guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsStringS guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsTemplateString guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsTemplateBraces guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi jsTaggedTemplate guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpCharClass guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpBoundary guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpBackRef guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpQuantifier guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpOr guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpMod guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpSpecial guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpGroup guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsRegexpString guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsNumber guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi jsFloat guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi jsObjectKey guifg=#B0B200 guibg=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
-  hi jsFunctionKey guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi jsDecorator guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi jsDecoratorFunction guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi jsStatement guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsConditional guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsRepeat guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsLabel guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsKeyword guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsClass guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsAsyncKeyword guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsGlobalObjects guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsGlobalNodeObjects guifg=#009698 guibg=NONE gui=italic ctermfg=81 ctermbg=NONE cterm=italic
-  hi jsThis guifg=#009698 guibg=NONE gui=italic ctermfg=81 ctermbg=NONE cterm=italic
-  hi jsExceptions guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsBuiltins guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsFutureKeys guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsHtmlEvents guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsTernaryIfOperator guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsGenerator guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsFuncName guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi jsFuncArgs guifg=#FD971F guibg=NONE gui=NONE ctermfg=208 ctermbg=NONE cterm=NONE
-  hi jsFuncArgRest guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi jsArrowFunction guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-  hi jsFuncCall guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-
-  " custom syntax
-  hi javaScriptMethodCallWithoutArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptMethodCallWithArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptStaticFunctionWithArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptStaticFunctionWithoutArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptFunctionCallWithArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptFunctionCallWithoutArgs guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
-  hi javaScriptArrowFunction guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
-endfunction
-
-function! s:jsonFiletype()
-  " json syntax
-  hi jsonNull guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi jsonKeyword guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-  hi jsonPadding guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-  hi jsonBraces guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-endfunction
-
-function! s:pursFiletype()
-  " purescript syntax
-  hi purescriptImportKeyword guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi purescriptConstructor guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi purescriptConstructorDecl guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi purescriptTypeAlias guifg=#AE81FF guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE
-  hi purescriptModuleKeyword guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi purescriptWhere guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi purescriptData guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-  hi purescriptTypeVar guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-  hi purescriptDelimiter guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
-endfunction
-
-augroup FILETYPE_LOADER
-  au!
-  au Filetype purs call <SID>pursFiletype()
-  au Filetype cpp call <SID>cppFiletype()
-  au Filetype json call <SID>jsonFiletype()
-  au Filetype javascript call <SID>jsFiletype()
-augroup END
+if has("nvim")
+  " neovim terminal
+  hi TermCursor guifg=#111111 guibg=#F8F8F8 gui=NONE ctermfg=233 ctermbg=15 cterm=NONE
+  hi TermCursorNC guifg=#111111 guibg=#778899 gui=NONE ctermfg=233 ctermbg=103 cterm=NONE
+endif

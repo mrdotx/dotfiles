@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-15T12:17:56+0100
+" date:       2020-04-14T07:41:56+0200
 
 " leader is comma
 let mapleader=","
@@ -38,6 +38,8 @@ set number relativenumber
 set showcmd
 " highlight current line
 "set cursorline
+" highlight current column
+"set cursorcolumn
 " to ward off unexpected things
 set nocompatible
 " visual autocomplete for command menu
@@ -51,8 +53,6 @@ set showmatch
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 " splits open at the bottom and right
 set splitbelow splitright
-" run xrdb whenever Xresources are updated.
-autocmd BufWritePost *Xresources !xrdb -merge %
 
 " searching
 " search as characters are entered
@@ -80,6 +80,10 @@ source ~/.config/nvim/netrw.vim
 
 " dev
 source ~/.config/nvim/dev.vim
+
+" automatic actions
+" run xrdb whenever Xresources are updated.
+autocmd BufWritePost *Xresources !xrdb -merge %
 
 " shortcuts
 " file explore in split window
