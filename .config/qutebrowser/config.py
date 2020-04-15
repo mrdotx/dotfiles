@@ -2,7 +2,7 @@
 path:       ~/.config/qutebrowser/config.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-02-03T14:08:34+0100
+date:       2020-04-15T20:09:58+0200
 """
 
 ## Documentation:
@@ -164,6 +164,26 @@ c.colors.completion.scrollbar.bg = black_normal
 ## Type: QssColor
 # c.colors.completion.scrollbar.fg = 'white'
 c.colors.completion.scrollbar.fg = blue_normal
+
+## Background color of the context menu. If set to null, the Qt default
+## is used.
+## Type: QssColor
+# c.colors.contextmenu.menu.bg = None
+
+## Foreground color of the context menu. If set to null, the Qt default
+## is used.
+## Type: QssColor
+# c.colors.contextmenu.menu.fg = None
+
+## Background color of the context menu's selected item. If set to null,
+## the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.bg = None
+
+## Foreground color of the context menu's selected item. If set to null,
+## the Qt default is used.
+## Type: QssColor
+# c.colors.contextmenu.selected.fg = None
 
 ## Background color for the download bar.
 ## Type: QssColor
@@ -346,7 +366,7 @@ c.colors.statusbar.command.fg = blue_normal
 
 ## Background color of the statusbar in private browsing + command mode.
 ## Type: QssColor
-# c.colors.statusbar.command.private.bg = 'grey'
+# c.colors.statusbar.command.private.bg = 'darkslategray'
 c.colors.statusbar.command.private.bg = black_normal
 
 ## Foreground color of the statusbar in private browsing + command mode.
@@ -546,6 +566,11 @@ c.colors.tabs.selected.odd.fg = black_bright
 # c.colors.webpage.bg = 'white'
 c.colors.webpage.bg = black_normal
 
+## Force `prefers-color-scheme: dark` colors for websites.
+## Type: Bool
+# c.colors.webpage.prefers_color_scheme_dark = False
+c.colors.webpage.prefers_color_scheme_dark = True
+
 ## Number of commands to save in the command history. 0: no history / -1:
 ## unlimited
 ## Type: Int
@@ -711,7 +736,7 @@ c.content.autoplay = False
 ## Value to send in the `Accept-Language` header. Note that the value
 ## read from JavaScript is always the global value.
 ## Type: String
-# c.content.headers.accept_language = 'en-US,en'
+# c.content.headers.accept_language = 'en-US,en;q=0.9'
 
 ## Custom headers for qutebrowser HTTP requests.
 ## Type: Dict
@@ -734,10 +759,20 @@ c.content.headers.do_not_track = True
 ##   - same-domain: Only send the Referer for the same domain. This will still protect your privacy, but shouldn't break any sites. With QtWebEngine, the referer will still be sent for other domains, but with stripped path information.
 # c.content.headers.referer = 'same-domain'
 
-## User agent to send. Unset to send the default. Note that the value
+## User agent to send.  The following placeholders are defined:  *
+## `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
+## The underlying WebKit version (set to a fixed value   with
+## QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+## QtWebEngine. * `{qt_version}`: The underlying Qt version. *
+## `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
+## QtWebEngine. * `{upstream_browser_version}`: The corresponding
+## Safari/Chrome version. * `{qutebrowser_version}`: The currently
+## running qutebrowser version.  The default value is equal to the
+## unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
 ## read from JavaScript is always the global value.
-## Type: String
-# c.content.headers.user_agent = None
+## Type: FormatString
+# c.content.headers.user_agent = 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}'
+c.content.headers.user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15'
 
 ## Enable host blocking.
 ## Type: Bool
@@ -800,7 +835,9 @@ c.content.host_blocking.whitelist = None
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
 ## logged, the corresponding dictionary value selects the qutebrowser
-## logger to use. On QtWebKit, the "unknown" setting is always used.
+## logger to use. On QtWebKit, the "unknown" setting is always used. The
+## following levels are valid: `none`, `debug`, `info`, `warning`,
+## `error`.
 ## Type: Dict
 # c.content.javascript.log = {'unknown': 'debug', 'info': 'debug', 'warning': 'debug', 'error': 'debug'}
 
@@ -908,6 +945,11 @@ c.content.host_blocking.whitelist = None
 ##   - ask
 # c.content.register_protocol_handler = 'ask'
 
+## Enable quirks (such as faked user agent headers) needed to get
+## specific sites to work properly.
+## Type: Bool
+# c.content.site_specific_quirks = True
+
 ## Validate SSL handshakes.
 ## Type: BoolAsk
 ## Valid values:
@@ -943,9 +985,11 @@ c.content.user_stylesheets = ['default.css']
 
 ## Monitor load requests for cross-site scripting attempts. Suspicious
 ## scripts will be blocked and reported in the inspector's JavaScript
-## console.
+## console. Note that bypasses for the XSS auditor are widely known and
+## it can be abused for cross-site info leaks in some scenarios, see:
+## https://www.chromium.org/developers/design-documents/xss-auditor
 ## Type: Bool
-# c.content.xss_auditing = True
+# c.content.xss_auditing = False
 
 ## Directory to save downloads to. If unset, a sensible OS-specific
 ## default is used.
@@ -988,7 +1032,7 @@ c.content.user_stylesheets = ['default.css']
 # c.downloads.remove_finished = -1
 
 ## Editor (and arguments) to use for the `open-editor` command. The
-## following placeholders are defined: * `{file}`: Filename of the file
+## following placeholders are defined:  * `{file}`: Filename of the file
 ## to be edited. * `{line}`: Line in which the caret is found in the
 ## text. * `{column}`: Column in which the caret is found in the text. *
 ## `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
@@ -1003,57 +1047,69 @@ c.editor.command = ['st', '-e', 'vim', '{file}']
 
 ## Font used in the completion categories.
 ## Type: Font
-# c.fonts.completion.category = 'bold 10pt monospace'
+# c.fonts.completion.category = 'bold default_size default_family'
 
 ## Font used in the completion widget.
 ## Type: Font
-# c.fonts.completion.entry = '10pt monospace'
+# c.fonts.completion.entry = 'default_size default_family'
+
+## Font used for the context menu. If set to null, the Qt default is
+## used.
+## Type: Font
+# c.fonts.contextmenu = None
 
 ## Font used for the debugging console.
 ## Type: QtFont
-# c.fonts.debug_console = '10pt monospace'
+# c.fonts.debug_console = 'default_size default_family'
+
+## Default font families to use. Whenever "default_family" is used in a
+## font setting, it's replaced with the fonts listed here. If set to an
+## empty value, a system-specific monospace default is used.
+## Type: List of Font, or Font
+# c.fonts.default_family = []
+
+## Default font size to use. Whenever "default_size" is used in a font
+## setting, it's replaced with the size listed here. Valid values are
+## either a float value with a "pt" suffix, or an integer value with a
+## "px" suffix.
+## Type: String
+# c.fonts.default_size = '10pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
-# c.fonts.downloads = '10pt monospace'
+# c.fonts.downloads = 'default_size default_family'
 
 ## Font used for the hints.
 ## Type: Font
-# c.fonts.hints = 'bold 10pt monospace'
+# c.fonts.hints = 'bold default_size default_family'
 
 ## Font used in the keyhint widget.
 ## Type: Font
-# c.fonts.keyhint = '10pt monospace'
+# c.fonts.keyhint = 'default_size default_family'
 
 ## Font used for error messages.
 ## Type: Font
-# c.fonts.messages.error = '10pt monospace'
+# c.fonts.messages.error = 'default_size default_family'
 
 ## Font used for info messages.
 ## Type: Font
-# c.fonts.messages.info = '10pt monospace'
+# c.fonts.messages.info = 'default_size default_family'
 
 ## Font used for warning messages.
 ## Type: Font
-# c.fonts.messages.warning = '10pt monospace'
-
-## Default monospace fonts. Whenever "monospace" is used in a font
-## setting, it's replaced with the fonts listed here.
-## Type: Font
-# c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
-c.fonts.monospace = '"DejaVu Sans Mono", "xos4 Terminus", Terminus, Monospace, Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+# c.fonts.messages.warning = 'default_size default_family'
 
 ## Font used for prompts.
 ## Type: Font
-# c.fonts.prompts = '10pt sans-serif'
+# c.fonts.prompts = 'default_size sans-serif'
 
 ## Font used in the statusbar.
 ## Type: Font
-# c.fonts.statusbar = '10pt monospace'
+# c.fonts.statusbar = 'default_size default_family'
 
 ## Font used in the tab bar.
 ## Type: QtFont
-# c.fonts.tabs = '10pt monospace'
+# c.fonts.tabs = 'default_size default_family'
 
 ## Font family for cursive fonts.
 ## Type: FontFamily
@@ -1304,6 +1360,13 @@ c.fonts.web.family.standard = '"DejaVu Sans"'
 ## Type: String
 # c.qt.force_platform = None
 
+## Force a Qt platformtheme to use. This sets the `QT_QPA_PLATFORMTHEME`
+## environment variable which controls dialogs like the filepicker. By
+## default, Qt determines the platform theme based on the desktop
+## environment.
+## Type: String
+# c.qt.force_platformtheme = None
+
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers and can be useful in other
 ## scenarios related to graphic issues.
@@ -1316,9 +1379,10 @@ c.fonts.web.family.standard = '"DejaVu Sans"'
 # c.qt.force_software_rendering = 'none'
 
 ## Turn on Qt HighDPI scaling. This is equivalent to setting
-## QT_AUTO_SCREEN_SCALE_FACTOR=1 in the environment. It's off by default
-## as it can cause issues with some bitmap fonts. As an alternative to
-## this, it's possible to set font sizes and the `zoom.default` setting.
+## QT_AUTO_SCREEN_SCALE_FACTOR=1 or QT_ENABLE_HIGHDPI_SCALING=1 (Qt >=
+## 5.14) in the environment. It's off by default as it can cause issues
+## with some bitmap fonts. As an alternative to this, it's possible to
+## set font sizes and the `zoom.default` setting.
 ## Type: Bool
 # c.qt.highdpi = False
 
@@ -1426,7 +1490,7 @@ c.fonts.web.family.standard = '"DejaVu Sans"'
 ##   - tr-TR: Turkish (Turkey)
 ##   - uk-UA: Ukrainian (Ukraine)
 ##   - vi-VN: Vietnamese (Viet Nam)
-c.spellcheck.languages = ['en-US','de-DE']
+# c.spellcheck.languages = []
 
 ## Hide the statusbar unless a message is shown.
 ## Type: Bool
@@ -1488,6 +1552,10 @@ c.spellcheck.languages = ['en-US','de-DE']
 ##   - never: Always hide favicons.
 ##   - pinned: Show favicons only on pinned tabs.
 # c.tabs.favicons.show = 'always'
+
+## Maximum stack size to remember for tab switches (-1 for no maximum).
+## Type: Int
+# c.tabs.focus_stack_size = 10
 
 ## Padding (in pixels) for tab indicators.
 ## Type: Padding
@@ -1633,6 +1701,11 @@ c.spellcheck.languages = ['en-US','de-DE']
 ## like for `tabs.title.format` are defined.
 ## Type: FormatString
 # c.tabs.title.format_pinned = '{index}'
+
+## Show tooltips on tabs. Note this setting only affects windows opened
+## after it has been set.
+## Type: Bool
+# c.tabs.tooltips = True
 
 ## Number of close tab actions to remember, per window (-1 for no
 ## maximum).
@@ -1972,7 +2045,7 @@ config.bind('cs', 'set content.user_stylesheets ["dark.css","default.css"]')
 ## Bindings for insert mode
 # config.bind('<Ctrl-E>', 'open-editor', mode='insert')
 # config.bind('<Escape>', 'leave-mode', mode='insert')
-# config.bind('<Shift-Ins>', 'insert-text {primary}', mode='insert')
+# config.bind('<Shift-Ins>', 'insert-text -- {primary}', mode='insert')
 
 ## Bindings for passthrough mode
 # config.bind('<Shift-Escape>', 'leave-mode', mode='passthrough')
