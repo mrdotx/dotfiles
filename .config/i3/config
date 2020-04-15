@@ -1,7 +1,7 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-10T12:32:08+0200
+# date:       2020-04-15T10:05:25+0200
 
 ###############################################################################
 # generell config
@@ -79,6 +79,7 @@ for_window [class="Nm-connection-editor"] floating enable, move position center
 for_window [class="GParted"] floating enable, move position center
 for_window [class="Manjaro Settings Manager"] floating enable, move position center
 for_window [class="gmic_qt"] floating enable, move position center
+for_window [class="qv4l2"] floating enable
 
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
