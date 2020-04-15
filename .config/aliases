@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-14T14:41:22+0200
+# date:       2020-04-15T13:04:49+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -23,7 +23,6 @@ alias nf='neofetch'
 
 alias rg='. ranger'
 alias rs='sudo -E ranger'
-alias xn='vim $HOME/Dokumente/Notes/index.md'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 alias we='weechat'
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
