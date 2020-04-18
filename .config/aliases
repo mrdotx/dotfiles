@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-18T15:20:38+0200
+# date:       2020-04-18T15:47:07+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -14,7 +14,6 @@ alias diff='diff --color=auto'
 alias watch='watch --color'
 alias ncdu='ncdu --color dark'
 alias tree='tree -C'
-alias youtube-viewer='youtube-viewer -C'
 
 # tools
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
@@ -26,7 +25,6 @@ alias rg='. ranger'
 alias rs='sudo -E ranger'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 alias we='weechat'
-alias yt='youtube-viewer'
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias cm='cmatrix -su 7'
 alias wt='curl -H "Accept-Language: de" wttr.in'
