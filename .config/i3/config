@@ -1,7 +1,7 @@
 # path:       ~/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-15T10:05:25+0200
+# date:       2020-04-20T19:18:57+0200
 
 ###############################################################################
 # generell config
@@ -274,9 +274,9 @@ bindsym $sup+p exec --no-startup-id "rofi_display.sh"
 # keybindings screenshot
 ###############################################################################
 
-bindsym Print --release exec --no-startup-id "i3_tiling.sh scrot.sh -desk"
-bindsym $sup+Print --release exec --no-startup-id "i3_tiling.sh scrot.sh -window"
-bindsym $sup+Shift+Print --release exec --no-startup-id "sleep 1 && i3_tiling.sh scrot.sh -select"
+bindsym Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -desk"
+bindsym $sup+Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -window"
+bindsym $sup+Shift+Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -select"
 
 ###############################################################################
 # keybindings applications
