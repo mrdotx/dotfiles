@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-14T09:08:56+0200
+" date:       2020-04-23T00:44:47+0200
 
 " leader is comma
 let mapleader=","
@@ -98,9 +98,7 @@ nnoremap    <silent>    <leader>b           :bprevious<CR>
 " turn off search highlight
 nnoremap    <silent>    <leader><space>     :nohlsearch<CR>
 " show hidden characters
-map                     <leader>l           :set list! list?<CR>
-" spell check, shell check, syntastic
-map                     <leader>d           :setlocal spell! spelllang=de_de<CR>
-map                     <leader>e           :setlocal spell! spelllang=en_us<CR>
-map         <silent>    <leader>s           :vs term://shellcheck -s sh %<CR>
-map                     <leader>S           :SyntasticToggleMode<CR>
+nnoremap                <leader>l           :set list! list?<CR>
+" spell check
+nnoremap                <leader>d           :setlocal spell! spelllang=de_de<CR>
+nnoremap                <leader>e           :setlocal spell! spelllang=en_us<CR>

@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/plugins.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-26T08:21:18+0100
+" date:       2020-04-23T00:44:51+0200
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'vim-syntastic/syntastic'
+    Plug 'airblade/vim-gitgutter'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'vim-airline/vim-airline'
     Plug 'edkolev/tmuxline.vim'
@@ -26,16 +27,27 @@ let g:airline_theme='base16_klassiker'
 let g:airline#extensions#syntastic#enabled=1
 let g:airline#extensions#coc#enabled=1
 let g:airline#extensions#tmuxline#enabled=0
+let g:airline#extensions#hunks#non_zero_only = 1
 let g:tmuxline_powerline_separators=0
 
 " colorizer
 lua require'colorizer'.setup()
+
+" gitgutter
+highlight GitGutterAdd guifg=#00ff00 ctermfg=Green
+highlight GitGutterChange guifg=#ffff55 ctermfg=Yellow
+highlight GitGutterDelete guifg=#ff0000 ctermfg=Red
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+nmap <leader>] <Plug>(GitGutterNextHunk)
+nmap <leader>[ <Plug>(GitGutterPrevHunk)
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
+nnoremap <leader>S :SyntasticToggleMode<CR>
 
 " coc
 " TextEdit might fail if hidden is not set.
@@ -203,3 +215,6 @@ let notes.custom_wiki2html='$HOME/.local/share/repos/vimwiki-pandoc/wiki2html.sh
 let g:vimwiki_list=[notes]
 let g:vimwiki_global_ext=0
 let g:vimwiki_use_mouse=1
+
+" shellcheck
+nnoremap <silent> <leader>s :vs term://shellcheck -s sh %<CR>
