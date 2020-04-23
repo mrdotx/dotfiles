@@ -1,7 +1,7 @@
-# path:       ~/.config/bash/.profile
+# path:       ~/.profile
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-24T23:14:48+0100
+# date:       2020-04-23T20:55:31+0200
 
 # history (same functionality as zsh)
 export HISTFILE="$HOME/.local/share/cmd_history"

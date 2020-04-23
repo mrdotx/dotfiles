@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:       ~/.config/X11/xinitrc
+# path:       ~/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-29T16:41:40+0200
+# date:       2020-04-23T20:28:55+0200
 
 user_resources=$HOME/.config/X11/Xresources
 user_modmap=$HOME/.config/X11/Xmodmap
