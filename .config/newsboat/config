@@ -1,7 +1,7 @@
 # path:       ~/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-24T19:15:11+0100
+# date:       2020-04-25T21:20:33+0200
 
 # general
 auto-reload yes
@@ -41,10 +41,10 @@ color article                       white   black
 # Highlight
 search-highlight-colors             black   yellow  bold
 
+highlight all "Corona|COVID"        color5  black   underline
 highlight all "Afd"                 color14 black   underline
 highlight all "Brexit"              color6  black   underline
 highlight all "Trump"               color13 black   underline
-highlight all "Erdogan"             color5  black   underline
 highlight all "DSGVO|Datenschutz"   color11 black   underline
 
 highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    black   underline
