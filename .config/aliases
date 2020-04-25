@@ -1,7 +1,7 @@
 # path:       ~/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-22T13:40:29+0200
+# date:       2020-04-25T15:57:51+0200
 
 # color commands
 alias ls='ls --color=auto'
@@ -22,7 +22,7 @@ alias cp='cp -i'
 alias nf='neofetch'
 
 alias rg='. ranger'
-alias rs='sudo -E ranger'
+alias rs='doas ranger'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 alias we='weechat'
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
@@ -34,16 +34,16 @@ alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
 alias up='yay -Syu --devel --needed'
-alias mu='sudo pacman-mirrors -c Germany && sudo pacman -Syyu'
+alias mu='doas -- pacman-mirrors -c Germany && doas -- pacman -Syyu'
 alias cu='ch && up'
-alias cc='yay -Yc && sudo paccache -rvk2 && sudo paccache -ruk0'
+alias cc='yay -Yc && doas -- paccache -rvk2 && doas -- paccache -ruk0'
 alias sc='system_cleanup.sh'
 alias cs='cc && sc'
 
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
 
-alias dm='sudo -E delete_metafiles.sh'
+alias dm='doas delete_metafiles.sh'
 
 # ssh
 alias pi='ssh hermes'
