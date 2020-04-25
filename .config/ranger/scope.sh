@@ -3,7 +3,7 @@
 # path:       ~/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:07:39+0100
+# date:       2020-04-25T13:23:07+0200
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
@@ -187,25 +187,25 @@ handle_image() {
         #     exit 1;;
 
         ## Font
-        application/font*|application/*opentype)
-            preview_png="/tmp/$(basename "${IMAGE_CACHE_PATH%.*}").png"
-            if fontimage -o "${preview_png}" \
-                         --pixelsize "120" \
-                         --fontname \
-                         --pixelsize "80" \
-                         --text "  ABCDEFGHIJKLMNOPQRSTUVWXYZ  " \
-                         --text "  abcdefghijklmnopqrstuvwxyz  " \
-                         --text "  0123456789.:,;(*!?') ff fl fi ffi ffl  " \
-                         --text "  The quick brown fox jumps over the lazy dog.  " \
-                         "${FILE_PATH}";
-            then
-                convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
-                    && rm "${preview_png}" \
-                    && exit 6
-            else
-                exit 1
-            fi
-            ;;
+        #application/font*|application/*opentype)
+        #    preview_png="/tmp/$(basename "${IMAGE_CACHE_PATH%.*}").png"
+        #    if fontimage -o "${preview_png}" \
+        #                 --pixelsize "120" \
+        #                 --fontname \
+        #                 --pixelsize "80" \
+        #                 --text "  ABCDEFGHIJKLMNOPQRSTUVWXYZ  " \
+        #                 --text "  abcdefghijklmnopqrstuvwxyz  " \
+        #                 --text "  0123456789.:,;(*!?') ff fl fi ffi ffl  " \
+        #                 --text "  The quick brown fox jumps over the lazy dog.  " \
+        #                 "${FILE_PATH}";
+        #    then
+        #        convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
+        #            && rm "${preview_png}" \
+        #            && exit 6
+        #    else
+        #        exit 1
+        #    fi
+        #    ;;
 
         ## Preview archives using the first image inside.
         ## (Very useful for comic book collections for example.)
@@ -266,6 +266,14 @@ handle_image() {
     #         openscad_image <(echo "import(\"${FILE_PATH}\");") && exit 6
     #         ;;
     # esac
+
+    case "${FILE_EXTENSION_LOWER}" in
+        ## Font
+        otf|ttf|woff|ttc)
+            # Preview
+            fontpreview -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" && exit 6
+            exit 1;;
+    esac
 }
 
 handle_mime() {
