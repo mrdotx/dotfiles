@@ -1,55 +1,8 @@
-" path:       ~/.config/nvim/plugins.vim
+" path:       ~/.config/nvim/plugins/coc.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-23T00:44:51+0200
+" date:       2020-04-27T19:27:22+0200
 
-" vim-plug autoinstall
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" plugins
-call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'vimwiki/vimwiki'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'vim-syntastic/syntastic'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'vim-airline/vim-airline'
-    Plug 'edkolev/tmuxline.vim'
-call plug#end()
-
-" airline
-let g:airline_powerline_fonts=0
-let g:airline_theme='base16_klassiker'
-let g:airline#extensions#syntastic#enabled=1
-let g:airline#extensions#coc#enabled=1
-let g:airline#extensions#tmuxline#enabled=0
-let g:airline#extensions#hunks#non_zero_only = 1
-let g:tmuxline_powerline_separators=0
-
-" colorizer
-lua require'colorizer'.setup()
-
-" gitgutter
-highlight GitGutterAdd guifg=#00ff00 ctermfg=Green
-highlight GitGutterChange guifg=#ffff55 ctermfg=Yellow
-highlight GitGutterDelete guifg=#ff0000 ctermfg=Red
-let g:gitgutter_enabled = 1
-let g:gitgutter_map_keys = 0
-nmap <leader>] <Plug>(GitGutterNextHunk)
-nmap <leader>[ <Plug>(GitGutterPrevHunk)
-
-" syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-nnoremap <leader>S :SyntasticToggleMode<CR>
-
-" coc
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -191,6 +144,9 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" get correct comment highlighting for json
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
 " multiple cursor session
 nmap <expr> <silent> <C-c> <SID>select_current_word()
 function! s:select_current_word()
@@ -199,22 +155,3 @@ function! s:select_current_word()
     endif
     return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
-
-" vimwiki
-let notes={}
-let notes.path='$HOME/Dokumente/Notes'
-let notes.path_html='$HOME/Dokumente/Notes/html/'
-let notes.syntax='markdown'
-let notes.ext='.md'
-let notes.auto_export=1
-let notes.automatic_nested_syntaxes=1
-let notes.template_path='$HOME/.local/share/repos/vimwiki-pandoc/template/'
-let notes.template_default='github'
-let notes.template_ext='.html5'
-let notes.custom_wiki2html='$HOME/.local/share/repos/vimwiki-pandoc/wiki2html.sh'
-let g:vimwiki_list=[notes]
-let g:vimwiki_global_ext=0
-let g:vimwiki_use_mouse=1
-
-" shellcheck
-nnoremap <silent> <leader>s :vs term://shellcheck -s sh %<CR>

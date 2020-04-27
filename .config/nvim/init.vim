@@ -1,7 +1,7 @@
 " path:       ~/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-23T00:44:47+0200
+" date:       2020-04-27T19:18:32+0200
 
 " leader is comma
 let mapleader=","
@@ -73,7 +73,7 @@ filetype plugin on
 filetype indent on
 
 " plugins
-source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/plugins/plug.vim
 
 " netrw
 source ~/.config/nvim/netrw.vim
@@ -102,3 +102,5 @@ nnoremap                <leader>l           :set list! list?<CR>
 " spell check
 nnoremap                <leader>d           :setlocal spell! spelllang=de_de<CR>
 nnoremap                <leader>e           :setlocal spell! spelllang=en_us<CR>
+" shellcheck
+nnoremap    <silent>    <leader>s           :vs term://shellcheck -s sh %<CR>
