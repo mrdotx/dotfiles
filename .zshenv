@@ -1,7 +1,7 @@
 # path:       ~/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-23T21:04:33+0200
+# date:       2020-04-28T09:10:54+0200
 
 # project paths
 typeset -U PATH path
@@ -25,14 +25,14 @@ export XDG_CONFIG_DIRS=/etc/xdg
 # config paths
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export XAUTHORITY="$XDG_DATA_HOME/X11/Xauthority"
-export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
-export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
-export PYLINTHOME="$XDG_CACHE_HOME/pylint"
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export FONTCONFIG_PATH=/etc/fonts
 export FONTCONFIG_FILE=fonts.conf
+export PYLINTHOME="$XDG_CACHE_HOME/pylint"
+export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
 export KODI_DATA="$XDG_DATA_HOME/kodi"
 
 # app settings
@@ -43,7 +43,6 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
-export WWW_HOME=duckduckgo.com
 
 # standard apps
 export TERMINAL="st"
