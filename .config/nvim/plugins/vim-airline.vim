@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/airline.vim
+" path:       ~/.config/nvim/plugins/vim-airline.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-27T19:11:25+0200
+" date:       2020-04-29T07:47:57+0200
 
 let g:airline_powerline_fonts=0
 let g:airline_theme='base16_klassiker'

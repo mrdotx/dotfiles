@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/coc.vim
+" path:       ~/.config/nvim/plugins/coc.nvim.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-27T19:27:22+0200
+" date:       2020-04-29T08:47:07+0200
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -43,11 +43,10 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
-if has('patch8.1.1068')
-  " Use `complete_info` if your (Neo)Vim version supports it.
+if exists('*complete_info')
   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 else
-  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
 " Use `[g` and `]g` to navigate diagnostics
@@ -143,9 +142,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-" get correct comment highlighting for json
-autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " multiple cursor session
 nmap <expr> <silent> <C-c> <SID>select_current_word()

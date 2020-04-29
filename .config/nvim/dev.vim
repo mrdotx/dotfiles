@@ -1,33 +1,24 @@
 " path:       ~/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-27T19:26:54+0200
+" date:       2020-04-29T08:48:08+0200
 
-" enable all python syntax highlighting features
-let python_highlight_all=1
-" enable folding
-set foldmethod=indent
+let python_highlight_all=1          " enable all python syntax highlightings
+set foldmethod=indent               " enable folding
 set foldlevel=99
-" file encoding
-set encoding=utf-8
+set encoding=utf-8                  " file encoding
 " disables automatic commenting on newline
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 " mark extra white space
 autocmd BufNewFile,BufRead * match ExtraWhitespace /\s\+$/
 
 " style guide
-" number of visual spaces per TAB
-set tabstop=4
-" number of spaces in tab when editing
-set softtabstop=4
-" the size of an indent
-set shiftwidth=4
-" tabs are spaces
-set expandtab
-" indent when moving to the next line while writing code
-set autoindent
-" show width indicator
-set colorcolumn=80
+set tabstop=4                       " number of visual spaces per TAB
+set softtabstop=4                   " number of spaces in tab when editing
+set shiftwidth=4                    " the size of an indent
+set expandtab                       " tabs are spaces
+set autoindent                      " indent when moving to the next line
+set colorcolumn=80                  " show width indicator
 
 " python pep 8 style guide
 function! AutoPy()
@@ -35,6 +26,9 @@ function! AutoPy()
     set fileformat=unix
 endfunction
 autocmd BufNewFile,BufRead *.py call AutoPy()
+
+" get correct comment highlighting for json
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " templates
 if has("autocmd")
