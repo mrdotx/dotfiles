@@ -1,7 +1,7 @@
-! path:       ~/.config/X11/Xresources
+! path:       /home/klassiker/.config/X11/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-04-28T21:22:58+0200
+! date:       2020-04-29T10:59:30+0200
 
 ! general
 *background:                        #000000

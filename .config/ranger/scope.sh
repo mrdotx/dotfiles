@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# path:       ~/.config/ranger/scope.sh
+# path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-25T13:23:07+0200
+# date:       2020-04-29T10:56:54+0200
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'

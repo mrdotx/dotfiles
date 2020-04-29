@@ -1,7 +1,7 @@
-# path:       ~/.config/zathura/zathurarc
+# path:       /home/klassiker/.config/zathura/zathurarc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-02-03T14:01:58+0100
+# date:       2020-04-29T10:59:55+0200
 
 set selection-clipboard clipboard
 set adjust-open best-fit

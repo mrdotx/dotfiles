@@ -1,7 +1,7 @@
-# path:       ~/.config/aliases
+# path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-25T15:57:51+0200
+# date:       2020-04-29T11:00:11+0200
 
 # color commands
 alias ls='ls --color=auto'

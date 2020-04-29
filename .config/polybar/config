@@ -1,7 +1,7 @@
-# path:       ~/.config/polybar/config
+# path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-29T17:25:38+0200
+# date:       2020-04-29T10:49:49+0200
 
 # wm
 [global/wm]

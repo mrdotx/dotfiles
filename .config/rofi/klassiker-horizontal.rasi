@@ -1,8 +1,8 @@
 /*
- * path:       ~/.config/rofi/klassiker-horizontal.rasi
+ * path:       /home/klassiker/.config/rofi/klassiker-horizontal.rasi
  * author:     klassiker [mrdotx]
  * github:     https://github.com/mrdotx/dotfiles
- * date:       2020-02-10T12:32:57+0100
+ * date:       2020-04-29T10:57:21+0200
  */
 
 * {

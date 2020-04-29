@@ -1,7 +1,7 @@
-# path:       ~/.config/zsh/.zshrc
+# path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-03-27T10:17:39+0100
+# date:       2020-04-29T11:00:06+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"

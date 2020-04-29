@@ -1,7 +1,7 @@
-# path:       ~/.zshenv
+# path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-28T09:10:54+0200
+# date:       2020-04-29T11:04:43+0200
 
 # project paths
 typeset -U PATH path
