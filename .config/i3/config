@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:47:31+0200
+# date:       2020-04-29T15:07:18+0200
 
 ###############################################################################
 # generell config
@@ -305,6 +305,7 @@ bindsym $sup+v exec "VirtualBox"
 bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
 bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh $BROWSER"
 bindsym $sup+x exec --no-startup-id "i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)"
+bindsym $sup+y exec --no-startup-id "rofi_youtube_streams.sh"
 bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
 
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
