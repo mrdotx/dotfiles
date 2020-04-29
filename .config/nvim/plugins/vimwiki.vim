@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/vimwiki.vim
+" path:       /home/klassiker/.config/nvim/plugins/vimwiki.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-27T19:12:09+0200
+" date:       2020-04-29T10:21:31+0200
 
 let notes={}
 let notes.path='$HOME/Dokumente/Notes'

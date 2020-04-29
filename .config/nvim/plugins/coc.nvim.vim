@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/coc.nvim.vim
+" path:       /home/klassiker/.config/nvim/plugins/coc.nvim.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T08:47:07+0200
+" date:       2020-04-29T10:19:44+0200
 
 " TextEdit might fail if hidden is not set.
 set hidden

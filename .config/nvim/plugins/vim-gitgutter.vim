@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/vim-gitgutter.vim
+" path:       /home/klassiker/.config/nvim/plugins/vim-gitgutter.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T07:48:39+0200
+" date:       2020-04-29T10:21:08+0200
 
 highlight GitGutterAdd guifg=#00ff00 ctermfg=Green
 highlight GitGutterChange guifg=#ffff55 ctermfg=Yellow

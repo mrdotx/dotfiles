@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/init.vim
+" path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T09:02:47+0200
+" date:       2020-04-29T10:24:16+0200
 
 let mapleader=","                   " define leader key
 

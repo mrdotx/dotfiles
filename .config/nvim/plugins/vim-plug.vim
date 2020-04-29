@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/vim-plug.vim
+" path:       /home/klassiker/.config/nvim/plugins/vim-plug.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T08:06:48+0200
+" date:       2020-04-29T10:21:20+0200
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))

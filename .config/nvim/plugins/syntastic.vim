@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/plugins/syntastic.vim
+" path:       /home/klassiker/.config/nvim/plugins/syntastic.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T07:48:21+0200
+" date:       2020-04-29T10:20:37+0200
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1

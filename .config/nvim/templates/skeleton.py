@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-path:       ~/repos/python/<++>.py
+path:       /home/klassiker/.config/nvim/templates/skeleton.py
 author:     klassiker [mrdotx]
-github:     https://github.com/mrdotx/python
-date:       2020-02-28T08:47:59+0100
+github:     https://github.com/mrdotx/<++>
+date:       2020-04-29T10:17:56+0200
 """
 
 <++>

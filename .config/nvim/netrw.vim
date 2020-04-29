@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/netrw.vim
+" path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-03-22T19:00:07+0100
+" date:       2020-04-29T10:24:37+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3

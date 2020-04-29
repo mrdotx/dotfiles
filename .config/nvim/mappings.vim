@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/mappings.vim
+" path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T08:30:07+0200
+" date:       2020-04-29T10:24:28+0200
 
 " file explore in split window
 nnoremap    <silent>    <leader><leader>    :call ToggleNetrw()<CR>

@@ -1,8 +1,8 @@
 /*
- * path:       ~/repos/c/<++>.c
+ * path:       /home/klassiker/.config/nvim/templates/skeleton.c
  * author:     klassiker [mrdotx]
- * github:     https://github.com/mrdotx/c
- * date:       2020-02-28T08:47:38+0100
+ * github:     https://github.com/mrdotx/<++>
+ * date:       2020-04-29T10:17:31+0200
  */
 
 #include <stdio.h>
