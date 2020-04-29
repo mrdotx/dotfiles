@@ -1,7 +1,7 @@
-" path:       ~/.config/nvim/dev.vim
+" path:       /home/klassiker/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T08:48:08+0200
+" date:       2020-04-29T10:24:05+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -59,3 +59,19 @@ function! ModDate()
     endif
 endfun
 autocmd BufWritePre * call ModDate()
+
+" actual path
+" if buffer modified, update any 'path: ' in the first 10 lines.
+" 'path: ' can have up to 4 characters before (they are retained).
+" restores cursor and window position using save_cursor variable.
+function! ModPath()
+    if &modified
+        let save_cursor=getpos(".")
+        let n=min([10, line("$")])
+        keepjumps exe '1,' . n . 's#^\(.\{,4}path: \).*#\1' .
+            \ '      ' . expand('%:p') . '#e'
+        call histdel('search', -1)
+        call setpos('.', save_cursor)
+    endif
+endfun
+autocmd BufWritePre * call ModPath()
