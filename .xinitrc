@@ -3,10 +3,10 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T11:04:38+0200
+# date:       2020-04-29T13:23:14+0200
 
-user_resources=$HOME/.config/X11/Xresources
-user_modmap=$HOME/.config/X11/Xmodmap
+user_resources=$HOME/.config/xorg/Xresources
+user_modmap=$HOME/.config/xorg/Xmodmap
 sys_resources=/etc/X11/xinit/.Xresources
 sys_modmap=/etc/X11/xinit/.Xmodmap
 
