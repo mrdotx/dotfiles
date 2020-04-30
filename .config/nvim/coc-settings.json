@@ -1,3 +1,8 @@
+// path:       /home/klassiker/.config/nvim/coc-settings.json
+// author:     klassiker [mrdotx]
+// github:     https://github.com/mrdotx/dotfiles
+// date:       2020-04-30T09:37:59+0200
+
 {
     "languageserver": {
         "ccls": {
