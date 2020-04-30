@@ -1,9 +1,9 @@
 # path:       /home/klassiker/.config/newsboat/urls
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:48:34+0200
+# date:       2020-04-30T19:02:19+0200
 
-#: querys
+# queries
 "query:┌ Unread:unread = \"yes\""
 "query:├┬ All:tags != \"\""
 "query:│├─ News:tags # \"News\""

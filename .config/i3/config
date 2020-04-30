@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T10:39:02+0200
+# date:       2020-04-30T18:11:52+0200
 
 ###############################################################################
 # generell config
@@ -47,7 +47,7 @@ font xft:Source Code Pro 11
 default_border pixel 2
 default_floating_border normal
 workspace_auto_back_and_forth yes
-#for_window [urgent=latest] focus
+# for_window [urgent=latest] focus
 gaps inner 4
 gaps outer -2
 smart_gaps on
@@ -173,8 +173,8 @@ bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.serv
 ###############################################################################
 
 # split orientation
-#bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
-#bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
+# bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
+# bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
 bindsym $sup+Ctrl+Up exec --no-startup-id "i3_tiling.sh"
 bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
 

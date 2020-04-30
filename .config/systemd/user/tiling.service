@@ -1,3 +1,8 @@
+# path:       /home/klassiker/.config/systemd/user/tiling.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-04-30T18:28:36+0200
+
 [Unit]
 Description=i3 optimal tiling
 PartOf=default.target

@@ -1,3 +1,8 @@
+# path:       /home/klassiker/.config/systemd/user/screenlayout.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-04-30T18:28:32+0200
+
 [Unit]
 Description=setup screen layouts
 PartOf=default.target

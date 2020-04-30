@@ -1,3 +1,8 @@
+# path:       /home/klassiker/.config/systemd/user/picom.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-04-30T18:28:13+0200
+
 [Unit]
 Description=picom compositor
 PartOf=default.target

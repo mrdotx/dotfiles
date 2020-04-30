@@ -1,3 +1,8 @@
+# path:       /home/klassiker/.config/systemd/user/gestures.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-04-30T18:28:04+0200
+
 [Unit]
 Description=libinput gestures for synaptics touchpad
 

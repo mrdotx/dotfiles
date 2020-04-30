@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T11:00:06+0200
+# date:       2020-04-30T18:10:36+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -16,7 +16,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto verbose name"
-#GIT_PS1_STATESEPARATOR="|"
+# GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
 
 #precmd () { __git_ps1 "%{$fg_bold[green]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[green]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
@@ -67,3 +67,8 @@ bindkey '^[[B' history-substring-search-down
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+# autostart
+# if [[ ! "$TERM" =~ ^(linux|st-256color)$ ]]; then
+#     tx
+# fi
