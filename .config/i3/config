@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T15:07:18+0200
+# date:       2020-04-30T10:09:05+0200
 
 ###############################################################################
 # generell config
@@ -80,6 +80,7 @@ for_window [class="GParted"] floating enable, move position center
 for_window [class="Manjaro Settings Manager"] floating enable, move position center
 for_window [class="gmic_qt"] floating enable, move position center
 for_window [class="qv4l2"] floating enable
+for_window [class="mpv"] sticky enable
 
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
