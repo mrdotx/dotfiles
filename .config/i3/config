@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-01T14:44:53+0200
+# date:       2020-05-01T19:22:20+0200
 
 ###############################################################################
 # generell config
@@ -159,14 +159,24 @@ bindsym $sup+Shift+r restart
 bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 
+# xautolock restart
+# bindsym $sup+Shift+a exec --no-startup-id "systemctl --user restart xautolock.service; notify-send 'i3' 'xautolock restarted'"
+bindsym $sup+Shift+a exec --no-startup-id "if [ \\"$(systemctl --user is-active xautolock.service)\\" = \\"active\\" ]; then systemctl --user stop xautolock.service && notify-send 'i3' 'xautolock stopped'; else systemctl --user start xautolock.service && notify-send 'i3' 'xautolock started'; fi"
+
+# xbanish restart
+# bindsym $sup+Shift+b exec --no-startup-id "systemctl --user restart xbanish.service; notify-send 'i3' 'xbanish restarted'"
+bindsym $sup+Shift+b exec --no-startup-id "if [ \\"$(systemctl --user is-active xbanish.service)\\" = \\"active\\" ]; then systemctl --user stop xbanish.service && notify-send 'i3' 'xbanish stopped'; else systemctl --user start xbanish.service && notify-send 'i3' 'xbanish started'; fi"
+
 # dunst restart
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
 
 # picom restart
-bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
+# bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
+bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user stop picom.service && notify-send 'i3' 'picom stopped'; else systemctl --user start picom.service && notify-send 'i3' 'picom started'; fi"
 
 # polybar restart
-bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; notify-send 'i3' 'polybar restarted'"
+# bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; notify-send 'i3' 'polybar restarted'"
+bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user stop polybar.service && notify-send 'i3' 'polybar stopped'; else systemctl --user start polybar.service && notify-send 'i3' 'polybar started'; fi"
 
 ###############################################################################
 # keybindings windows/container
@@ -175,7 +185,7 @@ bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.serv
 # split orientation
 # bindsym $sup+Ctrl+Up split h; exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
 # bindsym $sup+Ctrl+Down split v; exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
-bindsym $sup+Ctrl+Up exec --no-startup-id "if [ -n \\"$(pgrep -x i3_tiling.sh)\\" ]; then pkill -x i3_tiling.sh && notify-send 'i3' 'optimal tiling off'; else notify-send 'i3' 'optimal tiling on' && i3_tiling.sh & fi"
+bindsym $sup+Ctrl+Up exec --no-startup-id "if [ -n \\"$(pgrep -x i3_tiling.sh)\\" ]; then pkill -x i3_tiling.sh && notify-send 'i3' 'optimal tiling off'; else  i3_tiling.sh & notify-send 'i3' 'optimal tiling on'; fi"
 bindsym $sup+Ctrl+Down split toggle; exec --no-startup-id "notify-send 'i3' 'tile container direction toggled'"
 
 # change focus
