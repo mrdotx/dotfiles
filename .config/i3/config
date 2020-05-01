@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-01T11:51:12+0200
+# date:       2020-05-01T14:44:53+0200
 
 ###############################################################################
 # generell config
@@ -160,23 +160,23 @@ bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit sho
 bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 
 # dunst restart
-bindsym $sup+Shift+d exec --no-startup-id "killall dunst; exec notify-send 'i3' 'restart dunst'"
+bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
 
 # picom restart
 bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
 
 # polybar restart
-bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; exec notify-send 'i3' 'polybar restarted'"
+bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; notify-send 'i3' 'polybar restarted'"
 
 ###############################################################################
 # keybindings windows/container
 ###############################################################################
 
 # split orientation
-# bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
-# bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
-bindsym $sup+Ctrl+Up split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
-bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
+# bindsym $sup+Ctrl+Up split h; exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
+# bindsym $sup+Ctrl+Down split v; exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
+bindsym $sup+Ctrl+Up exec --no-startup-id "if [ -n \\"$(pgrep -x i3_tiling.sh)\\" ]; then pkill -x i3_tiling.sh && notify-send 'i3' 'optimal tiling off'; else notify-send 'i3' 'optimal tiling on' && i3_tiling.sh & fi"
+bindsym $sup+Ctrl+Down split toggle; exec --no-startup-id "notify-send 'i3' 'tile container direction toggled'"
 
 # change focus
 bindsym $sup+Left focus left
@@ -322,4 +322,4 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 ###############################################################################
 
 exec --no-startup-id "systemctl --user start window-manager.target"
-exec --no-startup-id "sleep 5 && i3_tiling.sh"
+exec --no-startup-id "sleep 3 && i3_tiling.sh"
