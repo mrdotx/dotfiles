@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T18:11:52+0200
+# date:       2020-05-01T11:51:12+0200
 
 ###############################################################################
 # generell config
@@ -175,7 +175,7 @@ bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.serv
 # split orientation
 # bindsym $sup+Ctrl+Up split h;exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
 # bindsym $sup+Ctrl+Down split v;exec --no-startup-id "notify-send 'i3' 'tile container vertically'"
-bindsym $sup+Ctrl+Up exec --no-startup-id "i3_tiling.sh"
+bindsym $sup+Ctrl+Up split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
 bindsym $sup+Ctrl+Down split toggle;exec --no-startup-id "notify-send 'i3' 'toggle tile container direction'"
 
 # change focus
@@ -275,45 +275,45 @@ bindsym $sup+p exec --no-startup-id "rofi_display.sh"
 # keybindings screenshot
 ###############################################################################
 
-bindsym Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -desk"
-bindsym $sup+Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -window"
-bindsym $sup+Shift+Print --release exec --no-startup-id "i3_tiling.sh screenshot.sh -select"
+bindsym Print --release exec --no-startup-id "screenshot.sh -desk"
+bindsym $sup+Print --release exec --no-startup-id "screenshot.sh -window"
+bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 
 ###############################################################################
 # keybindings applications
 ###############################################################################
 
-bindsym $sup+Return exec --no-startup-id "i3_tiling.sh $TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "i3_tiling.sh urxvtc.sh"
+bindsym $sup+Return exec --no-startup-id "$TERMINAL"
+bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "rofi_bookmarks.sh"
 bindsym $sup+c exec --no-startup-id "$TERMINAL -e cmus.sh"
 bindsym $sup+Shift+c exec --no-startup-id "cmus_notify.sh --notify-send"
 bindsym $sup+d exec "darktable"
-bindsym $sup+e exec --no-startup-id "i3_tiling.sh rofi_vim.sh"
+bindsym $sup+e exec --no-startup-id "rofi_vim.sh"
 bindsym $sup+g exec "gimp"
-bindsym $sup+h exec --no-startup-id "i3_tiling.sh $TERMINAL -e htop"
+bindsym $sup+h exec --no-startup-id "$TERMINAL -e htop"
 bindsym $sup+i exec "inkscape"
 bindsym $sup+j exec "jameica"
-bindsym $sup+k exec --no-startup-id "i3_tiling.sh sync_keepass.sh && keepassxc && sync_keepass.sh"
+bindsym $sup+k exec --no-startup-id "sync_keepass.sh && keepassxc && sync_keepass.sh"
 bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 4 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
-bindsym $sup+r exec --no-startup-id "i3_tiling.sh $TERMINAL -e $FILE"
-bindsym $sup+s exec "i3_tiling.sh seahorse"
+bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
+bindsym $sup+s exec "seahorse"
 bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
 bindsym $sup+v exec "VirtualBox"
-bindsym $sup+w exec --no-startup-id "i3_tiling.sh brave"
-bindsym $sup+Shift+w exec --no-startup-id "i3_tiling.sh $BROWSER"
-bindsym $sup+x exec --no-startup-id "i3_tiling.sh link_handler.sh $(dragon-drag-and-drop -t -x)"
-bindsym $sup+z exec --no-startup-id "i3_tiling.sh filezilla"
+bindsym $sup+w exec --no-startup-id "brave"
+bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
+bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
+bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
-bindsym $sup+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
-bindsym $sup+Shift+slash exec --no-startup-id "i3_tiling.sh $BROWSER $HOME/Dokumente/Notes/html/index.html"
+bindsym $sup+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
+bindsym $sup+Shift+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/index.html"
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
@@ -321,4 +321,5 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 # start systemd target
 ###############################################################################
 
-exec --no-startup-id systemctl --user start window-manager.target
+exec --no-startup-id "systemctl --user start window-manager.target"
+exec --no-startup-id "sleep 5 && i3_tiling.sh"
