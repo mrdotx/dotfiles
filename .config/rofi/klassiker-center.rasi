@@ -2,7 +2,7 @@
  * path:       /home/klassiker/.config/rofi/klassiker-center.rasi
  * author:     klassiker [mrdotx]
  * github:     https://github.com/mrdotx/dotfiles
- * date:       2020-04-29T10:57:17+0200
+ * date:       2020-05-01T19:51:23+0200
  */
 
 * {
@@ -54,7 +54,7 @@
     border-radius:          0px 30px 30px 0px;
     border-color:           @white;
     border:                 1px 1px 1px 0px;
-    padding:                5px 10px 5px 5px;
+    padding:                7px 10px 7px 5px;
     font:                   @symbol;
 }
 #listview {
