@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T18:58:58+0200
+" date:       2020-05-02T19:08:28+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -24,9 +24,6 @@ call which_key#register('g', "g:g_prefix_dict")
 " descriptions
 let g:comma_prefix_dict = {
     \ 'name' : 'main',
-    \ ',' : ['call ToggleNetrw()', 'toggle netrw file explorer'],
-    \ '[' : ['<Plug>(GitGutterPrevHunk)', 'goto to previous changed git hunk'],
-    \ ']' : ['<Plug>(GitGutterNextHunk)', 'goto to next changed git hunk'],
     \ 'a' : ['<Plug>(coc-codeaction-selected)', 'applying code action to the selected region'],
     \ 'ac' : ['<Plug>(coc-codeaction)', 'applying code action to the selected line'],
     \ 'd' : ['setlocal spell! spelllang=de_de', 'toggle spell check german'],
@@ -75,9 +72,12 @@ let g:space_prefix_dict = {
 let g:g_prefix_dict = {
     \ 'name' : 'goto and comments',
     \ '%' : ['<Plug>(MatchitOperationBackward)', 'match it operation backward'],
+    \ '[' : ['<Plug>(GitGutterPrevHunk)', 'goto to previous changed git hunk'],
+    \ ']' : ['<Plug>(GitGutterNextHunk)', 'goto to next changed git hunk'],
     \ 'c' : ['<Plug>Commentary', 'comment out/in selected region'],
     \ 'cc' : ['<Plug>CommentaryLine', 'comment out/in selected line'],
     \ 'd' : ['<Plug>(coc-definition)', 'goto definition'],
+    \ 'g' : ['call ToggleNetrw()', 'toggle netrw file explorer'],
     \ 'i' : ['<Plug>(coc-implementation)', 'goto implementation'],
     \ 'n' : ['bnext', 'goto to next buffer'],
     \ 'p' : ['bprevious', 'goto to previous buffer'],

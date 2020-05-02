@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T18:30:32+0200
+" date:       2020-05-02T19:03:27+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -66,4 +66,4 @@ set autochdir
 " automatic start at vim enter
 " autocmd VimEnter * :call ToggleNetrw()
 
-nnoremap <silent> <leader><leader> :call ToggleNetrw()<CR>
+nnoremap <silent> gg :call ToggleNetrw()<CR>
