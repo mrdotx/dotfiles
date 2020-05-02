@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-01T10:11:00+0200
+# date:       2020-05-03T01:29:49+0200
 
 # general
 auto-reload yes
@@ -25,8 +25,7 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro b set browser "brave %u"; open-in-browser ; set browser "link_handler.sh %u"
-macro w set browser "$TERMINAL -e $TERMINALBROWSER %u &"; open-in-browser ; set browser "link_handler.sh %u"
+macro w set browser "brave %u"; open-in-browser ; set browser "link_handler.sh %u"
 macro m set browser "mpv %u"; open-in-browser ; set browser "link_handler.sh %u"
 
 # colors
