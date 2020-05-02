@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T18:47:37+0200
+" date:       2020-05-02T18:58:58+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -29,8 +29,6 @@ let g:comma_prefix_dict = {
     \ ']' : ['<Plug>(GitGutterNextHunk)', 'goto to next changed git hunk'],
     \ 'a' : ['<Plug>(coc-codeaction-selected)', 'applying code action to the selected region'],
     \ 'ac' : ['<Plug>(coc-codeaction)', 'applying code action to the selected line'],
-    \ 'b' : ['bprevious', 'goto to previous buffer'],
-    \ 'bn' : ['bnext', 'goto to next buffer'],
     \ 'd' : ['setlocal spell! spelllang=de_de', 'toggle spell check german'],
     \ 'e' : ['setlocal spell! spelllang=en_us', 'toggle spell check english'],
     \ 'f' : ['<Plug>(coc-format-selected)', 'formating selected code'],
@@ -81,6 +79,8 @@ let g:g_prefix_dict = {
     \ 'cc' : ['<Plug>CommentaryLine', 'comment out/in selected line'],
     \ 'd' : ['<Plug>(coc-definition)', 'goto definition'],
     \ 'i' : ['<Plug>(coc-implementation)', 'goto implementation'],
+    \ 'n' : ['bnext', 'goto to next buffer'],
+    \ 'p' : ['bprevious', 'goto to previous buffer'],
     \ 'r' : ['<Plug>(coc-references)', 'goto references'],
     \ 'x' : ['<Plug>NetrwBrowseX', 'open selected path in file explorer'],
     \ 'y' : ['<Plug>(coc-type-definition)', 'goto type definition'],
