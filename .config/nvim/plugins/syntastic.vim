@@ -1,11 +1,11 @@
 " path:       /home/klassiker/.config/nvim/plugins/syntastic.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:20:37+0200
+" date:       2020-05-02T20:31:57+0200
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 
-nnoremap <leader>S :SyntasticToggleMode<CR>
+nnoremap <leader>S :SyntasticToggleMode<cr>

@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/coc.nvim.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:19:44+0200
+" date:       2020-05-02T20:38:35+0200
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -144,10 +144,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " multiple cursor session
-nmap <expr> <silent> <C-c> <SID>select_current_word()
+nmap <expr> <silent> <c-c> <sid>select_current_word()
 function! s:select_current_word()
     if !get(g:, 'coc_cursors_activated', 0)
         return "\<Plug>(coc-cursors-word)"
     endif
-    return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+    return "*\<Plug>(coc-cursors-word):nohlsearch\<cr>"
 endfunc

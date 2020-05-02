@@ -1,15 +1,15 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T19:56:14+0200
+" date:       2020-05-02T20:31:32+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
 
 " keymaps
-nnoremap <silent> <leader>  :<c-u>WhichKey ','<CR>
-nnoremap <silent> <Space>   :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> g         :<c-u>WhichKey 'g'<CR>
+nnoremap <silent> <leader>  :<c-u>WhichKey ','<cr>
+nnoremap <silent> <space>   :<c-u>WhichKey '<space>'<cr>
+nnoremap <silent> g         :<c-u>WhichKey 'g'<cr>
 
 " register description directories
 call which_key#register(',', "g:comma_prefix_dict")

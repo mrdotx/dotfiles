@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:24:05+0200
+" date:       2020-05-02T20:24:18+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -34,13 +34,13 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 if has("autocmd")
     augroup templates
         autocmd BufNewFile *.md 0r $HOME/.config/nvim/templates/skeleton.md
-        autocmd BufNewFile *.md inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+        autocmd BufNewFile *.md inoremap <space><space> <esc>/<++><enter>"_c4l
         autocmd BufNewFile *.sh 0r $HOME/.config/nvim/templates/skeleton.sh
-        autocmd BufNewFile *.sh inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+        autocmd BufNewFile *.sh inoremap <space><space> <esc>/<++><enter>"_c4l
         autocmd BufNewFile *.py 0r $HOME/.config/nvim/templates/skeleton.py
-        autocmd BufNewFile *.py inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+        autocmd BufNewFile *.py inoremap <space><space> <esc>/<++><enter>"_c4l
         autocmd BufNewFile *.c 0r $HOME/.config/nvim/templates/skeleton.c
-        autocmd BufNewFile *.c inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+        autocmd BufNewFile *.c inoremap <space><space> <esc>/<++><enter>"_c4l
     augroup END
 endif
 

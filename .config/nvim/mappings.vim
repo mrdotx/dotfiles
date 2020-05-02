@@ -1,25 +1,25 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T18:57:51+0200
+" date:       2020-05-02T20:29:07+0200
 
 " switch cursor window
-nnoremap                <tab>               <C-w>w
-nnoremap                <S-tab>             <C-w>W
+nnoremap                <tab>               <c-w>w
+nnoremap                <S-tab>             <c-w>W
 
 " buffer cycle
-nnoremap    <silent>    gp                  :bprevious<CR>
-nnoremap    <silent>    gn                  :bnext<CR>
+nnoremap    <silent>    gp                  :bprevious<cr>
+nnoremap    <silent>    gn                  :bnext<cr>
 
 " turn off search highlight
-nnoremap    <silent>    <leader><space>     :nohlsearch<CR>
+nnoremap    <silent>    <leader><space>     :nohlsearch<cr>
 
 " show hidden characters
-nnoremap                <leader>l           :set list! list?<CR>
+nnoremap                <leader>l           :set list! list?<cr>
 
 " spell check
-nnoremap                <leader>d           :setlocal spell! spelllang=de_de<CR>
-nnoremap                <leader>e           :setlocal spell! spelllang=en_us<CR>
+nnoremap                <leader>d           :setlocal spell! spelllang=de_de<cr>
+nnoremap                <leader>e           :setlocal spell! spelllang=en_us<cr>
 
 " shellcheck
-nnoremap    <silent>    <leader>s           :vs term://shellcheck -s sh %<CR>
+nnoremap    <silent>    <leader>s           :vs term://shellcheck -s sh %<cr>

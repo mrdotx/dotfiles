@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T19:03:27+0200
+" date:       2020-05-02T20:27:49+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -18,7 +18,7 @@ function! OpenRight()
   let g:path=expand('%:p')
   :q!
   execute 'belowright vnew' g:path
-  :normal <C-l>
+  :normal <c-l>
 endfunction
 
 function! OpenBelow()
@@ -26,12 +26,12 @@ function! OpenBelow()
   let g:path=expand('%:p')
   :q!
   execute 'belowright new' g:path
-  :normal <C-l>
+  :normal <c-l>
 endfunction
 
 function! NetrwMappings()
-    noremap <buffer> <C-l> <C-w>l
-    noremap <silent> <C-f> :call ToggleNetrw()<CR>
+    noremap <buffer> <c-l> <c-w>l
+    noremap <silent> <c-f> :call ToggleNetrw()<cr>
     noremap <buffer> V :call OpenRight()<cr>
     noremap <buffer> H :call OpenBelow()<cr>
 endfunction
@@ -66,4 +66,4 @@ set autochdir
 " automatic start at vim enter
 " autocmd VimEnter * :call ToggleNetrw()
 
-nnoremap <silent> gg :call ToggleNetrw()<CR>
+nnoremap <silent> gg :call ToggleNetrw()<cr>
