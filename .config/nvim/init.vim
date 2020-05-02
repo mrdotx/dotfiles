@@ -1,10 +1,10 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T19:30:36+0200
+" date:       2020-05-02T20:10:50+0200
 
 let mapleader=","                   " leader key for global plugins
-let maplocalleader="<space>"        " leader key for filetype plugins
+let maplocalleader="\<Space>"       " leader key for filetype plugins
 
 " mouse
 if has('mouse')
