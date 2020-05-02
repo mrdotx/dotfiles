@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/xautolock.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T18:28:45+0200
+# date:       2020-05-02T10:08:14+0200
 
 [Unit]
 Description=xautolock to auto lock/suspend device
@@ -10,6 +10,8 @@ PartOf=default.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/xautolock -detectsleep
+Restart=on-failure
+RestartSec=1m
 
 [Install]
 WantedBy=window-manager.target
