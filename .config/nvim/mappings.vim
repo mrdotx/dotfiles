@@ -1,10 +1,7 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:24:28+0200
-
-" file explore in split window
-nnoremap    <silent>    <leader><leader>    :call ToggleNetrw()<CR>
+" date:       2020-05-02T18:36:35+0200
 
 " switch cursor window
 nnoremap                <tab>               <C-w>w
@@ -12,6 +9,7 @@ nnoremap                <S-tab>             <C-w>W
 
 " buffer cycle
 nnoremap    <silent>    <leader>b           :bprevious<CR>
+nnoremap    <silent>    <leader>n           :bnext<CR>
 
 " turn off search highlight
 nnoremap    <silent>    <leader><space>     :nohlsearch<CR>
