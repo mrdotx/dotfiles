@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:24:37+0200
+" date:       2020-05-02T18:30:32+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -11,8 +11,9 @@ let g:netrw_winsize=-28
 let g:netrw_sort_sequence='[\/]$,*'
 let g:netrw_ftp_cmd='ftp -p'
 let g:netrw_dirhistmax=0
+let g:netrw_is_open=0
 
-function! OpenToRight()
+function! OpenRight()
   :normal v
   let g:path=expand('%:p')
   :q!
@@ -31,7 +32,7 @@ endfunction
 function! NetrwMappings()
     noremap <buffer> <C-l> <C-w>l
     noremap <silent> <C-f> :call ToggleNetrw()<CR>
-    noremap <buffer> V :call OpenToRight()<cr>
+    noremap <buffer> V :call OpenRight()<cr>
     noremap <buffer> H :call OpenBelow()<cr>
 endfunction
 
@@ -40,9 +41,8 @@ augroup netrw_mappings
     autocmd filetype netrw call NetrwMappings()
 augroup END
 
-" allow for netrw to be toggled
 function! ToggleNetrw()
-    if g:NetrwIsOpen
+    if g:netrw_is_open
         let i = bufnr("$")
         while (i >= 1)
             if (getbufvar(i, "&filetype") == "netrw")
@@ -50,9 +50,9 @@ function! ToggleNetrw()
             endif
             let i-=1
         endwhile
-        let g:NetrwIsOpen=0
+        let g:netrw_is_open=0
     else
-        let g:NetrwIsOpen=1
+        let g:netrw_is_open=1
         silent Lexplore
     endif
 endfunction
@@ -63,4 +63,7 @@ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype
 " change directory to the current buffer when opening files.
 set autochdir
 
-let g:NetrwIsOpen=0
+" automatic start at vim enter
+" autocmd VimEnter * :call ToggleNetrw()
+
+nnoremap <silent> <leader><leader> :call ToggleNetrw()<CR>
