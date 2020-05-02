@@ -1,15 +1,10 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T19:08:28+0200
+" date:       2020-05-02T19:56:14+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
-
-" hide status line
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " keymaps
 nnoremap <silent> <leader>  :<c-u>WhichKey ','<CR>
@@ -24,18 +19,19 @@ call which_key#register('g', "g:g_prefix_dict")
 " descriptions
 let g:comma_prefix_dict = {
     \ 'name' : 'main',
-    \ 'a' : ['<Plug>(coc-codeaction-selected)', 'applying code action to the selected region'],
-    \ 'ac' : ['<Plug>(coc-codeaction)', 'applying code action to the selected line'],
+    \ '<space>' : ['nohlsearch', 'reset search highlighting'],
+    \ 'a' : ['<Plug>(coc-codeaction-selected)', 'coc action selected code'],
+    \ 'ac' : ['<Plug>(coc-codeaction)', 'coc action current line'],
     \ 'd' : ['setlocal spell! spelllang=de_de', 'toggle spell check german'],
     \ 'e' : ['setlocal spell! spelllang=en_us', 'toggle spell check english'],
     \ 'f' : ['<Plug>(coc-format-selected)', 'formating selected code'],
     \ 'l' : ['set list! list?', 'show control characters'],
     \ 'q' : {
-        \ 'name': '+autofix',
-        \ 'f' : ['<Plug>(coc-fix-current)', 'apply coc autofix to problem on the current line'],
+        \ 'name': '+coc autofix',
+        \ 'f' : ['<Plug>(coc-fix-current)', 'coc autofix current line'],
         \ },
     \ 'r' : {
-        \ 'name': '+rename',
+        \ 'name': '+coc rename',
         \ 'n' : ['<Plug>(coc-rename)', 'coc symbol renaming'],
         \ },
     \ 'S' : ['SyntasticToggleMode', 'toggle syntastic'],
@@ -46,13 +42,13 @@ let g:comma_prefix_dict = {
             \ 'name': '+dairy',
             \ 'i' : ['<Plug>VimwikiDiaryGenerateLinks', 'generate links'],
             \ 'm' : ['<Plug>VimwikiDiaryMakeTomorrowDiaryNote', 'make tomorrow note'],
-            \ 't' : ['<Plug>VimwikiDiaryTabMakeDiaryNote', 'make note in new tab'],
+            \ 't' : ['<Plug>VimwikiDiaryTabMakeDiaryNote', 'make note new tab'],
             \ 'w' : ['<Plug>VimwikiDiaryMakeDiaryNote', 'make note'],
             \ 'y' : ['<Plug>VimwikiDiaryMakeYesterdayDiaryNote', 'make yesterday note'],
             \ },
         \ 'i' : ['<Plug>VimwikiDiaryIndex', 'open diary'],
         \ 's' : ['<Plug>VimwikiUISelect', 'select vimwiki'],
-        \ 't' : ['<Plug>VimwikiTabIndex', 'open vimwiki in new tab'],
+        \ 't' : ['<Plug>VimwikiTabIndex', 'open vimwiki new tab'],
         \ 'w' : ['<Plug>VimwikiIndex', 'open vimwiki'],
         \ },
     \ }
@@ -62,9 +58,9 @@ let g:space_prefix_dict = {
     \ 'a' : ['CocList diagnostics', 'show all diagnostics'],
     \ 'c' : ['CocList commands', 'show all commands'],
     \ 'e' : ['CocList extensions', 'show all extensions'],
-    \ 'j' : ['CocNext', 'do default action for next item'],
-    \ 'k' : ['CocPrev', 'do default sction for previous item'],
-    \ 'o' : ['CocList outline', 'find symbol of current document'],
+    \ 'j' : ['CocNext', 'default action next item'],
+    \ 'k' : ['CocPrev', 'default sction previous item'],
+    \ 'o' : ['CocList outline', 'find symbol current document'],
     \ 'p' : ['CocListResume' , 'resume latest coc list'],
     \ 's' : ['CocList -I symbols', 'search workspace symbols'],
     \ }
@@ -72,16 +68,16 @@ let g:space_prefix_dict = {
 let g:g_prefix_dict = {
     \ 'name' : 'goto and comments',
     \ '%' : ['<Plug>(MatchitOperationBackward)', 'match it operation backward'],
-    \ '[' : ['<Plug>(GitGutterPrevHunk)', 'goto to previous changed git hunk'],
-    \ ']' : ['<Plug>(GitGutterNextHunk)', 'goto to next changed git hunk'],
+    \ '[' : ['<Plug>(GitGutterPrevHunk)', 'goto previous changed git hunk'],
+    \ ']' : ['<Plug>(GitGutterNextHunk)', 'goto next changed git hunk'],
     \ 'c' : ['<Plug>Commentary', 'comment out/in selected region'],
-    \ 'cc' : ['<Plug>CommentaryLine', 'comment out/in selected line'],
+    \ 'cc' : ['<Plug>CommentaryLine', 'comment out/in current line'],
     \ 'd' : ['<Plug>(coc-definition)', 'goto definition'],
     \ 'g' : ['call ToggleNetrw()', 'toggle netrw file explorer'],
     \ 'i' : ['<Plug>(coc-implementation)', 'goto implementation'],
-    \ 'n' : ['bnext', 'goto to next buffer'],
-    \ 'p' : ['bprevious', 'goto to previous buffer'],
+    \ 'n' : ['bnext', 'goto next buffer'],
+    \ 'p' : ['bprevious', 'goto previous buffer'],
     \ 'r' : ['<Plug>(coc-references)', 'goto references'],
-    \ 'x' : ['<Plug>NetrwBrowseX', 'open selected path in file explorer'],
+    \ 'x' : ['<Plug>NetrwBrowseX', 'open selected path file explorer'],
     \ 'y' : ['<Plug>(coc-type-definition)', 'goto type definition'],
     \ }
