@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T20:31:32+0200
+" date:       2020-05-04T01:30:57+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -73,11 +73,11 @@ let g:g_prefix_dict = {
     \ 'c' : ['<Plug>Commentary', 'comment out/in selected region'],
     \ 'cc' : ['<Plug>CommentaryLine', 'comment out/in current line'],
     \ 'd' : ['<Plug>(coc-definition)', 'goto definition'],
-    \ 'g' : ['call ToggleNetrw()', 'toggle netrw file explorer'],
+    \ 'f' : ['call ToggleNetrw()', 'toggle file explorer netrw'],
     \ 'i' : ['<Plug>(coc-implementation)', 'goto implementation'],
     \ 'n' : ['bnext', 'goto next buffer'],
     \ 'p' : ['bprevious', 'goto previous buffer'],
     \ 'r' : ['<Plug>(coc-references)', 'goto references'],
-    \ 'x' : ['<Plug>NetrwBrowseX', 'open selected path file explorer'],
+    \ 'x' : ['<Plug>NetrwBrowseX', 'open selected path or file'],
     \ 'y' : ['<Plug>(coc-type-definition)', 'goto type definition'],
     \ }
