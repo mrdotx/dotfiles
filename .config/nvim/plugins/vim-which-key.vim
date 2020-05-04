@@ -1,14 +1,16 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-04T10:26:16+0200
+" date:       2020-05-05T01:23:06+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
 
 " keymaps
 nnoremap <silent> <leader>  :<c-u>WhichKey ','<cr>
+vnoremap <silent> <leader>  :<c-u>WhichKeyVisual ','<CR>
 nnoremap <silent> <space>   :<c-u>WhichKey '<space>'<cr>
+vnoremap <silent> <space>   :<c-u>WhichKeyVisual '<Space>'<CR>
 
 " register description directories
 call which_key#register(',', "g:comma_prefix_dict")
@@ -27,14 +29,23 @@ let g:comma_prefix_dict = {
     \ 'e' : ['setlocal spell! spelllang=en_us', 'toggle spell check english'],
     \ 'f' : ['<Plug>(coc-format-selected)', 'formating selected code'],
     \ 'l' : ['set list! list?', 'show control characters'],
-    \ 'B' : ['bnext', 'goto next buffer'],
-    \ 'b' : ['bprevious', 'goto previous buffer'],
+    \ 'b' : {
+        \ 'name' : '+buffer',
+        \ '/' : ['buffers', 'buffer list'],
+        \ 'd' : ['bdelete', 'delete buffer'],
+        \ 'f' : ['bfirst', 'first buffer'],
+        \ 'k' : ['bwipeout', 'kill buffer'],
+        \ 'l' : ['blast', 'last buffer'],
+        \ 'h' : ['bmodified', 'next modified buffer'],
+        \ 'n' : ['bnext', 'next buffer'],
+        \ 'p' : ['bprevious', 'previous buffer'],
+        \ },
     \ 'q' : {
-        \ 'name': '+coc autofix',
+        \ 'name': '+quickfix coc',
         \ 'f' : ['<Plug>(coc-fix-current)', 'coc autofix current line'],
         \ },
     \ 'r' : {
-        \ 'name': '+coc rename',
+        \ 'name': '+rename coc',
         \ 'n' : ['<Plug>(coc-rename)', 'coc symbol renaming'],
         \ },
     \ 'S' : ['SyntasticToggleMode', 'toggle syntastic'],

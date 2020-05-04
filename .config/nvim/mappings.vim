@@ -1,15 +1,21 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-04T10:19:50+0200
+" date:       2020-05-05T01:19:28+0200
 
 " switch cursor window
 nnoremap                <tab>               <c-w>w
 nnoremap                <S-tab>             <c-w>W
 
-" buffer cycle
-nnoremap    <silent>    <leader>b           :bprevious<cr>
-nnoremap    <silent>    <leader>B           :bnext<cr>
+" buffers
+nnoremap    <silent>    <leader>b/          :buffers<cr>
+nnoremap    <silent>    <leader>bd          :bdelete<cr>
+nnoremap    <silent>    <leader>bf          :bfirst<cr>
+nnoremap    <silent>    <leader>bk          :bwipeout<cr>
+nnoremap    <silent>    <leader>bl          :blast<cr>
+nnoremap    <silent>    <leader>bm          :bmodified<cr>
+nnoremap    <silent>    <leader>bp          :bprevious<cr>
+nnoremap    <silent>    <leader>bn          :bnext<cr>
 
 " turn off search highlight
 nnoremap    <silent>    <leader>.           :nohlsearch<cr>
