@@ -1,7 +1,7 @@
 // path:       /home/klassiker/.config/nvim/coc-settings.json
 // author:     klassiker [mrdotx]
 // github:     https://github.com/mrdotx/dotfiles
-// date:       2020-05-02T14:22:18+0200
+// date:       2020-05-04T09:23:03+0200
 {
     "languageserver": {
         "ccls": {
@@ -28,18 +28,6 @@
                     "snippetSupport": true
                 }
             }
-        },
-        "bash": {
-            "command": "bash-language-server",
-            "args": [
-                "start"
-            ],
-            "filetypes": [
-                "sh"
-            ],
-            "ignoredRootPaths": [
-                "~"
-            ]
         }
     }
 }
