@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-04-29T22:43:55+0200
+! date:       2020-05-05T09:08:54+0200
 
 ! general
 *background:                        #000000
@@ -81,6 +81,7 @@ Sxiv.foreground:                    #ffffff
 st.alpha:                           0.90
 st.font:                            DejaVu Sans Mono:size=12
 st.fontalt0:                        JoyPixels:size 8
+st.scroll:                          scroll
 st.termname:                        st-256color
 st.borderpx:                        2
 
