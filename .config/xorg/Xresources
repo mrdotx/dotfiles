@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-05T11:02:25+0200
+! date:       2020-05-07T22:08:19+0200
 
 /* general */
 *background:                        #000000
@@ -12,39 +12,27 @@
 *pointerColorBackground:            #2b2c2b
 *pointerColorForeground:            #3476a4
 
-/* black normal/bright */
-*color0:                            #000000
-*color8:                            #333333
+/* normal colors */
+*color0:                            #000000     /* -> black */
+*color1:                            #fe0000     /* -> red */
+/* *color2:                            #00b200     /1* -> green *1/ */
+*color2:                            #4185d7     /* -> green */
+*color3:                            #b0b200     /* -> yellow */
+*color4:                            #1f5393     /* -> blue */
+*color5:                            #980096     /* -> purple */
+*color6:                            #009698     /* -> cyan */
+*color7:                            #cccccc     /* -> white */
 
-/* red normal/bright */
-*color1:                            #fe0000
-*color9:                            #ff5555
-
-/* green normal/bright */
-/* *color2:                            #00b200 */
-/* *color10:                           #00ff00 */
-*color2:                            #4185d7
-*color10:                           #3476a4
-
-/* yellow normal/bright */
-*color3:                            #b0b200
-*color11:                           #ffff55
-
-/* blue normal/bright */
-*color4:                            #1f5393
-*color12:                           #4084d6
-
-/* purple normal/bright */
-*color5:                            #980096
-*color13:                           #ff55ff
-
-/* cyan normal/bright */
-*color6:                            #009698
-*color14:                           #55ffff
-
-/* white normal/bright */
-*color7:                            #cccccc
-*color15:                           #ffffff
+/* bright colors */
+*color8:                            #333333     /* -> black */
+*color9:                            #ff5555     /* -> red */
+/* *color10:                           #00ff00     /1* -> green *1/ */
+*color10:                           #3476a4     /* -> green */
+*color11:                           #ffff55     /* -> yellow */
+*color12:                           #4084d6     /* -> blue */
+*color13:                           #ff55ff     /* -> purple */
+*color14:                           #55ffff     /* -> cyan */
+*color15:                           #ffffff     /* -> white */
 
 /* xcursor (size default 24, remommendend values 32,48,64) */
 Xcursor.theme:                      posy-white
@@ -76,14 +64,6 @@ Polybar.foreground1:                #666666
 Sxiv.font:                          Source Sans Pro:size=8
 Sxiv.background:                    #000000
 Sxiv.foreground:                    #ffffff
-
-/* simple terminal */
-st.alpha:                           0.90
-st.font:                            DejaVu Sans Mono:size=12
-st.fontalt0:                        JoyPixels:size 8
-st.scroll:                          scroll
-st.termname:                        st-256color
-st.borderpx:                        2
 
 /* rxvt-unicode */
 URxvt*font:                         xft:DejaVu Sans Mono:size=12,xft:JoyPixels:size=8
