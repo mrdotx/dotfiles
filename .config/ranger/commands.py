@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-05-04T23:34:05+0200
+date:       2020-05-09T09:17:52+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -24,12 +24,16 @@ class fzf_select(Command):
         import subprocess
         if self.quantifier:
             # match only directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf -e -i --preview 'cat {1}'"
+            command="find -L . -path '*/.*' -prune -o -type d -print 2> /dev/null \
+                    | sed 1d \
+                    | cut -b3- \
+                    | fzf -e -i --preview '< {1}'"
         else:
             # match files and directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf -e -i --preview 'cat {1}'"
+            command="find -L . -path '*/.*' -prune -o -print 2> /dev/null \
+                    | sed 1d \
+                    | cut -b3- \
+                    | fzf -e -i --preview '< {1}'"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -53,9 +57,11 @@ class fzf_locate(Command):
     def execute(self):
         import subprocess
         if self.quantifier:
-            command="locate / | fzf -e -i --preview 'cat {1}'"
+            command="locate / \
+                    | fzf -e -i --preview '< {1}'"
         else:
-            command="locate / | fzf -e -i --preview 'cat {1}'"
+            command="locate / \
+                    | fzf -e -i --preview '< {1}'"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
