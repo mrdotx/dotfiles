@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-01T19:22:20+0200
+# date:       2020-05-09T08:23:09+0200
 
 ###############################################################################
 # generell config
@@ -311,7 +311,7 @@ bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 4 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
-bindsym $sup+s exec "seahorse"
+bindsym $sup+s exec "scribus"
 bindsym $sup+u exec --no-startup-id "rofi_mount.sh"
 bindsym $sup+v exec "VirtualBox"
 bindsym $sup+w exec --no-startup-id "brave"
