@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-10T13:32:21+0200
+# date:       2020-05-11T00:05:14+0200
 
 ###############################################################################
 # generell config
@@ -321,6 +321,7 @@ bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+equal exec --no-startup-id "rofi_calc.sh"
 bindsym $sup+grave exec --no-startup-id "rofi_unicode_symbols.sh"
+bindsym $sup+comma exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/index.html"
