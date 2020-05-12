@@ -1,14 +1,14 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-12T10:38:17+0200
+" date:       2020-05-12T15:04:59+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=250
 
 " color mappings
 highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator String
+highlight default link WhichKeySeperator Identifier
 highlight default link WhichKeyGroup     Float
 highlight default link WhichKeyDesc      Comment
 
