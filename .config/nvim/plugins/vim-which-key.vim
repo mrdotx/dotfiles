@@ -1,10 +1,10 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-12T15:04:59+0200
+" date:       2020-05-14T11:46:19+0200
 
 " by default timeoutlen is 1000 ms
-set timeoutlen=250
+set timeoutlen=500
 
 " color mappings
 highlight default link WhichKey          Operator
