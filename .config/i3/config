@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-11T00:05:14+0200
+# date:       2020-05-15T09:29:38+0200
 
 ###############################################################################
 # generell config
@@ -12,7 +12,7 @@ set $sup Mod4
 set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
-set $res 1024 768
+set $res 1280 768
 
 # colors
 set_from_resource $black i3wm.color0 #000000
@@ -294,7 +294,8 @@ bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 ###############################################################################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
+# bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
+bindsym $sup+Shift+Return exec --no-startup-id "urxvt"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "rofi_bookmarks.sh"
