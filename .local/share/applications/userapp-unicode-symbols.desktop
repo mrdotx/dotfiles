@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=unicode-symbols
+Comment=unicode symbols emojies
+Icon=face-smile
+Exec=rofi_unicode_symbols.sh
+Actions=
+Categories=Utility;

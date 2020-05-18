@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=bookmarks
+Comment=bookmarks menu for link handler
+Icon=bookmark-new
+Exec=rofi_bookmarks.sh
+Actions=
+Categories=Utility;
