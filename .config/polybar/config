@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:49:49+0200
+# date:       2020-05-18T15:44:51+0200
 
 # wm
 [global/wm]
@@ -57,7 +57,7 @@
     tray-reparent = true
     tray-scale = 0.90
     modules-left = i3_upin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
-    modules-right = cmus alsa xbacklight wlansmall battery xkeyboard date powermenu
+    modules-right = cmus alsa xbacklight wlansmall battery xkeyboard date exit
 
 [bar/i3_2_mon_pri]
     inherit = bar/i3_gen
@@ -65,7 +65,7 @@
     tray-reparent = true
     tray-scale = 0.90
     modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
-    modules-right = wlan alsa xbacklight battery xkeyboard date powermenu
+    modules-right = wlan alsa xbacklight battery xkeyboard date exit
 
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
@@ -257,8 +257,15 @@
     click-middle = cmus-remote -u &
     click-right = cmus-remote -n &
 
-# powermenu
-[module/powermenu]
+# exit
+[module/exit]
+    inherit = module/custom
+    hook-0 = echo ""
+    initial = 1
+    click-left = dmenu_exit.sh
+
+# exitmenu
+[module/exitmenu]
     type = custom/menu
     expand-right = false
     format-spacing = 1
