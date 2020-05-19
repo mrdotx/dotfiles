@@ -2,7 +2,7 @@
  * path:       /home/klassiker/.config/rofi/config.rasi
  * author:     klassiker [mrdotx]
  * github:     https://github.com/mrdotx/dotfiles
- * date:       2020-04-29T10:57:10+0200
+ * date:       2020-05-19T13:02:22+0200
  */
 
 configuration {
@@ -12,7 +12,7 @@ configuration {
     show-icons:                 false;
     click-to-exit:              true;
 
-    modi:                       "combi,ssh";
+    modi:                       "drun";
     combi-modi:                 "drun,ssh";
     combi-hide-mode-prefix:     true;
     drun-match-fields:          "name,generic,exec,categories,comment";
