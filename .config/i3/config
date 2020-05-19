@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-18T19:41:51+0200
+# date:       2020-05-19T22:51:22+0200
 
 ###############################################################################
 # generell config
@@ -315,7 +315,7 @@ bindsym $sup+o exec "libreoffice"
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
 bindsym $sup+s exec "scribus"
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
-bindsym $sup+v exec "VirtualBox"
+bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "brave"
 bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
