@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T13:23:14+0200
+# date:       2020-05-19T12:28:14+0200
 
 user_resources=$HOME/.config/xorg/Xresources
 user_modmap=$HOME/.config/xorg/Xmodmap
@@ -38,6 +38,7 @@ if [ "$TERM" = linux ] ; then
     session=${1:-i3}
     case $session in
         i3|i3wm) exec i3 ;;
+        dwm) exec dwm ;;
         kodi) exec kodi-standalone ;;
         # if $session is not known, try to run string as command
         *) exec "$1" ;;
