@@ -1,11 +1,10 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T11:57:05+0200
+# date:       2020-05-20T18:56:06+0200
 
-###############################################################################
-# generell config
-###############################################################################
+# general config
+################
 
 # i3 config file (v4)
 set $sup Mod4
@@ -43,7 +42,7 @@ client.background       $whiteb
 floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
-font xft:Source Code Pro 11
+font pango:Source Code Pro Regular 11
 default_border pixel 2
 default_floating_border normal
 workspace_auto_back_and_forth yes
@@ -53,9 +52,8 @@ gaps outer -2
 smart_gaps on
 smart_borders on
 
-###############################################################################
 # application windows
-###############################################################################
+#####################
 
 # floating applications
 for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
@@ -85,9 +83,8 @@ for_window [class="mpv"] sticky enable
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
 
-###############################################################################
 # workspace
-###############################################################################
+###########
 
 # workspace names
 set $ws1 1
@@ -128,9 +125,8 @@ assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
 assign [class="Kodi"] $ws10
 
-###############################################################################
 # keybindings system managment
-###############################################################################
+##############################
 
 # start program launcher
 bindsym Super_L --release exec --no-startup-id "dmenu_run"
@@ -176,9 +172,8 @@ bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active 
 # bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; notify-send 'i3' 'polybar restarted'"
 bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user stop polybar.service && notify-send 'i3' 'polybar stopped'; else systemctl --user start polybar.service && notify-send 'i3' 'polybar started'; fi"
 
-###############################################################################
 # keybindings windows/container
-###############################################################################
+###############################
 
 # window switcher
 bindsym $sup+Tab exec --no-startup-id "rofi -monitor -1 -theme klassiker-horizontal -modi window -show window -show-icons"
@@ -223,9 +218,8 @@ bindsym $sup+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $alt+minus scratchpad show
 
-###############################################################################
 # keybindings workspaces
-###############################################################################
+########################
 
 # switch to workspace
 bindsym $sup+1 workspace $ws1
@@ -270,9 +264,8 @@ bindsym $alt+Tab workspace back_and_forth
 bindsym $sup+Ctrl+Left workspace prev
 bindsym $sup+Ctrl+Right workspace next
 
-###############################################################################
 # keybindings xf86 keys
-###############################################################################
+#######################
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
 bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
@@ -282,17 +275,15 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -time 200 -steps 
 bindsym XF86Cut exec --no-startup-id "xsel.sh"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 
-###############################################################################
 # keybindings screenshot
-###############################################################################
+########################
 
 bindsym Print --release exec --no-startup-id "screenshot.sh -desk"
 bindsym $sup+Print --release exec --no-startup-id "screenshot.sh -window"
 bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 
-###############################################################################
 # keybindings applications
-###############################################################################
+##########################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
 # bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
@@ -330,36 +321,22 @@ bindsym $sup+Shift+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/ht
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
-###############################################################################
 # i3 status bar
-###############################################################################
+###############
 
 # bar {
+#     id bar-0
+#     status_command i3status --config ~/.config/i3status/config_pmon
 #     i3bar_command i3bar --transparency
-#     colors {
-#         background #00000000
-#         statusline $whiteb
-#         separator  $white
-
-#         focused_workspace  $blue   $blueb  $whiteb
-#         active_workspace   $whiteb $blackb $whiteb
-#         inactive_workspace $blackb $black  $white
-#         urgent_workspace   $blackb $redb   $whiteb
-#         binding_mode       $blackb $redb   $whiteb
-#     }
 #     output eDP1
 #     tray_output eDP1
 #     tray_padding 2
 #     position top
+#     font pango:Source Sans Pro Regular 11
+#     font pando:Font Awesome 5 Free Solid 9
+#     font pando:Font Awesome 5 Free Regular 9
+#     font pango:Font Awesome 5 Brands Regular 9
 #     separator_symbol " "
-#     font pango:Source Sans Pro 10
-#     font pando:Font Awesome 5 Free 9
-#     font pango:Font Awesome 5 Brands 9
-#     status_command i3status --config ~/.config/i3status/config_pmon --transparency
-# }
-
-# bar {
-#     i3bar_command i3bar --transparency
 #     colors {
 #         background #00000000
 #         statusline $whiteb
@@ -371,20 +348,36 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 #         urgent_workspace   $blackb $redb   $whiteb
 #         binding_mode       $blackb $redb   $whiteb
 #     }
+# }
+
+# bar {
+#     id bar-1
+#     status_command i3status --config ~/.config/i3status/config_smon
+#     i3bar_command i3bar --transparency
 #     output HDMI2
 #     tray_output none
 #     tray_padding 2
 #     position top
+#     font pango:Source Sans Pro Regular 11
+#     font pando:Font Awesome 5 Free Solid 9
+#     font pando:Font Awesome 5 Free Regular 9
+#     font pango:Font Awesome 5 Brands Regular 9
 #     separator_symbol " "
-#     font pango:Source Sans Pro 10
-#     font pando:Font Awesome 5 Free 9
-#     font pango:Font Awesome 5 Brands 9
-#     status_command i3status --config ~/.config/i3status/config_smon
+#     colors {
+#         background #00000000
+#         statusline $whiteb
+#         separator  $white
+
+#         focused_workspace  $blue   $blueb  $whiteb
+#         active_workspace   $whiteb $blackb $whiteb
+#         inactive_workspace $blackb $black  $white
+#         urgent_workspace   $blackb $redb   $whiteb
+#         binding_mode       $blackb $redb   $whiteb
+#     }
 # }
 
-###############################################################################
 # start systemd target
-###############################################################################
+######################
 
 exec --no-startup-id "systemctl --user start window-manager.target"
 exec --no-startup-id "sleep 3 && i3_tiling.sh"
