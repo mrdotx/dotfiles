@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-18T15:44:51+0200
+# date:       2020-05-20T14:23:22+0200
 
 # wm
 [global/wm]
@@ -25,7 +25,6 @@
     red = ${xrdb:color9:#ff5555}
     yellow = ${xrdb:color3:#b0b200}
 
-# bar i3
 [bar/i3_gen]
     monitor = ${env:MONITOR:eDP1}
     bottom = false
@@ -56,7 +55,7 @@
     tray-position = right
     tray-reparent = true
     tray-scale = 0.90
-    modules-left = i3_upin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
     modules-right = cmus alsa xbacklight wlansmall battery xkeyboard date exit
 
 [bar/i3_2_mon_pri]
@@ -70,381 +69,23 @@
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
     modules-left = i3 cmus
-    modules-right = temp cpu ram ssd
+    modules-right = temperature cpu memory fs
 
-# module i3
-[module/i3]
-    type = internal/i3
-    pin-workspaces = true
-    index-sort = true
-    enable-click = true
-    enable-scroll = true
-    wrapping-scroll = false
-    reverse-scroll = true
-    fuzzy-match = false
-    ws-icon-0 = 1;
-    ws-icon-1 = 2;
-    ws-icon-2 = 3;
-    ws-icon-3 = 4;
-    ws-icon-4 = 5;
-    ws-icon-5 = 6;
-    ws-icon-6 = 7;
-    ws-icon-7 = 8;
-    ws-icon-8 = 9;
-    ws-icon-9 = 10;
-    ws-icon-default = 
-    format = <label-state>
-    label-focused = %icon% %index%
-    label-focused-foreground = ${colors.white}
-    label-focused-background = ${colors.blue}
-    label-focused-overline = ${colors.white}
-    label-focused-padding = 1
-    label-unfocused = %icon% %index%
-    label-unfocused-foreground = ${colors.grey}
-    label-unfocused-background = ${colors.black}
-    label-unfocused-overline = ${colors.foreground1}
-    label-unfocused-padding = 1
-    label-visible = %icon% %index%
-    label-visible-foreground = ${colors.white}
-    label-visible-background = ${colors.foreground1}
-    label-visible-overline = ${colors.white}
-    label-visible-padding = 1
-    label-urgent = %icon% %index%
-    label-urgent-foreground = ${colors.black}
-    label-urgent-background = ${colors.red}
-    label-urgent-overline = ${colors.red}
-    label-urgent-padding = 1
+include-file = ~/.config/polybar/internal/i3.cfg
+include-file = ~/.config/polybar/internal/xwindow.cfg
 
-[module/i3_upin]
-    inherit = module/i3
-    pin-workspaces = false
+include-file = ~/.config/polybar/internal/network.cfg
+include-file = ~/.config/polybar/internal/audio.cfg
+include-file = ~/.config/polybar/internal/xbacklight.cfg
+include-file = ~/.config/polybar/internal/battery.cfg
+include-file = ~/.config/polybar/internal/xkeyboard.cfg
+include-file = ~/.config/polybar/internal/date.cfg
 
-# wlan
-[module/wlan]
-    type = internal/network
-    interval = 3.0
-    interface = wlan0
-    format-connected-prefix = " "
-    format-connected = <label-connected>
-    format-connected-overline = ${colors.blue}
-    label-connected = %signal%% %essid% ↓%downspeed% ↑%upspeed%
-    label-connected-foreground = ${colors.foreground}
-    format-disconnected-prefix = " "
-    format-disconnected = <label-disconnected>
-    format-disconnected-overline = ${colors.red}
-    label-disconnected = %ifname% disconnected
-    label-disconnected-foreground = ${colors.foreground}
+include-file = ~/.config/polybar/internal/temperature.cfg
+include-file = ~/.config/polybar/internal/cpu.cfg
+include-file = ~/.config/polybar/internal/memory.cfg
+include-file = ~/.config/polybar/internal/fs.cfg
 
-[module/wlansmall]
-    inherit = module/wlan
-    interval = 30.0
-    label-connected = %signal%% %essid%
-
-# audio
-[module/audio]
-    interval = 5.0
-    format-volume = <ramp-volume> <bar-volume>
-    format-volume-overline = ${colors.blue}
-    ramp-volume-0 = ""
-    ramp-volume-foreground = ${colors.foreground}
-    ramp-headphones-0 = ""
-    format-muted-prefix = " "
-    format-muted-foreground = ${colors.foreground}
-    format-muted-overline = ${colors.red}
-    label-muted = "ıııııııııııııııııııı"
-    label-muted-foreground = ${colors.red}
-    label-muted-overline = ${colors.red}
-    bar-volume-width = 20
-    bar-volume-fill = |
-    bar-volume-fill-foreground = ${colors.blue}
-    bar-volume-indicator = |
-    bar-volume-empty = ı
-
-[module/alsa]
-    type = internal/alsa
-    inherit = module/audio
-    headphone-mixer = Headphone
-    headphone-id = 13
-    mapped = false
-
-[module/pulseaudio]
-    type = internal/pulseaudio
-    inherit = module/audio
-    sink = alsa_output.pci-0000_00_1f.3.analog-stereo
-    use-ui-max = false
-
-# custom
-[module/custom]
-    type = custom/ipc
-    format = <output>
-    format-foreground = ${colors.foreground}
-
-[module/authentication]
-    inherit = module/custom
-    hook-0 = polybar_authentication.sh --status
-    hook-1 = polybar_authentication.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook authentication 2
-    click-right = polybar-msg -p %pid% hook authentication 1
-
-[module/printer]
-    inherit = module/custom
-    hook-0 = polybar_printer.sh --status
-    hook-1 = polybar_printer.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook printer 2
-    click-right = polybar-msg -p %pid% hook printer 1
-
-[module/bluetooth]
-    inherit = module/custom
-    hook-0 = polybar_bluetooth.sh --status
-    hook-1 = polybar_bluetooth.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook bluetooth 2
-    click-right = polybar-msg -p %pid% hook bluetooth 1
-
-[module/gestures]
-    inherit = module/custom
-    hook-0 = polybar_gestures.sh --status
-    hook-1 = polybar_gestures.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook gestures 2
-    click-right = polybar-msg -p %pid% hook gestures 1
-
-[module/firewall]
-    inherit = module/custom
-    hook-0 = polybar_firewall.sh --status
-    hook-1 = polybar_firewall.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook firewall 2
-    click-right = polybar-msg -p %pid% hook firewall 1
-
-[module/vpnhades]
-    inherit = module/custom
-    hook-0 = polybar_vpn_hades.sh --status
-    hook-1 = polybar_vpn_hades.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook vpnhades 2
-    click-right = polybar-msg -p %pid% hook vpnhades 1
-
-[module/resolver]
-    inherit = module/custom
-    hook-0 = polybar_resolver.sh --status
-    hook-1 = polybar_resolver.sh
-    initial = 1
-    click-left = polybar-msg -p %pid% hook resolver 2
-    click-right = polybar-msg -p %pid% hook resolver 1
-
-[module/rss]
-    inherit = module/custom
-    format-overline = ${colors.blue}
-    hook-0 = polybar_rss.sh --status
-    hook-1 = polybar_rss
-    hook-2 = polybar_rss.sh --toggle
-    hook-3 = echo "%{o$(xrdb -query | grep color11: | cut -f2)}%{o-}"
-    hook-4 = echo "%{o$(xrdb -query | grep Polybar.foreground1: | cut -f2)}%{o-}"
-    initial = 5
-    click-left = polybar-msg -p %pid% hook rss 3
-    click-right = polybar-msg -p %pid% hook rss 1
-
-[module/cmus]
-    inherit = module/custom
-    format-overline = ${colors.blue}
-    hook-0 = echo ""
-    hook-1 = cmus_notify.sh --polybar
-    initial = 2
-    click-left = cmus-remote -r &
-    click-middle = cmus-remote -u &
-    click-right = cmus-remote -n &
-
-# exit
-[module/exit]
-    inherit = module/custom
-    hook-0 = echo ""
-    initial = 1
-    click-left = dmenu_exit.sh
-
-# exitmenu
-[module/exitmenu]
-    type = custom/menu
-    expand-right = false
-    format-spacing = 1
-    label-open = 
-    label-open-foreground = ${colors.foreground}
-    label-close = 
-    label-close-foreground = ${colors.foreground}
-    label-close-overline = ${colors.red}
-    label-separator = |
-    label-separator-foreground = ${colors.foreground}
-    menu-0-0 =  shutdown
-    menu-0-0-exec = menu-open-1
-    menu-0-0-foreground = ${colors.foreground}
-    menu-0-1 =  reboot
-    menu-0-1-exec = menu-open-2
-    menu-0-1-foreground = ${colors.foreground}
-    menu-0-2 =  log out
-    menu-0-2-exec = menu-open-3
-    menu-0-2-foreground = ${colors.foreground}
-    menu-1-0 = 
-    menu-1-0-exec = i3_knockout.sh -shutdown
-    menu-1-0-foreground = ${colors.foreground}
-    menu-1-0-overline = ${colors.green}
-    menu-1-1 =  shutdown? 
-    menu-1-1-exec = menu-open-0
-    menu-1-1-foreground = ${colors.foreground}
-    menu-2-0 = 
-    menu-2-0-exec = i3_knockout.sh -reboot
-    menu-2-0-foreground = ${colors.foreground}
-    menu-2-0-overline = ${colors.green}
-    menu-2-1 =  reboot? 
-    menu-2-1-exec = menu-open-0
-    menu-2-1-foreground = ${colors.foreground}
-    menu-3-0 = 
-    menu-3-0-exec = i3_knockout.sh -logout
-    menu-3-0-foreground = ${colors.foreground}
-    menu-3-0-overline = ${colors.green}
-    menu-3-1 =  log out? 
-    menu-3-1-exec = menu-open-0
-    menu-3-1-foreground = ${colors.foreground}
-
-# battery
-[module/battery]
-    type = internal/battery
-    poll-interval = 10.0
-    battery = BAT0
-    adapter = ADP0
-    full-at = 100
-    label-charging = %percentage%% %time%
-    label-charging-foreground = ${colors.foreground}
-    format-charging = <animation-charging> <label-charging>
-    format-charging-overline = ${colors.yellow}
-    label-discharging = %percentage%% %time%
-    label-discharging-foreground = ${colors.foreground}
-    format-discharging = <animation-discharging> <label-discharging>
-    format-discharging-overline = ${colors.red}
-    label-full = ""
-    label-full-foreground = ${colors.foreground}
-    format-full-prefix =
-    format-full-prefix-foreground = ${colors.foreground}
-    format-full-overline = ${colors.blue}
-    animation-charging-0 = 
-    animation-charging-1 = 
-    animation-charging-2 = 
-    animation-charging-3 = 
-    animation-charging-4 = 
-    animation-charging-foreground = ${colors.foreground}
-    animation-charging-framerate = 750
-    animation-discharging-0 = 
-    animation-discharging-1 = 
-    animation-discharging-2 = 
-    animation-discharging-3 = 
-    animation-discharging-4 = 
-    animation-discharging-foreground = ${colors.foreground}
-    animation-discharging-framerate = 750
-
-# temp
-[module/temp]
-    type = internal/temperature
-    interval = 2.0
-    thermal-zone = 0
-    warn-temperature = 82
-    format = <ramp> <label>
-    format-overline = ${colors.blue}
-    format-warn = <ramp> <label-warn>
-    format-warn-overline = ${colors.red}
-    label = %temperature-c%
-    label-foreground = ${colors.foreground}
-    label-warn = %temperature-c%
-    label-warn-foreground = ${colors.red}
-    ramp-0 = 
-    ramp-1 = 
-    ramp-2 = 
-    ramp-3 = 
-    ramp-4 = 
-    ramp-foreground = ${colors.foreground}
-
-# xwindow
-[module/xwindow]
-    type = internal/xwindow
-    format = <label>
-    format-foreground = ${colors.white}
-    format-overline = ${colors.blue}
-    label = %title%
-    label-maxlen = 100
-
-# cpu
-[module/cpu]
-    type = internal/cpu
-    interval = 2.0
-    format-prefix = " "
-    format-prefix-foreground = ${colors.foreground}
-    format-overline = ${colors.blue}
-    label = %percentage%%
-    label-foreground = ${colors.foreground}
-
-# ram
-[module/ram]
-    type = internal/memory
-    interval = 2.0
-    format-prefix = " "
-    format-prefix-foreground = ${colors.foreground}
-    format-overline = ${colors.blue}
-    label = %percentage_used%% %gb_used%/%gb_total%  %percentage_swap_used%% %gb_swap_used%/%gb_swap_total%
-    label-foreground = ${colors.foreground}
-
-# ssd
-[module/ssd]
-    type = internal/fs
-    interval = 30.0
-    fixed-values = true
-    mount-0 = /
-    mount-1 = /tmp/media/disk1
-    label-mounted =  %percentage_used%% %used%/%total%
-    label-mounted-foreground = ${colors.foreground}
-    label-mounted-overline = ${colors.blue}
-    label-unmounted = %mountpoint% not mounted
-    label-unmounted-foreground = ${colors.foreground}
-    label-unmountet-overline = ${colors.red}
-
-# xbacklight
-[module/xbacklight]
-    type = internal/xbacklight
-    format-prefix = " "
-    format-prefix-foreground = ${colors.foreground}
-    format = <bar>
-    format-overline = ${colors.blue}
-    label = %percentage%%
-    label-foreground = ${colors.foreground}
-    bar-width = 20
-    bar-fill = |
-    bar-fill-foreground = ${colors.blue}
-    bar-indicator = |
-    bar-empty = ı
-
-# xkeyboard
-[module/xkeyboard]
-    type = internal/xkeyboard
-    blacklist-0 = num lock
-    blacklist-1 = scroll lock
-    format-prefix = " "
-    format-prefix-foreground = ${colors.foreground}
-    format-prefix-overline = ${colors.blue}
-    label-layout = %layout%
-    label-layout-foreground = ${colors.foreground}
-    label-layout-overline = ${colors.blue}
-    indicator-icon-0 = caps lock;;
-    label-indicator-on = %icon%
-
-# date
-[module/date]
-    type = internal/date
-    interval = 60.0
-    date = 
-    date-alt =  %a %d.%m.%Y
-    time = %k:%M
-    time-alt = %k:%M
-    label = %date% %time%
-    label-foreground = ${colors.foreground}
-    label-overline = ${colors.blue}
+include-file = ~/.config/polybar/custom.cfg
 
 # vim:ft=cfg
