@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T18:56:06+0200
+# date:       2020-05-20T19:18:38+0200
 
 # general config
 ################
@@ -333,9 +333,9 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 #     tray_padding 2
 #     position top
 #     font pango:Source Sans Pro Regular 11
-#     font pando:Font Awesome 5 Free Solid 9
-#     font pando:Font Awesome 5 Free Regular 9
-#     font pango:Font Awesome 5 Brands Regular 9
+#     font pango:Font Awesome 5 Free Solid 10
+#     font pango:Font Awesome 5 Free Regular 10
+#     font pango:Font Awesome 5 Brands Regular 10
 #     separator_symbol " "
 #     colors {
 #         background #00000000
@@ -359,9 +359,9 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 #     tray_padding 2
 #     position top
 #     font pango:Source Sans Pro Regular 11
-#     font pando:Font Awesome 5 Free Solid 9
-#     font pando:Font Awesome 5 Free Regular 9
-#     font pango:Font Awesome 5 Brands Regular 9
+#     font pango:Font Awesome 5 Free Solid 10
+#     font pango:Font Awesome 5 Free Regular 10
+#     font pango:Font Awesome 5 Brands Regular 10
 #     separator_symbol " "
 #     colors {
 #         background #00000000
