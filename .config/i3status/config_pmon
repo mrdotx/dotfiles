@@ -1,0 +1,42 @@
+# path:       /home/klassiker/.config/i3status/config_pmon
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-05-20T11:48:35+0200
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "wireless _first_"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+wireless _first_ {
+        color_good = "#ffffff"
+        color_degraded = "#b0b200"
+        color_bad = "#ff5555"
+        format_up = " %quality %essid %bitrate %frequency"
+        format_down = " disconnected"
+}
+
+volume master {
+        format = " %volume"
+        format_muted = ""
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+battery 0 {
+        status_bat = ""
+        status_chr = ""
+        status_unk = "?"
+        status_full = ""
+        format = "%status %percentage %remaining"
+}
+
+tztime local {
+        format = " %time"
+        format_time = "%a %d.%m.%Y %k:%M"
+}
