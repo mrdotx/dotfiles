@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-19T23:05:20+0200
+# date:       2020-05-20T11:57:05+0200
 
 ###############################################################################
 # generell config
@@ -329,6 +329,58 @@ bindsym $sup+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/sho
 bindsym $sup+Shift+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/index.html"
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
+
+###############################################################################
+# i3 status bar
+###############################################################################
+
+# bar {
+#     i3bar_command i3bar --transparency
+#     colors {
+#         background #00000000
+#         statusline $whiteb
+#         separator  $white
+
+#         focused_workspace  $blue   $blueb  $whiteb
+#         active_workspace   $whiteb $blackb $whiteb
+#         inactive_workspace $blackb $black  $white
+#         urgent_workspace   $blackb $redb   $whiteb
+#         binding_mode       $blackb $redb   $whiteb
+#     }
+#     output eDP1
+#     tray_output eDP1
+#     tray_padding 2
+#     position top
+#     separator_symbol " "
+#     font pango:Source Sans Pro 10
+#     font pando:Font Awesome 5 Free 9
+#     font pango:Font Awesome 5 Brands 9
+#     status_command i3status --config ~/.config/i3status/config_pmon --transparency
+# }
+
+# bar {
+#     i3bar_command i3bar --transparency
+#     colors {
+#         background #00000000
+#         statusline $whiteb
+#         separator  $white
+
+#         focused_workspace  $blue   $blueb  $whiteb
+#         active_workspace   $whiteb $blackb $whiteb
+#         inactive_workspace $blackb $black  $white
+#         urgent_workspace   $blackb $redb   $whiteb
+#         binding_mode       $blackb $redb   $whiteb
+#     }
+#     output HDMI2
+#     tray_output none
+#     tray_padding 2
+#     position top
+#     separator_symbol " "
+#     font pango:Source Sans Pro 10
+#     font pando:Font Awesome 5 Free 9
+#     font pango:Font Awesome 5 Brands 9
+#     status_command i3status --config ~/.config/i3status/config_smon
+# }
 
 ###############################################################################
 # start systemd target
