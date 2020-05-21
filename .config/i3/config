@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T19:18:38+0200
+# date:       2020-05-21T19:20:27+0200
 
 # general config
 ################
@@ -12,6 +12,8 @@ set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
 set $res 1280 768
+set $gapsi 4
+set $gapso -2
 
 # colors
 set_from_resource $black i3wm.color0 #000000
@@ -47,8 +49,8 @@ default_border pixel 2
 default_floating_border normal
 workspace_auto_back_and_forth yes
 # for_window [urgent=latest] focus
-gaps inner 4
-gaps outer -2
+gaps inner $gapsi
+gaps outer $gapso
 smart_gaps on
 smart_borders on
 
@@ -176,7 +178,7 @@ bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active 
 ###############################
 
 # window switcher
-bindsym $sup+Tab exec --no-startup-id "rofi -monitor -1 -theme klassiker-horizontal -modi window -show window -show-icons"
+bindsym $sup+Tab exec --no-startup-id "rofi -m -1 -theme klassiker-horizontal -i -p \\"\\" -modi window -show window"
 
 # split orientation
 # bindsym $sup+Ctrl+Up split h; exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
@@ -191,32 +193,37 @@ bindsym $sup+Up focus up
 bindsym $sup+Down focus down
 
 # move focused window
-bindsym $sup+Shift+Left move left 25 px
-bindsym $sup+Shift+Right move right 25 px
-bindsym $sup+Shift+Up move up 25 px
-bindsym $sup+Shift+Down move down 25 px
+bindsym $sup+Shift+Left move left 20 px
+bindsym $sup+Shift+Right move right 20 px
+bindsym $sup+Shift+Up move up 20 px
+bindsym $sup+Shift+Down move down 20 px
 
 # resize window
-bindsym $sup+$alt+Left resize shrink width 25 px or 5 ppt
-bindsym $sup+$alt+Right resize grow width 25 px or 5 ppt
-bindsym $sup+$alt+Up resize shrink height 25 px or 5 ppt
-bindsym $sup+$alt+Down resize grow height 25 px or 5 ppt
+bindsym $sup+$alt+Left resize shrink width 20 px or 4 ppt
+bindsym $sup+$alt+Right resize grow width 20 px or 4 ppt
+bindsym $sup+$alt+Up resize shrink height 20 px or 4 ppt
+bindsym $sup+$alt+Down resize grow height 20 px or 4 ppt
 
-# toggle tiling/floating
-bindsym $alt+space floating toggle
-
-# change focus between tiling/floating windows
-bindsym $sup+space focus mode_toggle
+# resize gaps
+bindsym $sup+shift+minus gaps outer current minus 4, gaps inner current minus 8
+bindsym $sup+shift+equal gaps outer current plus 4, gaps inner current plus 8
+bindsym $sup+equal gaps inner current set $gapsi, gaps outer current set $gapso
 
 # toggle sticky
-bindsym $sup+Shift+s sticky toggle
+bindsym $sup+space sticky toggle
 
-# move the currently focused window to the scratchpad
-bindsym $sup+minus move scratchpad
+# toggle tiling/floating
+bindsym $sup+bracketleft floating toggle
+
+# change focus between tiling/floating windows
+bindsym $sup+bracketright focus mode_toggle
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $alt+minus scratchpad show
+bindsym $sup+shift+bracketleft scratchpad show
+
+# move the currently focused window to the scratchpad
+bindsym $sup+shift+bracketright move scratchpad
 
 # keybindings workspaces
 ########################
@@ -312,7 +319,7 @@ bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+z exec --no-startup-id "filezilla"
 
-bindsym $sup+equal exec --no-startup-id "dmenu_calc.sh"
+bindsym $sup+colon exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
 bindsym $sup+comma exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
