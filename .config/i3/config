@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-21T19:20:27+0200
+# date:       2020-05-21T21:29:00+0200
 
 # general config
 ################
@@ -170,7 +170,8 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'rest
 # bindsym $sup+Shift+p exec --no-startup-id "systemctl --user restart picom.service; notify-send 'i3' 'picom restarted'"
 bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user stop picom.service && notify-send 'i3' 'picom stopped'; else systemctl --user start picom.service && notify-send 'i3' 'picom started'; fi"
 
-# polybar restart
+# polybar
+bindsym $sup+y exec --no-startup-id "polybar.sh -t"
 # bindsym $sup+Shift+y exec --no-startup-id "systemctl --user restart polybar.service; notify-send 'i3' 'polybar restarted'"
 bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user stop polybar.service && notify-send 'i3' 'polybar stopped'; else systemctl --user start polybar.service && notify-send 'i3' 'polybar started'; fi"
 
