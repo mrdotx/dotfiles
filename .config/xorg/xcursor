@@ -1,0 +1,10 @@
+! path:       /home/klassiker/.config/xorg/xcursor
+! author:     klassiker [mrdotx]
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2020-05-22T00:17:08+0200
+
+/* size default 24, remommendend values 32,48,64 */
+Xcursor.theme:  posy-white
+Xcursor.size:   24
+
+! vim:ft=xdefaults

@@ -1,0 +1,10 @@
+! path:       /home/klassiker/.config/xorg/sxiv
+! author:     klassiker [mrdotx]
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2020-05-22T00:16:28+0200
+
+Sxiv.font:          Source Sans Pro:size=8
+Sxiv.background:    BLACK0
+Sxiv.foreground:    WHITE1
+
+! vim:ft=xdefaults
