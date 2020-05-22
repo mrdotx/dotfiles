@@ -1,34 +1,34 @@
-! path:       /home/klassiker/.config/xorg/default.xcolors
+! path:       /home/klassiker/.config/xorg/xcolors/default
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T00:19:25+0200
+! date:       2020-05-22T09:39:02+0200
 
 #define BLACK0T     #00000000
-#define BLACK0      #000000
-#define WHITE1      #ffffff
+#define BLACK0      #000000     /* color0 */
+#define WHITE1      #ffffff     /* color15 */
 
-#define RED0        #fe0000
-#define RED1        #ff5555
+#define RED0        #ff5555     /* color1 */
+#define RED1        #fe0000     /* color9 */
 
-#define YELLOW0     #b0b200
-#define YELLOW1     #ffff55
+#define YELLOW0     #b0b200     /* color3 */
+#define YELLOW1     #ffff55     /* color11 */
 
-#define GREEN0      #00b200
-#define GREEN1      #00ff00
+#define GREEN0      #00b200     /* color2 */
+#define GREEN1      #00ff00     /* color10 */
 
-#define CYAN0       #009698
-#define CYAN1       #55ffff
+#define CYAN0       #009698     /* color6 */
+#define CYAN1       #55ffff     /* color14 */
 
-#define PURPLE0     #980096
-#define PURPLE1     #ff55ff
+#define PURPLE0     #980096     /* color5 */
+#define PURPLE1     #ff55ff     /* color14 */
 
-#define BLUE0       #1f5393
-#define BLUE1       #4084d6
+#define BLUE0       #1f5393     /* color4 */
+#define BLUE1       #4084d6     /* color12 */
 
 #define GREY0       #2b2b2b
-#define GREY1       #333333
+#define GREY1       #333333     /* color8 */
 #define GREY2       #666666
-#define GREY3       #cccccc
+#define GREY3       #cccccc     /* color7 */
 #define GREY4       #dfdfdf
 
 ! vim:ft=xdefaults
