@@ -1,28 +1,27 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T16:56:15+0200
+! date:       2020-05-22T19:45:23+0200
 
 #define BLACK0T             #00000000
 #define BLACK0              #000000
 #define WHITE1              #ffffff
 
-#define RED0                #ff5555
-#define RED1                #fe0000
+#define RED0                #df2800
+#define RED1                #ff5555
 
 #define YELLOW0             #b0b200
-#define YELLOW1             #ffff55
+#define YELLOW1             #effd5f
 
 #define GREEN0              #00b200
-#define GREEN1              #00ff00
+#define GREEN1              #39ff14
 
-#define CYAN0               #009698
-#define CYAN1               #55ffff
+#define CYAN0               #008081
+#define CYAN1               #7ef9ff
 
 #define PURPLE0             #980096
-#define PURPLE1             #ff55ff
+#define PURPLE1             #ff6fff
 
-/* #1f5393 #3476a4 #4084d6 #4185d7 */
 #define BLUE0               #1f5393
 #define BLUE1               #4185d7
 

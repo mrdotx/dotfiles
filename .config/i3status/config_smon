@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3status/config_smon
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T11:03:05+0200
+# date:       2020-05-22T19:53:51+0200
 
 general {
         colors = true
@@ -17,7 +17,7 @@ order += "disk /tmp/media/disk1"
 cpu_temperature 0 {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
         max_threshold = 82
         format = " %degrees °C"
@@ -26,7 +26,7 @@ cpu_temperature 0 {
 cpu_usage {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         max_threshold = 95
         degraded_threshold = 75
         format = " %usage"
@@ -35,7 +35,7 @@ cpu_usage {
 memory {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         format = " %percentage_used %used/%total"
         format_degraded = "M %available"
         threshold_degraded = "10%"
@@ -45,7 +45,7 @@ memory {
 disk "/" {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         low_threshold = 5
         format = " %percentage_used %used/%total"
 }
@@ -53,7 +53,7 @@ disk "/" {
 disk "/tmp/media/disk1" {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         low_threshold = 5
         format = " %percentage_used %used/%total"
 }

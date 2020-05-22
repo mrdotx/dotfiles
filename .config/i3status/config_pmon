@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3status/config_pmon
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T12:22:32+0200
+# date:       2020-05-22T19:53:09+0200
 
 general {
         colors = true
@@ -16,7 +16,7 @@ order += "tztime local"
 wireless _first_ {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
-        color_bad = "#ff5555"
+        color_bad = "#df2800"
         format_up = " %quality %essid %bitrate %frequency"
         format_down = " disconnected"
 }
