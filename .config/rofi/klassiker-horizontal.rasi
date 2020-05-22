@@ -2,7 +2,7 @@
  * path:       /home/klassiker/.config/rofi/klassiker-horizontal.rasi
  * author:     klassiker [mrdotx]
  * github:     https://github.com/mrdotx/dotfiles
- * date:       2020-04-29T10:57:21+0200
+ * date:       2020-05-22T16:13:28+0200
  */
 
 * {
@@ -15,7 +15,7 @@
     black:                  rgba (0,0,0,100%);
     grey:                   rgba (203,203,203,100%);
     white:                  rgba (255,255,255,100%);
-    blue:                   rgba (64,132,214,100%);
+    blue:                   rgba (65,133,215,100%);
     red:                    rgba (220,50,47,100%);
     green:                  rgba (0,255,0,100%);
 }

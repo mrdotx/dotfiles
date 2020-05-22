@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T11:13:02+0200
+# date:       2020-05-22T16:03:12+0200
 
 # general config
 ################
@@ -18,14 +18,14 @@ set $gapso -2
 # colors
 set_from_resource $black i3wm.color0 #000000
 set_from_resource $blackb i3wm.color8 #333333
-set_from_resource $red i3wm.color1 #fe0000
-set_from_resource $redb i3wm.color9 #ff5555
+set_from_resource $red i3wm.color1 #ff5555
+set_from_resource $redb i3wm.color9 #fe0000
 set_from_resource $green i3wm.color2 #00b200
 set_from_resource $greenb i3wm.color10 #00ff00
 set_from_resource $yellow i3wm.color3 #b0b200
 set_from_resource $yellowb i3wm.color11 #ffff55
 set_from_resource $blue i3wm.color4 #1f5393
-set_from_resource $blueb i3wm.color12 #4084d6
+set_from_resource $blueb i3wm.color12 #4185d7
 set_from_resource $purple i3wm.color5 #980096
 set_from_resource $purpleb i3wm.color13 #ff55ff
 set_from_resource $cyan i3wm.color6 #009698
@@ -34,7 +34,7 @@ set_from_resource $white i3wm.color7 #cccccc
 set_from_resource $whiteb i3wm.color15 #ffffff
 
 # class                 border   backgr.  text     indi.    child
-client.focused          $blueb   $green   $whiteb  $whiteb  $greenb
+client.focused          $blueb   $blue    $whiteb  $whiteb  $blueb
 client.focused_inactive $blackb  $blackb  $whiteb  $blackb  $blackb
 client.unfocused        $blackb  $black   $blackb  $blackb  $black
 client.urgent           $blackb  $redb    $whiteb  $redb    $redb

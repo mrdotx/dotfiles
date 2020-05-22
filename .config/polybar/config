@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T08:43:53+0200
+# date:       2020-05-22T15:36:41+0200
 
 # wm
 [global/wm]
@@ -20,7 +20,7 @@
     white = ${xrdb:color15:#ffffff}
     black = ${xrdb:color0:#000000}
     grey = ${xrdb:color7:#cccccc}
-    blue = ${xrdb:color12:#4084d6}
+    blue = ${xrdb:color12:#4185d7}
     green = ${xrdb:color2:#00b200}
     red = ${xrdb:color9:#ff5555}
     yellow = ${xrdb:color3:#b0b200}

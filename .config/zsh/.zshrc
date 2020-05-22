@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-15T09:49:03+0200
+# date:       2020-05-22T16:18:46+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -19,9 +19,9 @@ GIT_PS1_SHOWUPSTREAM="auto verbose name"
 # GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
 
-#precmd () { __git_ps1 "%{$fg_bold[green]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[green]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
-precmd () { __git_ps1 "%{$fg_bold[green]%}[%{$reset_color%}%3~%{$fg_bold[green]%}]%{$reset_color%}" "%B$%b " }
-RPROMPT='%F{green}[%f%?%F{green}]%f'
+#precmd () { __git_ps1 "%{$fg_bold[blue]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[blue]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
+precmd () { __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B$%b " }
+RPROMPT='%F{blue}[%f%?%F{blue}]%f'
 
 # history command configuration
 setopt hist_ignore_dups       # ignore duplicated commands history list

@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/colors/klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-04-29T10:19:22+0200
+" date:       2020-05-22T16:06:29+0200
 
 set background=dark
 hi clear
@@ -13,7 +13,7 @@ endif
 let colors_name="klassiker"
 
 " colors used in this scheme
-" GUI: #3476A4, Term:  67
+" GUI: #4185d7, Term:  67
 " GUI: #009698, Term:  81
 " GUI: #334455, Term:  59
 " GUI: #111111, Term: 233

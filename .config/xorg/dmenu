@@ -1,16 +1,16 @@
 ! path:       /home/klassiker/.config/xorg/dmenu
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T02:22:20+0200
+! date:       2020-05-22T15:29:38+0200
 
 dmenu.font:                     "DejaVu Sans Mono:pixelsize=16:antialias=true:autohint=true", "JoyPixels:pixelsize=14:antialias=true:autohint=true"
 dmenu.background:               BLACK0
 dmenu.foreground:               GREY3
-dmenu.selbackground:            GREEN1
+dmenu.selbackground:            BLUE1
 dmenu.selforeground:            GREY3
 dmenu.selhighlightforeground:   WHITE1
-dmenu.selhighlightbackground:   GREEN1
-dmenu.normhighlightforeground:  GREEN0
+dmenu.selhighlightbackground:   BLUE1
+dmenu.normhighlightforeground:  BLUE1
 dmenu.normhighlightbackground:  BLACK0
 dmenu.outforeground:            BLACK0
 dmenu.outbackground:            CYAN0

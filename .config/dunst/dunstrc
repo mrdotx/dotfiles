@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:46:43+0200
+# date:       2020-05-22T15:50:15+0200
 
 [global]
 
@@ -70,7 +70,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#3476a4"
+    frame_color = "#1f5393"
 
     # Define a color for the separator.
     # possible values are:
