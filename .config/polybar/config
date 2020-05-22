@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-20T21:05:59+0200
+# date:       2020-05-22T08:43:53+0200
 
 # wm
 [global/wm]
@@ -14,8 +14,8 @@
 
 # colors
 [colors]
-    background = ${xrdb:Polybar.background:#00000000}
-    foreground = ${xrdb:Polybar.foreground:#dfdfdf}
+    background = ${xrdb:Polybar.background0:#00000000}
+    foreground = ${xrdb:Polybar.foreground0:#dfdfdf}
     foreground1 = ${xrdb:Polybar.foreground1:#666666}
     white = ${xrdb:color15:#ffffff}
     black = ${xrdb:color0:#000000}
@@ -71,20 +71,20 @@
     modules-left = i3 cmus
     modules-right = temperature cpu memory fs
 
-include-file = ~/.config/polybar/internal/i3.cfg
-include-file = ~/.config/polybar/internal/xwindow.cfg
+include-file = ~/.config/polybar/i3.cfg
+include-file = ~/.config/polybar/xwindow.cfg
 
-include-file = ~/.config/polybar/internal/network.cfg
-include-file = ~/.config/polybar/internal/audio.cfg
-include-file = ~/.config/polybar/internal/xbacklight.cfg
-include-file = ~/.config/polybar/internal/battery.cfg
-include-file = ~/.config/polybar/internal/xkeyboard.cfg
-include-file = ~/.config/polybar/internal/date.cfg
+include-file = ~/.config/polybar/network.cfg
+include-file = ~/.config/polybar/audio.cfg
+include-file = ~/.config/polybar/xbacklight.cfg
+include-file = ~/.config/polybar/battery.cfg
+include-file = ~/.config/polybar/xkeyboard.cfg
+include-file = ~/.config/polybar/date.cfg
 
-include-file = ~/.config/polybar/internal/temperature.cfg
-include-file = ~/.config/polybar/internal/cpu.cfg
-include-file = ~/.config/polybar/internal/memory.cfg
-include-file = ~/.config/polybar/internal/fs.cfg
+include-file = ~/.config/polybar/temperature.cfg
+include-file = ~/.config/polybar/cpu.cfg
+include-file = ~/.config/polybar/memory.cfg
+include-file = ~/.config/polybar/fs.cfg
 
 include-file = ~/.config/polybar/custom.cfg
 
