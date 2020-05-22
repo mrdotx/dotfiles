@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T02:22:54+0200
+! date:       2020-05-22T10:46:58+0200
 
 #include "xcolors/klassiker"
 
@@ -17,7 +17,7 @@
 /* general colors normal */
 *color0:                    BLACK0
 *color1:                    RED0
-*color2:                    GREEN1
+*color2:                    GREEN0
 *color3:                    YELLOW0
 *color4:                    BLUE0
 *color5:                    PURPLE0
@@ -27,7 +27,7 @@
 /* general colors bright */
 *color8:                    GREY1
 *color9:                    RED1
-*color10:                   GREEN0
+*color10:                   GREEN1
 *color11:                   YELLOW1
 *color12:                   BLUE1
 *color13:                   PURPLE1
@@ -41,3 +41,4 @@
 #include "polybar"
 #include "rxvt-unicode"
 #include "dmenu"
+#include "st"
