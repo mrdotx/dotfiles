@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T20:26:21+0200
+" date:       2020-05-22T02:01:04+0200
 
 let mapleader=","                   " leader key for global plugins
 let maplocalleader="\<space>"       " leader key for filetype plugins
@@ -56,7 +56,7 @@ filetype indent on                  " automatically indent code
 " enable spell check
 autocmd FileType tex,latex,markdown setlocal spell spelllang=en_us,de_de
 " run xrdb whenever Xresources are updated.
-autocmd BufWritePost *Xresources !xrdb -merge %
+autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
 
 " plugins
 source ~/.config/nvim/plugins/vim-plug.vim
