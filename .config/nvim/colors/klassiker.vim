@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/colors/klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-22T16:06:29+0200
+" date:       2020-05-22T18:38:39+0200
 
 set background=dark
 hi clear
@@ -78,7 +78,7 @@ hi Directory guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NON
 hi DiffAdd guifg=#F8F8F8 guibg=#253B22 gui=NONE ctermfg=15 ctermbg=22 cterm=NONE
 hi DiffDelete guifg=#F92782 guibg=#420E09 gui=NONE ctermfg=197 ctermbg=52 cterm=NONE
 hi DiffChange guifg=#B0B200 guibg=#420E09 gui=NONE ctermfg=185 ctermbg=52 cterm=NONE
-hi DiffText guifg=#75715E guibg=NONE gui=NONE ctermfg=95 ctermbg=NONE cterm=NONE
+hi DiffText guifg=#F8F8F8 guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 
 " folding
 hi Folded guifg=#778899 guibg=#211F1C gui=NONE ctermfg=103 ctermbg=00 cterm=NONE
