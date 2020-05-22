@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T00:43:35+0200
+! date:       2020-05-22T02:22:54+0200
 
 #include "xcolors/klassiker"
 
@@ -40,3 +40,4 @@
 #include "sxiv"
 #include "polybar"
 #include "rxvt-unicode"
+#include "dmenu"
