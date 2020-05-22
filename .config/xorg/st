@@ -1,0 +1,13 @@
+! path:       /home/klassiker/.config/xorg/st
+! author:     klassiker [mrdotx]
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2020-05-22T11:01:20+0200
+
+st.alpha:       0.90
+st.font:        DejaVu Sans Mono:size=12:antialias=true:autohint=true
+st.fontalt:     JoyPixels:size=10:antialias=true:autohint=true
+st.scroll:      scroll
+st.termname:    st-256color
+st.borderpx:    2
+
+! vim:ft=xdefaults
