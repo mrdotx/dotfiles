@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T19:52:16+0200
+# date:       2020-05-23T20:57:54+0200
 
 # general config
 ################
@@ -132,7 +132,6 @@ assign [class="Kodi"] $ws10
 
 # start program launcher
 bindsym Super_L --release exec --no-startup-id "dmenu_run"
-bindsym Shift+Super_L --release exec --no-startup-id "rofi -monitor -1 -show"
 
 # kill focused window
 bindsym Ctrl+q kill
@@ -179,7 +178,7 @@ bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active 
 ###############################
 
 # window switcher
-bindsym $sup+Tab exec --no-startup-id "rofi -m -1 -theme klassiker-horizontal -i -p \\"\\" -modi window -show window"
+bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
 
 # split orientation
 # bindsym $sup+Ctrl+Up split h; exec --no-startup-id "notify-send 'i3' 'tile container horizontally'"
