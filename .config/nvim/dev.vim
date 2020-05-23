@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-03T01:42:03+0200
+" date:       2020-05-23T10:05:49+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -42,9 +42,9 @@ if has("autocmd")
     augroup END
 endif
 
-" last modfied
-" if buffer modified, update any 'date: ' in the first 10 lines.
-" 'date: ' can have up to 4 characters before (they are retained).
+" last modfied | actual path
+" if buffer modified, update any 'date: ' \ 'path: ' in the first 10 lines.
+" 'date: ' | 'path: ' can have up to 4 characters before (they are retained).
 " restores cursor and window position using save_cursor variable.
 function! ModDate()
     if &modified
@@ -58,10 +58,6 @@ function! ModDate()
 endfun
 autocmd BufWritePre * call ModDate()
 
-" actual path
-" if buffer modified, update any 'path: ' in the first 10 lines.
-" 'path: ' can have up to 4 characters before (they are retained).
-" restores cursor and window position using save_cursor variable.
 function! ModPath()
     if &modified
         let save_cursor=getpos(".")
