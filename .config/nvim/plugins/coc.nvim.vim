@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/coc.nvim.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-02T20:38:35+0200
+" date:       2020-05-23T12:52:03+0200
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -151,3 +151,6 @@ function! s:select_current_word()
     endif
     return "*\<Plug>(coc-cursors-word):nohlsearch\<cr>"
 endfunc
+
+" disabled diagnostics
+autocmd FileType sh let b:coc_diagnostic_disable=1
