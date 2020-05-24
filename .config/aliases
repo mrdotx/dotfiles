@@ -1,9 +1,9 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-16T22:14:03+0200
+# date:       2020-05-24T09:48:58+0200
 
-# color commands
+# color
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -16,21 +16,22 @@ alias ncdu='ncdu --color dark'
 alias tree='tree -C'
 
 # tools
-alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-alias calc='bc -q'
 alias cp='cp -i'
-alias nf='neofetch'
+alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
+alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
+alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
 
 alias rg='. ranger'
 alias rs='doas ranger'
-alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
-alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
-alias we='weechat'
-alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
+alias calc='bc -q'
 alias cm='cmatrix -su 7'
+alias nf='neofetch'
+alias we='weechat'
+
+# internet
 alias wt='curl -H "Accept-Language: de" wttr.in'
-alias sw='telnet towel.blinkenlights.nl'
 alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
+alias sw='telnet towel.blinkenlights.nl'
 
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
@@ -49,9 +50,9 @@ alias dm='doas delete_metafiles.sh'
 # ssh
 alias pi='ssh hermes'
 alias pi2='ssh prometheus'
-alias p9='ssh p9'
-alias m3='ssh m3'
 alias firetv='ssh firetv'
 alias firetv4k='ssh firetv4k'
+alias p9='ssh p9'
+alias m3='ssh m3'
 
 # vim:ft=sh
