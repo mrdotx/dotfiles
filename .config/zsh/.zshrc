@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T16:18:46+0200
+# date:       2020-05-24T11:24:18+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -56,7 +56,7 @@ source /usr/share/git/completion/git-prompt.sh
 
 # zsh-autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#980096,bg=black,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1f5393,bg=black,bold,underline"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # history-substring-search
