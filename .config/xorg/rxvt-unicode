@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T00:16:11+0200
+! date:       2020-05-24T17:25:31+0200
 
 URxvt*font:                     xft:DejaVu Sans Mono:size=12,xft:JoyPixels:size=8
 URxvt*boldFont:                 xft:DejaVu Sans Mono:bold:size=12
@@ -28,6 +28,6 @@ URxvt.keysym.C-Delete:          perl:matcher:last
 URxvt.keysym.M-Delete:          perl:matcher:list
 URxvt.matcher.button:           1
 URxvt.matcher.rend.0:           Uline Bold fg5
-URxvt.colorUL:                  GREEN1
+URxvt.colorUL:                  BLUE1
 
 ! vim:ft=xdefaults
