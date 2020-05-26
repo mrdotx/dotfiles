@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/polybar.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T18:28:16+0200
+# date:       2020-05-26T13:04:12+0200
 
 [Unit]
 Description=polybar status bars
@@ -10,6 +10,7 @@ After=Screenlayout.service
 
 [Service]
 Type=forking
+ExecStartPre=/usr/bin/sleep 1
 ExecStart=%h/.local/share/repos/polybar/polybar.sh
 
 [Install]
