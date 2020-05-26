@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T19:50:08+0200
+# date:       2020-05-26T16:09:52+0200
 
 [global]
 
@@ -92,7 +92,7 @@
 
     ### Text ###
 
-    font = Source Code Pro 10
+    font = DejaVu Sans Mono 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

@@ -1,9 +1,9 @@
 ! path:       /home/klassiker/.config/xorg/sxiv
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T00:16:28+0200
+! date:       2020-05-26T16:07:30+0200
 
-Sxiv.font:          Source Sans Pro:size=8
+Sxiv.font:          DejaVu Sans:size=8:antialias=true:autohint=true
 Sxiv.background:    BLACK0
 Sxiv.foreground:    WHITE1
 

@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-26T10:29:18+0200
+# date:       2020-05-26T16:00:26+0200
 
 # wm
 [global/wm]
@@ -43,10 +43,10 @@
     padding-right = 2
     module-margin-left = 1
     module-margin-right = 1
-    font-0 = "Source Sans Pro:style=Regular:pixelsize=11;1"
-    font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=9;1"
-    font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=9;1"
-    font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=9;1"
+    font-0 = "DejaVu Sans:pixelsize=10:antialias=true:autohint=true;2"
+    font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10:antialias=true:autohint=true;2"
+    font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10:antialias=true:autohint=true;2"
+    font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=10:antialias=true:autohint=true;2"
     cursor-click = pointer
     cursor-scroll = ns-resize
 
