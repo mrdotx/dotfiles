@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-26T12:03:43+0200
+# date:       2020-05-26T14:26:43+0200
 
 # general config
 ################
@@ -44,7 +44,7 @@ client.background       $whiteb
 floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
-font pango:Source Code Pro Regular 11
+font pango:Source Sans Pro 10
 default_border pixel 2
 default_floating_border normal
 workspace_auto_back_and_forth yes
@@ -334,16 +334,14 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # bar {
 #     id bar-0
+#     position top
+#     height 27
 #     status_command i3status --config ~/.config/i3status/config_pmon
 #     i3bar_command i3bar --transparency
 #     output eDP1
 #     tray_output eDP1
 #     tray_padding 2
-#     position top
-#     font pango:Source Sans Pro Regular 11
-#     font pango:Font Awesome 5 Free Solid 10
-#     font pango:Font Awesome 5 Free Regular 10
-#     font pango:Font Awesome 5 Brands Regular 10
+#     font pango:Source Sans Pro 10
 #     separator_symbol " "
 #     colors {
 #         background #00000000
@@ -360,16 +358,14 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # bar {
 #     id bar-1
+#     position top
+#     height 27
 #     status_command i3status --config ~/.config/i3status/config_smon
 #     i3bar_command i3bar --transparency
 #     output HDMI2
 #     tray_output none
 #     tray_padding 2
-#     position top
-#     font pango:Source Sans Pro Regular 11
-#     font pango:Font Awesome 5 Free Solid 10
-#     font pango:Font Awesome 5 Free Regular 10
-#     font pango:Font Awesome 5 Brands Regular 10
+#     font pango:Source Sans Pro 10
 #     separator_symbol " "
 #     colors {
 #         background #00000000
