@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-21T12:19:32+0200
+" date:       2020-05-26T22:54:24+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -14,9 +14,9 @@ highlight default link WhichKeyDesc      Comment
 
 " keymaps
 nnoremap <silent> <leader>  :<c-u>WhichKey ','<cr>
-vnoremap <silent> <leader>  :<c-u>WhichKeyVisual ','<CR>
+vnoremap <silent> <leader>  :<c-u>WhichKeyVisual ','<cr>
 nnoremap <silent> <space>   :<c-u>WhichKey '<space>'<cr>
-vnoremap <silent> <space>   :<c-u>WhichKeyVisual '<Space>'<CR>
+vnoremap <silent> <space>   :<c-u>WhichKeyVisual '<space>'<cr>
 
 " define description dictonaries
 call which_key#register(',', "g:comma_dict")
