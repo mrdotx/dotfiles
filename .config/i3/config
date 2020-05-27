@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-27T12:39:24+0200
+# date:       2020-05-27T19:41:39+0200
 
 # general config
 ################
@@ -156,20 +156,20 @@ bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit sho
 bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 
 # xautolock disable/enable
-bindsym $sup+Shift+a exec --no-startup-id "if [ \\"$(systemctl --user is-active xautolock.service)\\" = \\"active\\" ]; then systemctl --user disable xautolock.service --now && notify-send 'i3' 'xautolock stopped and disabled'; else systemctl --user enable xautolock.service --now && notify-send 'i3' 'xautolock enabled and started'; fi"
+bindsym $sup+Shift+a exec --no-startup-id "if [ \\"$(systemctl --user is-active xautolock.service)\\" = \\"active\\" ]; then systemctl --user disable xautolock.service --now && notify-send 'xautolock' 'stopped and disabled'; else systemctl --user enable xautolock.service --now && notify-send 'xautolock' 'enabled and started'; fi"
 
 # xbanish disable/enable
-bindsym $sup+Shift+b exec --no-startup-id "if [ \\"$(systemctl --user is-active xbanish.service)\\" = \\"active\\" ]; then systemctl --user disable xbanish.service --now && notify-send 'i3' 'xbanish stopped and disabled'; else systemctl --user enable xbanish.service --now && notify-send 'i3' 'xbanish enabled and started'; fi"
+bindsym $sup+Shift+b exec --no-startup-id "if [ \\"$(systemctl --user is-active xbanish.service)\\" = \\"active\\" ]; then systemctl --user disable xbanish.service --now && notify-send 'xbanish' 'stopped and disabled'; else systemctl --user enable xbanish.service --now && notify-send 'xbanish' 'enabled and started'; fi"
 
 # dunst restart
 bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
 
 # picom disable/enable
-bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'i3' 'picom stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'i3' 'picom enabled and started'; fi"
+bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom' 'enabled and started'; fi"
 
 # polybar switch layout and disable/enable
 bindsym $sup+y exec --no-startup-id "polybar.sh -t"
-bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user disable polybar.service --now && notify-send 'i3' 'polybar stopped and disabled'; else systemctl --user enable polybar.service --now && notify-send 'i3' 'polybar enabled and started'; fi"
+bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user disable polybar.service --now && notify-send 'polybar' 'stopped and disabled'; else systemctl --user enable polybar.service --now && notify-send 'polybar' 'enabled and started'; fi"
 
 # keybindings windows/container
 ###############################
