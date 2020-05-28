@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-28T12:53:02+0200
+# date:       2020-05-28T14:35:54+0200
 
 # general config
 ################
@@ -293,8 +293,8 @@ bindsym $sup+Shift+Return exec --no-startup-id "urxvt"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "$TERMINAL -e cmus.sh"
-bindsym $sup+Shift+c exec --no-startup-id "cmus_notify.sh --notify-send"
+bindsym $sup+c exec --no-startup-id "$TERMINAL -e i3_cmus.sh"
+bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
 bindsym $sup+d exec "darktable"
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp"
