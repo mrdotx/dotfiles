@@ -1,10 +1,13 @@
 ---
-title:      <++>
-subtitle:   >
-            <++>
-author:     klassiker [mrdotx]
-date:       2020-05-28T16:40:52+0200
-papersize:  a4
+title:          <++>
+subtitle:       >
+                <++>
+author:         klassiker [mrdotx]
+date:           2020-05-28T23:49:21+0200
+numbersections: true
+autoEqnLabels:  true
+papersize:      a4
+linestretch:    1.5
 geometry:
 - top=25mm
 - left=40mm
