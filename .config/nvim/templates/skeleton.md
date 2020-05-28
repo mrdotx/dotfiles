@@ -3,7 +3,8 @@ title:      <++>
 subtitle:   >
             <++>
 author:     klassiker [mrdotx]
-date:       2020-05-27T21:51:25+0200
+date:       2020-05-28T16:40:52+0200
+papersize:  a4
 geometry:
 - top=25mm
 - left=40mm
