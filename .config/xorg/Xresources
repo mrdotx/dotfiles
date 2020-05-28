@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-05-22T19:45:23+0200
+! date:       2020-05-28T10:16:55+0200
 
 #define BLACK0T             #00000000
 #define BLACK0              #000000
@@ -67,4 +67,5 @@
 #include "polybar"
 #include "rxvt-unicode"
 #include "dmenu"
+#include "slock"
 #include "st"
