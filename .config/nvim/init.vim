@@ -1,15 +1,14 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-22T02:01:04+0200
+" date:       2020-05-29T23:27:51+0200
 
+" leader keys
 let mapleader=","                   " leader key for global plugins
 let maplocalleader="\<space>"       " leader key for filetype plugins
 
 " mouse
-if has('mouse')
-    set mouse=a
-endif
+set mouse=a
 
 " colors
 set termguicolors                   " true color
@@ -55,7 +54,7 @@ filetype indent on                  " automatically indent code
 " automatic actions
 " enable spell check
 autocmd FileType tex,latex,markdown setlocal spell spelllang=en_us,de_de
-" run xrdb whenever Xresources are updated.
+" run xrdb whenever xresources are updated
 autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
 
 " plugins
