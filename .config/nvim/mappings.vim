@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-21T12:20:30+0200
+" date:       2020-05-30T01:00:51+0200
 
 " switch cursor window
 nnoremap                <tab>               <c-w>w
@@ -19,6 +19,9 @@ nnoremap    <silent>    <leader>bn          :bnext<cr>
 
 " turn off search highlight
 nnoremap    <silent>    <leader><space>     :nohlsearch<cr>
+
+" goyo straight writing
+nnoremap    <silent>    <leader>g           :Goyo<cr>
 
 " show hidden characters
 nnoremap                <leader>l           :set list! list?<cr>

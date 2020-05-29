@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-26T22:54:24+0200
+" date:       2020-05-30T00:52:45+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -34,6 +34,7 @@ let g:comma_dict = {
     \ 'd' : [':setlocal spell! spelllang=de_de'     , 'toggle spell check german'],
     \ 'e' : [':setlocal spell! spelllang=en_us'     , 'toggle spell check english'],
     \ 'f' : ['<Plug>(coc-format-selected)'          , 'formating selected code'],
+    \ 'g' : [':Goyo'                                , 'toggle goyo'],
     \ 'l' : [':set list! list?'                     , 'show control characters'],
     \ 'b' : {
         \ 'name' : '+buffer',
