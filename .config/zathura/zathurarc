@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zathura/zathurarc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:59:55+0200
+# date:       2020-05-29T10:03:14+0200
 
 set selection-clipboard clipboard
 set adjust-open best-fit
@@ -10,14 +10,6 @@ set statusbar-home-tilde true
 set database null
 
 # Shortcuts
-map [normal]        f       toggle_fullscreen
-map [fullscreen]    f       toggle_fullscreen
-map [normal]        l       follow
-map [fullscreen]    l       follow
-map [normal]        n       navigate next
-map [fullscreen]    n       navigate next
-map [normal]        N       navigate previous
-map [fullscreen]    N       navigate previous
 map [normal]        u       scroll half-up
 map [fullscreen]    u       scroll half-up
 map [normal]        d       scroll half-down
