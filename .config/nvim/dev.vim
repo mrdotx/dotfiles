@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/dev.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-28T23:07:31+0200
+" date:       2020-05-29T11:00:51+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -52,7 +52,7 @@ function! ModDate()
         let n=min([10, line("$")])
         if &ft =~ 'vimwiki\|markdown'
             keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-                \ strftime('          %FT%T%z') . '#e'
+                \ strftime('              %FT%T%z') . '#e'
         else
             keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
                 \ strftime('      %FT%T%z') . '#e'
