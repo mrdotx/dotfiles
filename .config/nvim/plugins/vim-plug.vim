@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-plug.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-29T23:59:43+0200
+" date:       2020-06-01T01:27:28+0200
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -25,6 +25,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 call plug#end()
 
 " plugin configs
+source ~/.config/nvim/plugins/tmuxline.vim
 source ~/.config/nvim/plugins/vim-airline.vim
 source ~/.config/nvim/plugins/goyo.vim
 luafile ~/.config/nvim/plugins/nvim-colorizer.lua
