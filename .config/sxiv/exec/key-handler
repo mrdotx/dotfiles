@@ -3,53 +3,101 @@
 # path:       /home/klassiker/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:58:13+0200
+# date:       2020-05-31T10:36:32+0200
 
 # rotate function
 rotate() {
     degree="$1"
-    tr '\n' '\0' | xargs -0 realpath | sort -u | while read -r file; do
-        case "$(file -b -i "$file")" in
-        image/jpeg*) jpegtran -rotate "$degree" -copy all -outfile "$file" "$file" ;;
-        *)           mogrify  -rotate "$degree" "$file" ;;
-        esac
-    done
+    tr '\n' '\0' \
+        | xargs -0 realpath \
+        | sort -u \
+        | while read -r file; do
+            case "$(file -b -i "$file")" in
+                image/jpeg*)
+                    jpegtran -rotate "$degree" -copy all -outfile "$file" "$file"
+                    ;;
+                *)
+                    mogrify  -rotate "$degree" "$file"
+                    ;;
+            esac
+        done
 }
 
 # flip function
 flip() {
     direction="$1"
-    tr '\n' '\0' | xargs -0 realpath | sort -u | while read -r file; do
-        case "$(file -b -i "$file")" in
-        image/jpeg*) jpegtran -flip "$direction" -copy all -outfile "$file" "$file" ;;
-        *)           if [ "$direction" = "horizontal" ]; then
+    tr '\n' '\0' \
+        | xargs -0 realpath \
+        | sort -u \
+        | while read -r file; do
+            case "$(file -b -i "$file")" in
+                image/jpeg*)
+                    jpegtran -flip "$direction" -copy all -outfile "$file" "$file"
+                    ;;
+                *)
+                    if [ "$direction" = "horizontal" ]; then
                         mogrify -flop "$file"
-                     elif [ "$direction" = "vertical" ]; then
+                    elif [ "$direction" = "vertical" ]; then
                         mogrify -flip "$file"
-                     fi ;;
-        esac
-    done
+                    fi
+                    ;;
+            esac
+        done
 }
 
 # trash function
 trash() {
-    tr '\n' '\0' | xargs -0 realpath | sort -u | while read -r file; do
-        case "$(file -b -i "$file")" in
-        *) trash-put "$file" && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning ;;
+    tr '\n' '\0' \
+        | xargs -0 realpath \
+        | sort -u \
+        | while read -r file; do
+            case "$(file -b -i "$file")" in
+                *)
+                    trash-put "$file" \
+                        && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning
+                    ;;
         esac
     done
 }
 
 # keybindings
 case "$1" in
-    "C-e")          while read -r file; do $TERMINAL -T "$file" -e sh -c "exiftool '$file' | less" & done ;;
-    "C-w")          while read -r file; do wallpaper.sh "$file" & done ;;
-    "C-g")          tr '\n' '\0' | xargs -0 gimp & ;;
-    "C-n")          tr '\n' '\0' | xargs -0 nomacs & ;;
-    "C-comma")      rotate 270 ;;
-    "C-period")     rotate  90 ;;
-    "C-slash")      rotate 180 ;;
-    "C-semicolon")  flip 'horizontal' ;;
-    "C-apostrophe") flip 'vertical' ;;
-    "C-d")          trash ;;
+    "C-e")
+        while read -r file; do $TERMINAL -T "$file" -e \
+            sh -c "exiftool '$file' | less" \
+            & done
+        ;;
+    "C-w")
+        while read -r file; do [ -f "$file" ] \
+            && convert "$file" ~/.local/share/wallpaper.jpg \
+            && systemctl --user restart xwallpaper.service \
+            & done
+        ;;
+    "C-g")
+        tr '\n' '\0' \
+            | xargs -0 gimp &
+
+        ;;
+    "C-n")
+        tr '\n' '\0' \
+            | xargs -0 nomacs &
+        ;;
+    "C-comma")
+        rotate 270
+        ;;
+    "C-period")
+        rotate 90
+        ;;
+    "C-slash")
+        rotate 180
+        ;;
+    "C-semicolon")
+        flip 'horizontal'
+        ;;
+    "C-apostrophe")
+        flip 'vertical'
+        ;;
+    "C-d")
+        trash
+        ;;
 esac
