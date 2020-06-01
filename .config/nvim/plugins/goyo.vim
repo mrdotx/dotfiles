@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/goyo.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-30T00:59:27+0200
+" date:       2020-06-01T02:02:29+0200
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
@@ -40,10 +40,10 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 function! s:goyo_before()
-    let b:quitting = 0
-    let b:quitting_bang = 0
-    autocmd QuitPre <buffer> let b:quitting = 1
-    cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+    let b:quitting=0
+    let b:quitting_bang=0
+    autocmd QuitPre <buffer> let b:quitting=1
+    cabbrev <buffer> q! let b:quitting_bang=1 <bar> q!
 endfunction
 
 function! s:goyo_after()
@@ -57,4 +57,4 @@ function! s:goyo_after()
     endif
 endfunction
 
-let g:goyo_callbacks = [function('s:goyo_before'), function('s:goyo_after')]
+let g:goyo_callbacks=[function('s:goyo_before'), function('s:goyo_after')]
