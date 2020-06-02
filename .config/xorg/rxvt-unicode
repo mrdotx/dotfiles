@@ -1,13 +1,13 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-06-01T09:58:36+0200
+! date:       2020-06-02T21:34:39+0200
 
 URxvt*font:                     xft:DejaVu Sans Mono:size=12,xft:JoyPixels:size=8
 URxvt*boldFont:                 xft:DejaVu Sans Mono:bold:size=12
 
 URxvt*depth:                    32
-URxvt*background:               BLACK0
+URxvt*background:               [90]BLACK0
 URxvt*foreground:               WHITE1
 URxvt*scrollBar:                false
 URxvt*mouseWheelScrollPage:     false
