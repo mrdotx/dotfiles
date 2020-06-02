@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-19T12:28:14+0200
+# date:       2020-06-03T01:33:48+0200
 
 user_resources=$HOME/.config/xorg/Xresources
 user_modmap=$HOME/.config/xorg/Xmodmap
@@ -31,6 +31,14 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     export SSH_AUTH_SOCK
 fi
+
+# keyboard
+setxkbmap -model pc105 -layout us,de -option grp:caps_switch
+xset r rate 300 50
+
+# mouse
+xinput --set-prop 'Synaptics TM3242-001' 'libinput Tapping Enabled' 0
+xinput --set-prop 'Synaptics TM3242-001' 'libinput Natural Scrolling Enabled' 1
 
 # start graphical environment
 if [ "$TERM" = linux ] ; then
