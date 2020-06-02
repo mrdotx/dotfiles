@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-31T10:59:17+0200
+# date:       2020-06-02T12:03:59+0200
 
 # general config
 ################
@@ -11,41 +11,45 @@ set $sup Mod4
 set $alt Mod1
 set $main eDP1
 set $hdmi HDMI2
-set $res 1280 768
+set $res resize set 1280 800
+set $flo floating enable
+set $sti sticky enable
+set $bp border pixel 2
+set $mp move position center
 set $gapsi 4
 set $gapso -2
 
 # colors
-set_from_resource $black i3wm.color0 #000000
-set_from_resource $blackb i3wm.color8 #333333
-set_from_resource $red i3wm.color1 #df2800
-set_from_resource $redb i3wm.color9 #ff5555
-set_from_resource $green i3wm.color2 #00b200
-set_from_resource $greenb i3wm.color10 #39ff14
-set_from_resource $yellow i3wm.color3 #b0b200
-set_from_resource $yellowb i3wm.color11 #effd5f
-set_from_resource $blue i3wm.color4 #1f5393
-set_from_resource $blueb i3wm.color12 #4185d7
-set_from_resource $purple i3wm.color5 #980096
-set_from_resource $purpleb i3wm.color13 #ff6fff
-set_from_resource $cyan i3wm.color6 #008081
-set_from_resource $cyanb i3wm.color14 #7ef9ff
-set_from_resource $white i3wm.color7 #cccccc
-set_from_resource $whiteb i3wm.color15 #ffffff
+set_from_resource $black0   i3wm.color0     #000000
+set_from_resource $grey0    i3wm.color8     #333333
+set_from_resource $red0     i3wm.color1     #df2800
+set_from_resource $red1     i3wm.color9     #ff5555
+set_from_resource $green0   i3wm.color2     #00b200
+set_from_resource $green1   i3wm.color10    #39ff14
+set_from_resource $yellow0  i3wm.color3     #b0b200
+set_from_resource $yellow1  i3wm.color11    #effd5f
+set_from_resource $blue0    i3wm.color4     #1f5393
+set_from_resource $blue1    i3wm.color12    #4185d7
+set_from_resource $purple0  i3wm.color5     #980096
+set_from_resource $purple1  i3wm.color13    #ff6fff
+set_from_resource $cyan0    i3wm.color6     #008081
+set_from_resource $cyan1    i3wm.color14    #7ef9ff
+set_from_resource $grey1    i3wm.color7     #cccccc
+set_from_resource $white0   i3wm.color15    #ffffff
 
 # class                 border   backgr.  text     indi.    child
-client.focused          $blueb   $blue    $whiteb  $whiteb  $blueb
-client.focused_inactive $blackb  $blackb  $whiteb  $blackb  $blackb
-client.unfocused        $blackb  $black   $blackb  $blackb  $black
-client.urgent           $blackb  $redb    $whiteb  $redb    $redb
-client.placeholder      $black   $blackb  $whiteb  $black   $blackb
-client.background       $whiteb
+client.focused          $blue1   $blue0   $white0  $white0  $blue1
+client.focused_inactive $grey0   $grey0   $white0  $grey0   $grey0
+client.unfocused        $grey0   $black0  $grey0   $grey0   $black0
+client.urgent           $grey0   $red1    $white0  $red1    $red1
+client.placeholder      $black0  $grey0   $white0  $black0  $grey0
+client.background       $white0
 
 floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
 font pango:DejaVu Sans 10
-default_border pixel 2
+default_$bp
 default_floating_border normal
 workspace_auto_back_and_forth yes
 # for_window [urgent=latest] focus
@@ -58,29 +62,29 @@ smart_borders on
 #####################
 
 # floating applications
-for_window [title="cmus" instance="st"] floating enable, sticky enable, move scratchpad, scratchpad show, resize set $res, move position center
-for_window [title="floating" instance="st"] floating enable, resize set $res, move position center
-for_window [title="alsamixer" instance="st"] floating enable, move position center
-for_window [title="calculator" instance="st"] floating enable, resize set $res, move position center
-for_window [title="network manager" instance="st"] floating enable, resize set $res, move position center
-for_window [title="cdw" instance="st"] floating enable, resize set $res, move position center
-for_window [title="File Transfer*"] floating enable, move position center
-for_window [title="stopwatch floating"] floating enable, resize set 250 500, move position center
+for_window [title="cmus" instance="st"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
+for_window [title="floating" instance="st"] $flo, $res, $mp
+for_window [title="alsamixer" instance="st"] $flo, $mp
+for_window [title="calculator" instance="st"] $flo, $res, $mp
+for_window [title="network manager" instance="st"] $flo, $res, $mp
+for_window [title="cdw" instance="st"] $flo, $res, $mp
+for_window [title="File Transfer*"] $flo, $mp
+for_window [title="stopwatch floating"] $flo, resize set 250 500, $mp
 
-for_window [class="Arandr"] floating enable, sticky enable, resize set $res, move position center
-for_window [class="Polkit-gnome-authentication-agent-1"] floating enable, sticky enable, border pixel 2, move position center
-for_window [class="Dragon-drag-and-drop"] floating enable, sticky enable, border pixel 2, move position center
-for_window [class="Lxappearance"] floating enable, sticky enable, move position center
-for_window [class="qt5ct"] floating enable, sticky enable, move position center
-for_window [class="Qtconfig-qt4"] floating enable, sticky enable, move position center
-for_window [class="Manjaro-hello"] floating enable, border pixel 2, move position center
-for_window [class="Pamac-manager"] floating enable, border pixel 2, move position center
-for_window [class="Nm-connection-editor"] floating enable, move position center
-for_window [class="GParted"] floating enable, move position center
-for_window [class="Manjaro Settings Manager"] floating enable, move position center
-for_window [class="gmic_qt"] floating enable, move position center
-for_window [class="qv4l2"] floating enable
-for_window [class="mpv"] sticky enable
+for_window [class="Arandr"] $flo, $sti, $res, $mp
+for_window [class="Polkit-gnome-authentication-agent-1"] $flo, $sti, $bp, $mp
+for_window [class="Dragon-drag-and-drop"] $flo, $sti, $bp, $mp
+for_window [class="Lxappearance"] $flo, $sti, $mp
+for_window [class="qt5ct"] $flo, $sti, $mp
+for_window [class="Qtconfig-qt4"] $flo, $sti, $mp
+for_window [class="Manjaro-hello"] $flo, $bp, $mp
+for_window [class="Pamac-manager"] $flo, $bp, $mp
+for_window [class="Nm-connection-editor"] $flo, $mp
+for_window [class="GParted"] $flo, $mp
+for_window [class="Manjaro Settings Manager"] $flo, $mp
+for_window [class="gmic_qt"] $flo, $mp
+for_window [class="qv4l2"] $flo
+for_window [class="mpv"] $sti
 
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
@@ -339,14 +343,14 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 #     separator_symbol " "
 #     colors {
 #         background #00000000
-#         statusline $whiteb
-#         separator  $white
+#         statusline $white0
+#         separator  $grey1
 
-#         focused_workspace  $blue   $blueb  $whiteb
-#         active_workspace   $whiteb $blackb $whiteb
-#         inactive_workspace $blackb $black  $white
-#         urgent_workspace   $blackb $redb   $whiteb
-#         binding_mode       $blackb $redb   $whiteb
+#         focused_workspace  $blue0  $blue1  $white0
+#         active_workspace   $white0 $grey0  $white0
+#         inactive_workspace $grey0  $black0 $white
+#         urgent_workspace   $grey0  $red1   $white0
+#         binding_mode       $grey0  $red1   $white0
 #     }
 # }
 
@@ -363,14 +367,14 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 #     separator_symbol " "
 #     colors {
 #         background #00000000
-#         statusline $whiteb
-#         separator  $white
+#         statusline $white0
+#         separator  $grey1
 
-#         focused_workspace  $blue   $blueb  $whiteb
-#         active_workspace   $whiteb $blackb $whiteb
-#         inactive_workspace $blackb $black  $white
-#         urgent_workspace   $blackb $redb   $whiteb
-#         binding_mode       $blackb $redb   $whiteb
+#         focused_workspace  $blue0  $blue1  $white0
+#         active_workspace   $white0 $grey0  $white0
+#         inactive_workspace $grey0  $black0 $white
+#         urgent_workspace   $grey0  $red1   $white0
+#         binding_mode       $grey0  $red1   $white0
 #     }
 # }
 
