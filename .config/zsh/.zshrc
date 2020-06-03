@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-24T11:24:18+0200
+# date:       2020-06-03T12:43:49+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -19,9 +19,19 @@ GIT_PS1_SHOWUPSTREAM="auto verbose name"
 # GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
 
-#precmd () { __git_ps1 "%{$fg_bold[blue]%}[%n@%m%{$reset_color%} %2~%{$fg_bold[blue]%}]%{$reset_color%}%{$reset_color%}" "%B$%b " }
-precmd () { __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B$%b " }
-RPROMPT='%F{blue}[%f%?%F{blue}]%f'
+preexec () {
+    ZSH_CMD_EXEC_START=$(date +%s.%N)
+}
+precmd () {
+    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B$%b "
+
+    if [ $ZSH_CMD_EXEC_START ]; then
+        ZSH_CMD_EXEC_TIME=$(printf " (%s)\n" "$(date -u -d "0 $(date +%s.%N) sec - $ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
+        RPROMPT="%F{blue}[%f%?%F{blue}]%f${ZSH_CMD_EXEC_TIME}"
+    else
+        RPROMPT="%F{blue}[%f%?%F{blue}]%f"
+    fi
+}
 
 # history command configuration
 setopt hist_ignore_dups       # ignore duplicated commands history list
