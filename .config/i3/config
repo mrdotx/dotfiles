@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-02T12:03:59+0200
+# date:       2020-06-03T18:59:21+0200
 
 # general config
 ################
@@ -318,9 +318,9 @@ bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+z exec --no-startup-id "filezilla"
 
-bindsym $sup+backslash exec --no-startup-id "dmenu_calc.sh"
+bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+comma exec --no-startup-id "sleep 0.5 && chameleon.sh"
+bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$BROWSER $HOME/Dokumente/Notes/html/index.html"
