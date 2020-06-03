@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-03T12:43:49+0200
+# date:       2020-06-03T18:11:36+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -23,13 +23,13 @@ preexec () {
     ZSH_CMD_EXEC_START=$(date +%s.%N)
 }
 precmd () {
-    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B$%b "
+    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B»%b "
 
     if [ $ZSH_CMD_EXEC_START ]; then
         ZSH_CMD_EXEC_TIME=$(printf " (%s)\n" "$(date -u -d "0 $(date +%s.%N) sec - $ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
-        RPROMPT="%F{blue}[%f%?%F{blue}]%f${ZSH_CMD_EXEC_TIME}"
+        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%?%{$fg_bold[blue]%}]%{$reset_color%}${ZSH_CMD_EXEC_TIME}"
     else
-        RPROMPT="%F{blue}[%f%?%F{blue}]%f"
+        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%?%{$fg_bold[blue]%}]%{$reset_color%}"
     fi
 }
 
