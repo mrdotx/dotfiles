@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-28T15:13:44+0200
+# date:       2020-06-04T12:01:23+0200
 
 # wm
 [global/wm]
@@ -18,7 +18,6 @@
     foreground = ${xrdb:Polybar.foreground0:#cccccc}
     foreground1 = ${xrdb:Polybar.foreground1:#666666}
     main = ${xrdb:Polybar.main0:#4185d7}
-    main1 = ${xrdb:Polybar.main1:#df2800}
     white = ${xrdb:color15:#ffffff}
     black = ${xrdb:color0:#000000}
     grey = ${xrdb:color7:#cccccc}
@@ -69,7 +68,7 @@
 [bar/i3_2_mon_sec]
     inherit = bar/i3_gen
     modules-left = i3 cmus
-    modules-right = temperature cpu memory fs
+    modules-right = temp cpu ram swap nvme sda
 
 include-file = ~/.config/polybar/i3.cfg
 include-file = ~/.config/polybar/xwindow.cfg
