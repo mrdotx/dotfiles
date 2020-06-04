@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-03T18:59:21+0200
+# date:       2020-06-04T09:30:17+0200
 
 # general config
 ################
@@ -62,7 +62,6 @@ smart_borders on
 #####################
 
 # floating applications
-for_window [title="cmus" instance="st"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
 for_window [title="floating" instance="st"] $flo, $res, $mp
 for_window [title="alsamixer" instance="st"] $flo, $mp
 for_window [title="calculator" instance="st"] $flo, $res, $mp
@@ -70,7 +69,9 @@ for_window [title="network manager" instance="st"] $flo, $res, $mp
 for_window [title="cdw" instance="st"] $flo, $res, $mp
 for_window [title="File Transfer*"] $flo, $mp
 for_window [title="stopwatch floating"] $flo, resize set 250 500, $mp
+for_window [title="cmus" instance="st"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
 
+for_window [class="KeePassXC"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
 for_window [class="Arandr"] $flo, $sti, $res, $mp
 for_window [class="Polkit-gnome-authentication-agent-1"] $flo, $sti, $bp, $mp
 for_window [class="Dragon-drag-and-drop"] $flo, $sti, $bp, $mp
@@ -305,7 +306,7 @@ bindsym $sup+g exec "gimp"
 bindsym $sup+h exec --no-startup-id "$TERMINAL -e htop"
 bindsym $sup+i exec "inkscape"
 bindsym $sup+j exec "jameica"
-bindsym $sup+k exec --no-startup-id "sync_keepass.sh && keepassxc && sync_keepass.sh"
+bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 4 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
 bindsym $sup+o exec "libreoffice"
