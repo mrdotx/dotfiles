@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-03T18:11:36+0200
+# date:       2020-06-05T00:50:36+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -18,16 +18,17 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto verbose name"
 # GIT_PS1_STATESEPARATOR="|"
 GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 preexec () {
     ZSH_CMD_EXEC_START=$(date +%s.%N)
 }
 precmd () {
-    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}%3~%{$fg_bold[blue]%}]%{$reset_color%}" "%B»%b "
+    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}" "%3~%{$fg_bold[blue]%}]%{$reset_color%}%B»%b " "%s "
 
     if [ $ZSH_CMD_EXEC_START ]; then
-        ZSH_CMD_EXEC_TIME=$(printf " (%s)\n" "$(date -u -d "0 $(date +%s.%N) sec - $ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
-        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%?%{$fg_bold[blue]%}]%{$reset_color%}${ZSH_CMD_EXEC_TIME}"
+        ZSH_CMD_EXEC_TIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
+        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%? ${ZSH_CMD_EXEC_TIME}%{$fg_bold[blue]%}]%{$reset_color%}"
     else
         RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%?%{$fg_bold[blue]%}]%{$reset_color%}"
     fi
@@ -48,12 +49,12 @@ compinit
 _comp_options+=(globdots) # hidden files
 # pip zsh completion
 function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] ) )
+    local words cword
+    read -Ac words
+    read -cn cword
+    reply=( $( COMP_WORDS="$words[*]" \
+               COMP_CWORD=$(( cword-1 )) \
+               PIP_AUTO_COMPLETE=1 $words[1] ) )
 }
 compctl -K _pip_completion pip
 
