@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/xwallpaper.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T18:28:56+0200
+# date:       2020-06-04T16:58:26+0200
 
 [Unit]
 Description=set wallpaper with xwallpaper
@@ -14,4 +14,4 @@ RemainAfterExit=yes
 ExecStart=/usr/bin/xwallpaper --zoom %h/.local/share/wallpaper.jpg
 
 [Install]
-WantedBy=window-manager.target
+WantedBy=i3.target

@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/screenlayout.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-14T13:52:02+0200
+# date:       2020-06-04T16:57:19+0200
 
 [Unit]
 Description=setup screen layouts
@@ -13,4 +13,4 @@ RemainAfterExit=yes
 ExecStart=%h/.local/share/repos/shell/screenlayout.sh
 
 [Install]
-WantedBy=window-manager.target
+WantedBy=i3.target

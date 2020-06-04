@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/picom.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T18:28:13+0200
+# date:       2020-06-04T16:56:46+0200
 
 [Unit]
 Description=picom compositor
@@ -14,4 +14,4 @@ ExecStartPre=/usr/bin/sleep 1
 ExecStart=/usr/bin/picom -b
 
 [Install]
-WantedBy=window-manager.target
+WantedBy=i3.target

@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-04T09:30:17+0200
+# date:       2020-06-04T16:52:25+0200
 
 # general config
 ################
@@ -382,5 +382,5 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 # start systemd target
 ######################
 
-exec --no-startup-id "systemctl --user start window-manager.target"
+exec --no-startup-id "systemctl --user start i3.target"
 exec --no-startup-id "sleep 3 && i3_tiling.sh"

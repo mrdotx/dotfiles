@@ -1,0 +1,9 @@
+# path:       /home/klassiker/.config/systemd/user/i3.target
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-06-04T16:53:12+0200
+
+[Unit]
+Description=i3 window manager session
+BindsTo=default.target
+After=window-manager-pre.target

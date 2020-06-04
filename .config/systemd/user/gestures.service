@@ -1,14 +1,13 @@
 # path:       /home/klassiker/.config/systemd/user/gestures.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-26T12:20:16+0200
+# date:       2020-06-04T16:50:19+0200
 
 [Unit]
 Description=libinput gestures for synaptics touchpad
 
 [Service]
 Type=forking
-ExecStartPre=/usr/bin/sleep 2
 ExecStart=/usr/bin/libinput-gestures-setup start
 ExecStop=/usr/bin/libinput-gestures-setup stop
 

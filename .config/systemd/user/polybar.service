@@ -1,17 +1,16 @@
 # path:       /home/klassiker/.config/systemd/user/polybar.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-26T13:04:12+0200
+# date:       2020-06-04T16:57:01+0200
 
 [Unit]
 Description=polybar status bars
 PartOf=default.target
-After=Screenlayout.service
+After=screenlayout.service
 
 [Service]
 Type=forking
-ExecStartPre=/usr/bin/sleep 1
 ExecStart=%h/.local/share/repos/polybar/polybar.sh
 
 [Install]
-WantedBy=window-manager.target
+WantedBy=i3.target
