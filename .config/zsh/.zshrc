@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-05T00:50:36+0200
+# date:       2020-06-05T10:31:36+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -21,16 +21,25 @@ GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 preexec () {
-    ZSH_CMD_EXEC_START=$(date +%s.%N)
+    _ZSH_CMD_EXEC_START=$(date +%s.%N)
 }
 precmd () {
-    __git_ps1 "%{$fg_bold[blue]%}[%{$reset_color%}" "%3~%{$fg_bold[blue]%}]%{$reset_color%}%B»%b " "%s "
+    local ESTAT="$?"
+    local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
+    local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
 
-    if [ $ZSH_CMD_EXEC_START ]; then
-        ZSH_CMD_EXEC_TIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
-        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%? ${ZSH_CMD_EXEC_TIME}%{$fg_bold[blue]%}]%{$reset_color%}"
+    __git_ps1 "${OPAR}%3~" "${CPAR}%B»%b " " %s"
+
+    if [ $ESTAT != 0 ]; then
+        local ESTAT="%{$fg[red]%}${ESTAT}%{$reset_color%}"
     else
-        RPROMPT="«%{$fg_bold[blue]%}[%{$reset_color%}%?%{$fg_bold[blue]%}]%{$reset_color%}"
+        local ESTAT="%{$fg[green]%}${ESTAT}%{$reset_color%}"
+    fi
+    if [ $_ZSH_CMD_EXEC_START ]; then
+        local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
+        RPROMPT="«${OPAR}${ESTAT} ${ETIME}${CPAR}"
+    else
+        RPROMPT="«${OPAR}${ESTAT}${CPAR}"
     fi
 }
 
