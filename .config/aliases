@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-24T09:48:58+0200
+# date:       2020-06-05T13:15:32+0200
 
 # color
 alias ls='ls --color=auto'
@@ -24,7 +24,6 @@ alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polyb
 alias rg='. ranger'
 alias rs='doas ranger'
 alias calc='bc -q'
-alias cm='cmatrix -su 7'
 alias nf='neofetch'
 alias we='weechat'
 
