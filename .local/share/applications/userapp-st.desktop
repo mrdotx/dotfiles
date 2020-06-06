@@ -2,8 +2,8 @@
 Version=1.1
 Type=Application
 Name=st
-Comment=suckless simple terminal
-Icon=terminal
+Comment=simple-terminal emulator for X
+Icon=utilities-terminal
 Exec=st
 Actions=
-Categories=Utility;Terminal;
+Categories=System;TerminalEmulator;
