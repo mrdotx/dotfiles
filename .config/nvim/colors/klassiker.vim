@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/colors/klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-22T18:38:39+0200
+" date:       2020-06-06T11:29:34+0200
 
 set background=dark
 hi clear
@@ -89,7 +89,7 @@ hi ColorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=N
 hi CursorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi CursorLine guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi Cursor guifg=#111111 guibg=#F8F8F8 gui=NONE ctermfg=233 ctermbg=15 cterm=NONE
-hi Visual guifg=NONE guibg=#49483E gui=NONE ctermfg=NONE ctermbg=59 cterm=NONE
+hi Visual guifg=NONE guibg=#383A3E gui=NONE ctermfg=NONE ctermbg=59 cterm=NONE
 hi MatchParen guifg=#111111 guibg=#B0B200 gui=NONE ctermfg=233 ctermbg=185 cterm=NONE
 
 " general highlighting
