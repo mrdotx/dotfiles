@@ -1,11 +1,12 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-28T14:46:38+0200
+# date:       2020-06-06T10:38:34+0200
 
 # project paths
 typeset -U PATH path
-path=("$HOME/.local/share/repos/conky" \
+path=( \
+    "$HOME/.local/share/repos/conky" \
     "$HOME/.local/share/repos/dmenu/scripts" \
     "$HOME/.local/share/repos/i3" \
     "$HOME/.local/share/repos/link-handler" \
@@ -16,7 +17,8 @@ path=("$HOME/.local/share/repos/conky" \
     "$HOME/.local/share/repos/shell" \
     "$HOME/.local/share/repos/stopwatch" \
     "$HOME/.local/share/repos/surf" \
-    "$path[@]")
+    "$path[@]" \
+)
 export PATH
 
 # systemd environment
