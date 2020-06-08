@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-30T19:50:55+0200
+" date:       2020-06-08T12:35:02+0200
 
 " switch cursor window
 nnoremap                <tab>           <c-w>w
@@ -33,3 +33,6 @@ nnoremap    <silent>    <leader>s       :vs term://shellcheck -s sh %<cr>
 nnoremap    <silent>    <leader>de      :setlocal spell! spelllang=en_us<cr>
 nnoremap    <silent>    <leader>dg      :setlocal spell! spelllang=de_de<cr>
 nnoremap    <silent>    <leader>dx      :setlocal spell! spelllang=en_us,de_de<cr>
+
+" replace
+nnoremap                <leader>r       :%s///gc<left><left><left>
