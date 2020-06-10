@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-06T11:05:40+0200
+# date:       2020-06-10T08:29:57+0200
 
 user_resources=$HOME/.config/xorg/Xresources
 user_modmap=$HOME/.config/xorg/Xmodmap
@@ -16,7 +16,7 @@ sys_modmap=/etc/X11/xinit/.Xmodmap
 [ -f "$user_resources" ] && xrdb -merge "$user_resources"
 [ -f "$user_modmap" ] && xmodmap "$user_modmap"
 
-# start some nice programs
+# start some programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
         # shellcheck disable=SC1090
