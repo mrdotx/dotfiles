@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/autoload/airline/themes/base16_klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-22T19:56:14+0200
+" date:       2020-06-12T18:59:05+0200
 
 let s:gui00 = "#1f2022"
 let s:gui01 = "#282828"
@@ -181,12 +181,3 @@ let g:airline#themes#base16_klassiker#palette.replace.airline_error =
 
 let g:airline#themes#base16_klassiker#palette.replace_modified.airline_error =
     \ g:airline#themes#base16_klassiker#palette.normal.airline_error
-
-" ctrlp plugin colors
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
-endif
-let g:airline#themes#base16_klassiker#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-      \ [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg, ''],
-      \ [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg, ''],
-      \ [s:gui_termfg2, s:gui_termbg2, s:cterm_termfg2, s:cterm_termbg2, 'bold'])
