@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T19:54:43+0200
+# date:       2020-06-12T20:10:06+0200
 
 # general
 auto-reload yes
@@ -30,7 +30,7 @@ macro m set browser "mpv %u"; open-in-browser ; set browser "link_handler.sh %u"
 
 # colors
 color background                    white   black
-color listnormal                    blue    black   bold
+color listnormal                    blue    black
 color listfocus                     cyan    blue    bold
 color listnormal_unread             red     black
 color listfocus_unread              white   blue    bold
@@ -46,6 +46,6 @@ highlight all "Brexit"              color6  black   underline
 highlight all "Trump"               color13 black   underline
 highlight all "DSGVO|Datenschutz"   color11 black   underline
 
-highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    black   underline bold
+highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    black   underline
 
 # vim:ft=config
