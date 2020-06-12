@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-05T10:31:36+0200
+# date:       2020-06-12T14:24:09+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -36,7 +36,9 @@ precmd () {
         local ESTAT="%{$fg[green]%}${ESTAT}%{$reset_color%}"
     fi
     if [ $_ZSH_CMD_EXEC_START ]; then
-        local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")")
+        local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")" \
+            | sed "s/00://g;s/^0//g" \
+        )
         RPROMPT="«${OPAR}${ESTAT} ${ETIME}${CPAR}"
     else
         RPROMPT="«${OPAR}${ESTAT}${CPAR}"
