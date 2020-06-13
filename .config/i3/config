@@ -1,23 +1,23 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-04T16:52:25+0200
+# date:       2020-06-13T09:07:22+0200
 
 # general config
 ################
 
-# i3 config file (v4)
+# variables
 set $sup Mod4
 set $alt Mod1
-set $main eDP1
-set $hdmi HDMI2
-set $res resize set 1280 800
-set $flo floating enable
-set $sti sticky enable
-set $bp border pixel 2
-set $mp move position center
-set $gapsi 4
-set $gapso -2
+set $mon1 eDP1
+set $mon2 HDMI2
+set $size resize set 1280 800
+set $float floating enable
+set $sticky sticky enable
+set $border border pixel 2
+set $move move position center
+set $gap_in 4
+set $gap_out -2
 
 # colors
 set_from_resource $black0   i3wm.color0     #000000
@@ -49,12 +49,12 @@ floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
 font pango:DejaVu Sans 10
-default_$bp
+default_$border
 default_floating_border normal
 workspace_auto_back_and_forth yes
 # for_window [urgent=latest] focus
-gaps inner $gapsi
-gaps outer $gapso
+gaps inner $gap_in
+gaps outer $gap_out
 smart_gaps on
 smart_borders on
 
@@ -62,30 +62,30 @@ smart_borders on
 #####################
 
 # floating applications
-for_window [title="floating" instance="st"] $flo, $res, $mp
-for_window [title="alsamixer" instance="st"] $flo, $mp
-for_window [title="calculator" instance="st"] $flo, $res, $mp
-for_window [title="network manager" instance="st"] $flo, $res, $mp
-for_window [title="cdw" instance="st"] $flo, $res, $mp
-for_window [title="File Transfer*"] $flo, $mp
-for_window [title="stopwatch floating"] $flo, resize set 250 500, $mp
-for_window [title="cmus" instance="st"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
+for_window [title="floating" instance="st"] $float, $size, $move
+for_window [title="alsamixer" instance="st"] $float, $move
+for_window [title="calculator" instance="st"] $float, $size, $move
+for_window [title="network manager" instance="st"] $float, $size, $move
+for_window [title="cdw" instance="st"] $float, $size, $move
+for_window [title="File Transfer*"] $float, $move
+for_window [title="stopwatch floating"] $float, resize set 250 500, $move
+for_window [title="cmus" instance="st"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 
-for_window [class="KeePassXC"] $flo, $sti, move scratchpad, scratchpad show, $res, $mp
-for_window [class="Arandr"] $flo, $sti, $res, $mp
-for_window [class="Polkit-gnome-authentication-agent-1"] $flo, $sti, $bp, $mp
-for_window [class="Dragon-drag-and-drop"] $flo, $sti, $bp, $mp
-for_window [class="Lxappearance"] $flo, $sti, $mp
-for_window [class="qt5ct"] $flo, $sti, $mp
-for_window [class="Qtconfig-qt4"] $flo, $sti, $mp
-for_window [class="Manjaro-hello"] $flo, $bp, $mp
-for_window [class="Pamac-manager"] $flo, $bp, $mp
-for_window [class="Nm-connection-editor"] $flo, $mp
-for_window [class="GParted"] $flo, $mp
-for_window [class="Manjaro Settings Manager"] $flo, $mp
-for_window [class="gmic_qt"] $flo, $mp
-for_window [class="qv4l2"] $flo
-for_window [class="mpv"] $sti
+for_window [class="KeePassXC"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
+for_window [class="Arandr"] $float, $sticky, $size, $move
+for_window [class="Polkit-gnome-authentication-agent-1"] $float, $sticky, $border, $move
+for_window [class="Dragon-drag-and-drop"] $float, $sticky, $border, $move
+for_window [class="Lxappearance"] $float, $sticky, $move
+for_window [class="qt5ct"] $float, $sticky, $move
+for_window [class="Qtconfig-qt4"] $float, $sticky, $move
+for_window [class="Manjaro-hello"] $float, $border, $move
+for_window [class="Pamac-manager"] $float, $border, $move
+for_window [class="Nm-connection-editor"] $float, $move
+for_window [class="GParted"] $float, $move
+for_window [class="Manjaro Settings Manager"] $float, $move
+for_window [class="gmic_qt"] $float, $move
+for_window [class="qv4l2"] $float
+for_window [class="mpv"] $sticky
 
 # fullscreen applications
 for_window [class="Kodi"] fullscreen
@@ -103,19 +103,19 @@ set $ws6 6
 set $ws7 7
 set $ws8 8
 set $ws9 9
-set $ws10 10
+set $ws0 10
 
 # workspace output
-workspace $ws1 output $main $hdmi
-workspace $ws2 output $hdmi $main
-workspace $ws3 output $main $hdmi
-workspace $ws4 output $hdmi $main
-workspace $ws5 output $main $hdmi
-workspace $ws6 output $hdmi $main
-workspace $ws7 output $main $hdmi
-workspace $ws8 output $hdmi $main
-workspace $ws9 output $main $hdmi
-workspace $ws10 output $hdmi $main
+workspace $ws1 output $mon1 $mon2
+workspace $ws2 output $mon2 $mon1
+workspace $ws3 output $mon1 $mon2
+workspace $ws4 output $mon2 $mon1
+workspace $ws5 output $mon1 $mon2
+workspace $ws6 output $mon2 $mon1
+workspace $ws7 output $mon1 $mon2
+workspace $ws8 output $mon2 $mon1
+workspace $ws9 output $mon1 $mon2
+workspace $ws0 output $mon2 $mon1
 
 # open applications on specific workspaces (xprop)
 # assign [title="newsboat" instance="st"] $ws2
@@ -130,7 +130,7 @@ assign [class="Darktable"] $ws7
 assign [title="LibreOffice"] $ws8
 assign [class="libreoffice"] $ws8
 assign [class="Jameica"] $ws9
-assign [class="Kodi"] $ws10
+assign [class="Kodi"] $ws0
 
 # keybindings system managment
 ##############################
@@ -207,7 +207,7 @@ bindsym $sup+$alt+Down resize grow height 20 px or 4 ppt
 # resize gaps
 bindsym $sup+shift+minus gaps outer current minus 4, gaps inner current minus 8
 bindsym $sup+shift+equal gaps outer current plus 4, gaps inner current plus 8
-bindsym $sup+equal gaps inner current set $gapsi, gaps outer current set $gapso
+bindsym $sup+equal gaps inner current set $gap_in, gaps outer current set $gap_out
 
 # toggle sticky
 bindsym $sup+space sticky toggle
@@ -238,7 +238,7 @@ bindsym $sup+6 workspace $ws6
 bindsym $sup+7 workspace $ws7
 bindsym $sup+8 workspace $ws8
 bindsym $sup+9 workspace $ws9
-bindsym $sup+0 workspace $ws10
+bindsym $sup+0 workspace $ws0
 
 # move focused container to workspace
 bindsym $sup+Ctrl+1 move container to workspace $ws1
@@ -250,7 +250,7 @@ bindsym $sup+Ctrl+6 move container to workspace $ws6
 bindsym $sup+Ctrl+7 move container to workspace $ws7
 bindsym $sup+Ctrl+8 move container to workspace $ws8
 bindsym $sup+Ctrl+9 move container to workspace $ws9
-bindsym $sup+Ctrl+0 move container to workspace $ws10
+bindsym $sup+Ctrl+0 move container to workspace $ws0
 
 # move to workspace with focused container
 bindsym $sup+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -262,7 +262,7 @@ bindsym $sup+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $sup+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $sup+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $sup+Shift+9 move container to workspace $ws9; workspace $ws9
-bindsym $sup+Shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $sup+Shift+0 move container to workspace $ws0; workspace $ws0
 
 # workspace back and forth
 bindsym $alt+Tab workspace back_and_forth
