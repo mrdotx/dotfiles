@@ -1,14 +1,15 @@
 # path:       /home/klassiker/.config/newsboat/urls
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-30T19:02:19+0200
+# date:       2020-06-13T10:28:06+0200
 
 # queries
 "query:┌ Unread:unread = \"yes\""
 "query:├┬ All:tags != \"\""
 "query:│├─ News:tags # \"News\""
 "query:│├─ Local:tags # \"Local\""
-"query:│├─ Technic:tags # \"Technic\""
+"query:│├┬ Technic:tags # \"Technic\""
+"query:|│└─ suckless:tags # \"suckless\""
 "query:│├─ Youtube:tags # \"Youtube\""
 "query:│├─ Podcast:tags # \"Podcast\""
 "query:│├─ Twitter:tags # \"Twitter\""
