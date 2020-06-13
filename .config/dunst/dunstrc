@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-31T21:21:23+0200
+# date:       2020-06-13T11:21:16+0200
 
 [global]
 
@@ -199,7 +199,7 @@
     dmenu = /usr/bin/dmenu -i -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = surf.sh
+    browser = link_handler.sh
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
