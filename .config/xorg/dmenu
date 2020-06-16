@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/dmenu
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-06-14T17:36:35+0200
+! date:       2020-06-16T09:54:30+0200
 
 dmenu.font:                     DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true
 dmenu.fontemoji:                JoyPixels:pixelsize=14:antialias=true:autohint=true
@@ -14,6 +14,6 @@ dmenu.selhighlightbackground:   BLUE1
 dmenu.normhighlightforeground:  BLUE1
 dmenu.normhighlightbackground:  BLACK0
 dmenu.outforeground:            BLACK0
-dmenu.outbackground:            CYAN0
+dmenu.outbackground:            BLUE0
 
 ! vim:ft=xdefaults
