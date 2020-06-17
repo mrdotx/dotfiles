@@ -1,16 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-12T19:33:45+0200
-
-# wm
-[global/wm]
-    margin-top = 0
-    margin-bottom = 0
-
-# settings
-[settings]
-    screenchange-reload = true
+# date:       2020-06-17T10:42:22+0200
 
 # colors
 [colors]
@@ -26,6 +17,18 @@
     red = ${xrdb:color9:#df2800}
     yellow = ${xrdb:color3:#b0b200}
 
+# wm
+[global/wm]
+    margin-top = 0
+    margin-bottom = 0
+
+# settings
+[settings]
+    screenchange-reload = true
+    format-foreground = ${colors.foreground}
+    format-overline = ${colors.main}
+
+# bars
 [bar/i3_gen]
     monitor = ${env:MONITOR:eDP1}
     bottom = false
@@ -39,7 +42,7 @@
     line-size = 2
     line-color = ${colors.main}
     border-size = 0
-    border-color = ${xrdb:Polybar.background:#00000000}
+    border-color = ${colors.background}
     padding-left = 0
     padding-right = 2
     module-margin-left = 1
@@ -70,21 +73,22 @@
     modules-left = i3 cmus
     modules-right = temp cpu ram swap nvme sda
 
-include-file = ~/.config/polybar/i3.cfg
-include-file = ~/.config/polybar/xwindow.cfg
+# modules
+    include-file = ~/.config/polybar/i3.cfg
+    include-file = ~/.config/polybar/xwindow.cfg
 
-include-file = ~/.config/polybar/network.cfg
-include-file = ~/.config/polybar/audio.cfg
-include-file = ~/.config/polybar/xbacklight.cfg
-include-file = ~/.config/polybar/battery.cfg
-include-file = ~/.config/polybar/xkeyboard.cfg
-include-file = ~/.config/polybar/date.cfg
+    include-file = ~/.config/polybar/network.cfg
+    include-file = ~/.config/polybar/audio.cfg
+    include-file = ~/.config/polybar/xbacklight.cfg
+    include-file = ~/.config/polybar/battery.cfg
+    include-file = ~/.config/polybar/xkeyboard.cfg
+    include-file = ~/.config/polybar/date.cfg
 
-include-file = ~/.config/polybar/temperature.cfg
-include-file = ~/.config/polybar/cpu.cfg
-include-file = ~/.config/polybar/memory.cfg
-include-file = ~/.config/polybar/fs.cfg
+    include-file = ~/.config/polybar/temperature.cfg
+    include-file = ~/.config/polybar/cpu.cfg
+    include-file = ~/.config/polybar/memory.cfg
+    include-file = ~/.config/polybar/fs.cfg
 
-include-file = ~/.config/polybar/custom.cfg
+    include-file = ~/.config/polybar/custom.cfg
 
 # vim:ft=cfg
