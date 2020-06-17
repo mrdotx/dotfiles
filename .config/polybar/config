@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-17T18:19:17+0200
+# date:       2020-06-17T22:59:22+0200
 
 # colors
 [colors]
@@ -58,14 +58,14 @@
     inherit = bar/i3_general
     tray-position = right
     tray-reparent = true
-    modules-left = i3_upin printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3_upin authentication printer bluetooth gestures rss timesync firewall resolver vpnhades xwindow
     modules-right = cmus alsasmall xbacklightsmall wlansmall battery xkeyboard date exit
 
 [bar/i3_dual_bar_primary]
     inherit = bar/i3_general
     tray-position = right
     tray-reparent = true
-    modules-left = i3 printer bluetooth gestures rss authentication firewall resolver vpnhades xwindow
+    modules-left = i3 authentication printer bluetooth gestures rss timesync firewall resolver vpnhades xwindow
     modules-right = wlan alsa xbacklight battery xkeyboard date exit
 
 [bar/i3_dual_bar_secondary]
