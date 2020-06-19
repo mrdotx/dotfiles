@@ -1,13 +1,13 @@
 ! path:       /home/klassiker/.config/xorg/slock
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-06-17T13:50:56+0200
+! date:       2020-06-19T13:51:20+0200
 
 *slock.init:            BLACK0
-*slock.input:           GREY1
-*slock.failed:          RED1
-*slock.caps:            BLUE1
-*slock.message:         GREY3
+*slock.input:           GREY0
+*slock.failed:          RED0
+*slock.caps:            YELLOW1
+*slock.message:         BLUE1
 *slock.message.font:    -misc-dejavu sans mono-medium-o-normal--0-0-0-0-m-0-iso8859-16
 
 ! vim:ft=xdefaults
