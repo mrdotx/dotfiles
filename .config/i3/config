@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-18T10:01:53+0200
+# date:       2020-06-19T22:49:04+0200
 
 # general config
 ################
@@ -16,8 +16,8 @@ set $float floating enable
 set $sticky sticky enable
 set $border border pixel 2
 set $move move position center
-set $gap_in 4
-set $gap_out -2
+set $gap_in 10
+set $gap_out -3
 
 # colors
 set_from_resource $black0   i3wm.color0     #000000
