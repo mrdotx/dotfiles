@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-13T11:21:16+0200
+# date:       2020-06-19T22:50:01+0200
 
 [global]
 
@@ -35,7 +35,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "500x10-6-6"
+    geometry = "500x10-7-7"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
