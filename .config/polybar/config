@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-18T10:50:50+0200
+# date:       2020-06-19T21:39:14+0200
 
 # colors
 [colors]
@@ -37,6 +37,7 @@
     height = 26
     locale = de_DE.UTF-8
     enable-ipc = true
+    background = ${colors.background}
     line-size = 2
     module-margin-left = 1
     module-margin-right = 1
