@@ -1,11 +1,11 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-19T21:39:14+0200
+# date:       2020-06-20T13:37:58+0200
 
 # colors
 [colors]
-    background = ${xrdb:Polybar.background0:#00000000}
+    background = ${xrdb:Polybar.background0:#e6000000}
     foreground = ${xrdb:Polybar.foreground0:#cccccc}
     foreground1 = ${xrdb:Polybar.foreground1:#666666}
     main = ${xrdb:Polybar.main0:#4185d7}
@@ -39,8 +39,7 @@
     enable-ipc = true
     background = ${colors.background}
     line-size = 2
-    module-margin-left = 1
-    module-margin-right = 1
+    module-margin = 1
     font-0 = "DejaVu Sans:pixelsize=10:antialias=true:autohint=true;2"
     font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=10:antialias=true:autohint=true;2"
     font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10:antialias=true:autohint=true;2"
@@ -52,6 +51,7 @@
     inherit = bar/i3_general
     tray-position = right
     tray-reparent = true
+    tray-background = ${colors.background}
     modules-left = i3_upin authentication printer bluetooth gestures rss timesync firewall resolver vpnhades xwindow
     modules-right = cmus alsasmall xbacklightsmall wlansmall battery xkeyboard date exit
 
@@ -59,6 +59,7 @@
     inherit = bar/i3_general
     tray-position = right
     tray-reparent = true
+    tray-background = ${colors.background}
     modules-left = i3 authentication printer bluetooth gestures rss timesync firewall resolver vpnhades xwindow
     modules-right = wlan alsa xbacklight battery xkeyboard date exit
 
