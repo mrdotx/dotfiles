@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-20T11:56:40+0200
+# date:       2020-06-20T16:55:43+0200
 
 # general config
 ################
@@ -117,7 +117,7 @@ workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
 
 # open applications on specific workspaces (xprop)
-# assign [title="newsboat" instance="st"] $ws2
+assign [title="newsboat" instance="st"] $ws2
 assign [class="VirtualBox"] $ws3
 assign [class="Brave-browser"] $ws4
 assign [title="GIMP Startup"] $ws5
