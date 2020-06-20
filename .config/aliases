@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-05T13:15:32+0200
+# date:       2020-06-20T10:31:23+0200
 
 # color
 alias ls='ls --color=auto'
@@ -30,7 +30,6 @@ alias we='weechat'
 # internet
 alias wt='curl -H "Accept-Language: de" wttr.in'
 alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
-alias sw='telnet towel.blinkenlights.nl'
 
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
