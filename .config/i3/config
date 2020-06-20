@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-19T22:49:04+0200
+# date:       2020-06-20T11:56:40+0200
 
 # general config
 ################
@@ -65,7 +65,6 @@ smart_borders on
 for_window [title="floating" instance="st"] $float, $size, $move
 for_window [title="alsamixer" instance="st"] $float, $move
 for_window [title="calculator" instance="st"] $float, $size, $move
-for_window [title="network manager" instance="st"] $float, $size, $move
 for_window [title="cdw" instance="st"] $float, $size, $move
 for_window [title="File Transfer*"] $float, $move
 for_window [title="stopwatch floating"] $float, resize set 250 500, $move
@@ -81,9 +80,8 @@ for_window [class="qt5ct"] $float, $sticky, $move
 for_window [class="Qtconfig-qt4"] $float, $sticky, $move
 for_window [class="Manjaro-hello"] $float, $border, $move
 for_window [class="Pamac-manager"] $float, $border, $move
-for_window [class="Nm-connection-editor"] $float, $move
-for_window [class="GParted"] $float, $move
 for_window [class="Manjaro Settings Manager"] $float, $move
+for_window [class="GParted"] $float, $move
 for_window [class="gmic_qt"] $float, $move
 for_window [class="qv4l2"] $float
 for_window [class="mpv"] $sticky
