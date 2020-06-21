@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/urls
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-20T17:23:18+0200
+# date:       2020-06-21T20:34:13+0200
 
 # queries
 "query:┌ Unread:unread = \"yes\""
@@ -14,7 +14,7 @@
 "query:│├─ Podcast:tags # \"Podcast\""
 "query:│├─ Twitter:tags # \"Twitter\""
 "query:│└─ Business:tags # \"Business\""
-"query:├┬ Keywords:title =~ \"AfD|Brexit|Trump|Erdogan|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
+"query:├┬ Keywords:title =~ \"Corona|COVID|AfD|Brexit|Trump|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
 "query:│├─ Corona:title =~ \"Corona|COVID\""
 "query:│├─ Afd:title =~ \"AfD\""
 "query:│├─ Brexit:title =~ \"Brexit\""
