@@ -1,11 +1,11 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-gitgutter.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-06-07T10:11:25+0200
+" date:       2020-06-21T19:45:46+0200
 
 let g:gitgutter_enabled=1
 let g:gitgutter_map_keys=0
-let g:gitgutter_preview_win_floating=0
+let g:gitgutter_preview_win_floating=1
 
 highlight GitGutterAdd guifg=#00ff00 ctermfg=Green
 highlight GitGutterChange guifg=#ffff55 ctermfg=Yellow
