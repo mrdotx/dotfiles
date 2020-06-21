@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-20T16:55:43+0200
+# date:       2020-06-21T20:26:01+0200
 
 # general config
 ################
@@ -16,8 +16,7 @@ set $float floating enable
 set $sticky sticky enable
 set $border border pixel 2
 set $move move position center
-set $gap_in 10
-set $gap_out -3
+set $gap 5
 
 # colors
 set_from_resource $black0   i3wm.color0     #000000
@@ -53,8 +52,8 @@ default_$border
 default_floating_border normal
 workspace_auto_back_and_forth yes
 # for_window [urgent=latest] focus
-gaps inner $gap_in
-gaps outer $gap_out
+gaps inner $gap
+gaps outer $gap
 smart_gaps on
 smart_borders on
 
@@ -198,15 +197,15 @@ bindsym $sup+Shift+Up move up 20 px
 bindsym $sup+Shift+Down move down 20 px
 
 # resize window
-bindsym $sup+$alt+Left resize shrink width 20 px or 4 ppt
-bindsym $sup+$alt+Right resize grow width 20 px or 4 ppt
-bindsym $sup+$alt+Up resize shrink height 20 px or 4 ppt
-bindsym $sup+$alt+Down resize grow height 20 px or 4 ppt
+bindsym $sup+$alt+Left resize shrink width 20 px or 5 ppt
+bindsym $sup+$alt+Right resize grow width 20 px or 5 ppt
+bindsym $sup+$alt+Up resize shrink height 20 px or 5 ppt
+bindsym $sup+$alt+Down resize grow height 20 px or 5 ppt
 
 # resize gaps
-bindsym $sup+shift+minus gaps outer current minus 4, gaps inner current minus 8
-bindsym $sup+shift+equal gaps outer current plus 4, gaps inner current plus 8
-bindsym $sup+equal gaps inner current set $gap_in, gaps outer current set $gap_out
+bindsym $sup+shift+minus gaps inner current minus $gap
+bindsym $sup+shift+equal gaps inner current plus $gap
+bindsym $sup+equal gaps inner current set $gap
 
 # toggle sticky
 bindsym $sup+space sticky toggle
