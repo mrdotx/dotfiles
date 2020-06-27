@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-20T10:31:23+0200
+# date:       2020-06-27T07:23:07+0200
 
 # color
 alias ls='ls --color=auto'
@@ -34,11 +34,12 @@ alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
 # maintenance
 alias ch='systemctl --failed && journalctl -p 3 -xb'
 alias up='yay -Syu --devel --needed'
-alias mu='doas -- pacman-mirrors -c Germany && doas -- pacman -Syyu'
+alias mu='doas pacman-mirrors -c Germany && doas pacman -Syyu'
 alias cu='ch && up'
-alias cc='yay -Yc && doas -- paccache -rvk2 && doas -- paccache -ruk0'
+alias cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0'
 alias sc='system_cleanup.sh'
-alias cs='cc && sc'
+alias ud='doas updatedb && doas install -d -o root -g root -m 0755 /var/cache/man && doas find /var/cache/man -type f -name *.gz -atime +6 -delete && doas mandb -- quiet'
+alias cs='cc && sc && ud'
 
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
