@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-27T07:48:37+0200
+# date:       2020-06-27T13:13:28+0200
 
 # color
 alias ls='ls --color=auto'
@@ -38,8 +38,7 @@ alias mu='doas pacman-mirrors -c Germany && doas pacman -Syyu'
 alias cu='ch && up'
 alias cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0'
 alias sc='system_cleanup.sh'
-alias ud='printf ":: update locate db and maintain man db\n" && doas updatedb && doas install -d -o root -g root -m 0755 /var/cache/man && doas find /var/cache/man -type f -name *.gz -atime +6 -delete && doas mandb -- quiet'
-alias cs='cc && sc && ud'
+alias cs='cc && sc'
 
 alias bu='backup.sh'
 alias buu='backup_usb.sh'
