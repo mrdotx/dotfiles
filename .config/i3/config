@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-23T16:14:13+0200
+# date:       2020-07-05T12:34:16+0200
 
 # general config
 ################
@@ -117,7 +117,7 @@ workspace $ws0 output $mon2 $mon1
 # open applications on specific workspaces (xprop)
 assign [title="newsboat" instance="st"] $ws2
 assign [class="VirtualBox"] $ws3
-assign [class="Brave-browser"] $ws4
+assign [class="firefoxdeveloperedition"] $ws4
 assign [title="GIMP Startup"] $ws5
 assign [class="Gimp"] $ws5
 assign [class="Thunderbird"] $ws6
@@ -311,7 +311,7 @@ bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
 bindsym $sup+s exec "scribus"
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
-bindsym $sup+w exec --no-startup-id "brave"
+bindsym $sup+w exec --no-startup-id "firefox-developer-edition"
 bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+z exec --no-startup-id "filezilla"
