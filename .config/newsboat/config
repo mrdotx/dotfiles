@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-07-05T12:34:59+0200
+# date:       2020-07-11T18:49:59+0200
 
 # general
 auto-reload yes
@@ -36,7 +36,7 @@ macro m set browser "mpv %u"; open-in-browser ; set browser "link_handler.sh %u"
 
 # colors
 color background                    white   black
-color listnormal                    blue    black
+color listnormal                    blue    black   bold
 color listfocus                     cyan    blue    bold
 color listnormal_unread             red     black
 color listfocus_unread              white   blue    bold
