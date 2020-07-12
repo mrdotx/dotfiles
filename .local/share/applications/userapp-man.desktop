@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=man
+Comment=search man pages
+Icon=utilities-terminal
+Exec=rofi_man.sh
+Actions=
+Categories=Utility;
