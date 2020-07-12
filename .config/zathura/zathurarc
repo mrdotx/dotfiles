@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zathura/zathurarc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-29T10:03:14+0200
+# date:       2020-07-12T10:07:10+0200
 
 set selection-clipboard clipboard
 set adjust-open best-fit
@@ -15,7 +15,7 @@ map [fullscreen]    u       scroll half-up
 map [normal]        d       scroll half-down
 map [fullscreen]    d       scroll half-down
 map [normal]        r       rotate
-map [fullscreen]    r       retate
+map [fullscreen]    r       rotate
 map [normal]        <C-r>   reload
 map [fullscreen]    <C-r>   reload
 map [normal]        a       adjust_window best-fit
