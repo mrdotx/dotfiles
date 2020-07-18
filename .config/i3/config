@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-07-18T09:06:46+0200
+# date:       2020-07-18T19:08:04+0200
 
 # general config
 ################
@@ -128,6 +128,7 @@ assign [class="libreoffice"] $ws8
 assign [class="scribus"] $ws8
 assign [class="Jameica"] $ws9
 assign [class="Kodi"] $ws0
+assign [class="Minetest"] $ws0
 
 # keybindings system managment
 ##############################
