@@ -1,13 +1,14 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-07-30T00:16:35+0200
+# date:       2020-08-05T13:10:59+0200
 
 # project paths
 typeset -U PATH path
 path=( \
     "$HOME/.local/share/repos/conky" \
     "$HOME/.local/share/repos/dmenu/scripts" \
+    "$HOME/.local/share/repos/fzf" \
     "$HOME/.local/share/repos/i3" \
     "$HOME/.local/share/repos/link-handler" \
     "$HOME/.local/share/repos/polybar" \
