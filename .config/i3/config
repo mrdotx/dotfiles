@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-05T13:18:22+0200
+# date:       2020-08-17T11:51:29+0200
 
 # general config
 ################
@@ -16,7 +16,8 @@ set $float floating enable
 set $sticky sticky enable
 set $border border pixel 2
 set $move move position center
-set $gap 5
+set $gapin 5
+set $gapout 0
 
 # colors
 set_from_resource $black0   i3wm.color0     #000000
@@ -51,8 +52,8 @@ font pango:DejaVu Sans 10
 default_$border
 default_floating_border normal
 workspace_auto_back_and_forth yes
-gaps inner $gap
-gaps outer $gap
+gaps inner $gapin
+gaps outer $gapout
 smart_gaps on
 smart_borders on
 
@@ -203,9 +204,9 @@ bindsym $sup+$alt+Up resize shrink height 20 px or 5 ppt
 bindsym $sup+$alt+Down resize grow height 20 px or 5 ppt
 
 # resize gaps
-bindsym $sup+shift+minus gaps inner current minus $gap
-bindsym $sup+shift+equal gaps inner current plus $gap
-bindsym $sup+equal gaps inner current set $gap
+bindsym $sup+shift+minus gaps inner current minus $gapin
+bindsym $sup+shift+equal gaps inner current plus $gapin
+bindsym $sup+equal gaps inner current set $gapin
 
 # toggle sticky
 bindsym $sup+space sticky toggle
