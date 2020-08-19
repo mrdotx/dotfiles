@@ -1,66 +1,68 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-19T08:26:02+0200
+# date:       2020-08-19T08:41:27+0200
 
 # color
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias diff='diff --color=auto'
-alias watch='watch --color'
-alias ncdu='ncdu --color dark'
-alias tree='tree -C'
+alias \
+    ls='ls --color=auto' \
+    dir='dir --color=auto' \
+    vdir='vdir --color=auto' \
+    grep='grep --color=auto' \
+    egrep='egrep --color=auto' \
+    fgrep='fgrep --color=auto' \
+    diff='diff --color=auto' \
+    watch='watch --color' \
+    ncdu='ncdu --color dark' \
+    tree='tree -C'
 
 # navigation
-alias /='cd /'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias \
+    /='cd /' \
+    ..='cd ..' \
+    ...='cd ../..' \
+    ....='cd ../../..' \
+    .....='cd ../../../..'
 
 # tools
-alias md='mkdir -p'
-alias rd='rmdir'
-alias cp='cp -i'
-
-alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
-alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
-alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
-
-alias rg='. ranger'
-alias rs='doas ranger'
-alias calc='bc -q'
-alias nf='neofetch'
-alias we='weechat'
+alias \
+    md='mkdir -p' \
+    rd='rmdir' \
+    cp='cp -i' \
+    tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
+    tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi' \
+    nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1' \
+    rg='. ranger' \
+    rs='doas ranger' \
+    calc='bc -q' \
+    nf='neofetch' \
+    we='weechat'
 
 # services
-alias wt='curl -H "Accept-Language: de" wttr.in'
-alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
+alias \
+    wt='curl -H "Accept-Language: de" wttr.in' \
+    cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
 
 # maintenance
-alias ch='systemctl --failed && journalctl -p 3 -xb'
-alias up='yay -Syu --devel --needed'
-alias mu='doas pacman-mirrors -c Germany && doas pacman -Syyu'
-alias cu='ch && up'
-alias cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0'
-alias sc='system_cleanup.sh'
-alias cs='cc && sc'
-
-alias bu='backup.sh'
-alias buu='backup_usb.sh'
-
-alias dm='doas delete_metafiles.sh'
+alias \
+    ch='systemctl --failed && journalctl -p 3 -xb' \
+    up='yay -Syu --devel --needed' \
+    mu='doas pacman-mirrors -c Germany && doas pacman -Syyu' \
+    cu='ch && up' \
+    cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0' \
+    sc='system_cleanup.sh' \
+    cs='cc && sc' \
+    bu='backup.sh' \
+    buu='backup_usb.sh' \
+    dm='doas delete_metafiles.sh'
 
 # ssh
-alias pi='ssh hermes'
-alias pi2='ssh prometheus'
-alias firetv='ssh firetv'
-alias firetv4k='ssh firetv4k'
-alias p9='ssh p9'
-alias m3='ssh m3'
+alias \
+    pi='ssh hermes' \
+    pi2='ssh prometheus' \
+    firetv='ssh firetv' \
+    firetv4k='ssh firetv4k' \
+    p9='ssh p9' \
+    m3='ssh m3'
 
 # vim:ft=sh
