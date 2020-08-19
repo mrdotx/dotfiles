@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-27T13:13:28+0200
+# date:       2020-08-19T08:26:02+0200
 
 # color
 alias ls='ls --color=auto'
@@ -15,8 +15,18 @@ alias watch='watch --color'
 alias ncdu='ncdu --color dark'
 alias tree='tree -C'
 
+# navigation
+alias /='cd /'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
 # tools
+alias md='mkdir -p'
+alias rd='rmdir'
 alias cp='cp -i'
+
 alias tmux='tmux -f $HOME/.config/tmux/tmux.conf'
 alias tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi'
 alias nb='polybar-msg hook module/rss 1 > /dev/null 2>&1 && newsboat -q && polybar-msg hook module/rss 2 > /dev/null 2>&1'
@@ -27,7 +37,7 @@ alias calc='bc -q'
 alias nf='neofetch'
 alias we='weechat'
 
-# internet
+# services
 alias wt='curl -H "Accept-Language: de" wttr.in'
 alias cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
 
