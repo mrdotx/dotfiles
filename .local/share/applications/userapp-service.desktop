@@ -2,8 +2,8 @@
 Version=1.1
 Type=Application
 Name=service
-Comment=dervices de-/activate
+Comment=services de-/activate
 Icon=system-config-services
-Exec=rofi_service.sh
+Exec=dmenu_service.sh
 Actions=
 Categories=Utility;

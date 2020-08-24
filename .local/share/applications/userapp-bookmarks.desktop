@@ -2,8 +2,8 @@
 Version=1.1
 Type=Application
 Name=bookmarks
-Comment=bookmarks menu for link handler
+Comment=bookmarks menu to open with link handler
 Icon=bookmark-new
-Exec=rofi_bookmarks.sh
+Exec=dmenu_bookmarks.sh
 Actions=
 Categories=Utility;

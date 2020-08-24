@@ -2,8 +2,8 @@
 Version=1.1
 Type=Application
 Name=network manager
-Comment=connect wlan
+Comment=connect to wlan
 Icon=preferences-system-network
-Exec=rofi_iwd.sh
+Exec=dmenu_iwd.sh
 Actions=
 Categories=Network;
