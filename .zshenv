@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-05T13:10:59+0200
+# date:       2020-08-26T17:59:19+0200
 
 # project paths
 typeset -U PATH path
@@ -62,6 +62,7 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
+export WWW_HOME="duckduckgo.com"
 
 # standard apps
 export TERMINAL="st"
@@ -72,6 +73,7 @@ export FILE="ranger"
 export PAGER="less"
 export READER="zathura"
 export BROWSER="surf.sh"
+export TERMINAL_BROWSER="w3m"
 
 # history (same functionality as bash)
 export HISTFILE="$HOME/.local/share/cmd_history"
