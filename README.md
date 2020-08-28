@@ -11,11 +11,13 @@ found in my other repositories.
 | cmus              | music player                               |
 | conky             | infotainment system monitor                |
 | dunst             | notification daemon                        |
-| dwm               | dynamic window manager                     |
 | i3                | tiling window manager                      |
+| i3status          | status line for i3bar                      |
 | libinput-gestures | gestures on touchpad via libinput          |
 | mpv               | media player                               |
+| neofetch          | customizable system info script            |
 | newsboat          | rss/atom feedreader                        |
+| npm               | javascript package manager                 |
 | nvim              | text editor ,ide                           |
 | picom             | compositor                                 |
 | polybar           | status bar                                 |
@@ -25,7 +27,8 @@ found in my other repositories.
 | sxiv              | image viewser                              |
 | systemd           | units, timers and targets                  |
 | tmux              | terminal multiplexer                       |
-| X11               | x window system                            |
+| w3m               | text oriented browser                      |
+| xorg              | x window system, xressources               |
 | youtube-dl        | youtube downloader                         |
 | zathura           | document viewer                            |
 | zsh               | shell                                      |
