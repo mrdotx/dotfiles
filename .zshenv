@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-26T17:59:19+0200
+# date:       2020-08-28T19:52:15+0200
 
 # project paths
 typeset -U PATH path
@@ -73,7 +73,6 @@ export FILE="ranger"
 export PAGER="less"
 export READER="zathura"
 export BROWSER="surf.sh"
-export TERMINAL_BROWSER="w3m"
 
 # history (same functionality as bash)
 export HISTFILE="$HOME/.local/share/cmd_history"
