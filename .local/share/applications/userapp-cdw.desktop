@@ -4,6 +4,6 @@ Type=Application
 Name=cdw
 Comment=burn erase cd dvd
 Icon=disk-burner
-Exec=st -T "cdw" -e cdw
+Exec=$TERMINAL -T "cdw" -e cdw
 Actions=
 Categories=Utility;ConsoleOnly;

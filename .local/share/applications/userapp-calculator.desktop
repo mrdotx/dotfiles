@@ -4,6 +4,6 @@ Type=Application
 Name=calc
 Comment=calculate with python
 Icon=accessories-calculator
-Exec=st -T "calculator" -e bc
+Exec=$TERMINAL -T "calculator" -e bc
 Actions=
 Categories=Utility;

@@ -4,6 +4,6 @@ Type=Application
 Name=cmus
 Comment=c* music player
 Icon=multimedia-player
-Exec=st -e cmus
+Exec=$TERMINAL -e cmus
 Actions=
 Categories=AudioVideo;ConsoleOnly;
