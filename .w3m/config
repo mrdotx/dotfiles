@@ -1,3 +1,8 @@
+# path:       /home/klassiker/.w3m/config
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-08-29T09:39:27+0200
+
 tabstop 8
 indent_incr 4
 pixel_per_char 10
@@ -6,8 +11,8 @@ frame 0
 target_self 0
 open_tab_blank 0
 open_tab_dl_list 0
-display_link 0
-display_link_number 0
+display_link 1
+display_link_number 1
 decode_url 0
 display_lineinfo 1
 ext_dirlist 1
@@ -75,11 +80,11 @@ index_file
 mime_types ~/.mime.types, /etc/mime.types
 mailcap ~/.w3m/mailcap, /etc/w3m/mailcap
 urimethodmap ~/.w3m/urimethodmap, /etc/w3m/urimethodmap
-editor /usr/bin/nvim
+editor $EDITOR
 mailto_options 1
-mailer /usr/bin/thunderbird
-extbrowser ~/.local/share/repos/surf/surf.sh
-extbrowser2 /usr/bin/firefox-developer-edition
+mailer thunderbird
+extbrowser $BROWSER
+extbrowser2 firefox-developer-edition
 extbrowser3 
 extbrowser4 
 extbrowser5 
