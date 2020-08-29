@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T10:23:03+0200
+# date:       2020-08-29T11:25:35+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -151,6 +151,9 @@ keymap	M-[28~	MENU
 keymap  ,y  EXTERN_LINK     '(printf %s | xsel -b)'
 keymap  ,Y  EXTERN          '(printf %s | xsel -b)'
 
+# edit
+keymap	,e	EDIT_SCREEN
+
 # browser
 keymap  ,w  EXTERN_LINK     '$BROWSER'
 keymap  ,W  EXTERN          '$BROWSER'
@@ -166,6 +169,5 @@ keymap  ,?  COMMAND         "HELP; SEARCH User-Defined; CENTER_V"
 # search
 keymap  ,s  COMMAND         "GOTO https://lite.duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
 
-# config
-keymap  ,c  SHELL           "$EDITOR ~/.w3m/config"
-keymap  ,k  SHELL           "$EDITOR ~/.w3m/keymap"
+# readable
+keymap  ,,  COMMAND         "SHELL 'readable $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
