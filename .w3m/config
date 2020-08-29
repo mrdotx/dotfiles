@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T09:39:27+0200
+# date:       2020-08-29T22:06:06+0200
 
 tabstop 8
 indent_incr 4
@@ -83,8 +83,8 @@ urimethodmap ~/.w3m/urimethodmap, /etc/w3m/urimethodmap
 editor $EDITOR
 mailto_options 1
 mailer thunderbird
-extbrowser $BROWSER
-extbrowser2 firefox-developer-edition
+extbrowser firefox-developer-edition
+extbrowser2 
 extbrowser3 
 extbrowser4 
 extbrowser5 
