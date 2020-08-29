@@ -1,15 +1,15 @@
 [Default Applications]
-x-scheme-handler/http=userapp-surf.desktop
-x-scheme-handler/https=userapp-surf.desktop
-x-scheme-handler/ftp=userapp-surf.desktop
-x-scheme-handler/chrome=userapp-surf.desktop
-text/html=userapp-surf.desktop
-application/x-extension-htm=userapp-surf.desktop
-application/x-extension-html=userapp-surf.desktop
-application/x-extension-shtml=userapp-surf.desktop
-application/xhtml+xml=userapp-surf.desktop
-application/x-extension-xhtml=userapp-surf.desktop
-application/x-extension-xht=userapp-surf.desktop
+x-scheme-handler/http=userapp-w3m.desktop
+x-scheme-handler/https=userapp-w3m.desktop
+x-scheme-handler/ftp=userapp-w3m.desktop
+x-scheme-handler/chrome=userapp-w3m.desktop
+text/html=userapp-w3m.desktop
+application/x-extension-htm=userapp-w3m.desktop
+application/x-extension-html=userapp-w3m.desktop
+application/x-extension-shtml=userapp-w3m.desktop
+application/xhtml+xml=userapp-w3m.desktop
+application/x-extension-xhtml=userapp-w3m.desktop
+application/x-extension-xht=userapp-w3m.desktop
 image/jpeg=nomacs.desktop;
 image/png=nomags.desktop;
 text/plain=nvim.desktop
