@@ -4,6 +4,6 @@ Type=Application
 Name=w3m
 Comment=text orientated browser
 Icon=web-browser
-Exec=$TERMINAL -e w3m %u
+Exec=w3m.sh %u
 Actions=
 Categories=Network;WebBrowser;
