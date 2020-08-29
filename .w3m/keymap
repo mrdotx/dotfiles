@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T11:25:35+0200
+# date:       2020-08-29T16:58:19+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -159,6 +159,8 @@ keymap  ,w  EXTERN_LINK     '$BROWSER'
 keymap  ,W  EXTERN          '$BROWSER'
 keymap  ,f  EXTERN_LINK     'firefox-developer-edition'
 keymap  ,F  EXTERN          'firefox-developer-edition'
+keymap  ,l  EXTERN_LINK     'link_handler.sh'
+keymap  ,L  EXTERN          'link_handler.sh'
 
 # options
 keymap  ,t  COMMAND         "SET_OPTION display_borders; RESHAPE"
