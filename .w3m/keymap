@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T21:41:13+0200
+# date:       2020-08-30T09:50:20+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -150,6 +150,10 @@ keymap	M-[28~	MENU
 # clipboard
 keymap  ,y  EXTERN_LINK     '(printf %s | xsel -b)'
 keymap  ,Y  EXTERN          '(printf %s | xsel -b)'
+
+# bookmarks
+keymap	,b	BOOKMARK
+keymap	,B	ADD_BOOKMARK
 
 # edit
 keymap	,e	EDIT_SCREEN
