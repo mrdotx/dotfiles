@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T19:17:15+0200
+# date:       2020-08-30T20:37:26+0200
 
 # general config
 ################
@@ -85,9 +85,6 @@ for_window [class="GParted"] $float, $move
 for_window [class="gmic_qt"] $float, $move
 for_window [class="qv4l2"] $float
 for_window [class="mpv"] $sticky
-
-# fullscreen applications
-for_window [class="Kodi"] fullscreen
 
 # workspace
 ###########
