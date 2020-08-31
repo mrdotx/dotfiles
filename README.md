@@ -8,6 +8,7 @@ found in my other repositories.
 | :---------------- | :----------------------------------------- |
 | aria2             | download manager                           |
 | bash              | shell                                      |
+| cdw               | terminal front-end for cdrecord            |
 | cmus              | music player                               |
 | conky             | infotainment system monitor                |
 | dunst             | notification daemon                        |
@@ -29,6 +30,7 @@ found in my other repositories.
 | tmux              | terminal multiplexer                       |
 | w3m               | text oriented browser                      |
 | xorg              | x window system, xressources               |
+| yay               | aur helper                                 |
 | youtube-dl        | youtube downloader                         |
 | zathura           | document viewer                            |
 | zsh               | shell                                      |
