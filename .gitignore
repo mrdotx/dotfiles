@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.gitignore
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-31T17:05:59+0200
+# date:       2020-08-31T18:04:12+0200
 
 # special folders/files
 .config/cmus/playlists/
@@ -60,7 +60,6 @@
 .config/surf/
 .config/VirtualBox/
 .config/weechat/
-.config/yay/
 
 # .config files
 .config/manjaro-hello.json
@@ -100,7 +99,6 @@
 
 # root folders
 .cache/
-.cdw/
 .eteks/
 .gnupg/
 .icons/
