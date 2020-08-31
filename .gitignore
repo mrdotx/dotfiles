@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.gitignore
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-31T18:04:12+0200
+# date:       2020-08-31T19:08:14+0200
 
 # special folders/files
 .config/cmus/playlists/
@@ -23,8 +23,8 @@
 .config/systemd/user/timers.target.wants/
 .config/systemd/user/i3.target.wants/
 .config/zsh/.zcompdump
-.w3m/cookie
 .w3m/bookmark.html
+.w3m/cookie
 
 # .config folders
 .config/asunder/
