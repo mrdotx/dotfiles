@@ -1,0 +1,51 @@
+# Main window
+Color1_fore = BLUE
+Color1_bg   = BLACK
+
+# Dialog
+Color2_fore = WHITE
+Color2_bg   = BLUE
+
+# Title
+Color3_fore = RED
+Color3_bg   = BLACK
+
+# Menu
+Color4_fore = WHITE
+Color4_bg   = BLACK
+
+# Progress bar
+Color5_fore = YELLOW
+Color5_bg   = BLACK
+
+# input field
+Color6_fore = WHITE
+Color6_bg   = BLACK
+
+# Warning
+Color7_fore = BLACK
+Color7_bg   = BLUE
+
+# was: size info
+Color8_fore = YELLOW
+Color8_bg   = WHITE
+
+# Disables
+Color9_fore = BLACK
+Color9_bg   = WHITE
+
+# Not used
+Color10_fore = YELLOW
+Color10_bg   = WHITE
+
+# Tooltips
+Color11_fore = BLUE
+Color11_bg   = BLACK
+
+# Text area
+Color12_fore = WHITE
+Color12_bg   = BLACK
+
+# Error
+Color13_fore = BLACK
+Color13_bg   = RED
