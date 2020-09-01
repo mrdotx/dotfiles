@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-29T22:06:06+0200
+# date:       2020-09-01T10:11:25+0200
 
 tabstop 8
 indent_incr 4
@@ -41,7 +41,7 @@ show_srch_str 1
 label_topline 0
 nextpage_topline 0
 color 1
-basic_color terminal
+basic_color white
 anchor_color blue
 image_color green
 form_color red
