@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-04T20:49:03+0200
+# date:       2020-09-04T23:03:21+0200
 
 # general config
 ################
@@ -66,7 +66,7 @@ for_window [title="alsamixer" instance="st"] $float, $move
 for_window [title="calculator" instance="st"] $float, $size, $move
 for_window [title="cdw" instance="st"] $float, $size, $move
 for_window [title="File Transfer*"] $float, $move
-for_window [title="stopwatch floating"] $float, resize set 250 500, $move
+for_window [title="stopwatch"] $float, resize set 250 500, $move
 for_window [title="cmus" instance="st"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [title="yay" instance="st"] $float, $size, $move
 for_window [title="man" instance="st"] $float, $size, $move
@@ -320,9 +320,9 @@ bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+semicolon exec --no-startup-id "$TERMINAL -T 'fzf man floating' -e fzf_man.sh"
+bindsym $sup+semicolon exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
-bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch floating' -e stopwatch.sh"
+bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -e w3m $HOME/Dokumente/Notes/html/index.html"
 
