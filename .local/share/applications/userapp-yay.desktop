@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=yay
+Comment=search and install/remove packages with fzf/yay
+Icon=software-center
+Exec=$TERMINAL -T "yay" -e fzf_yay.sh
+Actions=
+Categories=Utility;
