@@ -125,6 +125,8 @@ libva-vdpau-driver
 libxft-bgra
 licenses
 linux-firmware
+linux419
+linux419-virtualbox-host-modules
 linux54
 linux54-virtualbox-host-modules
 linux58
@@ -251,7 +253,6 @@ util-linux
 v4l-utils
 ventoy
 virtualbox
-virtualbox-ext-oracle
 vorbis-tools
 vpnc
 vulkan-intel
