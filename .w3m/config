@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-01T10:11:25+0200
+# date:       2020-09-08T23:53:27+0200
 
 tabstop 8
 indent_incr 4
@@ -110,7 +110,7 @@ retry_http 1
 default_url 1
 follow_redirection 10
 meta_refresh 0
-dns_order 0
+dns_order 1
 nntpserver 
 nntpmode 
 max_news 50
