@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-06T11:06:01+0200
+# date:       2020-09-08T21:01:51+0200
 
 # general config
 ################
@@ -65,12 +65,11 @@ for_window [title="floating" instance="st"] $float, $size, $move
 for_window [title="alsamixer" instance="st"] $float, $move
 for_window [title="calculator" instance="st"] $float, $size, $move
 for_window [title="cdw" instance="st"] $float, $size, $move
-for_window [title="File Transfer*"] $float, $move
 for_window [title="stopwatch"] $float, resize set 250 500, $move
 for_window [title="cmus" instance="st"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [title="yay" instance="st"] $float, $size, $move
 for_window [title="man" instance="st"] $float, $size, $move
-for_window [title="LibreOffice"] $float, $move
+for_window [title="LibreOffice"] $float, $move, border pixel 0
 
 for_window [class="KeePassXC"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [class="Arandr"] $float, $sticky, $size, $move
