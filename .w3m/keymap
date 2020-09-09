@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-30T23:31:47+0200
+# date:       2020-09-09T18:20:30+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -165,7 +165,9 @@ keymap  ,l  EXTERN_LINK     'link_handler.sh'
 keymap  ,L  EXTERN          'link_handler.sh'
 
 # options
+keymap  ,c  COMMAND         "SET_OPTION color=toggle ; RESHAPE"
 keymap  ,t  COMMAND         "SET_OPTION display_borders; RESHAPE"
+keymap  ,i  COMMAND         "SET_OPTION display_image=toggle ; RELOAD"
 keymap  ,a  COMMAND         "SET_OPTION user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0'; RELOAD"
 keymap  ,A  COMMAND         "SET_OPTION user_agent=''; RELOAD"
 keymap  ,?  COMMAND         "HELP; SEARCH User-Defined; CENTER_V"
