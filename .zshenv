@@ -1,11 +1,14 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-31T08:33:02+0200
+# date:       2020-09-11T20:30:58+0200
 
-# project paths
+# repository paths
 typeset -U PATH path
 path=( \
+    "$HOME/.local/share/repos/audio" \
+    "$HOME/.local/share/repos/backlight" \
+    "$HOME/.local/share/repos/compressor" \
     "$HOME/.local/share/repos/conky" \
     "$HOME/.local/share/repos/dmenu/scripts" \
     "$HOME/.local/share/repos/fzf" \
@@ -15,9 +18,12 @@ path=( \
     "$HOME/.local/share/repos/python" \
     "$HOME/.local/share/repos/rclone" \
     "$HOME/.local/share/repos/rofi" \
+    "$HOME/.local/share/repos/screenshot" \
     "$HOME/.local/share/repos/shell" \
     "$HOME/.local/share/repos/stopwatch" \
     "$HOME/.local/share/repos/surf" \
+    "$HOME/.local/share/repos/terminal-colors" \
+    "$HOME/.local/share/repos/terminal-wrapper" \
     "$path[@]" \
 )
 export PATH
