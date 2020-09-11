@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-08T21:12:49+0200
+# date:       2020-09-11T20:29:14+0200
 
 # general config
 ################
@@ -277,8 +277,8 @@ bindsym $sup+Ctrl+Right workspace next
 bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
 bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
-bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -time 200 -steps 10 -inc 5"
-bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -time 200 -steps 10 -dec 5"
+bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
+bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
 bindsym XF86Cut exec --no-startup-id "clip=$(xsel -o -b); prim=$(xsel -o -p); [ -n \\"$clip\\" ] && notify-send \\"Clipboard:\\" \\"$clip\\"; [ -n \\"$prim\\" ] && notify-send \\"Primary:\\" \\"$prim\\""
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 
