@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-10T08:29:57+0200
+# date:       2020-09-12T17:19:16+0200
 
 user_resources=$HOME/.config/xorg/Xresources
 user_modmap=$HOME/.config/xorg/Xmodmap
@@ -34,7 +34,7 @@ fi
 
 # keyboard
 setxkbmap -model pc105 -layout us,de -option grp:caps_switch
-xset r rate 300 50
+xset r rate 200 50
 
 # mouse
 xinput --set-prop 'Synaptics TM3242-001' 'libinput Tapping Enabled' 0
