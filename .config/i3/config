@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-11T20:29:14+0200
+# date:       2020-09-13T10:16:44+0200
 
 # general config
 ################
@@ -171,6 +171,9 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'rest
 
 # picom disable/enable
 bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom' 'enabled and started'; fi"
+
+# i3_tiling disable/enable
+bindsym $sup+Shift+t exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling' 'enabled and started'; fi"
 
 # polybar switch layout and disable/enable
 bindsym $sup+y exec --no-startup-id "polybar.sh -t"
@@ -385,4 +388,3 @@ bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 ######################
 
 exec --no-startup-id "systemctl --user start i3.target"
-exec --no-startup-id "sleep 3 && i3_tiling.sh"
