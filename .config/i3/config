@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-13T10:32:57+0200
+# date:       2020-09-13T13:26:16+0200
 
 # general config
 ################
@@ -118,6 +118,7 @@ workspace $ws0 output $mon2 $mon1
 
 # open applications on specific workspaces (xprop)
 assign [title="newsboat" instance="st"] $ws3
+assign [title="podboat" instance="st"] $ws3
 assign [class="firefoxdeveloperedition"] $ws4
 assign [title="GIMP Startup"] $ws5
 assign [class="Gimp"] $ws5
@@ -312,6 +313,7 @@ bindsym $sup+j exec "jameica"
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 3 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
+bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -e podboat"
 bindsym $sup+o exec "libreoffice"
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
 bindsym $sup+s exec "scribus"
