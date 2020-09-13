@@ -1,0 +1,16 @@
+# path:       /home/klassiker/.config/systemd/user/i3_tiling.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-09-13T10:11:26+0200
+
+[Unit]
+Description=i3 optimal tiling
+PartOf=default.target
+After=xwallpaper.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/repos/i3/i3_tiling.sh --auto
+
+[Install]
+WantedBy=i3.target
