@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-14T16:18:51+0200
+# date:       2020-09-14T18:27:56+0200
 
 # general config
 ################
@@ -107,28 +107,28 @@ set $ws0 10
 # workspace output
 workspace $ws1 output $mon1 $mon2
 workspace $ws2 output $mon2 $mon1
-workspace $ws3 output $mon1 $mon2
+workspace $ws3 output $mon2 $mon1
 workspace $ws4 output $mon2 $mon1
 workspace $ws5 output $mon1 $mon2
-workspace $ws6 output $mon2 $mon1
-workspace $ws7 output $mon1 $mon2
-workspace $ws8 output $mon2 $mon1
+workspace $ws6 output $mon1 $mon2
+workspace $ws7 output $mon2 $mon1
+workspace $ws8 output $mon1 $mon2
 workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
 
 # open applications on specific workspaces (xprop)
-assign [title="GIMP Startup"] $ws3
-assign [class="Gimp"] $ws3
-assign [class="Inkscape"] $ws3
-assign [class="Darktable"] $ws3
+assign [title="newsboat" instance="st"] $ws3
+assign [title="podboat" instance="st"] $ws3
 assign [class="firefoxdeveloperedition"] $ws4
 assign [class="Thunderbird"] $ws5
-assign [title="newsboat" instance="st"] $ws6
-assign [title="podboat" instance="st"] $ws6
-assign [class="Jameica"] $ws7
-assign [title="LibreOffice"] $ws8
-assign [class="libreoffice"] $ws8
-assign [class="scribus"] $ws8
+assign [title="GIMP Startup"] $ws6
+assign [class="Gimp"] $ws6
+assign [class="Inkscape"] $ws6
+assign [class="Darktable"] $ws6
+assign [title="LibreOffice"] $ws7
+assign [class="libreoffice"] $ws7
+assign [class="scribus"] $ws7
+assign [class="Jameica"] $ws8
 assign [class="VirtualBox"] $ws9
 assign [class="Kodi"] $ws0
 assign [class="Minetest"] $ws0
