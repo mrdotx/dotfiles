@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-14T18:27:56+0200
+# date:       2020-09-14T19:35:16+0200
 
 # general config
 ################
@@ -105,8 +105,8 @@ set $ws9 9
 set $ws0 10
 
 # workspace output
-workspace $ws1 output $mon1 $mon2
-workspace $ws2 output $mon2 $mon1
+workspace $ws1 output $mon2 $mon1
+workspace $ws2 output $mon1 $mon2
 workspace $ws3 output $mon2 $mon1
 workspace $ws4 output $mon2 $mon1
 workspace $ws5 output $mon1 $mon2
