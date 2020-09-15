@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-14T19:35:16+0200
+# date:       2020-09-15T18:58:45+0200
 
 # general config
 ################
@@ -173,9 +173,6 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'rest
 # picom disable/enable
 bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom.service' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom.service' 'enabled and started'; fi"
 
-# i3_tiling disable/enable
-bindsym $sup+Shift+t exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling.service' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling.service' 'enabled and started'; fi"
-
 # polybar switch layout and disable/enable
 bindsym $sup+y exec --no-startup-id "polybar.sh -t"
 bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user disable polybar.service --now && notify-send 'polybar.service' 'stopped and disabled'; else systemctl --user enable polybar.service --now && notify-send 'polybar.servicen3' 'enabled and started'; fi"
@@ -187,7 +184,7 @@ bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active 
 bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
 
 # split orientation
-bindsym $sup+Ctrl+Up exec --no-startup-id "if [ -n \\"$(pgrep -x i3_tiling.sh)\\" ]; then pkill -x i3_tiling.sh && notify-send 'i3' 'optimal tiling off'; else  i3_tiling.sh & notify-send 'i3' 'optimal tiling on'; fi"
+bindsym $sup+Ctrl+Up exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling.service' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling.service' 'enabled and started'; fi"
 bindsym $sup+Ctrl+Down split toggle; exec --no-startup-id "notify-send 'i3' 'tile container direction toggled'"
 
 # change focus
@@ -283,7 +280,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
 bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
-bindsym XF86Cut exec --no-startup-id "clip=$(xsel -o -b); prim=$(xsel -o -p); [ -n \\"$clip\\" ] && notify-send \\"Clipboard:\\" \\"$clip\\"; [ -n \\"$prim\\" ] && notify-send \\"Primary:\\" \\"$prim\\""
+bindsym XF86Cut exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 
 # keybindings screenshot
@@ -315,6 +312,7 @@ bindsym $sup+m exec "thunderbird"
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 3 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1"
 bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -e podboat"
 bindsym $sup+o exec "libreoffice"
+bindsym $sup+q exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
 bindsym $sup+s exec "scribus"
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
