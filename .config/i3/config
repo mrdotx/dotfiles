@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-15T18:58:45+0200
+# date:       2020-09-15T19:18:35+0200
 
 # general config
 ################
@@ -173,10 +173,6 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'rest
 # picom disable/enable
 bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom.service' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom.service' 'enabled and started'; fi"
 
-# polybar switch layout and disable/enable
-bindsym $sup+y exec --no-startup-id "polybar.sh -t"
-bindsym $sup+Shift+y exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user disable polybar.service --now && notify-send 'polybar.service' 'stopped and disabled'; else systemctl --user enable polybar.service --now && notify-send 'polybar.servicen3' 'enabled and started'; fi"
-
 # keybindings windows/container
 ###############################
 
@@ -280,7 +276,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
 bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
-bindsym XF86Cut exec --no-startup-id "dmenu_youtube.sh"
+bindsym XF86Cut exec --no-startup-id "polybar.sh -t"
+bindsym Shift+XF86Cut exec --no-startup-id "if [ \\"$(systemctl --user is-active polybar.service)\\" = \\"active\\" ]; then systemctl --user disable polybar.service --now && notify-send 'polybar.service' 'stopped and disabled'; else systemctl --user enable polybar.service --now && notify-send 'polybar.servicen3' 'enabled and started'; fi"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 
 # keybindings screenshot
@@ -320,6 +317,7 @@ bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "firefox-developer-edition"
 bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
+bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
