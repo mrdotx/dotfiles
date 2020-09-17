@@ -1,7 +1,8 @@
 # path:       /home/klassiker/.config/youtube-dl/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:59:50+0200
+# date:       2020-09-17T18:34:50+0200
 
 -o "~/Downloads/[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s"
 --external-downloader aria2c
+--user-agent "DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)"
