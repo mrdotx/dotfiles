@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-18T13:33:19+0200
+# date:       2020-09-18T21:23:01+0200
 
 # general config
 ################
@@ -105,13 +105,13 @@ set $ws9 9
 set $ws0 10
 
 # workspace output
-workspace $ws1 output $mon2 $mon1
-workspace $ws2 output $mon1 $mon2
+workspace $ws1 output $mon1 $mon2
+workspace $ws2 output $mon2 $mon1
 workspace $ws3 output $mon2 $mon1
 workspace $ws4 output $mon2 $mon1
 workspace $ws5 output $mon1 $mon2
-workspace $ws6 output $mon1 $mon2
-workspace $ws7 output $mon2 $mon1
+workspace $ws6 output $mon2 $mon1
+workspace $ws7 output $mon1 $mon2
 workspace $ws8 output $mon1 $mon2
 workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
@@ -121,13 +121,13 @@ assign [title="newsboat" instance="st"] $ws3
 assign [title="podboat" instance="st"] $ws3
 assign [class="firefoxdeveloperedition"] $ws4
 assign [class="Thunderbird"] $ws5
-assign [title="GIMP Startup"] $ws6
-assign [class="Gimp"] $ws6
-assign [class="Inkscape"] $ws6
-assign [class="Darktable"] $ws6
-assign [title="LibreOffice"] $ws7
-assign [class="libreoffice"] $ws7
-assign [class="scribus"] $ws7
+assign [title="LibreOffice"] $ws6
+assign [class="libreoffice"] $ws6
+assign [class="scribus"] $ws6
+assign [title="GIMP Startup"] $ws7
+assign [class="Gimp"] $ws7
+assign [class="Inkscape"] $ws7
+assign [class="Darktable"] $ws7
 assign [class="Jameica"] $ws8
 assign [class="VirtualBox"] $ws9
 assign [class="Kodi"] $ws0
@@ -297,19 +297,19 @@ bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
 bindsym $sup+c exec --no-startup-id "$TERMINAL -e i3_cmus.sh"
 bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
-bindsym $sup+d exec "darktable" workspace $ws6
+bindsym $sup+d exec "darktable" workspace $ws7
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
-bindsym $sup+g exec "gimp" workspace $ws6
+bindsym $sup+g exec "gimp" workspace $ws7
 bindsym $sup+h exec --no-startup-id "$TERMINAL -e htop"
-bindsym $sup+i exec "inkscape" workspace $ws6
+bindsym $sup+i exec "inkscape" workspace $ws7
 bindsym $sup+j exec "jameica" workspace $ws8
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+m exec "thunderbird" workspace $ws5
 bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 3 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1" workspace $ws3
 bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -e podboat" workspace $ws3
-bindsym $sup+o exec "libreoffice" workspace $ws7
+bindsym $sup+o exec "libreoffice" workspace $ws6
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
-bindsym $sup+s exec "scribus" workspace $ws7
+bindsym $sup+s exec "scribus" workspace $ws6
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws4
