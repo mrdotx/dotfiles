@@ -30,7 +30,6 @@ chameleon-git
 cmus
 conky
 coreutils
-cpio
 crda
 cryptsetup
 darktable
@@ -109,7 +108,6 @@ kodi
 kodi-addon-pvr-iptvsimple
 kvantum-qt5
 less
-lhasa
 lib32-libva-vdpau-driver
 lib32-mesa-vdpau
 libdvdcss
@@ -149,7 +147,6 @@ mesa-vdpau
 mhwd
 mhwd-db
 minetest
-minetest-mineclone2
 mlocate
 mpv
 mtools
@@ -244,7 +241,6 @@ ttf-ms-win10-sea
 ttf-ms-win10-thai
 ttf-ms-win10-zh_cn
 ttf-ms-win10-zh_tw
-unace
 unarj
 unrar
 unzip
@@ -253,6 +249,7 @@ util-linux
 v4l-utils
 ventoy
 virtualbox
+virtualbox-ext-oracle
 vorbis-tools
 vpnc
 vulkan-intel
@@ -279,7 +276,6 @@ xfsprogs
 xorg-fonts-misc
 xorg-server
 xorg-twm
-xorg-xbacklight
 xorg-xev
 xorg-xhost
 xorg-xinit
