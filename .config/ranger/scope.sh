@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:56:54+0200
+# date:       2020-09-21T23:41:15+0200
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
@@ -36,7 +36,7 @@ IFS=$'\n'
 FILE_PATH="${1}"         # Full path of the highlighted file
 PV_WIDTH="${2}"          # Width of the preview pane (number of fitting characters)
 ## shellcheck disable=SC2034 # PV_HEIGHT is provided for convenience and unused
-PV_HEIGHT="${3}"         # Height of the preview pane (number of fitting characters)
+# PV_HEIGHT="${3}"         # Height of the preview pane (number of fitting characters)
 IMAGE_CACHE_PATH="${4}"  # Full path that should be used to cache image preview
 PV_IMAGE_ENABLED="${5}"  # 'True' if image previews are enabled, 'False' otherwise.
 
@@ -49,8 +49,8 @@ HIGHLIGHT_TABWIDTH=${HIGHLIGHT_TABWIDTH:-8}
 HIGHLIGHT_STYLE=${HIGHLIGHT_STYLE:-pablo}
 HIGHLIGHT_OPTIONS="--replace-tabs=${HIGHLIGHT_TABWIDTH} --style=${HIGHLIGHT_STYLE} ${HIGHLIGHT_OPTIONS:-}"
 PYGMENTIZE_STYLE=${PYGMENTIZE_STYLE:-autumn}
-OPENSCAD_IMGSIZE=${RNGR_OPENSCAD_IMGSIZE:-1000,1000}
-OPENSCAD_COLORSCHEME=${RNGR_OPENSCAD_COLORSCHEME:-Tomorrow Night}
+# OPENSCAD_IMGSIZE=${RNGR_OPENSCAD_IMGSIZE:-1000,1000}
+# OPENSCAD_COLORSCHEME=${RNGR_OPENSCAD_COLORSCHEME:-Tomorrow Night}
 
 handle_extension() {
     case "${FILE_EXTENSION_LOWER}" in
@@ -268,11 +268,25 @@ handle_image() {
     # esac
 
     case "${FILE_EXTENSION_LOWER}" in
-        ## Font
+        ## Fonts
         otf|ttf|woff|ttc)
-            # Preview
-            fontpreview -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" && exit 6
-            exit 1;;
+            sample_text="ABCDEFGHIJKLM\n"
+            sample_text+="NOPQRSTUVWXYZ\n"
+            sample_text+="abcdefghijklm\n"
+            sample_text+="nopqrstuvwxyz\n"
+            sample_text+="1234567890\n"
+            sample_text+="!@$\%(){}[]"
+
+            convert -size 560x560 xc:"#000000" \
+                -gravity center \
+                -pointsize 38 \
+                -font "${FILE_PATH}" \
+                -fill "#ffffff" \
+                -annotate +0+0 "$sample_text" \
+                -flatten "${IMAGE_CACHE_PATH}" \
+                && exit 6
+            exit 1
+            ;;
     esac
 }
 
