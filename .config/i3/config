@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-18T21:23:01+0200
+# date:       2020-09-26T14:05:08+0200
 
 # general config
 ################
@@ -321,7 +321,7 @@ bindsym $sup+z exec --no-startup-id "filezilla"
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
 bindsym $sup+semicolon exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
-bindsym $sup+apostrophe exec --no-startup-id "$TERMINAL -T 'yay' -e fzf_yay.sh"
+bindsym $sup+apostrophe exec --no-startup-id "$TERMINAL -T 'yay' -e terminal_wrapper.sh fzf_yay.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
