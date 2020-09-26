@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-17T18:17:22+0200
+# date:       2020-09-26T12:41:43+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -148,8 +148,8 @@ keymap	M-[28~	MENU
 
 # custom keymap
 # clipboard
-keymap  ,y  EXTERN_LINK     '(printf %s | xsel -b)'
-keymap  ,Y  EXTERN          '(printf %s | xsel -b)'
+keymap  ,y  EXTERN          '(printf %s | xsel -b)'
+keymap  ,Y  EXTERN_LINK     '(printf %s | xsel -b)'
 
 # bookmarks
 keymap	,b	BOOKMARK
@@ -159,10 +159,10 @@ keymap	,B	ADD_BOOKMARK
 keymap	,e	EDIT_SCREEN
 
 # browser
-keymap  ,w  EXTERN_LINK     'firefox-developer-edition &'
-keymap  ,W  EXTERN          'firefox-developer-edition &'
-keymap  ,l  EXTERN_LINK     'link_handler.sh'
-keymap  ,L  EXTERN          'link_handler.sh'
+keymap  ,w  EXTERN          'firefox-developer-edition &'
+keymap  ,W  EXTERN_LINK     'firefox-developer-edition &'
+keymap  ,l  EXTERN          'link_handler.sh'
+keymap  ,L  EXTERN_LINK     'link_handler.sh'
 
 # options
 keymap  ,c  COMMAND         "SET_OPTION color=toggle ; RESHAPE"
