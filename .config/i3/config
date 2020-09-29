@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-26T14:05:08+0200
+# date:       2020-09-29T08:47:31+0200
 
 # general config
 ################
@@ -51,7 +51,6 @@ mouse_warping none
 font pango:DejaVu Sans 10
 default_$border
 default_floating_border normal
-workspace_auto_back_and_forth yes
 gaps inner $gapin
 gaps outer $gapout
 smart_gaps on
