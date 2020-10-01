@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-19T09:20:35+0200
+# date:       2020-10-01T17:02:54+0200
 
 # color
 alias \
@@ -47,7 +47,7 @@ alias \
 alias \
     ch='systemctl --failed && journalctl -p 3 -xb' \
     up='yay -Syu --devel --needed' \
-    mu='doas pacman-mirrors && doas pacman -Syyu' \
+    mu='doas pacman-mirrors -c Germany && doas pacman -Syyu' \
     cu='ch && up' \
     cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0' \
     sc='system_cleanup.sh' \
