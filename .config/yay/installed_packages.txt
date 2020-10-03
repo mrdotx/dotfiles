@@ -140,7 +140,6 @@ man-pages
 manjaro-release
 manjaro-settings-manager
 manjaro-system
-mc
 mesa-demos
 mesa-vdpau
 mhwd
