@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-27T08:21:37+0200
+# date:       2020-10-06T09:36:37+0200
 
 tabstop 8
 indent_incr 4
@@ -22,7 +22,7 @@ dictcommand file:///$LIB/w3mdict.cgi
 multicol 0
 alt_entity 0
 graphic_char 0
-display_borders 0
+display_borders 1
 fold_textarea 0
 display_ins_del 1
 ignore_null_img_alt 1
