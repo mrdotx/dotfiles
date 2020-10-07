@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-07T09:57:13+0200
+# date:       2020-10-07T10:17:19+0200
 
 # general
 auto-reload no
@@ -11,7 +11,7 @@ show-read-feeds yes
 keep-articles-days 30
 cleanup-on-quit yes
 
-browser "link_handler.sh --readable %u"
+browser "link_handler.sh %u"
 player "mpv --no-audio-display"
 download-path "~/Downloads/"
 
@@ -32,12 +32,11 @@ inoreader-min-items 999
 
 # macros
 macro , open-in-browser
-macro e set browser "echo %u >> ~/.local/share/newsboat/queue" ; open-in-browser ; set browser "link_handler.sh --readable %u"
-macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh --readable %u"
-macro o set browser "link_handler.sh %u"; open-in-browser ; set browser "link_handler.sh --readable %u"
-macro s set browser "surf.sh %u"; open-in-browser ; set browser "link_handler.sh --readable %u"
-macro t set browser "w3m.sh --tabbed %u"; open-in-browser ; set browser "link_handler.sh --readable %u"
-macro w set browser "$BROWSER %u"; open-in-browser ; set browser "link_handler.sh --readable %u"
+macro e set browser "echo %u >> ~/.local/share/newsboat/queue" ; open-in-browser ; set browser "link_handler.sh %u"
+macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro o set browser "link_handler.sh --readable %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro s set browser "surf.sh %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro t set browser "w3m.sh --tabbed %u"; open-in-browser ; set browser "link_handler.sh %u"
 
 # colors                            fg          bg      style
 color background                    white       black
