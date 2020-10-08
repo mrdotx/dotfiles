@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-29T08:47:31+0200
+# date:       2020-10-08T13:54:45+0200
 
 # general config
 ################
@@ -304,7 +304,7 @@ bindsym $sup+i exec "inkscape" workspace $ws7
 bindsym $sup+j exec "jameica" workspace $ws8
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+m exec "thunderbird" workspace $ws5
-bindsym $sup+n exec --no-startup-id "polybar-msg hook module/rss 3 > /dev/null 2>&1 && $TERMINAL -e newsboat -q && polybar-msg hook module/rss 1 > /dev/null 2>&1" workspace $ws3
+bindsym $sup+n exec --no-startup-id "$TERMINAL -e polybar_newsboat.sh --open" workspace $ws3
 bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -e podboat" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
