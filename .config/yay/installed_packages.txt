@@ -121,15 +121,12 @@ libva-utils
 libva-vdpau-driver
 libxft-bgra
 licenses
-linux-ck-skylake
-linux-ck-skylake-headers
 linux-firmware
 linux419
 linux419-virtualbox-host-modules
 linux54
 linux54-virtualbox-host-modules
-linux58
-linux58-virtualbox-host-modules
+linux59
 logrotate
 lsb-release
 lxappearance
@@ -192,11 +189,11 @@ python-libevdev
 python-pip
 python-pycryptodome
 python-pylint
+python-readability-lxml
 python2-pillow
 qt5ct
 ranger
 rclone
-readability-cli
 reiserfsprogs
 rofi
 rsync
@@ -250,7 +247,6 @@ v4l-utils
 ventoy
 virtualbox
 virtualbox-ext-oracle
-virtualbox-host-dkms
 vorbis-tools
 vpnc
 vulkan-intel
