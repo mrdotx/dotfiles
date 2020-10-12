@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-09-23T15:20:49+0200
+date:       2020-10-12T14:48:11+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -20,12 +20,11 @@ FZF_COMMAND = "| fzf -e -i --preview 'highlight \
                 --force {1}'"
 
 # fuzzy find files (key bind required)
-class FzfSelect(Command):
+class FzfFind(Command):
     """
     :FzfSelect
-    Find a file using fzf.
-    With a prefix argument select only directories.
-    See: https://github.com/junegunn/fzf
+    find a file using fzf
+    with a prefix argument select only directories
     """
     def execute(self):
         if self.quantifier:
@@ -57,14 +56,31 @@ class FzfSelect(Command):
 class FzfLocate(Command):
     """
     :FzfLocate
-    Locate a file using fzf.
-    With a prefix argument select only directories.
-    See: https://github.com/junegunn/fzf
+    locate a file using fzf
     """
     def execute(self):
         command="fzf_path=\"$(pwd)\"; \
                 locate $fzf_path \
                 | sed \"1d;s#$fzf_path/##g\"" + str(FZF_COMMAND)
+        fzf = self.fm.execute_command(command, stdout=PIPE)
+        stdout, sys.stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
+            if os.path.isdir(fzf_file):
+                self.fm.cd(fzf_file)
+            else:
+                self.fm.select_file(fzf_file)
+
+# fuzzy search file content
+class FzfSearchContent(Command):
+    """
+    :FzfSearch
+    search file content and use fzf to select file
+    """
+    def execute(self):
+        command="grep --line-buffered --color=never -ir -- " + str(self.rest(1)) + " \
+                | cut -d ':' -f1 \
+                | uniq" + str(FZF_COMMAND)
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
