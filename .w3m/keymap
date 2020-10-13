@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-06T17:50:08+0200
+# date:       2020-10-13T18:49:01+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -164,6 +164,12 @@ keymap  ,W  EXTERN_LINK     'firefox-developer-edition &'
 keymap  ,l  EXTERN          'link_handler.sh'
 keymap  ,L  EXTERN_LINK     'link_handler.sh'
 
+# readable
+keymap  ,o  COMMAND         "SHELL 'python -W ignore -m readability.readability -u $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
+
+# search
+keymap  ,s  COMMAND         "GOTO https://lite.duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
+
 # options
 keymap  ,c  COMMAND         "SET_OPTION color=toggle; RESHAPE"
 keymap  ,t  COMMAND         "SET_OPTION display_borders=toggle; RESHAPE"
@@ -171,9 +177,3 @@ keymap  ,i  COMMAND         "SET_OPTION display_image=toggle; RELOAD"
 keymap  ,a  COMMAND         "SET_OPTION user_agent='DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)'; RELOAD"
 keymap  ,A  COMMAND         "SET_OPTION user_agent=''; RELOAD"
 keymap  ,?  COMMAND         "HELP; SEARCH Benutzerdefiniert; CENTER_V"
-
-# search
-keymap  ,s  COMMAND         "GOTO https://lite.duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
-
-# readable
-keymap  ,,  COMMAND         "SHELL 'readable $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
