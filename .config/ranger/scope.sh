@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-21T23:41:15+0200
+# date:       2020-10-14T09:14:24+0200
 
 set -o noclobber -o noglob -o nounset -o pipefail
 IFS=$'\n'
@@ -102,7 +102,6 @@ handle_extension() {
         ## HTML
         htm|html|xhtml)
             ## Preview as text conversion
-            links -dump "${FILE_PATH}" && exit 5
             w3m -dump "${FILE_PATH}" && exit 5
             lynx -dump -- "${FILE_PATH}" && exit 5
             elinks -dump "${FILE_PATH}" && exit 5
