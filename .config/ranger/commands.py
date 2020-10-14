@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-10-12T14:48:11+0200
+date:       2020-10-14T10:10:39+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -19,30 +19,20 @@ FZF_COMMAND = "| fzf -e -i --preview 'highlight \
                 --out-format=xterm256 \
                 --force {1}'"
 
-# fuzzy find files (key bind required)
+# fuzzy find files
 class FzfFind(Command):
     """
-    :FzfSelect
-    find a file using fzf
-    with a prefix argument select only directories
+    :FzfFind
+
+    Search(find) for files/folder and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        if self.quantifier:
-            # match only directories
-            command="find -L . \\( -path '*/\\.*' \
-                            -o -fstype 'dev' \
-                            -o -fstype 'proc' \\) \
-                        -prune -o -type d -print 2> /dev/null \
-                    | sed 1d \
-                    | cut -b3-" + str(FZF_COMMAND)
-        else:
-            # match files and directories
-            command="find -L . \\( -path '*/\\.*' \
-                            -o -fstype 'dev' \
-                            -o -fstype 'proc' \\) \
-                        -prune -o -print 2> /dev/null \
-                    | sed 1d \
-                    | cut -b3-" + str(FZF_COMMAND)
+        command="find -L . \\( -path '*/\\.*' \
+                        -o -fstype 'dev' \
+                        -o -fstype 'proc' \\) \
+                    -prune -o -print 2> /dev/null \
+                | sed 1d \
+                | cut -b3-" + str(FZF_COMMAND)
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -52,11 +42,12 @@ class FzfFind(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fuzzy locate files (key bind required)
+# fuzzy locate files
 class FzfLocate(Command):
     """
     :FzfLocate
-    locate a file using fzf
+
+    Search(locate) for files/folder and use fzf to preview(highlight)/select.
     """
     def execute(self):
         command="fzf_path=\"$(pwd)\"; \
@@ -72,10 +63,11 @@ class FzfLocate(Command):
                 self.fm.select_file(fzf_file)
 
 # fuzzy search file content
-class FzfSearchContent(Command):
+class FzfGrep(Command):
     """
-    :FzfSearch
-    search file content and use fzf to select file
+    :FzfGrep <query>
+
+    Search(grep) file content and use fzf to preview(highlight)/select.
     """
     def execute(self):
         command="grep --line-buffered --color=never -ir -- " + str(self.rest(1)) + " \
