@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-08T14:12:17+0200
+# date:       2020-10-15T11:25:37+0200
 
 # color
 alias \
@@ -41,13 +41,14 @@ alias \
 # services
 alias \
     wt='curl -H "Accept-Language: de" wttr.in' \
-    cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"'
+    cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"' \
+    sw='telnet towel.blinkenlights.nl'
 
 # maintenance
 alias \
     ch='systemctl --failed && journalctl -p 3 -xb' \
     up='yay -Syu --devel --needed' \
-    mu='doas pacman-mirrors -c Germany,Denmark -t 5 && doas pacman -Syyu' \
+    mu='doas pacman-mirrors -c Germany,Denmark,Poland,Czech,Austria,Switzerland,France,Belgium,Netherlands -t 5 && doas pacman -Syyu' \
     cu='ch && up' \
     cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0' \
     sc='system_cleanup.sh' \
