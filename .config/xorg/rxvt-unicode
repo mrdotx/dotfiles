@@ -1,10 +1,11 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-06-14T17:40:56+0200
+! date:       2020-10-15T08:33:00+0200
 
-URxvt*font:                     xft:DejaVuSansMono Nerd Font:size=12,xft:JoyPixels:size=8
-URxvt*boldFont:                 xft:DejaVuSansMono Nerd Font:bold:size=12
+URxvt*font:                     xft:DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true
+URxvt*boldFont:                 xft:DejaVuSansMono Nerd Font:bold:pixelsize=16:antialias=true:autohint=true
+URxvt.letterSpace:              -1
 
 URxvt*depth:                    32
 URxvt*background:               [90]BLACK0
@@ -23,7 +24,7 @@ URxvt.keysym.M-c:               perl:clipboard:copy
 URxvt.keysym.M-v:               perl:clipboard:paste
 
 /* open url with matcher */
-URxvt.url-launcher:             /usr/bin/xdg-open
+URxvt.url-launcher:             link_handler.sh
 URxvt.keysym.C-Delete:          perl:matcher:last
 URxvt.keysym.M-Delete:          perl:matcher:list
 URxvt.matcher.button:           1
