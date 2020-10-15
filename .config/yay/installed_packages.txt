@@ -127,6 +127,7 @@ linux419-virtualbox-host-modules
 linux54
 linux54-virtualbox-host-modules
 linux59
+linux59-virtualbox-host-modules
 logrotate
 lsb-release
 lxappearance
@@ -159,6 +160,7 @@ ntfs-3g
 ocl-icd
 odt2txt
 opendoas
+opendoas-sudo
 openresolv
 openssh
 opusfile
@@ -209,7 +211,6 @@ simple-scan
 smartmontools
 speedtest-cli
 splix
-sudo
 sweethome3d
 sxiv
 sysbench
