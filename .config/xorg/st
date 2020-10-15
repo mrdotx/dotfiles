@@ -1,13 +1,21 @@
 ! path:       /home/klassiker/.config/xorg/st
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-09-29T10:51:36+0200
+! date:       2020-10-15T09:02:11+0200
 
 st.font:            DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true
 st.fontfallback:    Source-Code-Pro:pixelsize=14:antialias=true:autohint=true
 st.fontemoji:       JoyPixels:pixelsizesize=14:antialias=true:autohint=true
 st.termname:        st-256color
+st.shell:           /bin/sh
+st.minlatency:      8
+st.maxlatency:      33
+st.blinktimeout:    800
+st.bellvolume:      0
+st.tabspaces:       8
 st.borderpx:        2
+st.cwscale:         1.0
+st.chscale:         1.0
 st.alpha:           0.90
 
 ! vim:ft=xdefaults
