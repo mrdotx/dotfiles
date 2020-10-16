@@ -121,6 +121,8 @@ libva-utils
 libva-vdpau-driver
 libxft-bgra
 licenses
+linux-ck-skylake
+linux-ck-skylake-headers
 linux-firmware
 linux419
 linux419-virtualbox-host-modules
@@ -248,6 +250,7 @@ v4l-utils
 ventoy
 virtualbox
 virtualbox-ext-oracle
+virtualbox-host-dkms
 vorbis-tools
 vpnc
 vulkan-intel
