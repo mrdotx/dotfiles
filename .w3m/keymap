@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-13T18:49:01+0200
+# date:       2020-10-17T10:57:59+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -157,6 +157,15 @@ keymap	,B	ADD_BOOKMARK
 
 # edit
 keymap	,e	EDIT_SCREEN
+
+# download
+keymap  ,I  SAVE_IMAGE
+keymap  ,d  SAVE_LINK
+keymap  ,D  DOWNLOAD_LIST
+
+# links
+keymap	,u	LIST_MENU
+keymap	,U	MOVE_LIST_MENU
 
 # browser
 keymap  ,w  EXTERN          'firefox-developer-edition &'
