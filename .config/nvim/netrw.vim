@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-10-19T23:04:22+0200
+" date:       2020-10-19T23:58:54+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -13,7 +13,7 @@ let g:netrw_ftp_cmd='ftp -p'
 let g:netrw_dirhistmax=0
 let g:netrw_is_open=0
 
-function! ToggleNetrw()
+function! NetrwToggle()
     if g:netrw_is_open
         let i = bufnr("$")
         while (i >= 1)
@@ -29,29 +29,13 @@ function! ToggleNetrw()
     endif
 endfunction
 
-function! OpenTab()
+function! NetrwOpen(cmd)
     :normal v
     let g:path=expand('%:p')
     :q!
-    execute 'belowright tabnew' g:path
+    execute 'belowright' a:cmd g:path
     :normal <c-l>
-    :call ToggleNetrw()
-endfunction
-
-function! OpenRight()
-    :normal v
-    let g:path=expand('%:p')
-    :q!
-    execute 'belowright vnew' g:path
-    :normal <c-l>
-endfunction
-
-function! OpenBelow()
-    :normal v
-    let g:path=expand('%:p')
-    :q!
-    execute 'belowright new' g:path
-    :normal <c-l>
+    :call NetrwToggle()
 endfunction
 
 " close netrw if it's the only buffer open
@@ -61,14 +45,15 @@ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype
 set autochdir
 
 " automatic start at vim enter
-" autocmd VimEnter * :call ToggleNetrw()
+" autocmd VimEnter * :call NetrwToggle()
 
 function! NetrwMappings()
     noremap <buffer> <c-l> <c-w>l
-    noremap <silent> <c-f> :call ToggleNetrw()<cr>
-    noremap <silent> T :call OpenTab()<cr>
-    noremap <buffer> V :call OpenRight()<cr>
-    noremap <buffer> H :call OpenBelow()<cr>
+    noremap <silent> <c-f> :call NetrwToggle()<cr>
+    noremap <buffer> <cr> :call NetrwOpen("buffer")<cr>
+    noremap <silent> T :call NetrwOpen("tabnew")<cr>
+    noremap <buffer> V :call NetrwOpen("vnew")<cr>
+    noremap <buffer> H :call NetrwOpen("new")<cr>
 endfunction
 
 augroup netrw_mappings
@@ -76,4 +61,4 @@ augroup netrw_mappings
     autocmd filetype netrw call NetrwMappings()
 augroup END
 
-nnoremap <silent> <leader><leader> :call ToggleNetrw()<cr>
+nnoremap <silent> <leader><leader> :call NetrwToggle()<cr>
