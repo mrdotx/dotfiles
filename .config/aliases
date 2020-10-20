@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-15T11:25:37+0200
+# date:       2020-10-20T14:23:14+0200
 
 # color
 alias \
@@ -36,7 +36,8 @@ alias \
     rs='doas ranger' \
     calc='bc -q' \
     nf='neofetch' \
-    we='weechat'
+    we='weechat' \
+    bt='bpytop'
 
 # services
 alias \
