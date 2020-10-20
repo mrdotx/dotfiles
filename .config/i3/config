@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-10T09:34:34+0200
+# date:       2020-10-20T11:27:41+0200
 
 # general config
 ################
@@ -56,38 +56,6 @@ gaps outer $gapout
 smart_gaps on
 smart_borders on
 
-# application windows
-#####################
-
-# center
-for_window [title="LibreOffice"] $move
-
-# floating applications
-for_window [title="floating" instance="st"] $float, $size, $move
-for_window [title="alsamixer" instance="st"] $float, $move
-for_window [title="calculator" instance="st"] $float, $size, $move
-for_window [title="cdw" instance="st"] $float, $size, $move
-for_window [title="stopwatch"] $float, resize set 250 500, $move
-for_window [title="cmus" instance="st"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
-for_window [title="yay" instance="st"] $float, $size, $move
-for_window [title="man" instance="st"] $float, $size, $move
-
-for_window [class="KeePassXC"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
-for_window [class="Arandr"] $float, $sticky, $size, $move
-for_window [class="Polkit-gnome-authentication-agent-1"] $float, $sticky, $border, $move
-for_window [class="Dragon-drag-and-drop"] $float, $sticky, $border, $move
-for_window [class="Lxappearance"] $float, $sticky, $move
-for_window [class="Gufw.py"] $float, $sticky, resize set 500 800, $move
-for_window [class="qt5ct"] $float, $sticky, $move
-for_window [class="Qtconfig-qt4"] $float, $sticky, $move
-for_window [class="Manjaro-hello"] $float, $border, $move
-for_window [class="Pamac-manager"] $float, $border, $move
-for_window [class="Manjaro Settings Manager"] $float, $move
-for_window [class="GParted"] $float, $move
-for_window [class="gmic_qt"] $float, $move
-for_window [class="qv4l2"] $float
-for_window [class="mpv"] $sticky
-
 # workspace
 ###########
 
@@ -115,22 +83,51 @@ workspace $ws8 output $mon1 $mon2
 workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
 
-# open applications on specific workspaces (xprop)
-assign [title="newsboat" instance="st"] $ws3
-assign [title="podboat" instance="st"] $ws3
-assign [class="firefoxdeveloperedition"] $ws4
-assign [class="Thunderbird"] $ws5
-assign [title="LibreOffice"] $ws6
+# application windows (xprop)
+#############################
+
+# center
+for_window [title="LibreOffice"] $move
+
+# floating applications
+for_window [title="floating" instance="^st$"] $float, $size, $move
+
+for_window [title="^alsamixer$" instance="^st$"] $float, $move
+for_window [title="^calculator$" instance="^st$"] $float, $size, $move
+for_window [title="^cdw$" instance="^st$"] $float, $size, $move
+for_window [title="^stopwatch$" instance="^st$"] $float, resize set 250 500, $move
+for_window [title="^cmus$" instance="^st$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
+for_window [title="^yay$" instance="^st$"] $float, $size, $move
+for_window [title="^man$" instance="^st$"] $float, $size, $move
+
+for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
+for_window [class="^Polkit-gnome-authentication-agent-1$"] $float, $sticky, $border, $move
+for_window [class="^Dragon-drag-and-drop$"] $float, $sticky, $border, $move
+for_window [class="^Lxappearance$"] $float, $sticky, $move
+for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
+for_window [class="^qt5ct$"] $float, $sticky, $move
+for_window [class="^Pamac-manager$"] $float, $border, $move
+for_window [class="^Manjaro Settings Manager$"] $float, $move
+for_window [class="^GParted$"] $float, $size, $move
+for_window [class="^gmic_qt$"] $float, $move
+for_window [class="^qv4l2$"] $float
+for_window [class="^mpv$"] $sticky
+
+# open applications on specific workspaces
+assign [title="^newsboat$" instance="^st$"] $ws3
+assign [title="^podboat$" instance="^st$"] $ws3
+assign [class="^firefoxdeveloperedition$"] $ws4
+assign [class="^Thunderbird$"] $ws5
+assign [title="^LibreOffice$"] $ws6
 assign [class="libreoffice"] $ws6
-assign [class="scribus"] $ws6
-assign [title="GIMP Startup"] $ws7
-assign [class="Gimp"] $ws7
-assign [class="Inkscape"] $ws7
-assign [class="Darktable"] $ws7
-assign [class="Jameica"] $ws8
-assign [class="VirtualBox"] $ws9
-assign [class="Kodi"] $ws0
-assign [class="Minetest"] $ws0
+assign [class="^scribus$"] $ws6
+assign [class="^Gimp$"] $ws7
+assign [class="^Inkscape$"] $ws7
+assign [class="^Darktable$"] $ws7
+assign [class="^Jameica"] $ws8
+assign [class="^VirtualBox$"] $ws9
+assign [class="^Kodi$"] $ws0
+assign [class="^Minetest$"] $ws0
 
 # keybindings system managment
 ##############################
