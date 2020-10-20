@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-08-04T18:40:23+0200
+# date:       2020-10-20T08:59:19+0200
 
 [global]
 
@@ -182,7 +182,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path = /usr/share/icons/Arc/status/32/:/usr/share/icons/Arc/devices/32/
+    icon_path = /usr/share/icons/Arc-ICONS/status/32/:/usr/share/icons/Arc-ICONS/devices/32/
 
     ### History ###
 
