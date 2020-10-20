@@ -4,7 +4,7 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 arc-gtk-theme
-arc-icon-theme
+arc-icon-theme-full-git
 aria2
 aspell-de
 aspell-en
@@ -15,11 +15,11 @@ automake
 avahi
 bash
 bash-language-server
-bashtop
 binutils
 bison
 blueman
 bluez-utils
+bpytop
 btrfs-progs
 bzip2
 cantarell-fonts
