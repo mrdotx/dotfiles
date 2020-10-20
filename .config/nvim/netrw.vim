@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-10-19T23:58:54+0200
+" date:       2020-10-20T20:01:19+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -50,7 +50,6 @@ set autochdir
 function! NetrwMappings()
     noremap <buffer> <c-l> <c-w>l
     noremap <silent> <c-f> :call NetrwToggle()<cr>
-    noremap <buffer> <cr> :call NetrwOpen("buffer")<cr>
     noremap <silent> T :call NetrwOpen("tabnew")<cr>
     noremap <buffer> V :call NetrwOpen("vnew")<cr>
     noremap <buffer> H :call NetrwOpen("new")<cr>
