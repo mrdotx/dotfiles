@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-20T14:23:14+0200
+# date:       2020-10-21T10:08:09+0200
 
 # color
 alias \
@@ -30,7 +30,7 @@ alias \
     rd='rmdir' \
     cp='cp -i' \
     tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
-    tx='if [ -z "$TMUX" ]; then tmux attach -t mi || tmux new -s mi; fi' \
+    tx='tmux.sh "mi"' \
     nb='polybar_newsboat.sh --open' \
     rg='. ranger' \
     rs='doas ranger' \
