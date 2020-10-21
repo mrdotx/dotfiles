@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-21T11:29:55+0200
+# date:       2020-10-21T14:30:38+0200
 
 # general config
 ################
@@ -302,7 +302,7 @@ bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws0
 bindsym $sup+m exec "thunderbird" workspace $ws5
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws0
-bindsym $sup+n exec --no-startup-id "$TERMINAL -e polybar_newsboat.sh --open && link_handler.sh --tmpdelete" workspace $ws3
+bindsym $sup+n exec --no-startup-id "$TERMINAL -T 'newsboat' -e polybar_newsboat.sh --open && link_handler.sh --tmpdelete" workspace $ws3
 bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -e podboat" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
 bindsym $sup+r exec --no-startup-id "$TERMINAL -e $FILE"
@@ -321,8 +321,8 @@ bindsym $sup+semicolon exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
 bindsym $sup+apostrophe exec --no-startup-id "$TERMINAL -T 'yay' -e terminal_wrapper.sh fzf_yay.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
-bindsym $sup+slash exec --no-startup-id "$TERMINAL -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
-bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -e w3m $HOME/Dokumente/Notes/html/index.html"
+bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
+bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Dokumente/Notes/html/index.html"
 
 bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
