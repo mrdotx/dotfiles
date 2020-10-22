@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-09-29T10:20:58+0200
+# date:       2020-10-22T22:07:50+0200
 
 # aliases
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
@@ -89,8 +89,3 @@ bindkey '^[[B' history-substring-search-down
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-
-# autostart
-if [[ "$TERM" =~ ^(rxvt-unicode-256color)$ ]]; then
-    tx
-fi
