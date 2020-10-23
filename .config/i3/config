@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-22T18:56:23+0200
+# date:       2020-10-23T10:41:04+0200
 
 # general config
 ################
@@ -284,27 +284,27 @@ bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 ##########################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 0 $TERMINAL" workspace $ws3
+bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh 0 $TERMINAL" workspace $ws3
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 7 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws3
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh 7 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws3
 bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
 bindsym $sup+d exec "darktable" workspace $ws7
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace $ws7
-bindsym $sup+h exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 8 'htop'" workspace $ws3
-bindsym $sup+Shift+h exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 9 'bpytop'" workspace $ws3
+bindsym $sup+h exec --no-startup-id "i3_tmux.sh 8 'htop'" workspace $ws3
+bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh 9 'bpytop'" workspace $ws3
 bindsym $sup+i exec "inkscape" workspace $ws7
 bindsym $sup+j exec "jameica" workspace $ws8
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws0
 bindsym $sup+m exec "thunderbird" workspace $ws5
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws0
-bindsym $sup+n exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 5 'newsboat' 'polybar_newsboat.sh --open && link_handler.sh --tmpdelete'" workspace $ws3
-bindsym $sup+Shift+n exec --no-startup-id "$TERMINAL -T 'i3 tmux'-e i3_tmux.sh 6 'podboat'" workspace $ws3
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh 5 'newsboat' 'polybar_newsboat.sh --open && link_handler.sh --tmpdelete'" workspace $ws3
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh 6 'podboat'" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
-bindsym $sup+r exec --no-startup-id "$TERMINAL -T 'i3 tmux' -e i3_tmux.sh 4 $FILE" workspace $ws3
+bindsym $sup+r exec --no-startup-id "i3_tmux.sh 4 $FILE" workspace $ws3
 bindsym $sup+s exec "scribus" workspace $ws6
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
