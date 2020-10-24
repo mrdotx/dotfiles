@@ -1,11 +1,11 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-06-08T12:35:02+0200
+" date:       2020-10-24T20:04:31+0200
 
-" switch cursor window
+" switch/exchange windows
 nnoremap                <tab>           <c-w>w
-nnoremap                <S-tab>         <c-w>W
+nnoremap                <S-tab>         <c-w>x
 
 " buffers
 nnoremap    <silent>    <leader>b/      :buffers<cr>
