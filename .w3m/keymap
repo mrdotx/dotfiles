@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/keymap
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-17T10:57:59+0200
+# date:       2020-10-25T08:32:49+0100
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -148,8 +148,8 @@ keymap	M-[28~	MENU
 
 # custom keymap
 # clipboard
-keymap  ,y  EXTERN          '(printf %s | xsel -b)'
-keymap  ,Y  EXTERN_LINK     '(printf %s | xsel -b)'
+keymap  ,y  EXTERN          "(printf %s | xsel -b)"
+keymap  ,Y  EXTERN_LINK     "(printf %s | xsel -b)"
 
 # bookmarks
 keymap	,b	BOOKMARK
@@ -168,10 +168,9 @@ keymap	,u	LIST_MENU
 keymap	,U	MOVE_LIST_MENU
 
 # browser
-keymap  ,w  EXTERN          'firefox-developer-edition &'
-keymap  ,W  EXTERN_LINK     'firefox-developer-edition &'
-keymap  ,l  EXTERN          'link_handler.sh'
-keymap  ,L  EXTERN_LINK     'link_handler.sh'
+keymap  ,w  EXTERN          "firefox-developer-edition &"
+keymap  ,W  EXTERN_LINK     "firefox-developer-edition &"
+keymap  ,l  EXTERN_LINK     "link_handler.sh"
 
 # readable
 keymap  ,o  COMMAND         "SHELL 'python -W ignore -m readability.readability -u $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
