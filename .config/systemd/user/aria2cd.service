@@ -1,0 +1,14 @@
+# path:       /home/klassiker/.config/systemd/user/aria2cd.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2020-10-25T06:50:40+0100
+
+[Unit]
+Description=Aria2 Daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2d.conf
+
+[Install]
+WantedBy=default.target
