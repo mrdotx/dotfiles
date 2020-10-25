@@ -45,7 +45,6 @@ efibootmgr
 eslint
 ethtool
 exfat-utils
-f2fs-tools
 fakeroot
 ffmpeg
 ffmpegthumbnailer
@@ -99,7 +98,6 @@ ipw2100-fw
 ipw2200-fw
 iwd
 jameica
-jfsutils
 keepassxc
 kid3-qt
 kodi
@@ -198,7 +196,6 @@ python2-pillow
 qt5ct
 ranger
 rclone
-reiserfsprogs
 rofi
 rsync
 rxvt-unicode
@@ -273,10 +270,8 @@ xf86-input-wacom
 xf86-video-fbdev
 xf86-video-intel
 xf86-video-vesa
-xfsprogs
 xorg-fonts-misc
 xorg-server
-xorg-twm
 xorg-xev
 xorg-xhost
 xorg-xinit
@@ -286,7 +281,7 @@ xorg-xprop
 xorg-xwininfo
 xsel
 xwallpaper
-yay-bin
+yay
 youtube-dl
 zathura
 zathura-cb
