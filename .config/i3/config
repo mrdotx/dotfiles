@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-24T09:20:46+0200
+# date:       2020-10-25T10:56:34+0100
 
 # general config
 ################
@@ -123,7 +123,7 @@ assign [class="^Gimp$"] $ws7
 assign [class="^Inkscape$"] $ws7
 assign [class="^Darktable$"] $ws7
 assign [class="^Jameica"] $ws8
-assign [class="^VirtualBox$"] $ws9
+assign [class="^VirtualBox"] $ws9
 assign [class="^Kodi$"] $ws0
 assign [class="^Minetest$"] $ws0
 
