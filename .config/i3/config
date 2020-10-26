@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-26T13:48:18+0100
+# date:       2020-10-26T16:53:36+0100
 
 # general config
 ################
@@ -75,6 +75,7 @@ set $ws0 10
 workspace $ws1 output $mon2 $mon1
 workspace $ws2 output $mon1 $mon2
 workspace $ws3 output $mon2 $mon1
+workspace $ws4 output $mon1 $mon2
 workspace $ws5 output $mon2 $mon1
 workspace $ws6 output $mon1 $mon2
 workspace $ws7 output $mon1 $mon2
@@ -114,13 +115,13 @@ for_window [class="^mpv$"] $sticky
 # open applications on specific workspaces
 assign [title="^i3 tmux$" instance="^st$"] $ws1
 assign [class="^firefoxdeveloperedition$"] $ws3
-assign [class="^Thunderbird$"] $ws4
+assign [class="^Gimp$"] $ws4
+assign [class="^Inkscape$"] $ws4
+assign [class="^Darktable$"] $ws4
 assign [title="^LibreOffice$"] $ws5
 assign [class="libreoffice"] $ws5
 assign [class="^scribus$"] $ws5
-assign [class="^Gimp$"] $ws6
-assign [class="^Inkscape$"] $ws6
-assign [class="^Darktable$"] $ws6
+assign [class="^Thunderbird$"] $ws6
 assign [class="^Jameica"] $ws7
 assign [class="^VirtualBox"] $ws8
 assign [class="^Kodi$"] $ws9
@@ -289,14 +290,14 @@ bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
 bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 7 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws1
 bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
-bindsym $sup+d exec "darktable" workspace $ws6
+bindsym $sup+d exec "darktable" workspace $ws4
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
-bindsym $sup+g exec "gimp" workspace $ws6
-bindsym $sup+i exec "inkscape" workspace $ws6
+bindsym $sup+g exec "gimp" workspace $ws4
+bindsym $sup+i exec "inkscape" workspace $ws4
 bindsym $sup+j exec "jameica" workspace $ws7
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws9
-bindsym $sup+m exec "thunderbird" workspace $ws4
+bindsym $sup+m exec "thunderbird" workspace $ws6
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws9
 bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 5 'newsboat' 'polybar_newsboat.sh --open && link_handler.sh --tmpdelete'" workspace $ws1
 bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 6 'podboat'" workspace $ws1
