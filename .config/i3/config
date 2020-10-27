@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-26T16:53:36+0100
+# date:       2020-10-27T22:00:57+0100
 
 # general config
 ################
@@ -83,6 +83,114 @@ workspace $ws8 output $mon1 $mon2
 workspace $ws9 output $mon2 $mon1
 workspace $ws0 output $mon2 $mon1
 
+# keybindings workspace
+#######################
+
+# switch to workspace
+bindsym $sup+1 workspace $ws1
+bindsym $sup+2 workspace $ws2
+bindsym $sup+3 workspace $ws3
+bindsym $sup+4 workspace $ws4
+bindsym $sup+5 workspace $ws5
+bindsym $sup+6 workspace $ws6
+bindsym $sup+7 workspace $ws7
+bindsym $sup+8 workspace $ws8
+bindsym $sup+9 workspace $ws9
+bindsym $sup+0 workspace $ws0
+
+# move focused container to workspace
+bindsym $sup+Ctrl+1 move container to workspace $ws1
+bindsym $sup+Ctrl+2 move container to workspace $ws2
+bindsym $sup+Ctrl+3 move container to workspace $ws3
+bindsym $sup+Ctrl+4 move container to workspace $ws4
+bindsym $sup+Ctrl+5 move container to workspace $ws5
+bindsym $sup+Ctrl+6 move container to workspace $ws6
+bindsym $sup+Ctrl+7 move container to workspace $ws7
+bindsym $sup+Ctrl+8 move container to workspace $ws8
+bindsym $sup+Ctrl+9 move container to workspace $ws9
+bindsym $sup+Ctrl+0 move container to workspace $ws0
+
+# move to workspace with focused container
+bindsym $sup+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $sup+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $sup+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $sup+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $sup+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $sup+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $sup+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $sup+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $sup+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $sup+Shift+0 move container to workspace $ws0; workspace $ws0
+
+# workspace back and forth
+bindsym $alt+Tab workspace back_and_forth
+
+# navigate workspaces next/previous
+bindsym $sup+Ctrl+Left workspace prev
+bindsym $sup+Ctrl+Right workspace next
+
+# keybindings window
+####################
+
+# change focus
+bindsym $sup+Left focus left
+bindsym $sup+Right focus right
+bindsym $sup+Up focus up
+bindsym $sup+Down focus down
+
+# move focused window
+bindsym $sup+Shift+Left move left 20 px
+bindsym $sup+Shift+Right move right 20 px
+bindsym $sup+Shift+Up move up 20 px
+bindsym $sup+Shift+Down move down 20 px
+
+# window switcher
+bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
+
+# keybindings container
+#######################
+
+# container
+bindsym $sup+space mode "container"; exec --no-startup-id notify-send "i3 container mode started"
+mode "container" {
+    # resize container
+    bindsym Left resize shrink width 20 px or 5 ppt
+    bindsym Right resize grow width 20 px or 5 ppt
+    bindsym Up resize shrink height 20 px or 5 ppt
+    bindsym Down resize grow height 20 px or 5 ppt
+
+    # resize gaps
+    bindsym minus gaps inner current minus $gapin
+    bindsym equal gaps inner current plus $gapin
+    bindsym shift+equal gaps inner current set $gapin
+
+    # change focus between tiling/floating windows
+    bindsym f focus mode_toggle
+
+    # toggle tiling/floating
+    bindsym t floating toggle
+
+    # toggle sticky
+    bindsym s sticky toggle
+
+    # move the currently focused window to the scratchpad
+    bindsym m move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym c scratchpad show
+
+    # split orientation
+    bindsym h split horizontal; exec --no-startup-id "notify-send 'i3' 'tile container horizontal'"
+    bindsym v split vertical; exec --no-startup-id "notify-send 'i3' 'tile container vertical'"
+
+    # back to default mode
+    bindsym q mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
+    bindsym Return mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
+    bindsym Escape mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
+    bindsym $sup+space mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
+}
+
 # application windows (xprop)
 #############################
 
@@ -106,11 +214,12 @@ for_window [class="^Lxappearance$"] $float, $sticky, $move
 for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
 for_window [class="^qt5ct$"] $float, $sticky, $move
 for_window [class="^Pamac-manager$"] $float, $border, $move
-for_window [class="^Manjaro Settings Manager$"] $float, $move
 for_window [class="^GParted$"] $float, $size, $move
+for_window [class="^Manjaro Settings Manager$"] $float, $move
 for_window [class="^gmic_qt$"] $float, $move
-for_window [class="^qv4l2$"] $float
-for_window [class="^mpv$"] $sticky
+for_window [class="^qv4l2$"] $float, $move
+for_window [class="^Sxiv$"] $float, $size, $move
+for_window [class="^mpv$"] $float, $sticky
 
 # open applications on specific workspaces
 assign [title="^i3 tmux$" instance="^st$"] $ws1
@@ -167,100 +276,8 @@ bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'rest
 # picom disable/enable
 bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom.service' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom.service' 'enabled and started'; fi"
 
-# keybindings windows/container
-###############################
-
-# window switcher
-bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
-
-# split orientation
-bindsym $sup+Ctrl+Up exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling.service' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling.service' 'enabled and started'; fi"
-bindsym $sup+Ctrl+Down split toggle; exec --no-startup-id "notify-send 'i3' 'tile container direction toggled'"
-
-# change focus
-bindsym $sup+Left focus left
-bindsym $sup+Right focus right
-bindsym $sup+Up focus up
-bindsym $sup+Down focus down
-
-# move focused window
-bindsym $sup+Shift+Left move left 20 px
-bindsym $sup+Shift+Right move right 20 px
-bindsym $sup+Shift+Up move up 20 px
-bindsym $sup+Shift+Down move down 20 px
-
-# resize window
-bindsym $sup+$alt+Left resize shrink width 20 px or 5 ppt
-bindsym $sup+$alt+Right resize grow width 20 px or 5 ppt
-bindsym $sup+$alt+Up resize shrink height 20 px or 5 ppt
-bindsym $sup+$alt+Down resize grow height 20 px or 5 ppt
-
-# resize gaps
-bindsym $sup+shift+minus gaps inner current minus $gapin
-bindsym $sup+shift+equal gaps inner current plus $gapin
-bindsym $sup+equal gaps inner current set $gapin
-
-# toggle sticky
-bindsym $sup+space sticky toggle
-
-# change focus between tiling/floating windows
-bindsym $sup+bracketleft focus mode_toggle
-
-# toggle tiling/floating
-bindsym $sup+bracketright floating toggle
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $sup+shift+bracketleft scratchpad show
-
-# move the currently focused window to the scratchpad
-bindsym $sup+shift+bracketright move scratchpad
-
-# keybindings workspaces
-########################
-
-# switch to workspace
-bindsym $sup+1 workspace $ws1
-bindsym $sup+2 workspace $ws2
-bindsym $sup+3 workspace $ws3
-bindsym $sup+4 workspace $ws4
-bindsym $sup+5 workspace $ws5
-bindsym $sup+6 workspace $ws6
-bindsym $sup+7 workspace $ws7
-bindsym $sup+8 workspace $ws8
-bindsym $sup+9 workspace $ws9
-bindsym $sup+0 workspace $ws0
-
-# move focused container to workspace
-bindsym $sup+Ctrl+1 move container to workspace $ws1
-bindsym $sup+Ctrl+2 move container to workspace $ws2
-bindsym $sup+Ctrl+3 move container to workspace $ws3
-bindsym $sup+Ctrl+4 move container to workspace $ws4
-bindsym $sup+Ctrl+5 move container to workspace $ws5
-bindsym $sup+Ctrl+6 move container to workspace $ws6
-bindsym $sup+Ctrl+7 move container to workspace $ws7
-bindsym $sup+Ctrl+8 move container to workspace $ws8
-bindsym $sup+Ctrl+9 move container to workspace $ws9
-bindsym $sup+Ctrl+0 move container to workspace $ws0
-
-# move to workspace with focused container
-bindsym $sup+Shift+1 move container to workspace $ws1; workspace $ws1
-bindsym $sup+Shift+2 move container to workspace $ws2; workspace $ws2
-bindsym $sup+Shift+3 move container to workspace $ws3; workspace $ws3
-bindsym $sup+Shift+4 move container to workspace $ws4; workspace $ws4
-bindsym $sup+Shift+5 move container to workspace $ws5; workspace $ws5
-bindsym $sup+Shift+6 move container to workspace $ws6; workspace $ws6
-bindsym $sup+Shift+7 move container to workspace $ws7; workspace $ws7
-bindsym $sup+Shift+8 move container to workspace $ws8; workspace $ws8
-bindsym $sup+Shift+9 move container to workspace $ws9; workspace $ws9
-bindsym $sup+Shift+0 move container to workspace $ws0; workspace $ws0
-
-# workspace back and forth
-bindsym $alt+Tab workspace back_and_forth
-
-# navigate workspaces next/previous
-bindsym $sup+Ctrl+Left workspace prev
-bindsym $sup+Ctrl+Right workspace next
+# autotiling disable/enable
+bindsym $sup+Shift+t exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling.service' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling.service' 'enabled and started'; fi"
 
 # keybindings xf86 keys
 #######################
@@ -288,24 +305,25 @@ bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 0 'shell'" workspa
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 7 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws1
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 8 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws1
 bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
 bindsym $sup+d exec "darktable" workspace $ws4
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace $ws4
 bindsym $sup+i exec "inkscape" workspace $ws4
+bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 11 'hermes' 'ssh hermes'" workspace $ws1
+bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 12 'prometheus' 'ssh prometheus'" workspace $ws1
 bindsym $sup+j exec "jameica" workspace $ws7
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws9
 bindsym $sup+m exec "thunderbird" workspace $ws6
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws9
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 5 'newsboat' 'polybar_newsboat.sh --open && link_handler.sh --tmpdelete'" workspace $ws1
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 6 'podboat'" workspace $ws1
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 6 'newsboat' 'polybar_newsboat.sh --open && link_handler.sh --tmpdelete'" workspace $ws1
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 7 'podboat'" workspace $ws1
 bindsym $sup+o exec "libreoffice" workspace $ws5
-bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 4 $FILE" workspace $ws1
+bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 5 $FILE" workspace $ws1
 bindsym $sup+s exec "scribus" workspace $ws5
 bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 9 'bpytop'" workspace $ws1
-bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 8 'htop'" workspace $ws1
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws3
