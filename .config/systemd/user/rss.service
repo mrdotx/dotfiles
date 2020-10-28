@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/rss.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-08T13:58:29+0200
+# date:       2020-10-28T15:57:30+0100
 
 [Unit]
 Description=receive rss feeds with newsboat
@@ -10,7 +10,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=%h/.local/share/repos/polybar/polybar_newsboat.sh
+ExecStart=%h/.local/share/repos/polybar/polybar_rss.sh
 
 [Install]
 WantedBy=default.target
