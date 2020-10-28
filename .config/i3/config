@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-28T16:23:44+0100
+# date:       2020-10-28T19:03:35+0100
 
 # general config
 ################
@@ -401,16 +401,15 @@ bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -
 bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+z exec --no-startup-id "filezilla"
 
-bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+semicolon exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
-bindsym $sup+apostrophe exec --no-startup-id "$TERMINAL -T 'yay' -e terminal_wrapper.sh fzf_yay.sh"
+bindsym $sup+bracketleft exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
+bindsym $sup+bracketright exec --no-startup-id "$TERMINAL -T 'yay' -e terminal_wrapper.sh fzf_yay.sh"
+bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
+bindsym $sup+apostrophe exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Dokumente/Notes/html/index.html"
-
-bindsym $sup+F1 exec --no-startup-id "conky.sh vertical"
 
 # i3 status bar
 ###############
