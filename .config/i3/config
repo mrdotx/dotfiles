@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-28T19:03:35+0100
+# date:       2020-10-28T21:05:27+0100
 
 # general config
 ################
@@ -147,6 +147,12 @@ bindsym $sup+Shift+Down move down 20 px
 # window switcher
 bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
 
+# change focus between tiling/floating windows
+bindsym $sup+semicolon focus mode_toggle
+
+# toggle window tiling/floating
+bindsym $sup+apostrophe floating toggle
+
 # keybindings container
 #######################
 
@@ -156,8 +162,6 @@ mode "container" {
 bindsym slash exec --no-startup-id "notify-send 'i3 container mode keybindings' \
 '←,→,↑,↓ - resize container\n\
 -,=,+   - resize gaps\n\
-f       - change focus\n\
-t       - toggle tiling\n\
 s       - toggle sticky\n\
 m       - move to scratchpad\n\
 c       - cycle scratchpad\n\
@@ -175,12 +179,6 @@ q       - quit'"
     bindsym minus gaps inner current minus $gapin
     bindsym equal gaps inner current plus $gapin
     bindsym shift+equal gaps inner current set $gapin
-
-    # change focus between tiling/floating windows
-    bindsym f focus mode_toggle; exec --no-startup-id "notify-send 'i3 container mode' 'change focus'"
-
-    # toggle tiling/floating
-    bindsym t floating toggle; exec --no-startup-id "notify-send 'i3 container mode' 'toggle tiling'"
 
     # toggle sticky
     bindsym s sticky toggle; exec --no-startup-id "notify-send 'i3 container mode' 'toggle sticky'"
@@ -374,7 +372,7 @@ bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 0 'shell'" workspa
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 8 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws1
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 7 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws1
 bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify-send"
 bindsym $sup+d exec "darktable" workspace $ws4
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
@@ -387,12 +385,13 @@ bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws9
 bindsym $sup+m exec "thunderbird" workspace $ws6
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws9
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 6 'newsboat' 'polybar_rss.sh --open && link_handler.sh --tmpdelete'" workspace $ws1
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 7 'podboat'" workspace $ws1
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 5 'newsboat' 'polybar_rss.sh --open && link_handler.sh --tmpdelete'" workspace $ws1
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 6 'podboat'" workspace $ws1
 bindsym $sup+o exec "libreoffice" workspace $ws5
-bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 5 $FILE" workspace $ws1
+bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 4 $FILE" workspace $ws1
 bindsym $sup+s exec "scribus" workspace $ws5
 bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 9 'bpytop'" workspace $ws1
+bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 8 'htop'" workspace $ws1
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws3
@@ -405,7 +404,7 @@ bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
 bindsym $sup+bracketleft exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
 bindsym $sup+bracketright exec --no-startup-id "$TERMINAL -T 'yay' -e terminal_wrapper.sh fzf_yay.sh"
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
-bindsym $sup+apostrophe exec --no-startup-id "conky.sh"
+bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
