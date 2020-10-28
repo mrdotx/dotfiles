@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.1
-Type=Application
-Name=service
-Comment=services de-/activate
-Icon=system-config-services
-Exec=dmenu_service.sh
-Actions=
-Categories=Utility;
