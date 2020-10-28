@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-27T22:00:57+0100
+# date:       2020-10-28T14:42:14+0100
 
 # general config
 ################
@@ -153,6 +153,18 @@ bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
 # container
 bindsym $sup+space mode "container"; exec --no-startup-id notify-send "i3 container mode started"
 mode "container" {
+bindsym slash exec --no-startup-id "notify-send 'i3 container mode keybindings' \
+'←,→,↑,↓ - resize container\n\
+-,=,+   - resize gaps\n\
+f       - change focus\n\
+t       - toggle tiling\n\
+s       - toggle sticky\n\
+m       - move to scratchpad\n\
+c       - cycle scratchpad\n\
+h       - tile horizontal\n\
+v       - tile vertical\n\
+q       - quit'"
+
     # resize container
     bindsym Left resize shrink width 20 px or 5 ppt
     bindsym Right resize grow width 20 px or 5 ppt
@@ -165,24 +177,24 @@ mode "container" {
     bindsym shift+equal gaps inner current set $gapin
 
     # change focus between tiling/floating windows
-    bindsym f focus mode_toggle
+    bindsym f focus mode_toggle; exec --no-startup-id "notify-send 'i3 container mode' 'change focus'"
 
     # toggle tiling/floating
-    bindsym t floating toggle
+    bindsym t floating toggle; exec --no-startup-id "notify-send 'i3 container mode' 'toggle tiling'"
 
     # toggle sticky
-    bindsym s sticky toggle
+    bindsym s sticky toggle; exec --no-startup-id "notify-send 'i3 container mode' 'toggle sticky'"
 
     # move the currently focused window to the scratchpad
-    bindsym m move scratchpad
+    bindsym m move scratchpad; exec --no-startup-id "notify-send 'i3 container mode' 'move to scratchpad'"
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym c scratchpad show
+    bindsym c scratchpad show; exec --no-startup-id "notify-send 'i3 container mode' 'cycle scratchpad'"
 
     # split orientation
-    bindsym h split horizontal; exec --no-startup-id "notify-send 'i3' 'tile container horizontal'"
-    bindsym v split vertical; exec --no-startup-id "notify-send 'i3' 'tile container vertical'"
+    bindsym h split horizontal; exec --no-startup-id "notify-send 'i3 container mode' 'tile horizontal'"
+    bindsym v split vertical; exec --no-startup-id "notify-send 'i3 container mode' 'tile vertical'"
 
     # back to default mode
     bindsym q mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
@@ -264,20 +276,77 @@ bindsym $sup+Shift+r restart
 bindsym Ctrl+$alt+Delete exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 
-# xautolock disable/enable
-bindsym $sup+Shift+a exec --no-startup-id "if [ \\"$(systemctl --user is-active xautolock.service)\\" = \\"active\\" ]; then systemctl --user disable xautolock.service --now && notify-send 'xautolock.service' 'stopped and disabled'; else systemctl --user enable xautolock.service --now && notify-send 'xautolock.service' 'enabled and started'; fi"
+# keybindings services
+######################
 
-# xbanish disable/enable
-bindsym $sup+Shift+b exec --no-startup-id "if [ \\"$(systemctl --user is-active xbanish.service)\\" = \\"active\\" ]; then systemctl --user disable xbanish.service --now && notify-send 'xbanish.service' 'stopped and disabled'; else systemctl --user enable xbanish.service --now && notify-send 'xbanish.service' 'enabled and started'; fi"
+# services
+bindsym $alt+space mode "services"; exec --no-startup-id notify-send "i3 services mode started"
+mode "services" {
+bindsym slash exec --no-startup-id "notify-send 'i3 services mode keybindings' \
+'a - autolock enable/disable\n\
+b - bluetooth enable/disable\n\
+c - compositor enable/disable\n\
+d - dunst restart\n\
+f - firewall enable/disable\n\
+g - gestures enable/disable\n\
+l - authentication enable/disable\n\
+m - mousepointer enable/disable\n\
+n - resolver enable/disable\n\
+p - printer enable/disable\n\
+r - rss enable/disable\n\
+t - tiling enable/disable\n\
+v - vpn enable/disable\n\
+y - timesync enable/disable\n\
+q - quit'"
 
-# dunst restart
-bindsym $sup+Shift+d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
+    # autolock disable/enable
+    bindsym a exec --no-startup-id polybar-msg hook module/autolock 2
 
-# picom disable/enable
-bindsym $sup+Shift+p exec --no-startup-id "if [ \\"$(systemctl --user is-active picom.service)\\" = \\"active\\" ]; then systemctl --user disable picom.service --now && notify-send 'picom.service' 'stopped and disabled'; else systemctl --user enable picom.service --now && notify-send 'picom.service' 'enabled and started'; fi"
+    # bluetooth disable/enable
+    bindsym b exec --no-startup-id polybar-msg hook module/bluetooth 2
 
-# autotiling disable/enable
-bindsym $sup+Shift+t exec --no-startup-id "if [ \\"$(systemctl --user is-active i3_tiling.service)\\" = \\"active\\" ]; then systemctl --user disable i3_tiling.service --now && notify-send 'i3_tiling.service' 'stopped and disabled'; else systemctl --user enable i3_tiling.service --now && notify-send 'i3_tiling.service' 'enabled and started'; fi"
+    # compositor disable/enable
+    bindsym c exec --no-startup-id polybar-msg hook module/compositor 2
+
+    # dunst restart
+    bindsym d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
+
+    # firewall disable/enable
+    bindsym f exec --no-startup-id polybar-msg hook module/firewall 2
+
+    # gestures disable/enable
+    bindsym g exec --no-startup-id polybar-msg hook module/gestures 2
+
+    # authenthication disable/enable
+    bindsym l exec --no-startup-id polybar-msg hook module/authentication 2
+
+    # mousepointer disable/enable
+    bindsym m exec --no-startup-id polybar-msg hook module/mousepointer 2
+
+    # resolver disable/enable
+    bindsym n exec --no-startup-id polybar-msg hook module/resolver 2
+
+    # printer disable/enable
+    bindsym p exec --no-startup-id polybar-msg hook module/printer 2
+
+    # rss disable/enable
+    bindsym r exec --no-startup-id polybar-msg hook module/rss 2
+
+    # tiling disable/enable
+    bindsym t exec --no-startup-id polybar-msg hook module/tiling 2
+
+    # vpn disable/enable
+    bindsym v exec --no-startup-id polybar-msg hook module/vpn 2
+
+    # timesync disable/enable
+    bindsym y exec --no-startup-id polybar-msg hook module/timesync 2
+
+    # back to default mode
+    bindsym q mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
+    bindsym Return mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
+    bindsym Escape mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
+    bindsym $alt+space mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
+}
 
 # keybindings xf86 keys
 #######################
@@ -305,8 +374,8 @@ bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 0 'shell'" workspa
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 8 'cmus' 'cmus && polybar-msg hook module/cmus 1'" workspace $ws1
-bindsym $sup+Shift+c exec --no-startup-id "polybar_cmus.sh --notify-send"
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 8 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws1
+bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify-send"
 bindsym $sup+d exec "darktable" workspace $ws4
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace $ws4
