@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-22T15:45:21+0200
+# date:       2020-10-29T20:57:34+0100
 
 # general
 auto-reload no
@@ -35,8 +35,9 @@ macro , open-in-browser
 macro e set browser "printf '%s\n' '%u' >> ~/.local/share/newsboat/queue" ; open-in-browser ; set browser "link_handler.sh %u"
 macro f set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh %u"
 macro o set browser "link_handler.sh --readable %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro r set browser "$TERMINAL -e link_handler.sh --readable %u &"; open-in-browser ; set browser "link_handler.sh %u"
 macro s set browser "surf.sh %u"; open-in-browser ; set browser "link_handler.sh %u"
-macro t set browser "w3m.sh --tabbed %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro w set browser "$TERMINAL -e w3m.sh %u &"; open-in-browser ; set browser "link_handler.sh %u"
 
 # colors                            fg          bg      style
 color background                    white       default
