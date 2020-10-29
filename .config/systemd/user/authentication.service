@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/systemd/user/authentication.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-06-04T16:50:13+0200
+# date:       2020-10-29T14:55:00+0100
 
 [Unit]
 Description=polkit gnome authentication agent
@@ -11,4 +11,4 @@ Type=simple
 ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 [Install]
-WantedBy=default.target
+WantedBy=i3.target
