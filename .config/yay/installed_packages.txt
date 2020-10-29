@@ -127,6 +127,8 @@ linux419-virtualbox-host-modules
 linux54
 linux54-virtualbox-host-modules
 linux59
+linux59-rt
+linux59-rt-virtualbox-host-modules
 linux59-virtualbox-host-modules
 logrotate
 lsb-release
