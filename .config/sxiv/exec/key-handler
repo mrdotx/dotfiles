@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-31T10:36:32+0200
+# date:       2020-10-30T23:25:53+0100
 
 # rotate function
 rotate() {
@@ -54,7 +54,10 @@ trash() {
             case "$(file -b -i "$file")" in
                 *)
                     trash-put "$file" \
-                        && notify-send "sxiv" "$file moved to trash" --icon=messagebox_warning
+                        && notify-send \
+                            "sxiv" \
+                            "$file moved to trash" \
+                            --icon=messagebox_warning
                     ;;
         esac
     done
