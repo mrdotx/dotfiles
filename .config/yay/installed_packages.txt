@@ -122,13 +122,9 @@ licenses
 linux-ck-skylake
 linux-ck-skylake-headers
 linux-firmware
-linux419
-linux419-virtualbox-host-modules
 linux54
 linux54-virtualbox-host-modules
 linux59
-linux59-rt
-linux59-rt-virtualbox-host-modules
 linux59-virtualbox-host-modules
 logrotate
 lsb-release
