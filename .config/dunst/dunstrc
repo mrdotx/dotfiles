@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-20T08:59:19+0200
+# date:       2020-10-30T18:11:22+0100
 
 [global]
 
@@ -292,15 +292,16 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#2b2b2b"
-    foreground = "#666666"
-    timeout = 10
+    foreground = "#ffffff"
+    frame_color = "#666666"
+    timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
     background = "#000000"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
