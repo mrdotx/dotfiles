@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-28T21:05:27+0100
+# date:       2020-10-31T19:15:10+0100
 
 # general config
 ################
@@ -156,19 +156,8 @@ bindsym $sup+apostrophe floating toggle
 # keybindings container
 #######################
 
-# container
-bindsym $sup+space mode "container"; exec --no-startup-id notify-send "i3 container mode started"
+bindsym $sup+space mode "container"; exec --no-startup-id "i3_tooltip_container.sh"
 mode "container" {
-bindsym slash exec --no-startup-id "notify-send 'i3 container mode keybindings' \
-'←,→,↑,↓ - resize container\n\
--,=,+   - resize gaps\n\
-s       - toggle sticky\n\
-m       - move to scratchpad\n\
-c       - cycle scratchpad\n\
-h       - tile horizontal\n\
-v       - tile vertical\n\
-q       - quit'"
-
     # resize container
     bindsym Left resize shrink width 20 px or 5 ppt
     bindsym Right resize grow width 20 px or 5 ppt
@@ -177,8 +166,8 @@ q       - quit'"
 
     # resize gaps
     bindsym minus gaps inner current minus $gapin
-    bindsym equal gaps inner current plus $gapin
-    bindsym shift+equal gaps inner current set $gapin
+    bindsym shift+equal gaps inner current plus $gapin
+    bindsym equal gaps inner current set $gapin
 
     # toggle sticky
     bindsym s sticky toggle; exec --no-startup-id "notify-send 'i3 container mode' 'toggle sticky'"
@@ -195,10 +184,10 @@ q       - quit'"
     bindsym v split vertical; exec --no-startup-id "notify-send 'i3 container mode' 'tile vertical'"
 
     # back to default mode
-    bindsym q mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
-    bindsym Return mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
-    bindsym Escape mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
-    bindsym $sup+space mode "default"; exec --no-startup-id notify-send "i3 container mode stopped"
+    bindsym q mode "default"; exec --no-startup-id "i3_tooltip_container.sh --kill"
+    bindsym Return mode "default"; exec --no-startup-id "i3_tooltip_container.sh --kill"
+    bindsym Escape mode "default"; exec --no-startup-id "i3_tooltip_container.sh --kill"
+    bindsym $sup+space mode "default"; exec --no-startup-id "i3_tooltip_container.sh --kill"
 }
 
 # application windows (xprop)
@@ -277,26 +266,8 @@ bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 # keybindings services
 ######################
 
-# services
-bindsym $alt+space mode "services"; exec --no-startup-id notify-send "i3 services mode started"
+bindsym $alt+space mode "services"; exec --no-startup-id "i3_tooltip_services.sh"
 mode "services" {
-bindsym slash exec --no-startup-id "notify-send 'i3 services mode keybindings' \
-'a - autolock enable/disable\n\
-b - bluetooth enable/disable\n\
-c - compositor enable/disable\n\
-d - dunst restart\n\
-f - firewall enable/disable\n\
-g - gestures enable/disable\n\
-l - authentication enable/disable\n\
-m - mousepointer enable/disable\n\
-n - resolver enable/disable\n\
-p - printer enable/disable\n\
-r - rss enable/disable\n\
-t - tiling enable/disable\n\
-v - vpn enable/disable\n\
-y - timesync enable/disable\n\
-q - quit'"
-
     # autolock disable/enable
     bindsym a exec --no-startup-id polybar-msg hook module/autolock 2
 
@@ -340,10 +311,10 @@ q - quit'"
     bindsym y exec --no-startup-id polybar-msg hook module/timesync 2
 
     # back to default mode
-    bindsym q mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
-    bindsym Return mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
-    bindsym Escape mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
-    bindsym $alt+space mode "default"; exec --no-startup-id notify-send "i3 services mode stopped"
+    bindsym q mode "default"; exec --no-startup-id "i3_tooltip_services.sh --kill"
+    bindsym Return mode "default"; exec --no-startup-id "i3_tooltip_services.sh --kill"
+    bindsym Escape mode "default"; exec --no-startup-id "i3_tooltip_services.sh --kill"
+    bindsym $alt+space mode "default"; exec --no-startup-id "i3_tooltip_services.sh --kill"
 }
 
 # keybindings xf86 keys
