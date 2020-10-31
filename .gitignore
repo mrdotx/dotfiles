@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.gitignore
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-20T13:52:01+0200
+# date:       2020-11-01T00:17:21+0100
 
 # special folders/files
 .config/cmus/playlists/
@@ -69,6 +69,7 @@
 .config/Trolltech.conf
 .config/user-dirs.dirs
 .config/user-dirs.locale
+.config/pam-gnupg
 
 # .local folders
 .local/share/cloud/
@@ -123,4 +124,3 @@ Videos
 Vorlagen
 Öffentlich
 .jameica.properties
-.pam-gnupg
