@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-which-key.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-06-08T12:34:40+0200
+" date:       2020-10-31T23:08:53+0100
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -54,7 +54,8 @@ let g:comma_dict = {
         \ 's': ['<Plug>(GitGutterStageHunk)'    ,'stage'],
         \ 'u': ['<Plug>(GitGutterUndoHunk)'     ,'undo'],
         \ },
-    \ 'l': [':set list! list?'                  ,'show control characters'],
+    \ 'i': [':IndentLinesToggle'                ,'toggle indent characters'],
+    \ 'l': [':set list! list?'                  ,'toggle control characters'],
     \ 'r': [':%s///gc<left><left><left>'        ,'replace'],
     \ 'S': [':SyntasticToggleMode'              ,'syntastic'],
     \ 's': [':vs term://shellcheck -s sh %'     ,'shell check posix'],

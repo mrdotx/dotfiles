@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/plugins/vim-plug.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-10-27T09:07:02+0100
+" date:       2020-10-31T22:58:51+0100
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -16,6 +16,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/goyo.vim'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'liuchengxu/vim-which-key'
+    Plug 'Yggdroot/indentLine'
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
     Plug 'vim-syntastic/syntastic'
@@ -28,6 +29,7 @@ source ~/.config/nvim/plugins/vim-airline.vim
 source ~/.config/nvim/plugins/goyo.vim
 luafile ~/.config/nvim/plugins/nvim-colorizer.lua
 source ~/.config/nvim/plugins/vim-which-key.vim
+source ~/.config/nvim/plugins/indentLine.vim
 source ~/.config/nvim/plugins/vim-commentary.vim
 source ~/.config/nvim/plugins/vim-gitgutter.vim
 source ~/.config/nvim/plugins/syntastic.vim

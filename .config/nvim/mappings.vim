@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/mappings.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-10-24T20:04:31+0200
+" date:       2020-10-31T23:24:11+0100
 
 " switch/exchange windows
 nnoremap                <tab>           <c-w>w
@@ -25,6 +25,7 @@ nnoremap    <silent>    <leader>g       :Goyo<cr>
 
 " show hidden characters
 nnoremap                <leader>l       :set list! list?<cr>
+nnoremap    <silent>    <leader>i       :IndentLinesToggle<cr>
 
 " shellcheck
 nnoremap    <silent>    <leader>s       :vs term://shellcheck -s sh %<cr>
