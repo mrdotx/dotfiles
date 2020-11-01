@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-31T23:40:59+0100
+# date:       2020-11-01T16:35:32+0100
 
 [global]
 
@@ -42,7 +42,7 @@
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
-    shrink = no
+    shrink = yes
 
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
@@ -140,12 +140,12 @@
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
-    vertical_alignment = center
+    vertical_alignment = top
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.
-    show_age_threshold = 60
+    show_age_threshold = -1
 
     # Split notifications into multiple lines if they don't fit into
     # geometry.
@@ -170,7 +170,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = left
+    icon_position = right
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
@@ -182,7 +182,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path = /usr/share/icons/Arc-ICONS/status/16@2x/:/usr/share/icons/Arc-ICONS/devices/16@2x/
+    icon_path = /usr/share/icons/Arc-ICONS/status/16/:/usr/share/icons/Arc-ICONS/devices/16/
 
     ### History ###
 
