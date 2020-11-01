@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.w3m/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-06T09:36:37+0200
+# date:       2020-11-01T15:09:57+0100
 
 tabstop 8
 indent_incr 4
@@ -31,7 +31,7 @@ display_image 1
 pseudo_inlines 1
 auto_image 1
 max_load_image 4
-ext_image_viewer 1
+ext_image_viewer 0
 image_scale 100
 imgdisplay w3mimgdisplay
 image_map_list 1
