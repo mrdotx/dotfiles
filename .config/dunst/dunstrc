@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-01T16:54:33+0100
+# date:       2020-11-01T17:03:15+0100
 
 [global]
 
@@ -21,7 +21,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = none
+    follow = keyboard
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
