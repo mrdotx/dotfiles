@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-11-02T10:11:26+0100
+" date:       2020-11-02T10:20:44+0100
 
 " leader keys
 let mapleader=","                   " leader key for global plugins
@@ -61,4 +61,4 @@ autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/netrw.vim
 source ~/.config/nvim/coding.vim
-source ~/.config/nvim/mappings.vim
+source ~/.config/nvim/keybindings.vim
