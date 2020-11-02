@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/netrw.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-10-20T20:01:19+0200
+" date:       2020-11-02T10:17:45+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -44,9 +44,10 @@ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype
 " change directory to the current buffer when opening files.
 set autochdir
 
-" automatic start at vim enter
+" autostart netrw
 " autocmd VimEnter * :call NetrwToggle()
 
+" keybindings
 function! NetrwMappings()
     noremap <buffer> <c-l> <c-w>l
     noremap <silent> <c-f> :call NetrwToggle()<cr>

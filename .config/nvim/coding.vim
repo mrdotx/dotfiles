@@ -1,7 +1,7 @@
-" path:       /home/klassiker/.config/nvim/dev.vim
+" path:       /home/klassiker/.config/nvim/coding.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-05-29T11:00:51+0200
+" date:       2020-11-02T10:15:03+0100
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
