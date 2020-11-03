@@ -1,6 +1,6 @@
 {
 	"aururl": "https://aur.archlinux.org",
-	"buildDir": "$XDG_CACHE_HOME/yay",
+	"buildDir": "$HOME/.cache/yay",
 	"absdir": "$HOME/.cache/yay/abs",
 	"editor": "",
 	"editorflags": "",
@@ -10,7 +10,6 @@
 	"pacmanconf": "/etc/pacman.conf",
 	"redownload": "no",
 	"rebuild": "no",
-	"batchinstall": false,
 	"answerclean": "",
 	"answerdiff": "",
 	"answeredit": "",
@@ -23,8 +22,8 @@
 	"searchby": "name-desc",
 	"gitflags": "",
 	"removemake": "ask",
-	"sudobin": "doas",
-	"sudoflags": "--",
+	"sudobin": "sudo",
+	"sudoflags": "",
 	"requestsplitn": 150,
 	"sortmode": 0,
 	"completionrefreshtime": 7,
@@ -39,5 +38,6 @@
 	"diffmenu": true,
 	"editmenu": true,
 	"combinedupgrade": false,
-	"useask": false
+	"useask": false,
+	"batchinstall": false
 }
