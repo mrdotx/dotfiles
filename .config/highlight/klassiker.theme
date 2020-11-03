@@ -1,0 +1,30 @@
+-- path:       /home/klassiker/.config/highlight/klassiker.theme
+-- author:     klassiker [mrdotx]
+-- github:     https://github.com/mrdotx/dotfiles
+-- date:       2020-11-03T16:29:33+0100
+
+Description="klassiker"
+
+Categories = {"dark"}
+
+Default       = { Colour="#ffffff" }
+Canvas        = { Colour="#000000" }
+Number        = { Colour="#ae81ff" }
+Escape        = { Colour="#009698" }
+String        = { Colour="#b0b200" }
+StringPreProc = { Colour="#00b200" }
+BlockComment  = { Colour="#4185d7" }
+PreProcessor  = { Colour="#00b200" }
+LineNum       = { Colour="#8f908a" }
+Operator      = { Colour="#f92782" }
+LineComment   = { Colour="#4185d7" }
+Interpolation = { Colour="#00b200" }
+
+Keywords = {
+  { Colour= "#f92782" },
+  { Colour= "#00b200" },
+  { Colour= "#f92782" },
+  { Colour= "#00b200" },
+}
+
+-- vim:ft=lua
