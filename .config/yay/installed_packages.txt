@@ -80,6 +80,7 @@ gtk3
 gufw
 gzip
 hibiscus
+highlight
 htop
 hunspell-de
 hunspell-en_US
