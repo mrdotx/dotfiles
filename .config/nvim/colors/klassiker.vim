@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/colors/klassiker.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-06-06T11:29:34+0200
+" date:       2020-11-03T13:47:04+0100
 
 set background=dark
 hi clear
@@ -117,7 +117,7 @@ hi PreCondit guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NO
 hi Special guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 hi SpecialChar guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Delimiter guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-hi Comment guifg=#3476A4 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
+hi Comment guifg=#4185d7 guibg=NONE gui=italic ctermfg=67 ctermbg=NONE cterm=italic
 hi SpecialComment guifg=#009698 guibg=NONE gui=NONE ctermfg=81 ctermbg=NONE cterm=NONE
 hi Tag guifg=#F92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Underlined guifg=#00B200 guibg=NONE gui=NONE ctermfg=112 ctermbg=NONE cterm=NONE
