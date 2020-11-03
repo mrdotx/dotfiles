@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-10-14T10:10:39+0200
+date:       2020-11-03T14:39:54+0100
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -15,7 +15,7 @@ from ranger.api.commands import Command
 FZF_COMMAND = "| fzf -e -i --preview 'highlight \
                 --style=pablo \
                 --max-size=262143 \
-                --replace-tabs=8 \
+                --replace-tabs=4 \
                 --out-format=xterm256 \
                 --force {1}'"
 
