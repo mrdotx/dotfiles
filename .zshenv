@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-05T12:48:17+0100
+# date:       2020-11-05T13:37:34+0100
 
 # repository paths
 typeset -U PATH path
@@ -70,7 +70,7 @@ export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
 export HIGHLIGHT_OPTIONS="\
-    --max-size=262144 \
+    --max-size=2M \
     --replace-tabs=4 \
     --out-format=xterm256 \
     --style=$HOME/.config/highlight/klassiker.theme \
