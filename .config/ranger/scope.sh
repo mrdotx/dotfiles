@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-05T11:43:58+0100
+# date:       2020-11-05T12:36:31+0100
 
 # exit | function   | action of ranger
 
@@ -158,15 +158,9 @@ handle_mime() {
             ;;
         text/* | */xml)
             # syntax highlight
-            max_byte=262143 # 256KiB
-            [ "$( stat --printf='%s' "$file_path" )" -gt "$max_byte" ] \
+            [ "$(stat --printf='%s' "$file_path")" -gt 262144 ] \
                 && exit 2
-            highlight \
-                --style="pablo" \
-                --max-size="$max_byte" \
-                --replace-tabs="4" \
-                --out-format="xterm256" \
-                --force "$file_path" \
+            highlight "$file_path" \
                     && exit 5
             exit 2
             ;;

@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-11-03T14:39:54+0100
+date:       2020-11-05T12:42:21+0100
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -10,14 +10,6 @@ import os
 import sys
 from subprocess import PIPE
 from ranger.api.commands import Command
-
-# fzf command with highlight
-FZF_COMMAND = "| fzf -e -i --preview 'highlight \
-                --style=pablo \
-                --max-size=262143 \
-                --replace-tabs=4 \
-                --out-format=xterm256 \
-                --force {1}'"
 
 # fuzzy find files
 class FzfFind(Command):
@@ -32,7 +24,8 @@ class FzfFind(Command):
                         -o -fstype 'proc' \\) \
                     -prune -o -print 2> /dev/null \
                 | sed 1d \
-                | cut -b3-" + str(FZF_COMMAND)
+                | cut -b3- \
+                | fzf -e -i --preview 'highlight {1}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -52,7 +45,8 @@ class FzfLocate(Command):
     def execute(self):
         command="fzf_path=\"$(pwd)\"; \
                 locate $fzf_path \
-                | sed \"1d;s#$fzf_path/##g\"" + str(FZF_COMMAND)
+                | sed \"1d;s#$fzf_path/##g\" \
+                | fzf -e -i --preview 'highlight {1}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -72,7 +66,8 @@ class FzfGrep(Command):
     def execute(self):
         command="grep --line-buffered --color=never -ir -- " + str(self.rest(1)) + " \
                 | cut -d ':' -f1 \
-                | uniq" + str(FZF_COMMAND)
+                | uniq \
+                | fzf -e -i --preview 'highlight {1}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:

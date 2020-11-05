@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-03T16:06:24+0100
+# date:       2020-11-05T12:48:17+0100
 
 # repository paths
 typeset -U PATH path
@@ -69,7 +69,12 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export MOZ_USE_XINPUT2=1
 export NO_AT_BRIDGE=1
 export LESSHISTFILE=-
-export HIGHLIGHT_OPTIONS="--style=$HOME/.config/highlight/klassiker.theme"
+export HIGHLIGHT_OPTIONS="\
+    --max-size=262144 \
+    --replace-tabs=4 \
+    --out-format=xterm256 \
+    --style=$HOME/.config/highlight/klassiker.theme \
+    --force=conf"
 export WWW_HOME="duckduckgo.com"
 
 # standard apps
