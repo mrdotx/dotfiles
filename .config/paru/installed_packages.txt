@@ -168,6 +168,7 @@ pacman
 pam-gnupg
 pamac-gtk
 pandoc-bin
+paru-bin
 patch
 patchutils
 pciutils
@@ -280,7 +281,6 @@ xorg-xprop
 xorg-xwininfo
 xsel
 xwallpaper
-yay
 youtube-dl
 zathura
 zathura-cb
