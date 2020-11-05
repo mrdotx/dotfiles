@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-05T12:36:31+0100
+# date:       2020-11-05T14:31:05+0100
 
 # exit | function   | action of ranger
 
@@ -75,7 +75,7 @@ handle_image() {
 handle_extension() {
     case "$file_extension" in
         a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
-        rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
+        rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst)
             bsdtar --list --file "$file_path" \
                 && exit 5
             exit 1
@@ -161,7 +161,7 @@ handle_mime() {
             [ "$(stat --printf='%s' "$file_path")" -gt 262144 ] \
                 && exit 2
             highlight "$file_path" \
-                    && exit 5
+                && exit 5
             exit 2
             ;;
         image/vnd.djvu)
