@@ -21,6 +21,7 @@ found in my other repositories.
 | newsboat          | rss/atom feedreader                                |
 | npm               | javascript package manager                         |
 | nvim              | text editor ,ide                                   |
+| paru              | aur helper                                         |
 | picom             | compositor                                         |
 | polybar           | status bar                                         |
 | qutebrowser       | web browser                                        |
@@ -31,7 +32,6 @@ found in my other repositories.
 | tmux              | terminal multiplexer                               |
 | w3m               | text oriented browser                              |
 | xorg              | x window system related, xressources, xmodmap      |
-| yay               | aur helper                                         |
 | youtube-dl        | youtube downloader                                 |
 | zathura           | document viewer                                    |
 | zsh               | shell                                              |

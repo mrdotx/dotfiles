@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=aur
+Comment=search and install/remove packages from aur
+Icon=software-center
+Exec=$TERMINAL -T "aur" -e fzf_aur.sh
+Actions=
+Categories=Utility;

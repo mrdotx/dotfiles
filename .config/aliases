@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-25T15:54:46+0100
+# date:       2020-11-05T18:28:49+0100
 
 # color
 alias \
@@ -40,7 +40,7 @@ alias \
     bt='bpytop' \
     ft='fzf_trash.sh' \
     fm='fzf_man.sh' \
-    fy='fzf_yay.sh'
+    fa='fzf_aur.sh'
 
 # services
 alias \
@@ -51,10 +51,10 @@ alias \
 # maintenance
 alias \
     ch='systemctl --failed && journalctl -p 3 -xb' \
-    up='yay -Syu --devel --needed' \
+    up='paru -Syu --devel --needed' \
     mu='doas pacman-mirrors -c Germany,Denmark,Poland,Czech,Austria,Switzerland,France,Belgium,Netherlands -t 5 && doas pacman -Syyu' \
     cu='ch && up' \
-    cc='yay -Yc && doas paccache -rvk2 && doas paccache -ruk0' \
+    cc='doas paccache -rvk2 && doas paccache -ruk0 && paru -c' \
     sc='system_cleanup.sh' \
     cs='cc && sc' \
     bu='backup.sh' \
