@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-05T14:31:05+0100
+# date:       2020-11-06T22:57:38+0100
 
 # exit | function   | action of ranger
 
@@ -37,7 +37,7 @@ file_extension="$(printf "%s" "${file_path##*.}" \
 
 handle_image() {
     case "$1" in
-        image/svg+xml|image/svg)
+        image/svg+xml | image/svg)
             convert "$file_path" "$image_cache_path" \
                 && exit 6
             exit 1
@@ -74,11 +74,12 @@ handle_image() {
 
 handle_extension() {
     case "$file_extension" in
-        a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
-        rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip|zst)
-            bsdtar --list --file "$file_path" \
-                && exit 5
-            exit 1
+        a | ace | alz | arc | arj | bz | bz2 | cab | cpio | deb | gz | jar \
+            | lha | lz | lzh | lzma | lzo | rpm | rz | t7z | tar | tbz | tbz2 \
+            | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip | zst)
+                bsdtar --list --file "$file_path" \
+                    && exit 5
+                exit 1
             ;;
         rar)
             # avoid password prompt by providing empty password
@@ -103,7 +104,7 @@ handle_extension() {
                 && exit 5
             exit 1
             ;;
-        odt|ods|odp|sxw)
+        odt | ods | odp | sxw)
             odt2txt "$file_path" \
                 && exit 5
             exit 1
@@ -113,7 +114,7 @@ handle_extension() {
                 && exit 5
             exit 1
             ;;
-        otf|ttf|woff|ttc)
+        otf | ttf | woff | ttc)
             convert -size "960x960" xc:"#000000" \
                 -gravity center \
                 -pointsize 72 \
@@ -124,7 +125,7 @@ handle_extension() {
                     && exit 6
             exit 1
             ;;
-        htm|html|xhtml)
+        htm | html | xhtml)
             w3m -dump "$file_path" \
                 && exit 5
             ;;
@@ -132,7 +133,7 @@ handle_extension() {
             python -m json.tool "$file_path" \
                 && exit 5
             ;;
-        dff|dsf|wv|wvc)
+        dff | dsf | wv | wvc)
             exiftool "$file_path" \
                 && exit 5
             ;;
@@ -141,12 +142,12 @@ handle_extension() {
 
 handle_mime() {
     case "$1" in
-        text/rtf|*msword)
+        text/rtf | *msword)
             catdoc "$file_path" \
                 && exit 5
             exit 1
             ;;
-        *wordprocessingml.document|*/epub+zip|*/x-fictionbook+xml)
+        *wordprocessingml.document | */epub+zip | */x-fictionbook+xml)
             pandoc -s -t markdown "$file_path" \
                 && exit 5
             exit 1
@@ -156,7 +157,7 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
-        text/* | */xml)
+        text/* | */csv | */xml)
             # syntax highlight
             [ "$(stat --printf='%s' "$file_path")" -gt 262144 ] \
                 && exit 2
