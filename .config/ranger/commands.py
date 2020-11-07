@@ -2,7 +2,7 @@
 path:       /home/klassiker/.config/ranger/commands.py
 author:     klassiker [mrdotx]
 github:     https://github.com/mrdotx/dotfiles
-date:       2020-11-05T12:42:21+0100
+date:       2020-11-07T15:02:52+0100
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -64,7 +64,7 @@ class FzfGrep(Command):
     Search(grep) file content and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        command="grep --line-buffered --color=never -ir -- " + str(self.rest(1)) + " \
+        command="grep --color=never -irs -- " + str(self.rest(1)) + " \
                 | cut -d ':' -f1 \
                 | uniq \
                 | fzf -e -i --preview 'highlight {1}'"
