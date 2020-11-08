@@ -1,26 +1,29 @@
 # path:       /home/klassiker/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T11:04:14+0200
+# date:       2020-11-08T13:03:51+0100
 
 # aliases
-shopt -s expand_aliases # expand aliases in non interactive shell
+# expand aliases in non interactive shell
+shopt -s expand_aliases
 # shellcheck disable=SC1090
-[ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
+[ -f "$HOME/.config/aliases" ] \
+    && . "$HOME/.config/aliases"
 
 # if shell is not running interactive, break up
-[[ $- != *i* ]] && return
+[[ $- != *i* ]] \
+    && return
 
 # prompt
 use_color=true
-if ${use_color} ; then
-    if [[ ${EUID} == 0 ]] ; then
+if $use_color; then
+    if [ $EUID -eq 0 ]; then
         PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
     else
         PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\[\033[00m\] '
     fi
 else
-    if [[ ${EUID} == 0 ]] ; then
+    if [ $EUID -eq 0 ]; then
         # show root@ if there is no color
         PS1='\u@\h \W \$ '
     else
