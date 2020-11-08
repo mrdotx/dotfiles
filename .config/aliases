@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-07T20:03:15+0100
+# date:       2020-11-08T12:52:52+0100
 
 # color
 alias \
@@ -18,7 +18,6 @@ alias \
 
 # navigation
 alias \
-    /='cd /' \
     ..='cd ..' \
     ...='cd ../..' \
     ....='cd ../../..' \
