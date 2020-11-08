@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T10:09:01+0100
+# date:       2020-11-08T12:41:00+0100
 
 # aliases
 [ -f "$HOME/.config/aliases" ] \
@@ -30,33 +30,38 @@ precmd () {
     local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
     local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
 
-    __git_ps1 "${OPAR}%3~" "${CPAR}%B»%b " " %s"
+    __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
 
     if [ $ESTAT != 0 ]; then
-        local ESTAT="%{$fg[red]%}${ESTAT}%{$reset_color%}"
+        local ESTAT="%{$fg[red]%}$ESTAT%{$reset_color%}"
     else
-        local ESTAT="%{$fg[green]%}${ESTAT}%{$reset_color%}"
+        local ESTAT="%{$fg[green]%}$ESTAT%{$reset_color%}"
     fi
     if [ $_ZSH_CMD_EXEC_START ]; then
         local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")" \
             | sed 's/^00:00://;s/^00://;s/^0//' \
         )
-        RPROMPT="«${OPAR}${ESTAT} ${ETIME}${CPAR}"
+        RPROMPT="«$OPAR$ESTAT $ETIME$CPAR"
     else
-        RPROMPT="«${OPAR}${ESTAT}${CPAR}"
+        RPROMPT="«$OPAR$ESTAT$CPAR"
     fi
 }
 
 # history command configuration
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-setopt inc_append_history     # add commands to HISTFILE in order of execution
+# ignore duplicated commands history list
+setopt hist_ignore_dups
+# ignore commands that start with space
+setopt hist_ignore_space
+# show command with history expansion to user before running it
+setopt hist_verify
+# add commands to HISTFILE in order of execution
+setopt inc_append_history
 
 # completion
 autoload -Uz compinit
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*' # case insensitive
+# case insensitive
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # hidden files
