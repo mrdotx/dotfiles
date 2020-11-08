@@ -3,24 +3,24 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-19T19:08:59+0200
-
-user_resources=$HOME/.config/xorg/Xresources
-user_modmap=$HOME/.config/xorg/Xmodmap
-sys_resources=/etc/X11/xinit/.Xresources
-sys_modmap=/etc/X11/xinit/.Xmodmap
+# date:       2020-11-08T10:10:05+0100
 
 # merge in defaults and keymaps
-[ -f $sys_resources ] && xrdb -merge $sys_resources
-[ -f $sys_modmap ] && xmodmap $sys_modmap
-[ -f "$user_resources" ] && xrdb -merge "$user_resources"
-[ -f "$user_modmap" ] && xmodmap "$user_modmap"
+[ -f /etc/X11/xinit/.Xresources ] \
+    && xrdb -merge /etc/X11/xinit/.Xresources
+[ -f /etc/X11/xinit/.Xmodmap ] \
+    && xmodmap /etc/X11/xinit/.Xmodmap
+[ -f "$HOME/.config/xorg/Xresources" ] \
+    && xrdb -merge "$HOME/.config/xorg/Xresources"
+[ -f "$HOME/.config/xorg/Xmodmap" ] \
+    && xmodmap "$HOME/.config/xorg/Xmodmap"
 
 # start some programs
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
-    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
         # shellcheck disable=SC1090
-        [ -x "$f" ] && . "$f"
+        [ -x "$f" ] \
+            && . "$f"
     done
     unset f
 fi
@@ -43,14 +43,6 @@ xinput --set-prop 'Synaptics TM3242-001' 'libinput Natural Scrolling Enabled' 1
 # set default audio volume
 audio.sh -abs 36
 
-# start graphical environment
-if [ "$TERM" = linux ] ; then
-    # default session
-    session=${1:-i3}
-    case $session in
-        i3|i3wm) exec i3 ;;
-        kodi) exec kodi-standalone ;;
-        # if $session is not known, try to run string as command
-        *) exec "$1" ;;
-    esac
-fi
+# start window manager
+[ "$TERM" = linux ] \
+    && exec i3
