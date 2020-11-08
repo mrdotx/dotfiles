@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-06T22:57:38+0100
+# date:       2020-11-08T08:29:47+0100
 
 # exit | function   | action of ranger
 
@@ -157,7 +157,7 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
-        text/* | */csv | */xml)
+        text/* | */csv | */json | */xml)
             # syntax highlight
             [ "$(stat --printf='%s' "$file_path")" -gt 262144 ] \
                 && exit 2
