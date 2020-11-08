@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T08:29:47+0100
+# date:       2020-11-08T16:41:02+0100
 
 # exit | function   | action of ranger
 
@@ -164,6 +164,16 @@ handle_mime() {
             highlight "$file_path" \
                 && exit 5
             exit 2
+            ;;
+        application/*sqlite3)
+            sqlite3 -header -column "$file_path" \
+                "SELECT name, type
+                 FROM sqlite_master
+                 WHERE type IN ('table','view')
+                 AND name NOT LIKE 'sqlite_%'
+                 ORDER BY 1;" \
+                && exit 5
+            exit 1
             ;;
         image/vnd.djvu)
             exiftool "$file_path" \
