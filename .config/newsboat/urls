@@ -1,25 +1,25 @@
 # path:       /home/klassiker/.config/newsboat/urls
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-01T19:54:00+0100
+# date:       2020-11-07T21:16:36+0100
 
 # queries
 "query:┌─Unread:unread = \"yes\""
-"query:│ ├─Keywords:title =~ \"Corona|COVID|AfD|Brexit|Trump|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
-"query:│ │ ├─ Corona:title =~ \"Corona|COVID\""
-"query:│ │ ├─ Afd:title =~ \"AfD\""
-"query:│ │ ├─ Brexit:title =~ \"Brexit\""
-"query:│ │ ├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@realDonaldTrump\""
-"query:│ │ └─ DSGVO:title =~ \"DSGVO|Datenschutz\""
-"query:│ └─All:tags != \"\""
-"query:│   ├─ News:tags # \"News\""
-"query:│   ├─ Local:tags # \"Local\""
-"query:│   ├─ Technic:tags # \"Technic\""
-"query:│   │  ├─ reddit:tags # \"reddit\""
-"query:│   │  └─ suckless:tags # \"suckless\""
-"query:│   ├─ Youtube:tags # \"Youtube\""
-"query:│   ├─ Podcast:tags # \"Podcast\""
-"query:│   ├─ Twitter:tags # \"Twitter\""
-"query:│   └─ Business:tags # \"Business\""
+"query:├─All:tags != \"\""
+"query:│ ├─ News:tags # \"News\""
+"query:│ ├─ Local:tags # \"Local\""
+"query:│ ├─ Technic:tags # \"Technic\""
+"query:│ ├─ reddit:tags # \"reddit\""
+"query:│ ├─ suckless:tags # \"suckless\""
+"query:│ ├─ Youtube:tags # \"Youtube\""
+"query:│ ├─ Podcast:tags # \"Podcast\""
+"query:│ ├─ Twitter:tags # \"Twitter\""
+"query:│ └─ Business:tags # \"Business\""
+"query:├─Keywords:title =~ \"Corona|COVID|AfD|Brexit|Trump|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
+"query:│ ├─ Corona:title =~ \"Corona|COVID\""
+"query:│ ├─ Afd:title =~ \"AfD\""
+"query:│ ├─ Brexit:title =~ \"Brexit\""
+"query:│ ├─ Trump:title =~ \"Trump\" or feedtitle =~ \"@realDonaldTrump\""
+"query:│ └─ DSGVO:title =~ \"DSGVO|Datenschutz\""
 
 # vim:ft=config
