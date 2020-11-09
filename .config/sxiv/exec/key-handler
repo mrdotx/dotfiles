@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-30T23:25:53+0100
+# date:       2020-11-09T17:41:52+0100
 
 # rotate function
 rotate() {
@@ -79,11 +79,6 @@ case "$1" in
     "C-g")
         tr '\n' '\0' \
             | xargs -0 gimp &
-
-        ;;
-    "C-n")
-        tr '\n' '\0' \
-            | xargs -0 nomacs &
         ;;
     "C-comma")
         rotate 270
