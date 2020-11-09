@@ -1,15 +1,15 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T12:41:00+0100
+# date:       2020-11-08T23:48:20+0100
+
+# if shell is not running interactive, break up
+tty -s \
+    || return
 
 # aliases
 [ -f "$HOME/.config/aliases" ] \
     && . "$HOME/.config/aliases"
-
-# if shell is not running interactive, break up
-[[ $- != *i* ]] \
-    && return
 
 # prompt
 autoload -U colors && colors
