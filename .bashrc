@@ -1,7 +1,11 @@
 # path:       /home/klassiker/.bashrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T13:03:51+0100
+# date:       2020-11-08T23:48:39+0100
+
+# if shell is not running interactive, break up
+tty -s \
+    || return
 
 # aliases
 # expand aliases in non interactive shell
@@ -9,10 +13,6 @@ shopt -s expand_aliases
 # shellcheck disable=SC1090
 [ -f "$HOME/.config/aliases" ] \
     && . "$HOME/.config/aliases"
-
-# if shell is not running interactive, break up
-[[ $- != *i* ]] \
-    && return
 
 # prompt
 use_color=true
