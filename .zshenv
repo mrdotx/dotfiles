@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-09T09:50:28+0100
+# date:       2020-11-09T18:12:37+0100
 
 # repository paths
 typeset -U PATH path
@@ -80,8 +80,8 @@ export GPG_TTY=$(tty) \
 # standard apps
 export TERMINAL="st" \
     VISUAL="nvim" \
-    EDITOR="$VISUAL" \
-    SUDO_EDITOR="$VISUAL" \
+    EDITOR="nvim" \
+    SUDO_EDITOR="nvim" \
     FILE="ranger" \
     PAGER="less" \
     READER="zathura" \
