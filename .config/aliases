@@ -1,11 +1,12 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T12:52:52+0100
+# date:       2020-11-08T23:05:09+0100
 
 # color
 alias \
     ls='ls --color=auto' \
+    ip='ip -color=auto' \
     dir='dir --color=auto' \
     vdir='vdir --color=auto' \
     grep='grep --color=auto' \
