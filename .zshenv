@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-06T12:58:01+0100
+# date:       2020-11-09T09:50:28+0100
 
 # repository paths
 typeset -U PATH path
@@ -42,68 +42,61 @@ export LIBVA_DRIVER_NAME=i965
 # export MOZ_X11_EGL=1
 
 # xdg paths
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DATA_DIRS=/usr/local/share:/usr/share
-export XDG_CONFIG_DIRS=/etc/xdg
+export XDG_CONFIG_HOME="$HOME/.config" \
+    XDG_CACHE_HOME="$HOME/.cache" \
+    XDG_DATA_HOME="$HOME/.local/share" \
+    XDG_DATA_DIRS=/usr/local/share:/usr/share \
+    XDG_CONFIG_DIRS=/etc/xdg
 
 # config paths
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority"
-export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
-export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
-export FONTCONFIG_PATH=/etc/fonts
-export FONTCONFIG_FILE=fonts.conf
-export PYLINTHOME="$XDG_CACHE_HOME/pylint"
-export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
-export KODI_DATA="$XDG_DATA_HOME/kodi"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
+    XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority" \
+    RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
+    PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages \
+    NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
+    GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc" \
+    FONTCONFIG_PATH=/etc/fonts \
+    FONTCONFIG_FILE=fonts.conf \
+    PYLINTHOME="$XDG_CACHE_HOME/pylint" \
+    WEECHAT_HOME="$XDG_CONFIG_HOME/weechat" \
+    KODI_DATA="$XDG_DATA_HOME/kodi" \
 
 # app settings
-export GPG_TTY=$(tty)
-export RANGER_LOAD_DEFAULT_RC=false
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export QT_AUTO_SCREEN_SCALE_FACTOR=0
-export MOZ_USE_XINPUT2=1
-export NO_AT_BRIDGE=1
-export LESSHISTFILE=-
-export HIGHLIGHT_OPTIONS="\
-    --max-size=2M \
-    --replace-tabs=4 \
-    --out-format=xterm256 \
-    --style=$HOME/.config/highlight/klassiker.theme \
-    --force=sh"
-export WWW_HOME="duckduckgo.com"
+export GPG_TTY=$(tty) \
+    RANGER_LOAD_DEFAULT_RC=false \
+    QT_QPA_PLATFORMTHEME="qt5ct" \
+    QT_AUTO_SCREEN_SCALE_FACTOR=0 \
+    MOZ_USE_XINPUT2=1 \
+    NO_AT_BRIDGE=1 \
+    LESSHISTFILE=- \
+    HIGHLIGHT_OPTIONS="\
+        --max-size=2M \
+        --replace-tabs=4 \
+        --out-format=xterm256 \
+        --style=$HOME/.config/highlight/klassiker.theme \
+        --force=sh" \
+    WWW_HOME="duckduckgo.com"
 
 # standard apps
-export TERMINAL="st"
-export VISUAL="nvim"
-export EDITOR="$VISUAL"
-export SUDO_EDITOR="$VISUAL"
-export FILE="ranger"
-export PAGER="less"
-export READER="zathura"
-export BROWSER="w3m.sh"
+export TERMINAL="st" \
+    VISUAL="nvim" \
+    EDITOR="$VISUAL" \
+    SUDO_EDITOR="$VISUAL" \
+    FILE="ranger" \
+    PAGER="less" \
+    READER="zathura" \
+    BROWSER="w3m.sh"
 
 # history (same functionality as bash)
-export HISTFILE="$HOME/.local/share/cmd_history"
-export HISTSIZE=10000
-export SAVEHIST=5000
+export HISTFILE="$HOME/.local/share/cmd_history" \
+    HISTSIZE=10000 \
+    SAVEHIST=5000
 
 # colored man pages
-blink_start="$(printf '%b' '[1;31m')"
-bold_start="$(printf '%b' '[1;34m')"
-turn_off="$(printf '%b' '[0m')"
-standout_start="$(printf '%b' '[01;44;37m')"
-standout_stop="$(printf '%b' '[0m')"
-underline_start="$(printf '%b' '[1;4;36m')"
-underline_stop="$(printf '%b' '[0m')"
-export LESS_TERMCAP_mb=$blink_start
-export LESS_TERMCAP_md=$bold_start
-export LESS_TERMCAP_me=$turn_off
-export LESS_TERMCAP_so=$standout_start
-export LESS_TERMCAP_se=$standout_stop
-export LESS_TERMCAP_us=$underline_start
-export LESS_TERMCAP_ue=$underline_stop
+export LESS_TERMCAP_mb=$'\e[1;31m' \
+    LESS_TERMCAP_md=$'\e[1;34m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;37m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[1;4;36m' \
+    LESS_TERMCAP_ue=$'\e[0m'
