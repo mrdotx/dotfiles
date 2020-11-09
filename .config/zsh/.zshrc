@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T23:48:20+0100
+# date:       2020-11-10T00:01:20+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -47,15 +47,12 @@ precmd () {
     fi
 }
 
-# history command configuration
-# ignore duplicated commands history list
-setopt hist_ignore_dups
-# ignore commands that start with space
-setopt hist_ignore_space
-# show command with history expansion to user before running it
-setopt hist_verify
-# add commands to HISTFILE in order of execution
-setopt inc_append_history
+# vi mode
+bindkey -v
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd "^V" edit-command-line
 
 # completion
 autoload -Uz compinit
@@ -75,6 +72,16 @@ function _pip_completion {
                PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip
+
+# history command configuration
+# ignore duplicated commands history list
+setopt hist_ignore_dups
+# ignore commands that start with space
+setopt hist_ignore_space
+# show command with history expansion to user before running it
+setopt hist_verify
+# add commands to HISTFILE in order of execution
+setopt inc_append_history
 
 # fuzzy finder
 . /usr/share/fzf/completion.zsh
