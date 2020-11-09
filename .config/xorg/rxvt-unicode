@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-09T13:19:56+0100
+! date:       2020-11-09T13:47:33+0100
 
 URxvt*font:                     xft:DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true, \
                                 xft:Source-Code-Pro:pixelsize=14:antialias=true:autohint=true, \
@@ -16,7 +16,7 @@ URxvt*foreground:               WHITE1
 URxvt*scrollBar:                false
 URxvt*mouseWheelScrollPage:     false
 URxvt*cursorBlink:              false
-URxvt*saveLines:                5000
+URxvt*saveLines:                500
 
 /* perl extensions */
 URxvt.perl-ext-common:          default,clipboard,matcher
