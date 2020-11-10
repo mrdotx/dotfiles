@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-05T14:00:30+0100
+# date:       2020-11-10T15:16:56+0100
 
 # general
 #########
@@ -362,8 +362,8 @@ bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 6 'podboat'" workspace 
 bindsym $sup+o exec "libreoffice" workspace $ws5
 bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 4 $FILE" workspace $ws2
 bindsym $sup+s exec "scribus" workspace $ws5
-bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 9 'bpytop'" workspace $ws2
-bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 8 'htop'" workspace $ws2
+bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 8 'htop'" workspace $ws2
+bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 9 'bpytop'" workspace $ws2
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws3
