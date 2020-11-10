@@ -1,14 +1,14 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-09T13:47:33+0100
+! date:       2020-11-10T18:49:58+0100
 
 URxvt*font:                     xft:DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true, \
                                 xft:Source-Code-Pro:pixelsize=14:antialias=true:autohint=true, \
                                 xft:JoyPixels:pixelsize=14:antialias=true:autohint=true
 URxvt*boldFont:                 xft:DejaVuSansMono Nerd Font:bold:pixelsize=16:antialias=true:autohint=true, \
                                 xft:Source-Code-Pro:bold:pixelsize=14:antialias=true:autohint=true
-URxvt.letterSpace:              0.5
+URxvt.letterSpace:              0
 
 URxvt*depth:                    32
 URxvt*background:               [90]BLACK0
