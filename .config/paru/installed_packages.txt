@@ -198,7 +198,7 @@ ranger
 rclone
 rofi
 rsync
-rxvt-unicode-intensityfix
+rxvt-unicode-24-bit-glyphs
 s-nail
 sane
 scribus
