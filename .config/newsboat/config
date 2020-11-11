@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-02T17:27:45+0100
+# date:       2020-11-11T20:54:48+0100
 
 # general
 auto-reload no
@@ -60,5 +60,11 @@ highlight all "Trump"               magenta     default underline   bold
 highlight all "DSGVO|Datenschutz"   yellow      default underline   bold
 
 highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    default underline   bold
+
+# titles
+feedlist-title-format "%N %V | %u/%t | Feeds"
+articlelist-title-format "%N %V | %u/%t | Artikel im Feed: %T"
+searchresult-title-format "%N %V | %u/%t | Suchergebnisse"
+itemview-title-format "%N %V | %u/%t | Artikel: %T"
 
 # vim:ft=config
