@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-11T01:21:43+0100
+# date:       2020-11-11T14:01:03+0100
 
 # general
 #########
@@ -198,14 +198,14 @@ mode "container" {
 for_window [title="LibreOffice"] $move
 
 # floating applications
-for_window [title="floating" instance="^st$"] $float, $size, $move
+for_window [title="floating"] $float, $size, $move
 
-for_window [title="^alsamixer$" instance="^st$"] $float, $move
-for_window [title="^calculator$" instance="^st$"] $float, $size, $move
-for_window [title="^cdw$" instance="^st$"] $float, $size, $move
-for_window [title="^stopwatch$" instance="^st$"] $float, resize set 250 500, $move
-for_window [title="^aur$" instance="^st$"] $float, $size, $move
-for_window [title="^man$" instance="^st$"] $float, $size, $move
+for_window [title="^alsamixer$"] $float, $move
+for_window [title="^calculator$"] $float, $size, $move
+for_window [title="^cdw$"] $float, $size, $move
+for_window [title="^stopwatch$"] $float, resize set 250 500, $move
+for_window [title="^aur$"] $float, $size, $move
+for_window [title="^man$"] $float, $size, $move
 
 for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [class="^Polkit-gnome-authentication-agent-1$"] $float, $sticky, $border, $move
@@ -222,7 +222,7 @@ for_window [class="^Sxiv$"] $float, $size, $move
 for_window [class="^mpv$"] $float, $sticky
 
 # open applications on specific workspaces
-assign [title="^i3 tmux$" instance="^st$"] $ws2
+assign [title="^i3 tmux$"] $ws2
 assign [class="^firefoxdeveloperedition$"] $ws3
 assign [class="^Gimp$"] $ws4
 assign [class="^Inkscape$"] $ws4
