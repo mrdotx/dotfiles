@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-10T15:16:56+0100
+# date:       2020-11-11T01:04:05+0100
 
 # general
 #########
@@ -340,7 +340,7 @@ bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 ##########################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 0 'shell'" workspace $ws2
+bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
