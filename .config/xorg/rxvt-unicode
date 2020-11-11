@@ -1,35 +1,43 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-11T16:51:49+0100
+! date:       2020-11-11T18:50:22+0100
 
-URxvt.font:                     xft:DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true, \
-                                xft:Source-Code-Pro:pixelsize=14:antialias=true:autohint=true, \
-                                xft:JoyPixels:pixelsize=14:antialias=true:autohint=true
-URxvt.letterSpace:              0
-URxvt.lineSpace:                0
+URxvt.font:                 xft:DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true, \
+                            xft:Source-Code-Pro:pixelsize=14:antialias=true:autohint=true, \
+                            xft:JoyPixels:pixelsize=14:antialias=true:autohint=true
+URxvt.letterSpace:          0
+URxvt.lineSpace:            0
 
-URxvt.depth:                    32
-URxvt.background:               [90]BLACK0
-URxvt.foreground:               WHITE1
-URxvt.scrollBar:                false
-URxvt.mouseWheelScrollPage:     false
-URxvt.cursorBlink:              false
-URxvt.iso14770:                 false
-URxvt.saveLines:                500
+URxvt.depth:                32
+URxvt.background:           [90]BLACK0
+URxvt.foreground:           WHITE1
+URxvt.scrollBar:            false
+URxvt.mouseWheelScrollPage: false
+URxvt.cursorBlink:          false
+URxvt.iso14770:             false
+URxvt.saveLines:            500
 
 /* perl extensions */
-URxvt.perl-ext-common:          default,matcher
+URxvt.perl-ext-common:      default,resize-font,matcher,-tabbed
 
 /* copy and paste */
-URxvt.keysym.C-S-c:             eval:selection_to_clipboard
-URxvt.keysym.C-S-v:             eval:paste_clipboard
+URxvt.keysym.C-C:           eval:selection_to_clipboard
+URxvt.keysym.C-V:           eval:paste_clipboard
+URxvt.keysym.C-Y:           eval:paste_primary
 
 /* open url with matcher */
-URxvt.url-launcher:             link_handler.sh
-URxvt.keysym.A-o:               perl:matcher:list
-URxvt.matcher.button:           1
-URxvt.matcher.rend.0:           Uline Bold fg8
-URxvt.colorUL:                  BLUE1
+URxvt.url-launcher:         link_handler.sh
+URxvt.keysym.A-o:           perl:matcher:list
+URxvt.matcher.button:       1
+URxvt.matcher.rend.0:       Uline Bold fg8
+URxvt.colorUL:              BLUE1
+
+/* resize-font */
+URxvt.resize-font.step:     1
+URxvt.keysym.C-minus:       resize-font:smaller
+URxvt.keysym.C-plus:        resize-font:bigger
+URxvt.keysym.C-equal:       resize-font:reset
+URxvt.keysym.C-question:    resize-font:show
 
 ! vim:ft=xdefaults
