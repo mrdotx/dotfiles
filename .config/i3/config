@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-11T17:26:07+0100
+# date:       2020-11-12T16:43:35+0100
 
 # general
 #########
@@ -76,12 +76,12 @@ set $ws0 10
 workspace $ws1 output $mon1 $mon2
 workspace $ws2 output $mon2 $mon1
 workspace $ws3 output $mon2 $mon1
-workspace $ws4 output $mon1 $mon2
-workspace $ws5 output $mon2 $mon1
-workspace $ws6 output $mon1 $mon2
+workspace $ws4 output $mon2 $mon1
+workspace $ws5 output $mon1 $mon2
+workspace $ws6 output $mon2 $mon1
 workspace $ws7 output $mon1 $mon2
 workspace $ws8 output $mon1 $mon2
-workspace $ws9 output $mon2 $mon1
+workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
 
 # keybindings workspace
@@ -222,19 +222,19 @@ for_window [class="^Sxiv$"] $float, $size, $move
 for_window [class="^mpv$"] $float, $sticky
 
 # open applications on specific workspaces
-assign [title="^i3 tmux$"] $ws2
-assign [class="^firefoxdeveloperedition$"] $ws3
-assign [class="^Gimp$"] $ws4
-assign [class="^Inkscape$"] $ws4
-assign [class="^Darktable$"] $ws4
-assign [title="^LibreOffice$"] $ws5
-assign [class="libreoffice"] $ws5
-assign [class="^scribus$"] $ws5
-assign [class="^Thunderbird$"] $ws6
-assign [class="^Jameica"] $ws7
-assign [class="^VirtualBox"] $ws8
-assign [class="^Kodi$"] $ws9
-assign [class="^Minetest$"] $ws9
+assign [title="^i3 tmux$"] $ws3
+assign [class="^firefoxdeveloperedition$"] $ws4
+assign [class="^Gimp$"] $ws5
+assign [class="^Inkscape$"] $ws5
+assign [class="^Darktable$"] $ws5
+assign [title="^LibreOffice$"] $ws6
+assign [class="libreoffice"] $ws6
+assign [class="^scribus$"] $ws6
+assign [class="^Thunderbird$"] $ws7
+assign [class="^Jameica"] $ws8
+assign [class="^VirtualBox"] $ws9
+assign [class="^Kodi$"] $ws0
+assign [class="^Minetest$"] $ws0
 
 # keybindings system managment
 ##############################
@@ -340,33 +340,33 @@ bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 ##########################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "urxvtc.sh"
+bindsym $sup+Shift+Return exec --no-startup-id "st"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 5 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws2
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 5 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws3
 bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify-send"
-bindsym $sup+d exec "darktable" workspace $ws4
+bindsym $sup+d exec "darktable" workspace $ws5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
-bindsym $sup+g exec "gimp" workspace $ws4
-bindsym $sup+i exec "inkscape" workspace $ws4
-bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 8 'hermes' 'ssh hermes'" workspace $ws2
-bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 9 'prometheus' 'ssh prometheus'" workspace $ws2
-bindsym $sup+j exec "jameica" workspace $ws7
+bindsym $sup+g exec "gimp" workspace $ws5
+bindsym $sup+i exec "inkscape" workspace $ws5
+bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 8 'hermes' 'ssh hermes'" workspace $ws3
+bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 9 'prometheus' 'ssh prometheus'" workspace $ws3
+bindsym $sup+j exec "jameica" workspace $ws8
 bindsym $sup+k exec --no-startup-id "i3_keepassxc.sh"
-bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws9
-bindsym $sup+m exec "thunderbird" workspace $ws6
-bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws9
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 3 'newsboat' 'polybar_rss.sh --open && link_handler.sh --tmpdelete'" workspace $ws2
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 4 'podboat'" workspace $ws2
-bindsym $sup+o exec "libreoffice" workspace $ws5
-bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 2 $FILE" workspace $ws2
-bindsym $sup+s exec "scribus" workspace $ws5
-bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 6 'htop'" workspace $ws2
-bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 7 'bpytop'" workspace $ws2
+bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws10
+bindsym $sup+m exec "thunderbird" workspace $ws7
+bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws10
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 3 'newsboat' 'polybar_rss.sh --open && link_handler.sh --tmpdelete'" workspace $ws3
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 4 'podboat'" workspace $ws3
+bindsym $sup+o exec "libreoffice" workspace $ws6
+bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 2 $FILE" workspace $ws3
+bindsym $sup+s exec "scribus" workspace $ws6
+bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 6 'htop'" workspace $ws3
+bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 7 'bpytop'" workspace $ws3
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
-bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws3
+bindsym $sup+w exec --no-startup-id "firefox-developer-edition" workspace $ws4
 bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
