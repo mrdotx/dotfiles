@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-09T18:12:37+0100
+# date:       2020-11-12T13:38:11+0100
 
 # repository paths
 typeset -U PATH path
@@ -42,14 +42,16 @@ export LIBVA_DRIVER_NAME=i965
 # export MOZ_X11_EGL=1
 
 # xdg paths
-export XDG_CONFIG_HOME="$HOME/.config" \
+export \
+    XDG_CONFIG_HOME="$HOME/.config" \
     XDG_CACHE_HOME="$HOME/.cache" \
     XDG_DATA_HOME="$HOME/.local/share" \
     XDG_DATA_DIRS=/usr/local/share:/usr/share \
     XDG_CONFIG_DIRS=/etc/xdg
 
 # config paths
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
+export \
+    ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
     PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages \
@@ -62,7 +64,8 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     KODI_DATA="$XDG_DATA_HOME/kodi" \
 
 # app settings
-export GPG_TTY=$(tty) \
+export \
+    GPG_TTY=$(tty) \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
@@ -78,7 +81,8 @@ export GPG_TTY=$(tty) \
     WWW_HOME="duckduckgo.com"
 
 # standard apps
-export TERMINAL="st" \
+export \
+    TERMINAL="urxvtc.sh" \
     VISUAL="nvim" \
     EDITOR="nvim" \
     SUDO_EDITOR="nvim" \
@@ -88,12 +92,14 @@ export TERMINAL="st" \
     BROWSER="w3m.sh"
 
 # history (same functionality as bash)
-export HISTFILE="$HOME/.local/share/cmd_history" \
+export \
+    HISTFILE="$HOME/.local/share/cmd_history" \
     HISTSIZE=10000 \
     SAVEHIST=5000
 
 # colored man pages
-export LESS_TERMCAP_mb=$'\e[1;31m' \
+export \
+    LESS_TERMCAP_mb=$'\e[1;31m' \
     LESS_TERMCAP_md=$'\e[1;34m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_so=$'\e[01;44;37m' \
