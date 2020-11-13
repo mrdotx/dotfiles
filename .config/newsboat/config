@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-11T20:54:48+0100
+# date:       2020-11-13T18:20:04+0100
 
 # general
 auto-reload no
@@ -46,7 +46,7 @@ color background                    white       default
 color listnormal                    blue        default bold
 color listfocus                     cyan        blue    bold
 color listnormal_unread             red         default
-color listfocus_unread              white       blue    bold
+color listfocus_unread              magenta     blue    bold
 color info                          cyan        default
 color article                       white       default
 
