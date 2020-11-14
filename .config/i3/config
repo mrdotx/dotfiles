@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-12T16:43:35+0100
+# date:       2020-11-14T17:51:55+0100
 
 # general
 #########
@@ -270,46 +270,46 @@ bindsym $sup+Shift+q exec --no-startup-id "i3-msg exit"
 bindsym $alt+space mode "services"; exec --no-startup-id "i3_tooltip_services.sh"
 mode "services" {
     # autolock disable/enable
-    bindsym a exec --no-startup-id polybar-msg hook module/autolock 2
+    bindsym a exec --no-startup-id "polybar-msg hook module/autolock 2"
 
     # bluetooth disable/enable
-    bindsym b exec --no-startup-id polybar-msg hook module/bluetooth 2
+    bindsym b exec --no-startup-id "polybar-msg hook module/bluetooth 2"
 
     # compositor disable/enable
-    bindsym c exec --no-startup-id polybar-msg hook module/compositor 2
+    bindsym c exec --no-startup-id "polybar-msg hook module/compositor 2"
 
     # dunst restart
     bindsym d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'"
 
     # firewall disable/enable
-    bindsym f exec --no-startup-id polybar-msg hook module/firewall 2
+    bindsym f exec --no-startup-id "polybar-msg hook module/firewall 2"
 
     # gestures disable/enable
-    bindsym g exec --no-startup-id polybar-msg hook module/gestures 2
+    bindsym g exec --no-startup-id "polybar-msg hook module/gestures 2"
 
     # authenthication disable/enable
-    bindsym l exec --no-startup-id polybar-msg hook module/authentication 2
+    bindsym l exec --no-startup-id "polybar-msg hook module/authentication 2"
 
     # mousepointer disable/enable
-    bindsym m exec --no-startup-id polybar-msg hook module/mousepointer 2
+    bindsym m exec --no-startup-id "polybar-msg hook module/mousepointer 2"
 
     # resolver disable/enable
-    bindsym n exec --no-startup-id polybar-msg hook module/resolver 2
+    bindsym n exec --no-startup-id "polybar-msg hook module/resolver 2"
 
     # printer disable/enable
-    bindsym p exec --no-startup-id polybar-msg hook module/printer 2
+    bindsym p exec --no-startup-id "polybar-msg hook module/printer 2"
 
     # rss disable/enable
-    bindsym r exec --no-startup-id polybar-msg hook module/rss 2
+    bindsym r exec --no-startup-id "polybar-msg hook module/rss 2"
 
     # tiling disable/enable
-    bindsym t exec --no-startup-id polybar-msg hook module/tiling 2
+    bindsym t exec --no-startup-id "polybar-msg hook module/tiling 2"
 
     # vpn disable/enable
-    bindsym v exec --no-startup-id polybar-msg hook module/vpn 2
+    bindsym v exec --no-startup-id "polybar-msg hook module/vpn 2"
 
     # timesync disable/enable
-    bindsym y exec --no-startup-id polybar-msg hook module/timesync 2
+    bindsym y exec --no-startup-id "polybar-msg hook module/timesync 2"
 
     # back to default mode
     bindsym q mode "default"; exec --no-startup-id "i3_tooltip_services.sh --kill"
