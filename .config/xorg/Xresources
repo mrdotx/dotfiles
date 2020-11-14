@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-07-11T19:09:40+0200
+! date:       2020-11-14T15:03:27+0100
 
 #define BLACK0T             #e6000000
 #define BLACK0              #000000
@@ -33,11 +33,6 @@
 /* general */
 *background:                BLACK0
 *foreground:                WHITE1
-*fading:                    8
-*fadeColor:                 BLACK0
-*cursorColor:               BLUE1
-*pointerColorBackground:    GREY0
-*pointerColorForeground:    BLUE1
 
 /* general colors normal */
 *color0:                    BLACK0
