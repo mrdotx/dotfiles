@@ -1,11 +1,11 @@
 ! path:       /home/klassiker/.config/xorg/dmenu
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-09-29T10:47:23+0200
+! date:       2020-11-15T10:58:24+0100
 
-dmenu.font:                     DejaVuSansMono Nerd Font:pixelsize=16:antialias=true:autohint=true
-dmenu.fontfallback:             Source-Code-Pro:pixelsize=14:antialias=true:autohint=true
-dmenu.fontemoji:                JoyPixels:pixelsize=14:antialias=true:autohint=true
+dmenu.font:                     FONT
+dmenu.fontfallback:             FONTFALLBACK
+dmenu.fontemoji:                FONTEMOJI
 dmenu.background:               BLACK0
 dmenu.foreground:               GREY3
 dmenu.selbackground:            BLUE1
