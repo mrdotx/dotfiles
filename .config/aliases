@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T23:05:09+0100
+# date:       2020-11-15T19:15:51+0100
 
 # color
 alias \
@@ -31,9 +31,9 @@ alias \
     cp='cp -i' \
     tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
     tx='i3_tmux.sh' \
-    nb='polybar_newsboat.sh --open' \
     rg='. ranger' \
     rs='doas ranger' \
+    nb='polybar_rss.sh --open' \
     calc='bc -q' \
     nf='neofetch' \
     we='weechat' \
