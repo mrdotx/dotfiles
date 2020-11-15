@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-14T17:51:55+0100
+# date:       2020-11-15T19:58:00+0100
 
 # general
 #########
@@ -204,8 +204,6 @@ for_window [title="^alsamixer$"] $float, $move
 for_window [title="^calculator$"] $float, $size, $move
 for_window [title="^cdw$"] $float, $size, $move
 for_window [title="^stopwatch$"] $float, resize set 250 500, $move
-for_window [title="^aur$"] $float, $size, $move
-for_window [title="^man$"] $float, $size, $move
 
 for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [class="^Polkit-gnome-authentication-agent-1$"] $float, $sticky, $border, $move
@@ -373,8 +371,8 @@ bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+bracketleft exec --no-startup-id "$TERMINAL -T 'man' -e fzf_man.sh"
-bindsym $sup+bracketright exec --no-startup-id "$TERMINAL -T 'aur' -e terminal_wrapper.sh fzf_aur.sh"
+bindsym $sup+bracketleft exec --no-startup-id "i3_tmux.sh -o 10 'man' 'fzf_man.sh'" workspace $ws3
+bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 11 'aur' 'terminal_wrapper.sh fzf_aur.sh'" workspace $ws3
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
