@@ -1,8 +1,9 @@
 ! path:       /home/klassiker/.config/xorg/Xresources
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-14T15:03:27+0100
+! date:       2020-11-15T14:50:00+0100
 
+/* theme colors */
 #define BLACK0T             #e6000000
 #define BLACK0              #000000
 #define WHITE1              #ffffff
