@@ -86,7 +86,6 @@ hunspell-de
 hunspell-en_US
 hyphen-de
 hyphen-en
-i3status
 inetutils
 inkscape
 intel-compute-runtime
