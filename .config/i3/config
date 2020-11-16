@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-16T20:01:31+0100
+# date:       2020-11-16T20:21:31+0100
 
 # general
 #########
@@ -272,8 +272,6 @@ bindsym $sup+Shift+r restart
 ##################
 
 bindsym Ctrl+$alt+Delete mode "exit"; \
-    exec --no-startup-id "i3_exit.sh"
-bindsym $sup+Shift+q mode "exit"; \
     exec --no-startup-id "i3_exit.sh"
 mode "exit" {
     # lock blur
