@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-16T20:21:31+0100
+# date:       2020-11-17T13:49:21+0100
 
 # general
 #########
@@ -262,8 +262,8 @@ bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend (sleep -> https://github.com/i3/i3/issues/3298)
-bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_exit.sh lock simple"
-bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_exit.sh suspend"
+bindsym $sup+l exec --no-startup-id "sleep 0.5 && i3_exit.sh --lock simple"
+bindsym $sup+Shift+l exec --no-startup-id "sleep 0.5 && i3_exit.sh --suspend"
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
@@ -275,42 +275,42 @@ bindsym Ctrl+$alt+Delete mode "exit"; \
     exec --no-startup-id "i3_exit.sh"
 mode "exit" {
     # lock blur
-    bindsym c exec --no-startup-id "i3_exit.sh lock blur"; \
+    bindsym c exec --no-startup-id "i3_exit.sh --lock blur"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # shutdown
-    bindsym d exec --no-startup-id "i3_exit.sh shutdown"; \
+    bindsym d exec --no-startup-id "i3_exit.sh --shutdown"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # logout
-    bindsym l exec --no-startup-id "i3_exit.sh logout"; \
+    bindsym l exec --no-startup-id "i3_exit.sh --logout"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # lock simple
-    bindsym o exec --no-startup-id "i3_exit.sh lock simple"; \
+    bindsym o exec --no-startup-id "i3_exit.sh --lock simple"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # suspend blur
-    bindsym p exec --no-startup-id "i3_exit.sh suspend blur"; \
+    bindsym p exec --no-startup-id "i3_exit.sh --suspend blur"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # reboot
-    bindsym r exec --no-startup-id "i3_exit.sh reboot"; \
+    bindsym r exec --no-startup-id "i3_exit.sh --reboot"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # suspend
-    bindsym s exec --no-startup-id "i3_exit.sh suspend"; \
+    bindsym s exec --no-startup-id "i3_exit.sh --suspend"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
     # suspend simple
-    bindsym u exec --no-startup-id "i3_exit.sh suspend simple"; \
+    bindsym u exec --no-startup-id "i3_exit.sh --suspend simple"; \
         mode "default"; \
         exec --no-startup-id "i3_exit.sh --kill"
 
@@ -332,46 +332,46 @@ bindsym $alt+space mode "services"; \
     exec --no-startup-id "i3_services.sh"
 mode "services" {
     # authentication disable/enable
-    bindsym a exec --no-startup-id "i3_services.sh authentication"
+    bindsym a exec --no-startup-id "i3_services.sh --authentication"
 
     # bluetooth disable/enable
-    bindsym b exec --no-startup-id "i3_services.sh bluetooth"
+    bindsym b exec --no-startup-id "i3_services.sh --bluetooth"
 
     # compositor disable/enable
-    bindsym c exec --no-startup-id "i3_services.sh compositor"
+    bindsym c exec --no-startup-id "i3_services.sh --compositor"
 
     # dunst restart
     bindsym d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
 
     # firewall disable/enable
-    bindsym f exec --no-startup-id "i3_services.sh firewall"
+    bindsym f exec --no-startup-id "i3_services.sh --firewall"
 
     # gestures disable/enable
-    bindsym g exec --no-startup-id "i3_services.sh gestures"
+    bindsym g exec --no-startup-id "i3_services.sh --gestures"
 
     # autolock disable/enable
-    bindsym l exec --no-startup-id "i3_services.sh autolock"
+    bindsym l exec --no-startup-id "i3_services.sh --autolock"
 
     # mousepointer disable/enable
-    bindsym m exec --no-startup-id "i3_services.sh mousepointer"
+    bindsym m exec --no-startup-id "i3_services.sh --mousepointer"
 
     # printer disable/enable
-    bindsym p exec --no-startup-id "i3_services.sh printer"
+    bindsym p exec --no-startup-id "i3_services.sh --printer"
 
     # rss disable/enable
-    bindsym r exec --no-startup-id "i3_services.sh rss"
+    bindsym r exec --no-startup-id "i3_services.sh --rss"
 
     # resolver disable/enable
-    bindsym s exec --no-startup-id "i3_services.sh resolver"
+    bindsym s exec --no-startup-id "i3_services.sh --resolver"
 
     # tiling disable/enable
-    bindsym t exec --no-startup-id "i3_services.sh tiling"
+    bindsym t exec --no-startup-id "i3_services.sh --tiling"
 
     # vpn disable/enable
-    bindsym v exec --no-startup-id "i3_services.sh vpn"
+    bindsym v exec --no-startup-id "i3_services.sh --vpn"
 
     # timesync disable/enable
-    bindsym y exec --no-startup-id "i3_services.sh timesync"
+    bindsym y exec --no-startup-id "i3_services.sh --timesync"
 
     # back to default mode
     bindsym q mode "default"; \
