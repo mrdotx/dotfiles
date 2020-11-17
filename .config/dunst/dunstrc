@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-02T12:58:23+0100
+# date:       2020-11-17T20:41:15+0100
 
 [global]
 
@@ -312,6 +312,13 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
+
+[i3_modes]
+    summary = "*i3 * mode*"
+    history_ignore = yes
+    frame_color = "#4185d7"
+    background = "#000000"
+    foreground = "#ffffff"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
