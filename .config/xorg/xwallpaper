@@ -1,0 +1,9 @@
+! path:       /home/klassiker/.config/xorg/xwallpaper
+! author:     klassiker [mrdotx]
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2020-11-18T19:37:43+0100
+
+Xwallpaper.options: --zoom
+Xwallpaper.uri:     /home/klassiker/Bilder/Wallpaper/Dark_Blue/pcb.jpg
+
+! vim:ft=xdefaults
