@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-17T14:48:15+0100
+# date:       2020-11-19T00:51:45+0100
 
 # repository paths
 typeset -U PATH path
@@ -39,7 +39,7 @@ export LIBVA_DRIVER_NAME=i965
 # (gfx.webrender.all=true)
 # media.ffmpeg.vaapi-drm-display.enabled=true
 # media.ffmpeg.vaapi.enabled=true
-# export MOZ_X11_EGL=1
+export MOZ_X11_EGL=1
 
 # xdg paths
 export \
