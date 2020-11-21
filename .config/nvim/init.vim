@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-11-02T10:20:44+0100
+" date:       2020-11-21T09:31:06+0100
 
 " leader keys
 let mapleader=","                   " leader key for global plugins
@@ -28,14 +28,15 @@ set number relativenumber           " show hybrid line numbers and numbertoggle
         autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
     augroup END
+set noshowmode                      " don't show normal, insert replace etc.
 set showcmd                         " show command in bottom bar
+set showmatch                       " highlight matching [{()}]
 "set cursorline                     " highlight current line
 "set cursorcolumn                   " highlight current column
 set nocompatible                    " to ward off unexpected things
 set wildmenu                        " visual autocomplete for command menu
 set wildmode=longest,list,full
 set lazyredraw                      " redraw only when we need to
-set showmatch                       " highlight matching [{()}]
 " symbols for control character
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 set splitbelow splitright           " splits open at the bottom and right
