@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-20T20:28:01+0100
+# date:       2020-11-23T11:55:50+0100
 
 # general
 #########
@@ -144,6 +144,12 @@ bindsym $sup+Shift+Left move left 20 px
 bindsym $sup+Shift+Right move right 20 px
 bindsym $sup+Shift+Up move up 20 px
 bindsym $sup+Shift+Down move down 20 px
+
+# swap workspaces
+bindsym $sup+Home exec --no-startup-id "i3_workspace_swap.sh left"
+bindsym $sup+End exec --no-startup-id "i3_workspace_swap.sh right"
+bindsym $sup+Prior exec --no-startup-id "i3_workspace_swap.sh up"
+bindsym $sup+Next exec --no-startup-id "i3_workspace_swap.sh down"
 
 # window switcher
 bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
