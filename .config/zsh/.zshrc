@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-22T22:47:26+0100
+# date:       2020-11-24T20:08:26+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -48,25 +48,28 @@ precmd () {
 }
 
 # vi mode
-bindkey -v
 export KEYTIMEOUT=1
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd "^V" edit-command-line
 
-function zle-keymap-select zle-line-init
+function zle-keymap-select
 {
     case $KEYMAP in
         vicmd)
-            print -n "\e[2 q"
+            print -n "\e[4 q"
             ;;
         viins | main)
-            print -n "\e[6 q"
+            print -n "\e[2 q"
             ;;
     esac
+    function zle-line-finish
+    {
+        print -n "\e[2 q"
+    }
+    zle -N zle-line-finish
 }
-zle -N zle-line-init
 zle -N zle-keymap-select
 
 # completion
