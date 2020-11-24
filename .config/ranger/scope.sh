@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T16:41:02+0100
+# date:       2020-11-24T00:56:29+0100
 
 # exit | function   | action of ranger
 
@@ -131,6 +131,10 @@ handle_extension() {
             ;;
         json)
             python -m json.tool "$file_path" \
+                && exit 5
+            ;;
+        gpg)
+            gpg -d "$file_path" \
                 && exit 5
             ;;
         dff | dsf | wv | wvc)
