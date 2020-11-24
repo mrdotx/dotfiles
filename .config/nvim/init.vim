@@ -1,7 +1,7 @@
 " path:       /home/klassiker/.config/nvim/init.vim
 " author:     klassiker [mrdotx]
 " github:     https://github.com/mrdotx/dotfiles
-" date:       2020-11-21T09:31:06+0100
+" date:       2020-11-24T01:10:04+0100
 
 " leader keys
 let mapleader=","                   " leader key for global plugins
@@ -57,6 +57,24 @@ filetype indent on                  " automatically indent code
 autocmd FileType tex,latex,markdown,gitcommit setlocal spell spelllang=en_us,de_de
 " run xrdb whenever xresources are updated
 autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
+" edit gpg encrypted files
+augroup encrypt
+    au!
+    " disable temporary data
+    autocmd BufReadPre,FileReadPre *.gpg set viminfo=
+    autocmd BufReadPre,FileReadPre *.gpg set noswapfile noundofile nobackup
+    " binary mode to read the encrypted file
+    autocmd BufReadPre,FileReadPre *.gpg set bin
+    autocmd BufReadPre,FileReadPre *.gpg let ch_save = &ch|set ch=2
+    autocmd BufReadPost,FileReadPost *.gpg '[,']!gpg -d 2>/dev/null
+    " normal mode for editing
+    autocmd BufReadPost,FileReadPost *.gpg set nobin
+    autocmd BufReadPost,FileReadPost *.gpg let &ch = ch_save|unlet ch_save
+    autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost " . expand("%:r")
+    " convert text to encrypted data before writing
+    autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --default-recipient-self -ae 2>/dev/null
+    autocmd BufWritePost,FileWritePost *.gpg u
+augroup END
 
 " source configs
 source ~/.config/nvim/plugins.vim
