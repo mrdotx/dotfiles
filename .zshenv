@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-19T00:51:45+0100
+# date:       2020-11-24T15:09:08+0100
 
 # repository paths
 typeset -U PATH path
@@ -56,7 +56,7 @@ export \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
     PYTHONPATH=$PYTHONPATH:/usr/lib/python3.8/site-packages \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
-    GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc" \
+    GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
     FONTCONFIG_PATH=/etc/fonts \
     FONTCONFIG_FILE=fonts.conf \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
