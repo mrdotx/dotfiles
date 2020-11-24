@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/newsboat/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-13T18:20:04+0100
+# date:       2020-11-24T13:27:35+0100
 
 # general
 auto-reload no
@@ -18,18 +18,20 @@ download-path "~/Downloads/"
 
 # inoreader
 urls-source "inoreader"
-# default app-id from newsboat
-# inoreader-app-id "1000000394"
+# default app-id "1000000394"
 inoreader-app-id "999999505"
-# default app-key from newsboat
-# inoreader-app-key "CWcdJdSDcuxHYoqGa3RsPh7X2DZ2MmO7"
+# default app-key "CWcdJdSDcuxHYoqGa3RsPh7X2DZ2MmO7"
 inoreader-app-key "EQsZICxpsbFczwbXrsrkRbXUUw8DdfwO"
 inoreader-login "klassiker"
-inoreader-passwordeval "gpg --decrypt ~/.local/share/cloud/webde/Keys/newsboat-inoreader.gpg"
+inoreader-passwordeval "gpg -d ~/.local/share/cloud/webde/Keys/newsboat-inoreader.gpg"
 inoreader-flag-share "a"
 inoreader-flag-star "b"
 inoreader-show-special-feeds no
 inoreader-min-items 999
+
+# keybindings
+bind-key SPACE toggle-article-read articlelist
+bind-key N prev-unread
 
 # macros
 macro , open-in-browser
