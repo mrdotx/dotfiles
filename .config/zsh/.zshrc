@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-24T20:08:26+0100
+# date:       2020-11-25T11:02:30+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -13,6 +13,7 @@ tty -s \
 
 # prompt
 autoload -U colors && colors
+ZLE_RPROMPT_INDENT=0
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
@@ -37,6 +38,7 @@ precmd () {
     else
         local ESTAT="%{$fg[green]%}$ESTAT%{$reset_color%}"
     fi
+
     if [ $_ZSH_CMD_EXEC_START ]; then
         local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")" \
             | sed 's/^00:00://;s/^00://;s/^0//' \
@@ -45,6 +47,22 @@ precmd () {
     else
         RPROMPT="«$OPAR$ESTAT$CPAR"
     fi
+
+    function zle-keymap-select
+    {
+        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
+        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
+        case $KEYMAP in
+            vicmd)
+                RPROMPT="«$OPAR-- %{$fg[green]%}NORMAL%{$reset_color%} --$CPAR"
+                ;;
+            viins | main)
+                RPROMPT="«$OPAR-- %{$fg[green]%}INSERT%{$reset_color%} --$CPAR"
+                ;;
+        esac
+        zle reset-prompt
+    }
+    zle -N zle-keymap-select
 }
 
 # vi mode
@@ -53,24 +71,6 @@ export KEYTIMEOUT=1
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd "^V" edit-command-line
-
-function zle-keymap-select
-{
-    case $KEYMAP in
-        vicmd)
-            print -n "\e[4 q"
-            ;;
-        viins | main)
-            print -n "\e[2 q"
-            ;;
-    esac
-    function zle-line-finish
-    {
-        print -n "\e[2 q"
-    }
-    zle -N zle-line-finish
-}
-zle -N zle-keymap-select
 
 # completion
 autoload -Uz compinit
