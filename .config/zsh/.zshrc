@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-25T11:02:30+0100
+# date:       2020-11-25T14:00:30+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -28,36 +28,37 @@ preexec () {
 }
 precmd () {
     local ESTAT="$?"
-    local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
-    local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
-
-    __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
-
     if [ $ESTAT != 0 ]; then
         local ESTAT="%{$fg[red]%}$ESTAT%{$reset_color%}"
     else
         local ESTAT="%{$fg[green]%}$ESTAT%{$reset_color%}"
     fi
 
+    set_prompt() {
+        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
+        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
+
+        __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
+        RPROMPT="«$OPAR$1$CPAR"
+    }
+
     if [ $_ZSH_CMD_EXEC_START ]; then
         local ETIME=$(printf "%s" "$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N")" \
             | sed 's/^00:00://;s/^00://;s/^0//' \
         )
-        RPROMPT="«$OPAR$ESTAT $ETIME$CPAR"
+        set_prompt "$ESTAT $ETIME"
     else
-        RPROMPT="«$OPAR$ESTAT$CPAR"
+        set_prompt "$ESTAT"
     fi
 
     function zle-keymap-select
     {
-        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
-        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
         case $KEYMAP in
             vicmd)
-                RPROMPT="«$OPAR-- %{$fg[green]%}NORMAL%{$reset_color%} --$CPAR"
+                set_prompt "-- %{$fg[green]%}NORMAL%{$reset_color%} --"
                 ;;
             viins | main)
-                RPROMPT="«$OPAR-- %{$fg[green]%}INSERT%{$reset_color%} --$CPAR"
+                set_prompt "-- %{$fg[green]%}INSERT%{$reset_color%} --"
                 ;;
         esac
         zle reset-prompt
