@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-25T15:16:10+0100
+# date:       2020-11-26T17:23:33+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -27,6 +27,14 @@ preexec () {
     _ZSH_CMD_EXEC_START=$(date +%s.%N)
 }
 precmd () {
+    set_prompt() {
+        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
+        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
+
+        __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
+        RPROMPT="«$OPAR$1$CPAR"
+    }
+
     case $? in
         0)
             local ERR="%{$fg[green]%}$?%{$reset_color%}"
@@ -35,14 +43,6 @@ precmd () {
             local ERR="%{$fg[red]%}$?%{$reset_color%}"
             ;;
     esac
-
-    set_prompt() {
-        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
-        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
-
-        __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
-        RPROMPT="«$OPAR$1$CPAR"
-    }
 
     if [ $_ZSH_CMD_EXEC_START ]; then
         local ETIME=$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N" \
