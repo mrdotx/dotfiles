@@ -1,8 +1,9 @@
 # path:       /home/klassiker/.config/youtube-dl/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-25T06:07:10+0100
+# date:       2020-11-26T10:53:30+0100
 
 -o "~/Downloads/[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s"
+--force-ipv4
 --external-downloader aria2c
---external-downloader-args "-x 8 -s 8 -k 1M"
+--external-downloader-args "-x8 -s8 -k1M"
