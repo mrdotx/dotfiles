@@ -31,6 +31,7 @@ found in my other repositories.
 | systemd           | units, timers and targets                          |
 | tmux              | terminal multiplexer                               |
 | w3m               | text oriented browser                              |
+| wget              | the non-interactive network downloader             |
 | xorg              | x window system related, xressources, xmodmap      |
 | youtube-dl        | youtube downloader                                 |
 | zathura           | document viewer                                    |
