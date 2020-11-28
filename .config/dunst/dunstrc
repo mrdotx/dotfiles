@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/dunst/dunstrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-20T20:13:58+0100
+# date:       2020-11-28T19:45:51+0100
 
 [global]
 
@@ -321,7 +321,21 @@
     foreground = "#ffffff"
 
 [c_music_player]
-    summary = "C* Music Player *"
+    summary = "C* Music Player*"
+    history_ignore = yes
+    frame_color = "#4185d7"
+    background = "#000000"
+    foreground = "#ffffff"
+
+[iwd]
+    summary = "iNet wireless daemon*"
+    history_ignore = yes
+    frame_color = "#4185d7"
+    background = "#000000"
+    foreground = "#ffffff"
+
+[youtube-dl]
+    summary = "youtube-dl*"
     history_ignore = yes
     frame_color = "#4185d7"
     background = "#000000"
