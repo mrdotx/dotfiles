@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-12-01T12:35:37+0100
+! date:       2020-12-01T14:18:49+0100
 
 URxvt.font:                 xft:FONT, \
                             xft:FONTFALLBACK, \
@@ -36,7 +36,7 @@ URxvt.resize-font.step:     1
 URxvt.url-launcher:         link_handler.sh
 URxvt.keysym.A-o:           perl:matcher:select
 URxvt.matcher.button:       1
-URxvt.matcher.rend.0:       Uline Bold fg8
+URxvt.matcher.rend.0:       Italic Bold fg8
 URxvt.colorUL:              BLUE1
 
 ! vim:ft=xdefaults
