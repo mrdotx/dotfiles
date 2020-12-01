@@ -174,7 +174,6 @@ perl-file-mimeinfo
 picard
 picom
 pkgconf
-polkit-gnome
 polybar
 poppler-data
 powertop
