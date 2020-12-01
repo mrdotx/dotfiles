@@ -1,7 +1,7 @@
 ! path:       /home/klassiker/.config/xorg/rxvt-unicode
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-17T17:15:33+0100
+! date:       2020-12-01T12:35:37+0100
 
 URxvt.font:                 xft:FONT, \
                             xft:FONTFALLBACK, \
@@ -9,8 +9,8 @@ URxvt.font:                 xft:FONT, \
 URxvt.background:           [90]BLACK0
 URxvt.foreground:           WHITE1
 URxvt.cursorColor:          BLUE1
-URxvt.highlightColor:       YELLOW1
-URxvt.highlightTextColor:   BLACK0
+URxvt.highlightColor:       BLUE1
+URxvt.highlightTextColor:   WHITE1
 URxvt.termName:             rxvt-unicode-256color
 URxvt.depth:                32
 URxvt.scrollBar:            false
