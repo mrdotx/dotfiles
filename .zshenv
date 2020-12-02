@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.zshenv
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-27T12:38:42+0100
+# date:       2020-12-02T14:24:25+0100
 
 # repository paths
 typeset -U PATH path
@@ -34,12 +34,6 @@ systemctl --user import-environment PATH
 # hardware settings (check vainfo)
 # gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver
 export LIBVA_DRIVER_NAME=i965
-
-# firefox vaapi x11 hardware acceleration
-# (gfx.webrender.all=true)
-# media.ffmpeg.vaapi-drm-display.enabled=true
-# media.ffmpeg.vaapi.enabled=true
-export MOZ_X11_EGL=1
 
 # xdg paths
 export \
