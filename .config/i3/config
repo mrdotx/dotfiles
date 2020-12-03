@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-01T21:36:39+0100
+# date:       2020-12-03T18:32:11+0100
 
 # general
 #########
@@ -425,7 +425,7 @@ bindsym $sup+k exec --no-startup-id "if pgrep -x keepassxc; then i3-msg [class='
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws10
 bindsym $sup+m exec "thunderbird" workspace $ws7
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws10
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 3 'newsboat' 'polybar_rss.sh --open && link_handler.sh --tmpdelete'" workspace $ws3
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 3 'newsboat' 'polybar_rss.sh --open'" workspace $ws3
 bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 4 'podboat'" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
 bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 2 $FILE" workspace $ws3
