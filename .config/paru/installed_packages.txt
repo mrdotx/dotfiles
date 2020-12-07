@@ -199,6 +199,7 @@ s-nail
 sane
 scribus
 sed
+sg3_utils
 shadow
 shellcheck-bin
 simple-mtpfs
