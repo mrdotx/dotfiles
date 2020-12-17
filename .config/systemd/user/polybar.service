@@ -1,11 +1,10 @@
 # path:       /home/klassiker/.config/systemd/user/polybar.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-29T18:12:37+0100
+# date:       2020-12-17T16:29:20+0100
 
 [Unit]
 Description=polybar status bars
-After=screenlayout.service
 
 [Service]
 Type=forking

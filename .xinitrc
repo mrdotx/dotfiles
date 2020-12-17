@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.xinitrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-12T17:09:46+0100
+# date:       2020-12-17T16:28:27+0100
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
@@ -40,10 +40,13 @@ xset r rate 200 50
 xinput --set-prop 'Synaptics TM3242-001' 'libinput Tapping Enabled' 0
 xinput --set-prop 'Synaptics TM3242-001' 'libinput Natural Scrolling Enabled' 1
 
+# set default screen layout
+screenlayout.sh
+
 # set default audio volume
 audio.sh -abs 36
 
-# per default start i3
+# start window manager
 session="${1:-i3}"
 [ "$TERM" = linux ] \
     && case "$session" in

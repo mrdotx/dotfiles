@@ -1,11 +1,10 @@
 # path:       /home/klassiker/.config/systemd/user/xwallpaper.service
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-18T17:16:16+0100
+# date:       2020-12-17T16:29:44+0100
 
 [Unit]
 Description=set wallpaper with xwallpaper
-After=screenlayout.service
 
 [Service]
 Type=oneshot
