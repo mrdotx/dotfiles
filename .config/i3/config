@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-03T18:32:11+0100
+# date:       2020-12-22T21:21:28+0100
 
 # general
 #########
@@ -17,7 +17,7 @@ set $sticky sticky enable
 set $border border pixel 2
 set $move move position center
 set $gapin 5
-set $gapout 0
+set $gapout 5
 
 # config
 floating_modifier $sup
