@@ -1,7 +1,19 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-14T11:37:35+0100
+# date:       2020-12-25T14:45:24+0100
+
+# ranger change directory on exit
+ranger_cd() {
+    tmp_file="$(mktemp -t ranger_cd.XXXXXX)"
+
+    ranger --choosedir="$tmp_file" "${@:-$(pwd)}"
+
+    [ -e "$tmp_file" ] \
+        && cd "$(cat "$tmp_file")" \
+        && rm -f "$tmp_file" \
+        || exit 1
+}
 
 # color
 alias \
@@ -31,7 +43,7 @@ alias \
     cp='cp -i' \
     tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
     tx='i3_tmux.sh' \
-    rg='. ranger' \
+    rg='ranger_cd' \
     rs='doas ranger' \
     nb='polybar_rss.sh --open' \
     calc='bc -q' \
