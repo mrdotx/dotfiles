@@ -1,13 +1,13 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-25T14:45:24+0100
+# date:       2020-12-25T15:34:09+0100
 
 # ranger change directory on exit
 ranger_cd() {
     tmp_file="$(mktemp -t ranger_cd.XXXXXX)"
 
-    ranger --choosedir="$tmp_file" "${@:-$(pwd)}"
+    ranger --choosedir="$tmp_file" "$@"
 
     [ -e "$tmp_file" ] \
         && cd "$(cat "$tmp_file")" \
