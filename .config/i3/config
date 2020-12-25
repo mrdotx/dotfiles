@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-22T21:21:28+0100
+# date:       2020-12-25T10:19:21+0100
 
 # general
 #########
@@ -336,9 +336,6 @@ mode "exit" {
 bindsym $alt+space mode "services"; \
     exec --no-startup-id "i3_services.sh"
 mode "services" {
-    # autolock disable/enable
-    bindsym a exec --no-startup-id "i3_services.sh --autolock"
-
     # bluetooth disable/enable
     bindsym b exec --no-startup-id "i3_services.sh --bluetooth"
 
@@ -353,6 +350,9 @@ mode "services" {
 
     # gestures disable/enable
     bindsym g exec --no-startup-id "i3_services.sh --gestures"
+
+    # autolock disable/enable
+    bindsym l exec --no-startup-id "i3_services.sh --autolock"
 
     # mousepointer disable/enable
     bindsym m exec --no-startup-id "i3_services.sh --mousepointer"
