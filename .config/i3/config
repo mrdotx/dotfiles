@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-25T10:19:21+0100
+# date:       2020-12-26T20:27:10+0100
 
 # general
 #########
@@ -442,7 +442,7 @@ bindsym $sup+z exec --no-startup-id "filezilla"
 
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
 bindsym $sup+bracketleft exec --no-startup-id "i3_tmux.sh -o 10 'man' 'fzf_man.sh'" workspace $ws3
-bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 11 'aur' 'terminal_wrapper.sh fzf_aur.sh'" workspace $ws3
+bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 11 'aur' 'fzf_aur.sh'" workspace $ws3
 bindsym $sup+backslash exec --no-startup-id "sleep 0.5 && chameleon.sh"
 bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
