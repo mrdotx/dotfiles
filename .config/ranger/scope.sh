@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/ranger/scope.sh
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-24T00:56:29+0100
+# date:       2020-12-26T14:31:19+0100
 
 # exit | function   | action of ranger
 
@@ -119,7 +119,7 @@ handle_extension() {
                 -gravity center \
                 -pointsize 72 \
                 -font "$file_path" \
-                -fill "#ffffff" \
+                -fill "#cccccc" \
                 -annotate +0+0 "ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]" \
                 -flatten "$image_cache_path" \
                     && exit 6
