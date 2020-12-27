@@ -163,7 +163,6 @@ opusfile
 p7zip
 pacman
 pam-gnupg
-pamac-gtk
 pandoc-bin
 paru-bin
 patch
