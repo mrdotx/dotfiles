@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/aliases
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-25T15:34:09+0100
+# date:       2020-12-27T14:47:43+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -49,10 +49,7 @@ alias \
     calc='bc -q' \
     nf='neofetch' \
     we='weechat' \
-    bt='bpytop' \
-    ft='fzf_trash.sh' \
-    fm='fzf_man.sh' \
-    fa='fzf_aur.sh'
+    bt='bpytop'
 
 # services
 alias \
@@ -65,12 +62,13 @@ alias \
     ch='systemctl --failed; journalctl -p 3 -xb' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
-    mu='doas pacman-mirrors -c Germany -t 3 && doas pacman -Syyu' \
-    cc='doas paccache -rvk2 && doas paccache -ruk0; paru -c' \
     sc='system_cleanup.sh' \
     bu='backup.sh' \
     buu='backup_usb.sh' \
-    dm='doas delete_metafiles.sh'
+    dm='doas delete_metafiles.sh' \
+    fm='fzf_man.sh' \
+    fp='fzf_pacman.sh' \
+    ft='fzf_trash.sh'
 
 # ssh
 alias \
