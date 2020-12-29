@@ -1,7 +1,7 @@
 # path:       /home/klassiker/.config/i3/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-27T11:23:20+0100
+# date:       2020-12-29T10:21:46+0100
 
 # general
 #########
@@ -83,6 +83,48 @@ workspace $ws7 output $mon1 $mon2
 workspace $ws8 output $mon1 $mon2
 workspace $ws9 output $mon1 $mon2
 workspace $ws0 output $mon2 $mon1
+
+# application windows (xprop)
+#############################
+
+# center
+for_window [title="LibreOffice"] $move
+
+# floating applications
+for_window [title="floating"] $float, $size, $move
+
+for_window [title="^alsamixer$"] $float, $move
+for_window [title="^calculator$"] $float, $size, $move
+for_window [title="^cdw$"] $float, $size, $move
+for_window [title="^stopwatch$"] $float, resize set 250 500, $move
+
+for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
+for_window [class="^Dragon-drag-and-drop$"] $float, $sticky, $border, $move
+for_window [class="^Lxappearance$"] $float, $sticky, $move
+for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
+for_window [class="^qt5ct$"] $float, $sticky, $move
+for_window [class="^Pamac-manager$"] $float, $border, $move
+for_window [class="^GParted$"] $float, $size, $move
+for_window [class="^Manjaro Settings Manager$"] $float, $move
+for_window [class="^gmic_qt$"] $float, $move
+for_window [class="^qv4l2$"] $float, $move
+for_window [class="^Sxiv$"] $float, $size, $move
+for_window [class="^mpv$"] $float, $sticky
+
+# open applications on specific workspaces
+assign [title="^i3 tmux$"] $ws3
+assign [class="^firefoxdeveloperedition$"] $ws4
+assign [class="^Gimp$"] $ws5
+assign [class="^Inkscape$"] $ws5
+assign [class="^Darktable$"] $ws5
+assign [title="^LibreOffice$"] $ws6
+assign [class="libreoffice"] $ws6
+assign [class="^scribus$"] $ws6
+assign [class="^Thunderbird$"] $ws7
+assign [class="^Jameica"] $ws8
+assign [class="^VirtualBox"] $ws9
+assign [class="^Kodi$"] $ws0
+assign [class="^Minetest$"] $ws0
 
 # keybindings workspace
 #######################
@@ -206,48 +248,6 @@ mode "container" {
     bindsym $sup+space mode "default"; \
         exec --no-startup-id "i3_container.sh --kill"
 }
-
-# application windows (xprop)
-#############################
-
-# center
-for_window [title="LibreOffice"] $move
-
-# floating applications
-for_window [title="floating"] $float, $size, $move
-
-for_window [title="^alsamixer$"] $float, $move
-for_window [title="^calculator$"] $float, $size, $move
-for_window [title="^cdw$"] $float, $size, $move
-for_window [title="^stopwatch$"] $float, resize set 250 500, $move
-
-for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
-for_window [class="^Dragon-drag-and-drop$"] $float, $sticky, $border, $move
-for_window [class="^Lxappearance$"] $float, $sticky, $move
-for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
-for_window [class="^qt5ct$"] $float, $sticky, $move
-for_window [class="^Pamac-manager$"] $float, $border, $move
-for_window [class="^GParted$"] $float, $size, $move
-for_window [class="^Manjaro Settings Manager$"] $float, $move
-for_window [class="^gmic_qt$"] $float, $move
-for_window [class="^qv4l2$"] $float, $move
-for_window [class="^Sxiv$"] $float, $size, $move
-for_window [class="^mpv$"] $float, $sticky
-
-# open applications on specific workspaces
-assign [title="^i3 tmux$"] $ws3
-assign [class="^firefoxdeveloperedition$"] $ws4
-assign [class="^Gimp$"] $ws5
-assign [class="^Inkscape$"] $ws5
-assign [class="^Darktable$"] $ws5
-assign [title="^LibreOffice$"] $ws6
-assign [class="libreoffice"] $ws6
-assign [class="^scribus$"] $ws6
-assign [class="^Thunderbird$"] $ws7
-assign [class="^Jameica"] $ws8
-assign [class="^VirtualBox"] $ws9
-assign [class="^Kodi$"] $ws0
-assign [class="^Minetest$"] $ws0
 
 # keybindings system managment
 ##############################
@@ -450,6 +450,11 @@ bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Dokumente/Notes/html/index.html"
 
+# start systemd target
+######################
+
+exec --no-startup-id "systemctl --user start i3.target"
+
 # i3 status bar
 ###############
 
@@ -500,8 +505,3 @@ bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME
 #         binding_mode       $grey0  $red1   $white0
 #     }
 # }
-
-# start systemd target
-######################
-
-exec --no-startup-id "systemctl --user start i3.target"
