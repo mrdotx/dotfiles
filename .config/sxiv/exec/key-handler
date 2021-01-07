@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-09T17:41:52+0100
+# date:       2021-01-07T10:16:03+0100
 
 # rotate function
 rotate() {
@@ -72,8 +72,7 @@ case "$1" in
         ;;
     "C-w")
         while read -r file; do [ -f "$file" ] \
-            && convert "$file" ~/.local/share/wallpaper.jpg \
-            && systemctl --user restart xwallpaper.service \
+            && wallpaper.sh "$file" \
             & done
         ;;
     "C-g")
