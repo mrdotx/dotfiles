@@ -4,6 +4,6 @@
 ! date:       2021-01-07T10:08:02+0100
 
 wallpaper.tool:     hsetroot -cover
-wallpaper.uri:      pcb.jpg
+wallpaper.uri:      /home/klassiker/Bilder/Wallpaper/Dark_Blue/pcb.jpg
 
 ! vim:ft=xdefaults
