@@ -1,0 +1,15 @@
+# path:       /home/klassiker/.config/systemd/user/wallpaper.service
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/dotfiles
+# date:       2021-01-07T09:25:04+0100
+
+[Unit]
+Description=set wallpaper
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=%h/.local/share/repos/shell/wallpaper.sh
+
+[Install]
+WantedBy=i3.target

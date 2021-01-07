@@ -1,0 +1,9 @@
+! path:       /home/klassiker/.config/xorg/wallpaper
+! author:     klassiker [mrdotx]
+! github:     https://github.com/mrdotx/dotfiles
+! date:       2021-01-07T10:08:02+0100
+
+wallpaper.tool:     hsetroot -cover
+wallpaper.uri:      pcb.jpg
+
+! vim:ft=xdefaults
