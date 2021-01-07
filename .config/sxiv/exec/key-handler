@@ -3,7 +3,7 @@
 # path:       /home/klassiker/.config/sxiv/exec/key-handler
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2021-01-07T10:16:03+0100
+# date:       2021-01-07T10:49:03+0100
 
 # rotate function
 rotate() {
@@ -63,6 +63,23 @@ trash() {
     done
 }
 
+# wallaper function
+wallpaper() {
+    tr '\n' '\0' \
+        | xargs -0 realpath \
+        | sort -u \
+        | while read -r file; do
+            case "$(file -b -i "$file")" in
+                *)
+                    wallpaper.sh "$file" \
+                        && notify-send \
+                            "sxiv" \
+                            "$file set as wallpaper"
+                    ;;
+        esac
+    done
+}
+
 # keybindings
 case "$1" in
     "C-e")
@@ -71,9 +88,7 @@ case "$1" in
             & done
         ;;
     "C-w")
-        while read -r file; do [ -f "$file" ] \
-            && wallpaper.sh "$file" \
-            & done
+        wallpaper
         ;;
     "C-g")
         tr '\n' '\0' \
