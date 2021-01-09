@@ -81,6 +81,7 @@ gufw
 gzip
 hibiscus
 highlight
+hsetroot
 htop
 hunspell-de
 hunspell-en_US
@@ -275,7 +276,6 @@ xorg-xkill
 xorg-xprop
 xorg-xwininfo
 xsel
-xwallpaper
 youtube-dl
 zathura
 zathura-cb
