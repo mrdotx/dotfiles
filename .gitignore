@@ -1,9 +1,13 @@
-# path:       /home/klassiker/.gitignore
+# path:       /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-13T14:30:16+0100
+# date:       2021-01-10T12:50:38+0100
 
-# special folders/files
+/.w3m/bookmark.html
+/.w3m/cookie
+/.w3m/w3mcache*
+/.w3m/w3msrc*
+/.w3m/w3mtmp*
 /.config/cmus/playlists/
 /.config/cmus/autosave
 /.config/cmus/cache
@@ -23,103 +27,3 @@
 /.config/systemd/user/timers.target.wants/
 /.config/systemd/user/i3.target.wants/
 /.config/zsh/.zcompdump
-/.w3m/bookmark.html
-/.w3m/cookie
-/.w3m/w3mcache*
-/.w3m/w3msrc*
-/.w3m/w3mtmp*
-
-# .config folders
-/.config/asunder/
-/.config/bpytop/
-/.config/BraveSoftware/
-/.config/coc/
-/.config/configstore/
-/.config/darktable/
-/.config/dconf/
-/.config/enchant/
-/.config/falkon/
-/.config/filezilla/
-/.config/GIMP/
-/.config/git/
-/.config/gmic/
-/.config/GREYC/
-/.config/gtk-2.0/
-/.config/gtk-3.0/
-/.config/htop/
-/.config/inkscape/
-/.config/keepassxc/
-/.config/Kid3
-/.config/Kvantum/
-/.config/libreoffice/
-/.config/manjaro/
-/.config/MusicBrainz/
-/.config/pamac/
-/.config/qt5ct/
-/.config/rclone/
-/.config/scribus/
-/.config/surf/
-/.config/VirtualBox/
-/.config/weechat/
-
-# .config files
-/.config/manjaro-hello.json
-/.config/QtProject.conf
-/.config/Trolltech.conf
-/.config/user-dirs.dirs
-/.config/user-dirs.locale
-/.config/pam-gnupg
-
-# .local folders
-/.local/share/cloud/
-/.local/share/fonts/
-/.local/share/gegl-0.4/
-/.local/share/gstreamer-1.0/
-/.local/share/inxi/
-/.local/share/iwctl/
-/.local/share/jameica/
-/.local/share/keyrings/
-/.local/share/kodi/
-/.local/share/mc/
-/.local/share/newsboat/
-/.local/share/nomacs/
-/.local/share/npm/
-/.local/share/nvim/
-/.local/share/ranger/
-/.local/share/repos/
-/.local/share/scribus/
-/.local/share/systemd/
-/.local/share/Trash/
-/.local/share/webkitgtk/
-/.local/share/xorg/
-/.local/share/zathura/
-
-# .local files
-/.local/share/cmd_history
-/.local/share/recently-used.xbel
-/.local/share/wallpaper.jpg
-
-# root folders
-/.cache/
-/.eteks/
-/.gnupg/
-/.icons/
-/.java/
-/.minetest/
-/.mozilla/
-/.pki/
-/.putty/
-/.sane/
-/.ssh/
-/.thunderbird/
-
-# root files
-/Bilder
-/Dokumente
-/Downloads
-/Musik
-/Schreibtisch
-/Videos
-/Vorlagen
-/Öffentlich
-/.jameica.properties
