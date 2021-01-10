@@ -1,19 +1,15 @@
 # path:       /home/klassiker/.config/polybar/config
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-20T19:52:50+0100
+# date:       2021-01-10T10:47:21+0100
 
 # colors
 [colors]
     background = ${xrdb:Polybar.background0:#e6000000}
     foreground = ${xrdb:Polybar.foreground0:#cccccc}
     foreground1 = ${xrdb:Polybar.foreground1:#666666}
-    main = ${xrdb:Polybar.main0:#4185d7}
-    white = ${xrdb:color15:#ffffff}
     black = ${xrdb:color0:#000000}
-    grey = ${xrdb:color7:#cccccc}
-    blue = ${xrdb:color12:#4185d7}
-    green = ${xrdb:color2:#00b200}
+    main = ${xrdb:Polybar.main0:#4185d7}
     red = ${xrdb:color9:#df2800}
     yellow = ${xrdb:color3:#b0b200}
 

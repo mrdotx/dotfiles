@@ -1,13 +1,12 @@
 ! path:       /home/klassiker/.config/xorg/polybar
 ! author:     klassiker [mrdotx]
 ! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-10-28T15:28:16+0100
+! date:       2021-01-10T10:49:04+0100
 
 Polybar.dualbar:        true
 Polybar.background0:    BLACK0T
 Polybar.foreground0:    GREY3
 Polybar.foreground1:    GREY2
-Polybar.linecolor0:     BLUE1
 Polybar.main0:          BLUE1
 
 ! vim:ft=xdefaults
