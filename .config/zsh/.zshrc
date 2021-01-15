@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/zsh/.zshrc
+# path:       /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author:     klassiker [mrdotx]
 # github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-26T17:23:33+0100
+# date:       2021-01-15T12:19:52+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -23,44 +23,48 @@ GIT_PS1_SHOWUPSTREAM="auto verbose name"
 GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
-preexec () {
+preexec() {
     _ZSH_CMD_EXEC_START=$(date +%s.%N)
 }
-precmd () {
+precmd() {
+    case $? in
+        0)
+            _ZSH_CMD_EXEC_ERR="%{$fg[green]%}$?%{$reset_color%}"
+            ;;
+        *)
+            _ZSH_CMD_EXEC_ERR="%{$fg[red]%}$?%{$reset_color%}"
+            ;;
+    esac
+
     set_prompt() {
         local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
         local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
 
         __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
-        RPROMPT="«$OPAR$1$CPAR"
+        RPROMPT="%B«%b$OPAR$1$CPAR"
     }
 
-    case $? in
-        0)
-            local ERR="%{$fg[green]%}$?%{$reset_color%}"
-            ;;
-        *)
-            local ERR="%{$fg[red]%}$?%{$reset_color%}"
-            ;;
-    esac
-
     if [ $_ZSH_CMD_EXEC_START ]; then
-        local ETIME=$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N" \
+        _ZSH_CMD_EXEC_TIME=$(date -u -d "0 $(date +%s.%N) sec - $_ZSH_CMD_EXEC_START sec" +"%H:%M:%S.%3N" \
             | sed 's/^00:00://;s/^00://;s/^0//' \
         )
-        set_prompt "$ERR $ETIME"
+        set_prompt "$_ZSH_CMD_EXEC_ERR $_ZSH_CMD_EXEC_TIME"
     else
-        set_prompt "$ERR"
+        set_prompt "$_ZSH_CMD_EXEC_ERR"
     fi
 
     function zle-keymap-select
     {
         case $KEYMAP in
             vicmd)
-                set_prompt "-- %{$fg[green]%}NORMAL%{$reset_color%} --"
+                set_prompt "-- %{$fg[red]%}NORMAL%{$reset_color%} --"
                 ;;
             viins | main)
-                set_prompt "-- %{$fg[green]%}INSERT%{$reset_color%} --"
+                if [ $_ZSH_CMD_EXEC_START ]; then
+                    set_prompt "$_ZSH_CMD_EXEC_ERR $_ZSH_CMD_EXEC_TIME"
+                else
+                    set_prompt "$_ZSH_CMD_EXEC_ERR"
+                fi
                 ;;
         esac
         zle reset-prompt
