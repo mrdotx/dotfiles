@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.w3m/config
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-01T15:09:57+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.w3m/config
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:53:45+0100
 
 tabstop 8
 indent_incr 4

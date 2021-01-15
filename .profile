@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.profile
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-09T09:52:02+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.profile
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:53:11+0100
 
 # history (same functionality as zsh)
 export HISTFILE="$HOME/.local/share/cmd_history" \

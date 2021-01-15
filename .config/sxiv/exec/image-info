@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:       /home/klassiker/.config/sxiv/exec/image-info
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-06T21:26:52+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/sxiv/exec/image-info
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:03:28+0100
 
 # $1: path to image file
 # $2: image width

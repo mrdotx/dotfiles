@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/systemd/user/i3.target
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-29T14:40:14+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/i3.target
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:05:28+0100
 
 [Unit]
 Description=i3 window manager session

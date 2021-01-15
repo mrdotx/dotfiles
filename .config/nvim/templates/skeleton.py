@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-path:       /home/klassiker/.config/nvim/templates/skeleton.py
-author:     klassiker [mrdotx]
-github:     https://github.com/mrdotx/<++>
-date:       2020-04-29T10:17:56+0200
+path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/templates/skeleton.py
+author: klassiker [mrdotx]
+github: https://github.com/mrdotx/<++>
+date:   2021-01-15T12:48:46+0100
 """
 
 <++>

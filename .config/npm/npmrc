@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/npm/npmrc
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-04-29T10:48:46+0200
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/npm/npmrc
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:57:25+0100
 
 prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm

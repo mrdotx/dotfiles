@@ -1,7 +1,7 @@
-! path:       /home/klassiker/.config/xorg/sxiv
-! author:     klassiker [mrdotx]
-! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-11-15T11:09:00+0100
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/sxiv
+! author: klassiker [mrdotx]
+! github: https://github.com/mrdotx/dotfiles
+! date:   2021-01-15T13:09:24+0100
 
 Sxiv.font:          FONTSMALL
 Sxiv.background:    BLACK0

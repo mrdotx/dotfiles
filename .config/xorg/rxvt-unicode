@@ -1,7 +1,7 @@
-! path:       /home/klassiker/.config/xorg/rxvt-unicode
-! author:     klassiker [mrdotx]
-! github:     https://github.com/mrdotx/dotfiles
-! date:       2020-12-01T14:18:49+0100
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/rxvt-unicode
+! author: klassiker [mrdotx]
+! github: https://github.com/mrdotx/dotfiles
+! date:   2021-01-15T13:09:00+0100
 
 URxvt.font:                 xft:FONT, \
                             xft:FONTFALLBACK, \

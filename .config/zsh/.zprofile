@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/zsh/.zprofile
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-11-08T10:13:23+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zprofile
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:10:30+0100
 
 if systemctl -q is-active multi-user.target \
     && [ ! $DISPLAY ] \

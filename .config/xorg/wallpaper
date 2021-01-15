@@ -1,7 +1,7 @@
-! path:       /home/klassiker/.config/xorg/wallpaper
-! author:     klassiker [mrdotx]
-! github:     https://github.com/mrdotx/dotfiles
-! date:       2021-01-07T10:08:02+0100
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/wallpaper
+! author: klassiker [mrdotx]
+! github: https://github.com/mrdotx/dotfiles
+! date:   2021-01-15T13:09:30+0100
 
 wallpaper.tool:     hsetroot -cover
 wallpaper.uri:      /home/klassiker/Bilder/Wallpaper/Dark_Blue/pcb.jpg

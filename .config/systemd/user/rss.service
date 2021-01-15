@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/systemd/user/rss.service
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-29T15:02:56+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/rss.service
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:07:25+0100
 
 [Unit]
 Description=receive rss feeds with newsboat

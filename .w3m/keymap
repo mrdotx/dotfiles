@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.w3m/keymap
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-30T12:36:53+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.w3m/keymap
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:53:55+0100
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[

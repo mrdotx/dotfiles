@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/systemd/user/polybar.service
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-17T16:29:20+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/polybar.service
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:07:19+0100
 
 [Unit]
 Description=polybar status bars

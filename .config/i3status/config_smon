@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/i3status/config_smon
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-05-22T19:53:51+0200
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_smon
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:56:34+0100
 
 general {
         colors = true

@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.zshenv
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-08T09:10:42+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T12:52:54+0100
 
 # repository paths
 typeset -U PATH path

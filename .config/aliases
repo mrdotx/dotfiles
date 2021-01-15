@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/aliases
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-12-30T11:44:11+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:10:46+0100
 
 # ranger change directory on exit
 ranger_cd() {

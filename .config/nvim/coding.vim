@@ -1,7 +1,7 @@
-" path:       /home/klassiker/.config/nvim/coding.vim
-" author:     klassiker [mrdotx]
-" github:     https://github.com/mrdotx/dotfiles
-" date:       2020-11-02T10:15:03+0100
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
+" author: klassiker [mrdotx]
+" github: https://github.com/mrdotx/dotfiles
+" date:   2021-01-15T12:51:51+0100
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -52,10 +52,10 @@ function! ModDate()
         let n=min([10, line("$")])
         if &ft =~ 'vimwiki\|markdown'
             keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-                \ strftime('              %FT%T%z') . '#e'
+                \ strftime('           %FT%T%z') . '#e'
         else
             keepjumps exe '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-                \ strftime('      %FT%T%z') . '#e'
+                \ strftime('  %FT%T%z') . '#e'
         endif
         call histdel('search', -1)
         call setpos('.', save_cursor)
@@ -68,7 +68,7 @@ function! ModPath()
         let save_cursor=getpos(".")
         let n=min([10, line("$")])
         keepjumps exe '1,' . n . 's#^\(.\{,4}path: \).*#\1' .
-            \ '      ' . expand('%:p') . '#e'
+            \ '  ' . expand('%:p') . '#e'
         call histdel('search', -1)
         call setpos('.', save_cursor)
     endif

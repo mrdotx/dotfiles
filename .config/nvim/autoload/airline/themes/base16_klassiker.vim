@@ -1,7 +1,7 @@
-" path:       /home/klassiker/.config/nvim/autoload/airline/themes/base16_klassiker.vim
-" author:     klassiker [mrdotx]
-" github:     https://github.com/mrdotx/dotfiles
-" date:       2020-06-12T18:59:05+0200
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/autoload/airline/themes/base16_klassiker.vim
+" author: klassiker [mrdotx]
+" github: https://github.com/mrdotx/dotfiles
+" date:   2021-01-15T12:49:38+0100
 
 let s:gui00 = "#1f2022"
 let s:gui01 = "#282828"

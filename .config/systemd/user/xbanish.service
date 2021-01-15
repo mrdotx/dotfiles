@@ -1,7 +1,7 @@
-# path:       /home/klassiker/.config/systemd/user/xbanish.service
-# author:     klassiker [mrdotx]
-# github:     https://github.com/mrdotx/dotfiles
-# date:       2020-10-29T14:53:44+0100
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/xbanish.service
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-01-15T13:08:01+0100
 
 [Unit]
 Description=xbanish to remove mouse cursor on keypress
