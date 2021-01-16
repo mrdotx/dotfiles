@@ -1,14 +1,12 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/syntastic.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-16T12:42:32+0100
+" date:   2021-01-16T12:50:11+0100
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
-
-let g:syntastic_c_checkers = ['clang_check', 'gcc']
 
 " location list toggle
 command! LToggle call s:LListToggle()
