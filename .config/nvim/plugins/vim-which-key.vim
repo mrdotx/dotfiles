@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:51:15+0100
+" date:   2021-01-16T12:17:02+0100
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -25,10 +25,13 @@ call which_key#register(' ', "g:space_dict")
 " description dictionary mappings
 let g:comma_dict = {
     \ 'name': 'main',
-    \ ',': [':call ToggleNetrw()'       ,'netrw file explorer'],
+    \ ',': [':call NetrwToggle()'       ,'netrw file explorer'],
     \ 'SPC': [':nohlsearch'             ,'reset search highlighting'],
     \ '[': ['<Plug>(GitGutterPrevHunk)' ,'goto previous changed git hunk'],
     \ ']': ['<Plug>(GitGutterNextHunk)' ,'goto next changed git hunk'],
+    \ '.': [':LToggle' ,'toggle location list'],
+    \ ';': [':lprev' ,'goto previous location'],
+    \ '''': [':lnext' ,'goto next location'],
     \ 'b': {
         \ 'name': '+buffer',
         \ '/': [':buffers'      ,'buffer list'],
