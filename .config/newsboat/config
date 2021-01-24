@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T12:57:09+0100
+# date:   2021-01-24T21:34:05+0100
 
 # general
 auto-reload no
@@ -11,6 +11,7 @@ prepopulate-query-feeds yes
 show-read-feeds yes
 keep-articles-days 30
 cleanup-on-quit yes
+scrolloff 5
 
 browser "link_handler.sh %u"
 player "mpv --no-audio-display"

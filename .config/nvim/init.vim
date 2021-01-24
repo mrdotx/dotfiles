@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:51:59+0100
+" date:   2021-01-24T21:42:55+0100
 
 " leader keys
 let mapleader=","                   " leader key for global plugins
@@ -33,6 +33,7 @@ set showcmd                         " show command in bottom bar
 set showmatch                       " highlight matching [{()}]
 "set cursorline                     " highlight current line
 "set cursorcolumn                   " highlight current column
+set scrolloff=5                     " number of lines to retain on top/bottom
 set nocompatible                    " to ward off unexpected things
 set wildmenu                        " visual autocomplete for command menu
 set wildmode=longest,list,full
