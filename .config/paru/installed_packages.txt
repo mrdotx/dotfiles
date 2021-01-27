@@ -37,14 +37,13 @@ device-mapper
 diffutils
 dmidecode
 dosfstools
-downgrade
 dragon-drag-and-drop-git
 dunst
 e2fsprogs
 efibootmgr
 eslint
 ethtool
-exfat-utils
+exfatprogs
 fakeroot
 ffmpeg
 ffmpegthumbnailer
@@ -210,7 +209,6 @@ sweethome3d
 sxiv
 sysbench
 sysfsutils
-systemd-fsck-silent
 systemd-sysvcompat
 tar
 task-spooler
