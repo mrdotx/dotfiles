@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-24T21:42:55+0100
+" date:   2021-01-30T09:17:38+0100
 
 " leader keys
 let mapleader=","                   " leader key for global plugins
@@ -22,6 +22,7 @@ hi FoldedColumn guibg=NONE
 
 " ui config
 set clipboard+=unnamedplus          " clipboard
+set noswapfile                      " swapfile
 set number relativenumber           " show hybrid line numbers and numbertoggle
     augroup numbertoggle
         autocmd!
