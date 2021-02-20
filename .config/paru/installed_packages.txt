@@ -120,8 +120,6 @@ licenses
 linux-ck-skylake
 linux-ck-skylake-headers
 linux-firmware
-linux510
-linux510-headers
 linux511
 linux511-headers
 linux54
