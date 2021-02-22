@@ -13,6 +13,7 @@ atomicparsley
 autoconf
 automake
 avahi
+avrdude
 bash
 bash-language-server
 binutils
