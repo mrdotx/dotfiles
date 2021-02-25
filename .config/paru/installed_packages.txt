@@ -5,6 +5,7 @@ alsa-plugins
 alsa-utils
 arc-gtk-theme
 arc-icon-theme-full-git
+arduino-avr-core
 aria2
 aspell-de
 aspell-en
@@ -13,7 +14,6 @@ atomicparsley
 autoconf
 automake
 avahi
-avrdude
 bash
 bash-language-server
 binutils
