@@ -99,9 +99,10 @@ iwd
 jameica
 keepassxc
 kid3-qt
-kodi
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
+kodi-gbm
+kodi-wayland
 kvantum-qt5
 less
 lib32-libva-vdpau-driver
@@ -188,7 +189,6 @@ python-pip
 python-pycryptodome
 python-pylint
 python-readability-lxml
-python2-pillow
 qt5ct
 ranger
 rclone
