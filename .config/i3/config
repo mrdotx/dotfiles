@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-02-27T15:31:55+0100
+# date:   2021-03-02T11:16:43+0100
 
 # general
 #########
@@ -394,6 +394,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
 bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
 bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
+bindsym XF86TouchpadToggle exec --no-startup-id "touchpad_toggle.sh"
 bindsym XF86Cut exec --no-startup-id "polybar.sh -r"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 
