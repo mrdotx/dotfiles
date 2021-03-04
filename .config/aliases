@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-03T22:10:05+0100
+# date:   2021-03-04T08:17:37+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -46,7 +46,7 @@ alias \
     rs='doas ranger' \
     nb='polybar_rss.sh --open' \
     calc='bc -q' \
-    cl='clear && cinfo' \
+    cl='clear; cinfo' \
     nf='neofetch' \
     we='weechat' \
     bt='bpytop'
@@ -59,6 +59,7 @@ alias \
 
 # maintenance
 alias \
+    kb='xset r rate 200 50; setxkbmap -model pc105 -layout us,de -option grp:caps_switch' \
     ch='systemctl --failed; journalctl -p 3 -xb' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
