@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-06T08:34:19+0100
+# date:   2021-03-06T19:36:08+0100
 
 # general
 #########
@@ -91,7 +91,6 @@ workspace $ws0 output $mon2 $mon1
 for_window [title="LibreOffice"] $move
 
 # floating applications
-for_window [floating] $size, $move
 for_window [title="floating$"] $float, $size, $move
 
 for_window [title="^alsamixer$"] $float, $move
