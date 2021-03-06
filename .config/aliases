@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/aliases
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-04T08:17:37+0100
+# date:   2021-03-06T08:52:26+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -54,7 +54,7 @@ alias \
 # services
 alias \
     wt='curl -H "Accept-Language: de" wttr.in' \
-    cv25='curl "https://corona-stats.online?top=25&source=2&minimal=true"' \
+    cv='curl "https://corona-stats.online?top=25&source=2&minimal=true"' \
     sw='telnet towel.blinkenlights.nl'
 
 # maintenance
