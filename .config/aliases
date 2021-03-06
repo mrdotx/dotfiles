@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-06T08:52:26+0100
+# date:   2021-03-06T19:26:35+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -59,7 +59,6 @@ alias \
 
 # maintenance
 alias \
-    kb='xset r rate 200 50; setxkbmap -model pc105 -layout us,de -option grp:caps_switch' \
     ch='systemctl --failed; journalctl -p 3 -xb' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
