@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-07T08:49:23+0100
+# date:   2021-03-07T13:24:29+0100
 
 # general
 #########
@@ -93,6 +93,7 @@ for_window [title="LibreOffice"] $move
 # floating applications
 for_window [title="floating$"] $float, $size, $move
 
+for_window [title="^cmus$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [title="^alsamixer$"] $float, $move
 for_window [title="^calculator$"] $float, $size, $move
 for_window [title="^cdw$"] $float, $size, $move
@@ -413,7 +414,7 @@ bindsym $sup+Shift+Return exec --no-startup-id "$TERMINAL -T 'urxvt floating'"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 5 'cmus' 'cmus && polybar-msg hook module/music 1'" workspace $ws3
+bindsym $sup+c exec --no-startup-id "if pgrep -x cmus; then i3-msg [title='^cmus$'] scratchpad show; else $TERMINAL -T cmus -e polybar_music.sh --start; fi"
 bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
 bindsym $sup+d exec "darktable" workspace $ws5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
@@ -426,8 +427,8 @@ bindsym $sup+k exec --no-startup-id "if pgrep -x keepassxc; then i3-msg [class='
 bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws10
 bindsym $sup+m exec "thunderbird" workspace $ws7
 bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws10
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 3 'newsboat' 'polybar_rss.sh --open'" workspace $ws3
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 4 'podboat'" workspace $ws3
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 4 'newsboat' 'polybar_rss.sh --open'" workspace $ws3
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 5 'podboat'" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
 bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 2 $FILE" workspace $ws3
 bindsym $sup+s exec "scribus" workspace $ws6
