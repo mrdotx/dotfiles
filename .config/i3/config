@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-07T13:24:29+0100
+# date:   2021-03-08T12:03:12+0100
 
 # general
 #########
@@ -221,23 +221,18 @@ mode "container" {
     bindsym equal gaps inner current set $gapin
 
     # toggle sticky
-    bindsym s sticky toggle; \
-        exec --no-startup-id "notify-send 'i3 container mode' 'toggle sticky'"
+    bindsym s sticky toggle
 
     # move the currently focused window to the scratchpad
-    bindsym m move scratchpad; \
-        exec --no-startup-id "notify-send 'i3 container mode' 'move to scratchpad'"
+    bindsym m move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym c scratchpad show; \
-        exec --no-startup-id "notify-send 'i3 container mode' 'cycle scratchpad'"
+    bindsym c scratchpad show
 
     # split orientation
-    bindsym h split horizontal; \
-        exec --no-startup-id "notify-send 'i3 container mode' 'tile horizontal'"
-    bindsym v split vertical; \
-        exec --no-startup-id "notify-send 'i3 container mode' 'tile vertical'"
+    bindsym h split horizontal
+    bindsym v split vertical
 
     # back to default mode
     bindsym q mode "default"; \
