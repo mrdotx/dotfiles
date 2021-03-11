@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-10T15:35:30+0100
+# date:   2021-03-10T23:01:43+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -50,12 +50,6 @@ alias \
     nf='neofetch' \
     we='weechat' \
     bt='bpytop'
-
-# services
-alias \
-    wt='curl -H "Accept-Language: de" wttr.in' \
-    cv='curl "https://corona-stats.online?top=25&source=2&minimal=true"' \
-    sw='telnet towel.blinkenlights.nl'
 
 # maintenance
 alias \
