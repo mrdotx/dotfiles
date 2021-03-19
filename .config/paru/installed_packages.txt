@@ -208,7 +208,6 @@ speedtest-cli
 splix
 sweethome3d
 sxiv
-sysbench
 sysfsutils
 systemd-sysvcompat
 tar
