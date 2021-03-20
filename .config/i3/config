@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-09T08:43:36+0100
+# date:   2021-03-20T12:46:54+0100
 
 # general
 #########
@@ -121,7 +121,7 @@ assign [class="^Darktable$"] $ws5
 assign [title="^LibreOffice$"] $ws6
 assign [class="libreoffice"] $ws6
 assign [class="^scribus$"] $ws6
-assign [class="^Thunderbird$"] $ws7
+assign [title="Mozilla Thunderbird$"] $ws7
 assign [class="^Jameica"] $ws8
 assign [class="^VirtualBox"] $ws9
 assign [class="^Kodi$"] $ws0
@@ -419,9 +419,8 @@ bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 8 'hermes' 'ssh hermes'" work
 bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 9 'prometheus' 'ssh prometheus'" workspace $ws3
 bindsym $sup+j exec "jameica" workspace $ws8
 bindsym $sup+k exec --no-startup-id "if pgrep -x keepassxc; then i3-msg [class='^KeePassXC$'] scratchpad show; else sync_keepass.sh && keepassxc && sync_keepass.sh; fi"
-bindsym $sup+Shift+k exec --no-startup-id "kodi" workspace $ws10
 bindsym $sup+m exec "thunderbird" workspace $ws7
-bindsym $sup+Shift+m exec "minetest --logfile ''" workspace $ws10
+bindsym $sup+Shift+m exec "thunderbird -compose"
 bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 4 'newsboat' 'polybar_rss.sh --open'" workspace $ws3
 bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 5 'podboat'" workspace $ws3
 bindsym $sup+o exec "libreoffice" workspace $ws6
