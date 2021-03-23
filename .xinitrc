@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-23T08:21:27+0100
+# date:   2021-03-23T11:39:32+0100
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
@@ -32,9 +32,6 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     export SSH_AUTH_SOCK
 fi
 
-# set default screen layout
-screenlayout.sh
-
 # set default audio volume
 audio.sh -abs 36
 
@@ -44,6 +41,9 @@ session="${1:-i3}"
     && case "$session" in
         i3)
             exec i3
+            ;;
+        kodi)
+            exec kodi-standalone
             ;;
         *)
             exec "$1"
