@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.xinitrc
+# path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-23T12:14:24+0100
+# date:   2021-03-23T15:04:59+0100
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
@@ -23,13 +23,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
             && . "$f"
     done
     unset f
-fi
-
-# gnupg ssh agent support
-unset SSH_AGENT_PID
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-    SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-    export SSH_AUTH_SOCK
 fi
 
 # start window manager
