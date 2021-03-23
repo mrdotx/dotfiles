@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T12:53:03+0100
+# date:   2021-03-23T08:21:27+0100
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
@@ -31,14 +31,6 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     export SSH_AUTH_SOCK
 fi
-
-# keyboard settings
-setxkbmap -model pc105 -layout us,de -option grp:caps_switch
-xset r rate 200 50
-
-# touchpad settings
-xinput --set-prop 'Synaptics TM3242-001' 'libinput Tapping Enabled' 0
-xinput --set-prop 'Synaptics TM3242-001' 'libinput Natural Scrolling Enabled' 1
 
 # set default screen layout
 screenlayout.sh
