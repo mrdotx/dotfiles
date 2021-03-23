@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
+# path:   /home/klassiker/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-23T11:39:32+0100
+# date:   2021-03-23T12:14:24+0100
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
@@ -31,9 +31,6 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     export SSH_AUTH_SOCK
 fi
-
-# set default audio volume
-audio.sh -abs 36
 
 # start window manager
 session="${1:-i3}"
