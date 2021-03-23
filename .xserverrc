@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# path:   /home/klassiker/.local/share/repos/dotfiles/.xserverrc
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-03-23T08:14:10+0100
+
+exec /usr/bin/X -nolisten tcp -ardelay 200 -arinterval 20 "$@"
