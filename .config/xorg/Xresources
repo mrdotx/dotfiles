@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-01-15T13:09:59+0100
+! date:   2021-03-25T07:54:29+0100
 
 /* theme colors */
 #define BLACK0T             #e6000000
@@ -63,5 +63,6 @@
 #include "polybar"
 #include "rxvt-unicode"
 #include "dmenu"
+#include "tabbed"
 #include "slock"
 #include "st"
