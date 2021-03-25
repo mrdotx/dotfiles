@@ -84,7 +84,7 @@ highlight
 hsetroot
 htop
 hunspell-de
-hunspell-en_US
+hunspell-en_us
 hyphen-de
 hyphen-en
 inetutils
