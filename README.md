@@ -13,6 +13,7 @@ found in my other repositories.
 | conky             | infotainment system monitor                        |
 | dunst             | notification daemon                                |
 | highlight         | a universal sourcecode to formatted text converter |
+| htop              | interactive process viewer                         |
 | i3                | tiling window manager                              |
 | i3status          | status line for i3bar                              |
 | libinput-gestures | gestures on touchpad via libinput                  |
