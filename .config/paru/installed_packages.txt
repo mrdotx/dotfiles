@@ -122,12 +122,12 @@ licenses
 linux-ck-skylake
 linux-ck-skylake-headers
 linux-firmware
+linux510
+linux510-headers
 linux511
 linux511-headers
 linux512
 linux512-headers
-linux54
-linux54-headers
 logrotate
 lsb-release
 lxappearance
