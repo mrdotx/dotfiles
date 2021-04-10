@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-20T12:46:54+0100
+# date:   2021-04-10T20:23:21+0200
 
 # general
 #########
@@ -361,6 +361,9 @@ mode "services" {
 
     # resolver disable/enable
     bindsym s exec --no-startup-id "i3_services.sh --resolver"
+
+    # ssh disable/enable
+    bindsym h exec --no-startup-id "i3_services.sh --ssh"
 
     # tiling disable/enable
     bindsym t exec --no-startup-id "i3_services.sh --tiling"
