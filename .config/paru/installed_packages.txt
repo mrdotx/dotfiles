@@ -254,7 +254,6 @@ inxi
 iproute2
 iptables
 iputils
-irqbalance
 irrlicht
 iso-codes
 iw
@@ -665,7 +664,6 @@ nspr
 nss
 nss-mdns
 ntfs-3g
-numactl
 ocl-icd
 odt2txt
 openal

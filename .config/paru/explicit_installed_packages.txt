@@ -95,7 +95,6 @@ inxi
 iproute2
 iptables
 iputils
-irqbalance
 iwd
 jameica
 keepassxc
