@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-03-29T20:25:59+0200
+# date:   2021-04-20T16:32:05+0200
 
 # repository paths
 typeset -U PATH path
@@ -11,6 +11,7 @@ path=( \
     "$HOME/.local/share/repos/compressor" \
     "$HOME/.local/share/repos/conky" \
     "$HOME/.local/share/repos/dmenu/scripts" \
+    "$HOME/.local/share/repos/efistub" \
     "$HOME/.local/share/repos/fzf" \
     "$HOME/.local/share/repos/i3" \
     "$HOME/.local/share/repos/link-handler" \
