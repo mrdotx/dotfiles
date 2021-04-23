@@ -126,6 +126,8 @@ linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
 linux510
 linux510-headers
+linux511
+linux511-headers
 linux512
 linux512-headers
 logrotate
