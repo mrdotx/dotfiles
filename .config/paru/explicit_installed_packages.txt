@@ -122,8 +122,8 @@ licenses
 linux-ck-skylake
 linux-ck-skylake-headers
 linux-firmware
-linux5.11.15.zen1-2-zen-bin
-linux5.11.15.zen1-2-zen-headers-bin
+linux-zen-versioned-bin
+linux-zen-versioned-headers-bin
 linux510
 linux510-headers
 linux512
