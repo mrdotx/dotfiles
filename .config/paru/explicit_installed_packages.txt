@@ -96,7 +96,6 @@ iproute2
 iptables
 iputils
 iwd
-jameica
 keepassxc
 kid3-qt
 kodi-addon-pvr-iptvsimple

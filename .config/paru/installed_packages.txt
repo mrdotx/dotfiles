@@ -262,10 +262,8 @@ jack
 jameica
 jansson
 jasper
-java-environment-common
 java-runtime-common
 jbig2dec
-jdk8-openjdk
 jre-openjdk
 jre-openjdk-headless
 jre8-openjdk
@@ -771,7 +769,6 @@ powertop
 procps-ng
 psmisc
 pstoedit
-pth
 pugixml
 python
 python-appdirs
@@ -901,7 +898,6 @@ suitesparse
 svt-av1
 svt-hevc
 sweethome3d
-swt
 sxiv
 sysfsutils
 systemd
@@ -1006,7 +1002,6 @@ xf86-input-wacom
 xf86-video-fbdev
 xf86-video-intel
 xf86-video-vesa
-xine-lib
 xkeyboard-config
 xmlsec
 xorg-fonts-alias-misc
