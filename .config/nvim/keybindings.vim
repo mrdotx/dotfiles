@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-04-20T14:39:57+0200
+" date:   2021-04-25T16:52:19+0200
 
 " switch/exchange windows
 nnoremap                <tab>           <c-w>w
@@ -34,6 +34,9 @@ nnoremap    <silent>    <leader>s       :vs term://shellcheck -x -s sh %<cr>
 nnoremap    <silent>    <leader>de      :setlocal spell! spelllang=en_us<cr>
 nnoremap    <silent>    <leader>dg      :setlocal spell! spelllang=de_de<cr>
 nnoremap    <silent>    <leader>dx      :setlocal spell! spelllang=en_us,de_de<cr>
+
+" terminal
+nnoremap                <leader>t       :vs term://%
 
 " replace
 nnoremap                <leader>r       :%s///gc<left><left><left>

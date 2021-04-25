@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-16T12:17:02+0100
+" date:   2021-04-25T16:58:47+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -61,7 +61,8 @@ let g:comma_dict = {
     \ 'l': [':set list! list?'                  ,'toggle control characters'],
     \ 'r': [':%s///gc<left><left><left>'        ,'replace'],
     \ 'S': [':SyntasticToggleMode'              ,'syntastic'],
-    \ 's': [':vs term://shellcheck -s sh %'     ,'shell check posix'],
+    \ 's': [':vs term://shellcheck -x -s sh %'  ,'shell check posix'],
+    \ 't': [':vs term://%'                      ,'terminal'],
     \ 'w': {
         \ 'name': '+vimwiki',
         \ ',': {
