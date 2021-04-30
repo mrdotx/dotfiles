@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-04-30T09:18:30+0200
+# date:   2021-04-30T10:00:26+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -30,7 +30,7 @@ alias \
     watch='watch --color' \
     ncdu='ncdu --color dark' \
     tree='tree -C' \
-    kmon='doas kmon -a #7ef9ff -c #4185d7'
+    kmon='$EXEC_AS_USER kmon -a #7ef9ff -c #4185d7'
 
 # navigation
 alias \
@@ -46,7 +46,7 @@ alias \
     tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
     tx='i3_tmux.sh' \
     rg='ranger_cd' \
-    rs='doas ranger' \
+    rs='$EXEC_AS_USER ranger' \
     nb='polybar_rss.sh --open' \
     calc='bc -q' \
     cl='clear; cinfo'
@@ -59,7 +59,7 @@ alias \
     sc='system_cleanup.sh' \
     bu='backup.sh' \
     buu='backup_usb.sh' \
-    dm='doas delete_metafiles.sh' \
+    dm='$EXEC_AS_USER delete_metafiles.sh' \
     fm='fzf_man.sh' \
     fp='fzf_pacman.sh' \
     ft='fzf_trash.sh'
