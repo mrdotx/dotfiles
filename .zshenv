@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-04-20T16:32:05+0200
+# date:   2021-04-30T09:59:38+0200
 
 # repository paths
 typeset -U PATH path
@@ -85,7 +85,8 @@ export \
     FILE="ranger" \
     PAGER="less" \
     READER="zathura" \
-    BROWSER="w3m.sh"
+    BROWSER="w3m.sh" \
+    EXEC_AS_USER="doas"
 
 # history (same functionality as bash)
 export \
