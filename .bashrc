@@ -1,7 +1,9 @@
+# shellcheck shell=bash
+
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T12:53:28+0100
+# date:   2021-04-30T08:55:37+0200
 
 # if shell is not running interactive, break up
 tty -s \
