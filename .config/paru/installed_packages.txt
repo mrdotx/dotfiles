@@ -282,6 +282,7 @@ kid3-common
 kid3-qt
 kitemmodels
 kmod
+kmon
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
 kodi-common
@@ -884,6 +885,7 @@ sound-theme-freedesktop
 soundtouch
 spandsp
 spatialindex
+spectre-meltdown-checker
 speedtest-cli
 speex
 speexdsp

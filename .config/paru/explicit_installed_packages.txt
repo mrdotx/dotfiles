@@ -98,6 +98,7 @@ iputils
 iwd
 keepassxc
 kid3-qt
+kmon
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
 kodi-gbm
@@ -207,6 +208,7 @@ shellcheck-bin
 simple-mtpfs
 simple-scan
 smartmontools
+spectre-meltdown-checker
 speedtest-cli
 splix
 sweethome3d
