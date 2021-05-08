@@ -140,7 +140,6 @@ make
 man-db
 man-pages
 manjaro-release
-manjaro-settings-manager
 manjaro-system
 mesa-demos
 mesa-vdpau
@@ -172,7 +171,6 @@ pam-gnupg
 pandoc-bin
 paru-bin
 patch
-patchutils
 pciutils
 perl
 perl-file-mimeinfo
