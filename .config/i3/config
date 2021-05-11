@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-11T19:52:03+0200
+# date:   2021-05-03T19:40:38+0200
 
 # general
 #########
@@ -433,8 +433,6 @@ bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Dokumente/Notes/html/index.html"
-bindsym $sup+equal exec --no-startup-id "xrandr --output eDP1 --scale 1x1"
-bindsym $sup+Shift+equal exec --no-startup-id "xrandr --output eDP1 --scale 0.67x0.67"
 
 # start systemd target
 ######################
