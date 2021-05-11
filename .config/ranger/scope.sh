@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T13:02:16+0100
+# date:   2021-05-11T08:47:14+0200
 
 # exit | function   | action of ranger
 
@@ -115,12 +115,34 @@ handle_extension() {
             exit 1
             ;;
         otf | ttf | woff | ttc)
+            preview_text() {
+                line1="ABCDEFGHIJKLM"
+                line2="NOPQRSTUVWXYZ"
+                line3="abcdefghijklm"
+                line4="nopqrstuvwxyz"
+                line5="1234567890"
+                line6="!@$\%(){}[]"
+                printf "%s\n%s\n%s\n%s\n%s\n%s" \
+                    "$line1" "$line2" "$line3" "$line4" "$line5" "$line6"
+            }
+            font_name="$( \
+                fc-list \
+                    | grep "$file_path" \
+                    | cut -d ':' -f2 \
+                    | sed 's/^ //' \
+                    | tail -1 \
+            )"
             convert -size "960x960" xc:"#000000" \
-                -gravity center \
-                -pointsize 72 \
                 -font "$file_path" \
                 -fill "#cccccc" \
-                -annotate +0+0 "ABCDEFGHIJKLM\nNOPQRSTUVWXYZ\nabcdefghijklm\nnopqrstuvwxyz\n1234567890\n!@$\%(){}[]" \
+                -gravity Center \
+                -pointsize 72 \
+                -annotate +0+0 "$(preview_text)" \
+                -font "" \
+                -fill "#4185d7" \
+                -gravity SouthWest \
+                -pointsize 24 \
+                -annotate +0+0 "$font_name" \
                 -flatten "$image_cache_path" \
                     && exit 6
             exit 1
