@@ -3,11 +3,25 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-04-30T08:55:37+0200
+# date:   2021-05-17T17:08:39+0200
 
 # if shell is not running interactive, break up
 tty -s \
     || return
+
+# xhost
+xhost +local:root > /dev/null 2>&1
+
+# SIGWINCH
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# history command configuration
+shopt -s histverify # show command with history expansion to user before running it
+shopt -s histappend # add commands to HISTFILE in order of execution
 
 # aliases
 # expand aliases in non interactive shell
@@ -33,17 +47,3 @@ else
     fi
 fi
 unset use_color
-
-# history command configuration
-shopt -s histverify # show command with history expansion to user before running it
-shopt -s histappend # add commands to HISTFILE in order of execution
-
-# xhost
-xhost +local:root > /dev/null 2>&1
-
-# SIGWINCH
-# Bash won't get SIGWINCH if another process is in the foreground.
-# Enable checkwinsize so that bash will check the terminal size when
-# it regains control.  #65623
-# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
-shopt -s checkwinsize

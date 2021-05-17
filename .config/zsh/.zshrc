@@ -1,11 +1,21 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T13:10:36+0100
+# date:   2021-05-17T17:06:19+0200
 
 # if shell is not running interactive, break up
 tty -s \
     || return
+
+# history command configuration
+# ignore duplicated commands history list
+setopt hist_ignore_dups
+# ignore commands that start with space
+setopt hist_ignore_space
+# show command with history expansion to user before running it
+setopt hist_verify
+# add commands to HISTFILE in order of execution
+setopt inc_append_history
 
 # aliases
 [ -f "$HOME/.config/aliases" ] \
@@ -87,6 +97,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # hidden files
+
 # pip zsh completion
 function _pip_completion {
     local words cword
@@ -98,21 +109,11 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 
-# history command configuration
-# ignore duplicated commands history list
-setopt hist_ignore_dups
-# ignore commands that start with space
-setopt hist_ignore_space
-# show command with history expansion to user before running it
-setopt hist_verify
-# add commands to HISTFILE in order of execution
-setopt inc_append_history
-
-# fuzzy finder
+# fuzzy finder completion
 . /usr/share/fzf/completion.zsh
 . /usr/share/fzf/key-bindings.zsh
 
-# git
+# git completion
 . /usr/share/git/completion/git-prompt.sh
 
 # zsh-autosuggestion
