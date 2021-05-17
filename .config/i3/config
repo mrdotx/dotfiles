@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-17T07:56:44+0200
+# date:   2021-05-17T12:40:01+0200
 
 # general
 #########
@@ -408,8 +408,9 @@ bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 9 'hermes' 'ssh hermes'" work
 bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 10 'prometheus' 'ssh prometheus'" workspace 3
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec --no-startup-id "if pgrep -x keepassxc; then i3-msg [class='^KeePassXC$'] scratchpad show; else sync_keepass.sh && keepassxc && sync_keepass.sh; fi"
+bindsym $sup+Shift+k exec "kodi" workspace 9
 bindsym $sup+m exec "thunderbird" workspace 7
-bindsym $sup+Shift+m exec "thunderbird -compose"
+bindsym $sup+Shift+m exec --no-startup-id "minetest --logfile ''" workspace 10
 bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 5 'newsboat' 'polybar_rss.sh --open'" workspace 3
 bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 6 'podboat'" workspace 3
 bindsym $sup+o exec "libreoffice" workspace 6
