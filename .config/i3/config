@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-17T12:40:01+0200
+# date:   2021-05-17T18:50:13+0200
 
 # general
 #########
@@ -393,7 +393,7 @@ bindsym $sup+Shift+Print --release exec --no-startup-id "screenshot.sh -select"
 ##########################
 
 bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "$TERMINAL -T 'urxvt floating'"
+bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 1 'shell'" workspace 3
 bindsym $sup+Ctrl+Return exec --no-startup-id "$TERMINAL_BACKUP"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
