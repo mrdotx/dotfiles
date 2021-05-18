@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-17T17:08:39+0200
+# date:   2021-05-18T09:07:51+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -24,9 +24,6 @@ shopt -s histverify # show command with history expansion to user before running
 shopt -s histappend # add commands to HISTFILE in order of execution
 
 # aliases
-# expand aliases in non interactive shell
-shopt -s expand_aliases
-# shellcheck disable=SC1090
 [ -f "$HOME/.config/aliases" ] \
     && . "$HOME/.config/aliases"
 
