@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-18T20:51:39+0200
+# date:   2021-05-19T17:52:08+0200
 
 # general
 #########
@@ -331,6 +331,9 @@ mode "services" {
     # gestures disable/enable
     bindsym g exec --no-startup-id "i3_services.sh --gestures"
 
+    # ssh disable/enable
+    bindsym h exec --no-startup-id "i3_services.sh --ssh"
+
     # autolock disable/enable
     bindsym l exec --no-startup-id "i3_services.sh --autolock"
 
@@ -346,11 +349,11 @@ mode "services" {
     # resolver disable/enable
     bindsym s exec --no-startup-id "i3_services.sh --resolver"
 
-    # ssh disable/enable
-    bindsym h exec --no-startup-id "i3_services.sh --ssh"
-
     # tiling disable/enable
     bindsym t exec --no-startup-id "i3_services.sh --tiling"
+
+    # urxvtd kill
+    bindsym u exec --no-startup-id "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
 
     # vpn disable/enable
     bindsym v exec --no-startup-id "i3_services.sh --vpn"
