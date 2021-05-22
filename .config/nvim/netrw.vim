@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/netrw.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:52:16+0100
+" date:   2021-05-22T09:21:17+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -10,6 +10,8 @@ let g:netrw_altv=1
 let g:netrw_winsize=-28
 let g:netrw_sort_sequence='[\/]$,*'
 let g:netrw_ftp_cmd='ftp -p'
+let g:netrw_localcopydircmd='cp -r'
+let g:netrw_keepdir=0
 let g:netrw_dirhistmax=0
 let g:netrw_is_open=0
 
