@@ -1,11 +1,13 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-30T09:17:38+0100
+" date:   2021-05-22T11:28:17+0200
+
+let g:inits_config_folder='~/.config/nvim/'
 
 " leader keys
-let mapleader=","                   " leader key for global plugins
-let maplocalleader="\<space>"       " leader key for filetype plugins
+let mapleader=','                   " leader key for global plugins
+let maplocalleader='\<space>'       " leader key for filetype plugins
 
 " mouse
 set mouse=a
@@ -78,8 +80,17 @@ augroup encrypt
     autocmd BufWritePost,FileWritePost *.gpg u
 augroup END
 
-" source configs
-source ~/.config/nvim/plugins.vim
-source ~/.config/nvim/netrw.vim
-source ~/.config/nvim/coding.vim
-source ~/.config/nvim/keybindings.vim
+" if config exists source init file
+function! IfConfigExists(action, file)
+    let l:config=g:inits_config_folder . a:file
+    if !empty(glob(config))
+        exe a:action l:config
+    else
+        echo a.file . " not found\n"
+    endif
+endfunction
+
+call IfConfigExists('source', 'plugins.vim')
+call IfConfigExists('source', 'netrw.vim')
+call IfConfigExists('source', 'coding.vim')
+call IfConfigExists('source', 'keybindings.vim')
