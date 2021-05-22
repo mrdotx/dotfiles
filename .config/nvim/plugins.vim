@@ -1,7 +1,10 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:52:26+0100
+" date:   2021-05-22T11:50:45+0200
+
+let g:plugged_folder='~/.local/share/nvim/plugged/'
+let g:plugged_config_folder='~/.config/nvim/plugins/'
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -11,7 +14,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 " plugins
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin(g:plugged_folder)
     Plug 'vim-airline/vim-airline'
     Plug 'junegunn/goyo.vim'
     Plug 'norcalli/nvim-colorizer.lua'
@@ -24,14 +27,34 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
-" plugin configs
-source ~/.config/nvim/plugins/vim-airline.vim
-source ~/.config/nvim/plugins/goyo.vim
-luafile ~/.config/nvim/plugins/nvim-colorizer.lua
-source ~/.config/nvim/plugins/vim-which-key.vim
-source ~/.config/nvim/plugins/indentLine.vim
-source ~/.config/nvim/plugins/vim-commentary.vim
-source ~/.config/nvim/plugins/vim-gitgutter.vim
-source ~/.config/nvim/plugins/syntastic.vim
-source ~/.config/nvim/plugins/coc.nvim.vim
-source ~/.config/nvim/plugins/vimwiki.vim
+" if plugin exists source config file
+function! IfPluginExists(action, plugin_name)
+    let l:plugin=g:plugged_folder . a:plugin_name
+    let l:config_name=split(a:plugin_name, '\.')
+    let l:config=g:plugged_config_folder . l:config_name[0]
+    if a:action=='luafile'
+        let l:config=l:config . '.lua'
+    else
+        let l:config=l:config . '.vim'
+    endif
+    if !empty(glob(l:plugin))
+        if !empty(glob(l:config))
+            exe a:action l:config
+        else
+            echo l:config . " not found\n"
+        endif
+    else
+        echo l:plugin . " not found\n"
+    endif
+endfunction
+
+call IfPluginExists('source', 'vim-airline')
+call IfPluginExists('source', 'goyo.vim')
+call IfPluginExists('luafile', 'nvim-colorizer.lua')
+call IfPluginExists('source', 'vim-which-key')
+call IfPluginExists('source', 'indentLine')
+call IfPluginExists('source', 'vim-commentary')
+call IfPluginExists('source', 'vim-gitgutter')
+call IfPluginExists('source', 'syntastic')
+call IfPluginExists('source', 'coc.nvim')
+call IfPluginExists('source', 'vimwiki')
