@@ -1,7 +1,9 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:51:51+0100
+" date:   2021-05-22T17:44:49+0200
+
+let g:template_folder='~/.config/nvim/templates/'
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -30,15 +32,27 @@ autocmd BufNewFile,BufRead *.py call AutoPy()
 " get correct comment highlighting for json
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" templates
+" use template for specific file types when creating new file
+function! NewTemplate(file_type)
+    let l:template='autocmd BufNewFile *'
+        \. a:file_type
+        \. ' 0r '
+        \. g:template_folder
+        \. 'skeleton'
+        \. a:file_type
+        \. ' | startinsert'
+        \. ' | inoremap <space><space> <esc>/<++><enter>"_c4l'
+    exe l:template
+endfunction
+
 if has("autocmd")
     augroup templates
-        autocmd BufNewFile *.md 0r $HOME/.config/nvim/templates/skeleton.md
-        autocmd BufNewFile *.sh 0r $HOME/.config/nvim/templates/skeleton.sh
-        autocmd BufNewFile *.py 0r $HOME/.config/nvim/templates/skeleton.py
-        autocmd BufNewFile *.c 0r $HOME/.config/nvim/templates/skeleton.c
-        autocmd BufNewFile *.md,*.sh,*.py,*.c inoremap <space><space> <esc>/<++><enter>"_c4l
-        autocmd BufNewFile *.md,*.sh,*.py,*.c startinsert
+        call NewTemplate('.c')
+        call NewTemplate('.lua')
+        call NewTemplate('.md')
+        call NewTemplate('.py')
+        call NewTemplate('.sh')
+        call NewTemplate('.vim')
     augroup END
 endif
 
@@ -60,7 +74,7 @@ function! ModDate()
         call histdel('search', -1)
         call setpos('.', save_cursor)
     endif
-endfun
+endfunction
 autocmd BufWritePre * call ModDate()
 
 function! ModPath()
@@ -72,5 +86,5 @@ function! ModPath()
         call histdel('search', -1)
         call setpos('.', save_cursor)
     endif
-endfun
+endfunction
 autocmd BufWritePre * call ModPath()
