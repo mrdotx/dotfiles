@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-22T17:44:49+0200
+" date:   2021-05-22T19:57:48+0200
 
 let g:template_folder='~/.config/nvim/templates/'
 
@@ -33,26 +33,32 @@ autocmd BufNewFile,BufRead *.py call AutoPy()
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " use template for specific file types when creating new file
-function! NewTemplate(file_type)
-    let l:template='autocmd BufNewFile *'
-        \. a:file_type
-        \. ' 0r '
-        \. g:template_folder
-        \. 'skeleton'
-        \. a:file_type
-        \. ' | startinsert'
-        \. ' | inoremap <space><space> <esc>/<++><enter>"_c4l'
-    exe l:template
+function! NewTemplate(file_name, file_types)
+    for file_type in a:file_types
+        let l:template='autocmd BufNewFile *.'
+            \. file_type
+            \. ' 0r '
+            \. g:template_folder
+            \. a:file_name
+            \. '.'
+            \. file_type
+            \. ' | startinsert'
+            \. ' | inoremap <space><space> <esc>/<++><enter>"_c4l'
+        exe l:template
+    endfor
 endfunction
 
 if has("autocmd")
     augroup templates
-        call NewTemplate('.c')
-        call NewTemplate('.lua')
-        call NewTemplate('.md')
-        call NewTemplate('.py')
-        call NewTemplate('.sh')
-        call NewTemplate('.vim')
+        let file_types=[
+            \ 'c',
+            \ 'lua',
+            \ 'md',
+            \ 'py',
+            \ 'sh',
+            \ 'vim'
+            \ ]
+        call NewTemplate('skeleton', file_types)
     augroup END
 endif
 
