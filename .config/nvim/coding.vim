@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T18:29:06+0200
+" date:   2021-05-23T19:22:40+0200
 
 let g:template_folder='~/.config/nvim/templates/'
 
@@ -36,14 +36,14 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 function! NewTemplate(file_name, file_types)
     for file_type in a:file_types
         let l:template='autocmd BufNewFile *.'
-            \. file_type
-            \. ' 0r '
-            \. g:template_folder
-            \. a:file_name
-            \. '.'
-            \. file_type
-            \. ' | startinsert'
-            \. ' | inoremap <space><space> <esc>/<++><enter>"_c4l'
+            \ .file_type
+            \ .' 0r '
+            \ .g:template_folder
+            \ .a:file_name
+            \ .'.'
+            \ .file_type
+            \ .' | startinsert'
+            \ .' | inoremap <space><space> <esc>/<++><enter>"_c4l'
         execute l:template
     endfor
 endfunction
