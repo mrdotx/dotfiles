@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-22T19:56:12+0200
+" date:   2021-05-23T09:03:23+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/plugins/'
@@ -19,6 +19,7 @@ call plug#begin(g:plugged_folder)
     Plug 'junegunn/goyo.vim'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'liuchengxu/vim-which-key'
+    Plug 'alvan/vim-closetag'
     Plug 'Yggdroot/indentLine'
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
@@ -57,6 +58,7 @@ let vim_plugin_names=[
     \ 'vim-airline',
     \ 'goyo.vim',
     \ 'vim-which-key',
+    \ 'vim-closetag',
     \ 'indentLine',
     \ 'vim-commentary',
     \ 'vim-gitgutter',
