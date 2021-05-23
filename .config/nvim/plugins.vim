@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T13:31:48+0200
+" date:   2021-05-23T18:24:50+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/plugins/'
@@ -31,22 +31,22 @@ call plug#end()
 " if plugin folder exists source config file
 function! IfPluginExists(action, plugin_names)
     for plugin_name in a:plugin_names
-        let l:plugin=g:plugged_folder . plugin_name
+        let l:plugin=g:plugged_folder.plugin_name
         let l:config_name=split(plugin_name, '\.')
-        let l:config=g:plugged_config_folder . l:config_name[0]
+        let l:config=g:plugged_config_folder.l:config_name[0]
         if a:action=='luafile'
-            let l:config=l:config . '.lua'
+            let l:config=l:config.'.lua'
         else
-            let l:config=l:config . '.vim'
+            let l:config=l:config.'.vim'
         endif
         if !empty(glob(l:plugin))
             if !empty(glob(l:config))
                 execute a:action l:config
             else
-                echo l:config . " not found\n"
+                echo l:config." not found\n"
             endif
         else
-            echo l:plugin . " not found\n"
+            echo l:plugin." not found\n"
         endif
     endfor
 endfunction

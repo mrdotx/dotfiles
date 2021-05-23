@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T13:32:18+0200
+" date:   2021-05-23T18:26:16+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -74,7 +74,7 @@ augroup encrypt
     " normal mode for editing
     autocmd BufReadPost,FileReadPost *.gpg set nobin
     autocmd BufReadPost,FileReadPost *.gpg let &ch = ch_save|unlet ch_save
-    autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost " . expand("%:r")
+    autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost ".expand("%:r")
     " convert text to encrypted data before writing
     autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --default-recipient-self -ae 2>/dev/null
     autocmd BufWritePost,FileWritePost *.gpg u
@@ -83,11 +83,11 @@ augroup END
 " if init config exists source init file
 function! IfInitExists(action, files)
     for file in a:files
-        let l:config=g:inits_config_folder . file
+        let l:config=g:inits_config_folder.file
         if !empty(glob(config))
             execute a:action l:config
         else
-            echo file . " not found\n"
+            echo file." not found\n"
         endif
     endfor
 endfunction

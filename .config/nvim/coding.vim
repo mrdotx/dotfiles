@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T13:33:02+0200
+" date:   2021-05-23T18:29:06+0200
 
 let g:template_folder='~/.config/nvim/templates/'
 
@@ -71,11 +71,11 @@ function! ModDate()
         let save_cursor=getpos(".")
         let n=min([10, line("$")])
         if &ft =~ 'vimwiki\|markdown'
-            keepjumps execute '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-                \ strftime('           %FT%T%z') . '#e'
+            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1'.
+                \ strftime('           %FT%T%z').'#e'
         else
-            keepjumps execute '1,' . n . 's#^\(.\{,4}date: \).*#\1' .
-                \ strftime('  %FT%T%z') . '#e'
+            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1' .
+                \ strftime('  %FT%T%z').'#e'
         endif
         call histdel('search', -1)
         call setpos('.', save_cursor)
@@ -87,8 +87,8 @@ function! ModPath()
     if &modified
         let save_cursor=getpos(".")
         let n=min([10, line("$")])
-        keepjumps execute '1,' . n . 's#^\(.\{,4}path: \).*#\1' .
-            \ '  ' . expand('%:p') . '#e'
+        keepjumps execute '1,'.n.'s#^\(.\{,4}path: \).*#\1'.
+            \ '  '.expand('%:p').'#e'
         call histdel('search', -1)
         call setpos('.', save_cursor)
     endif

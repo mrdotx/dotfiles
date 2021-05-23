@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T13:45:18+0200
+" date:   2021-05-23T18:25:40+0200
 
 " switch/exchange windows
 nnoremap            <tab>           <c-w>w
@@ -34,7 +34,7 @@ nnoremap <silent>   <leader>dx      :setlocal spell! spelllang=en_us,de_de<cr>
 
 " terminal
 function! TermSplit(ratio,cmd)
-    execute winheight(0)/a:ratio . "split term://" . a:cmd
+    execute winheight(0)/a:ratio."split term://".a:cmd
 endfunction
 nnoremap            <leader>t       :call TermSplit('3','%')<left><left>
 nnoremap <silent>   <leader>s       :call TermSplit('3','shellcheck -x -s sh %')<cr>
