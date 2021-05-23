@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-22T19:56:09+0200
+" date:   2021-05-23T13:32:18+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -85,7 +85,7 @@ function! IfInitExists(action, files)
     for file in a:files
         let l:config=g:inits_config_folder . file
         if !empty(glob(config))
-            exe a:action l:config
+            execute a:action l:config
         else
             echo file . " not found\n"
         endif

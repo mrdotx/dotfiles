@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T09:03:23+0200
+" date:   2021-05-23T13:31:48+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/plugins/'
@@ -41,7 +41,7 @@ function! IfPluginExists(action, plugin_names)
         endif
         if !empty(glob(l:plugin))
             if !empty(glob(l:config))
-                exe a:action l:config
+                execute a:action l:config
             else
                 echo l:config . " not found\n"
             endif
