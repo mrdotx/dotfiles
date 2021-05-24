@@ -1,7 +1,7 @@
-// path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
+// path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json_
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-05-24T12:35:06+0200
+// date:   2021-05-24T15:44:40+0200
 
 {
     "languageserver": {
@@ -11,5 +11,8 @@
     },
     "diagnostic-languageserver.formatFiletypes": {
     },
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=F0001"
+    ]
 }
