@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-04-25T16:58:47+0200
+" date:   2021-05-24T13:19:45+0200
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
@@ -25,13 +25,10 @@ call which_key#register(' ', "g:space_dict")
 " description dictionary mappings
 let g:comma_dict = {
     \ 'name': 'main',
-    \ ',': [':call NetrwToggle()'       ,'netrw file explorer'],
-    \ 'SPC': [':nohlsearch'             ,'reset search highlighting'],
-    \ '[': ['<Plug>(GitGutterPrevHunk)' ,'goto previous changed git hunk'],
-    \ ']': ['<Plug>(GitGutterNextHunk)' ,'goto next changed git hunk'],
-    \ '.': [':LToggle' ,'toggle location list'],
-    \ ';': [':lprev' ,'goto previous location'],
-    \ '''': [':lnext' ,'goto next location'],
+    \ ',': [':call NetrwToggle()'           ,'netrw file explorer'],
+    \ '.': [':echo "nosearchhl = [, + .]"'  ,'reset search highlighting'],
+    \ '[': ['<Plug>(GitGutterPrevHunk)'     ,'goto previous changed git hunk'],
+    \ ']': ['<Plug>(GitGutterNextHunk)'     ,'goto next changed git hunk'],
     \ 'b': {
         \ 'name': '+buffer',
         \ '/': [':buffers'      ,'buffer list'],
@@ -57,12 +54,11 @@ let g:comma_dict = {
         \ 's': ['<Plug>(GitGutterStageHunk)'    ,'stage'],
         \ 'u': ['<Plug>(GitGutterUndoHunk)'     ,'undo'],
         \ },
-    \ 'i': [':IndentLinesToggle'                ,'toggle indent characters'],
-    \ 'l': [':set list! list?'                  ,'toggle control characters'],
-    \ 'r': [':%s///gc<left><left><left>'        ,'replace'],
-    \ 'S': [':SyntasticToggleMode'              ,'syntastic'],
-    \ 's': [':vs term://shellcheck -x -s sh %'  ,'shell check posix'],
-    \ 't': [':vs term://%'                      ,'terminal'],
+    \ 'i': [':IndentLinesToggle'            ,'toggle indent characters'],
+    \ 'l': [':set list! list?'              ,'toggle control characters'],
+    \ 'r': [':echo "replace = [, + r]"'     ,'replace'],
+    \ 's': [':echo "shellcheck = [, + s]"'  ,'shell check posix'],
+    \ 't': [':echo "terminal = [, + t]"'    ,'terminal'],
     \ 'w': {
         \ 'name': '+vimwiki',
         \ ',': {
