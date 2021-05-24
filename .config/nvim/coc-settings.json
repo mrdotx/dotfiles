@@ -1,33 +1,15 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-01-15T12:51:42+0100
+// date:   2021-05-24T12:35:06+0200
+
 {
     "languageserver": {
-        "ccls": {
-            "command": "ccls",
-            "filetypes": [
-                "c",
-                "cpp",
-                "cuda",
-                "objc",
-                "objcpp"
-            ],
-            "rootPatterns": [
-                ".ccls-root",
-                ".ccls",
-                "compile_commands.json",
-                ".git/",
-                ".hg/"
-            ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/home/klassiker/.cache/ccls"
-                },
-                "client": {
-                    "snippetSupport": true
-                }
-            }
-        }
-    }
+    },
+    "diagnostic-languageserver.filetypes": {
+        "sh": "shellcheck"
+    },
+    "diagnostic-languageserver.formatFiletypes": {
+    },
+    "python.linting.pylintEnabled": true
 }

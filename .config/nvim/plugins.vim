@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T19:12:10+0200
+" date:   2021-05-24T11:40:17+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/plugins/'
@@ -24,7 +24,6 @@ call plug#begin(g:plugged_folder)
     Plug 'Yggdroot/indentLine'
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
-    Plug 'vim-syntastic/syntastic'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'vimwiki/vimwiki'
 call plug#end()
@@ -64,7 +63,6 @@ let vim_plugin_names=[
     \ 'indentLine',
     \ 'vim-commentary',
     \ 'vim-gitgutter',
-    \ 'syntastic',
     \ 'coc.nvim',
     \ 'vimwiki'
     \ ]

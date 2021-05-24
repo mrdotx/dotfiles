@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/coc.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-23T18:31:06+0200
+" date:   2021-05-24T11:49:42+0200
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -177,6 +177,3 @@ function! s:select_current_word()
     endif
     return "*\<Plug>(coc-cursors-word):nohlsearch\<cr>"
 endfunc
-
-" disabled diagnostics
-autocmd FileType sh let b:coc_diagnostic_disable=1
