@@ -24,7 +24,6 @@ bpytop
 btrfs-progs
 bzip2
 cantarell-fonts
-ccls
 cdw
 chameleon-git
 cmus
