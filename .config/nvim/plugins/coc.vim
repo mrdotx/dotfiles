@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/coc.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-24T11:49:42+0200
+" date:   2021-05-25T13:17:09+0200
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -79,7 +79,7 @@ function! s:show_documentation()
   elseif (coc#rpc#ready())
     call CocActionAsync('doHover')
   else
-    execute '!'.&keywordprg." ".expand('<cword>')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
@@ -87,11 +87,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <localleader>rn <Plug>(coc-rename)
+" nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <localleader>f  <Plug>(coc-format-selected)
-nmap <localleader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -103,13 +103,13 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <localleader>a  <Plug>(coc-codeaction-selected)
-nmap <localleader>a  <Plug>(coc-codeaction-selected)
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <localleader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <localleader>qf  <Plug>(coc-fix-current)
+" nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -153,21 +153,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <localleader>d  :<C-u>CocList diagnostics<cr>
+" nnoremap <silent><nowait> <space>.  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <localleader>e  :<C-u>CocList extensions<cr>
+" nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <localleader>c  :<C-u>CocList commands<cr>
+" nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <localleader>o  :<C-u>CocList outline<cr>
+" nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <localleader>s  :<C-u>CocList -I symbols<cr>
+" nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent><nowait> <localleader>j  :<C-u>CocNext<CR>
+" nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent><nowait> <localleader>k  :<C-u>CocPrev<CR>
+" nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <localleader>p  :<C-u>CocListResume<CR>
+" nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " multiple cursor session
 nmap <expr> <silent> <c-c> <sid>select_current_word()
