@@ -1,28 +1,34 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-25T13:22:14+0200
+" date:   2021-05-25T20:48:43+0200
+
+let g:which_key_fallback_to_native_key=1
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
 
 " color mappings
 highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator Identifier
-highlight default link WhichKeyGroup     Float
+highlight default link WhichKeySeperator Float
+highlight default link WhichKeyGroup     SpecialComment
 highlight default link WhichKeyDesc      Comment
+highlight default link WhichKeyFloating  Todo
 
 " key mappings
 nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
 vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ','<cr>
 nnoremap <silent> <localleader> :<c-u>WhichKey '.'<cr>
 vnoremap <silent> <localleader> :<c-u>WhichKeyVisual '.'<cr>
+nnoremap <silent> g             :<c-u>WhichKey 'g'<cr>
+vnoremap <silent> g             :<c-u>WhichKeyVisual 'g'<cr>
 
 " define description dictionaries
 call which_key#register(',', "g:main_dict")
 call which_key#register('.', "g:coc_dict")
+call which_key#register('g', "g:go_dict")
 
-" description dictionary main
+" main description dictionary
 let g:main_dict = {
     \ 'name': 'main',
     \ ',': [':call NetrwToggle()'           ,'netrw file explorer'],
@@ -84,32 +90,45 @@ let g:main_dict.w = {
     \ 'w': ['<Plug>VimwikiIndex'                            ,'open vimwiki'],
     \ }
 
-" description dictionary coc
+" coc description dictionary
 let g:coc_dict = {
     \ 'name': 'coc - conquer of completion',
-    \ '.': [':CocList diagnostics'          ,'show all diagnostics'],
-    \ 'c': [':CocList commands'             ,'show all commands'],
-    \ 'e': [':CocList extensions'           ,'show all extensions'],
-    \ 'f': ['<Plug>(coc-format-selected)'   ,'formating selected code'],
-    \ 'j': [':CocNext'                      ,'default action next item'],
-    \ 'k': [':CocPrev'                      ,'default action previous item'],
-    \ 'o': [':CocList outline'              ,'find symbol current document'],
-    \ 'p': [':CocListResume'                ,'resume latest list'],
-    \ 's': [':CocList -I symbols'           ,'search workspace symbols'],
-    \ }
-
-let g:coc_dict.a = {
-    \ 'name': '+action',
-    \ 's': ['<Plug>(coc-codeaction-selected)'   ,'action selected code'],
-    \ 'c': ['<Plug>(coc-codeaction)'            ,'action current line'],
+    \ '.': [':CocList diagnostics'              ,'show all diagnostics'],
+    \ 'a': ['<Plug>(coc-codeaction-selected)'   ,'action selected code'],
+    \ 'ac': ['<Plug>(coc-codeaction)'           ,'action current line'],
+    \ 'c': [':CocList commands'                 ,'show all commands'],
+    \ 'e': [':CocList extensions'               ,'show all extensions'],
+    \ 'f': ['<Plug>(coc-format-selected)'       ,'formating selected code'],
+    \ 'j': [':CocNext'                          ,'default action next item'],
+    \ 'k': [':CocPrev'                          ,'default action previous item'],
+    \ 'o': [':CocList outline'                  ,'find symbol current document'],
+    \ 'p': [':CocListResume'                    ,'resume latest list'],
+    \ 'qf': ['<Plug>(coc-fix-current)'          ,'autofix current line'],
+    \ 'rn': ['<Plug>(coc-rename)'               ,'symbol renaming'],
+    \ 's': [':CocList -I symbols'               ,'search workspace symbols'],
     \ }
 
 let g:coc_dict.q = {
-    \ 'name': '+quickfix',
+    \ 'name': 'quickfix',
     \ 'f': ['<Plug>(coc-fix-current)'   ,'autofix current line'],
     \ }
 
 let g:coc_dict.r = {
-    \ 'name': '+rename',
+    \ 'name': 'rename',
     \ 'n': ['<Plug>(coc-rename)'    ,'symbol renaming'],
+    \ }
+
+" go description dictionary
+let g:go_dict = {
+    \ 'name': 'go',
+    \ '[': ['<Plug>(coc-diagnostic-prev)'       ,'previous diagnostics list item'],
+    \ ']': ['<Plug>(coc-diagnostic-next)'       ,'next diasnostics list item'],
+    \ '%': ['<Plug>(MatchitOperationBackward)'  ,'matchit operation backward'],
+    \ 'c': ['<Plug>Commentary'                  ,'comment'],
+    \ 'cc': ['<Plug>CommentaryLine'             ,'comment line'],
+    \ 'd': ['<Plug>(coc-definition)'            ,'definition'],
+    \ 'i': ['<Plug>(coc-implementation)'        ,'implementation'],
+    \ 'r': ['<Plug>(coc-references)'            ,'references'],
+    \ 'x': ['<Plug>NetrwBrowseX'                ,'netrw browse x'],
+    \ 'y': ['<Plug>(coc-type-definition)'       ,'type definition'],
     \ }
