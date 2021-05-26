@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-25T20:48:43+0200
+" date:   2021-05-26T08:53:32+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -32,15 +32,15 @@ call which_key#register('g', "g:go_dict")
 let g:main_dict = {
     \ 'name': 'main',
     \ ',': [':call NetrwToggle()'           ,'netrw file explorer'],
-    \ '/': [':echo "nosearchhl = [, + /]"'  ,'reset search highlighting'],
+    \ '/': [':echo "press faster ,/"'       ,'reset search highlighting'],
     \ '[': ['<Plug>(GitGutterPrevHunk)'     ,'goto previous changed git hunk'],
     \ ']': ['<Plug>(GitGutterNextHunk)'     ,'goto next changed git hunk'],
     \ 'g': [':Goyo'                         ,'goyo'],
     \ 'i': [':IndentLinesToggle'            ,'toggle indent characters'],
     \ 'l': [':set list! list?'              ,'toggle control characters'],
-    \ 'r': [':echo "replace = [, + r]"'     ,'replace'],
-    \ 's': [':echo "shellcheck = [, + s]"'  ,'shell check posix'],
-    \ 't': [':echo "terminal = [, + t]"'    ,'terminal'],
+    \ 'r': [':echo "press faster ,r"'       ,'replace'],
+    \ 's': [':echo "press faster ,s"'       ,'shell check posix'],
+    \ 't': [':echo "press faster ,t"'       ,'terminal'],
     \ }
 
 " +buffer
@@ -103,8 +103,6 @@ let g:coc_dict = {
     \ 'k': [':CocPrev'                          ,'default action previous item'],
     \ 'o': [':CocList outline'                  ,'find symbol current document'],
     \ 'p': [':CocListResume'                    ,'resume latest list'],
-    \ 'qf': ['<Plug>(coc-fix-current)'          ,'autofix current line'],
-    \ 'rn': ['<Plug>(coc-rename)'               ,'symbol renaming'],
     \ 's': [':CocList -I symbols'               ,'search workspace symbols'],
     \ }
 

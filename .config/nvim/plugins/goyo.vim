@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/goyo.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-01-15T12:50:11+0100
+" date:   2021-05-26T07:47:50+0200
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
@@ -58,3 +58,6 @@ function! s:goyo_after()
 endfunction
 
 let g:goyo_callbacks=[function('s:goyo_before'), function('s:goyo_after')]
+
+" keybindings
+nnoremap <silent>   <leader>g   :Goyo<cr>
