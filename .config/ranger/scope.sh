@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-11T08:47:14+0200
+# date:   2021-05-26T22:27:06+0200
 
 # exit | function   | action of ranger
 
@@ -23,7 +23,6 @@ file_path="$1"
 preview_width="$2"
 # height of the preview pane (number of fitting characters)
 # preview_height is provided for convenience and unused
-# shellcheck disable=SC2034
 preview_height="$3"
 # full path that should be used to cache image preview
 image_cache_path="$4"
