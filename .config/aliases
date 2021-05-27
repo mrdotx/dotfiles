@@ -1,9 +1,7 @@
-# shellcheck shell=sh
-
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-04-30T10:00:26+0200
+# date:   2021-05-26T22:29:07+0200
 
 # ranger change directory on exit
 ranger_cd() {
