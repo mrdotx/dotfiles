@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-25T13:50:31+0200
+" date:   2021-05-27T16:45:21+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -80,22 +80,17 @@ augroup encrypt
     autocmd BufWritePost,FileWritePost *.gpg u
 augroup END
 
-" if init config exists source init file
-function! IfInitExists(action, files)
-    for file in a:files
-        let l:config=g:inits_config_folder.file
-        if !empty(glob(config))
-            execute a:action l:config
-        else
-            echo file." not found\n"
-        endif
-    endfor
+" if config exists source file
+function! IfConfigExists(action, file)
+    let l:config=g:inits_config_folder.a:file
+    if !empty(glob(l:config))
+        execute a:action l:config
+    else
+        echo l:config." not found\n"
+    endif
 endfunction
 
-let files=[
-    \ 'plugins.vim',
-    \ 'netrw.vim',
-    \ 'coding.vim',
-    \ 'keybindings.vim'
-    \ ]
-call IfInitExists('source', files)
+call IfConfigExists('source', 'plugins.vim')
+call IfConfigExists('source', 'netrw.vim')
+call IfConfigExists('source', 'coding.vim')
+call IfConfigExists('source', 'keybindings.vim')
