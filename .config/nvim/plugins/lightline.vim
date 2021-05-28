@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T14:45:21+0200
+" date:   2021-05-28T17:37:27+0200
 
 " klassiker colorscheme
 let s:red       = [ '#df2800', 1 ]
@@ -28,7 +28,7 @@ let s:p = {
 
 let s:p.normal.left     = [ [ s:white, s:blue ], [ s:base3, s:base0 ] ]
 let s:p.normal.middle   = [ [ s:base3, s:base0 ] ]
-let s:p.normal.right    = [ [ s:white, s:blue ], [ s:base3, s:red ] ]
+let s:p.normal.right    = [ [ s:white, s:blue ], [ s:base3, s:base2 ] ]
 let s:p.normal.error    = [ [ s:red, s:base0 ] ]
 let s:p.normal.warning  = [ [ s:yellow, s:base1 ] ]
 
@@ -53,16 +53,16 @@ function! CocStatusDiagnostic() abort
     if empty(info) | return '' | endif
     let msgs = []
     if get(info, 'error', 0)
-        call add(msgs, 'E' . info['error'])
+        call add(msgs, 'E:' . info['error'])
     endif
     if get(info, 'warning', 0)
-        call add(msgs, 'W' . info['warning'])
+        call add(msgs, 'W:' . info['warning'])
     endif
     if get(info, 'information', 0)
-        call add(msgs, 'I' . info['information'])
+        call add(msgs, 'I:' . info['information'])
     endif
     if get(info, 'hint', 0)
-        call add(msgs, 'H' . info['hint'])
+        call add(msgs, 'H:' . info['hint'])
     endif
     return join(msgs, ' | ') . get(g:, 'coc_status', '')
 endfunction
@@ -70,6 +70,8 @@ endfunction
 " lightline elements
 let g:lightline = {
     \ 'colorscheme': 'klassiker',
+    \ 'subseparator': {
+        \ 'left': '|', 'right': '|' },
     \ 'active': {
 		\ 'left': [ [ 'mode', 'paste' ],
 		\           [ 'readonly', 'filename', 'modified' ] ],
@@ -78,11 +80,11 @@ let g:lightline = {
 		\            [ 'filetype', 'fileencoding', 'fileformat' ] ] },
 	\ 'inactive': {
 		\ 'left': [ [ 'filename' ] ],
-		\ 'right': [ [ 'percent', 'lineinfo' ] ] },
+		\ 'right': [ [ 'percent', 'lineinfo' ],
+		\            [ 'cocstatus' ] ] },
     \ 'component_function': {
-    \   'cocstatus': 'CocStatusDiagnostic'
-    \ },
+        \ 'cocstatus': 'CocStatusDiagnostic' },
 \ }
 
-" use autocmd to force lightline update.
+" use autocmd to force lightline update
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
