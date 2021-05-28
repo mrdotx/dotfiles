@@ -1,7 +1,7 @@
-// path:   /home/klassiker/.config/nvim/coc-settings.json
+// path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-05-28T10:02:06+0200
+// date:   2021-05-28T11:52:33+0200
 
 {
     "languageserver": {

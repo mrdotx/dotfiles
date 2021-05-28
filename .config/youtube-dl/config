@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/youtube-dl/config
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/youtube-dl/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T10:10:49+0200
+# date:   2021-05-28T11:59:57+0200
 
 -o "~/Downloads/[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s"
 --force-ipv4

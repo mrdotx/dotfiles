@@ -1,6 +1,6 @@
--- path:   /home/klassiker/.config/nvim/templates/skeleton.lua
+-- path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/templates/skeleton.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/<++>
--- date:   2021-05-28T10:03:53+0200
+-- date:   2021-05-28T11:53:50+0200
 
 <++>

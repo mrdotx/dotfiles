@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.config/nvim/colors/klassiker.vim
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T10:02:47+0200
+" date:   2021-05-28T11:53:05+0200
 
 set background=dark
 hi clear

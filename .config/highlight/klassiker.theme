@@ -1,7 +1,7 @@
--- path:   /home/klassiker/.config/highlight/klassiker.theme
+-- path:   /home/klassiker/.local/share/repos/dotfiles/.config/highlight/klassiker.theme
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2021-05-28T10:00:41+0200
+-- date:   2021-05-28T11:51:20+0200
 
 Description="klassiker"
 

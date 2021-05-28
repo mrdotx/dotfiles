@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.config/nvim/init.vim
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T10:02:15+0200
+" date:   2021-05-28T11:52:40+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 

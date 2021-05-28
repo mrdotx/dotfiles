@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.config/xorg/xautolock
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/xautolock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-05-28T10:10:27+0200
+! date:   2021-05-28T11:59:36+0200
 
 Xautolock.corners:      ----
 Xautolock.time:         9

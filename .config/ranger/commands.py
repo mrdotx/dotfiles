@@ -1,8 +1,8 @@
 """
-path:   /home/klassiker/.config/ranger/commands.py
+path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2021-05-28T10:07:16+0200
+date:   2021-05-28T11:55:59+0200
 """
 
 from __future__ import (absolute_import, division, print_function)

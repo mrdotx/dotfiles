@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/zsh/.zshrc
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T10:11:09+0200
+# date:   2021-05-28T12:00:11+0200
 
 # if shell is not running interactive, break up
 tty -s \

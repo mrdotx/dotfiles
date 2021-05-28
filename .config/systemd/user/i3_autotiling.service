@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/systemd/user/i3_autotiling.service
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/i3_autotiling.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T10:08:55+0200
+# date:   2021-05-28T11:57:43+0200
 
 [Unit]
 Description=i3 optimal tiling

@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/systemd/user/xautolock.service
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/xautolock.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T10:09:15+0200
+# date:   2021-05-28T11:58:25+0200
 
 [Unit]
 Description=xautolock to auto lock/suspend device

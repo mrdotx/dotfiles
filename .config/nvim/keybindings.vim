@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.config/nvim/keybindings.vim
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T10:02:19+0200
+" date:   2021-05-28T11:52:42+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w

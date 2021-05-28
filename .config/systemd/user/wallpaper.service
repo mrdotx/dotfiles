@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.config/systemd/user/wallpaper.service
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/wallpaper.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T10:09:13+0200
+# date:   2021-05-28T11:57:59+0200
 
 [Unit]
 Description=set wallpaper
