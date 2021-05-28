@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:52:49+0200
+" date:   2021-05-28T14:47:32+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/plugins/'
@@ -15,7 +15,7 @@ endif
 
 " plugins
 call plug#begin(g:plugged_folder)
-    Plug 'vim-airline/vim-airline'
+    Plug 'itchyny/lightline.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'liuchengxu/vim-which-key'
@@ -48,7 +48,7 @@ function! IfPluginExists(action, plugin_name)
     endif
 endfunction
 
-call IfPluginExists('source', 'vim-airline')
+call IfPluginExists('source', 'lightline.vim')
 call IfPluginExists('source', 'goyo.vim')
 call IfPluginExists('luafile', 'nvim-colorizer.lua')
 call IfPluginExists('source', 'vim-which-key')
