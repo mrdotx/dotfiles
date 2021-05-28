@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
+# path:   /home/klassiker/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-26T22:27:06+0200
+# date:   2021-05-28T10:07:32+0200
 
 # exit | function   | action of ranger
 

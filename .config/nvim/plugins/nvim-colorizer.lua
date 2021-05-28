@@ -1,7 +1,7 @@
--- path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/nvim-colorizer.lua
+-- path:   /home/klassiker/.config/nvim/plugins/nvim-colorizer.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2021-01-15T12:50:30+0100
+-- date:   2021-05-28T10:03:09+0200
 
 require'colorizer'.setup(
     {'*';},

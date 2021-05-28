@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/picom.service
+# path:   /home/klassiker/.config/systemd/user/picom.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T13:07:12+0100
+# date:   2021-05-28T10:08:58+0200
 
 [Unit]
 Description=picom compositor

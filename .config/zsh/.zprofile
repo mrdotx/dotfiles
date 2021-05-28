@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zprofile
+# path:   /home/klassiker/.config/zsh/.zprofile
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-10T13:22:48+0200
+# date:   2021-05-28T10:11:05+0200
 
 if systemctl -q is-active graphical.target \
     && [ ! $DISPLAY ] \

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.xserverrc
+# path:   /home/klassiker/.xserverrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-04-06T13:54:24+0200
+# date:   2021-05-28T09:57:58+0200
 
 # xset q
 # -ardelay 200 = auto repeat delay [200]

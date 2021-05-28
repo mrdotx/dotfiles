@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/cmus/klassiker.theme
+# path:   /home/klassiker/.config/cmus/klassiker.theme
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-01-15T12:54:51+0100
+# date:   2021-05-28T09:59:58+0200
 
 # directory colors
 set color_win_dir=default

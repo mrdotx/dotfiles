@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/goyo.vim
+" path:   /home/klassiker/.config/nvim/plugins/goyo.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-26T07:47:50+0200
+" date:   2021-05-28T10:03:01+0200
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)

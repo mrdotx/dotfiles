@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/xft
+! path:   /home/klassiker/.config/xorg/xft
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-01-15T13:09:50+0100
+! date:   2021-05-28T10:10:33+0200
 
 /* theme fonts */
 #define FONT            DejaVuSansMono Nerd Font:pixelsize=16

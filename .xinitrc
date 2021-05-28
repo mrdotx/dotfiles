@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
+# path:   /home/klassiker/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-26T22:25:36+0200
+# date:   2021-05-28T09:58:07+0200
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \

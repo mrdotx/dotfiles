@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
+# path:   /home/klassiker/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-08T14:36:51+0200
+# date:   2021-05-28T10:01:36+0200
 
 # general
 auto-reload yes

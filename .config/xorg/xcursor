@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/xcursor
+! path:   /home/klassiker/.config/xorg/xcursor
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-01-15T13:09:44+0100
+! date:   2021-05-28T10:10:30+0200
 
 /* size default 24, remommendend values 32,48,64 */
 Xcursor.theme:      Adwaita

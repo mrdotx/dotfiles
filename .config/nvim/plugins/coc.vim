@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/coc.vim
+" path:   /home/klassiker/.config/nvim/plugins/coc.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-26T08:26:19+0200
+" date:   2021-05-28T10:02:58+0200
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
