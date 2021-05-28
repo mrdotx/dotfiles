@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T09:54:29+0200
+# date:   2021-05-28T10:27:53+0200
 
 # home special
 /.w3m/bookmark.html
@@ -36,6 +36,8 @@
 /.jameica.properties
 
 # .config special
+/.config/bpytop/themes/
+/.config/bpytop/error.log
 /.config/cmus/playlists/
 /.config/cmus/autosave
 /.config/cmus/cache
@@ -58,7 +60,6 @@
 
 # .config folders
 /.config/asunder
-/.config/bpytop
 /.config/coc
 /.config/configstore
 /.config/darktable
