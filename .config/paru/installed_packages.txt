@@ -199,6 +199,7 @@ gst-plugins-base-libs
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
+gtest
 gtk-engine-murrine
 gtk-update-icon-cache
 gtk2
@@ -296,6 +297,7 @@ ldb
 ldns
 lensfun
 less
+lib2geom
 lib32-bzip2
 lib32-curl
 lib32-e2fsprogs
@@ -837,6 +839,7 @@ qt5-wayland
 qt5-x11extras
 qt5ct
 quazip
+ragel
 ranger
 raptor
 rasqal
@@ -959,7 +962,6 @@ wayland-protocols
 waylandpp
 webkit2gtk
 webrtc-audio-processing
-weechat
 wget
 which
 wildmidi

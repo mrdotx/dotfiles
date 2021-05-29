@@ -248,7 +248,6 @@ vorbis-tools
 vpnc
 vulkan-intel
 w3m
-weechat
 wget
 which
 wmctrl
