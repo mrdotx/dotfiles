@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-29T09:24:18+0200
+# date:   2021-05-29T10:16:39+0200
 
 # repository paths
 typeset -U PATH path
@@ -55,7 +55,6 @@ export \
     FONTCONFIG_FILE=fonts.conf \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
     WGETRC="$XDG_CONFIG_HOME/wget/wgetrc" \
-    WEECHAT_HOME="$XDG_CONFIG_HOME/weechat" \
     KODI_DATA="$XDG_DATA_HOME/kodi" \
 
 # app settings
