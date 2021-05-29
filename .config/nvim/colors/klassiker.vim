@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-29T11:09:39+0200
+" date:   2021-05-29T12:32:28+0200
 
 set background=dark
 hi clear
@@ -128,6 +128,6 @@ hi ExtraWhitespace guifg=#df2800 guibg=#df2800 gui=NONE ctermfg=1 ctermbg=1 cter
 
 if has("nvim")
   " neovim terminal
-  hi TermCursor guifg=#111111 guibg=#ffffff gui=NONE ctermfg=233 ctermbg=15 cterm=NONE
+  hi TermCursor guifg=#111111 guibg=#4185d7 gui=NONE ctermfg=233 ctermbg=12 cterm=NONE
   hi TermCursorNC guifg=#111111 guibg=#778899 gui=NONE ctermfg=233 ctermbg=103 cterm=NONE
 endif
