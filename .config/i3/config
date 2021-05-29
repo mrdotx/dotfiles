@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:51:27+0200
+# date:   2021-05-29T09:25:18+0200
 
 # general
 #########
@@ -424,6 +424,7 @@ bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi" workspace 4
 bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
+bindsym $sup+Ctrl+w exec --no-startup-id "$BROWSER_BACKUP"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
 bindsym $sup+z exec --no-startup-id "filezilla"
