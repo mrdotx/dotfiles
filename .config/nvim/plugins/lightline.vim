@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-30T12:55:28+0200
+" date:   2021-05-30T16:03:20+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -25,7 +25,7 @@ let s:p = {
     \ 'replace': {},
     \ 'visual': {},
     \ 'tabline': {}
-    \ }
+\ }
 
 let s:p.normal.left     = [ [ s:white, s:blue ],
                             \ [ s:base3, s:base2 ],
@@ -67,41 +67,41 @@ let s:p.tabline.tabsel  = [ [ s:white, s:blue ] ]
 
 let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:p)
 
-" coc status
-function! CocStatusDiagnostic() abort
-    let info = get(b:, 'coc_diagnostic_info', {})
-    if empty(info) | return '' | endif
-    let l:msgs = []
-    if get(info, 'error', 0)
-        call add(l:msgs, 'E'.info['error'])
-    endif
-    if get(info, 'warning', 0)
-        call add(l:msgs, 'W'.info['warning'])
-    endif
-    if get(info, 'information', 0)
-        call add(l:msgs, 'I'.info['information'])
-    endif
-    if get(info, 'hint', 0)
-        call add(l:msgs, 'H'.info['hint'])
-    endif
-    return join(msgs, ' ').get(g:, 'coc_status', '')
-endfunction
-
 " gitgutter status
 function! GitGutterStatus()
-    let [a,m,r] = GitGutterGetHunkSummary()
-    if a==0 && m==0 && r==0 | return '' | endif
+    let [l:a,l:m,l:r] = GitGutterGetHunkSummary()
+    if l:a==0 && l:m==0 && l:r==0 | return '' | endif
     let l:msgs = []
-    if a!=0
-        call add(l:msgs, '+'.a)
+    if l:a!=0
+        call add(l:msgs, '+'.l:a)
     endif
-    if m!=0
-        call add(l:msgs, '~'.m)
+    if l:m!=0
+        call add(l:msgs, '~'.l:m)
     endif
-    if r!=0
-        call add(l:msgs, '-'.r)
+    if l:r!=0
+        call add(l:msgs, '-'.l:r)
     endif
     return join(l:msgs, ' ')
+endfunction
+
+" coc status
+function! CocStatusDiagnostic() abort
+    let l:info = get(b:, 'coc_diagnostic_info', {})
+    if empty(l:info) | return '' | endif
+    let l:msgs = []
+    if get(l:info, 'error', 0)
+        call add(l:msgs, 'E'.l:info['error'])
+    endif
+    if get(l:info, 'warning', 0)
+        call add(l:msgs, 'W'.l:info['warning'])
+    endif
+    if get(l:info, 'information', 0)
+        call add(l:msgs, 'I'.l:info['information'])
+    endif
+    if get(l:info, 'hint', 0)
+        call add(l:msgs, 'H'.l:info['hint'])
+    endif
+    return join(msgs, ' ').get(g:, 'coc_status', '')
 endfunction
 
 " lightline elements
@@ -109,25 +109,30 @@ let g:lightline = {
     \ 'colorscheme': 'klassiker',
     \ 'subseparator': {
         \ 'left': '│',
-        \ 'right': '│' },
+        \ 'right': '│'
+    \ },
     \ 'active': {
 		\ 'left': [ [ 'mode', 'paste' ],
         \           [ 'gitstatus' ],
 		\           [ 'readonly', 'filename', 'modified' ] ],
 		\ 'right': [ [ 'line_info' ],
 		\            [ 'cocstatus' ],
-		\            [ 'filetype', 'file_encoding' ] ] },
+		\            [ 'filetype', 'file_encoding' ] ]
+    \ },
 	\ 'inactive': {
 		\ 'left': [ [ 'filename' ],
         \           [ 'gitstatus' ] ],
 		\ 'right': [ [ 'line_info' ],
-		\            [ 'cocstatus' ] ] },
+		\            [ 'cocstatus' ] ]
+    \ },
     \ 'component': {
 		\ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
-        \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v'},
+        \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v'
+    \ },
     \ 'component_function': {
         \ 'gitstatus': 'GitGutterStatus',
-        \ 'cocstatus': 'CocStatusDiagnostic'},
+        \ 'cocstatus': 'CocStatusDiagnostic'
+    \ },
 \ }
 
 " use autocmd to force lightline update

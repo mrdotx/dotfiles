@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:53:34+0200
+" date:   2021-05-30T16:07:53+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -41,7 +41,7 @@ let g:main_dict = {
     \ 'r': [':echo "press faster ,r"'       ,'replace'],
     \ 's': [':echo "press faster ,s"'       ,'shell check posix'],
     \ 't': [':echo "press faster ,t"'       ,'terminal'],
-    \ }
+\ }
 
 " +buffer
 let g:main_dict.b = {
@@ -54,7 +54,7 @@ let g:main_dict.b = {
     \ 'h': [':bmodified'    ,'next modified buffer'],
     \ 'n': [':bnext'        ,'next buffer'],
     \ 'p': [':bprevious'    ,'previous buffer'],
-    \ }
+\ }
 
 " +dictionaries
 let g:main_dict.d = {
@@ -62,7 +62,7 @@ let g:main_dict.d = {
     \ 'g': [':setlocal spell! spelllang=de_de'          ,'german toggle'],
     \ 'e': [':setlocal spell! spelllang=en_us'          ,'english toggle'],
     \ 'x': [':setlocal spell! spelllang=en_us,de_de'    ,'english and german toggle'],
-    \ }
+\ }
 
 " +hunk
 let g:main_dict.h = {
@@ -71,7 +71,7 @@ let g:main_dict.h = {
     \ 'p': ['<Plug>(GitGutterPreviewHunk)'  ,'preview'],
     \ 's': ['<Plug>(GitGutterStageHunk)'    ,'stage'],
     \ 'u': ['<Plug>(GitGutterUndoHunk)'     ,'undo'],
-    \ }
+\ }
 
 " +vimwiki
 let g:main_dict.w = {
@@ -83,12 +83,12 @@ let g:main_dict.w = {
         \ 't': ['<Plug>VimwikiDiaryTabMakeDiaryNote'        ,'make note new tab'],
         \ 'w': ['<Plug>VimwikiDiaryMakeDiaryNote'           ,'make note'],
         \ 'y': ['<Plug>VimwikiDiaryMakeYesterdayDiaryNote'  ,'make yesterday note'],
-        \ },
+    \ },
     \ 'i': ['<Plug>VimwikiDiaryIndex'                       ,'open diary'],
     \ 's': ['<Plug>VimwikiUISelect'                         ,'select vimwiki'],
     \ 't': ['<Plug>VimwikiTabIndex'                         ,'open vimwiki new tab'],
     \ 'w': ['<Plug>VimwikiIndex'                            ,'open vimwiki'],
-    \ }
+\ }
 
 " coc description dictionary
 let g:coc_dict = {
@@ -104,17 +104,17 @@ let g:coc_dict = {
     \ 'o': [':CocList outline'                  ,'find symbol current document'],
     \ 'p': [':CocListResume'                    ,'resume latest list'],
     \ 's': [':CocList -I symbols'               ,'search workspace symbols'],
-    \ }
+\ }
 
 let g:coc_dict.q = {
     \ 'name': 'quickfix',
     \ 'f': ['<Plug>(coc-fix-current)'   ,'autofix current line'],
-    \ }
+\ }
 
 let g:coc_dict.r = {
     \ 'name': 'rename',
     \ 'n': ['<Plug>(coc-rename)'    ,'symbol renaming'],
-    \ }
+\ }
 
 " go description dictionary
 let g:go_dict = {
@@ -129,4 +129,4 @@ let g:go_dict = {
     \ 'r': ['<Plug>(coc-references)'            ,'references'],
     \ 'x': ['<Plug>NetrwBrowseX'                ,'netrw browse x'],
     \ 'y': ['<Plug>(coc-type-definition)'       ,'type definition'],
-    \ }
+\ }
