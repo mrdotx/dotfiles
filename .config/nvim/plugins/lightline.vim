@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-30T09:53:10+0200
+" date:   2021-05-30T12:55:28+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -27,22 +27,38 @@ let s:p = {
     \ 'tabline': {}
     \ }
 
-let s:p.normal.left     = [ [ s:white, s:blue ], [ s:base3, s:base0 ] ]
+let s:p.normal.left     = [ [ s:white, s:blue ],
+                            \ [ s:base3, s:base2 ],
+                            \ [ s:base3, s:base0 ] ]
 let s:p.normal.middle   = [ [ s:base3, s:base0 ] ]
-let s:p.normal.right    = [ [ s:white, s:blue ], [ s:base3, s:base2 ] ]
+let s:p.normal.right    = [ [ s:white, s:blue ],
+                            \ [ s:base3, s:base2 ] ]
 let s:p.normal.error    = [ [ s:red, s:base0 ] ]
 let s:p.normal.warning  = [ [ s:yellow, s:base1 ] ]
 
-let s:p.inactive.left   = [ [ s:base3, s:base2 ], [ s:base2, s:base0 ] ]
+let s:p.inactive.left   = [ [ s:base3, s:base2 ],
+                            \ [ s:base2, s:base0 ] ]
 let s:p.inactive.middle = [ [ s:base3, s:black ] ]
-let s:p.inactive.right  = [ [ s:base3, s:base2 ], [ s:base2, s:base1 ] ]
+let s:p.inactive.right  = [ [ s:base3, s:base2 ],
+                            \ [ s:base2, s:base1 ] ]
 
-let s:p.insert.left     = [ [ s:white, s:green ], [ s:base3, s:base0 ] ]
-let s:p.insert.right    = [ [ s:white, s:green ], [ s:base3, s:base2 ] ]
-let s:p.replace.left    = [ [ s:white, s:red ], [ s:base3, s:base0 ] ]
-let s:p.replace.right   = [ [ s:white, s:red ], [ s:base3, s:base2 ] ]
-let s:p.visual.left     = [ [ s:white, s:magenta ], [ s:base3, s:base0 ] ]
-let s:p.visual.right    = [ [ s:white, s:magenta ], [ s:base3, s:base2 ] ]
+let s:p.insert.left     = [ [ s:white, s:green ],
+                            \ [ s:base3, s:base2 ],
+                            \ [ s:base3, s:base0 ] ]
+let s:p.insert.right    = [ [ s:white, s:green ],
+                            \ [ s:base3, s:base2 ] ]
+
+let s:p.replace.left    = [ [ s:white, s:red ],
+                            \ [ s:base3, s:base2 ],
+                            \ [ s:base3, s:base0 ] ]
+let s:p.replace.right   = [ [ s:white, s:red ],
+                            \ [ s:base3, s:base2 ] ]
+
+let s:p.visual.left     = [ [ s:white, s:magenta ],
+                            \ [ s:base3, s:base2 ],
+                            \ [ s:base3, s:base0 ] ]
+let s:p.visual.right    = [ [ s:white, s:magenta ],
+                            \ [ s:base3, s:base2 ] ]
 
 let s:p.tabline.left    = [ [ s:base3, s:base2 ] ]
 let s:p.tabline.middle  = copy(s:p.normal.middle)
@@ -51,24 +67,41 @@ let s:p.tabline.tabsel  = [ [ s:white, s:blue ] ]
 
 let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:p)
 
-" coc status function
+" coc status
 function! CocStatusDiagnostic() abort
     let info = get(b:, 'coc_diagnostic_info', {})
     if empty(info) | return '' | endif
-    let msgs = []
+    let l:msgs = []
     if get(info, 'error', 0)
-        call add(msgs, 'E:' . info['error'])
+        call add(l:msgs, 'E'.info['error'])
     endif
     if get(info, 'warning', 0)
-        call add(msgs, 'W:' . info['warning'])
+        call add(l:msgs, 'W'.info['warning'])
     endif
     if get(info, 'information', 0)
-        call add(msgs, 'I:' . info['information'])
+        call add(l:msgs, 'I'.info['information'])
     endif
     if get(info, 'hint', 0)
-        call add(msgs, 'H:' . info['hint'])
+        call add(l:msgs, 'H'.info['hint'])
     endif
-    return join(msgs, ' ') . get(g:, 'coc_status', '')
+    return join(msgs, ' ').get(g:, 'coc_status', '')
+endfunction
+
+" gitgutter status
+function! GitGutterStatus()
+    let [a,m,r] = GitGutterGetHunkSummary()
+    if a==0 && m==0 && r==0 | return '' | endif
+    let l:msgs = []
+    if a!=0
+        call add(l:msgs, '+'.a)
+    endif
+    if m!=0
+        call add(l:msgs, '~'.m)
+    endif
+    if r!=0
+        call add(l:msgs, '-'.r)
+    endif
+    return join(l:msgs, ' ')
 endfunction
 
 " lightline elements
@@ -79,19 +112,22 @@ let g:lightline = {
         \ 'right': '│' },
     \ 'active': {
 		\ 'left': [ [ 'mode', 'paste' ],
+        \           [ 'gitstatus' ],
 		\           [ 'readonly', 'filename', 'modified' ] ],
 		\ 'right': [ [ 'line_info' ],
 		\            [ 'cocstatus' ],
 		\            [ 'filetype', 'file_encoding' ] ] },
 	\ 'inactive': {
-		\ 'left': [ [ 'filename' ] ],
+		\ 'left': [ [ 'filename' ],
+        \           [ 'gitstatus' ] ],
 		\ 'right': [ [ 'line_info' ],
 		\            [ 'cocstatus' ] ] },
     \ 'component': {
 		\ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
         \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v'},
     \ 'component_function': {
-        \ 'cocstatus': 'CocStatusDiagnostic' },
+        \ 'gitstatus': 'GitGutterStatus',
+        \ 'cocstatus': 'CocStatusDiagnostic'},
 \ }
 
 " use autocmd to force lightline update
