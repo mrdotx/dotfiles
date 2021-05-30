@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-29T19:01:34+0200
+" date:   2021-05-30T09:55:33+0200
 
 set background=dark
 hi clear
@@ -13,24 +13,24 @@ endif
 let colors_name="klassiker"
 
 " colors used in this scheme
-" GUI: #000000, Term:   0
-" GUI: #df2800, Term:   1
-" GUI: #00b200, Term:   2
-" GUI: #b0b200, Term:   3
-" GUI: #4185d7, Term:  12
-" GUI: #980096, Term:   5
-" GUI: #008081, Term:  12
-" GUI: #ffffff, Term:  15
+" GUI: #000000, Term: 0
+" GUI: #df2800, Term: 1
+" GUI: #00b200, Term: 2
+" GUI: #b0b200, Term: 3
+" GUI: #4185d7, Term: 12
+" GUI: #980096, Term: 5
+" GUI: #008081, Term: 12
+" GUI: #ffffff, Term: 15
 
 " GUI: #2b2b2b, Term: 234
-" GUI: #333333, Term: 237
+" GUI: #333333, Term: 8
 " GUI: #666666, Term: 242
 
-" GUI: #223344, Term:  23
-" GUI: #005f00, Term:  22
-" GUI: #334455, Term:  59
-" GUI: #5f0000, Term:  52
-" GUI: #875f5f, Term:  95
+" GUI: #223344, Term: 23
+" GUI: #005f00, Term: 22
+" GUI: #334455, Term: 59
+" GUI: #5f0000, Term: 52
+" GUI: #875f5f, Term: 95
 " GUI: #778899, Term: 103
 " GUI: #f92782, Term: 197
 
@@ -88,7 +88,7 @@ hi ColorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=N
 hi CursorColumn guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi CursorLine guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NONE
 hi Cursor guifg=#000000 guibg=#ffffff gui=NONE ctermfg=0 ctermbg=15 cterm=NONE
-hi Visual guifg=NONE guibg=#333333 gui=NONE ctermfg=NONE ctermbg=237 cterm=NONE
+hi Visual guifg=NONE guibg=#333333 gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
 hi MatchParen guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=3 cterm=NONE
 if has("nvim")
   " neovim terminal
