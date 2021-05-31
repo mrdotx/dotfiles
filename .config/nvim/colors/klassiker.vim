@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-30T09:55:33+0200
+" date:   2021-05-31T12:57:41+0200
 
 set background=dark
 hi clear
@@ -27,12 +27,12 @@ let colors_name="klassiker"
 " GUI: #666666, Term: 242
 
 " GUI: #223344, Term: 23
-" GUI: #005f00, Term: 22
 " GUI: #334455, Term: 59
-" GUI: #5f0000, Term: 52
-" GUI: #875f5f, Term: 95
 " GUI: #778899, Term: 103
 " GUI: #f92782, Term: 197
+
+" GUI: #005f00, Term: 22
+" GUI: #5f0000, Term: 52
 
 " popup Menu
 hi Pmenu guifg=#ffffff guibg=#223344 gui=NONE ctermfg=15 ctermbg=23 cterm=NONE
@@ -48,7 +48,7 @@ hi NonText guifg=#334455 guibg=NONE gui=NONE ctermfg=59 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=#008081 guibg=#000000 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
 hi StatusLineNC guifg=#778899 guibg=#000000 gui=NONE ctermfg=103 ctermbg=0 cterm=NONE
 hi Search guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=221 cterm=NONE
-hi VertSplit guifg=#875f5f guibg=NONE gui=NONE ctermfg=95 ctermbg=NONE cterm=NONE
+hi VertSplit guifg=#2b2b2b guibg=NONE gui=NONE ctermfg=234 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#666666 guibg=NONE gui=NONE ctermfg=242 ctermbg=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=#2b2b2b gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
 
