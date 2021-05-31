@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T20:53:48+0200
+" date:   2021-05-31T21:39:42+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -151,7 +151,7 @@ let g:lightline = {
         \ 'gitstatus': 'GitGutterStatus',
         \ 'filename_modified_readonly': 'FilenameModifiedReadonly',
         \ 'cocstatus': 'CocDiagnosticStatus'
-    \ },
+    \ }
 \ }
 
 " use autocmd to force lightline update
