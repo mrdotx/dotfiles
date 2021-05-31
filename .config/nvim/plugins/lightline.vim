@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T16:33:56+0200
+" date:   2021-05-31T20:53:48+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -19,51 +19,51 @@ let s:base2     = [ '#666666', 242 ]
 let s:base3     = [ '#cccccc', 251 ]
 
 let s:p = {
-    \ 'normal': {},
-    \ 'inactive': {},
-    \ 'insert': {},
-    \ 'replace': {},
-    \ 'visual': {},
-    \ 'tabline': {}
+    \ 'normal': {
+        \ 'left': [ [ s:white, s:blue ],
+        \           [ s:base3, s:base2 ],
+        \           [ s:base3, s:base0 ] ],
+        \ 'middle': [ [ s:base3, s:base0 ] ],
+        \ 'right': [ [ s:white, s:blue ],
+        \            [ s:base3, s:base2 ] ],
+        \ 'error': [ [ s:red, s:base0 ] ],
+        \ 'warning': [ [ s:yellow, s:base1 ] ]
+    \ },
+    \ 'inactive': {
+        \ 'left': [ [ s:base3, s:base2 ],
+        \           [ s:base2, s:base0 ] ],
+        \ 'middle': [ [ s:base3, s:black ] ],
+        \ 'right': [ [ s:base3, s:base2 ],
+        \            [ s:base2, s:base1 ] ]
+    \ },
+    \ 'insert': {
+        \ 'left': [ [ s:white, s:green ],
+        \           [ s:base3, s:base2 ],
+        \           [ s:base3, s:base0 ] ],
+        \ 'right': [ [ s:white, s:green ],
+        \            [ s:base3, s:base2 ] ]
+    \ },
+    \ 'replace': {
+        \ 'left': [ [ s:white, s:red ],
+        \           [ s:base3, s:base2 ],
+        \           [ s:base3, s:base0 ] ],
+        \ 'right': [ [ s:white, s:red ],
+        \            [ s:base3, s:base2 ] ]
+    \ },
+    \ 'visual': {
+        \ 'left': [ [ s:white, s:magenta ],
+        \           [ s:base3, s:base2 ],
+        \           [ s:base3, s:base0 ] ],
+        \ 'right': [ [ s:white, s:magenta ],
+        \            [ s:base3, s:base2 ] ]
+    \ },
+    \ 'tabline': {
+        \ 'left': [ [ s:base3, s:base2 ] ],
+        \ 'middle': [ [ s:base3, s:base0 ] ],
+        \ 'right': [ [ s:base3, s:base0 ] ],
+        \ 'tabsel': [ [ s:white, s:blue ] ]
+    \ }
 \ }
-
-let s:p.normal.left     = [ [ s:white, s:blue ],
-                            \ [ s:base3, s:base2 ],
-                            \ [ s:base3, s:base0 ] ]
-let s:p.normal.middle   = [ [ s:base3, s:base0 ] ]
-let s:p.normal.right    = [ [ s:white, s:blue ],
-                            \ [ s:base3, s:base2 ] ]
-let s:p.normal.error    = [ [ s:red, s:base0 ] ]
-let s:p.normal.warning  = [ [ s:yellow, s:base1 ] ]
-
-let s:p.inactive.left   = [ [ s:base3, s:base2 ],
-                            \ [ s:base2, s:base0 ] ]
-let s:p.inactive.middle = [ [ s:base3, s:black ] ]
-let s:p.inactive.right  = [ [ s:base3, s:base2 ],
-                            \ [ s:base2, s:base1 ] ]
-
-let s:p.insert.left     = [ [ s:white, s:green ],
-                            \ [ s:base3, s:base2 ],
-                            \ [ s:base3, s:base0 ] ]
-let s:p.insert.right    = [ [ s:white, s:green ],
-                            \ [ s:base3, s:base2 ] ]
-
-let s:p.replace.left    = [ [ s:white, s:red ],
-                            \ [ s:base3, s:base2 ],
-                            \ [ s:base3, s:base0 ] ]
-let s:p.replace.right   = [ [ s:white, s:red ],
-                            \ [ s:base3, s:base2 ] ]
-
-let s:p.visual.left     = [ [ s:white, s:magenta ],
-                            \ [ s:base3, s:base2 ],
-                            \ [ s:base3, s:base0 ] ]
-let s:p.visual.right    = [ [ s:white, s:magenta ],
-                            \ [ s:base3, s:base2 ] ]
-
-let s:p.tabline.left    = [ [ s:base3, s:base2 ] ]
-let s:p.tabline.middle  = copy(s:p.normal.middle)
-let s:p.tabline.right   = copy(s:p.tabline.middle)
-let s:p.tabline.tabsel  = [ [ s:white, s:blue ] ]
 
 let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:p)
 
@@ -71,45 +71,54 @@ let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:
 function! GitGutterStatus()
     let [l:add,l:change,l:remove] = GitGutterGetHunkSummary()
     if l:add==0 && l:change==0 && l:remove==0 | return '' | endif
-    let l:msgs = []
+    let l:indicators=[]
     if l:add!=0
-        call add(l:msgs, ' '.l:add)
+        call add(l:indicators, ' '.l:add)
     endif
     if l:change!=0
-        call add(l:msgs, ' '.l:change)
+        call add(l:indicators, ' '.l:change)
     endif
     if l:remove!=0
-        call add(l:msgs, ' '.l:remove)
+        call add(l:indicators, ' '.l:remove)
     endif
-    return join(l:msgs, ' ')
+    return join(l:indicators, ' ')
 endfunction
 
 " coc status
 function! CocDiagnosticStatus() abort
     let l:info = get(b:, 'coc_diagnostic_info', {})
     if empty(l:info) | return '' | endif
-    let l:msgs = []
+    let l:indicators=[]
     if get(l:info, 'error', 0)
-        call add(l:msgs, ' '.l:info['error'])
+        call add(l:indicators, ' '.l:info['error'])
     endif
     if get(l:info, 'warning', 0)
-        call add(l:msgs, ' '.l:info['warning'])
+        call add(l:indicators, ' '.l:info['warning'])
     endif
     if get(l:info, 'information', 0)
-        call add(l:msgs, ' '.l:info['information'])
+        call add(l:indicators, ' '.l:info['information'])
     endif
     if get(l:info, 'hint', 0)
-        call add(l:msgs, ' '.l:info['hint'])
+        call add(l:indicators, ' '.l:info['hint'])
     endif
-    return join(msgs, ' ').get(g:, 'coc_status', '')
+    return join(l:indicators, ' ').get(g:, 'coc_status', '')
 endfunction
 
 " filename, modified and readonly combined
 function! FilenameModifiedReadonly()
     let l:filename=expand('%:t') !=# '' ? expand('%:t') : '[no name] '
-    let l:modified=&modified ? '[+]' : ''
-    let l:readonly=&readonly ? '[ro]' : ''
-    return l:filename.l:modified.l:readonly
+    let l:indicators=[]
+    if &readonly!=0 || &modified!=0
+        call add(l:indicators, '[')
+        if &readonly!=0
+            call add(l:indicators, 'r')
+        endif
+        if &modified!=0
+            call add(l:indicators, '+')
+        endif
+        call add(l:indicators, ']')
+    endif
+    return l:filename.join(l:indicators, '')
 endfunction
 
 " lightline elements
@@ -136,7 +145,7 @@ let g:lightline = {
     \ 'component': {
 		\ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
 		\ 'file_type': '%{&ft!=#""?&ft:"[no ft]"}',
-        \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v'
+        \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v%<'
     \ },
     \ 'component_function': {
         \ 'gitstatus': 'GitGutterStatus',
