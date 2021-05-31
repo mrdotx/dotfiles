@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-30T16:03:20+0200
+" date:   2021-05-31T10:23:29+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -69,17 +69,17 @@ let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:
 
 " gitgutter status
 function! GitGutterStatus()
-    let [l:a,l:m,l:r] = GitGutterGetHunkSummary()
-    if l:a==0 && l:m==0 && l:r==0 | return '' | endif
+    let [l:add,l:change,l:remove] = GitGutterGetHunkSummary()
+    if l:add==0 && l:change==0 && l:remove==0 | return '' | endif
     let l:msgs = []
-    if l:a!=0
-        call add(l:msgs, '+'.l:a)
+    if l:add!=0
+        call add(l:msgs, ' '.l:add)
     endif
-    if l:m!=0
-        call add(l:msgs, '~'.l:m)
+    if l:change!=0
+        call add(l:msgs, ' '.l:change)
     endif
-    if l:r!=0
-        call add(l:msgs, '-'.l:r)
+    if l:remove!=0
+        call add(l:msgs, ' '.l:remove)
     endif
     return join(l:msgs, ' ')
 endfunction
@@ -90,16 +90,16 @@ function! CocStatusDiagnostic() abort
     if empty(l:info) | return '' | endif
     let l:msgs = []
     if get(l:info, 'error', 0)
-        call add(l:msgs, 'E'.l:info['error'])
+        call add(l:msgs, ' '.l:info['error'])
     endif
     if get(l:info, 'warning', 0)
-        call add(l:msgs, 'W'.l:info['warning'])
+        call add(l:msgs, ' '.l:info['warning'])
     endif
     if get(l:info, 'information', 0)
-        call add(l:msgs, 'I'.l:info['information'])
+        call add(l:msgs, ' '.l:info['information'])
     endif
     if get(l:info, 'hint', 0)
-        call add(l:msgs, 'H'.l:info['hint'])
+        call add(l:msgs, ' '.l:info['hint'])
     endif
     return join(msgs, ' ').get(g:, 'coc_status', '')
 endfunction

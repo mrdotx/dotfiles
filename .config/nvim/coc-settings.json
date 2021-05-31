@@ -1,15 +1,38 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-05-28T11:52:33+0200
+// date:   2021-05-31T10:15:42+0200
 
 {
-    "languageserver": {
+    "suggest.completionItemKindLabels": {
+        "method": "",
+        "function": "",
+        "variable": "[]",
+        "field": "",
+        "typeParameter": "<>",
+        "constant": "",
+        "class": "פּ",
+        "interface": "蘒",
+        "struct": "",
+        "event": "",
+        "operator": "",
+        "module": "",
+        "property": "",
+        "enum": "練",
+        "reference": "",
+        "keyword": "",
+        "file": "",
+        "folder": "ﱮ",
+        "color": "",
+        "unit": "塞",
+        "snippet": "",
+        "text": "",
+        "constructor": "",
+        "value": "",
+        "enumMember": ""
     },
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
-    },
-    "diagnostic-languageserver.formatFiletypes": {
     },
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
