@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T12:57:41+0200
+" date:   2021-05-31T13:01:43+0200
 
 set background=dark
 hi clear
@@ -48,7 +48,7 @@ hi NonText guifg=#334455 guibg=NONE gui=NONE ctermfg=59 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=#008081 guibg=#000000 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
 hi StatusLineNC guifg=#778899 guibg=#000000 gui=NONE ctermfg=103 ctermbg=0 cterm=NONE
 hi Search guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=221 cterm=NONE
-hi VertSplit guifg=#2b2b2b guibg=NONE gui=NONE ctermfg=234 ctermbg=NONE cterm=NONE
+hi VertSplit guifg=#4185d7 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#666666 guibg=NONE gui=NONE ctermfg=242 ctermbg=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=#2b2b2b gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
 
