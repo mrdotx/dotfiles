@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T10:23:29+0200
+" date:   2021-05-31T16:33:56+0200
 
 " klassiker color scheme
 let s:black     = [ '#121212', 233 ]
@@ -85,7 +85,7 @@ function! GitGutterStatus()
 endfunction
 
 " coc status
-function! CocStatusDiagnostic() abort
+function! CocDiagnosticStatus() abort
     let l:info = get(b:, 'coc_diagnostic_info', {})
     if empty(l:info) | return '' | endif
     let l:msgs = []
@@ -104,6 +104,14 @@ function! CocStatusDiagnostic() abort
     return join(msgs, ' ').get(g:, 'coc_status', '')
 endfunction
 
+" filename, modified and readonly combined
+function! FilenameModifiedReadonly()
+    let l:filename=expand('%:t') !=# '' ? expand('%:t') : '[no name] '
+    let l:modified=&modified ? '[+]' : ''
+    let l:readonly=&readonly ? '[ro]' : ''
+    return l:filename.l:modified.l:readonly
+endfunction
+
 " lightline elements
 let g:lightline = {
     \ 'colorscheme': 'klassiker',
@@ -114,10 +122,10 @@ let g:lightline = {
     \ 'active': {
 		\ 'left': [ [ 'mode', 'paste' ],
         \           [ 'gitstatus' ],
-		\           [ 'readonly', 'filename', 'modified' ] ],
+		\           [ 'filename_modified_readonly', 'spell' ] ],
 		\ 'right': [ [ 'line_info' ],
 		\            [ 'cocstatus' ],
-		\            [ 'filetype', 'file_encoding' ] ]
+		\            [ 'file_type', 'file_encoding' ] ]
     \ },
 	\ 'inactive': {
 		\ 'left': [ [ 'filename' ],
@@ -127,11 +135,13 @@ let g:lightline = {
     \ },
     \ 'component': {
 		\ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
+		\ 'file_type': '%{&ft!=#""?&ft:"[no ft]"}',
         \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v'
     \ },
     \ 'component_function': {
         \ 'gitstatus': 'GitGutterStatus',
-        \ 'cocstatus': 'CocStatusDiagnostic'
+        \ 'filename_modified_readonly': 'FilenameModifiedReadonly',
+        \ 'cocstatus': 'CocDiagnosticStatus'
     \ },
 \ }
 
