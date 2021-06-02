@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T21:26:24+0200
+" date:   2021-06-02T15:12:23+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -10,9 +10,9 @@ set timeoutlen=500
 
 " color mappings
 highlight default link WhichKey          Operator
-highlight default link WhichKeySeperator Float
-highlight default link WhichKeyGroup     SpecialComment
-highlight default link WhichKeyDesc      Comment
+highlight default link WhichKeySeperator SpecialComment
+highlight default link WhichKeyGroup     Comment
+highlight default link WhichKeyDesc      DiffText
 highlight default link WhichKeyFloating  Pmenu
 
 " key mappings
