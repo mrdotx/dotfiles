@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-02T15:12:23+0200
+" date:   2021-06-02T19:11:24+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -26,11 +26,11 @@ vnoremap <silent> g             :<c-u>WhichKeyVisual 'g'<cr>
 " define description dictionaries
 call which_key#register(',', "g:main_dict")
 call which_key#register('.', "g:coc_dict")
-call which_key#register('g', "g:go_dict")
+call which_key#register('g', "g:goto_dict")
 
 " main description dictionary
 let g:main_dict = {
-    \ 'name': 'main',
+    \ 'name': '+main',
     \ ',': [':call NetrwToggle()'       ,'netrw file explorer'],
     \ '/': [':echo "press faster ,/"'   ,'reset search highlighting'],
     \ '[': ['<Plug>(GitGutterPrevHunk)' ,'goto previous changed git hunk'],
@@ -84,7 +84,7 @@ let g:main_dict = {
 
 " coc description dictionary
 let g:coc_dict = {
-    \ 'name': 'coc - conquer of completion',
+    \ 'name': '+coc',
     \ '.': [':CocList diagnostics'              ,'show all diagnostics'],
     \ 'a': ['<Plug>(coc-codeaction-selected)'   ,'action selected code'],
     \ 'ac': ['<Plug>(coc-codeaction)'           ,'action current line'],
@@ -96,19 +96,19 @@ let g:coc_dict = {
     \ 'o': [':CocList outline'                  ,'find symbol current document'],
     \ 'p': [':CocListResume'                    ,'resume latest list'],
     \ 'q': {
-        \ 'name': 'quickfix',
+        \ 'name': '+quickfix',
         \ 'f': ['<Plug>(coc-fix-current)'   ,'autofix current line']
     \ },
     \ 'r': {
-        \ 'name': 'rename',
+        \ 'name': '+rename',
         \ 'n': ['<Plug>(coc-rename)'    ,'symbol renaming']
     \ },
     \ 's': [':CocList -I symbols'               ,'search workspace symbols']
 \ }
 
-" go description dictionary
-let g:go_dict = {
-    \ 'name': 'go',
+" goto description dictionary
+let g:goto_dict = {
+    \ 'name': '+goto',
     \ '[': ['<Plug>(coc-diagnostic-prev)'       ,'previous diagnostics list item'],
     \ ']': ['<Plug>(coc-diagnostic-next)'       ,'next diasnostics list item'],
     \ '%': ['<Plug>(MatchitOperationBackward)'  ,'matchit operation backward'],
