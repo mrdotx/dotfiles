@@ -153,7 +153,6 @@ gcr
 gd
 gdbm
 gdk-pixbuf2
-gdl
 gegl
 gettext
 ghostscript
@@ -190,6 +189,7 @@ gsettings-desktop-schemas
 gsfonts
 gsl
 gsm
+gspell
 gssdp
 gst-libav
 gst-plugins-bad
@@ -205,7 +205,6 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm3
-gtkspell3
 gts
 gufw
 guile
@@ -370,6 +369,7 @@ libcdr
 libcec
 libcloudproviders
 libcmis
+libcolord
 libconfig
 libcroco
 libcups
@@ -585,8 +585,8 @@ linux-ck-skylake-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
-linux5.12.8.zen1-1-zen-bin
-linux5.12.8.zen1-1-zen-headers-bin
+linux5.12.9.zen1-1-zen-bin
+linux5.12.9.zen1-1-zen-headers-bin
 linux510
 linux510-headers
 linux512
@@ -796,6 +796,7 @@ python-lxml
 python-markdown
 python-mccabe
 python-monotonic
+python-more-itertools
 python-msgpack
 python-mutagen
 python-npyscreen
