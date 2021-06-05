@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-29T09:25:18+0200
+# date:   2021-06-05T13:39:53+0200
 
 # general
 #########
@@ -84,7 +84,6 @@ for_window [title="^calculator$"] $float, $size, $move
 for_window [title="^cdw$"] $float, $size, $move
 for_window [title="^stopwatch$"] $float, resize set 250 500, $move
 
-for_window [class="^KeePassXC$"] $float, $sticky, move scratchpad, scratchpad show, $size, $move
 for_window [class="^Dragon-drag-and-drop$"] $float, $sticky, $border, $move
 for_window [class="^Lxappearance$"] $float, $sticky, $move
 for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
@@ -409,8 +408,7 @@ bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 8 'hermes' 'ssh hermes'" workspace 3
 bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 9 'prometheus' 'ssh prometheus'" workspace 3
 bindsym $sup+j exec "jameica" workspace 8
-bindsym $sup+k exec --no-startup-id "if pgrep -x keepassxc; then i3-msg [class='^KeePassXC$'] scratchpad show; else sync_keepass.sh && keepassxc && sync_keepass.sh; fi"
-bindsym $sup+Shift+k exec "kodi" workspace 9
+bindsym $sup+k exec "kodi" workspace 9
 bindsym $sup+m exec "thunderbird" workspace 7
 bindsym $sup+Shift+m exec --no-startup-id "minetest --logfile ''" workspace 10
 bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 4 'newsboat' 'polybar_rss.sh --open'" workspace 3
