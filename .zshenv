@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.zshenv
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-29T10:16:39+0200
+# date:   2021-06-05T08:03:32+0200
 
 # repository paths
 typeset -U PATH path
@@ -60,6 +60,7 @@ export \
 # app settings
 export \
     GPG_TTY=$(tty) \
+    PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store" \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
