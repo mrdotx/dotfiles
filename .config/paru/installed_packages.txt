@@ -272,7 +272,6 @@ json-c
 json-glib
 jsoncpp
 kbd
-keepassxc
 keyutils
 kid3-common
 kid3-qt
@@ -498,7 +497,6 @@ libsigc++
 libsigsegv
 libsm
 libsndfile
-libsodium
 libsoup
 libsoxr
 libspectre
@@ -696,6 +694,8 @@ pango
 pangomm
 parted
 paru-bin
+pass
+passff-host
 patch
 pciutils
 pcre
@@ -831,7 +831,6 @@ python-webencodings
 python-wrapt
 python-xlib
 qpdf
-qrencode
 qt5-base
 qt5-declarative
 qt5-multimedia
@@ -839,7 +838,6 @@ qt5-svg
 qt5-wayland
 qt5-x11extras
 qt5ct
-quazip
 ragel
 ranger
 raptor
@@ -1027,9 +1025,6 @@ xxhash
 xz
 yajl
 youtube-dl
-yubico-c
-yubico-c-client
-yubikey-personalization
 zathura
 zathura-cb
 zathura-djvu

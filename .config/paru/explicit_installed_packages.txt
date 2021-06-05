@@ -95,7 +95,6 @@ iproute2
 iptables
 iputils
 iwd
-keepassxc
 kid3-qt
 kmon
 kodi-addon-pvr-iptvsimple
@@ -169,6 +168,8 @@ pacman
 pam-gnupg
 pandoc-bin
 paru-bin
+pass
+passff-host
 patch
 pciutils
 perl
