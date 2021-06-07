@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-07T08:35:33+0200
+# date:   2021-06-07T09:55:01+0200
 
 # exit | function   | action of ranger
 
@@ -161,7 +161,7 @@ handle_extension() {
 
             if [ $password_store = 1 ]; then
                 gpg -d "$file_path" \
-                    | tail -n +2 \
+                    | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
                     && exit 5
             else
                 gpg -d "$file_path" \
