@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:52:40+0200
+" date:   2021-06-07T08:11:09+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -61,23 +61,23 @@ filetype indent on                  " automatically indent code
 autocmd FileType tex,latex,markdown,gitcommit setlocal spell spelllang=en_us,de_de
 " run xrdb whenever xresources are updated
 autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
-" edit gpg encrypted files
+" edit amored gpg encrypted files
 augroup encrypt
     au!
     " disable temporary data
-    autocmd BufReadPre,FileReadPre *.gpg set viminfo=
-    autocmd BufReadPre,FileReadPre *.gpg set noswapfile noundofile nobackup
+    autocmd BufReadPre,FileReadPre *.asc set viminfo=
+    autocmd BufReadPre,FileReadPre *.asc set noswapfile noundofile nobackup
     " binary mode to read the encrypted file
-    autocmd BufReadPre,FileReadPre *.gpg set bin
-    autocmd BufReadPre,FileReadPre *.gpg let ch_save = &ch|set ch=2
-    autocmd BufReadPost,FileReadPost *.gpg '[,']!gpg -d 2>/dev/null
+    autocmd BufReadPre,FileReadPre *.asc set bin
+    autocmd BufReadPre,FileReadPre *.asc let ch_save = &ch|set ch=2
+    autocmd BufReadPost,FileReadPost *.asc '[,']!gpg -d 2>/dev/null
     " normal mode for editing
-    autocmd BufReadPost,FileReadPost *.gpg set nobin
-    autocmd BufReadPost,FileReadPost *.gpg let &ch = ch_save|unlet ch_save
-    autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost ".expand("%:r")
+    autocmd BufReadPost,FileReadPost *.asc set nobin
+    autocmd BufReadPost,FileReadPost *.asc let &ch = ch_save|unlet ch_save
+    autocmd BufReadPost,FileReadPost *.asc execute ":doautocmd BufReadPost ".expand("%:r")
     " convert text to encrypted data before writing
-    autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --default-recipient-self -ae 2>/dev/null
-    autocmd BufWritePost,FileWritePost *.gpg u
+    autocmd BufWritePre,FileWritePre *.asc '[,']!gpg --default-recipient-self -ae 2>/dev/null
+    autocmd BufWritePost,FileWritePost *.asc u
 augroup END
 
 " if config exists source file
