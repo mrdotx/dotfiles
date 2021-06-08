@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-07T08:11:09+0200
+" date:   2021-06-08T08:19:47+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -61,22 +61,30 @@ filetype indent on                  " automatically indent code
 autocmd FileType tex,latex,markdown,gitcommit setlocal spell spelllang=en_us,de_de
 " run xrdb whenever xresources are updated
 autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
+
 " edit amored gpg encrypted files
 augroup encrypt
     au!
     " disable temporary data
-    autocmd BufReadPre,FileReadPre *.asc set viminfo=
-    autocmd BufReadPre,FileReadPre *.asc set noswapfile noundofile nobackup
+    autocmd BufReadPre,FileReadPre *.asc
+        \ set viminfo= |
+        \ set noswapfile noundofile nobackup
     " binary mode to read the encrypted file
-    autocmd BufReadPre,FileReadPre *.asc set bin
-    autocmd BufReadPre,FileReadPre *.asc let ch_save = &ch|set ch=2
-    autocmd BufReadPost,FileReadPost *.asc '[,']!gpg -d 2>/dev/null
+    autocmd BufReadPre,FileReadPre *.asc
+        \ set bin |
+        \ let ch_save = &ch |
+        \ set ch=2
+    autocmd BufReadPost,FileReadPost *.asc
+        \ '[,']!gpg --quiet --decrypt
     " normal mode for editing
-    autocmd BufReadPost,FileReadPost *.asc set nobin
-    autocmd BufReadPost,FileReadPost *.asc let &ch = ch_save|unlet ch_save
-    autocmd BufReadPost,FileReadPost *.asc execute ":doautocmd BufReadPost ".expand("%:r")
+    autocmd BufReadPost,FileReadPost *.asc
+        \ set nobin |
+        \ let &ch = ch_save |
+        \ unlet ch_save |
+        \ execute ":doautocmd BufReadPost ".expand("%:r")
     " convert text to encrypted data before writing
-    autocmd BufWritePre,FileWritePre *.asc '[,']!gpg --default-recipient-self -ae 2>/dev/null
+    autocmd BufWritePre,FileWritePre *.asc
+        \ '[,']!gpg --quiet --encrypt --armor --default-recipient-self
     autocmd BufWritePost,FileWritePost *.asc u
 augroup END
 
