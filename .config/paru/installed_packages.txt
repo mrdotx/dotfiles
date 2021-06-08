@@ -694,8 +694,6 @@ pango
 pangomm
 parted
 paru-bin
-pass
-passff-host
 patch
 pciutils
 pcre

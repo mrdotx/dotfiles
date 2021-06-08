@@ -168,8 +168,6 @@ pacman
 pam-gnupg
 pandoc-bin
 paru-bin
-pass
-passff-host
 patch
 pciutils
 perl
