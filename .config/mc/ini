@@ -115,6 +115,7 @@ clipboard_paste=
 [Colors]
 base_color=
 tmux-256color=
+rxvt-unicode-256color=
 color_terminals=
 
 [Panels]
