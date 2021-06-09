@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:49:30+0200
+# date:   2021-06-09T12:49:33+0200
 
 # home special
 /.w3m/bookmark.html
@@ -21,6 +21,10 @@
 /.config/cmus/queue.pl
 /.config/cmus/resume
 /.config/cmus/search-history
+/.config/mc/mcedit/
+/.config/mc/hotlist
+/.config/mc/hotlist.bak
+/.config/mc/panels.ini
 /.config/neofetch/images
 /.config/newsboat/history.cmdline
 /.config/newsboat/history.search
@@ -32,3 +36,8 @@
 /.config/systemd/user/timers.target.wants/
 /.config/systemd/user/i3.target.wants/
 /.config/zsh/.zcompdump
+
+# .local special
+/.local/share/mc/mcedit/
+/.local/share/mc/filepos
+/.local/share/mc/history
