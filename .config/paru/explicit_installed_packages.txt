@@ -49,7 +49,6 @@ ffmpeg
 ffmpegthumbnailer
 file
 filesystem
-filezilla
 findutils
 firefox-developer-edition
 firefox-developer-edition-i18n-de
@@ -139,6 +138,7 @@ man-db
 man-pages
 manjaro-release
 manjaro-system
+mc
 mesa-demos
 mesa-vdpau
 mhwd

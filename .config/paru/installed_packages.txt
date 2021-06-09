@@ -130,7 +130,6 @@ ffmpegthumbnailer
 fftw
 file
 filesystem
-filezilla
 findutils
 firefox-developer-edition
 firefox-developer-edition-i18n-de
@@ -396,7 +395,6 @@ libexif
 libexttextcat
 libfdk-aac
 libffi
-libfilezilla
 libfontenc
 libfreehand
 libftdi
@@ -617,6 +615,7 @@ manjaro-keyring
 manjaro-release
 manjaro-system
 mariadb-libs
+mc
 md4c
 mesa
 mesa-demos
@@ -867,6 +866,7 @@ shared-mime-info
 shellcheck-bin
 simple-mtpfs
 simple-scan
+slang
 slop
 smartmontools
 smbclient
@@ -968,8 +968,6 @@ wmctrl
 wmutils
 woff2
 wpebackend-fdo
-wxgtk-common
-wxgtk3
 x264
 x265
 x86_energy_perf_policy
