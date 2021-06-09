@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-08T15:11:56+0200
+# date:   2021-06-09T09:49:56+0200
 
 # general
 #########
@@ -400,25 +400,25 @@ bindsym $sup+Ctrl+Return exec --no-startup-id "$TERMINAL_BACKUP"
 
 bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
 bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 10 'cmus' 'polybar_music.sh --start'" workspace 3
+bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'" workspace 3
 bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
 bindsym $sup+d exec "darktable" workspace 5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace 5
 bindsym $sup+i exec "inkscape" workspace 5
-bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 8 'hermes' 'ssh hermes'" workspace 3
-bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 9 'prometheus' 'ssh prometheus'" workspace 3
+bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 17 'hermes' 'ssh hermes'" workspace 3
+bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 18 'prometheus' 'ssh prometheus'" workspace 3
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec "kodi" workspace 9
 bindsym $sup+m exec "thunderbird" workspace 7
 bindsym $sup+Shift+m exec --no-startup-id "minetest --logfile ''" workspace 10
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 4 'newsboat' 'polybar_rss.sh --open'" workspace 3
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 5 'podboat'" workspace 3
+bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'" workspace 3
+bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 14 'podboat'" workspace 3
 bindsym $sup+o exec "libreoffice" workspace 6
-bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 3 $FILE" workspace 3
+bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 12 $FILE" workspace 3
 bindsym $sup+s exec "scribus" workspace 6
-bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 6 'htop'" workspace 3
-bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 7 'bpytop'" workspace 3
+bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 15 'htop'" workspace 3
+bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 16 'bpytop'" workspace 3
 bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
 bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
 bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi" workspace 4
@@ -426,11 +426,11 @@ bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
 bindsym $sup+Ctrl+w exec --no-startup-id "$BROWSER_BACKUP"
 bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
 bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
-bindsym $sup+z exec --no-startup-id "filezilla"
+bindsym $sup+z exec --no-startup-id "i3_tmux.sh -o 11 'mc'" workspace 3
 
 bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+bracketleft exec --no-startup-id "i3_tmux.sh -o 11 'man' 'fzf_man.sh'" workspace 3
-bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 12 'aur' 'fzf_pacman.sh'" workspace 3
+bindsym $sup+bracketleft exec --no-startup-id "i3_tmux.sh -o 21 'man' 'fzf_man.sh'" workspace 3
+bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 22 'aur' 'fzf_pacman.sh'" workspace 3
 bindsym $sup+backslash exec --no-startup-id "chameleon.sh"
 bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
