@@ -18,6 +18,7 @@ found in my other repositories.
 | i3                | tiling window manager                              |
 | i3status          | status line for i3bar                              |
 | libinput-gestures | gestures on touchpad via libinput                  |
+| mc                | visual shell for unix-like systems                 |
 | mpv               | media player                                       |
 | neofetch          | customizable system info script                    |
 | newsboat          | rss/atom feedreader                                |
