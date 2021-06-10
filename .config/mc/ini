@@ -84,7 +84,6 @@ editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 mcview_eof=
 skin=klassiker
-
 filepos_max_saved_entries=1024
 
 [Layout]
@@ -109,8 +108,8 @@ ftpfs_password=anonymous@
 display_codepage=UTF-8
 source_codepage=Other_8_bit
 autodetect_codeset=
-clipboard_store=
-clipboard_paste=
+clipboard_store=xsel --input --clipboard
+clipboard_paste=xsel --output --clipboard
 
 [Colors]
 base_color=
