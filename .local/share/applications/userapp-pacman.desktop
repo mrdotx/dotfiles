@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=pacman
+Comment=manage packages with pacman and aur helper
+Icon=software-center
+Exec=$TERMINAL -T "pacman" -e fzf_pacman.sh
+Actions=
+Categories=Utility;
