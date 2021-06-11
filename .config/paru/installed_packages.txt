@@ -654,6 +654,7 @@ nettle
 newsboat
 node-gyp
 nodejs
+nodejs-nopt
 npm
 npth
 nspr
