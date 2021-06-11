@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-10T10:05:09+0200
+# date:   2021-06-11T07:36:28+0200
 
 # general
 #########
@@ -383,7 +383,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
 bindsym XF86TouchpadToggle exec --no-startup-id "touchpad_toggle.sh"
 bindsym XF86Cut exec --no-startup-id "polybar.sh -r"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
-bindsym $sup+Shift+p exec --no-startup-id "dmenu_password.sh"
+bindsym $sup+Shift+p exec --no-startup-id "dmenu_pass.sh"
 
 # keybindings screenshot
 ########################
