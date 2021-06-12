@@ -214,7 +214,6 @@ gutenprint
 gzip
 harfbuzz
 harfbuzz-icu
-hdparm
 hibiscus
 hicolor-icon-theme
 hidapi
@@ -912,7 +911,6 @@ texlive-core
 thunderbird
 thunderbird-i18n-de
 tinyxml
-tlp
 tmux
 trash-cli
 tree

@@ -218,7 +218,6 @@ texinfo
 texlive-core
 thunderbird
 thunderbird-i18n-de
-tlp
 tmux
 trash-cli
 tree
