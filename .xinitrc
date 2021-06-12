@@ -3,7 +3,10 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:49:15+0200
+# date:   2021-06-12T15:00:56+0200
+
+# set cpu policy
+cpu_policy.sh --performance
 
 # merge in defaults and keymaps
 [ -f /etc/X11/xinit/.Xresources ] \
