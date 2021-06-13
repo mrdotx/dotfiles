@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-11T07:36:28+0200
+# date:   2021-06-13T19:27:31+0200
 
 # general
 #########
@@ -339,6 +339,9 @@ mode "services" {
 
     # mousepointer disable/enable
     bindsym m exec --no-startup-id "i3_services.sh --mousepointer"
+
+    # cpu policy toggle
+    bindsym o exec --no-startup-id "cpu_policy.sh --toggle; i3_services.sh"
 
     # printer disable/enable
     bindsym p exec --no-startup-id "i3_services.sh --printer"
