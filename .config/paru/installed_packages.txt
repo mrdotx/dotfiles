@@ -20,7 +20,6 @@ archlinux-keyring
 arduino-avr-core
 argon2
 aria2
-asciidoc
 aspell
 aspell-de
 aspell-en
@@ -104,8 +103,6 @@ djvulibre
 dkms
 dmidecode
 dnssec-anchors
-docbook-xml
-docbook-xsl
 dosfstools
 double-conversion
 dragon-drag-and-drop-git
