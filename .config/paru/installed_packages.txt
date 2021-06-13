@@ -792,7 +792,6 @@ python-lockfile
 python-lxml
 python-markdown
 python-mccabe
-python-monotonic
 python-more-itertools
 python-msgpack
 python-mutagen
