@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-08T08:59:18+0200
+" date:   2021-06-14T06:53:06+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -64,7 +64,7 @@ autocmd BufWritePost *.config/xorg/* !xrdb -merge ~/.config/xorg/Xresources
 
 " edit gpg encrypted files
 augroup encrypt
-    au!
+    autocmd!
     " disable temporary data
     autocmd BufReadPre,FileReadPre *.asc,*.gpg
         \ set viminfo= |
