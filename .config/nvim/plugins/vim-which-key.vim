@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-02T19:11:24+0200
+" date:   2021-06-14T10:04:41+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -31,92 +31,92 @@ call which_key#register('g', "g:goto_dict")
 " main description dictionary
 let g:main_dict = {
     \ 'name': '+main',
-    \ ',': [':call NetrwToggle()'       ,'netrw file explorer'],
-    \ '/': [':echo "press faster ,/"'   ,'reset search highlighting'],
-    \ '[': ['<Plug>(GitGutterPrevHunk)' ,'goto previous changed git hunk'],
-    \ ']': ['<Plug>(GitGutterNextHunk)' ,'goto next changed git hunk'],
+    \ ',': 'netrw file explorer',
+    \ '/': 'reset search highlighting',
+    \ '[': 'goto previous changed git hunk',
+    \ ']': 'goto next changed git hunk',
     \ 'b': {
         \ 'name': '+buffer',
-        \ '/': [':buffers'      ,'buffer list'],
-        \ 'd': [':bdelete'      ,'delete buffer'],
-        \ 'f': [':bfirst'       ,'first buffer'],
-        \ 'k': [':bwipeout'     ,'kill buffer'],
-        \ 'l': [':blast'        ,'last buffer'],
-        \ 'h': [':bmodified'    ,'next modified buffer'],
-        \ 'n': [':bnext'        ,'next buffer'],
-        \ 'p': [':bprevious'    ,'previous buffer']
+        \ '/': 'buffer list',
+        \ 'd': 'delete buffer',
+        \ 'f': 'first buffer',
+        \ 'k': 'kill buffer',
+        \ 'l': 'last buffer',
+        \ 'm': 'next modified buffer',
+        \ 'n': 'next buffer',
+        \ 'p': 'previous buffer'
     \ },
     \ 'd': {
         \ 'name': '+dictionaries',
-        \ 'g': [':setlocal spell! spelllang=de_de'          ,'german toggle'],
-        \ 'e': [':setlocal spell! spelllang=en_us'          ,'english toggle'],
-        \ 'x': [':setlocal spell! spelllang=en_us,de_de'    ,'english and german toggle']
+        \ 'g': 'german toggle',
+        \ 'e': 'english toggle',
+        \ 'x': 'english and german toggle'
     \ },
-    \ 'g': [':Goyo'                     ,'goyo'],
+    \ 'g': 'goyo',
     \ 'h': {
         \ 'name': '+hunk',
-        \ 'f': [':GitGutterFold'                ,'fold'],
-        \ 'p': ['<Plug>(GitGutterPreviewHunk)'  ,'preview'],
-        \ 's': ['<Plug>(GitGutterStageHunk)'    ,'stage'],
-        \ 'u': ['<Plug>(GitGutterUndoHunk)'     ,'undo']
+        \ 'f': 'fold',
+        \ 'p': 'preview',
+        \ 's': 'stage',
+        \ 'u': 'undo'
     \ },
-    \ 'i': [':IndentLinesToggle'        ,'toggle indent characters'],
-    \ 'l': [':set list! list?'          ,'toggle control characters'],
-    \ 'r': [':echo "press faster ,r"'   ,'replace'],
-    \ 's': [':echo "press faster ,s"'   ,'shell check posix'],
-    \ 't': [':echo "press faster ,t"'   ,'terminal'],
+    \ 'i': 'toggle indent characters',
+    \ 'l': 'toggle control characters',
+    \ 'r': 'replace',
+    \ 's': 'shell check posix',
+    \ 't': 'terminal',
     \ 'w': {
         \ 'name': '+vimwiki',
         \ ',': {
             \ 'name': '+dairy',
-            \ 'i': ['<Plug>VimwikiDiaryGenerateLinks'           ,'generate links'],
-            \ 'm': ['<Plug>VimwikiDiaryMakeTomorrowDiaryNote'   ,'make tomorrow note'],
-            \ 't': ['<Plug>VimwikiDiaryTabMakeDiaryNote'        ,'make note new tab'],
-            \ 'w': ['<Plug>VimwikiDiaryMakeDiaryNote'           ,'make note'],
-            \ 'y': ['<Plug>VimwikiDiaryMakeYesterdayDiaryNote'  ,'make yesterday note']
+            \ 'i': 'generate links',
+            \ 'm': 'make tomorrow note',
+            \ 't': 'make note new tab',
+            \ 'w': 'make note',
+            \ 'y': 'make yesterday note'
         \ },
-        \ 'i': ['<Plug>VimwikiDiaryIndex'   ,'open diary'],
-        \ 's': ['<Plug>VimwikiUISelect'     ,'select vimwiki'],
-        \ 't': ['<Plug>VimwikiTabIndex'     ,'open vimwiki new tab'],
-        \ 'w': ['<Plug>VimwikiIndex'        ,'open vimwiki']
+        \ 'i': 'open diary',
+        \ 's': 'select vimwiki',
+        \ 't': 'open vimwiki new tab',
+        \ 'w': 'open vimwiki'
     \ }
 \ }
 
 " coc description dictionary
 let g:coc_dict = {
     \ 'name': '+coc',
-    \ '.': [':CocList diagnostics'              ,'show all diagnostics'],
-    \ 'a': ['<Plug>(coc-codeaction-selected)'   ,'action selected code'],
-    \ 'ac': ['<Plug>(coc-codeaction)'           ,'action current line'],
-    \ 'c': [':CocList commands'                 ,'show all commands'],
-    \ 'e': [':CocList extensions'               ,'show all extensions'],
-    \ 'f': ['<Plug>(coc-format-selected)'       ,'formating selected code'],
-    \ 'j': [':CocNext'                          ,'default action next item'],
-    \ 'k': [':CocPrev'                          ,'default action previous item'],
-    \ 'o': [':CocList outline'                  ,'find symbol current document'],
-    \ 'p': [':CocListResume'                    ,'resume latest list'],
+    \ '.': 'show all diagnostics',
+    \ 'a': 'action selected code',
+    \ 'ac': 'action current line',
+    \ 'c': 'show all commands',
+    \ 'e': 'show all extensions',
+    \ 'f': 'formating selected code',
+    \ 'j': 'default action next item',
+    \ 'k': 'default action previous item',
+    \ 'o': 'find symbol current document',
+    \ 'p': 'resume latest list',
     \ 'q': {
         \ 'name': '+quickfix',
-        \ 'f': ['<Plug>(coc-fix-current)'   ,'autofix current line']
+        \ 'f': 'autofix current line'
     \ },
     \ 'r': {
         \ 'name': '+rename',
-        \ 'n': ['<Plug>(coc-rename)'    ,'symbol renaming']
+        \ 'n': 'symbol renaming'
     \ },
-    \ 's': [':CocList -I symbols'               ,'search workspace symbols']
+    \ 's': 'search workspace symbols'
 \ }
 
 " goto description dictionary
 let g:goto_dict = {
     \ 'name': '+goto',
-    \ '[': ['<Plug>(coc-diagnostic-prev)'       ,'previous diagnostics list item'],
-    \ ']': ['<Plug>(coc-diagnostic-next)'       ,'next diasnostics list item'],
-    \ '%': ['<Plug>(MatchitOperationBackward)'  ,'matchit operation backward'],
-    \ 'c': ['<Plug>Commentary'                  ,'comment'],
-    \ 'cc': ['<Plug>CommentaryLine'             ,'comment line'],
-    \ 'd': ['<Plug>(coc-definition)'            ,'definition'],
-    \ 'i': ['<Plug>(coc-implementation)'        ,'implementation'],
-    \ 'r': ['<Plug>(coc-references)'            ,'references'],
-    \ 'x': ['<Plug>NetrwBrowseX'                ,'netrw browse x'],
-    \ 'y': ['<Plug>(coc-type-definition)'       ,'type definition']
+    \ '[': 'previous diagnostics list item',
+    \ ']': 'next diasnostics list item',
+    \ '%': 'matchit operation backward',
+    \ 'c': 'comment',
+    \ 'cc': 'comment line',
+    \ 'd': 'definition',
+    \ 'i': 'implementation',
+    \ 'r': 'references',
+    \ 'x': 'netrw browse x',
+    \ 'y': 'type definition'
 \ }
