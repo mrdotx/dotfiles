@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-14T06:53:06+0200
+" date:   2021-06-14T07:38:14+0200
 
 let g:inits_config_folder='~/.config/nvim/'
 
@@ -26,11 +26,11 @@ hi FoldedColumn guibg=NONE
 set clipboard+=unnamedplus          " clipboard
 set noswapfile                      " swapfile
 set number relativenumber           " show hybrid line numbers and numbertoggle
-    augroup numbertoggle
-        autocmd!
-        autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-        autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-    augroup END
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 set noshowmode                      " don't show normal, insert replace etc.
 set showcmd                         " show command in bottom bar
 set showmatch                       " highlight matching [{()}]

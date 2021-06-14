@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/netrw.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:52:45+0200
+" date:   2021-06-14T07:41:21+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -60,7 +60,7 @@ endfunction
 
 augroup netrw_mappings
     autocmd!
-    autocmd filetype netrw call NetrwMappings()
+    autocmd FileType netrw call NetrwMappings()
 augroup END
 
 nnoremap <silent>   <leader><leader>    :call NetrwToggle()<cr>
