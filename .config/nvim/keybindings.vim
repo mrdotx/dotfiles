@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:52:42+0200
+" date:   2021-06-14T09:52:01+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -17,8 +17,8 @@ nnoremap <silent>       <leader>bf  :bfirst<cr>
 nnoremap <silent>       <leader>bk  :bwipeout<cr>
 nnoremap <silent>       <leader>bl  :blast<cr>
 nnoremap <silent>       <leader>bm  :bmodified<cr>
-nnoremap <silent>       <leader>bp  :bprevious<cr>
 nnoremap <silent>       <leader>bn  :bnext<cr>
+nnoremap <silent>       <leader>bp  :bprevious<cr>
 
 " spell check
 nnoremap <silent>       <leader>de  :setlocal spell! spelllang=en_us<cr>
