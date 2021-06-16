@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-13T19:27:31+0200
+# date:   2021-06-16T22:20:21+0200
 
 # general
 #########
@@ -409,9 +409,9 @@ bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
 bindsym $sup+d exec "darktable" workspace 5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace 5
-bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 17 'hermes' 'ssh hermes'" workspace 3
 bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 18 'prometheus' 'ssh prometheus'" workspace 3
+bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec "kodi" workspace 9
 bindsym $sup+m exec "thunderbird" workspace 7
