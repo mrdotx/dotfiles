@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-09T19:23:56+0200
+# date:   2021-06-17T06:39:51+0200
 
 # repository paths
 typeset -U PATH path
@@ -25,6 +25,7 @@ path=( \
     "$HOME/.local/share/repos/surf" \
     "$HOME/.local/share/repos/terminal-colors" \
     "$HOME/.local/share/repos/terminal-wrapper" \
+    "$HOME/.local/share/repos/zram" \
     "$path[@]" \
 )
 export PATH
