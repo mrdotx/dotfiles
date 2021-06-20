@@ -189,7 +189,6 @@ python-pip
 python-pycryptodome
 python-pylint
 python-readability-lxml
-qrencode
 qt5ct
 ranger
 rclone
