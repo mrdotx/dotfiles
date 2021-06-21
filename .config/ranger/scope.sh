@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-07T09:55:01+0200
+# date:   2021-06-21T19:46:06+0200
 
 # exit | function   | action of ranger
 
@@ -23,7 +23,7 @@ file_path="$1"
 preview_width="$2"
 # height of the preview pane (number of fitting characters)
 # preview_height is provided for convenience and unused
-preview_height="$3"
+# preview_height="$3"
 # full path that should be used to cache image preview
 image_cache_path="$4"
 # 'True' if image previews are enabled, 'False' otherwise
@@ -158,15 +158,17 @@ handle_extension() {
             printf "%s" "$(pwd)" \
                 | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
                 && password_store=1
-
-            if [ $password_store = 1 ]; then
-                gpg -d "$file_path" \
-                    | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
-                    && exit 5
-            else
-                gpg -d "$file_path" \
-                    && exit 5
-            fi
+            case "$password_store" in
+                1)
+                    gpg -d "$file_path" \
+                        | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
+                        && exit 5
+                    ;;
+                *)
+                    gpg -d "$file_path" \
+                        && exit 5
+                    ;;
+            esac
             ;;
         dff | dsf | wv | wvc)
             exiftool "$file_path" \
