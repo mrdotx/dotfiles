@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-11T13:01:59+0200
+# date:   2021-06-21T20:36:22+0200
 
 # general
 auto-reload yes
@@ -35,14 +35,14 @@ bind-key SPACE toggle-article-read articlelist
 bind-key N prev-unread
 
 # macros
-macro , open-in-browser
-macro e set browser "printf '%s\n' '%u' >> ~/.local/share/newsboat/queue" ; open-in-browser ; set browser "link_handler.sh %u"
-macro o set browser "link_handler.sh --readable %u"; open-in-browser ; set browser "link_handler.sh %u"
-macro O set browser "$TERMINAL -e link_handler.sh --readable %u &"; open-in-browser ; set browser "link_handler.sh %u"
-macro w set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh %u"
-macro W set browser "$TERMINAL -e w3m.sh %u &"; open-in-browser ; set browser "link_handler.sh %u"
-macro y set browser "printf '%u' | xsel -b"; open-in-browser ; set browser "link_handler.sh %u"
-macro / set browser "surf.sh %u"; open-in-browser ; set browser "link_handler.sh %u"
+macro , open-in-browser -- "open url with link_handler.sh"
+macro / set browser "surf.sh %u"; open-in-browser ; set browser "link_handler.sh %u" -- "open url with surf.sh"
+macro e set browser "printf '%s\n' '%u' >> ~/.local/share/newsboat/queue" ; open-in-browser ; set browser "link_handler.sh %u" -- "export url to podboat queue"
+macro o set browser "link_handler.sh --readable %u"; open-in-browser ; set browser "link_handler.sh %u" -- "open url with link_handler.sh readable"
+macro O set browser "$TERMINAL -e link_handler.sh --readable %u &"; open-in-browser ; set browser "link_handler.sh %u" -- "open url with link_handler.sh readable in new terminal"
+macro w set browser "firefox-developer-edition %u"; open-in-browser ; set browser "link_handler.sh %u" -- "open url with firefox-developer-edition"
+macro W set browser "$TERMINAL -e w3m.sh %u &"; open-in-browser ; set browser "link_handler.sh %u" -- "open url with w3m.sh in new terminal"
+macro y set browser "printf '%u' | xsel -b"; open-in-browser ; set browser "link_handler.sh %u" -- "copy url to clipboard"
 
 # colors                            fg          bg      style
 color background                    white       default
