@@ -33,6 +33,7 @@ crda
 cryptsetup
 darktable
 dash
+dbus-broker
 device-mapper
 diffutils
 dmidecode

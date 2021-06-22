@@ -93,6 +93,7 @@ dash
 dav1d
 db
 dbus
+dbus-broker
 dbus-glib
 dbus-python
 dconf
