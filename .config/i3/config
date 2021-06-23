@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-16T22:20:21+0200
+# date:   2021-06-23T08:58:55+0200
 
 # general
 #########
@@ -316,6 +316,9 @@ mode "exit" {
 bindsym $alt+space mode "services"; \
     exec --no-startup-id "i3_services.sh"
 mode "services" {
+    # polybar disable/enable
+    bindsym a exec --no-startup-id "i3_services.sh --polybar"
+
     # bluetooth disable/enable
     bindsym b exec --no-startup-id "i3_services.sh --bluetooth"
 
@@ -384,7 +387,7 @@ bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
 bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
 bindsym XF86TouchpadToggle exec --no-startup-id "touchpad_toggle.sh"
-bindsym XF86Cut exec --no-startup-id "polybar.sh -r"
+bindsym XF86Cut exec --no-startup-id "polybar.sh -t"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 bindsym $sup+Shift+p exec --no-startup-id "dmenu_pass.sh"
 
