@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-22T12:38:40+0200
+# date:   2021-06-23T21:37:57+0200
 
 # colors
 [colors]
@@ -69,21 +69,21 @@
     modules-right = wlan alsa xbacklight xkeyboard date
 
 # modules
-    include-file = ~/.config/polybar/i3.cfg
-    include-file = ~/.config/polybar/xwindow.cfg
+    include-file = ~/.config/polybar/modules/i3.cfg
+    include-file = ~/.config/polybar/modules/xwindow.cfg
 
-    include-file = ~/.config/polybar/network.cfg
-    include-file = ~/.config/polybar/audio.cfg
-    include-file = ~/.config/polybar/xbacklight.cfg
-    include-file = ~/.config/polybar/battery.cfg
-    include-file = ~/.config/polybar/xkeyboard.cfg
-    include-file = ~/.config/polybar/date.cfg
+    include-file = ~/.config/polybar/modules/network.cfg
+    include-file = ~/.config/polybar/modules/audio.cfg
+    include-file = ~/.config/polybar/modules/xbacklight.cfg
+    include-file = ~/.config/polybar/modules/battery.cfg
+    include-file = ~/.config/polybar/modules/xkeyboard.cfg
+    include-file = ~/.config/polybar/modules/date.cfg
 
-    include-file = ~/.config/polybar/temperature.cfg
-    include-file = ~/.config/polybar/cpu.cfg
-    include-file = ~/.config/polybar/memory.cfg
-    include-file = ~/.config/polybar/fs.cfg
+    include-file = ~/.config/polybar/modules/temperature.cfg
+    include-file = ~/.config/polybar/modules/cpu.cfg
+    include-file = ~/.config/polybar/modules/memory.cfg
+    include-file = ~/.config/polybar/modules/fs.cfg
 
-    include-file = ~/.config/polybar/custom.cfg
+    include-file = ~/.config/polybar/modules/custom.cfg
 
 # vim:ft=cfg
