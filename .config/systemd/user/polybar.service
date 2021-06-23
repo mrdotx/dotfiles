@@ -1,11 +1,12 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/polybar.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-23T09:45:00+0200
+# date:   2021-06-23T11:07:33+0200
 
 [Unit]
 Description=polybar status bars
 After=picom.service
+PartOf=i3.target
 
 [Service]
 Type=forking

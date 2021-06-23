@@ -1,10 +1,11 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/picom.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:57:46+0200
+# date:   2021-06-23T11:07:38+0200
 
 [Unit]
 Description=picom compositor
+PartOf=i3.target
 
 [Service]
 Type=forking
