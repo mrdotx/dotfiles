@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-21T10:02:38+0200
+" date:   2021-06-26T08:42:41+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -32,8 +32,6 @@ nnoremap <silent>       <leader>l   :set list! list?<cr>
 nnoremap                <leader>r   :%s///gc<left><left><left>
 
 " terminal
-nnoremap <silent><expr> <leader>p   ":".winheight(0)/3
-                                    \ ."split term://passgen.sh -c 14 -i 10<cr>"
 nnoremap <silent><expr> <leader>s   ":".winheight(0)/3
                                     \ ."split term://shellcheck -x %:p<cr>"
 nnoremap <expr>         <leader>t   ":".winheight(0)/3
