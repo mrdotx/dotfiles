@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-05-28T11:59:47+0200
+! date:   2021-06-26T19:55:03+0200
 
 /* theme colors */
 #define BLACK0T             #e6000000
@@ -55,14 +55,14 @@
 *color14:                   CYAN1
 *color15:                   WHITE1
 
-#include "xcursor"
-#include "wallpaper"
-#include "xft"
-#include "xautolock"
-#include "sxiv"
-#include "polybar"
-#include "rxvt-unicode"
-#include "dmenu"
-#include "tabbed"
-#include "slock"
-#include "st"
+#include "modules/xcursor"
+#include "modules/wallpaper"
+#include "modules/xft"
+#include "modules/xautolock"
+#include "modules/sxiv"
+#include "modules/polybar"
+#include "modules/rxvt-unicode"
+#include "modules/dmenu"
+#include "modules/tabbed"
+#include "modules/slock"
+#include "modules/st"

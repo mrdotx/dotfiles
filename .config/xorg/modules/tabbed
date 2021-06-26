@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/tabbed
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/modules/tabbed
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-05-28T11:59:27+0200
+! date:   2021-06-26T19:56:39+0200
 
 tabbed.font:            FONT
 tabbed.normbgcolor:     BLUE0
