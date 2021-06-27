@@ -144,7 +144,6 @@ mesa-demos
 mesa-vdpau
 mhwd
 mhwd-db
-minetest
 mlocate
 mpv
 mtools

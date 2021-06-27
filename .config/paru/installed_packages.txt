@@ -249,7 +249,6 @@ inxi
 iproute2
 iptables
 iputils
-irrlicht
 iso-codes
 iw
 iwd
@@ -624,8 +623,6 @@ mhwd-ati
 mhwd-db
 mhwd-nvidia
 mhwd-nvidia-390xx
-minetest
-minetest-common
 mjpegtools
 mkinitcpio
 mkinitcpio-busybox
@@ -753,7 +750,6 @@ poppler-data
 poppler-glib
 popt
 portaudio
-postgresql-libs
 potrace
 powertop
 procps-ng
@@ -871,7 +867,6 @@ sord
 sound-theme-freedesktop
 soundtouch
 spandsp
-spatialindex
 spectre-meltdown-checker
 speedtest-cli
 speex
