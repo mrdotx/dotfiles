@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-23T08:58:55+0200
+# date:   2021-06-27T21:33:06+0200
 
 # general
 #########
@@ -107,9 +107,8 @@ assign [class="libreoffice"] → 6
 assign [class="^scribus$"] → 6
 assign [title="Mozilla Thunderbird$"] → 7
 assign [class="^Jameica"] → 8
-assign [class="^VirtualBox"] → 9
 assign [class="^Kodi$"] → 9
-assign [class="^Minetest$"] → 10
+assign [class="^VirtualBox"] → 10
 
 # keybindings workspace
 #######################
@@ -418,7 +417,6 @@ bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec "kodi" workspace 9
 bindsym $sup+m exec "thunderbird" workspace 7
-bindsym $sup+Shift+m exec --no-startup-id "minetest --logfile ''" workspace 10
 bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'" workspace 3
 bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 14 'podboat'" workspace 3
 bindsym $sup+o exec "libreoffice" workspace 6
