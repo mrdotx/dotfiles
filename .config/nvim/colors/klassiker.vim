@@ -1,16 +1,14 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-31T13:01:43+0200
+" date:   2021-06-28T18:09:34+0200
 
-set background=dark
 hi clear
-
+set background=dark
 if exists("syntax_on")
   syntax reset
 endif
-
-let colors_name="klassiker"
+let g:colors_name="klassiker"
 
 " colors used in this scheme
 " GUI: #000000, Term: 0
@@ -90,11 +88,8 @@ hi CursorLine guifg=NONE guibg=#223344 gui=NONE ctermfg=NONE ctermbg=23 cterm=NO
 hi Cursor guifg=#000000 guibg=#ffffff gui=NONE ctermfg=0 ctermbg=15 cterm=NONE
 hi Visual guifg=NONE guibg=#333333 gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
 hi MatchParen guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=3 cterm=NONE
-if has("nvim")
-  " neovim terminal
-  hi TermCursor guifg=#000000 guibg=#4185d7 gui=NONE ctermfg=0 ctermbg=12 cterm=NONE
-  hi TermCursorNC guifg=#000000 guibg=#778899 gui=NONE ctermfg=0 ctermbg=103 cterm=NONE
-endif
+hi TermCursor guifg=#000000 guibg=#4185d7 gui=NONE ctermfg=0 ctermbg=12 cterm=NONE
+hi TermCursorNC guifg=#000000 guibg=#778899 gui=NONE ctermfg=0 ctermbg=103 cterm=NONE
 
 " general highlighting
 hi Constant guifg=#980096 guibg=NONE gui=NONE ctermfg=5 ctermbg=NONE cterm=NONE
