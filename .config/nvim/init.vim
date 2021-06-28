@@ -1,9 +1,9 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T09:16:20+0200
+" date:   2021-06-28T12:05:25+0200
 
-let g:inits_config_folder='~/.config/nvim/'
+let g:inits_config_folder='~/.config/nvim/init/'
 
 " leader keys
 let mapleader=','                   " for global plugins
