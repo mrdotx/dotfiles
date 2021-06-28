@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-05-28T11:52:37+0200
+" date:   2021-06-28T09:25:36+0200
 
 let g:template_folder='~/.config/nvim/templates/'
 
@@ -58,36 +58,3 @@ if has("autocmd")
         call NewTemplate('skeleton.vim')
     augroup END
 endif
-
-" last modfied | actual path
-" if buffer modified, update any 'date: ' \ 'path: ' in the first 10 lines.
-" 'date: ' | 'path: ' can have up to 4 characters before (they are retained).
-" restores cursor and window position using save_cursor variable.
-function! ModDate()
-    if &modified
-        let save_cursor=getpos(".")
-        let n=min([10, line("$")])
-        if &ft =~ 'vimwiki\|markdown'
-            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1'.
-                \ strftime('           %FT%T%z').'#e'
-        else
-            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1' .
-                \ strftime('  %FT%T%z').'#e'
-        endif
-        call histdel('search', -1)
-        call setpos('.', save_cursor)
-    endif
-endfunction
-autocmd BufWritePre * call ModDate()
-
-function! ModPath()
-    if &modified
-        let save_cursor=getpos(".")
-        let n=min([10, line("$")])
-        keepjumps execute '1,'.n.'s#^\(.\{,4}path: \).*#\1'.
-            \ '  '.expand('%:p').'#e'
-        call histdel('search', -1)
-        call setpos('.', save_cursor)
-    endif
-endfunction
-autocmd BufWritePre * call ModPath()
