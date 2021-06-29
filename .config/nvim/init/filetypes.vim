@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-29T16:58:16+0200
+" date:   2021-06-29T18:09:28+0200
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
@@ -64,11 +64,11 @@ function! ModifyHeader()
             \ '  '.expand('%:p').'#e'
         call histdel('search', -1)
         " 'date: '
-        if &ft =~ 'vimwiki\|markdown'
+        if &ft=~'vimwiki\|markdown'
             keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1'.
                 \ strftime('           %FT%T%z').'#e'
         else
-            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1' .
+            keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1'.
                 \ strftime('  %FT%T%z').'#e'
         endif
         call histdel('search', -1)
