@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:52:14+0200
+" date:   2021-06-29T16:58:16+0200
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
@@ -52,13 +52,18 @@ augroup encrypt
 augroup END
 
 " last modfied | actual path
-" if buffer modified, update any 'date: ' \ 'path: ' in the first 10 lines.
+" if buffer modified, update any 'date: ' | 'path: ' in the first 10 lines.
 " 'date: ' | 'path: ' can have up to 4 characters before (they are retained).
 " restores cursor and window position using save_cursor variable.
-function! ModDate()
+function! ModifyHeader()
     if &modified
         let save_cursor=getpos(".")
         let n=min([10, line("$")])
+        " 'path: '
+        keepjumps execute '1,'.n.'s#^\(.\{,4}path: \).*#\1'.
+            \ '  '.expand('%:p').'#e'
+        call histdel('search', -1)
+        " 'date: '
         if &ft =~ 'vimwiki\|markdown'
             keepjumps execute '1,'.n.'s#^\(.\{,4}date: \).*#\1'.
                 \ strftime('           %FT%T%z').'#e'
@@ -70,16 +75,4 @@ function! ModDate()
         call setpos('.', save_cursor)
     endif
 endfunction
-autocmd BufWritePre * call ModDate()
-
-function! ModPath()
-    if &modified
-        let save_cursor=getpos(".")
-        let n=min([10, line("$")])
-        keepjumps execute '1,'.n.'s#^\(.\{,4}path: \).*#\1'.
-            \ '  '.expand('%:p').'#e'
-        call histdel('search', -1)
-        call setpos('.', save_cursor)
-    endif
-endfunction
-autocmd BufWritePre * call ModPath()
+autocmd BufWritePre * call ModifyHeader()
