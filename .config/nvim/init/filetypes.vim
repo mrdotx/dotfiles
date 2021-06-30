@@ -1,26 +1,30 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-29T18:09:28+0200
+" date:   2021-06-30T17:15:12+0200
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
     \ setlocal spell spelllang=en_us,de_de
 
-" restart i3 and picom whenever i3 config is updated
-autocmd BufWritePost *.config/i3/config
-    \ !i3-msg -- restart >/dev/null 2>&1
-    \ && systemctl --user restart picom.service
-" restart polybar whenever polybar configs are updated
-autocmd BufWritePost *.config/polybar/*
-    \ !systemctl --user restart polybar.service
-" run xrdb whenever xresources are updated
-autocmd BufWritePost *.config/xorg/*
-    \ !xrdb -merge ~/.config/xorg/Xresources
 " if tmux is running reload tmux config whenever tmux config is updated
 autocmd BufWritePost *.config/tmux/tmux.conf
     \ !pgrep tmux >/dev/null 2>&1
     \ && tmux source-file ~/.config/tmux/tmux.conf
+
+" run xrdb whenever xresources are updated
+autocmd BufWritePost *.config/xorg/*
+    \ !xrdb -merge ~/.config/xorg/Xresources
+" restart i3 and picom whenever i3 configs are updated
+autocmd BufWritePost *.config/i3/config
+                   \,*.config/xorg/Xresources
+    \ !i3-msg -- restart >/dev/null 2>&1
+    \ && systemctl --user restart picom.service
+" restart polybar whenever polybar configs are updated
+autocmd BufWritePost *.config/polybar/*
+                   \,*.config/xorg/Xresources
+                   \,*.config/xorg/modules/polybar
+    \ !systemctl --user restart polybar.service
 
 " edit gpg encrypted files
 augroup encrypt
