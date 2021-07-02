@@ -11,7 +11,6 @@ found in my other repositories.
 | bpytop            | resource monitor that shows usage and stats        |
 | cdw               | terminal front-end for cdrecord                    |
 | cmus              | music player                                       |
-| conky             | infotainment system monitor                        |
 | dunst             | notification daemon                                |
 | highlight         | a universal sourcecode to formatted text converter |
 | htop              | interactive process viewer                         |
