@@ -906,6 +906,7 @@ tinyxml
 tmux
 trash-cli
 tree
+tree-sitter
 tslib
 ttf-dejavu
 ttf-font-awesome
