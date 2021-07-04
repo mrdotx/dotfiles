@@ -515,7 +515,6 @@ libusb-compat
 libutempter
 libuv
 libva
-libva-intel-driver
 libva-mesa-driver
 libva-utils
 libva-vdpau-driver

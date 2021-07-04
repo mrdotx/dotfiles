@@ -111,7 +111,6 @@ libmad
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
-libva-intel-driver
 libva-mesa-driver
 libva-utils
 libva-vdpau-driver
