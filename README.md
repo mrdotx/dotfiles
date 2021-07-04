@@ -29,6 +29,7 @@ found in my other repositories.
 | qutebrowser       | web browser                                        |
 | ranger            | file manager                                       |
 | rofi              | application launcher and dmenu replacement         |
+| sx                | start an xorg server                               |
 | sxiv              | image viewser                                      |
 | systemd           | units, timers and targets                          |
 | tmux              | terminal multiplexer                               |
