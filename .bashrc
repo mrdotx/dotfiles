@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T19:09:49+0200
+# date:   2021-07-04T21:02:25+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -17,9 +17,14 @@ xhost +local:root > /dev/null 2>&1
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
 
-# history command configuration
+# history (same functionality as zsh)
 shopt -s histverify # show command with history expansion to user before running it
 shopt -s histappend # add commands to HISTFILE in order of execution
+export \
+    HISTFILE="$HOME/.local/share/cmd_history" \
+    HISTSIZE=10000 \
+    HISTFILESIZE=5000 \
+    HISTCONTROL=ignoreboth
 
 # aliases
 [ -f "$HOME/.config/aliases" ] \
@@ -42,10 +47,3 @@ else
     fi
 fi
 unset use_color
-
-# history (same functionality as zsh)
-export \
-    HISTFILE="$HOME/.local/share/cmd_history" \
-    HISTSIZE=10000 \
-    HISTFILESIZE=5000 \
-    HISTCONTROL=ignoreboth

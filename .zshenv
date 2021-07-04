@@ -1,7 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T19:59:15+0200
+# date:   2021-07-04T20:51:29+0200
+
+# history (same functionality as bash)
+export \
+    HISTFILE="$HOME/.local/share/cmd_history" \
+    HISTSIZE=10000 \
+    SAVEHIST=5000
 
 # repository paths
 typeset -U PATH path
@@ -85,12 +91,6 @@ export \
     BROWSER="w3m.sh" \
     BROWSER_BACKUP="surf.sh" \
     EXEC_AS_USER="doas"
-
-# history (same functionality as bash)
-export \
-    HISTFILE="$HOME/.local/share/cmd_history" \
-    HISTSIZE=10000 \
-    SAVEHIST=5000
 
 # colored man pages
 export \

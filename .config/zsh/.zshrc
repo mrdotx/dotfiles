@@ -1,13 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T12:00:11+0200
+# date:   2021-07-04T20:58:12+0200
 
 # if shell is not running interactive, break up
 tty -s \
     || return
 
-# history command configuration
+# history (same functionality as bash)
 # ignore duplicated commands history list
 setopt hist_ignore_dups
 # ignore commands that start with space
