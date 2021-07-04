@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
+# path:   /home/klassiker/.xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-12T15:00:56+0200
+# date:   2021-07-04T12:31:26+0200
 
 # set cpu policy
 cpu_policy.sh --performance
@@ -26,6 +26,37 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     done
     unset f
 fi
+
+# gnupg ssh agent support
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+    SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+    export SSH_AUTH_SOCK
+fi
+
+# monitor settings
+xrandr \
+    --newmode "1920x1080_75" \
+        170.00 1920 1928 1960 2026 1080 1105 1113 1119 +hsync -vsync
+xrandr \
+    --addmode "HDMI2" "1920x1080_75"
+xrandr \
+    --output "eDP1" --primary \
+    --mode "1920x1080" \
+    --output "HDMI2" \
+    --mode "1920x1080_75" \
+    --left-of "eDP1"
+
+# keyboard settings
+setxkbmap \
+    -model pc105 \
+    -layout us,de \
+    -option grp:caps_switch
+xset r rate 200 50
+
+# touchpad settings
+xinput --set-prop "Synaptics TM3242-001" "libinput Tapping Enabled" 0
+xinput --set-prop "Synaptics TM3242-001" "libinput Natural Scrolling Enabled" 1
 
 # start window manager
 session="${1:-i3}"
