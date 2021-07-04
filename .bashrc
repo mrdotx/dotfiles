@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:49:35+0200
+# date:   2021-07-04T19:09:49+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -42,3 +42,10 @@ else
     fi
 fi
 unset use_color
+
+# history (same functionality as zsh)
+export \
+    HISTFILE="$HOME/.local/share/cmd_history" \
+    HISTSIZE=10000 \
+    HISTFILESIZE=5000 \
+    HISTCONTROL=ignoreboth
