@@ -173,9 +173,9 @@ gnome-themes-extra
 gnupg
 gnutls
 gobject-introspection-runtime
-gparted
 gpgme
 gpm
+gptfdisk
 graphene
 graphicsmagick
 graphite
@@ -685,7 +685,6 @@ pambase
 pandoc-bin
 pango
 pangomm
-parted
 paru-bin
 patch
 pciutils
