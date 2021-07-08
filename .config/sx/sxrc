@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/sx/sxrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-08T08:25:01+0200
+# date:   2021-07-08T14:23:50+0200
 
 # merge xorg defaults and keymaps
 [ -f "$HOME/.config/xorg/Xresources" ] \
@@ -31,24 +31,19 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     export SSH_AUTH_SOCK
 fi
 
-# set cpu policy
+# peripheral settings
 cpu_policy.sh --performance &
-
-# keyboard settings
 setxkbmap \
     -model "pc105" \
     -layout "us,de" \
     -option "grp:caps_switch" &
 xset r rate 200 50 &
-
-# touchpad settings
 xinput \
     --set-prop "Synaptics TM3242-001" "libinput Tapping Enabled" 0 &
 xinput \
     --set-prop "Synaptics TM3242-001" "libinput Natural Scrolling Enabled" 1 &
-
-# monitor settings
 screenlayout.sh &
+wallpaper.sh &
 
 # start window manager
 session="${1:-i3}"
