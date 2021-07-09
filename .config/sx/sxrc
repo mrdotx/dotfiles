@@ -3,19 +3,22 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/sx/sxrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-08T14:23:50+0200
+# date:   2021-07-09T09:31:26+0200
 
-# merge xorg defaults and keymaps
-[ -f "$HOME/.config/xorg/Xresources" ] \
-    && xrdb -merge "$HOME/.config/xorg/Xresources"
-[ -f "$HOME/.config/xorg/Xmodmap" ] \
-    && xmodmap "$HOME/.config/xorg/Xmodmap"
+# set cpu policy
+cpu_policy.sh --performance
+
+# load xorg defaults and keymaps
 [ -f "/etc/X11/xinit/.Xresources" ] \
     && xrdb -merge "/etc/X11/xinit/.Xresources"
 [ -f "/etc/X11/xinit/.Xmodmap" ] \
     && xmodmap "/etc/X11/xinit/.Xmodmap"
+[ -f "$HOME/.config/xorg/Xresources" ] \
+    && xrdb -merge "$HOME/.config/xorg/Xresources"
+[ -f "$HOME/.config/xorg/Xmodmap" ] \
+    && xmodmap "$HOME/.config/xorg/Xmodmap"
 
-# start some xorg scripts
+# start xorg scripts
 if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
         [ -x "$f" ] \
@@ -24,15 +27,14 @@ if [ -d "/etc/X11/xinit/xinitrc.d" ]; then
     unset f
 fi
 
-# gnupg ssh agent support
+# set gnupg ssh agent support
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     export SSH_AUTH_SOCK
 fi
 
-# peripheral settings
-cpu_policy.sh --performance &
+# set peripheral devices
 setxkbmap \
     -model "pc105" \
     -layout "us,de" \
@@ -42,10 +44,12 @@ xinput \
     --set-prop "Synaptics TM3242-001" "libinput Tapping Enabled" 0 &
 xinput \
     --set-prop "Synaptics TM3242-001" "libinput Natural Scrolling Enabled" 1 &
+
+# set desktop
 screenlayout.sh &
 wallpaper.sh &
 
-# start window manager
+# start session
 session="${1:-i3}"
 [ "$TERM" = linux ] \
     && case "$session" in
