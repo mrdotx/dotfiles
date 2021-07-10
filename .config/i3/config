@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-08T14:42:29+0200
+# date:   2021-07-10T12:06:50+0200
 
 # general
 #########
@@ -9,8 +9,8 @@
 # variables
 set $sup Mod4
 set $alt Mod1
-set $monint eDP1
-set $monext HDMI2
+set $primary HDMI2
+set $secondary eDP1
 set $size resize set 1280 800
 set $float floating enable
 set $sticky sticky enable
@@ -58,16 +58,16 @@ client.placeholder      $black0  $grey0   $white0  $black0  $grey0
 client.background       $white0
 
 # workspace output
-workspace 1 output $monint $monext
-workspace 2 output $monext $monint
-workspace 3 output $monint $monext
-workspace 4 output $monext $monint
-workspace 5 output $monext $monint
-workspace 6 output $monext $monint
-workspace 7 output $monint $monext
-workspace 8 output $monext $monint
-workspace 9 output $monint $monext
-workspace 10 output $monext $monint
+workspace 1 output $secondary $primary
+workspace 2 output $primary $secondary
+workspace 3 output $secondary $primary
+workspace 4 output $primary $secondary
+workspace 5 output $primary $secondary
+workspace 6 output $primary $secondary
+workspace 7 output $secondary $primary
+workspace 8 output $primary $secondary
+workspace 9 output $secondary $primary
+workspace 10 output $primary $secondary
 
 # application windows (xprop)
 #############################
