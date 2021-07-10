@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-23T21:37:57+0200
+# date:   2021-07-10T12:13:51+0200
 
 # colors
 [colors]
@@ -54,12 +54,6 @@
 
 [bar/i3_primary_bar]
     inherit = bar/i3_general
-    monitor = ${env:MONITOR:eDP1}
-    modules-left = i3 music
-    modules-right = temp cpu ram swap nvme sda
-
-[bar/i3_secondary_bar]
-    inherit = bar/i3_general
     monitor = ${env:MONITOR:HDMI2}
     tray-position = right
     tray-reparent = true
@@ -67,6 +61,12 @@
     modules-left = i3 services rss xwindow
     # modules-right = wlan alsa xbacklight battery xkeyboard date
     modules-right = wlan alsa xbacklight xkeyboard date
+
+[bar/i3_secondary_bar]
+    inherit = bar/i3_general
+    monitor = ${env:MONITOR:eDP1}
+    modules-left = i3 music
+    modules-right = temp cpu ram swap nvme sda
 
 # modules
     include-file = ~/.config/polybar/modules/i3.cfg
