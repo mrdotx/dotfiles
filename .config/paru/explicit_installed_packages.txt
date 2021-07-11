@@ -253,7 +253,6 @@ wmutils
 x86_energy_perf_policy
 xautolock
 xbanish-git
-xdg-user-dirs
 xdg-utils
 xdotool
 xf86-input-evdev

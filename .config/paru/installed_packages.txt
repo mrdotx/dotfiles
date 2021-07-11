@@ -973,7 +973,6 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xdg-dbus-proxy
-xdg-user-dirs
 xdg-utils
 xdotool
 xf86-input-evdev
