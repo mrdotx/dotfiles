@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-10T12:06:50+0200
+# date:   2021-07-11T12:01:20+0200
 
 # general
 #########
@@ -440,8 +440,8 @@ bindsym $sup+backslash exec --no-startup-id "chameleon.sh"
 bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
 bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
-bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Dokumente/Notes/html/shortcuts.html"
-bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Dokumente/Notes/html/index.html"
+bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Documents/Notes/html/shortcuts.html"
+bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Documents/Notes/html/index.html"
 
 # start systemd target
 ######################
