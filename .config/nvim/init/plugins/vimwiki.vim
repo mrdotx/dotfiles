@@ -1,11 +1,11 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vimwiki.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:56:40+0200
+" date:   2021-07-11T12:02:08+0200
 
 let notes={
-    \ 'path': '$HOME/Dokumente/Notes',
-    \ 'path_html': '$HOME/Dokumente/Notes/html/',
+    \ 'path': '$HOME/Documents/Notes',
+    \ 'path_html': '$HOME/Documents/Notes/html/',
     \ 'syntax': 'markdown',
     \ 'ext': '.md',
     \ 'auto_export': 1,
