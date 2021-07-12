@@ -992,7 +992,6 @@ xorg-setxkbmap
 xorg-xauth
 xorg-xdpyinfo
 xorg-xev
-xorg-xhost
 xorg-xinit
 xorg-xinput
 xorg-xkbcomp

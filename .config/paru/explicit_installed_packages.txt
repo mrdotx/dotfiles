@@ -265,7 +265,6 @@ xf86-video-vesa
 xorg-fonts-misc
 xorg-server
 xorg-xev
-xorg-xhost
 xorg-xinit
 xorg-xinput
 xorg-xkill
