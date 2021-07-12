@@ -1,43 +1,7 @@
-# path:   /home/klassiker/.zshenv
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-12T18:20:00+0200
-
-# history (same functionality as bash)
-export \
-    HISTFILE="$HOME/.local/share/cmd_history" \
-    HISTSIZE=10000 \
-    SAVEHIST=5000
-
-# repository paths
-typeset -U PATH path
-path=( \
-    "$HOME/.local/share/repos/audio" \
-    "$HOME/.local/share/repos/backlight" \
-    "$HOME/.local/share/repos/compressor" \
-    "$HOME/.local/share/repos/conky" \
-    "$HOME/.local/share/repos/dmenu/scripts" \
-    "$HOME/.local/share/repos/efistub" \
-    "$HOME/.local/share/repos/fzf" \
-    "$HOME/.local/share/repos/i3" \
-    "$HOME/.local/share/repos/link-handler" \
-    "$HOME/.local/share/repos/polybar" \
-    "$HOME/.local/share/repos/python" \
-    "$HOME/.local/share/repos/rclone" \
-    "$HOME/.local/share/repos/rofi" \
-    "$HOME/.local/share/repos/screenshot" \
-    "$HOME/.local/share/repos/shell" \
-    "$HOME/.local/share/repos/stopwatch" \
-    "$HOME/.local/share/repos/surf" \
-    "$HOME/.local/share/repos/terminal-colors" \
-    "$HOME/.local/share/repos/terminal-wrapper" \
-    "$HOME/.local/share/repos/zram" \
-    "$path[@]" \
-)
-export PATH
-
-# systemd environment
-systemctl --user import-environment PATH
+# date:   2021-07-12T23:29:36+0200
 
 # xdg paths
 export \
@@ -47,11 +11,48 @@ export \
     XDG_DATA_DIRS=/usr/local/share:/usr/share \
     XDG_CONFIG_DIRS=/etc/xdg
 
+# history (same functionality as bash)
+export \
+    HISTFILE="$XDG_DATA_HOME/cmd_history" \
+    HISTSIZE=10000 \
+    SAVEHIST=5000
+
+# repository paths
+typeset -U PATH path
+path=( \
+    "$XDG_DATA_HOME/repos/audio" \
+    "$XDG_DATA_HOME/repos/backlight" \
+    "$XDG_DATA_HOME/repos/compressor" \
+    "$XDG_DATA_HOME/repos/conky" \
+    "$XDG_DATA_HOME/repos/dmenu/scripts" \
+    "$XDG_DATA_HOME/repos/efistub" \
+    "$XDG_DATA_HOME/repos/fzf" \
+    "$XDG_DATA_HOME/repos/i3" \
+    "$XDG_DATA_HOME/repos/link-handler" \
+    "$XDG_DATA_HOME/repos/polybar" \
+    "$XDG_DATA_HOME/repos/python" \
+    "$XDG_DATA_HOME/repos/rclone" \
+    "$XDG_DATA_HOME/repos/rofi" \
+    "$XDG_DATA_HOME/repos/screenshot" \
+    "$XDG_DATA_HOME/repos/shell" \
+    "$XDG_DATA_HOME/repos/stopwatch" \
+    "$XDG_DATA_HOME/repos/surf" \
+    "$XDG_DATA_HOME/repos/terminal-colors" \
+    "$XDG_DATA_HOME/repos/terminal-wrapper" \
+    "$XDG_DATA_HOME/repos/zram" \
+    "$path[@]" \
+)
+export PATH
+
+# systemd environment
+systemctl --user import-environment PATH
+
 # config paths
 export \
-    XAUTHORITY="$XDG_DATA_HOME/sx/xauthority" \
+    XAUTHORITY="$XDG_DATA_HOME/sx/Xauthority" \
     ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
+    PASSWORD_STORE_DIR="$XDG_DATA_HOME/repos/password-store" \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
     GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
     FONTCONFIG_PATH=/etc/fonts \
@@ -64,7 +65,6 @@ export \
 export \
     COLORTERM=truecolor \
     GPG_TTY=$(tty) \
-    PASSWORD_STORE_DIR="$XDG_DATA_HOME/repos/password-store" \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
@@ -75,7 +75,7 @@ export \
         --max-size=2M \
         --replace-tabs=4 \
         --out-format=xterm256 \
-        --style=$HOME/.config/highlight/klassiker.theme \
+        --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
         --force=sh" \
     WWW_HOME="duckduckgo.com"
 
