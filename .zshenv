@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
+# path:   /home/klassiker/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T20:51:29+0200
+# date:   2021-07-12T18:20:00+0200
 
 # history (same functionality as bash)
 export \
@@ -49,6 +49,7 @@ export \
 
 # config paths
 export \
+    XAUTHORITY="$XDG_DATA_HOME/sx/xauthority" \
     ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
