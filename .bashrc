@@ -1,14 +1,11 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T21:02:25+0200
+# date:   2021-07-12T18:21:12+0200
 
 # if shell is not running interactive, break up
 tty -s \
     || return
-
-# xhost
-xhost +local:root > /dev/null 2>&1
 
 # SIGWINCH
 # Bash won't get SIGWINCH if another process is in the foreground.
