@@ -1,7 +1,7 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-07-13T12:22:51+0200
+// date:   2021-07-13T19:40:08+0200
 
 {
     "suggest.completionItemKindLabels": {
@@ -31,11 +31,11 @@
         "value": "",
         "enumMember": ""
     },
-    "diagnostic.maxWindowHeight": 20,
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "",
     "diagnostic.infoSign": "",
     "diagnostic.hintSign": "",
+    "diagnostic.maxWindowHeight": 20,
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
     },
