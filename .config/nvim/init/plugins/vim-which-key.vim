@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:56:34+0200
+" date:   2021-07-13T09:54:27+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -52,19 +52,16 @@ let g:main_dict = {
         \ 'e': 'english toggle',
         \ 'x': 'english and german toggle'
     \ },
+    \ 'f': 'fold hunk',
     \ 'g': 'goyo',
-    \ 'h': {
-        \ 'name': '+hunk',
-        \ 'f': 'fold',
-        \ 'p': 'preview',
-        \ 's': 'stage',
-        \ 'u': 'undo'
-    \ },
+    \ 'h': 'stage hunk',
     \ 'i': 'toggle indent characters',
     \ 'l': 'toggle control characters',
+    \ 'p': 'preview hunk',
     \ 'r': 'replace',
     \ 's': 'shell check posix',
     \ 't': 'terminal',
+    \ 'u': 'undo hunk',
     \ 'w': {
         \ 'name': '+vimwiki',
         \ ',': {
