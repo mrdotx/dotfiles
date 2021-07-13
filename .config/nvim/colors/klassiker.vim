@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-13T12:49:02+0200
+" date:   2021-07-13T18:02:18+0200
 
 hi clear
 set background=dark
@@ -121,6 +121,6 @@ hi SpecialComment guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cter
 hi Tag guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Underlined guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
 hi Ignore guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-hi Todo guifg=#ffffff guibg=#000000 gui=bold ctermfg=15 ctermbg=0 cterm=bold
-hi Error guifg=#ffffff guibg=#df2800 gui=NONE ctermfg=15 ctermbg=1 cterm=NONE
+hi Todo guifg=#ffffff guibg=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
+hi Error guifg=#df2800 guibg=NONE gui=NONE ctermfg=1 ctermbg=NONE cterm=NONE
 hi ExtraWhitespace guifg=#df2800 guibg=#df2800 gui=NONE ctermfg=1 ctermbg=1 cterm=NONE
