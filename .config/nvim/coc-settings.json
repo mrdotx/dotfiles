@@ -1,7 +1,7 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-05-31T10:15:42+0200
+// date:   2021-07-13T12:22:51+0200
 
 {
     "suggest.completionItemKindLabels": {
@@ -31,8 +31,40 @@
         "value": "",
         "enumMember": ""
     },
+    "diagnostic.maxWindowHeight": 20,
+    "diagnostic.errorSign": "",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": "",
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
+    },
+    "diagnostic-languageserver.linters": {
+        "shellcheck": {
+            "command": "shellcheck",
+            "debounce": 100,
+            "args": [
+                "--external-sources",
+                "--format",
+                "json",
+                "-"
+            ],
+            "sourceName": "shellcheck",
+            "parseJson": {
+                "line": "line",
+                "column": "column",
+                "endLine": "endLine",
+                "endColumn": "endColumn",
+                "message": "${message} [${code}]",
+                "security": "level"
+            },
+            "securities": {
+                "error": "error",
+                "warning": "warning",
+                "info": "info",
+                "style": "hint"
+            }
+        }
     },
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
