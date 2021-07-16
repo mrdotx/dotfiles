@@ -271,12 +271,9 @@ kid3-common
 kid3-qt
 kmod
 kmon
+kodi
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
-kodi-common
-kodi-gbm
-kodi-wayland
-kodi-x11
 krb5
 kvantum-qt5
 kwindowsystem
