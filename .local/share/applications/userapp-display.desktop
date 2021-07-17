@@ -6,4 +6,4 @@ Comment=select and config display settings
 Icon=cs-display
 Exec=dmenu_display.sh
 Actions=
-Categories=Utility;
+Categories=Utility;System;
