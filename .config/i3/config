@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-16T14:24:31+0200
+# date:   2021-07-17T18:35:33+0200
 
 # general
 #########
@@ -377,6 +377,32 @@ mode "services" {
         exec --no-startup-id "i3_services.sh --kill"
 }
 
+# keybindings ssh
+#################
+
+bindsym $sup+h mode "ssh"; \
+    exec --no-startup-id "i3_ssh.sh"
+mode "ssh" {
+    # dmenu
+    bindsym d exec --no-startup-id "i3_ssh.sh --dmenu"
+
+    # hermes
+    bindsym h exec --no-startup-id "i3_ssh.sh --hermes"
+
+    # prometheus
+    bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"
+
+    # back to default mode
+    bindsym q mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym Return mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym Escape mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym $sup+h mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+}
+
 # keybindings xf86 keys
 #######################
 
@@ -409,8 +435,6 @@ bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
 bindsym $sup+d exec "darktable" workspace 5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace 5
-bindsym $sup+h exec --no-startup-id "i3_tmux.sh -o 17 'hermes' 'ssh hermes'" workspace 3
-bindsym $sup+Shift+h exec --no-startup-id "i3_tmux.sh -o 18 'prometheus' 'ssh prometheus'" workspace 3
 bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec "kodi" workspace 9
