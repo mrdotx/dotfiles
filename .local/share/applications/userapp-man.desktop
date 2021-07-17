@@ -4,6 +4,6 @@ Type=Application
 Name=man
 Comment=search man pages
 Icon=utilities-terminal
-Exec=$TERMINAL -T "man" -e fzf_man.sh
+Exec=dmenu_man.sh
 Actions=
 Categories=Utility;
