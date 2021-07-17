@@ -6,4 +6,4 @@ Comment=pick colors from screen and show hex value
 Icon=preferences-color
 Exec=chameleon.sh
 Actions=
-Categories=Utility;Graphics
+Categories=Utility;Graphics;
