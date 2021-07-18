@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-18T08:46:18+0200
+# date:   2021-07-18T09:38:09+0200
 
 # general
 #########
@@ -186,8 +186,8 @@ bindsym $sup+semicolon focus mode_toggle
 # toggle window tiling/floating
 bindsym $sup+apostrophe floating toggle
 
-# keybindings container
-#######################
+# keybindings container mode
+############################
 
 bindsym $sup+space mode "container"; \
     exec --no-startup-id "i3_container.sh"
@@ -252,8 +252,8 @@ bindsym $sup+Shift+l exec --no-startup-id "i3_exit.sh --suspend"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 
-# keybindings exit
-##################
+# keybindings exit mode
+#######################
 
 bindsym Ctrl+$alt+Delete mode "exit"; \
     exec --no-startup-id "i3_exit.sh"
@@ -309,8 +309,8 @@ mode "exit" {
         exec --no-startup-id "i3_exit.sh --kill"
 }
 
-# keybindings services
-######################
+# keybindings services mode
+###########################
 
 bindsym $alt+space mode "services"; \
     exec --no-startup-id "i3_services.sh"
@@ -377,45 +377,6 @@ mode "services" {
         exec --no-startup-id "i3_services.sh --kill"
 }
 
-# keybindings ssh
-#################
-
-bindsym $sup+h mode "ssh"; \
-    exec --no-startup-id "i3_ssh.sh"
-mode "ssh" {
-    # artemis
-    bindsym a exec --no-startup-id "i3_ssh.sh --artemis"
-
-    # dmenu
-    bindsym d exec --no-startup-id "i3_ssh.sh --dmenu"; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
-    # hera
-    bindsym e exec --no-startup-id "i3_ssh.sh --hera"
-
-    # hermes
-    bindsym h exec --no-startup-id "i3_ssh.sh --hermes"
-
-    # main
-    bindsym m exec --no-startup-id "i3_ssh.sh --main"; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
-    # prometheus
-    bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"
-
-    # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym $sup+h mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-}
-
 # keybindings xf86 keys
 #######################
 
@@ -448,6 +409,7 @@ bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
 bindsym $sup+d exec "darktable" workspace 5
 bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
 bindsym $sup+g exec "gimp" workspace 5
+bindsym $sup+Shift+h exec --no-startup-id "dmenu_ssh.sh"
 bindsym $sup+i exec "inkscape" workspace 5
 bindsym $sup+j exec "jameica" workspace 8
 bindsym $sup+k exec "kodi" workspace 9
@@ -479,6 +441,48 @@ bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
 bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
 bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Documents/Notes/html/shortcuts.html"
 bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Documents/Notes/html/index.html"
+
+# keybindings ssh mode
+######################
+
+bindsym $sup+h mode "ssh"; \
+    exec --no-startup-id "i3_ssh.sh"
+mode "ssh" {
+    # artemis
+    bindsym a exec --no-startup-id "i3_ssh.sh --artemis"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+
+    # hera
+    bindsym e exec --no-startup-id "i3_ssh.sh --hera"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+
+    # hermes
+    bindsym h exec --no-startup-id "i3_ssh.sh --hermes"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+
+    # hermes + prometheus
+    bindsym m exec --no-startup-id "i3_ssh.sh --herpro"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+
+    # prometheus
+    bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+
+    # back to default mode
+    bindsym q mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym Return mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym Escape mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym $sup+h mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
+}
 
 # start systemd target
 ######################
