@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-17T19:02:12+0200
+# date:   2021-07-18T08:46:18+0200
 
 # general
 #########
@@ -396,6 +396,11 @@ mode "ssh" {
 
     # hermes
     bindsym h exec --no-startup-id "i3_ssh.sh --hermes"
+
+    # main
+    bindsym m exec --no-startup-id "i3_ssh.sh --main"; \
+        mode "default"; \
+        exec --no-startup-id "i3_ssh.sh --kill"
 
     # prometheus
     bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"
