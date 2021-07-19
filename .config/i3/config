@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-19T10:37:54+0200
+# date:   2021-07-19T18:45:18+0200
 
 # general
 #########
@@ -189,43 +189,35 @@ bindsym $sup+apostrophe floating toggle
 # keybindings container mode
 ############################
 
-bindsym $sup+space mode "container"; \
-    exec --no-startup-id "i3_container.sh"
+set $cm_mode mode "default"
+set $cm_kill exec --no-startup-id "i3_container.sh --kill"
+
+bindsym $sup+space mode "container"; exec --no-startup-id "i3_container.sh"
 mode "container" {
     # resize container
     bindsym Left resize shrink width 20 px or 5 ppt
     bindsym Right resize grow width 20 px or 5 ppt
     bindsym Up resize shrink height 20 px or 5 ppt
     bindsym Down resize grow height 20 px or 5 ppt
-
     # resize gaps
     bindsym minus gaps inner current minus $gapin
     bindsym shift+equal gaps inner current plus $gapin
     bindsym equal gaps inner current set $gapin
-
     # toggle sticky
     bindsym s sticky toggle
-
     # move the currently focused window to the scratchpad
     bindsym m move scratchpad
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
+    # show the next scratchpad window or hide the focused scratchpad window
+    # if there are multiple scratchpad windows, this command cycles through them
     bindsym c scratchpad show
-
     # split orientation
     bindsym h split horizontal
     bindsym v split vertical
-
     # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_container.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_container.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_container.sh --kill"
-    bindsym $sup+space mode "default"; \
-        exec --no-startup-id "i3_container.sh --kill"
+    bindsym q $cm_mode; $cm_kill
+    bindsym Return $cm_mode; $cm_kill
+    bindsym Escape $cm_mode; $cm_kill
+    bindsym $sup+space $cm_mode; $cm_kill
 }
 
 # keybindings system managment
@@ -258,184 +250,126 @@ bindsym Print exec --no-startup-id "dmenu_screenshot.sh"
 # keybindings macro mode
 ########################
 
-bindsym $sup+Print mode "macro"; \
-    exec --no-startup-id "i3_macro.sh"
+set $mm_ws workspace 3
+set $mm_mode mode "default"
+set $mm_kill exec --no-startup-id "i3_macro.sh --kill"
+
+bindsym $sup+Print mode "macro"; exec --no-startup-id "i3_macro.sh"
 mode "macro" {
     # bootnext
     bindsym b exec --no-startup-id "i3_macro.sh --bootnext"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # colors
     bindsym c exec --no-startup-id "i3_macro.sh --colors"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # keyboard
     bindsym k exec --no-startup-id "i3_macro.sh --keyboard"; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_mode; $mm_kill
     # neofetch
     bindsym n exec --no-startup-id "i3_macro.sh --neofetch"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # covid
     bindsym s exec --no-startup-id "i3_macro.sh --covid"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # ventoy
     bindsym v exec --no-startup-id "i3_macro.sh --ventoy"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # weather
     bindsym w exec --no-startup-id "i3_macro.sh --weather"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-
+        $mm_ws; $mm_mode; $mm_kill
     # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
-    bindsym $sup+Print mode "default"; \
-        exec --no-startup-id "i3_macro.sh --kill"
+    bindsym q $mm_mode; $mm_kill
+    bindsym Return $mm_mode; $mm_kill
+    bindsym Escape $mm_mode; $mm_kill
+    bindsym $sup+Print $mm_mode; $mm_kill
 }
 
 # keybindings exit mode
 #######################
 
-bindsym Ctrl+$alt+Delete mode "exit"; \
-    exec --no-startup-id "i3_exit.sh"
+set $em_mode mode "default"
+set $em_kill exec --no-startup-id "i3_exit.sh --kill"
+
+bindsym Ctrl+$alt+Delete mode "exit"; exec --no-startup-id "i3_exit.sh"
 mode "exit" {
     # lock blur
     bindsym c exec --no-startup-id "i3_exit.sh --lock blur"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # shutdown
     bindsym d exec --no-startup-id "i3_exit.sh --shutdown"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # logout
     bindsym l exec --no-startup-id "i3_exit.sh --logout"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # lock simple
     bindsym o exec --no-startup-id "i3_exit.sh --lock simple"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # suspend blur
     bindsym p exec --no-startup-id "i3_exit.sh --suspend blur"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # reboot
     bindsym r exec --no-startup-id "i3_exit.sh --reboot"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # suspend
     bindsym s exec --no-startup-id "i3_exit.sh --suspend"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # suspend simple
     bindsym u exec --no-startup-id "i3_exit.sh --suspend simple"; \
-        mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-
+        $em_mode; $em_kill
     # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
-    bindsym Ctrl+$alt+Delete mode "default"; \
-        exec --no-startup-id "i3_exit.sh --kill"
+    bindsym q $em_mode; $em_kill
+    bindsym Return $em_mode; $em_kill
+    bindsym Escape $em_mode; $em_kill
+    bindsym Ctrl+$alt+Delete $em_mode; $em_kill
 }
 
 # keybindings services mode
 ###########################
 
-bindsym $alt+space mode "services"; \
-    exec --no-startup-id "i3_services.sh"
+set $sm_mode mode "default"
+set $sm_kill exec --no-startup-id "i3_services.sh --kill"
+
+bindsym $alt+space mode "services"; exec --no-startup-id "i3_services.sh"
 mode "services" {
     # polybar disable/enable
     bindsym a exec --no-startup-id "i3_services.sh --polybar"
-
     # bluetooth disable/enable
     bindsym b exec --no-startup-id "i3_services.sh --bluetooth"
-
     # compositor disable/enable
     bindsym c exec --no-startup-id "i3_services.sh --compositor"
-
     # dunst restart
     bindsym d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
-
     # firewall disable/enable
     bindsym f exec --no-startup-id "i3_services.sh --firewall"
-
     # gestures disable/enable
     bindsym g exec --no-startup-id "i3_services.sh --gestures"
-
     # ssh disable/enable
     bindsym h exec --no-startup-id "i3_services.sh --ssh"
-
     # autolock disable/enable
     bindsym l exec --no-startup-id "i3_services.sh --autolock"
-
     # mousepointer disable/enable
     bindsym m exec --no-startup-id "i3_services.sh --mousepointer"
-
     # cpu policy toggle
     bindsym o exec --no-startup-id "cpu_policy.sh --toggle; i3_services.sh"
-
     # printer disable/enable
     bindsym p exec --no-startup-id "i3_services.sh --printer"
-
     # rss disable/enable
     bindsym r exec --no-startup-id "i3_services.sh --rss"
-
     # resolver disable/enable
     bindsym s exec --no-startup-id "i3_services.sh --resolver"
-
     # tiling disable/enable
     bindsym t exec --no-startup-id "i3_services.sh --tiling"
-
     # urxvtd kill
     bindsym u exec --no-startup-id "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
-
     # vpn disable/enable
     bindsym v exec --no-startup-id "i3_services.sh --vpn"
-
     # timesync disable/enable
     bindsym y exec --no-startup-id "i3_services.sh --timesync"
-
     # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_services.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_services.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_services.sh --kill"
-    bindsym $alt+space mode "default"; \
-        exec --no-startup-id "i3_services.sh --kill"
+    bindsym q $sm_mode; $sm_kill
+    bindsym Return $sm_mode; $sm_kill
+    bindsym Escape $sm_mode; $sm_kill
+    bindsym $alt+space $sm_mode; $sm_kill
 }
 
 # keybindings xf86 keys
@@ -501,48 +435,32 @@ bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME
 # keybindings ssh mode
 ######################
 
-bindsym $sup+h mode "ssh"; \
-    exec --no-startup-id "i3_ssh.sh"
+set $hm_ws workspace 3
+set $hm_mode mode "default"
+set $hm_kill exec --no-startup-id "i3_ssh.sh --kill"
+
+bindsym $sup+h mode "ssh"; exec --no-startup-id "i3_ssh.sh"
 mode "ssh" {
     # artemis
     bindsym a exec --no-startup-id "i3_ssh.sh --artemis"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
+        $hm_ws; $hm_mode; $hm_kill
     # hera
     bindsym e exec --no-startup-id "i3_ssh.sh --hera"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
+        $hm_ws; $hm_mode; $hm_kill
     # hermes
     bindsym h exec --no-startup-id "i3_ssh.sh --hermes"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
+        $hm_ws; $hm_mode; $hm_kill
     # hermes + prometheus
     bindsym m exec --no-startup-id "i3_ssh.sh --herpro"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
+        $hm_ws; $hm_mode; $hm_kill
     # prometheus
     bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"; \
-        workspace 3; \
-        mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-
+        $hm_ws; $hm_mode; $hm_kill
     # back to default mode
-    bindsym q mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym Return mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym Escape mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
-    bindsym $sup+h mode "default"; \
-        exec --no-startup-id "i3_ssh.sh --kill"
+    bindsym q $hm_mode; $hm_kill
+    bindsym Return $hm_mode; $hm_kill
+    bindsym Escape $hm_mode; $hm_kill
+    bindsym $sup+h $hm_mode; $hm_kill
 }
 
 # start systemd target
