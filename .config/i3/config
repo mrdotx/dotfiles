@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-18T09:38:09+0200
+# date:   2021-07-19T10:37:54+0200
 
 # general
 #########
@@ -252,6 +252,67 @@ bindsym $sup+Shift+l exec --no-startup-id "i3_exit.sh --suspend"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 
+# screenshot menu
+bindsym Print exec --no-startup-id "dmenu_screenshot.sh"
+
+# keybindings macro mode
+########################
+
+bindsym $sup+Print mode "macro"; \
+    exec --no-startup-id "i3_macro.sh"
+mode "macro" {
+    # bootnext
+    bindsym b exec --no-startup-id "i3_macro.sh --bootnext"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # colors
+    bindsym c exec --no-startup-id "i3_macro.sh --colors"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # keyboard
+    bindsym k exec --no-startup-id "i3_macro.sh --keyboard"; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # neofetch
+    bindsym n exec --no-startup-id "i3_macro.sh --neofetch"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # covid
+    bindsym s exec --no-startup-id "i3_macro.sh --covid"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # ventoy
+    bindsym v exec --no-startup-id "i3_macro.sh --ventoy"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # weather
+    bindsym w exec --no-startup-id "i3_macro.sh --weather"; \
+        workspace 3; \
+        mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+
+    # back to default mode
+    bindsym q mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+    bindsym Return mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+    bindsym Escape mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+    bindsym $sup+Print mode "default"; \
+        exec --no-startup-id "i3_macro.sh --kill"
+}
+
 # keybindings exit mode
 #######################
 
@@ -390,11 +451,6 @@ bindsym XF86Cut exec --no-startup-id "polybar.sh -t"
 bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
 bindsym $sup+Shift+p exec --no-startup-id "dmenu_pass.sh"
 
-# keybindings screenshot
-########################
-
-bindsym Print exec --no-startup-id "dmenu_screenshot.sh"
-
 # keybindings applications
 ##########################
 
@@ -450,26 +506,31 @@ bindsym $sup+h mode "ssh"; \
 mode "ssh" {
     # artemis
     bindsym a exec --no-startup-id "i3_ssh.sh --artemis"; \
+        workspace 3; \
         mode "default"; \
         exec --no-startup-id "i3_ssh.sh --kill"
 
     # hera
     bindsym e exec --no-startup-id "i3_ssh.sh --hera"; \
+        workspace 3; \
         mode "default"; \
         exec --no-startup-id "i3_ssh.sh --kill"
 
     # hermes
     bindsym h exec --no-startup-id "i3_ssh.sh --hermes"; \
+        workspace 3; \
         mode "default"; \
         exec --no-startup-id "i3_ssh.sh --kill"
 
     # hermes + prometheus
     bindsym m exec --no-startup-id "i3_ssh.sh --herpro"; \
+        workspace 3; \
         mode "default"; \
         exec --no-startup-id "i3_ssh.sh --kill"
 
     # prometheus
     bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"; \
+        workspace 3; \
         mode "default"; \
         exec --no-startup-id "i3_ssh.sh --kill"
 
