@@ -810,6 +810,7 @@ python-simplejson
 python-six
 python-soupsieve
 python-toml
+python-tomli
 python-urllib3
 python-webencodings
 python-wrapt
