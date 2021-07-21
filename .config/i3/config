@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-19T18:45:18+0200
+# date:   2021-07-21T10:46:14+0200
 
 # general
 #########
@@ -73,42 +73,40 @@ workspace 10 output $primary $secondary
 #############################
 
 # center
-for_window [title="LibreOffice"] $move
+for_window [title=LibreOffice] $move
 
 # floating applications
-for_window [title="floating$"] $float, $size, $move
+for_window [title=floating$] $float, $size, $move
 
-for_window [title="^alsamixer$"] $float, $move
-for_window [title="^calculator$"] $float, $size, $move
-for_window [title="^cdw$"] $float, $size, $move
-for_window [title="^cmus$"] $float, $size, $move
-for_window [title="^man$"] $float, $size, $move
-for_window [title="^pacman$"] $float, $size, $move
-for_window [title="^stopwatch$"] $float, resize set 250 500, $move
+for_window [title=^alsamixer$] $float, $move
+for_window [title=^calculator$] $float, $size, $move
+for_window [title=^cdw$] $float, $size, $move
+for_window [title=^cmus$] $float, $size, $move
+for_window [title=^pacman$] $float, $size, $move
+for_window [title=^stopwatch$] $float, resize set 250 500, $move
 
-for_window [class="^Dragon-drag-and-drop$"] $float, $sticky, $border, $move
-for_window [class="^Lxappearance$"] $float, $sticky, $move
-for_window [class="^Gufw.py$"] $float, $sticky, resize set 500 800, $move
-for_window [class="^qt5ct$"] $float, $sticky, $move
-for_window [class="^GParted$"] $float, $size, $move
-for_window [class="^gmic_qt$"] $float, $move
-for_window [class="^qv4l2$"] $float, $move
-for_window [class="^Sxiv$"] $float, $size, $move
-for_window [class="^mpv$"] $float, $sticky
+for_window [class=^Dragon-drag-and-drop$] $float, $sticky, $border, $move
+for_window [class=^Lxappearance$] $float, $sticky, $move
+for_window [class=^Gufw.py$] $float, $sticky, resize set 500 800, $move
+for_window [class=^qt5ct$] $float, $sticky, $move
+for_window [class=^gmic_qt$] $float, $move
+for_window [class=^qv4l2$] $float, $move
+for_window [class=^Sxiv$] $float, $size, $move
+for_window [class=^mpv$] $float, $sticky
 
 # open application on specific workspace
-assign [title="^i3 tmux$"] → 3
-assign [class="^firefoxdeveloperedition$"] → 4
-assign [class="^Gimp$"] → 5
-assign [class="^Inkscape$"] → 5
-assign [class="^Darktable$"] → 5
-assign [title="^LibreOffice$"] → 6
-assign [class="libreoffice"] → 6
-assign [class="^scribus$"] → 6
-assign [title="Mozilla Thunderbird$"] → 7
-assign [class="^Jameica"] → 8
-assign [class="^Kodi$"] → 9
-assign [class="^VirtualBox"] → 10
+assign [title=^i3\stmux$] → 3
+assign [class=^firefoxdeveloperedition$] → 4
+assign [class=^Gimp$] → 5
+assign [class=^Inkscape$] → 5
+assign [class=^Darktable$] → 5
+assign [title=^LibreOffice$] → 6
+assign [class=libreoffice] → 6
+assign [class=^scribus$] → 6
+assign [title=Mozilla\sThunderbird$] → 7
+assign [class=^Jameica] → 8
+assign [class=^Kodi$] → 9
+assign [class=^VirtualBox] → 10
 
 # keybindings workspace
 #######################
@@ -172,13 +170,13 @@ bindsym $sup+Shift+Up move up 20 px
 bindsym $sup+Shift+Down move down 20 px
 
 # swap workspaces
-bindsym $sup+Home exec --no-startup-id "i3_workspace_swap.sh left"
-bindsym $sup+End exec --no-startup-id "i3_workspace_swap.sh right"
-bindsym $sup+Prior exec --no-startup-id "i3_workspace_swap.sh up"
-bindsym $sup+Next exec --no-startup-id "i3_workspace_swap.sh down"
+bindsym $sup+Home exec --no-startup-id i3_workspace_swap.sh left
+bindsym $sup+End exec --no-startup-id i3_workspace_swap.sh right
+bindsym $sup+Prior exec --no-startup-id i3_workspace_swap.sh up
+bindsym $sup+Next exec --no-startup-id i3_workspace_swap.sh down
 
 # window switcher
-bindsym $sup+Tab exec --no-startup-id "dmenu_windows.sh"
+bindsym $sup+Tab exec --no-startup-id dmenu_windows.sh
 
 # change focus between tiling/floating windows
 bindsym $sup+semicolon focus mode_toggle
@@ -189,11 +187,12 @@ bindsym $sup+apostrophe floating toggle
 # keybindings container mode
 ############################
 
-set $cm_mode mode "default"
-set $cm_kill exec --no-startup-id "i3_container.sh --kill"
+set $cm_exec exec --no-startup-id i3_container.sh
+set $cm_kill exec --no-startup-id i3_container.sh --kill
+set $cm_mode mode default
 
-bindsym $sup+space mode "container"; exec --no-startup-id "i3_container.sh"
-mode "container" {
+bindsym $sup+space mode container; $cm_exec
+mode container {
     # resize container
     bindsym Left resize shrink width 20 px or 5 ppt
     bindsym Right resize grow width 20 px or 5 ppt
@@ -224,59 +223,46 @@ mode "container" {
 ##############################
 
 # start program launcher
-bindsym Super_L --release exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i'"
-bindsym Shift+Super_L --release exec --no-startup-id "dmenu_run -i"
+bindsym Super_L --release exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
+bindsym Shift+Super_L --release exec --no-startup-id dmenu_run -i
 
 # kill focused window
 bindsym Ctrl+q kill
 
 # x window kill
-bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id "xkill"
+bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
 
 # toggle fullscreen mode for the focused container or global
 bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
 
 # Lock screen or suspend
-bindsym $sup+l exec --no-startup-id "i3_exit.sh --lock simple"
-bindsym $sup+Shift+l exec --no-startup-id "i3_exit.sh --suspend"
+bindsym $sup+l exec --no-startup-id i3_exit.sh --lock simple
+bindsym $sup+Shift+l exec --no-startup-id i3_exit.sh --suspend
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 
 # screenshot menu
-bindsym Print exec --no-startup-id "dmenu_screenshot.sh"
+bindsym Print exec --no-startup-id dmenu_screenshot.sh
 
 # keybindings macro mode
 ########################
 
+set $mm_exec exec --no-startup-id i3_macro.sh
+set $mm_kill exec --no-startup-id i3_macro.sh --kill
+set $mm_mode mode default
 set $mm_ws workspace 3
-set $mm_mode mode "default"
-set $mm_kill exec --no-startup-id "i3_macro.sh --kill"
 
-bindsym $sup+Print mode "macro"; exec --no-startup-id "i3_macro.sh"
-mode "macro" {
-    # bootnext
-    bindsym b exec --no-startup-id "i3_macro.sh --bootnext"; \
-        $mm_ws; $mm_mode; $mm_kill
-    # colors
-    bindsym c exec --no-startup-id "i3_macro.sh --colors"; \
-        $mm_ws; $mm_mode; $mm_kill
-    # keyboard
-    bindsym k exec --no-startup-id "i3_macro.sh --keyboard"; \
-        $mm_mode; $mm_kill
-    # neofetch
-    bindsym n exec --no-startup-id "i3_macro.sh --neofetch"; \
-        $mm_ws; $mm_mode; $mm_kill
-    # covid
-    bindsym s exec --no-startup-id "i3_macro.sh --covid"; \
-        $mm_ws; $mm_mode; $mm_kill
-    # ventoy
-    bindsym v exec --no-startup-id "i3_macro.sh --ventoy"; \
-        $mm_ws; $mm_mode; $mm_kill
-    # weather
-    bindsym w exec --no-startup-id "i3_macro.sh --weather"; \
-        $mm_ws; $mm_mode; $mm_kill
+bindsym $sup+Print mode macro; $mm_exec
+mode macro {
+    bindsym b $mm_exec --bootnext; $mm_ws; $mm_mode; $mm_kill
+    bindsym c $mm_exec --colors; $mm_ws; $mm_mode; $mm_kill
+    bindsym k $mm_exec --keyboard; $mm_mode; $mm_kill
+    bindsym n $mm_exec --neofetch; $mm_ws; $mm_mode; $mm_kill
+    bindsym s $mm_exec --covid; $mm_ws; $mm_mode; $mm_kill
+    bindsym v $mm_exec --ventoy; $mm_ws; $mm_mode; $mm_kill
+    bindsym w $mm_exec --weather; $mm_ws; $mm_mode; $mm_kill
     # back to default mode
     bindsym q $mm_mode; $mm_kill
     bindsym Return $mm_mode; $mm_kill
@@ -287,35 +273,20 @@ mode "macro" {
 # keybindings exit mode
 #######################
 
-set $em_mode mode "default"
-set $em_kill exec --no-startup-id "i3_exit.sh --kill"
+set $em_exec exec --no-startup-id i3_exit.sh
+set $em_kill exec --no-startup-id i3_exit.sh --kill
+set $em_mode mode default
 
-bindsym Ctrl+$alt+Delete mode "exit"; exec --no-startup-id "i3_exit.sh"
-mode "exit" {
-    # lock blur
-    bindsym c exec --no-startup-id "i3_exit.sh --lock blur"; \
-        $em_mode; $em_kill
-    # shutdown
-    bindsym d exec --no-startup-id "i3_exit.sh --shutdown"; \
-        $em_mode; $em_kill
-    # logout
-    bindsym l exec --no-startup-id "i3_exit.sh --logout"; \
-        $em_mode; $em_kill
-    # lock simple
-    bindsym o exec --no-startup-id "i3_exit.sh --lock simple"; \
-        $em_mode; $em_kill
-    # suspend blur
-    bindsym p exec --no-startup-id "i3_exit.sh --suspend blur"; \
-        $em_mode; $em_kill
-    # reboot
-    bindsym r exec --no-startup-id "i3_exit.sh --reboot"; \
-        $em_mode; $em_kill
-    # suspend
-    bindsym s exec --no-startup-id "i3_exit.sh --suspend"; \
-        $em_mode; $em_kill
-    # suspend simple
-    bindsym u exec --no-startup-id "i3_exit.sh --suspend simple"; \
-        $em_mode; $em_kill
+bindsym Ctrl+$alt+Delete mode exit; $em_exec
+mode exit {
+    bindsym c $em_exec --lock blur; $em_mode; $em_kill
+    bindsym d $em_exec --shutdown; $em_mode; $em_kill
+    bindsym l $em_exec --logout; $em_mode; $em_kill
+    bindsym o $em_exec --lock simple; $em_mode; $em_kill
+    bindsym p $em_exec --suspend blur; $em_mode; $em_kill
+    bindsym r $em_exec --reboot; $em_mode; $em_kill
+    bindsym s $em_exec --suspend; $em_mode; $em_kill
+    bindsym u $em_exec --suspend simple; $em_mode; $em_kill
     # back to default mode
     bindsym q $em_mode; $em_kill
     bindsym Return $em_mode; $em_kill
@@ -326,45 +297,32 @@ mode "exit" {
 # keybindings services mode
 ###########################
 
-set $sm_mode mode "default"
-set $sm_kill exec --no-startup-id "i3_services.sh --kill"
+set $sm_exec exec --no-startup-id i3_services.sh
+set $sm_kill exec --no-startup-id i3_services.sh --kill
+set $sm_mode mode default
 
-bindsym $alt+space mode "services"; exec --no-startup-id "i3_services.sh"
-mode "services" {
-    # polybar disable/enable
-    bindsym a exec --no-startup-id "i3_services.sh --polybar"
-    # bluetooth disable/enable
-    bindsym b exec --no-startup-id "i3_services.sh --bluetooth"
-    # compositor disable/enable
-    bindsym c exec --no-startup-id "i3_services.sh --compositor"
-    # dunst restart
-    bindsym d exec --no-startup-id "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
-    # firewall disable/enable
-    bindsym f exec --no-startup-id "i3_services.sh --firewall"
-    # gestures disable/enable
-    bindsym g exec --no-startup-id "i3_services.sh --gestures"
-    # ssh disable/enable
-    bindsym h exec --no-startup-id "i3_services.sh --ssh"
-    # autolock disable/enable
-    bindsym l exec --no-startup-id "i3_services.sh --autolock"
-    # mousepointer disable/enable
-    bindsym m exec --no-startup-id "i3_services.sh --mousepointer"
-    # cpu policy toggle
-    bindsym o exec --no-startup-id "cpu_policy.sh --toggle; i3_services.sh"
-    # printer disable/enable
-    bindsym p exec --no-startup-id "i3_services.sh --printer"
-    # rss disable/enable
-    bindsym r exec --no-startup-id "i3_services.sh --rss"
-    # resolver disable/enable
-    bindsym s exec --no-startup-id "i3_services.sh --resolver"
-    # tiling disable/enable
-    bindsym t exec --no-startup-id "i3_services.sh --tiling"
-    # urxvtd kill
-    bindsym u exec --no-startup-id "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
-    # vpn disable/enable
-    bindsym v exec --no-startup-id "i3_services.sh --vpn"
-    # timesync disable/enable
-    bindsym y exec --no-startup-id "i3_services.sh --timesync"
+bindsym $alt+space mode services; $sm_exec
+mode services {
+    bindsym a $sm_exec --polybar
+    bindsym b $sm_exec --bluetooth
+    bindsym c $sm_exec --compositor
+    bindsym d exec --no-startup-id \
+        "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
+    bindsym f $sm_exec --firewall
+    bindsym g $sm_exec --gestures
+    bindsym h $sm_exec --ssh
+    bindsym l $sm_exec --autolock
+    bindsym m $sm_exec --mousepointer
+    bindsym o exec --no-startup-id \
+        "cpu_policy.sh --toggle; i3_services.sh"
+    bindsym p $sm_exec --printer
+    bindsym r $sm_exec --rss
+    bindsym s $sm_exec --resolver
+    bindsym t $sm_exec --tiling
+    bindsym u exec --no-startup-id \
+        "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
+    bindsym v $sm_exec --vpn
+    bindsym y $sm_exec --timesync
     # back to default mode
     bindsym q $sm_mode; $sm_kill
     bindsym Return $sm_mode; $sm_kill
@@ -375,87 +333,79 @@ mode "services" {
 # keybindings xf86 keys
 #######################
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id "audio.sh -inc 5"
-bindsym XF86AudioLowerVolume exec --no-startup-id "audio.sh -dec 5"
-bindsym XF86AudioMute exec --no-startup-id "audio.sh -mute"
-bindsym XF86MonBrightnessUp exec --no-startup-id "doas backlight.sh -inc 5"
-bindsym XF86MonBrightnessDown exec --no-startup-id "doas backlight.sh -dec 5"
-bindsym XF86TouchpadToggle exec --no-startup-id "touchpad_toggle.sh"
-bindsym XF86Cut exec --no-startup-id "polybar.sh -t"
-bindsym $sup+p exec --no-startup-id "dmenu_display.sh"
-bindsym $sup+Shift+p exec --no-startup-id "dmenu_pass.sh"
+bindsym XF86AudioRaiseVolume exec --no-startup-id audio.sh -inc 5
+bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
+bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
+bindsym XF86MonBrightnessUp exec --no-startup-id doas backlight.sh -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id doas backlight.sh -dec 5
+bindsym XF86TouchpadToggle exec --no-startup-id touchpad_toggle.sh
+bindsym XF86Cut exec --no-startup-id polybar.sh -t
+bindsym $sup+p exec --no-startup-id dmenu_display.sh
+bindsym $sup+Shift+p exec --no-startup-id dmenu_pass.sh
 
 # keybindings applications
 ##########################
 
-bindsym $sup+Return exec --no-startup-id "$TERMINAL"
-bindsym $sup+Shift+Return exec --no-startup-id "i3_tmux.sh -o 1 'shell'" workspace 3
-bindsym $sup+Ctrl+Return exec --no-startup-id "$TERMINAL_BACKUP"
+bindsym $sup+Return exec --no-startup-id $TERMINAL
+bindsym $sup+Shift+Return exec --no-startup-id i3_tmux.sh -o 1 'shell'; workspace 3
+bindsym $sup+Ctrl+Return exec --no-startup-id $TERMINAL_BACKUP
 
-bindsym $sup+a exec --no-startup-id "$TERMINAL -e alsamixer"
-bindsym $sup+b exec --no-startup-id "dmenu_bookmarks.sh"
-bindsym $sup+c exec --no-startup-id "i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'" workspace 3
-bindsym $sup+Shift+c exec --no-startup-id "polybar_music.sh --notify"
-bindsym $sup+d exec "darktable" workspace 5
-bindsym $sup+e exec --no-startup-id "dmenu_vim.sh"
-bindsym $sup+g exec "gimp" workspace 5
-bindsym $sup+Shift+h exec --no-startup-id "dmenu_ssh.sh"
-bindsym $sup+i exec "inkscape" workspace 5
-bindsym $sup+j exec "jameica" workspace 8
-bindsym $sup+k exec "kodi" workspace 9
-bindsym $sup+m exec "thunderbird" workspace 7
-bindsym $sup+n exec --no-startup-id "i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'" workspace 3
-bindsym $sup+Shift+n exec --no-startup-id "i3_tmux.sh -o 14 'podboat'" workspace 3
-bindsym $sup+o exec "libreoffice" workspace 6
-bindsym $sup+r exec --no-startup-id "i3_tmux.sh -o 12 $FILE" workspace 3
-bindsym $sup+s exec "scribus" workspace 6
-bindsym $sup+t exec --no-startup-id "i3_tmux.sh -o 15 'htop'" workspace 3
-bindsym $sup+Shift+t exec --no-startup-id "i3_tmux.sh -o 16 'bpytop'" workspace 3
-bindsym $sup+u exec --no-startup-id "dmenu_mount.sh"
-bindsym $sup+v exec --no-startup-id "dmenu_virtualbox.sh"
-bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi" workspace 4
-bindsym $sup+Shift+w exec --no-startup-id "$BROWSER"
-bindsym $sup+Ctrl+w exec --no-startup-id "$BROWSER_BACKUP"
-bindsym $sup+x exec --no-startup-id "link_handler.sh $(dragon-drag-and-drop -t -x)"
-bindsym $sup+y exec --no-startup-id "dmenu_youtube.sh"
-bindsym $sup+z exec --no-startup-id "i3_tmux.sh -o 11 'mc' 'mc -x'" workspace 3
+bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
+bindsym $sup+b exec --no-startup-id dmenu_bookmarks.sh
+bindsym $sup+c exec --no-startup-id i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'; workspace 3
+bindsym $sup+Shift+c exec --no-startup-id polybar_music.sh --notify
+bindsym $sup+d exec darktable; workspace 5
+bindsym $sup+e exec --no-startup-id dmenu_vim.sh
+bindsym $sup+g exec gimp; workspace 5
+bindsym $sup+Shift+h exec --no-startup-id dmenu_ssh.sh
+bindsym $sup+i exec inkscape; workspace 5
+bindsym $sup+j exec jameica; workspace 8
+bindsym $sup+k exec kodi; workspace 9
+bindsym $sup+m exec thunderbird; workspace 7
+bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 3
+bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 3
+bindsym $sup+o exec libreoffice; workspace 6
+bindsym $sup+r exec --no-startup-id i3_tmux.sh -o 12 $FILE; workspace 3
+bindsym $sup+s exec scribus; workspace 6
+bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 3
+bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'bpytop'; workspace 3
+bindsym $sup+u exec --no-startup-id dmenu_mount.sh
+bindsym $sup+v exec --no-startup-id dmenu_virtualbox.sh
+bindsym $sup+Shift+v exec --no-startup-id virtualbox; workspace 10
+bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi"; workspace 4
+bindsym $sup+Shift+w exec --no-startup-id $BROWSER
+bindsym $sup+Ctrl+w exec --no-startup-id $BROWSER_BACKUP
+bindsym $sup+x exec --no-startup-id link_handler.sh $(dragon-drag-and-drop -t -x)
+bindsym $sup+y exec --no-startup-id dmenu_youtube.sh
+bindsym $sup+z exec --no-startup-id i3_tmux.sh -o 11 'mc' 'mc -x'; workspace 3
 
-bindsym $sup+grave exec --no-startup-id "dmenu_unicode_symbols.sh"
-bindsym $sup+bracketleft exec --no-startup-id "i3_tmux.sh -o 17 'man' 'fzf_man.sh'" workspace 3
-bindsym $sup+Shift+bracketleft exec --no-startup-id "dmenu_man.sh"
-bindsym $sup+bracketright exec --no-startup-id "i3_tmux.sh -o 18 'aur' 'fzf_pacman.sh'" workspace 3
-bindsym $sup+Shift+bracketright exec --no-startup-id "dmenu_iwd.sh"
-bindsym $sup+backslash exec --no-startup-id "chameleon.sh"
-bindsym $sup+Shift+backslash exec --no-startup-id "conky.sh"
-bindsym $sup+comma exec --no-startup-id "dmenu_calc.sh"
-bindsym $sup+period exec --no-startup-id "$TERMINAL -T 'stopwatch' -e stopwatch.sh"
-bindsym $sup+slash exec --no-startup-id "$TERMINAL -T 'shortcuts' -e w3m $HOME/Documents/Notes/html/shortcuts.html"
-bindsym $sup+Shift+slash exec --no-startup-id "$TERMINAL -T 'notes' -e w3m $HOME/Documents/Notes/html/index.html"
+bindsym $sup+grave exec --no-startup-id dmenu_unicode_symbols.sh
+bindsym $sup+bracketleft exec --no-startup-id i3_tmux.sh -o 17 'man' 'fzf_man.sh'; workspace 3
+bindsym $sup+Shift+bracketleft exec --no-startup-id dmenu_man.sh
+bindsym $sup+bracketright exec --no-startup-id i3_tmux.sh -o 18 'aur' 'fzf_pacman.sh'; workspace 3
+bindsym $sup+Shift+bracketright exec --no-startup-id dmenu_iwd.sh
+bindsym $sup+backslash exec --no-startup-id chameleon.sh
+bindsym $sup+Shift+backslash exec --no-startup-id conky.sh
+bindsym $sup+comma exec --no-startup-id dmenu_calc.sh
+bindsym $sup+period exec --no-startup-id $TERMINAL -T 'stopwatch' -e stopwatch.sh
+bindsym $sup+slash exec --no-startup-id $TERMINAL -T 'shortcuts' -e w3m $HOME/Documents/Notes/html/shortcuts.html
+bindsym $sup+Shift+slash exec --no-startup-id $TERMINAL -T 'notes' -e w3m $HOME/Documents/Notes/html/index.html
 
 # keybindings ssh mode
 ######################
 
+set $hm_exec exec --no-startup-id i3_ssh.sh
+set $hm_kill exec --no-startup-id i3_ssh.sh --kill
+set $hm_mode mode default
 set $hm_ws workspace 3
-set $hm_mode mode "default"
-set $hm_kill exec --no-startup-id "i3_ssh.sh --kill"
 
-bindsym $sup+h mode "ssh"; exec --no-startup-id "i3_ssh.sh"
-mode "ssh" {
-    # artemis
-    bindsym a exec --no-startup-id "i3_ssh.sh --artemis"; \
-        $hm_ws; $hm_mode; $hm_kill
-    # hera
-    bindsym e exec --no-startup-id "i3_ssh.sh --hera"; \
-        $hm_ws; $hm_mode; $hm_kill
-    # hermes
-    bindsym h exec --no-startup-id "i3_ssh.sh --hermes"; \
-        $hm_ws; $hm_mode; $hm_kill
-    # hermes + prometheus
-    bindsym m exec --no-startup-id "i3_ssh.sh --herpro"; \
-        $hm_ws; $hm_mode; $hm_kill
-    # prometheus
-    bindsym p exec --no-startup-id "i3_ssh.sh --prometheus"; \
-        $hm_ws; $hm_mode; $hm_kill
+bindsym $sup+h mode ssh; $hm_exec
+mode ssh {
+    bindsym a $hm_exec --artemis; $hm_ws; $hm_mode; $hm_kill
+    bindsym e $hm_exec --hera; $hm_ws; $hm_mode; $hm_kill
+    bindsym h $hm_exec --hermes; $hm_ws; $hm_mode; $hm_kill
+    bindsym m $hm_exec --herpro; $hm_ws; $hm_mode; $hm_kill
+    bindsym p $hm_exec --prometheus; $hm_ws; $hm_mode; $hm_kill
     # back to default mode
     bindsym q $hm_mode; $hm_kill
     bindsym Return $hm_mode; $hm_kill
@@ -466,7 +416,7 @@ mode "ssh" {
 # start systemd target
 ######################
 
-exec --no-startup-id "systemctl --user start i3.target"
+exec --no-startup-id systemctl --user start i3.target
 
 # i3 status bar
 ###############
@@ -518,3 +468,5 @@ exec --no-startup-id "systemctl --user start i3.target"
 #         binding_mode       $grey0  $red1   $white0
 #     }
 # }
+
+# vim:ft=config
