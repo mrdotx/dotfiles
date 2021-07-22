@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2021-05-28T11:55:59+0200
+date:   2021-07-22T14:53:01+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -25,7 +25,8 @@ class FzfFind(Command):
                     -prune -o -print 2> /dev/null \
                 | sed 1d \
                 | cut -b3- \
-                | fzf -e -i --preview 'highlight {1}'"
+                | fzf -e -i --preview 'highlight {1}' \
+                    --preview-window 'right:70%'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -46,7 +47,8 @@ class FzfLocate(Command):
         command="fzf_path=\"$(pwd)\"; \
                 locate $fzf_path \
                 | sed \"1d;s#$fzf_path/##g\" \
-                | fzf -e -i --preview 'highlight {1}'"
+                | fzf -e -i --preview 'highlight {1}' \
+                    --preview-window 'right:70%'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -67,7 +69,8 @@ class FzfGrep(Command):
         command="grep --color=never -irs -- " + str(self.rest(1)) + " \
                 | cut -d ':' -f1 \
                 | uniq \
-                | fzf -e -i --preview 'highlight {1}'"
+                | fzf -e -i --preview 'highlight {1}' \
+                    --preview-window 'right:70%'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
