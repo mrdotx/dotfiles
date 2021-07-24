@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-21T10:46:14+0200
+# date:   2021-07-24T19:12:58+0200
 
 # general
 #########
@@ -246,29 +246,8 @@ bindsym $sup+Shift+r restart
 # screenshot menu
 bindsym Print exec --no-startup-id dmenu_screenshot.sh
 
-# keybindings macro mode
-########################
-
-set $mm_exec exec --no-startup-id i3_macro.sh
-set $mm_kill exec --no-startup-id i3_macro.sh --kill
-set $mm_mode mode default
-set $mm_ws workspace 3
-
-bindsym $sup+Print mode macro; $mm_exec
-mode macro {
-    bindsym b $mm_exec --bootnext; $mm_ws; $mm_mode; $mm_kill
-    bindsym c $mm_exec --colors; $mm_ws; $mm_mode; $mm_kill
-    bindsym k $mm_exec --keyboard; $mm_mode; $mm_kill
-    bindsym n $mm_exec --neofetch; $mm_ws; $mm_mode; $mm_kill
-    bindsym s $mm_exec --covid; $mm_ws; $mm_mode; $mm_kill
-    bindsym v $mm_exec --ventoy; $mm_ws; $mm_mode; $mm_kill
-    bindsym w $mm_exec --weather; $mm_ws; $mm_mode; $mm_kill
-    # back to default mode
-    bindsym q $mm_mode; $mm_kill
-    bindsym Return $mm_mode; $mm_kill
-    bindsym Escape $mm_mode; $mm_kill
-    bindsym $sup+Print $mm_mode; $mm_kill
-}
+# macro menu
+bindsym $sup+Print exec --no-startup-id dmenu_macro.sh
 
 # keybindings exit mode
 #######################
