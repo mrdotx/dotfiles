@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/sx/sxrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-09T12:57:25+0200
+# date:   2021-07-25T09:04:01+0200
 
 # set cpu policy
 cpu_policy.sh --performance
@@ -53,6 +53,9 @@ session="${1:-i3}"
     && case "$session" in
         i3)
             exec i3
+            ;;
+        i3-debug)
+            exec i3 --shmlog-size=26214400
             ;;
         kodi)
             exec kodi-standalone
