@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/xautolock.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T15:23:02+0200
+# date:   2021-07-25T20:48:40+0200
 
 [Unit]
 Description=xautolock to auto lock/suspend device
@@ -9,7 +9,7 @@ PartOf=i3.target
 
 [Service]
 Type=simple
-Environment=DISPLAY=:1
+Environment=DISPLAY=:0
 ExecStart=/usr/bin/xautolock -detectsleep
 Restart=on-failure
 RestartSec=1m
