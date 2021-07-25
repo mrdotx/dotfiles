@@ -878,7 +878,6 @@ suitesparse
 svt-av1
 svt-hevc
 sweethome3d
-sx
 sxiv
 sysfsutils
 systemd

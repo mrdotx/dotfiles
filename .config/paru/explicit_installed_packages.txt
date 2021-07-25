@@ -206,7 +206,6 @@ spectre-meltdown-checker
 speedtest-cli
 splix
 sweethome3d
-sx
 sxiv
 sysfsutils
 systemd-sysvcompat
