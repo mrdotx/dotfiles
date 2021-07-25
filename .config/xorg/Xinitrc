@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.xinitrc
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/Xinitrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-25T19:59:50+0200
+# date:   2021-07-25T20:29:52+0200
 
 # set cpu policy
 cpu_policy.sh --performance
