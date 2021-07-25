@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-24T19:12:58+0200
+# date:   2021-07-25T10:35:05+0200
 
 # general
 #########
@@ -58,16 +58,16 @@ client.placeholder      $black0  $grey0   $white0  $black0  $grey0
 client.background       $white0
 
 # workspace output
-workspace 1 output $secondary $primary
-workspace 2 output $primary $secondary
-workspace 3 output $secondary $primary
+workspace 1 output $primary $secondary
+workspace 2 output $secondary $primary
+workspace 3 output $primary $secondary
 workspace 4 output $primary $secondary
 workspace 5 output $primary $secondary
-workspace 6 output $primary $secondary
-workspace 7 output $secondary $primary
-workspace 8 output $primary $secondary
-workspace 9 output $secondary $primary
-workspace 10 output $primary $secondary
+workspace 6 output $secondary $primary
+workspace 7 output $primary $secondary
+workspace 8 output $secondary $primary
+workspace 9 output $primary $secondary
+workspace 10 output $secondary $primary
 
 # application windows (xprop)
 #############################
@@ -95,18 +95,18 @@ for_window [class=^Sxiv$] $float, $size, $move
 for_window [class=^mpv$] $float, $sticky
 
 # open application on specific workspace
-assign [title=^i3\stmux$] → 3
-assign [class=^firefoxdeveloperedition$] → 4
-assign [class=^Gimp$] → 5
-assign [class=^Inkscape$] → 5
-assign [class=^Darktable$] → 5
-assign [title=^LibreOffice$] → 6
-assign [class=libreoffice] → 6
-assign [class=^scribus$] → 6
-assign [title=Mozilla\sThunderbird$] → 7
-assign [class=^Jameica] → 8
-assign [class=^Kodi$] → 9
-assign [class=^VirtualBox] → 10
+assign [title=^i3\stmux$] → 2
+assign [class=^firefoxdeveloperedition$] → 3
+assign [class=^Gimp$] → 4
+assign [class=^Inkscape$] → 4
+assign [class=^Darktable$] → 4
+assign [title=^LibreOffice$] → 5
+assign [class=libreoffice] → 5
+assign [class=^scribus$] → 5
+assign [title=Mozilla\sThunderbird$] → 6
+assign [class=^Jameica] → 7
+assign [class=^Kodi$] → 8
+assign [class=^VirtualBox] → 9
 
 # keybindings workspace
 #######################
@@ -326,42 +326,42 @@ bindsym $sup+Shift+p exec --no-startup-id dmenu_pass.sh
 ##########################
 
 bindsym $sup+Return exec --no-startup-id $TERMINAL
-bindsym $sup+Shift+Return exec --no-startup-id i3_tmux.sh -o 1 'shell'; workspace 3
+bindsym $sup+Shift+Return exec --no-startup-id i3_tmux.sh -o 1 'shell'; workspace 2
 bindsym $sup+Ctrl+Return exec --no-startup-id $TERMINAL_BACKUP
 
 bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
 bindsym $sup+b exec --no-startup-id dmenu_bookmarks.sh
-bindsym $sup+c exec --no-startup-id i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'; workspace 3
+bindsym $sup+c exec --no-startup-id i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'; workspace 2
 bindsym $sup+Shift+c exec --no-startup-id polybar_music.sh --notify
-bindsym $sup+d exec darktable; workspace 5
+bindsym $sup+d exec darktable; workspace 4
 bindsym $sup+e exec --no-startup-id dmenu_vim.sh
-bindsym $sup+g exec gimp; workspace 5
+bindsym $sup+g exec gimp; workspace 4
 bindsym $sup+Shift+h exec --no-startup-id dmenu_ssh.sh
-bindsym $sup+i exec inkscape; workspace 5
-bindsym $sup+j exec jameica; workspace 8
-bindsym $sup+k exec kodi; workspace 9
-bindsym $sup+m exec thunderbird; workspace 7
-bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 3
-bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 3
-bindsym $sup+o exec libreoffice; workspace 6
-bindsym $sup+r exec --no-startup-id i3_tmux.sh -o 12 $FILE; workspace 3
-bindsym $sup+s exec scribus; workspace 6
-bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 3
-bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'bpytop'; workspace 3
+bindsym $sup+i exec inkscape; workspace 4
+bindsym $sup+j exec jameica; workspace 7
+bindsym $sup+k exec kodi; workspace 8
+bindsym $sup+m exec thunderbird; workspace 6
+bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 2
+bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 2
+bindsym $sup+o exec libreoffice; workspace 5
+bindsym $sup+r exec --no-startup-id i3_tmux.sh -o 12 $FILE; workspace 2
+bindsym $sup+s exec scribus; workspace 5
+bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 2
+bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'bpytop'; workspace 2
 bindsym $sup+u exec --no-startup-id dmenu_mount.sh
 bindsym $sup+v exec --no-startup-id dmenu_virtualbox.sh
-bindsym $sup+Shift+v exec --no-startup-id virtualbox; workspace 10
-bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi"; workspace 4
+bindsym $sup+Shift+v exec --no-startup-id virtualbox; workspace 9
+bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi"; workspace 3
 bindsym $sup+Shift+w exec --no-startup-id $BROWSER
 bindsym $sup+Ctrl+w exec --no-startup-id $BROWSER_BACKUP
 bindsym $sup+x exec --no-startup-id link_handler.sh $(dragon-drag-and-drop -t -x)
 bindsym $sup+y exec --no-startup-id dmenu_youtube.sh
-bindsym $sup+z exec --no-startup-id i3_tmux.sh -o 11 'mc' 'mc -x'; workspace 3
+bindsym $sup+z exec --no-startup-id i3_tmux.sh -o 11 'mc' 'mc -x'; workspace 2
 
 bindsym $sup+grave exec --no-startup-id dmenu_unicode_symbols.sh
-bindsym $sup+bracketleft exec --no-startup-id i3_tmux.sh -o 17 'man' 'fzf_man.sh'; workspace 3
+bindsym $sup+bracketleft exec --no-startup-id i3_tmux.sh -o 17 'man' 'fzf_man.sh'; workspace 2
 bindsym $sup+Shift+bracketleft exec --no-startup-id dmenu_man.sh
-bindsym $sup+bracketright exec --no-startup-id i3_tmux.sh -o 18 'aur' 'fzf_pacman.sh'; workspace 3
+bindsym $sup+bracketright exec --no-startup-id i3_tmux.sh -o 18 'aur' 'fzf_pacman.sh'; workspace 2
 bindsym $sup+Shift+bracketright exec --no-startup-id dmenu_iwd.sh
 bindsym $sup+backslash exec --no-startup-id chameleon.sh
 bindsym $sup+Shift+backslash exec --no-startup-id conky.sh
@@ -376,7 +376,7 @@ bindsym $sup+Shift+slash exec --no-startup-id $TERMINAL -T 'notes' -e w3m $HOME/
 set $hm_exec exec --no-startup-id i3_ssh.sh
 set $hm_kill exec --no-startup-id i3_ssh.sh --kill
 set $hm_mode mode default
-set $hm_ws workspace 3
+set $hm_ws workspace 2
 
 bindsym $sup+h mode ssh; $hm_exec
 mode ssh {
