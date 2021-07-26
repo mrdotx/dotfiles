@@ -756,6 +756,7 @@ python-astroid
 python-beautifulsoup4
 python-cachecontrol
 python-cairo
+python-certifi
 python-cffi
 python-chardet
 python-colorama
