@@ -251,7 +251,7 @@ iputils
 iso-codes
 iw
 iwd
-jack
+jack2
 jameica
 jansson
 jasper
