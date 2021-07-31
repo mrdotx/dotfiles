@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T12:05:25+0200
+" date:   2021-07-31T10:15:18+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -43,6 +43,7 @@ set wildmode=longest,list,full
 set lazyredraw                      " redraw only when we need to
 " symbols for control character
 set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+set list                            " show control characters
 set splitbelow splitright           " splits open at the bottom and right
 
 " searching
