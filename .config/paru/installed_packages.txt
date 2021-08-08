@@ -424,6 +424,7 @@ liblrdf
 libluv
 libmad
 libmanette
+libmd
 libmfx
 libmicrodns
 libmicrohttpd
