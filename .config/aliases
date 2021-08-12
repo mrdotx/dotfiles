@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-09T14:41:55+0200
+# date:   2021-08-12T10:35:04+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -28,7 +28,7 @@ alias \
     watch='watch --color' \
     ncdu='ncdu --color dark' \
     tree='tree -C' \
-    kmon='$EXEC_AS_USER kmon -a #7ef9ff -c #4185d7'
+    kmon='$EXEC_AS_USER kmon -a #cccccc -c #4185d7'
 
 # navigation
 alias \
