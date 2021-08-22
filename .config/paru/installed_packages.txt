@@ -358,7 +358,6 @@ libcdio-paranoia
 libcdr
 libcec
 libcloudproviders
-libcmis
 libcolord
 libconfig
 libcroco
@@ -774,14 +773,12 @@ python-fasteners
 python-gobject
 python-html5lib
 python-idna
-python-isort
 python-jedi
 python-lazy-object-proxy
 python-libevdev
 python-lockfile
 python-lxml
 python-markdown
-python-mccabe
 python-more-itertools
 python-msgpack
 python-mutagen
@@ -792,6 +789,7 @@ python-parso
 python-pep517
 python-pillow
 python-pip
+python-platformdirs
 python-ply
 python-progress
 python-psutil
