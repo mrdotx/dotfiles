@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.zshenv
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-25T11:21:49+0200
+# date:   2021-08-25T12:33:26+0200
 
 # xdg paths
 export \
