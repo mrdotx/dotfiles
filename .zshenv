@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
+# path:   /home/klassiker/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-25T20:28:07+0200
+# date:   2021-08-25T11:21:49+0200
 
 # xdg paths
 export \
@@ -49,7 +49,6 @@ systemctl --user import-environment PATH
 
 # config paths
 export \
-    XINITRC="$XDG_CONFIG_HOME/xorg/Xinitrc" \
     XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority" \
     ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
