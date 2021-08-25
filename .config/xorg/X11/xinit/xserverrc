@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/X11/xinit/xserverrc
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2021-08-25T10:59:29+0200
+
+# xset q
+# -ardelay 200 = auto repeat delay [200]
+# -arinterval 20 = 1000 / repeat rate [1000 / 50]
+exec /usr/bin/X -nolisten tcp -ardelay 200 -arinterval 20 "$@"
