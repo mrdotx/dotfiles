@@ -976,9 +976,7 @@ xf86-input-evdev
 xf86-input-libinput
 xf86-input-void
 xf86-input-wacom
-xf86-video-fbdev
 xf86-video-intel
-xf86-video-vesa
 xkeyboard-config
 xmlsec
 xorg-fonts-alias-misc
