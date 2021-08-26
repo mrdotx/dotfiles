@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-25T12:33:26+0200
+# date:   2021-08-26T21:09:11+0200
 
 # xdg paths
 export \
@@ -46,6 +46,11 @@ export PATH
 
 # systemd environment
 systemctl --user import-environment PATH
+
+# hardware settings
+# gpu iHD/i965 intel-media-driver/libva-intel-driver new/old driver (vainfo)
+export \
+    LIBVA_DRIVER_NAME=i965
 
 # config paths
 export \
