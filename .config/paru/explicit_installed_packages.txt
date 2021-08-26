@@ -180,11 +180,9 @@ psmisc
 pstoedit
 python-beautifulsoup4
 python-discid
-python-jedi
 python-libevdev
 python-pip
 python-pycryptodome
-python-pylint
 python-readability-lxml
 qt5ct
 ranger

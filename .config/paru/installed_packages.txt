@@ -729,7 +729,6 @@ pstoedit
 pugixml
 python
 python-appdirs
-python-astroid
 python-beautifulsoup4
 python-cachecontrol
 python-cairo
@@ -750,8 +749,6 @@ python-fasteners
 python-gobject
 python-html5lib
 python-idna
-python-jedi
-python-lazy-object-proxy
 python-libevdev
 python-lockfile
 python-lxml
@@ -762,18 +759,15 @@ python-mutagen
 python-npyscreen
 python-ordered-set
 python-packaging
-python-parso
 python-pep517
 python-pillow
 python-pip
-python-platformdirs
 python-ply
 python-progress
 python-psutil
 python-pycparser
 python-pycryptodome
 python-pycryptodomex
-python-pylint
 python-pyopenssl
 python-pyparsing
 python-pyqt5
@@ -790,7 +784,6 @@ python-toml
 python-tomli
 python-urllib3
 python-webencodings
-python-wrapt
 python-xlib
 qpdf
 qt5-base
