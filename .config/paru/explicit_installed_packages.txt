@@ -141,8 +141,6 @@ manjaro-system
 mc
 mesa-demos
 mesa-vdpau
-mhwd
-mhwd-db
 mlocate
 mpv
 mtools
