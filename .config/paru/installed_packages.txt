@@ -174,7 +174,6 @@ gnutls
 gobject-introspection-runtime
 gpgme
 gpm
-gptfdisk
 graphene
 graphicsmagick
 graphite
@@ -603,7 +602,6 @@ man-db
 man-pages
 manjaro-keyring
 manjaro-release
-manjaro-system
 mariadb-libs
 mc
 md4c

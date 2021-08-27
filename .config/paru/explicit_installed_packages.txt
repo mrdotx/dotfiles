@@ -66,7 +66,6 @@ gimp-plugin-gmic
 git
 glibc
 gnome-themes-extra
-gptfdisk
 grep
 gsettings-desktop-schemas
 gst-libav
@@ -137,7 +136,6 @@ make
 man-db
 man-pages
 manjaro-release
-manjaro-system
 mc
 mesa-demos
 mesa-vdpau
