@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-25T10:35:05+0200
+# date:   2021-08-27T20:54:46+0200
 
 # general
 #########
@@ -92,7 +92,6 @@ for_window [class=^qt5ct$] $float, $sticky, $move
 for_window [class=^gmic_qt$] $float, $move
 for_window [class=^qv4l2$] $float, $move
 for_window [class=^Sxiv$] $float, $size, $move
-for_window [class=^mpv$] $float, $sticky
 
 # open application on specific workspace
 assign [title=^i3\stmux$] → 2
@@ -105,8 +104,13 @@ assign [class=libreoffice] → 5
 assign [class=^scribus$] → 5
 assign [title=Mozilla\sThunderbird$] → 6
 assign [class=^Jameica] → 7
+for_window [class=^Jameica] workspace 7
 assign [class=^Kodi$] → 8
+for_window [class=^Kodi$] workspace 8
+assign [class=^mpv$] → 8
+for_window [class=^mpv$] workspace 8
 assign [class=^VirtualBox] → 9
+for_window [class=^VirtualBox] workspace 9
 
 # keybindings workspace
 #######################
@@ -338,8 +342,8 @@ bindsym $sup+e exec --no-startup-id dmenu_vim.sh
 bindsym $sup+g exec gimp; workspace 4
 bindsym $sup+Shift+h exec --no-startup-id dmenu_ssh.sh
 bindsym $sup+i exec inkscape; workspace 4
-bindsym $sup+j exec jameica; workspace 7
-bindsym $sup+k exec kodi; workspace 8
+bindsym $sup+j exec --no-startup-id jameica
+bindsym $sup+k exec kodi
 bindsym $sup+m exec thunderbird; workspace 6
 bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 2
 bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 2
@@ -350,7 +354,7 @@ bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 2
 bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'bpytop'; workspace 2
 bindsym $sup+u exec --no-startup-id dmenu_mount.sh
 bindsym $sup+v exec --no-startup-id dmenu_virtualbox.sh
-bindsym $sup+Shift+v exec --no-startup-id virtualbox; workspace 9
+bindsym $sup+Shift+v exec --no-startup-id virtualbox
 bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi"; workspace 3
 bindsym $sup+Shift+w exec --no-startup-id $BROWSER
 bindsym $sup+Ctrl+w exec --no-startup-id $BROWSER_BACKUP
