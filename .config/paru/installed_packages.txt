@@ -570,8 +570,8 @@ linux-ck-skylake-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
-linux5.13.12.zen1-1-zen-bin
-linux5.13.12.zen1-1-zen-headers-bin
+linux5.13.13.zen1-1-zen-bin
+linux5.13.13.zen1-1-zen-headers-bin
 linux510
 linux510-headers
 linux513
