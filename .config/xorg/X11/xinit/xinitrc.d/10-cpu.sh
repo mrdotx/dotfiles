@@ -3,7 +3,8 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/X11/xinit/xinitrc.d/10-cpu.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-25T12:11:56+0200
+# date:   2021-08-30T20:04:13+0200
 
-command -v cpu_policy.sh > /dev/null 2>&1 \
-    && cpu_policy.sh --performance
+command -v cpufreqctl > /dev/null 2>&1 \
+    && $EXEC_AS_USER cpufreqctl --governor --set=performance \
+    && $EXEC_AS_USER cpufreqctl --epp --set=performance
