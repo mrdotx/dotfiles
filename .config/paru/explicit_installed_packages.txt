@@ -115,8 +115,6 @@ libva-utils
 libva-vdpau-driver
 libxft-bgra
 licenses
-linux-ck-skylake
-linux-ck-skylake-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin

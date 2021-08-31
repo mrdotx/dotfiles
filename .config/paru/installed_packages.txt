@@ -565,8 +565,6 @@ libzmf
 licenses
 lilv
 linux-api-headers
-linux-ck-skylake
-linux-ck-skylake-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
