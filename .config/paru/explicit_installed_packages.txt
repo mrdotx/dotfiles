@@ -88,6 +88,7 @@ hyphen-en
 inetutils
 inkscape
 intel-compute-runtime
+intel-hybrid-codec-driver
 intel-ucode
 inxi
 iproute2
@@ -109,7 +110,7 @@ libmad
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
-libva-intel-driver
+libva-intel-driver-hybrid
 libva-mesa-driver
 libva-utils
 libva-vdpau-driver

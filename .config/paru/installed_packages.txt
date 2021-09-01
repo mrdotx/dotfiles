@@ -238,6 +238,7 @@ inkscape
 intel-compute-runtime
 intel-gmmlib
 intel-graphics-compiler
+intel-hybrid-codec-driver
 intel-media-driver
 intel-media-sdk
 intel-opencl-clang
@@ -356,6 +357,7 @@ libcdio-paranoia
 libcdr
 libcec
 libcloudproviders
+libcmrt
 libcolord
 libconfig
 libcroco
@@ -509,7 +511,7 @@ libusb-compat
 libutempter
 libuv
 libva
-libva-intel-driver
+libva-intel-driver-hybrid
 libva-mesa-driver
 libva-utils
 libva-vdpau-driver
