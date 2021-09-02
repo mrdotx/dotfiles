@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-01T18:39:01+0200
+# date:   2021-09-02T12:54:17+0200
 
 # xdg paths
 export \
@@ -47,10 +47,11 @@ export PATH
 # systemd environment
 systemctl --user import-environment PATH
 
-# hardware settings
-# iHD intel-media-driver new driver (vainfo)
-# i965 libva-intel-driver/libva-intel-driver-hybrid old driver
-# hybrid intel-hybrid-codec-driver partial VP8/VP9 encoding/decoding
+# graphic settings (vainfo)
+# iHD    | intel-media-driver        | new driver
+# i965   | libva-intel-driver        | old driver
+#        | libva-intel-driver-hybrid | for hybrid
+# hybrid | intel-hybrid-codec-driver | partial VP8/VP9 encoding/decoding
 export \
     LIBVA_DRIVER_NAME=i965
 
