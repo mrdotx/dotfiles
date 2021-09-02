@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-27T20:54:46+0200
+# date:   2021-09-02T12:23:31+0200
 
 # general
 #########
@@ -291,7 +291,6 @@ mode services {
     bindsym c $sm_exec --compositor
     bindsym d exec --no-startup-id \
         "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
-    bindsym f $sm_exec --firewall
     bindsym g $sm_exec --gestures
     bindsym h $sm_exec --ssh
     bindsym l $sm_exec --autolock
