@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-02T12:23:31+0200
+# date:   2021-09-02T19:27:06+0200
 
 # general
 #########
@@ -104,11 +104,9 @@ assign [class=libreoffice] → 5
 assign [class=^scribus$] → 5
 assign [title=Mozilla\sThunderbird$] → 6
 assign [class=^Jameica] → 7
-for_window [class=^Jameica] workspace 7
 assign [class=^Kodi$] → 8
-for_window [class=^Kodi$] workspace 8
 assign [class=^mpv$] → 8
-for_window [class=^mpv$] workspace 8
+for_window [class=^mpv$] workspace 8, fullscreen enable
 assign [class=^VirtualBox] → 9
 for_window [class=^VirtualBox] workspace 9
 
@@ -341,8 +339,8 @@ bindsym $sup+e exec --no-startup-id dmenu_vim.sh
 bindsym $sup+g exec gimp; workspace 4
 bindsym $sup+Shift+h exec --no-startup-id dmenu_ssh.sh
 bindsym $sup+i exec inkscape; workspace 4
-bindsym $sup+j exec --no-startup-id jameica
-bindsym $sup+k exec kodi
+bindsym $sup+j exec --no-startup-id jameica; workspace 7
+bindsym $sup+k exec kodi; workspace 8
 bindsym $sup+m exec thunderbird; workspace 6
 bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 2
 bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 2
