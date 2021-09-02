@@ -194,6 +194,7 @@ gst-plugins-base-libs
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
+gstreamer-vaapi
 gtest
 gtk-engine-murrine
 gtk-update-icon-cache
@@ -201,7 +202,6 @@ gtk2
 gtk3
 gtkmm3
 gts
-gufw
 guile
 gumbo-parser
 gupnp
@@ -237,6 +237,7 @@ inetutils
 inkscape
 intel-compute-runtime
 intel-gmmlib
+intel-gpu-tools
 intel-graphics-compiler
 intel-hybrid-codec-driver
 intel-media-driver
@@ -323,7 +324,6 @@ lib32-libxxf86vm
 lib32-llvm-libs
 lib32-lm_sensors
 lib32-mesa
-lib32-mesa-vdpau
 lib32-ncurses
 lib32-openssl
 lib32-readline
@@ -514,7 +514,6 @@ libva
 libva-intel-driver-hybrid
 libva-mesa-driver
 libva-utils
-libva-vdpau-driver
 libvdpau
 libvisio
 libvisual
@@ -607,7 +606,6 @@ mc
 md4c
 mesa
 mesa-demos
-mesa-vdpau
 metis
 mjpegtools
 mkinitcpio
@@ -678,6 +676,7 @@ pciutils
 pcre
 pcre2
 pcsclite
+peg
 perl
 perl-alien-build
 perl-alien-libxml2
@@ -885,7 +884,6 @@ ttf-ms-win10-zh_tw
 twolame
 tzdata
 uchardet
-ufw
 unarj
 unibilium
 unrar

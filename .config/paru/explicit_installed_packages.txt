@@ -74,8 +74,8 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
+gstreamer-vaapi
 gtk3
-gufw
 gzip
 hibiscus
 highlight
@@ -88,6 +88,7 @@ hyphen-en
 inetutils
 inkscape
 intel-compute-runtime
+intel-gpu-tools
 intel-hybrid-codec-driver
 intel-ucode
 inxi
@@ -103,7 +104,6 @@ kodi-addon-visualization-spectrum
 kvantum-qt5
 less
 lib32-libva-vdpau-driver
-lib32-mesa-vdpau
 libdvdcss
 libinput-gestures
 libmad
@@ -113,7 +113,6 @@ libtool
 libva-intel-driver-hybrid
 libva-mesa-driver
 libva-utils
-libva-vdpau-driver
 libxft-bgra
 licenses
 linux-firmware
@@ -137,7 +136,6 @@ man-pages
 manjaro-release
 mc
 mesa-demos
-mesa-vdpau
 mlocate
 mpv
 mtools
@@ -238,6 +236,7 @@ vorbis-tools
 vpnc
 vulkan-intel
 w3m
+webkit2gtk
 wget
 which
 wmctrl
