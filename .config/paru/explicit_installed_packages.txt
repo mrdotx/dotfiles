@@ -54,6 +54,7 @@ findutils
 firefox-developer-edition
 firefox-developer-edition-i18n-de
 flac
+flex
 fzf
 gawk
 gcc
