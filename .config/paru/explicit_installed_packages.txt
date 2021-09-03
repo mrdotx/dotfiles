@@ -103,7 +103,6 @@ kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
 kvantum-qt5
 less
-lib32-libva-vdpau-driver
 libdvdcss
 libinput-gestures
 libmad
