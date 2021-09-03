@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-02T19:27:06+0200
+# date:   2021-09-03T11:43:31+0200
 
 # general
 #########
@@ -92,6 +92,7 @@ for_window [class=^qt5ct$] $float, $sticky, $move
 for_window [class=^gmic_qt$] $float, $move
 for_window [class=^qv4l2$] $float, $move
 for_window [class=^Sxiv$] $float, $size, $move
+for_window [class=^mpv$] $float
 
 # open application on specific workspace
 assign [title=^i3\stmux$] → 2
@@ -105,8 +106,6 @@ assign [class=^scribus$] → 5
 assign [title=Mozilla\sThunderbird$] → 6
 assign [class=^Jameica] → 7
 assign [class=^Kodi$] → 8
-assign [class=^mpv$] → 8
-for_window [class=^mpv$] workspace 8, fullscreen enable
 assign [class=^VirtualBox] → 9
 for_window [class=^VirtualBox] workspace 9
 
@@ -234,9 +233,10 @@ bindsym Ctrl+q kill
 # x window kill
 bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
 
-# toggle fullscreen mode for the focused container or global
+# toggle fullscreen mode for the focused container/global or move to spare workspace
 bindsym $sup+f fullscreen toggle
 bindsym $sup+Shift+f fullscreen toggle global
+bindsym $sup+Ctrl+f move container to workspace 10; workspace 10; floating disable
 
 # Lock screen or suspend
 bindsym $sup+l exec --no-startup-id i3_exit.sh --lock simple
