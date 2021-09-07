@@ -498,7 +498,7 @@ libxdmcp
 libxext
 libxfixes
 libxfont2
-libxft-bgra-git
+libxft-bgra
 libxi
 libxinerama
 libxkbcommon
@@ -907,7 +907,6 @@ xorg-fonts-misc
 xorg-server
 xorg-server-common
 xorg-setxkbmap
-xorg-util-macros
 xorg-xauth
 xorg-xdpyinfo
 xorg-xev
