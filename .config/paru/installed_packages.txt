@@ -530,11 +530,8 @@ linux-zen-versioned-headers-bin
 linux5.13.13.zen1-1-zen-bin
 linux5.13.13.zen1-1-zen-headers-bin
 linux510
-linux510-headers
 linux513
-linux513-headers
 linux514
-linux514-headers
 lirc
 llvm
 llvm-libs
