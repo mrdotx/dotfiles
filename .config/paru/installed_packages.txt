@@ -527,8 +527,8 @@ linux-api-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
-linux5.13.13.zen1-1-zen-bin
-linux5.13.13.zen1-1-zen-headers-bin
+linux5.14.2.zen1-2-zen-bin
+linux5.14.2.zen1-2-zen-headers-bin
 linux510
 linux513
 linux514
@@ -828,14 +828,6 @@ tslib
 ttf-dejavu
 ttf-font-awesome
 ttf-joypixels
-ttf-ms-win10
-ttf-ms-win10-japanese
-ttf-ms-win10-korean
-ttf-ms-win10-other
-ttf-ms-win10-sea
-ttf-ms-win10-thai
-ttf-ms-win10-zh_cn
-ttf-ms-win10-zh_tw
 twolame
 tzdata
 uchardet

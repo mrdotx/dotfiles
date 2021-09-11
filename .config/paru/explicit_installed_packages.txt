@@ -211,14 +211,6 @@ tree
 ttf-dejavu
 ttf-font-awesome
 ttf-joypixels
-ttf-ms-win10
-ttf-ms-win10-japanese
-ttf-ms-win10-korean
-ttf-ms-win10-other
-ttf-ms-win10-sea
-ttf-ms-win10-thai
-ttf-ms-win10-zh_cn
-ttf-ms-win10-zh_tw
 unarj
 unrar
 unzip
