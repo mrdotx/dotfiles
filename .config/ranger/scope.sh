@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-11T10:15:52+0200
+# date:   2021-09-11T22:14:37+0200
 
 # exit | function   | action of ranger
 
@@ -131,6 +131,8 @@ handle_extension() {
                     | sed 's/^ //' \
                     | tail -1 \
             )"
+            # workaround for transparent background due to hardcoded .jpg in
+            # actions.py is convert to png and rename the file to jpg
             convert -size "960x960" xc:"#000000" \
                 -font "$file_path" \
                 -fill "#cccccc" \
@@ -142,7 +144,8 @@ handle_extension() {
                 -gravity SouthWest \
                 -pointsize 24 \
                 -annotate +0+0 "$font_name" \
-                -flatten "$image_cache_path" \
+                -flatten "$image_cache_path.png" \
+                    && mv "$image_cache_path.png" "$image_cache_path" \
                     && exit 6
             exit 1
             ;;
