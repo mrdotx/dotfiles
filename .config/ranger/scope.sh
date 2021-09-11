@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-21T19:46:06+0200
+# date:   2021-09-11T09:48:22+0200
 
 # exit | function   | action of ranger
 
@@ -115,12 +115,12 @@ handle_extension() {
             ;;
         otf | ttf | woff | ttc)
             preview_text() {
-                line1="ABCDEFGHIJKLM"
-                line2="NOPQRSTUVWXYZ"
-                line3="abcdefghijklm"
-                line4="nopqrstuvwxyz"
-                line5="1234567890"
-                line6="!@$\%(){}[]"
+                line1="AÄBCDEFGHIJKLMN"
+                line2="OÖPQRSßTUÜVWXYZ"
+                line3="aäbcdefghijklmn"
+                line4="oöpqrsßtuüvwxyz"
+                line5="1234567890,.*/+-=~"
+                line6="!?@#§$\%&(){}[]<>;:"
                 printf "%s\n%s\n%s\n%s\n%s\n%s" \
                     "$line1" "$line2" "$line3" "$line4" "$line5" "$line6"
             }
