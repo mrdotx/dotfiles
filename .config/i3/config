@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-03T11:43:31+0200
+# date:   2021-09-12T11:30:39+0200
 
 # general
 #########
@@ -302,6 +302,8 @@ mode services {
     bindsym u exec --no-startup-id \
         "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
     bindsym v $sm_exec --vpn
+    bindsym w exec --no-startup-id \
+        "wallpaper.sh --random"
     bindsym y $sm_exec --timesync
     # back to default mode
     bindsym q $sm_mode; $sm_kill
