@@ -119,8 +119,11 @@ linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
 linux510
+linux510-headers
 linux513
+linux513-headers
 linux514
+linux514-headers
 logrotate
 lsb-release
 lxappearance
