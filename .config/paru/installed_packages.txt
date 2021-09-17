@@ -527,8 +527,8 @@ linux-api-headers
 linux-firmware
 linux-zen-versioned-bin
 linux-zen-versioned-headers-bin
-linux5.14.3.zen1-1-zen-bin
-linux5.14.3.zen1-1-zen-headers-bin
+linux5.14.5.zen1-1-zen-bin
+linux5.14.5.zen1-1-zen-headers-bin
 linux510
 linux510-headers
 linux513
