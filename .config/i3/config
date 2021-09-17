@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-15T19:43:27+0200
+# date:   2021-09-17T10:19:30+0200
 
 # general
 #########
@@ -303,6 +303,8 @@ mode services {
     bindsym h $sm_exec --ssh
     bindsym l $sm_exec --autolock
     bindsym m $sm_exec --mousepointer
+    bindsym n exec --no-startup-id \
+        "wacom.sh; notify-send 'i3' 'wacom configured'"
     bindsym o exec --no-startup-id \
         "cpu_policy.sh --toggle; i3_services.sh"
     bindsym p $sm_exec --printer
