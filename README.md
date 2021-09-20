@@ -8,7 +8,7 @@ found in my other repositories.
 | :---------------- | :------------------------------------------------- |
 | aria2             | download manager                                   |
 | bash              | shell                                              |
-| bpytop            | resource monitor that shows usage and stats        |
+| btop              | resource monitor that shows usage and stats        |
 | cdw               | terminal front-end for cdrecord                    |
 | cmus              | music player                                       |
 | dunst             | notification daemon                                |

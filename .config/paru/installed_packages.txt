@@ -52,8 +52,8 @@ bluez-utils
 boost-libs
 botan
 box2d
-bpytop
 brotli
+btop
 btrfs-progs
 bubblewrap
 bzip2

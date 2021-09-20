@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-19T21:28:34+0200
+# date:   2021-09-20T18:13:22+0200
 
 # general
 #########
@@ -360,7 +360,7 @@ bindsym $sup+o exec libreoffice
 bindsym $sup+r exec --no-startup-id i3_tmux.sh -o 12 $FILE; workspace 2
 bindsym $sup+s exec scribus
 bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 2
-bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'bpytop'; workspace 2
+bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'btop'; workspace 2
 bindsym $sup+u exec --no-startup-id dmenu_mount.sh
 bindsym $sup+v exec --no-startup-id dmenu_virtualbox.sh
 bindsym $sup+Shift+v exec --no-startup-id virtualbox

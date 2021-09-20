@@ -20,7 +20,7 @@ binutils
 bison
 blueman
 bluez-utils
-bpytop
+btop
 btrfs-progs
 bzip2
 cantarell-fonts
