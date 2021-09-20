@@ -1,0 +1,18 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/wacom.service
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/wacom
+# date:   2021-09-20T09:33:23+0200
+
+[Unit]
+Description=configure wacom tablet
+After=default.target
+PartOf=default.target
+
+[Service]
+Type=oneshot
+Environment=XAUTHORITY=%h/.local/share/xorg/Xauthority
+Environment=DISPLAY=:0
+ExecStart=%h/.local/share/repos/wacom/wacom.sh
+
+[Install]
+WantedBy=default.target
