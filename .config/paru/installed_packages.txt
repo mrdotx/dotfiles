@@ -453,6 +453,7 @@ libsrtp
 libssh
 libssh2
 libstaroffice
+libstemmer
 libsynctex
 libtasn1
 libtermkey
@@ -824,6 +825,7 @@ thunderbird
 thunderbird-i18n-de
 tinyxml
 tmux
+tracker3
 trash-cli
 tree
 tree-sitter
@@ -857,7 +859,6 @@ vulkan-intel
 w3m
 wavpack
 wayland
-wayland-protocols
 waylandpp
 webkit2gtk
 webrtc-audio-processing
