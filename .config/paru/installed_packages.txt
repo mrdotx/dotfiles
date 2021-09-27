@@ -446,6 +446,7 @@ libsigsegv
 libsm
 libsndfile
 libsoup
+libsoup3
 libsoxr
 libspectre
 libspiro
