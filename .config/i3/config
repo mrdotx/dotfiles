@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-20T18:13:22+0200
+# date:   2021-09-28T21:03:41+0200
 
 # general
 #########
@@ -255,11 +255,12 @@ bindsym $sup+Shift+l exec --no-startup-id i3_exit.sh --suspend
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $sup+Shift+r restart
 
-# screenshot menu
+# screenshots
 bindsym Print exec --no-startup-id dmenu_screenshot.sh
 
-# macro menu
+# macros
 bindsym $sup+Print exec --no-startup-id dmenu_macro.sh
+bindsym $sup+Shift+Print exec --no-startup-id dmenu_macro.sh --autostart
 
 # keybindings exit mode
 #######################
