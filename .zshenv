@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-29T09:39:19+0200
+# date:   2021-09-29T18:57:27+0200
 
 # xdg paths
 export \
@@ -99,7 +99,6 @@ export \
     PAGER="less" \
     READER="zathura" \
     BROWSER="w3m.sh" \
-    BROWSER_GRAPHICAL="firefox-developer-edition" \
     BROWSER_BACKUP="surf.sh" \
     EXEC_AS_USER="doas"
 
