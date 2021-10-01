@@ -238,7 +238,6 @@ inetutils
 inkscape
 intel-compute-runtime
 intel-gmmlib
-intel-gpu-tools
 intel-graphics-compiler
 intel-hybrid-codec-driver
 intel-media-driver
@@ -636,7 +635,6 @@ pciutils
 pcre
 pcre2
 pcsclite
-peg
 perl
 perl-alien-build
 perl-alien-libxml2

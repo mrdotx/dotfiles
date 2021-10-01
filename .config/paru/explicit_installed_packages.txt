@@ -89,7 +89,6 @@ hyphen-en
 inetutils
 inkscape
 intel-compute-runtime
-intel-gpu-tools
 intel-hybrid-codec-driver
 intel-ucode
 inxi
