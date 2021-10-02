@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-09-28T21:03:41+0200
+# date:   2021-10-02T15:05:43+0200
 
 # general
 #########
@@ -258,9 +258,31 @@ bindsym $sup+Shift+r restart
 # screenshots
 bindsym Print exec --no-startup-id dmenu_screenshot.sh
 
-# macros
-bindsym $sup+Print exec --no-startup-id dmenu_macro.sh
-bindsym $sup+Shift+Print exec --no-startup-id dmenu_macro.sh --autostart
+# autostart
+bindsym $sup+Shift+Print exec --no-startup-id i3_macros.sh --autostart
+
+# keybindings macros mode
+###########################
+
+set $mm_exec exec --no-startup-id i3_macros.sh
+set $mm_kill exec --no-startup-id i3_macros.sh --kill
+set $mm_mode mode default
+
+bindsym $sup+Print mode macros; $mm_exec
+mode macros {
+    bindsym b $mm_mode; $mm_kill; $mm_exec --bootnext
+    bindsym c $mm_mode; $mm_kill; $mm_exec --coronastats
+    bindsym n $mm_mode; $mm_kill; $mm_exec --neofetch
+    bindsym s $mm_mode; $mm_kill; $mm_exec --starwars
+    bindsym t $mm_mode; $mm_kill; $mm_exec --terminalcolors
+    bindsym v $mm_mode; $mm_kill; $mm_exec --ventoy
+    bindsym w $mm_mode; $mm_kill; $mm_exec --weather
+    # back to default mode
+    bindsym q $mm_mode; $mm_kill
+    bindsym Return $mm_mode; $mm_kill
+    bindsym Escape $mm_mode; $mm_kill
+    bindsym $sup+Print $mm_mode; $mm_kill
+}
 
 # keybindings exit mode
 #######################
@@ -271,14 +293,14 @@ set $em_mode mode default
 
 bindsym Ctrl+$alt+Delete mode exit; $em_exec
 mode exit {
-    bindsym c $em_exec --lock blur; $em_mode; $em_kill
-    bindsym d $em_exec --shutdown; $em_mode; $em_kill
-    bindsym l $em_exec --logout; $em_mode; $em_kill
-    bindsym o $em_exec --lock simple; $em_mode; $em_kill
-    bindsym p $em_exec --suspend blur; $em_mode; $em_kill
-    bindsym r $em_exec --reboot; $em_mode; $em_kill
-    bindsym s $em_exec --suspend; $em_mode; $em_kill
-    bindsym u $em_exec --suspend simple; $em_mode; $em_kill
+    bindsym c $em_mode; $em_kill; $em_exec --lock blur
+    bindsym d $em_mode; $em_kill; $em_exec --shutdown
+    bindsym l $em_mode; $em_kill; $em_exec --logout
+    bindsym o $em_mode; $em_kill; $em_exec --lock simple
+    bindsym p $em_mode; $em_kill; $em_exec --suspend blur
+    bindsym r $em_mode; $em_kill; $em_exec --reboot
+    bindsym s $em_mode; $em_kill; $em_exec --suspend
+    bindsym u $em_mode; $em_kill; $em_exec --suspend simple
     # back to default mode
     bindsym q $em_mode; $em_kill
     bindsym Return $em_mode; $em_kill
@@ -394,11 +416,11 @@ set $hm_ws workspace 2
 
 bindsym $sup+h mode ssh; $hm_exec
 mode ssh {
-    bindsym a $hm_exec --artemis; $hm_ws; $hm_mode; $hm_kill
-    bindsym e $hm_exec --hera; $hm_ws; $hm_mode; $hm_kill
-    bindsym h $hm_exec --hermes; $hm_ws; $hm_mode; $hm_kill
-    bindsym m $hm_exec --herpro; $hm_ws; $hm_mode; $hm_kill
-    bindsym p $hm_exec --prometheus; $hm_ws; $hm_mode; $hm_kill
+    bindsym a $hm_mode; $hm_kill; $hm_ws; $hm_exec --artemis
+    bindsym e $hm_mode; $hm_kill; $hm_ws; $hm_exec --hera
+    bindsym h $hm_mode; $hm_kill; $hm_ws; $hm_exec --hermes
+    bindsym m $hm_mode; $hm_kill; $hm_ws; $hm_exec --herpro
+    bindsym p $hm_mode; $hm_kill; $hm_ws; $hm_exec --prometheus
     # back to default mode
     bindsym q $hm_mode; $hm_kill
     bindsym Return $hm_mode; $hm_kill
