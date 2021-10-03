@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-10-02T15:05:43+0200
+# date:   2021-10-03T18:10:16+0200
 
 # general
 #########
@@ -237,8 +237,9 @@ mode container {
 bindsym Super_L --release exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
 bindsym Shift+Super_L --release exec --no-startup-id dmenu_run -i
 
-# kill focused window
+# kill focused window/windows on workspace
 bindsym Ctrl+q kill
+bindsym Ctrl+Shift+q [workspace="__focused__"] kill
 
 # x window kill
 bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
