@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-04T20:58:12+0200
+# date:   2021-10-12T13:09:59+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -47,11 +47,17 @@ precmd() {
     esac
 
     set_prompt() {
-        local OPAR="%{$fg_bold[blue]%}[%{$reset_color%}"
-        local CPAR="%{$fg_bold[blue]%}]%{$reset_color%}"
+        local bracket_color="$fg_bold[blue]"
 
-        __git_ps1 "$OPAR%3~" "$CPAR%B»%b " " %s"
-        RPROMPT="%B«%b$OPAR$1$CPAR"
+        # root indicator
+        [ $(id -u) -eq 0 ] \
+            && local bracket_color="$fg_bold[red]"
+
+        local bracket_open="%{$bracket_color%}[%{$reset_color%}"
+        local bracket_close="%{$bracket_color%}]%{$reset_color%}"
+
+        __git_ps1 "$bracket_open%3~" "$bracket_close%B»%b " " %s"
+        RPROMPT="%B«%b$bracket_open$1$bracket_close"
     }
 
     if [ $_ZSH_CMD_EXEC_START ]; then
