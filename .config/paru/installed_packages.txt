@@ -40,7 +40,6 @@ avrdude
 babl
 bash
 bash-language-server
-bashrc-manjaro
 bc
 binutils
 bison
@@ -107,7 +106,6 @@ dosfstools
 double-conversion
 dragon-drag-and-drop-git
 dunst
-dunstify
 e2fsprogs
 efibootmgr
 efivar
@@ -524,18 +522,14 @@ libzip
 libzmf
 licenses
 lilv
+linux
 linux-api-headers
 linux-firmware
-linux-zen-versioned-bin
-linux-zen-versioned-headers-bin
-linux5.14.11.zen1-1-zen-bin
-linux5.14.11.zen1-1-zen-headers-bin
-linux510
-linux510-headers
-linux514
-linux514-headers
-linux515
-linux515-headers
+linux-headers
+linux-lts
+linux-lts-headers
+linux-zen
+linux-zen-headers
 lirc
 llvm
 llvm-libs
@@ -558,8 +552,6 @@ maim
 make
 man-db
 man-pages
-manjaro-keyring
-manjaro-release
 mariadb-libs
 mc
 md4c
@@ -621,7 +613,6 @@ p11-kit
 p7zip
 p8-platform
 pacman
-pacman-mirrors
 pahole
 pam
 pam-gnupg
@@ -687,7 +678,6 @@ python-appdirs
 python-beautifulsoup4
 python-cachecontrol
 python-cairo
-python-certifi
 python-cffi
 python-chardet
 python-colorama
@@ -711,7 +701,6 @@ python-markdown
 python-more-itertools
 python-msgpack
 python-mutagen
-python-npyscreen
 python-ordered-set
 python-packaging
 python-pep517
@@ -844,7 +833,7 @@ util-linux
 util-linux-libs
 v4l-utils
 vamp-plugin-sdk
-ventoy
+ventoy-bin
 vid.stab
 virtualbox
 virtualbox-ext-oracle
@@ -867,7 +856,6 @@ wildmidi
 wireless-regdb
 wireless_tools
 wmctrl
-wmutils
 woff2
 wpebackend-fdo
 x264

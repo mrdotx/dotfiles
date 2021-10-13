@@ -114,15 +114,13 @@ libva-mesa-driver
 libva-utils
 libxft-bgra-git
 licenses
+linux
 linux-firmware
-linux-zen-versioned-bin
-linux-zen-versioned-headers-bin
-linux510
-linux510-headers
-linux514
-linux514-headers
-linux515
-linux515-headers
+linux-headers
+linux-lts
+linux-lts-headers
+linux-zen
+linux-zen-headers
 logrotate
 lsb-release
 lxappearance
@@ -132,7 +130,6 @@ maim
 make
 man-db
 man-pages
-manjaro-release
 mc
 mesa-demos
 mlocate
@@ -219,7 +216,7 @@ unzip
 usbutils
 util-linux
 v4l-utils
-ventoy
+ventoy-bin
 virtualbox
 virtualbox-ext-oracle
 virtualbox-host-dkms
@@ -231,7 +228,6 @@ webkit2gtk
 wget
 which
 wmctrl
-wmutils
 x86_energy_perf_policy
 xautolock
 xbanish-git
