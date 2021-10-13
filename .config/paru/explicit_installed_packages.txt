@@ -86,12 +86,12 @@ hunspell-de
 hunspell-en_us
 hyphen-de
 hyphen-en
+i3-gaps
 inetutils
 inkscape
 intel-compute-runtime
 intel-hybrid-codec-driver
 intel-ucode
-inxi
 iproute2
 iptables
 iputils
@@ -123,6 +123,7 @@ linux-zen
 linux-zen-headers
 logrotate
 lsb-release
+lshw
 lxappearance
 lzop
 m4

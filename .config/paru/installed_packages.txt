@@ -242,7 +242,6 @@ intel-media-driver
 intel-media-sdk
 intel-opencl-clang
 intel-ucode
-inxi
 iproute2
 iptables
 iputils
@@ -538,6 +537,7 @@ lmdb
 logrotate
 lpsolve
 lsb-release
+lshw
 lua
 lua52
 lua53
