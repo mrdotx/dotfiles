@@ -776,7 +776,6 @@ sord
 sound-theme-freedesktop
 soundtouch
 spandsp
-spectre-meltdown-checker
 speedtest-cli
 speex
 speexdsp

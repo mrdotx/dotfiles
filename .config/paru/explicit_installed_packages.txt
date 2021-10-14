@@ -191,7 +191,6 @@ shellcheck-bin
 simple-mtpfs
 simple-scan
 smartmontools
-spectre-meltdown-checker
 speedtest-cli
 splix
 sweethome3d
