@@ -1,21 +1,22 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:52:09+0200
+# date:   2021-10-17T11:27:18+0200
 
 # queries
-"query:┌─Unread:unread = \"yes\""
-"query:├─All:tags != \"\""
-"query:│ ├─ News:tags # \"News\""
-"query:│ ├─ Local:tags # \"Local\""
-"query:│ ├─ Technic:tags # \"Technic\""
+"query:┌─unread:unread = \"yes\""
+"query:├─all:tags != \"\""
+"query:│ ├─ news:tags # \"news\""
+"query:│ ├─ local:tags # \"local\""
+"query:│ ├─ linux:tags # \"linux\""
+"query:│ ├─ tech:tags # \"tech\""
 "query:│ ├─ reddit:tags # \"reddit\""
 "query:│ ├─ suckless:tags # \"suckless\""
-"query:│ ├─ Youtube:tags # \"Youtube\""
-"query:│ ├─ Podcast:tags # \"Podcast\""
-"query:│ ├─ Twitter:tags # \"Twitter\""
-"query:│ └─ Business:tags # \"Business\""
-"query:├─Keywords:title =~ \"Corona|COVID|AfD|Brexit|Trump|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
+"query:│ ├─ youtube:tags # \"youtube\""
+"query:│ ├─ podcast:tags # \"podcast\""
+"query:│ ├─ twitter:tags # \"twitter\""
+"query:│ └─ business:tags # \"business\""
+"query:├─keywords:title =~ \"Corona|COVID|AfD|Brexit|Trump|DSGVO|Datenschutz\" or feedtitle =~ \"@realDonaldTrump\""
 "query:│ ├─ Corona:title =~ \"Corona|COVID\""
 "query:│ ├─ Afd:title =~ \"AfD\""
 "query:│ ├─ Brexit:title =~ \"Brexit\""
