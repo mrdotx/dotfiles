@@ -613,6 +613,8 @@ p11-kit
 p7zip
 p8-platform
 pacman
+pacman-contrib
+pacman-mirrorlist
 pahole
 pam
 pam-gnupg
