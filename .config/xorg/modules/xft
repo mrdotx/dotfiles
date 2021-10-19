@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/modules/xft
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-06-26T19:56:54+0200
+! date:   2021-10-19T22:03:09+0200
 
 /* theme fonts */
 #define FONT            DejaVuSansMono Nerd Font:pixelsize=16
@@ -13,6 +13,7 @@
 /* dpi default 96, recommended values 120 [125%], 144 [150%], 168 [175%], 192 [200%] */
 Xft.dpi:                96
 Xft.antialias:          true
+Xft.autohint:           false
 Xft.hinting:            true
 Xft.hintstyle:          hintslight
 Xft.rgba:               rgb
