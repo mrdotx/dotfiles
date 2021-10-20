@@ -1,33 +1,24 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-10-05T20:03:52+0200
-
-# general
-#########
+# date:   2021-10-20T21:20:15+0200
 
 # variables
 set $sup Mod4
 set $alt Mod1
 set $primary HDMI2
 set $secondary eDP1
-set $size resize set 1280 800
-set $float floating enable
-set $sticky sticky enable
-set $border border pixel 2
-set $move move position center
-set $gapin 5
-set $gapout 5
+set $font pango:DejaVu Sans 10
 
 # config
 floating_modifier $sup
 focus_follows_mouse no
 mouse_warping none
-font pango:DejaVu Sans 10
-default_$border
+font $font
+default_border pixel 2
 default_floating_border normal
-gaps inner $gapin
-gaps outer $gapout
+gaps inner 5
+gaps outer 5
 smart_gaps on
 smart_borders on
 
@@ -69,391 +60,29 @@ workspace 8 output $secondary $primary
 workspace 9 output $primary $secondary
 workspace 10 output $secondary $primary
 
-# application windows (xprop)
-#############################
+# applications
+##############
 
-# center
-for_window [title=LibreOffice] $move
+include modules/applications.cfg
 
-# floating applications
-for_window [title=floating$] $float, $size, $move
+# keybindings
+#############
 
-for_window [title=^alsamixer$] $float, $move
-for_window [title=^calculator$] $float, $size, $move
-for_window [title=^cdw$] $float, $size, $move
-for_window [title=^cmus$] $float, $size, $move
-for_window [title=^pacman$] $float, $size, $move
-for_window [title=^stopwatch$] $float, resize set 250 500, $move
+include modules/keybindings_applications.cfg
+include modules/keybindings_multimedia.cfg
+include modules/keybindings_system_management.cfg
+include modules/keybindings_windows.cfg
+include modules/keybindings_workspaces.cfg
 
-for_window [class=^Dragon-drag-and-drop$] $float, $sticky, $border, $move
-for_window [class=^Lxappearance$] $float, $sticky, $move
-for_window [class=^Gufw.py$] $float, $sticky, resize set 500 800, $move
-for_window [class=^qt5ct$] $float, $sticky, $move
-for_window [class=^gmic_qt$] $float, $move
-for_window [class=^qv4l2$] $float, $move
-for_window [class=^Sxiv$] $float, $size, $move
-for_window [class=^mpv$] $float
+# modes
+#######
 
-# open application on specific workspace
-assign [title=^i3\stmux$] → 2
-assign [class=^firefoxdeveloperedition$] → 3
-for_window [class=^firefoxdeveloperedition$] workspace 3
-assign [class=^Gimp$] → 4
-for_window [class=^Gimp$] workspace 4
-assign [class=^Inkscape$] → 4
-for_window [class=^Inkscape$] workspace 4
-assign [class=^Darktable$] → 4
-for_window [class=^Darktable$] workspace 4
-assign [Title=^LibreOffice] → 5
-for_window [Title=^LibreOffice] workspace 5
-assign [instance=^libreoffice$] → 5
-for_window [instance=^libreoffice$] workspace 5
-assign [class=^scribus$] → 5
-for_window [class=^scribus$] workspace 5
-assign [title=Mozilla\sThunderbird$] → 6
-for_window [title=Mozilla\sThunderbird$] workspace 6
-assign [class=^Jameica] → 7
-for_window [class=^Jameica] workspace 7
-assign [class=^Kodi$] → 8
-for_window [class=^Kodi$] workspace 8
-assign [class=^VirtualBox] → 9
-for_window [class=^VirtualBox] workspace 9
-
-# keybindings workspace
-#######################
-
-# switch to workspace
-bindsym $sup+1 workspace 1
-bindsym $sup+2 workspace 2
-bindsym $sup+3 workspace 3
-bindsym $sup+4 workspace 4
-bindsym $sup+5 workspace 5
-bindsym $sup+6 workspace 6
-bindsym $sup+7 workspace 7
-bindsym $sup+8 workspace 8
-bindsym $sup+9 workspace 9
-bindsym $sup+0 workspace 10
-
-# move focused container to workspace
-bindsym $sup+Ctrl+1 move container to workspace 1
-bindsym $sup+Ctrl+2 move container to workspace 2
-bindsym $sup+Ctrl+3 move container to workspace 3
-bindsym $sup+Ctrl+4 move container to workspace 4
-bindsym $sup+Ctrl+5 move container to workspace 5
-bindsym $sup+Ctrl+6 move container to workspace 6
-bindsym $sup+Ctrl+7 move container to workspace 7
-bindsym $sup+Ctrl+8 move container to workspace 8
-bindsym $sup+Ctrl+9 move container to workspace 9
-bindsym $sup+Ctrl+0 move container to workspace 10
-
-# move to workspace with focused container
-bindsym $sup+Shift+1 move container to workspace 1; workspace 1
-bindsym $sup+Shift+2 move container to workspace 2; workspace 2
-bindsym $sup+Shift+3 move container to workspace 3; workspace 3
-bindsym $sup+Shift+4 move container to workspace 4; workspace 4
-bindsym $sup+Shift+5 move container to workspace 5; workspace 5
-bindsym $sup+Shift+6 move container to workspace 6; workspace 6
-bindsym $sup+Shift+7 move container to workspace 7; workspace 7
-bindsym $sup+Shift+8 move container to workspace 8; workspace 8
-bindsym $sup+Shift+9 move container to workspace 9; workspace 9
-bindsym $sup+Shift+0 move container to workspace 10; workspace 10
-
-# workspace back and forth
-bindsym $alt+Tab workspace back_and_forth
-
-# navigate workspaces next/previous
-bindsym $sup+Ctrl+Left workspace prev
-bindsym $sup+Ctrl+Right workspace next
-
-# keybindings window
-####################
-
-# change focus
-bindsym $sup+Left focus left
-bindsym $sup+Right focus right
-bindsym $sup+Up focus up
-bindsym $sup+Down focus down
-
-# move focused window
-bindsym $sup+Shift+Left move left 20 px
-bindsym $sup+Shift+Right move right 20 px
-bindsym $sup+Shift+Up move up 20 px
-bindsym $sup+Shift+Down move down 20 px
-
-# swap workspaces
-bindsym $sup+Home exec --no-startup-id i3_workspace_swap.sh left
-bindsym $sup+End exec --no-startup-id i3_workspace_swap.sh right
-bindsym $sup+Prior exec --no-startup-id i3_workspace_swap.sh up
-bindsym $sup+Next exec --no-startup-id i3_workspace_swap.sh down
-
-# window switcher
-bindsym $sup+Tab exec --no-startup-id dmenu_windows.sh
-
-# change focus between tiling/floating windows
-bindsym $sup+semicolon focus mode_toggle
-
-# toggle window tiling/floating
-bindsym $sup+apostrophe floating toggle
-
-# keybindings container mode
-############################
-
-set $cm_exec exec --no-startup-id i3_container.sh
-set $cm_kill exec --no-startup-id i3_container.sh --kill
-set $cm_mode mode default
-
-bindsym $sup+space mode container; $cm_exec
-mode container {
-    # resize container
-    bindsym Left resize shrink width 20 px or 5 ppt
-    bindsym Right resize grow width 20 px or 5 ppt
-    bindsym Up resize shrink height 20 px or 5 ppt
-    bindsym Down resize grow height 20 px or 5 ppt
-    # resize gaps
-    bindsym minus gaps inner current minus $gapin
-    bindsym shift+equal gaps inner current plus $gapin
-    bindsym equal gaps inner current set $gapin
-    # toggle sticky
-    bindsym s sticky toggle
-    # move the currently focused window to the scratchpad
-    bindsym m move scratchpad
-    # show the next scratchpad window or hide the focused scratchpad window
-    # if there are multiple scratchpad windows, this command cycles through them
-    bindsym c scratchpad show
-    # split orientation
-    bindsym h split horizontal
-    bindsym v split vertical
-    # back to default mode
-    bindsym q $cm_mode; $cm_kill
-    bindsym Return $cm_mode; $cm_kill
-    bindsym Escape $cm_mode; $cm_kill
-    bindsym $sup+space $cm_mode; $cm_kill
-}
-
-# keybindings system managment
-##############################
-
-# start program launcher
-bindsym Super_L --release exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i'
-bindsym Shift+Super_L --release exec --no-startup-id dmenu_run -i
-
-# kill focused window/windows on workspace
-bindsym Ctrl+q kill
-bindsym Ctrl+Shift+q [workspace="__focused__"] kill
-
-# x window kill
-bindsym Ctrl+$alt+BackSpace --release exec --no-startup-id xkill
-
-# toggle fullscreen mode for the focused container/global or move to spare workspace
-bindsym $sup+f fullscreen toggle
-bindsym $sup+Shift+f fullscreen toggle global
-bindsym $sup+Ctrl+f move container to workspace 10; workspace 10; floating disable
-
-# Lock screen or suspend
-bindsym $sup+l exec --no-startup-id i3_exit.sh --lock simple
-bindsym $sup+Shift+l exec --no-startup-id i3_exit.sh --suspend
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $sup+Shift+r restart
-
-# screenshots
-bindsym Print exec --no-startup-id dmenu_screenshot.sh
-
-# autostart
-bindsym $sup+Shift+Print exec --no-startup-id i3_macros.sh --autostart
-
-# keybindings macros mode
-###########################
-
-set $mm_exec exec --no-startup-id i3_macros.sh
-set $mm_kill exec --no-startup-id i3_macros.sh --kill
-set $mm_mode mode default
-
-bindsym $sup+Print mode macros; $mm_exec
-mode macros {
-    bindsym b $mm_mode; $mm_kill; $mm_exec --bootnext
-    bindsym c $mm_mode; $mm_kill; $mm_exec --coronastats
-    bindsym n $mm_mode; $mm_kill; $mm_exec --neofetch
-    bindsym s $mm_mode; $mm_kill; $mm_exec --starwars
-    bindsym t $mm_mode; $mm_kill; $mm_exec --terminalcolors
-    bindsym v $mm_mode; $mm_kill; $mm_exec --ventoy
-    bindsym w $mm_mode; $mm_kill; $mm_exec --weather
-    # back to default mode
-    bindsym q $mm_mode; $mm_kill
-    bindsym Return $mm_mode; $mm_kill
-    bindsym Escape $mm_mode; $mm_kill
-    bindsym $sup+Print $mm_mode; $mm_kill
-}
-
-# keybindings exit mode
-#######################
-
-set $em_exec exec --no-startup-id i3_exit.sh
-set $em_kill exec --no-startup-id i3_exit.sh --kill
-set $em_mode mode default
-
-bindsym Ctrl+$alt+Delete mode exit; $em_exec
-mode exit {
-    bindsym c $em_mode; $em_kill; $em_exec --lock blur
-    bindsym d $em_mode; $em_kill; $em_exec --shutdown
-    bindsym l $em_mode; $em_kill; $em_exec --logout
-    bindsym o $em_mode; $em_kill; $em_exec --lock simple
-    bindsym p $em_mode; $em_kill; $em_exec --suspend blur
-    bindsym r $em_mode; $em_kill; $em_exec --reboot
-    bindsym s $em_mode; $em_kill; $em_exec --suspend
-    bindsym u $em_mode; $em_kill; $em_exec --suspend simple
-    # back to default mode
-    bindsym q $em_mode; $em_kill
-    bindsym Return $em_mode; $em_kill
-    bindsym Escape $em_mode; $em_kill
-    bindsym Ctrl+$alt+Delete $em_mode; $em_kill
-}
-
-# keybindings services mode
-###########################
-
-set $sm_exec exec --no-startup-id i3_services.sh
-set $sm_kill exec --no-startup-id i3_services.sh --kill
-set $sm_mode mode default
-
-bindsym $alt+space mode services; $sm_exec
-mode services {
-    bindsym a $sm_exec --polybar
-    bindsym b $sm_exec --bluetooth
-    bindsym c $sm_exec --compositor
-    bindsym d exec --no-startup-id \
-        "killall dunst; notify-send 'i3' 'restart dunst'; i3_services.sh"
-    bindsym g $sm_exec --gestures
-    bindsym h $sm_exec --ssh
-    bindsym l $sm_exec --autolock
-    bindsym m $sm_exec --mousepointer
-    bindsym o exec --no-startup-id \
-        "cpu_policy.sh --toggle; i3_services.sh"
-    bindsym p $sm_exec --printer
-    bindsym r $sm_exec --rss
-    bindsym s $sm_exec --resolver
-    bindsym t $sm_exec --tiling
-    bindsym u exec --no-startup-id \
-        "urxvtc.sh --kill; notify-send 'i3' 'urxvtd killed'; i3_services.sh"
-    bindsym v $sm_exec --vpn
-    bindsym w exec --no-startup-id \
-        "wallpaper.sh --random"
-    bindsym y $sm_exec --timesync
-    # back to default mode
-    bindsym q $sm_mode; $sm_kill
-    bindsym Return $sm_mode; $sm_kill
-    bindsym Escape $sm_mode; $sm_kill
-    bindsym $alt+space $sm_mode; $sm_kill
-}
-
-# keybindings editor mode
-#########################
-
-set $vm_exec exec --no-startup-id i3_editor.sh
-set $vm_kill exec --no-startup-id i3_editor.sh --kill
-set $vm_mode mode default
-
-bindsym $sup+e mode editor; $vm_exec
-mode editor {
-    bindsym a $vm_mode; $vm_kill; $vm_exec --marcus
-    bindsym h $vm_mode; $vm_kill; $vm_exec --hermes
-    bindsym i $vm_mode; $vm_kill; $vm_exec --ideas
-    bindsym k $vm_mode; $vm_kill; $vm_exec --klassiker
-    bindsym m $vm_mode; $vm_kill; $vm_exec --middlefinger
-    bindsym n $vm_mode; $vm_kill; $vm_exec --notes
-    bindsym p $vm_mode; $vm_kill; $vm_exec --prometheus
-    bindsym z $vm_mode; $vm_kill; $vm_exec --prinzipal
-    # back to default mode
-    bindsym q $vm_mode; $vm_kill
-    bindsym Return $vm_mode; $vm_kill
-    bindsym Escape $vm_mode; $vm_kill
-    bindsym $sup+e $vm_mode; $vm_kill
-}
-
-# keybindings xf86 keys
-#######################
-
-bindsym XF86AudioRaiseVolume exec --no-startup-id audio.sh -inc 5
-bindsym XF86AudioLowerVolume exec --no-startup-id audio.sh -dec 5
-bindsym XF86AudioMute exec --no-startup-id audio.sh -mute
-bindsym XF86MonBrightnessUp exec --no-startup-id doas backlight.sh -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id doas backlight.sh -dec 5
-bindsym XF86TouchpadToggle exec --no-startup-id touchpad_toggle.sh
-bindsym XF86Cut exec --no-startup-id polybar.sh -t
-bindsym $sup+p exec --no-startup-id dmenu_display.sh
-bindsym $sup+Shift+p exec --no-startup-id dmenu_pass.sh
-
-# keybindings applications
-##########################
-
-bindsym $sup+Return exec --no-startup-id $TERMINAL
-bindsym $sup+Shift+Return exec --no-startup-id i3_tmux.sh -o 1 'shell'; workspace 2
-bindsym $sup+Ctrl+Return exec --no-startup-id $TERMINAL_BACKUP
-
-bindsym $sup+a exec --no-startup-id $TERMINAL -e alsamixer
-bindsym $sup+b exec --no-startup-id dmenu_bookmarks.sh
-bindsym $sup+Shift+b exec --no-startup-id dmenu_bookmarks.sh --sync
-bindsym $sup+c exec --no-startup-id i3_tmux.sh -o 20 'cmus' 'polybar_music.sh --start'; workspace 2
-bindsym $sup+Shift+c exec --no-startup-id polybar_music.sh --notify
-bindsym $sup+d exec darktable
-bindsym $sup+Shift+e exec --no-startup-id i3_editor.sh --editor
-bindsym $sup+g exec gimp
-bindsym $sup+Shift+h exec --no-startup-id dmenu_ssh.sh
-bindsym $sup+i exec inkscape
-bindsym $sup+j exec --no-startup-id jameica
-bindsym $sup+k exec kodi
-bindsym $sup+m exec thunderbird
-bindsym $sup+n exec --no-startup-id i3_tmux.sh -o 13 'newsboat' 'polybar_rss.sh --open'; workspace 2
-bindsym $sup+Shift+n exec --no-startup-id i3_tmux.sh -o 14 'podboat'; workspace 2
-bindsym $sup+o exec libreoffice
-bindsym $sup+r exec --no-startup-id i3_tmux.sh -o 12 $FILE; workspace 2
-bindsym $sup+s exec scribus
-bindsym $sup+t exec --no-startup-id i3_tmux.sh -o 15 'htop'; workspace 2
-bindsym $sup+Shift+t exec --no-startup-id i3_tmux.sh -o 16 'btop'; workspace 2
-bindsym $sup+u exec --no-startup-id dmenu_mount.sh
-bindsym $sup+v exec --no-startup-id dmenu_virtualbox.sh
-bindsym $sup+Shift+v exec --no-startup-id virtualbox
-bindsym $sup+w exec --no-startup-id "if pgrep -x 'firefox'; then firefox-developer-edition --new-tab --url about:newtab; else firefox-developer-edition; fi"
-bindsym $sup+Shift+w exec --no-startup-id $BROWSER
-bindsym $sup+Ctrl+w exec --no-startup-id $BROWSER_BACKUP
-bindsym $sup+x exec --no-startup-id link_handler.sh $(dragon-drag-and-drop -t -x)
-bindsym $sup+y exec --no-startup-id dmenu_youtube.sh
-bindsym $sup+Shift+y exec --no-startup-id dmenu_youtube.sh --clipboard
-bindsym $sup+z exec --no-startup-id i3_tmux.sh -o 11 'mc' 'mc -x'; workspace 2
-
-bindsym $sup+grave exec --no-startup-id dmenu_unicode_symbols.sh
-bindsym $sup+bracketleft exec --no-startup-id i3_tmux.sh -o 17 'man' 'fzf_man.sh'; workspace 2
-bindsym $sup+Shift+bracketleft exec --no-startup-id dmenu_man.sh
-bindsym $sup+bracketright exec --no-startup-id i3_tmux.sh -o 18 'aur' 'fzf_pacman.sh'; workspace 2
-bindsym $sup+Shift+bracketright exec --no-startup-id dmenu_iwd.sh
-bindsym $sup+backslash exec --no-startup-id chameleon.sh
-bindsym $sup+Shift+backslash exec --no-startup-id conky.sh
-bindsym $sup+comma exec --no-startup-id dmenu_calc.sh
-bindsym $sup+period exec --no-startup-id $TERMINAL -T 'stopwatch' -e stopwatch.sh
-bindsym $sup+slash exec --no-startup-id $TERMINAL -T 'shortcuts' -e w3m $HOME/Documents/Notes/html/shortcuts.html
-bindsym $sup+Shift+slash exec --no-startup-id $TERMINAL -T 'notes' -e w3m $HOME/Documents/Notes/html/index.html
-
-# keybindings ssh mode
-######################
-
-set $hm_exec exec --no-startup-id i3_ssh.sh
-set $hm_kill exec --no-startup-id i3_ssh.sh --kill
-set $hm_mode mode default
-set $hm_ws workspace 2
-
-bindsym $sup+h mode ssh; $hm_exec
-mode ssh {
-    bindsym a $hm_mode; $hm_kill; $hm_ws; $hm_exec --artemis
-    bindsym e $hm_mode; $hm_kill; $hm_ws; $hm_exec --hera
-    bindsym h $hm_mode; $hm_kill; $hm_ws; $hm_exec --hermes
-    bindsym m $hm_mode; $hm_kill; $hm_ws; $hm_exec --herpro
-    bindsym p $hm_mode; $hm_kill; $hm_ws; $hm_exec --prometheus
-    # back to default mode
-    bindsym q $hm_mode; $hm_kill
-    bindsym Return $hm_mode; $hm_kill
-    bindsym Escape $hm_mode; $hm_kill
-    bindsym $sup+h $hm_mode; $hm_kill
-}
+include modules/mode_container.cfg
+include modules/mode_editor.cfg
+include modules/mode_exit.cfg
+include modules/mode_macros.cfg
+include modules/mode_services.cfg
+include modules/mode_ssh.cfg
 
 # start systemd target
 ######################
@@ -463,52 +92,6 @@ exec --no-startup-id systemctl --user start i3.target
 # i3 status bar
 ###############
 
-# bar {
-#     id bar-0
-#     position top
-#     height 27
-#     status_command i3status --config ~/.config/i3status/config_pmon
-#     i3bar_command i3bar --transparency
-#     output eDP1
-#     tray_output eDP1
-#     tray_padding 2
-#     font pango:DejaVu Sans 10
-#     separator_symbol " "
-#     colors {
-#         background #00000000
-#         statusline $white0
-#         separator  $grey1
-
-#         focused_workspace  $blue0  $blue1  $white0
-#         active_workspace   $white0 $grey0  $white0
-#         inactive_workspace $grey0  $black0 $white
-#         urgent_workspace   $grey0  $red1   $white0
-#         binding_mode       $grey0  $red1   $white0
-#     }
-# }
-
-# bar {
-#     id bar-1
-#     position top
-#     height 27
-#     status_command i3status --config ~/.config/i3status/config_smon
-#     i3bar_command i3bar --transparency
-#     output HDMI2
-#     tray_output none
-#     tray_padding 2
-#     font pango:DejaVu Sans 10
-#     separator_symbol " "
-#     colors {
-#         background #00000000
-#         statusline $white0
-#         separator  $grey1
-
-#         focused_workspace  $blue0  $blue1  $white0
-#         active_workspace   $white0 $grey0  $white0
-#         inactive_workspace $grey0  $black0 $white
-#         urgent_workspace   $grey0  $red1   $white0
-#         binding_mode       $grey0  $red1   $white0
-#     }
-# }
+# include modules/status_bar.cfg
 
 # vim:ft=config
