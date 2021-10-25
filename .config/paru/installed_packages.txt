@@ -205,6 +205,7 @@ guile
 gumbo-parser
 gupnp
 gupnp-igd
+gutenprint
 gzip
 harfbuzz
 harfbuzz-icu

@@ -78,6 +78,7 @@ gst-plugins-ugly
 gstreamer
 gstreamer-vaapi
 gtk3
+gutenprint
 gzip
 hibiscus
 highlight
