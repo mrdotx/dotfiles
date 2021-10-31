@@ -44,7 +44,6 @@ bc
 binutils
 bison
 blas
-blueman
 bluez
 bluez-libs
 bluez-utils
@@ -170,7 +169,6 @@ gmp
 gnome-themes-extra
 gnupg
 gnutls
-gobject-introspection-runtime
 gpgme
 gpm
 graphene
@@ -402,7 +400,6 @@ libnftnl
 libnghttp2
 libnice
 libnl
-libnm
 libnotify
 libnsl
 libnumbertext
@@ -491,6 +488,7 @@ libxcb
 libxcomposite
 libxcrypt
 libxcursor
+libxcvt
 libxdamage
 libxdmcp
 libxext
@@ -679,7 +677,6 @@ python
 python-appdirs
 python-beautifulsoup4
 python-cachecontrol
-python-cairo
 python-cffi
 python-chardet
 python-colorama
@@ -693,7 +690,6 @@ python-distro
 python-dnspython
 python-docopt
 python-fasteners
-python-gobject
 python-html5lib
 python-idna
 python-libevdev

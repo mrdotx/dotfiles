@@ -18,7 +18,7 @@ bash
 bash-language-server
 binutils
 bison
-blueman
+bluez
 bluez-utils
 btop
 btrfs-progs
