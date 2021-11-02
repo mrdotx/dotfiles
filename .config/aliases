@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-12T10:35:04+0200
+# date:   2021-11-02T11:07:25+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -48,7 +48,7 @@ alias \
     mc='mc -x' \
     nb='polybar_rss.sh --open' \
     calc='bc -q' \
-    cl='clear; cinfo'
+    cl='tput reset; cinfo'
 
 # maintenance
 alias \
