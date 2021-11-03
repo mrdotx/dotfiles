@@ -1,5 +1,3 @@
-adobe-source-sans-fonts
-adobe-source-serif-fonts
 alsa-firmware
 alsa-plugins
 alsa-utils

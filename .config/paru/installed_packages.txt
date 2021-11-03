@@ -3,8 +3,6 @@ aalib
 acl
 acorn
 adobe-source-code-pro-fonts
-adobe-source-sans-fonts
-adobe-source-serif-fonts
 adwaita-icon-theme
 alsa-firmware
 alsa-lib
