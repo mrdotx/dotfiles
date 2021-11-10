@@ -668,6 +668,7 @@ portaudio
 potrace
 powertop
 procps-ng
+protobuf
 psmisc
 pstoedit
 pugixml
