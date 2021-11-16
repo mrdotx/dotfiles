@@ -110,7 +110,6 @@ elfutils
 ell
 enchant
 eslint
-ethtool
 exfatprogs
 exiv2
 expat
@@ -800,7 +799,6 @@ tar
 task-spooler
 tbb
 tdb
-terminus-font
 tevent
 texinfo
 texlive-bin

@@ -42,7 +42,6 @@ dunst
 e2fsprogs
 efibootmgr
 eslint
-ethtool
 exfatprogs
 fakeroot
 ffmpeg
@@ -200,7 +199,6 @@ sysfsutils
 systemd-sysvcompat
 tar
 task-spooler
-terminus-font
 texinfo
 texlive-core
 thunderbird
