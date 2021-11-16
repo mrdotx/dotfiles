@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-10T12:13:51+0200
+# date:   2021-11-16T10:31:51+0100
 
 # colors
 [colors]
@@ -26,7 +26,7 @@
     format-overline = ${colors.main}
 
 # bars
-[bar/i3_general]
+[bar/general]
     bottom = false
     width = 100%
     height = 26
@@ -42,8 +42,8 @@
     cursor-click = pointer
     cursor-scroll = ns-resize
 
-[bar/i3_single_bar]
-    inherit = bar/i3_general
+[bar/single]
+    inherit = bar/general
     monitor = ${env:MONITOR:eDP1}
     tray-position = right
     tray-reparent = true
@@ -52,8 +52,24 @@
     # modules-right = music alsasmall xbacklightsmall wlansmall battery xkeyboard date
     modules-right = music alsasmall xbacklightsmall wlansmall xkeyboard date
 
-[bar/i3_primary_bar]
-    inherit = bar/i3_general
+[bar/primary]
+    inherit = bar/general
+    monitor = ${env:MONITOR:HDMI2}
+    tray-position = right
+    tray-reparent = true
+    tray-background = ${colors.background}
+    modules-left = i3 services rss xwindow
+    modules-right = xkeyboard date
+
+[bar/secondary]
+    inherit = bar/general
+    monitor = ${env:MONITOR:eDP1}
+    modules-left = i3 music
+    # modules-right = wlansmall alsa xbacklight battery
+    modules-right = wlansmall alsa xbacklight
+
+[bar/primary_stats]
+    inherit = bar/general
     monitor = ${env:MONITOR:HDMI2}
     tray-position = right
     tray-reparent = true
@@ -62,8 +78,8 @@
     # modules-right = wlan alsa xbacklight battery xkeyboard date
     modules-right = wlan alsa xbacklight xkeyboard date
 
-[bar/i3_secondary_bar]
-    inherit = bar/i3_general
+[bar/secondary_stats]
+    inherit = bar/general
     monitor = ${env:MONITOR:eDP1}
     modules-left = i3 music
     modules-right = temp cpu ram swap nvme sda
