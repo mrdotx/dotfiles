@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-16T10:31:51+0100
+# date:   2021-11-16T13:17:52+0100
 
 # colors
 [colors]
@@ -48,7 +48,7 @@
     tray-position = right
     tray-reparent = true
     tray-background = ${colors.background}
-    modules-left = i3_upin services rss xwindow
+    modules-left = i3_upin services rss xwindowsmall
     # modules-right = music alsasmall xbacklightsmall wlansmall battery xkeyboard date
     modules-right = music alsasmall xbacklightsmall wlansmall xkeyboard date
 
@@ -59,14 +59,13 @@
     tray-reparent = true
     tray-background = ${colors.background}
     modules-left = i3 services rss xwindow
-    modules-right = xkeyboard date
 
 [bar/secondary]
     inherit = bar/general
     monitor = ${env:MONITOR:eDP1}
     modules-left = i3 music
-    # modules-right = wlansmall alsa xbacklight battery
-    modules-right = wlansmall alsa xbacklight
+    # modules-right = wlan alsa xbacklight battery xkeyboard date
+    modules-right = wlan alsa xbacklight xkeyboard date
 
 [bar/primary_stats]
     inherit = bar/general
@@ -74,15 +73,15 @@
     tray-position = right
     tray-reparent = true
     tray-background = ${colors.background}
-    modules-left = i3 services rss xwindow
-    # modules-right = wlan alsa xbacklight battery xkeyboard date
-    modules-right = wlan alsa xbacklight xkeyboard date
+    modules-left = i3 services rss xwindowsmall
+    modules-right = temp cpu ram swap nvme sda
 
 [bar/secondary_stats]
     inherit = bar/general
     monitor = ${env:MONITOR:eDP1}
     modules-left = i3 music
-    modules-right = temp cpu ram swap nvme sda
+    # modules-right = wlan alsa xbacklight battery xkeyboard date
+    modules-right = wlan alsa xbacklight xkeyboard date
 
 # modules
     include-file = ~/.config/polybar/modules/i3.cfg
