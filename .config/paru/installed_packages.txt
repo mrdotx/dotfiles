@@ -690,6 +690,7 @@ python-docopt
 python-fasteners
 python-html5lib
 python-idna
+python-importlib-metadata
 python-libevdev
 python-lockfile
 python-lxml
@@ -725,6 +726,7 @@ python-tomli
 python-urllib3
 python-webencodings
 python-xlib
+python-zipp
 qpdf
 qt5-base
 qt5-declarative
