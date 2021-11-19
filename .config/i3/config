@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-10-20T21:20:15+0200
+# date:   2021-11-19T18:32:00+0100
 
 # variables
 set $sup Mod4
@@ -69,7 +69,7 @@ include modules/applications.cfg
 #############
 
 include modules/keybindings_applications.cfg
-include modules/keybindings_multimedia.cfg
+include modules/keybindings_special.cfg
 include modules/keybindings_system_management.cfg
 include modules/keybindings_windows.cfg
 include modules/keybindings_workspaces.cfg
