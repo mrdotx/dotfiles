@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:51:32+0200
+# date:   2021-11-20T19:39:36+0100
 
 general {
         colors = true
@@ -10,8 +10,8 @@ general {
 
 order += "wireless _first_"
 order += "volume master"
-order += "battery 0"
-order += "tztime local"
+# order += "battery 0"
+order += "time"
 
 wireless _first_ {
         color_good = "#ffffff"
@@ -23,11 +23,12 @@ wireless _first_ {
 
 volume master {
         format = " %volume"
-        format_muted = ""
+        format_muted = ""
         device = "default"
         mixer = "Master"
         mixer_idx = 0
 }
+
 battery 0 {
         status_bat = ""
         status_chr = ""
@@ -37,7 +38,6 @@ battery 0 {
         format = "%status %percentage %remaining"
 }
 
-tztime local {
-        format = " %time"
-        format_time = "%a %d.%m.%Y %k:%M"
+time {
+        format = " %a %d.%m.%Y %k:%M"
 }

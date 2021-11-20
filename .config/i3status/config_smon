@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_smon
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:51:38+0200
+# date:   2021-11-20T19:44:49+0100
 
 general {
         colors = true
@@ -12,7 +12,7 @@ order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "memory"
 order += "disk /"
-order += "disk /tmp/media/disk1"
+order += "disk /srv"
 
 cpu_temperature 0 {
         color_good = "#ffffff"
@@ -50,11 +50,10 @@ disk "/" {
         format = " %percentage_used %used/%total"
 }
 
-disk "/tmp/media/disk1" {
+disk "/srv" {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
         color_bad = "#df2800"
         low_threshold = 5
         format = " %percentage_used %used/%total"
 }
-
