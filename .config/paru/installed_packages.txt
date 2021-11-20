@@ -537,6 +537,7 @@ lua
 lua52
 lua53
 luajit
+lv2
 lxappearance
 lz4
 lzo
