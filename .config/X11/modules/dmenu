@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/modules/dmenu
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/dmenu
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-06-26T19:56:19+0200
+! date:   2021-11-22T11:10:29+0100
 
 dmenu.font:                     FONT
 dmenu.fontfallback:             FONTFALLBACK

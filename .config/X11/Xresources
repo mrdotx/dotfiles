@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/Xresources
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-06-26T19:55:03+0200
+! date:   2021-11-22T11:08:06+0100
 
 /* theme colors */
 #define BLACK0T             #e6000000

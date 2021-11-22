@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/xorg/modules/polybar
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/polybar
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-11-15T21:08:52+0100
+! date:   2021-11-22T11:10:34+0100
 
 Polybar.type:           stats
 Polybar.background0:    BLACK0T
