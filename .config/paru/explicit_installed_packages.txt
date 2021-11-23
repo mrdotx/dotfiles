@@ -105,6 +105,7 @@ less
 libdvdcss
 libinput-gestures
 libmad
+libptytty
 libreoffice-fresh
 libreoffice-fresh-de
 libtool

@@ -415,6 +415,7 @@ libplist
 libpng
 libproxy
 libpsl
+libptytty
 libpulse
 libqxp
 libraqm
