@@ -1,10 +1,10 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/sxiv
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-11-22T11:10:50+0100
+! date:   2021-12-06T10:08:23+0100
 
 Sxiv.font:          FONTSMALL
-Sxiv.background:    BLACK0
-Sxiv.foreground:    WHITE1
+Sxiv.background:    BLACK
+Sxiv.foreground:    WHITE
 
 ! vim:ft=xdefaults

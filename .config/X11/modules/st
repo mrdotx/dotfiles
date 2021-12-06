@@ -1,13 +1,13 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/st
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-11-22T11:10:47+0100
+! date:   2021-12-06T11:26:23+0100
 
 st.font:            FONT
 st.fontfallback:    FONTFALLBACK
 st.fontemoji:       FONTEMOJI
-st.background:      BLACK0
-st.foreground:      WHITE1
+st.background:      BLACK
+st.foreground:      WHITE
 st.cursorColor:     BLUE1
 st.termname:        st-256color
 st.shell:           /bin/sh
@@ -19,6 +19,6 @@ st.tabspaces:       8
 st.borderpx:        2
 st.cwscale:         1.0
 st.chscale:         1.0
-st.alpha:           0.90
+st.alpha:           ALPHA
 
 ! vim:ft=xdefaults

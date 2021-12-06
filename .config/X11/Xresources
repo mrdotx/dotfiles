@@ -1,60 +1,64 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-11-22T11:08:06+0100
+! date:   2021-12-06T12:35:20+0100
 
-/* theme colors */
-#define BLACK0T             #e6000000
-#define BLACK0              #000000
-#define WHITE1              #ffffff
+/* colors */
+#define RED0            #df2800
+#define RED1            #ff5555
 
-#define RED0                #df2800
-#define RED1                #ff5555
+#define GREEN0          #00b200
+#define GREEN1          #39ff14
 
-#define YELLOW0             #b0b200
-#define YELLOW1             #effd5f
+#define YELLOW0         #b0b200
+#define YELLOW1         #effd5f
 
-#define GREEN0              #00b200
-#define GREEN1              #39ff14
+#define BLUE0           #1f5393
+#define BLUE1           #4185d7
 
-#define CYAN0               #008081
-#define CYAN1               #7ef9ff
+#define MAGENTA0        #980096
+#define MAGENTA1        #ff6fff
 
-#define MAGENTA0            #980096
-#define MAGENTA1            #ff6fff
+#define CYAN0           #008081
+#define CYAN1           #7ef9ff
 
-#define BLUE0               #1f5393
-#define BLUE1               #4185d7
+#define BLACK           #000000
+#define GREY0           #2b2b2b
+#define GREY1           #333333
+#define GREY2           #666666
+#define GREY3           #cccccc
+#define WHITE           #ffffff
 
-#define GREY0               #2b2b2b
-#define GREY1               #333333
-#define GREY2               #666666
-#define GREY3               #cccccc
+/* transparency */
+#define ALPHA           0.90
+#define OPACITY0        [90]#000000
+#define OPACITY1        #e6000000
 
 /* general */
-*background:                BLACK0
-*foreground:                WHITE1
+*background:            BLACK
+*foreground:            WHITE
 
-/* general colors normal */
-*color0:                    BLACK0
-*color1:                    RED0
-*color2:                    GREEN0
-*color3:                    YELLOW0
-*color4:                    BLUE0
-*color5:                    MAGENTA0
-*color6:                    CYAN0
-*color7:                    GREY3
+/* normal */
+*color0:                BLACK
+*color1:                RED0
+*color2:                GREEN0
+*color3:                YELLOW0
+*color4:                BLUE0
+*color5:                MAGENTA0
+*color6:                CYAN0
+*color7:                GREY3
 
-/* general colors bright */
-*color8:                    GREY1
-*color9:                    RED1
-*color10:                   GREEN1
-*color11:                   YELLOW1
-*color12:                   BLUE1
-*color13:                   MAGENTA1
-*color14:                   CYAN1
-*color15:                   WHITE1
+/* bright */
+*color8:                GREY1
+*color9:                RED1
+*color10:               GREEN1
+*color11:               YELLOW1
+*color12:               BLUE1
+*color13:               MAGENTA1
+*color14:               CYAN1
+*color15:               WHITE
 
+/* modules */
 #include "modules/xcursor"
 #include "modules/wallpaper"
 #include "modules/xft"

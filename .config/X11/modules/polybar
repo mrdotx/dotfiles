@@ -1,10 +1,10 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/polybar
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-11-22T11:10:34+0100
+! date:   2021-12-06T12:31:42+0100
 
 Polybar.type:           stats
-Polybar.background0:    BLACK0T
+Polybar.background0:    OPACITY1
 Polybar.foreground0:    GREY3
 Polybar.foreground1:    GREY2
 Polybar.main0:          BLUE1
