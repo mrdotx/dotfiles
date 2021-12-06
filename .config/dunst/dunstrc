@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-10-20T20:56:59+0200
+# date:   2021-12-06T18:07:28+0100
 
 [global]
     ### Display ###
@@ -321,7 +321,7 @@
     #icon = /path/to/icon
 
 [i3_modes]
-    summary = "*i3 * mode*"
+    summary = "i3 * mode*"
     history_ignore = yes
     frame_color = "#4185d7"
     background = "#000000"
