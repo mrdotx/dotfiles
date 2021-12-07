@@ -64,7 +64,6 @@ gimp-help-de
 gimp-plugin-gmic
 git
 glibc
-gnome-themes-extra
 grep
 gsettings-desktop-schemas
 gst-libav

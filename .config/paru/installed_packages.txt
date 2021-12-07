@@ -163,7 +163,6 @@ glslang
 glu
 gmic
 gmp
-gnome-themes-extra
 gnupg
 gnutls
 gpgme
