@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T12:31:17+0100
+! date:   2021-12-06T20:37:31+0100
 
 URxvt.font:                         xft:FONT, \
                                     xft:FONTFALLBACK, \
@@ -22,7 +22,7 @@ URxvt.iso14770_52:                  false
 URxvt.saveLines:                    500
 
 /* perl extensions */
-URxvt.perl-ext-common:              eval,keyboard-select,matcher,resize-font,searchable-scrollback, selection, selection-to-clipboard
+URxvt.perl-ext-common:              eval,keyboard-select,matcher,resize-font,searchable-scrollback,selection,selection-to-clipboard
 
 /* copy and paste */
 URxvt.keysym.Control-C:             eval:selection_to_clipboard
