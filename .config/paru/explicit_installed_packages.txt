@@ -2,7 +2,7 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 arc-gtk-theme
-arc-icon-theme-full-git
+arc-icon-theme
 arduino-avr-core
 aria2
 aspell-de

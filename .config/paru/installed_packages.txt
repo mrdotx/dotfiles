@@ -12,7 +12,7 @@ alsa-ucm-conf
 alsa-utils
 aom
 arc-gtk-theme
-arc-icon-theme-full-git
+arc-icon-theme
 archlinux-keyring
 arduino-avr-core
 argon2
