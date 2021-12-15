@@ -356,7 +356,6 @@ libiec61883
 libieee1284
 libimagequant
 libinput
-libinput-gestures
 libinstpatch
 libixion
 libjpeg-turbo

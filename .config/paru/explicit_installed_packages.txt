@@ -102,7 +102,6 @@ kodi-addon-visualization-spectrum
 kvantum-qt5
 less
 libdvdcss
-libinput-gestures
 libmad
 libptytty
 libreoffice-fresh
