@@ -690,7 +690,6 @@ python-fasteners
 python-html5lib
 python-idna
 python-importlib-metadata
-python-libevdev
 python-lockfile
 python-lxml
 python-markdown
@@ -869,7 +868,6 @@ xcb-util-xrm
 xdg-dbus-proxy
 xdg-utils
 xdotool
-xf86-input-evdev
 xf86-input-libinput
 xf86-input-void
 xf86-input-wacom

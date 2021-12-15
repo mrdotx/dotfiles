@@ -171,7 +171,6 @@ psmisc
 pstoedit
 python-beautifulsoup4
 python-discid
-python-libevdev
 python-pip
 python-pycryptodome
 python-readability-lxml
@@ -231,7 +230,6 @@ xautolock
 xbanish-git
 xdg-utils
 xdotool
-xf86-input-evdev
 xf86-input-libinput
 xf86-input-void
 xf86-input-wacom
