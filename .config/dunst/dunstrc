@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-12-06T18:07:28+0100
+# date:   2021-12-16T12:42:17+0100
 
 [global]
     ### Display ###
@@ -127,7 +127,7 @@
     #        <u>underline</u>
     #
     #        For a complete reference see
-    #        <https://developer.gnome.org/pango/stable/pango-Markup.html>.
+    #        <https://docs.gtk.org/Pango/pango_markup.html>.
     #
     # strip: This setting is provided for compatibility with some broken
     #        clients that send markup even though it's not enabled on the
@@ -168,10 +168,6 @@
     # Set to -1 to disable.
     show_age_threshold = -1
 
-    # Split notifications into multiple lines if they don't fit into
-    # geometry.
-    word_wrap = yes
-
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
     ellipsize = middle
@@ -203,7 +199,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path = /usr/share/icons/Arc-ICONS/status/16/:/usr/share/icons/Arc-ICONS/devices/16/
+    icon_path = /usr/share/icons/Arc/status/16/:/usr/share/icons/Arc/devices/16/
 
     ### History ###
 
@@ -303,14 +299,14 @@
     frame_color = "#333333"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 [urgency_normal]
     background = "#000000"
     foreground = "#ffffff"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 [urgency_critical]
     background = "#ff5555"
@@ -318,7 +314,7 @@
     frame_color = "#df2800"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    #icon = /path/to/icon
+    #default_icon = /path/to/icon
 
 [i3_modes]
     summary = "i3 * mode*"
@@ -371,9 +367,15 @@
 #    new_icon
 #    set_stack_tag
 #    set_transient
+#    set_category
 #    timeout
 #    urgency
+#    skip_display
+#    history_ignore
 #    action_name
+#    word_wrap
+#    ellipsize
+#    alignment
 #
 # Shell-like globbing will get expanded.
 #
