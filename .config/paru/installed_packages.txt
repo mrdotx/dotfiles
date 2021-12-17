@@ -509,6 +509,7 @@ libxtst
 libxv
 libxvmc
 libxxf86vm
+libyaml
 libyuv
 libzip
 libzmf
@@ -707,6 +708,7 @@ python-psutil
 python-pycparser
 python-pycryptodome
 python-pycryptodomex
+python-pyjwt
 python-pyopenssl
 python-pyparsing
 python-pyqt5
@@ -724,6 +726,7 @@ python-tomli
 python-urllib3
 python-webencodings
 python-xlib
+python-yaml
 python-zipp
 qpdf
 qt5-base
