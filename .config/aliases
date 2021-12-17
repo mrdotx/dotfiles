@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-02T11:07:25+0100
+# date:   2021-12-17T10:51:48+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -41,7 +41,6 @@ alias \
     md='mkdir -p' \
     rd='rmdir' \
     cp='cp -i' \
-    tmux='tmux -f $HOME/.config/tmux/tmux.conf' \
     tx='i3_tmux.sh' \
     rg='ranger_cd' \
     rs='$EXEC_AS_USER ranger' \
