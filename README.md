@@ -6,6 +6,7 @@ found in my other repositories.
 
 | config            | description                                          |
 | :---------------- | :--------------------------------------------------- |
+| alsa              | advanced linux sound architecture                    |
 | aria2             | download manager                                     |
 | bash              | shell                                                |
 | btop              | resource monitor that shows usage and stats          |
@@ -22,6 +23,7 @@ found in my other repositories.
 | newsboat          | rss/atom feedreader                                  |
 | npm               | javascript package manager                           |
 | nvim              | text editor ,ide                                     |
+| pacman            | package manager utility                              |
 | paru              | aur helper                                           |
 | picom             | compositor                                           |
 | polybar           | status bar                                           |
