@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-22T11:24:28+0100
+# date:   2021-12-17T11:38:01+0100
 
 # xdg paths
 export \
@@ -88,6 +88,7 @@ export \
         --out-format=xterm256 \
         --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
         --force=sh" \
+    CARGO_HOME="$XDG_DATA_HOME/cargo" \
     WWW_HOME="searx.tiekoetter.com"
 
 # standard apps
