@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2021-07-22T14:53:01+0200
+date:   2021-12-18T20:53:36+0100
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -45,7 +45,7 @@ class FzfLocate(Command):
     """
     def execute(self):
         command="fzf_path=\"$(pwd)\"; \
-                locate $fzf_path \
+                plocate $fzf_path \
                 | sed \"1d;s#$fzf_path/##g\" \
                 | fzf -e -i --preview 'highlight {1}' \
                     --preview-window 'right:70%'"
