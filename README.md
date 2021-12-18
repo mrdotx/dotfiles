@@ -13,6 +13,7 @@ found in my other repositories.
 | cdw               | terminal front-end for cdrecord                      |
 | cmus              | music player                                         |
 | dunst             | notification daemon                                  |
+| fontconfig        | font configuration files                             |
 | highlight         | a universal sourcecode to formatted text converter   |
 | htop              | interactive process viewer                           |
 | i3                | tiling window manager                                |
