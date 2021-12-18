@@ -454,6 +454,7 @@ libtommath
 libtool
 libunistring
 libunwind
+liburing
 libusb
 libusb-compat
 libutempter
@@ -556,7 +557,6 @@ metis
 mjpegtools
 mkinitcpio
 mkinitcpio-busybox
-mlocate
 mpfr
 mpg123
 mpv
@@ -655,6 +655,7 @@ picom
 pinentry
 pixman
 pkgconf
+plocate
 plotutils
 podofo
 polkit

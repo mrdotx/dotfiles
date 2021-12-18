@@ -131,7 +131,6 @@ man-db
 man-pages
 mc
 mesa-demos
-mlocate
 mpv
 mtools
 ncdu
@@ -163,6 +162,7 @@ perl-file-mimeinfo
 picard
 picom
 pkgconf
+plocate
 polybar
 poppler-data
 powertop
