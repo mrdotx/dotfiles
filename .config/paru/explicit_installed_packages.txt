@@ -130,7 +130,7 @@ make
 man-db
 man-pages
 mc
-mesa-demos
+mesa-utils
 mpv
 mtools
 ncdu

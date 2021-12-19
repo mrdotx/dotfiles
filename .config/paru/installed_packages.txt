@@ -130,7 +130,6 @@ flickcurl
 fluidsynth
 fontconfig
 foomatic-db-engine
-freeglut
 freetype2
 fribidi
 fuse-common
@@ -552,7 +551,7 @@ mariadb-libs
 mc
 md4c
 mesa
-mesa-demos
+mesa-utils
 metis
 mjpegtools
 mkinitcpio
