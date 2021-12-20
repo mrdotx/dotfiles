@@ -154,7 +154,7 @@ pacman
 pacman-contrib
 pam-gnupg
 pandoc-bin
-paru-bin
+paru
 patch
 pciutils
 perl

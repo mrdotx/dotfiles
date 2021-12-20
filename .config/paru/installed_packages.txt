@@ -616,7 +616,7 @@ pambase
 pandoc-bin
 pango
 pangomm
-paru-bin
+paru
 patch
 pciutils
 pcre
