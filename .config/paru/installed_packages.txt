@@ -534,7 +534,6 @@ lsb-release
 lshw
 lua
 lua52
-lua53
 luajit
 lv2
 lxappearance
