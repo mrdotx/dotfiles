@@ -264,7 +264,7 @@ kodi
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
 krb5
-kvantum-qt5
+kvantum
 kwindowsystem
 l-smash
 ladspa
@@ -289,6 +289,7 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
+libb2
 libbluray
 libbs2b
 libbsd
@@ -736,6 +737,9 @@ qt5-translations
 qt5-wayland
 qt5-x11extras
 qt5ct
+qt6-base
+qt6-svg
+qt6-translations
 ragel
 ranger
 raptor
@@ -839,6 +843,7 @@ virtualbox-host-dkms
 vmaf
 vorbis-tools
 vpnc
+vulkan-headers
 vulkan-icd-loader
 vulkan-intel
 w3m

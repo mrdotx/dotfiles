@@ -99,7 +99,7 @@ kmon
 kodi
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
-kvantum-qt5
+kvantum
 less
 libdvdcss
 libmad
