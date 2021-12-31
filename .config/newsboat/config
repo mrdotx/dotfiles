@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-08-15T18:47:48+0200
+# date:   2021-12-31T09:23:43+0100
 
 # general
 auto-reload yes
@@ -50,8 +50,14 @@ color listnormal                    blue        default bold
 color listfocus                     cyan        blue    bold
 color listnormal_unread             red         default
 color listfocus_unread              magenta     blue    bold
+color title                         cyan        default
 color info                          cyan        default
+color hint-key                      white       default
+color hint-keys-delimiter           cyan        default
+color hint-separator                cyan        default
+color hint-description              cyan        default
 color article                       white       default
+color end-of-text-marker            cyan        default
 
 # Highlight                         fg          bg      style
 search-highlight-colors             black       yellow  bold
