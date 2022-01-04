@@ -534,7 +534,6 @@ lpsolve
 lsb-release
 lshw
 lua
-lua52
 luajit
 lv2
 lxappearance
