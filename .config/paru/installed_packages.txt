@@ -594,7 +594,6 @@ openexr
 openjpeg2
 openmp
 openmpi
-openresolv
 openscenegraph
 openssh
 openssl

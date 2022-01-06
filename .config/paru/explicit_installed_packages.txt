@@ -146,7 +146,6 @@ ocl-icd
 odt2txt
 opendoas
 opendoas-sudo
-openresolv
 openssh
 opusfile
 p7zip
