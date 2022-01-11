@@ -211,7 +211,7 @@ htop
 hunspell
 hunspell-de
 hunspell-en_us
-hwids
+hwdata
 hwloc
 hyphen
 hyphen-de
