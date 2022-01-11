@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-31T09:27:34+0200
+" date:   2022-01-11T09:12:02+0100
 
 let g:which_key_fallback_to_native_key=1
 
@@ -18,14 +18,14 @@ highlight default link WhichKeyFloating  Pmenu
 " key mappings
 nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
 vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ','<cr>
-nnoremap <silent> <localleader> :<c-u>WhichKey '.'<cr>
-vnoremap <silent> <localleader> :<c-u>WhichKeyVisual '.'<cr>
+nnoremap <silent> <localleader> :<c-u>WhichKey ' '<cr>
+vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ' '<cr>
 nnoremap <silent> g             :<c-u>WhichKey 'g'<cr>
 vnoremap <silent> g             :<c-u>WhichKeyVisual 'g'<cr>
 
 " define description dictionaries
 call which_key#register(',', "g:main_dict")
-call which_key#register('.', "g:coc_dict")
+call which_key#register(' ', "g:coc_dict")
 call which_key#register('g', "g:goto_dict")
 
 " main description dictionary
@@ -83,10 +83,11 @@ let g:main_dict = {
 " coc description dictionary
 let g:coc_dict = {
     \ 'name': '+coc',
-    \ '.': 'show all diagnostics',
+    \ '/': 'show all diagnostics',
     \ 'a': 'action selected code',
     \ 'ac': 'action current line',
     \ 'c': 'show all commands',
+    \ 'cl': 'code lens action current line',
     \ 'e': 'show all extensions',
     \ 'f': 'formating selected code',
     \ 'j': 'default action next item',

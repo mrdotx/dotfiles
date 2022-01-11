@@ -1,13 +1,13 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-31T10:15:18+0200
+" date:   2022-01-11T08:21:27+0100
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
 " leader keys
 let mapleader=','                   " for global plugins
-let maplocalleader='.'              " for filetype plugins
+let maplocalleader=' '              " for filetype plugins
 
 " mouse
 set mouse=a
