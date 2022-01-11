@@ -110,7 +110,7 @@ libtool
 libva-intel-driver-hybrid
 libva-mesa-driver
 libva-utils
-libxft-bgra-git
+libxft-bgra
 licenses
 linux
 linux-firmware

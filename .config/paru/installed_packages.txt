@@ -491,7 +491,7 @@ libxdmcp
 libxext
 libxfixes
 libxfont2
-libxft-bgra-git
+libxft-bgra
 libxi
 libxinerama
 libxkbcommon
