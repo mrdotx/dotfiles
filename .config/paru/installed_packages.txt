@@ -188,7 +188,6 @@ gst-plugins-ugly
 gstreamer
 gstreamer-vaapi
 gtest
-gtk-engine-murrine
 gtk-update-icon-cache
 gtk2
 gtk3
