@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-12-17T10:51:48+0100
+# date:   2022-01-14T13:56:39+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -61,16 +61,5 @@ alias \
     fm='fzf_man.sh' \
     fp='fzf_pacman.sh' \
     ft='fzf_trash.sh'
-
-# ssh
-alias \
-    pi='ssh hermes' \
-    pi2='ssh prometheus' \
-    macbook='ssh artemis-wlan' \
-    firetv='ssh firetv' \
-    firetv4k='ssh firetv4k' \
-    p9='ssh p9' \
-    m3='ssh m3' \
-    n10='ssh n10'
 
 # vim:ft=sh
