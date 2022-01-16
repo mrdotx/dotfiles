@@ -1,14 +1,14 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/rss.timer
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:57:55+0200
+# date:   2022-01-16T19:30:01+0100
 
 [Unit]
 Description=run rss.service every 15 minutes
 
 [Timer]
 OnCalendar=*:0/15
-AccuracySec=1us
+AccuracySec=1s
 RandomizedDelaySec=1m
 Persistent=true
 Unit=rss.service
