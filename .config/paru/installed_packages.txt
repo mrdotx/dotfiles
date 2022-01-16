@@ -64,7 +64,6 @@ cblas
 cdparanoia
 cdrtools
 cdw
-celt
 chameleon-git
 chromaprint
 cifs-utils
@@ -914,8 +913,6 @@ zathura-ps
 zbar
 zimg
 zip
-zita-alsa-pcmi
-zita-resampler
 zlib
 zsh
 zsh-autosuggestions
