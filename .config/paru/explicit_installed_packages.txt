@@ -134,7 +134,6 @@ mesa-utils
 mpv
 mtools
 ncdu
-neofetch
 neovim
 neovim-symlinks
 nerd-fonts-dejavu-complete
