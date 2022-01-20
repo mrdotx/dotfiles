@@ -564,7 +564,6 @@ mujs
 mypaint-brushes1
 ncdu
 ncurses
-neofetch
 neon
 neovim
 neovim-symlinks
@@ -886,7 +885,6 @@ xorg-server
 xorg-server-common
 xorg-setxkbmap
 xorg-xauth
-xorg-xdpyinfo
 xorg-xev
 xorg-xinit
 xorg-xinput
