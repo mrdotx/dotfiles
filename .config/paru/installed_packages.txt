@@ -518,6 +518,7 @@ lilv
 linux
 linux-api-headers
 linux-firmware
+linux-firmware-whence
 linux-headers
 linux-lts
 linux-lts-headers
