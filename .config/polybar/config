@@ -73,33 +73,33 @@
 
 # modules
     # i3, i3_upin
-    include-file = ~/.config/polybar/modules/i3.cfg
+    include-file = modules/i3.cfg
     # xwindow, xwindowsmall
-    include-file = ~/.config/polybar/modules/xwindow.cfg
+    include-file = modules/xwindow.cfg
 
     # wlan, wlansmall
-    include-file = ~/.config/polybar/modules/network.cfg
+    include-file = modules/network.cfg
     # alsa, alsasmall, pulseaudio, pulseaudiosmall
-    include-file = ~/.config/polybar/modules/audio.cfg
+    include-file = modules/audio.cfg
     # xbacklight, xbacklightsmall
-    include-file = ~/.config/polybar/modules/xbacklight.cfg
+    include-file = modules/xbacklight.cfg
     # battery
-    include-file = ~/.config/polybar/modules/battery.cfg
+    include-file = modules/battery.cfg
     # xkeyboard
-    include-file = ~/.config/polybar/modules/xkeyboard.cfg
+    include-file = modules/xkeyboard.cfg
     # date
-    include-file = ~/.config/polybar/modules/date.cfg
+    include-file = modules/date.cfg
 
     # temp
-    include-file = ~/.config/polybar/modules/temperature.cfg
+    include-file = modules/temperature.cfg
     # cpu
-    include-file = ~/.config/polybar/modules/cpu.cfg
+    include-file = modules/cpu.cfg
     # ram, swap
-    include-file = ~/.config/polybar/modules/memory.cfg
+    include-file = modules/memory.cfg
     # nvme, sda
-    include-file = ~/.config/polybar/modules/fs.cfg
+    include-file = modules/fs.cfg
 
     # rss, services, music
-    include-file = ~/.config/polybar/modules/custom.cfg
+    include-file = modules/custom.cfg
 
 # vim:ft=cfg
