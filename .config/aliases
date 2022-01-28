@@ -1,10 +1,11 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-01-14T13:56:39+0100
+# date:   2022-01-28T14:48:59+0100
 
 # ranger change directory on exit
 ranger_cd() {
+    local tmp_file
     tmp_file="$(mktemp -t ranger_cd.XXXXXX)"
 
     ranger --choosedir="$tmp_file" "$@"
@@ -12,6 +13,20 @@ ranger_cd() {
     [ -e "$tmp_file" ] \
         && cd "$(cat "$tmp_file")" \
         && rm -f "$tmp_file" \
+        || exit 1
+}
+
+# folder navigation
+..() {
+    local elements directory
+    elements="${1:-1}"
+
+    while [ "$elements" -ge 1 ]; do
+        directory="../$directory"
+        elements=$((elements - 1))
+    done
+
+    cd "$directory" \
         || exit 1
 }
 
@@ -30,17 +45,14 @@ alias \
     tree='tree -C' \
     kmon='$EXEC_AS_USER kmon -a #cccccc -c #4185d7'
 
-# navigation
-alias \
-    ..='cd ..' \
-    ...='cd ../..' \
-    ....='cd ../../..'
-
 # tools
 alias \
-    md='mkdir -p' \
-    rd='rmdir' \
     cp='cp -i' \
+    mv='mv -i' \
+    rm='rm -i' \
+    ln='ln -i' \
+    md='mkdir -pv' \
+    rd='rmdir -v' \
     tx='i3_tmux.sh' \
     rg='ranger_cd' \
     rs='$EXEC_AS_USER ranger' \
