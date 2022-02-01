@@ -14,6 +14,7 @@ automake
 avahi
 bash
 bash-language-server
+bc
 binutils
 bison
 bluez
