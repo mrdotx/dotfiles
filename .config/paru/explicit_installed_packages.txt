@@ -103,7 +103,6 @@ kvantum
 less
 libdvdcss
 libmad
-libptytty
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
