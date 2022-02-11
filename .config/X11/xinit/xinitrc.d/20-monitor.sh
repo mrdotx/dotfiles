@@ -3,9 +3,16 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/xinit/xinitrc.d/20-monitor.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-22T11:10:06+0100
+# date:   2022-02-09T21:25:05+0100
 
- xrandr | grep "HDMI2 connected" \
+xrandr | grep "DisplayPort-0 disconnected" \
+    && xrandr \
+        --output "HDMI-A-0" \
+        --primary \
+        --output "DisplayPort-0" \
+        --right-of "HDMI-A-0"
+
+xrandr | grep "HDMI2 connected" \
     && xrandr \
         --output "HDMI2" \
         --primary \
