@@ -1,14 +1,14 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-20T20:06:49+0100
+# date:   2022-02-10T19:11:07+0100
 
 # variables
 set $sup Mod4
 set $alt Mod1
-set $primary HDMI2
-set $secondary eDP1
-set $font pango:DejaVu Sans Mono, Font Awesome 5 Free, Font Awesome 5 Brands 10
+set $primary DisplayPort-0
+set $secondary HDMI-A-0
+set $font pango:DejaVu Sans Mono, Font Awesome 6 Free, Font Awesome 6 Brands 10
 
 # config
 floating_modifier $sup
