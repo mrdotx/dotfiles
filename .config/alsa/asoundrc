@@ -1,10 +1,15 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/alsa/asoundrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-12-17T09:24:25+0100
+# date:   2022-02-08T09:18:46+0100
 
 defaults.pcm {
     type hw
-    card 0
+    card 1
+    device 0
+}
+defaults.ctl {
+    type hw
+    card 1
     device 0
 }
