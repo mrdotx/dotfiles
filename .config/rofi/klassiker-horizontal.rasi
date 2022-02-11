@@ -2,13 +2,13 @@
  * path:   /home/klassiker/.local/share/repos/dotfiles/.config/rofi/klassiker-horizontal.rasi
  * author: klassiker [mrdotx]
  * github: https://github.com/mrdotx/dotfiles
- * date:   2021-05-28T11:57:04+0200
+ * date:   2022-02-10T19:15:34+0100
  */
 
 * {
     regular:                "DejaVu Sans 12";
     bold:                   "DejaVu Sans Bold 12";
-    symbol:                 "Font Awesome 5 Free 12";
+    symbol:                 "Font Awesome 6 Free 12";
 
     background-color:       transparent;
 
