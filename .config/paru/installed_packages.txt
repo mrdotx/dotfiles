@@ -283,7 +283,6 @@ libbs2b
 libbsd
 libburn
 libcaca
-libcanberra
 libcap
 libcap-ng
 libcddb
@@ -725,7 +724,6 @@ slop
 smartmontools
 smbclient
 sord
-sound-theme-freedesktop
 soundtouch
 spandsp
 speedtest-cli
