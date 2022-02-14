@@ -290,6 +290,7 @@ libcdio
 libcdio-paranoia
 libcdr
 libcec
+libclc
 libcloudproviders
 libcolord
 libconfig
@@ -564,8 +565,10 @@ npth
 nspr
 nss
 ntfs-3g
+ocl-icd
 odt2txt
 openal
+opencl-mesa
 opencore-amr
 opencv
 opendoas
