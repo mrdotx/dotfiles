@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-02-11T13:23:41+0100
+# date:   2022-02-15T08:24:53+0100
 
 # colors
 [colors]
@@ -54,7 +54,7 @@
     inherit = bar/general
     monitor = ${env:MONITOR:HDMI-A-0}
     modules-left = i3 music
-    modules-right = wlansmall alsa xbacklight xkeyboard date
+    modules-right = wlansmall alsa xbacklight battery xkeyboard date
 
 [bar/primary_stats]
     inherit = bar/primary
@@ -64,12 +64,12 @@
 [bar/secondary_stats]
     inherit = bar/secondary
     modules-left = i3 music
-    modules-right = wlan alsa xbacklight xkeyboard date
+    modules-right = wlan alsa xbacklight battery xkeyboard date
 
 [bar/single]
     inherit = bar/primary
     modules-left = i3_upin services rss xwindowsmall
-    modules-right = music alsasmall xbacklightsmall wlansmall xkeyboard date
+    modules-right = music alsasmall xbacklightsmall wlansmall battery xkeyboard date
 
 # modules
     # i3, i3_upin
