@@ -597,7 +597,7 @@ pambase
 pandoc-bin
 pango
 pangomm
-paru-git
+paru
 patch
 pciutils
 pcre

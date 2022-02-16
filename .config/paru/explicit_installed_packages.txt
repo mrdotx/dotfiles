@@ -127,7 +127,7 @@ pacman
 pacman-contrib
 pam-gnupg
 pandoc-bin
-paru-git
+paru
 patch
 picard
 picom
