@@ -75,6 +75,7 @@ clucene
 cmus
 colord
 colord-gtk
+colord-gtk-common
 colord-sane
 compiler-rt
 confuse
