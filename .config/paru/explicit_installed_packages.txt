@@ -33,7 +33,6 @@ crda
 cups
 darktable
 dash
-dbus-broker
 dmidecode
 dragon-drag-and-drop-git
 dunst
