@@ -79,6 +79,7 @@ kodi
 kodi-addon-pvr-iptvsimple
 kodi-addon-visualization-spectrum
 kvantum
+libmad
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
