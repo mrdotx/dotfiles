@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-01-28T14:48:59+0100
+# date:   2022-02-23T18:54:53+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -43,7 +43,8 @@ alias \
     watch='watch --color' \
     ncdu='ncdu --color dark' \
     tree='tree -C' \
-    kmon='$EXEC_AS_USER kmon -a #cccccc -c #4185d7'
+    kmon='$EXEC_AS_USER kmon -a #cccccc -c #4185d7' \
+    radeontop='radeontop -cT'
 
 # tools
 alias \
