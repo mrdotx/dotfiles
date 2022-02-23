@@ -2,7 +2,6 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
-amdvlk
 arc-gtk-theme
 arc-icon-theme
 arduino-avr-core
@@ -106,6 +105,7 @@ man-pages
 mc
 mesa
 mesa-utils
+mesa-vdpau
 mpv
 ncdu
 neovim
@@ -139,6 +139,7 @@ python-beautifulsoup4
 python-pip
 python-readability-lxml
 qt5ct
+radeontop
 ranger
 rclone
 rsync
@@ -186,7 +187,6 @@ xdg-utils
 xdotool
 xf86-input-wacom
 xf86-video-amdgpu
-xf86-video-ati
 xorg-fonts-alias-misc
 xorg-fonts-misc
 xorg-server

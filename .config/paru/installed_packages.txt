@@ -11,7 +11,6 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 amd-ucode
-amdvlk
 aom
 arc-gtk-theme
 arc-icon-theme
@@ -538,6 +537,7 @@ mc
 md4c
 mesa
 mesa-utils
+mesa-vdpau
 metis
 mjpegtools
 mkinitcpio
@@ -694,6 +694,7 @@ qt5ct
 qt6-base
 qt6-svg
 qt6-translations
+radeontop
 ragel
 ranger
 raptor
@@ -828,7 +829,6 @@ xdotool
 xf86-input-libinput
 xf86-input-wacom
 xf86-video-amdgpu
-xf86-video-ati
 xkeyboard-config
 xmlsec
 xorg-fonts-alias-misc
