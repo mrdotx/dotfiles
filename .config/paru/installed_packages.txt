@@ -766,6 +766,7 @@ thunderbird
 thunderbird-i18n-de
 tinyxml
 tmux
+tpm2-tss
 tracker3
 trash-cli
 tree
