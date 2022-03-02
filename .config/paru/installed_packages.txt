@@ -294,7 +294,6 @@ libclc
 libcloudproviders
 libcolord
 libconfig
-libcroco
 libcups
 libdaemon
 libdatrie
@@ -344,6 +343,7 @@ libieee1284
 libimagequant
 libinput
 libinstpatch
+libisl
 libixion
 libjpeg-turbo
 libkate
