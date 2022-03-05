@@ -136,6 +136,7 @@ plocate
 polybar
 python
 python-beautifulsoup4
+python-cssselect
 python-pip
 python-readability-lxml
 qt5ct

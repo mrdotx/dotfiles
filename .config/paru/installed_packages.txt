@@ -636,6 +636,7 @@ python-chardet
 python-colorama
 python-contextlib2
 python-cryptography
+python-cssselect
 python-dateutil
 python-discid
 python-distlib
