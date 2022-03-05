@@ -1,9 +1,9 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/wallpaper
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-05T16:38:33+0100
+! date:   2022-03-05T19:02:29+0100
 
-wallpaper.tool:     hsetroot -extend
-wallpaper.uri:      /home/klassiker/Pictures/Wallpaper/Dark_Blue/pcb.jpg
+wallpaper.tool:     hsetroot -root -cover
+wallpaper.uri:      /home/klassiker/Pictures/Wallpaper/Dark_Blue/pcb_large.jpg
 
 ! vim:ft=xdefaults
