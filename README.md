@@ -6,7 +6,6 @@ found in my other repositories.
 
 | config            | description                                          |
 | :---------------- | :--------------------------------------------------- |
-| alsa              | advanced linux sound architecture                    |
 | aria2             | download manager                                     |
 | bash              | shell                                                |
 | btop              | resource monitor that shows usage and stats          |
