@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-02-23T17:17:15+0100
+# date:   2022-03-07T18:11:23+0100
 
 # colors
 [colors]
@@ -59,7 +59,7 @@
 [bar/primary_stats]
     inherit = bar/primary
     modules-left = i3 services rss xwindowsmall
-    modules-right = temp cpu ram swap fs_root fs_srv
+    modules-right = gpu_temp cpu_temp cpu ram swap fs_root fs_srv
 
 [bar/secondary_stats]
     inherit = bar/secondary
