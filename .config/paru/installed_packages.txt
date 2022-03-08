@@ -606,6 +606,7 @@ pcre
 pcre2
 perl
 perl-error
+perl-image-exiftool
 perl-mailtools
 perl-timedate
 picard

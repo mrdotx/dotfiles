@@ -129,6 +129,7 @@ pam-gnupg
 pandoc-bin
 paru
 patch
+perl-image-exiftool
 picard
 picom
 pkgconf
