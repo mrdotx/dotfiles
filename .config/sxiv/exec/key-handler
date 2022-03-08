@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/sxiv/exec/key-handler
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:57:21+0200
+# date:   2022-03-08T18:27:46+0100
 
 # rotate function
 rotate() {
@@ -84,7 +84,7 @@ wallpaper() {
 case "$1" in
     "C-e")
         while read -r file; do $TERMINAL -T "$file" -e \
-            sh -c "exiftool '$file' | less" \
+            sh -c "exiftool '$file' | $PAGER" \
             & done
         ;;
     "C-w")
