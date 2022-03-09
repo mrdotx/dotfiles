@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-07T13:23:12+0100
+# date:   2022-03-09T11:13:44+0100
 
 [global]
     ### Display ###
@@ -48,14 +48,14 @@
 
     # Turn on the progess bar. It appears when a progress hint is passed with
     # for example dunstify -h int:value:12
-    progress_bar = false
+    progress_bar = true
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 10
+    progress_bar_height = 20
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 1
+    progress_bar_frame_width = 2
 
     # Set the minimum width for the progress bar
     progress_bar_min_width = 150
@@ -153,7 +153,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "<b>%s %n</b>\n%b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -297,6 +297,7 @@
     background = "#000000"
     foreground = "#ffffff"
     frame_color = "#333333"
+    highlight = "#4185d7"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -304,6 +305,8 @@
 [urgency_normal]
     background = "#000000"
     foreground = "#ffffff"
+    frame_color = "#4185d7"
+    highlight = "#4185d7"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -312,6 +315,7 @@
     background = "#ff5555"
     foreground = "#ffffff"
     frame_color = "#df2800"
+    highlight = "#df2800"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -320,29 +324,21 @@
     summary = "i3 * mode*"
     history_ignore = yes
     frame_color = "#4185d7"
-    background = "#000000"
-    foreground = "#ffffff"
 
 [c_music_player]
     summary = "C* Music Player*"
     history_ignore = yes
     frame_color = "#4185d7"
-    background = "#000000"
-    foreground = "#ffffff"
 
 [iwd]
     summary = "iNet wireless daemon*"
     history_ignore = yes
     frame_color = "#4185d7"
-    background = "#000000"
-    foreground = "#ffffff"
 
 [youtube-dl]
     summary = "youtube-dl*"
     history_ignore = yes
     frame_color = "#4185d7"
-    background = "#000000"
-    foreground = "#ffffff"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
