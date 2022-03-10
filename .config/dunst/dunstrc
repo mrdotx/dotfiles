@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-10T05:06:48+0100
+# date:   2022-03-10T12:33:13+0100
 
 [global]
     ### Display ###
@@ -33,10 +33,10 @@
     height = 1050
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    origin = top-right
 
     # Offset from the origin
-    offset = 0x0
+    offset = 0x26
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -319,6 +319,16 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+[volume]
+    summary = "Volume*"
+    history_ignore = yes
+    frame_color = "#4185d7"
+
+[backlight]
+    summary = "Brightness*"
+    history_ignore = yes
+    frame_color = "#4185d7"
 
 [i3_modes]
     summary = "i3 * mode*"
