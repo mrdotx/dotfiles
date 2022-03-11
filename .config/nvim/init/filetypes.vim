@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-03-11T08:54:10+0100
+" date:   2022-03-11T21:08:18+0100
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
@@ -20,7 +20,7 @@ autocmd BufWritePost *.config/X11/modules/wallpaper
 " restart i3 and picom whenever i3 configs are updated
 autocmd BufWritePost *.config/i3/*
                    \,*.config/X11/Xresources
-    \ !i3-msg -- restart >/dev/null 2>&1
+    \ !i3-msg -- reload >/dev/null 2>&1
 " restart polybar whenever polybar configs are updated
 autocmd BufWritePost *.config/polybar/*
                    \,*.config/X11/Xresources
