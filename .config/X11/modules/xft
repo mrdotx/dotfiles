@@ -1,22 +1,22 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/xft
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T12:39:08+0100
+! date:   2022-03-12T19:28:58+0100
 
 /* fonts */
-#define FONT            DejaVuSansMono Nerd Font:pixelsize=16
-#define FONTFALLBACK    DejaVu Sans:pixelsize=14
-#define FONTEMOJI       JoyPixels:pixelsize=14
+#define FONT   DejaVuSansMono Nerd Font:pixelsize=16
+#define FONT0  JoyPixels:pixelsize=14
+#define FONT1  DejaVu Sans:pixelsize=14
 
-#define FONTSMALL       DejaVu Sans:pixelsize=12
+#define FONT2  DejaVu Sans:pixelsize=12
 
 /* dpi default 96, recommended values 120 [125%], 144 [150%], 168 [175%], 192 [200%] */
-Xft.dpi:                96
-Xft.antialias:          true
-Xft.autohint:           false
-Xft.hinting:            true
-Xft.hintstyle:          hintslight
-Xft.rgba:               rgb
-Xft.lcdfilter:          lcddefault
+Xft.dpi:       96
+Xft.antialias: true
+Xft.autohint:  false
+Xft.hinting:   true
+Xft.hintstyle: hintslight
+Xft.rgba:      rgb
+Xft.lcdfilter: lcddefault
 
 ! vim:ft=xdefaults

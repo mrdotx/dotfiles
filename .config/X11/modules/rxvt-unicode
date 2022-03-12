@@ -1,47 +1,47 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T20:37:31+0100
+! date:   2022-03-12T17:11:25+0100
 
-URxvt.font:                         xft:FONT, \
-                                    xft:FONTFALLBACK, \
-                                    xft:FONTEMOJI
-URxvt.background:                   OPACITY0
-URxvt.foreground:                   WHITE
-URxvt.cursorColor:                  BLUE1
-URxvt.highlightColor:               BLUE1
-URxvt.highlightTextColor:           WHITE
-URxvt.termName:                     rxvt-unicode-256color
-URxvt.depth:                        32
-URxvt.scrollBar:                    false
-URxvt.mouseWheelScrollPage:         false
-URxvt.cursorBlink:                  false
-URxvt.reverseVideo:                 false
-URxvt.iso14770:                     false
-URxvt.iso14770_52:                  false
-URxvt.saveLines:                    500
+URxvt.font:                        xft:FONT, \
+                                   xft:FONT0, \
+                                   xft:FONT1
+URxvt.background:                  OPACITY0
+URxvt.foreground:                  WHITE
+URxvt.cursorColor:                 BLUE1
+URxvt.highlightColor:              BLUE1
+URxvt.highlightTextColor:          WHITE
+URxvt.termName:                    rxvt-unicode-256color
+URxvt.depth:                       32
+URxvt.scrollBar:                   false
+URxvt.mouseWheelScrollPage:        false
+URxvt.cursorBlink:                 false
+URxvt.reverseVideo:                false
+URxvt.iso14770:                    false
+URxvt.iso14770_52:                 false
+URxvt.saveLines:                   500
 
 /* perl extensions */
-URxvt.perl-ext-common:              eval,keyboard-select,matcher,resize-font,searchable-scrollback,selection,selection-to-clipboard
+URxvt.perl-ext-common:             eval,keyboard-select,matcher,resize-font,searchable-scrollback,selection,selection-to-clipboard
 
 /* copy and paste */
-URxvt.keysym.Control-C:             eval:selection_to_clipboard
-URxvt.keysym.Control-V:             eval:paste_clipboard
-URxvt.keysym.Control-Y:             eval:paste_primary
+URxvt.keysym.Control-C:            eval:selection_to_clipboard
+URxvt.keysym.Control-V:            eval:paste_clipboard
+URxvt.keysym.Control-Y:            eval:paste_primary
 
 /* resize-font */
-URxvt.resize-font.step:             1
+URxvt.resize-font.step:            1
 
 /* keyboard-select */
-URxvt.keysym.Control-Shift-Escape:  perl:keyboard-select:activate
-URxvt.keysym.Meta-s:                perl:keyboard-select:search
-URxvt.keyboard-select.clipboard:    true
+URxvt.keysym.Control-Shift-Escape: perl:keyboard-select:activate
+URxvt.keysym.Meta-s:               perl:keyboard-select:search
+URxvt.keyboard-select.clipboard:   true
 
 /* open url with matcher */
-URxvt.url-launcher:                 link_handler.sh
-URxvt.keysym.Meta-o:                perl:matcher:select
-URxvt.matcher.button:               1
-URxvt.matcher.rend.0:               Italic Bold fg8
-URxvt.colorUL:                      BLUE1
+URxvt.url-launcher:                link_handler.sh
+URxvt.keysym.Meta-o:               perl:matcher:select
+URxvt.matcher.button:              1
+URxvt.matcher.rend.0:              Italic Bold fg8
+URxvt.colorUL:                     BLUE1
 
 ! vim:ft=xdefaults

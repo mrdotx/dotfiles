@@ -1,24 +1,24 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/st
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T11:26:23+0100
+! date:   2022-03-12T17:10:46+0100
 
-st.font:            FONT
-st.fontfallback:    FONTFALLBACK
-st.fontemoji:       FONTEMOJI
-st.background:      BLACK
-st.foreground:      WHITE
-st.cursorColor:     BLUE1
-st.termname:        st-256color
-st.shell:           /bin/sh
-st.minlatency:      8
-st.maxlatency:      33
-st.blinktimeout:    800
-st.bellvolume:      0
-st.tabspaces:       8
-st.borderpx:        2
-st.cwscale:         1.0
-st.chscale:         1.0
-st.alpha:           ALPHA
+st.font:         FONT
+st.font0:        FONT0
+st.font1:        FONT1
+st.background:   BLACK
+st.foreground:   WHITE
+st.cursorColor:  BLUE1
+st.termname:     st-256color
+st.shell:        /bin/sh
+st.minlatency:   8
+st.maxlatency:   33
+st.blinktimeout: 800
+st.bellvolume:   0
+st.tabspaces:    8
+st.borderpx:     2
+st.cwscale:      1.0
+st.chscale:      1.0
+st.alpha:        ALPHA
 
 ! vim:ft=xdefaults

@@ -1,10 +1,10 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/xcursor
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T10:41:12+0100
+! date:   2022-03-12T17:09:50+0100
 
 /* size default 24, remommendend values 32,48,64 */
-Xcursor.theme:  Adwaita
-Xcursor.size:   24
+Xcursor.theme: Adwaita
+Xcursor.size:  24
 
 ! vim:ft=xdefaults

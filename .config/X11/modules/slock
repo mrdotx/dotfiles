@@ -1,12 +1,12 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/slock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T12:57:26+0100
+! date:   2022-03-12T17:10:58+0100
 
-slock.init:            BLACK
-slock.input:           GREY0
-slock.failed:          RED0
-slock.message:         GREY3
-slock.message.font:    -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+slock.init:         BLACK
+slock.input:        GREY0
+slock.failed:       RED0
+slock.message:      GREY3
+slock.message.font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
 
 ! vim:ft=xdefaults
