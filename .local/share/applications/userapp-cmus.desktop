@@ -4,6 +4,6 @@ Type=Application
 Name=cmus
 Comment=c* music player
 Icon=multimedia-player
-Exec=$TERMINAL -e cmus
+Exec=$TERMINAL -e polybar_music.sh --start
 Actions=
 Categories=AudioVideo;ConsoleOnly;
