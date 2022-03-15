@@ -205,7 +205,6 @@ hibiscus
 hicolor-icon-theme
 hidapi
 highlight
-hsetroot
 htop
 hunspell
 hunspell-de
@@ -855,6 +854,7 @@ xorg-xwininfo
 xorgproto
 xsel
 xvidcore
+xwallpaper
 xxhash
 xz
 yajl

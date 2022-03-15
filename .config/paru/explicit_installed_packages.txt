@@ -62,7 +62,6 @@ gstreamer-vaapi
 gzip
 hibiscus
 highlight
-hsetroot
 htop
 hunspell-de
 hunspell-en_us
@@ -198,6 +197,7 @@ xorg-xinput
 xorg-xkill
 xorg-xwininfo
 xsel
+xwallpaper
 youtube-dl
 zathura
 zathura-cb
