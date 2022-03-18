@@ -1,0 +1,97 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2022-03-18T18:20:39+0100
+
+# variables
+set $sup Mod4
+set $alt Mod1
+set $primary DisplayPort-0
+set $secondary HDMI-A-0
+set $font pango:DejaVu Sans Mono, Font Awesome 6 Free, Font Awesome 6 Brands 10
+
+# config
+floating_modifier $sup
+focus_follows_mouse no
+mouse_warping none
+font $font
+default_border pixel 2
+default_floating_border normal
+gaps inner 5
+gaps outer 5
+smart_gaps on
+smart_borders on
+
+# colors
+set_from_resource $black0   i3wm.color0     #000000
+set_from_resource $grey0    i3wm.color8     #333333
+set_from_resource $red0     i3wm.color1     #df2800
+set_from_resource $red1     i3wm.color9     #ff5555
+set_from_resource $green0   i3wm.color2     #00b200
+set_from_resource $green1   i3wm.color10    #39ff14
+set_from_resource $yellow0  i3wm.color3     #b0b200
+set_from_resource $yellow1  i3wm.color11    #effd5f
+set_from_resource $blue0    i3wm.color4     #1f5393
+set_from_resource $blue1    i3wm.color12    #4185d7
+set_from_resource $purple0  i3wm.color5     #980096
+set_from_resource $purple1  i3wm.color13    #ff6fff
+set_from_resource $cyan0    i3wm.color6     #008081
+set_from_resource $cyan1    i3wm.color14    #7ef9ff
+set_from_resource $grey1    i3wm.color7     #cccccc
+set_from_resource $white0   i3wm.color15    #ffffff
+
+# class                 border   backgr.  text     indi.    child
+client.focused          $blue1   $blue0   $white0  $white0  $blue1
+client.focused_inactive $grey0   $grey0   $white0  $grey0   $grey0
+client.unfocused        $grey0   $black0  $grey0   $grey0   $black0
+client.urgent           $grey0   $red1    $white0  $red1    $red1
+client.placeholder      $black0  $grey0   $white0  $black0  $grey0
+client.background       $white0
+
+# workspace output
+workspace 1 output $primary $secondary  # code
+workspace 2 output $secondary $primary  # terminal
+workspace 3 output $secondary $primary  # browser
+workspace 4 output $primary $secondary  # image
+workspace 5 output $primary $secondary  # office
+workspace 6 output $secondary $primary  # mail
+workspace 7 output $secondary $primary  # financial
+workspace 8 output $primary $secondary  # vms
+workspace 9 output $primary $secondary  # multimedia
+workspace 10 output $secondary $primary # spare
+
+# applications
+##############
+
+include modules/applications.cfg
+
+# keybindings
+#############
+
+include modules/keybindings_applications.cfg
+include modules/keybindings_multimedia.cfg
+include modules/keybindings_system_management.cfg
+include modules/keybindings_windows.cfg
+include modules/keybindings_workspaces.cfg
+
+# modes
+#######
+
+include modules/mode_container.cfg
+include modules/mode_editor.cfg
+include modules/mode_exit.cfg
+include modules/mode_macros.cfg
+include modules/mode_services.cfg
+include modules/mode_ssh.cfg
+
+# i3 status bar
+###############
+
+# include modules/status_bar.cfg
+
+# start systemd target
+######################
+
+exec --no-startup-id systemctl --user start i3.target
+
+# vim:ft=config
