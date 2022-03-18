@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-18T18:20:39+0100
+# date:   2022-03-18T18:57:24+0100
 
 # variables
 set $sup Mod4
@@ -55,7 +55,7 @@ workspace 3 output $secondary $primary  # browser
 workspace 4 output $primary $secondary  # image
 workspace 5 output $primary $secondary  # office
 workspace 6 output $secondary $primary  # mail
-workspace 7 output $secondary $primary  # financial
+workspace 7 output $primary $secondary  # financial
 workspace 8 output $primary $secondary  # vms
 workspace 9 output $primary $secondary  # multimedia
 workspace 10 output $secondary $primary # spare
