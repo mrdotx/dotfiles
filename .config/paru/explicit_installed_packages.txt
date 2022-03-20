@@ -33,7 +33,7 @@ cups
 darktable
 dash
 dmidecode
-dragon-drag-and-drop-git
+dragon-drop-git
 dunst
 efibootmgr
 eslint

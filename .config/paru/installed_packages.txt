@@ -102,7 +102,7 @@ dmidecode
 dnssec-anchors
 dosfstools
 double-conversion
-dragon-drag-and-drop-git
+dragon-drop-git
 dunst
 e2fsprogs
 efibootmgr
