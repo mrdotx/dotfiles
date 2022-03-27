@@ -1,7 +1,7 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2021-07-13T19:40:08+0200
+// date:   2022-03-27T10:31:44+0200
 
 {
     "suggest.completionItemKindLabels": {
@@ -69,5 +69,6 @@
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
         "--disable=F0001"
-    ]
+    ],
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }
