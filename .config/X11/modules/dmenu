@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/dmenu
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-12T17:11:45+0100
+! date:   2022-03-28T16:15:28+0200
 
 dmenu.font:                    FONT
 dmenu.font0:                   FONT0
@@ -16,5 +16,7 @@ dmenu.normhighlightforeground: BLUE1
 dmenu.normhighlightbackground: BLACK
 dmenu.outforeground:           BLACK
 dmenu.outbackground:           BLUE0
+dmenu.outhighlightforeground:  GREY3
+dmenu.outhighlightbackground:  BLUE0
 
 ! vim:ft=xdefaults
