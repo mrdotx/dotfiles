@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2021-12-06T12:35:20+0100
+! date:   2022-03-31T18:58:58+0200
 
 /* colors */
 #define RED0            #df2800
@@ -63,7 +63,7 @@
 #include "modules/wallpaper"
 #include "modules/xft"
 #include "modules/xautolock"
-#include "modules/sxiv"
+#include "modules/nsxiv"
 #include "modules/polybar"
 #include "modules/rxvt-unicode"
 #include "modules/dmenu"
