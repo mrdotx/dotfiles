@@ -23,6 +23,7 @@ found in my other repositories.
 | neofetch          | customizable system info script                      |
 | newsboat          | rss/atom feedreader                                  |
 | npm               | javascript package manager                           |
+| nsxiv             | image viewer                                         |
 | nvim              | text editor ,ide                                     |
 | pacman            | package manager utility                              |
 | paru              | aur helper                                           |
@@ -31,7 +32,6 @@ found in my other repositories.
 | qutebrowser       | web browser                                          |
 | ranger            | file manager                                         |
 | rofi              | application launcher and dmenu replacement           |
-| sxiv              | image viewser                                        |
 | systemd           | units, timers and targets                            |
 | tmux              | terminal multiplexer                                 |
 | w3m               | text oriented browser                                |
