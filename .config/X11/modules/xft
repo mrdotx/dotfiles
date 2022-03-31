@@ -1,14 +1,12 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/xft
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-12T19:28:58+0100
+! date:   2022-03-31T19:47:07+0200
 
 /* fonts */
 #define FONT   DejaVuSansMono Nerd Font:pixelsize=16
 #define FONT0  JoyPixels:pixelsize=14
 #define FONT1  DejaVu Sans:pixelsize=14
-
-#define FONT2  DejaVu Sans:pixelsize=12
 
 /* dpi default 96, recommended values 120 [125%], 144 [150%], 168 [175%], 192 [200%] */
 Xft.dpi:       96
