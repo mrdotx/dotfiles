@@ -113,6 +113,7 @@ nerd-fonts-dejavu-complete
 newsboat
 nodejs
 npm
+nsxiv
 ntfs-3g
 ocl-icd
 odt2txt
@@ -155,7 +156,6 @@ smartmontools
 speedtest-cli
 splix
 sweethome3d
-sxiv
 task-spooler
 texinfo
 texlive-core

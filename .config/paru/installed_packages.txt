@@ -566,6 +566,7 @@ npm
 npth
 nspr
 nss
+nsxiv
 ntfs-3g
 ocl-icd
 odt2txt
@@ -748,7 +749,6 @@ suitesparse
 svt-av1
 svt-hevc
 sweethome3d
-sxiv
 sysfsutils
 systemd
 systemd-libs
