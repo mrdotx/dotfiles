@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-gitgutter.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-13T12:39:19+0200
+" date:   2022-04-01T08:40:14+0200
 
 let g:gitgutter_enabled=1
 let g:gitgutter_map_keys=0
@@ -22,7 +22,7 @@ highlight GitGutterChange guifg=#b0b200 ctermfg=3
 " keybindings
 nmap                <leader>[   <Plug>(GitGutterPrevHunk)
 nmap                <leader>]   <Plug>(GitGutterNextHunk)
-nmap                <leader>p  <Plug>(GitGutterPreviewHunk)
-nmap                <leader>h  <Plug>(GitGutterStageHunk)
-nmap                <leader>u  <Plug>(GitGutterUndoHunk)
-nnoremap <silent>   <leader>f  :GitGutterFold<cr>
+nmap                <leader>p   <Plug>(GitGutterPreviewHunk)
+nmap                <leader>h   <Plug>(GitGutterStageHunk)
+nmap                <leader>u   <Plug>(GitGutterUndoHunk)
+nnoremap <silent>   <leader>f   :GitGutterFold<cr>
