@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/netrw.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:52:22+0200
+" date:   2022-04-01T08:46:42+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -41,7 +41,9 @@ function! NetrwOpen(cmd)
 endfunction
 
 " close netrw if it's the only buffer open
-autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+autocmd WinEnter * if winnr('$') == 1
+    \ && getbufvar(winbufnr(winnr()), "&filetype") == "netrw"
+    \ || &buftype == 'quickfix' |q|endif
 
 " change directory to the current buffer when opening files.
 set autochdir
