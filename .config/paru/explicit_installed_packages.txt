@@ -50,9 +50,9 @@ gawk
 gcc
 gcr
 gettext
-gimp
 gimp-help-de
 gimp-plugin-gmic
+gimp-stripped
 git
 grep
 groff

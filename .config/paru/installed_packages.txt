@@ -149,9 +149,9 @@ gegl
 gettext
 ghostscript
 giflib
-gimp
 gimp-help-de
 gimp-plugin-gmic
+gimp-stripped
 girara
 git
 glew
@@ -362,7 +362,6 @@ libmd
 libmfx
 libmicrodns
 libmicrohttpd
-libmng
 libmnl
 libmodplug
 libmp4v2
