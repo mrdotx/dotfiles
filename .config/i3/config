@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-18T18:57:24+0100
+# date:   2022-04-02T08:05:20+0200
 
 # variables
 set $sup Mod4
@@ -41,7 +41,7 @@ set_from_resource $grey1    i3wm.color7     #cccccc
 set_from_resource $white0   i3wm.color15    #ffffff
 
 # class                 border   backgr.  text     indi.    child
-client.focused          $blue1   $blue0   $white0  $white0  $blue1
+client.focused          $blue1   $blue0   $white0  $blue1   $blue1
 client.focused_inactive $grey0   $grey0   $white0  $grey0   $grey0
 client.unfocused        $grey0   $black0  $grey0   $grey0   $black0
 client.urgent           $grey0   $red1    $white0  $red1    $red1
