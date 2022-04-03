@@ -1,11 +1,10 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-12-31T09:23:43+0100
+# date:   2022-04-03T18:45:30+0200
 
 # general
-auto-reload yes
-reload-time 15
+refresh-on-startup yes
 reload-threads 128
 prepopulate-query-feeds yes
 show-read-feeds yes
@@ -19,10 +18,8 @@ download-path "~/Downloads/"
 
 # inoreader
 urls-source "inoreader"
-# default app-id "1000000394"
-inoreader-app-id "999999505"
-# default app-key "CWcdJdSDcuxHYoqGa3RsPh7X2DZ2MmO7"
-inoreader-app-key "EQsZICxpsbFczwbXrsrkRbXUUw8DdfwO"
+inoreader-app-id "1000004403"
+inoreader-app-key "G2dyK13gu4QO1qHfuoQRZhgwGWLHRFKx"
 inoreader-login "klassiker"
 inoreader-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/social/inoreader.gpg"
 inoreader-flag-share "a"
