@@ -28,7 +28,6 @@ clang
 cmus
 conky
 cpupower
-crda
 cups
 darktable
 dash

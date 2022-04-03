@@ -81,7 +81,6 @@ confuse
 conky
 coreutils
 cpupower
-crda
 cryptsetup
 cups
 cups-filters
