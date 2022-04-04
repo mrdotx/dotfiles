@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-03T18:45:30+0200
+# date:   2022-04-04T15:50:50+0200
 
 # general
 refresh-on-startup yes
@@ -24,7 +24,6 @@ inoreader-login "klassiker"
 inoreader-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/social/inoreader.gpg"
 inoreader-flag-share "a"
 inoreader-flag-star "b"
-inoreader-show-special-feeds no
 inoreader-min-items 999
 
 # keybindings
