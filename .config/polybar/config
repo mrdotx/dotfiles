@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-02T20:49:16+0200
+# date:   2022-04-04T16:16:08+0200
 
 # colors
 [colors]
@@ -48,7 +48,7 @@
     tray-position = right
     tray-reparent = true
     tray-background = ${colors.background}
-    modules-left = i3 services inoreader xwindow
+    modules-left = i3 services pacman inoreader xwindow
     # modules-right = music alsasmall xbacklightsmall battery wlansmall xkeyboard date
     modules-right = music wlansmall xkeyboard date
 
@@ -64,11 +64,11 @@
 
 [bar/secondary_stats]
     inherit = bar/secondary
-    modules-right = gpu_temp cpu_temp cpu ram swap fs_root fs_srv
+    modules-right = cpu_temp cpu ram swap fs_root fs_srv
 
 [bar/primary_single]
     inherit = bar/primary
-    modules-left = i3_upin services inoreader xwindowsmall
+    modules-left = i3_upin services pacman inoreader xwindowsmall
 
 # modules
     # i3, i3_upin
@@ -79,11 +79,11 @@
     # wlan, wlansmall
     include-file = modules/network.cfg
     # alsa, alsasmall, pulseaudio, pulseaudiosmall
-    # include-file = modules/audio.cfg
+    include-file = modules/audio.cfg
     # xbacklight, xbacklightsmall
-    # include-file = modules/xbacklight.cfg
+    include-file = modules/xbacklight.cfg
     # battery
-    # include-file = modules/battery.cfg
+    include-file = modules/battery.cfg
     # xkeyboard
     include-file = modules/xkeyboard.cfg
     # date
