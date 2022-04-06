@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-05T08:40:20+0200
+# date:   2022-04-06T11:59:54+0200
 
 # colors
 [colors]
@@ -48,14 +48,14 @@
     tray-position = right
     tray-reparent = true
     tray-background = ${colors.background}
-    modules-left = i3 services pacman pacman_timer inoreader inoreader_timer xwindow
+    modules-left = i3_pin services pacman pacman_timer inoreader inoreader_timer xwindow
     # modules-right = music alsasmall xbacklightsmall battery wlansmall xkeyboard date
     modules-right = music wlansmall xkeyboard date
 
 [bar/secondary]
     inherit = bar/general
     monitor = ${env:MONITOR:HDMI-A-0}
-    modules-left = i3
+    modules-left = i3_pin
 
 [bar/primary_stats]
     inherit = bar/primary
@@ -64,11 +64,11 @@
 
 [bar/secondary_stats]
     inherit = bar/secondary
-    modules-right = cpu_temp cpu ram swap fs_root fs_srv
+    modules-right = cpu_temp cpu ram swap fs
 
 [bar/primary_single]
     inherit = bar/primary
-    modules-left = i3_upin services pacman pacman_timer inoreader inoreader_timer xwindowsmall
+    modules-left = i3 services pacman pacman_timer inoreader inoreader_timer xwindowsmall
 
 # modules
     # i3, i3_upin
@@ -89,16 +89,16 @@
     # date
     include-file = modules/date.cfg
 
-    # temp
+    # cpu_temp
     include-file = modules/temperature.cfg
     # cpu
     include-file = modules/cpu.cfg
     # ram, swap
     include-file = modules/memory.cfg
-    # nvme, sda
+    # fs
     include-file = modules/fs.cfg
 
-    # rss, services, music
+    # services, music, pacman, pacman_timer, inoreader, inoreader_timer
     include-file = modules/custom.cfg
 
 # vim:ft=cfg
