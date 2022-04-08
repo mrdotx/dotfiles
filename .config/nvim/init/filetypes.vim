@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-04-06T17:16:51+0200
+" date:   2022-04-08T22:35:36+0200
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
@@ -25,7 +25,7 @@ autocmd BufWritePost *.config/i3/*
 autocmd BufWritePost *.config/polybar/*
                    \,*.config/X11/Xresources
                    \,*.config/X11/modules/polybar
-    \ !polybar.sh --restart
+    \ !polybar.sh
 
 " edit gpg encrypted files
 augroup encrypt
