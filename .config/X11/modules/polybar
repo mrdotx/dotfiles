@@ -1,12 +1,13 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/polybar
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-12T17:11:34+0100
+! date:   2022-04-08T19:57:30+0200
 
-Polybar.type:        stats
-Polybar.background0: OPACITY1
-Polybar.foreground0: GREY3
-Polybar.foreground1: GREY2
-Polybar.main0:       BLUE1
+Polybar.type.monitor1: main
+Polybar.type.monitor2: sys_info
+Polybar.background0:   OPACITY1
+Polybar.foreground0:   GREY3
+Polybar.foreground1:   GREY2
+Polybar.main0:         BLUE1
 
 ! vim:ft=xdefaults
