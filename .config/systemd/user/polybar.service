@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/polybar.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-01-24T09:00:55+0100
+# date:   2022-04-08T21:50:54+0200
 
 [Unit]
 Description=polybar status bars
@@ -12,7 +12,7 @@ PartOf=i3.target
 Type=forking
 WorkingDirectory=%h/.config/polybar
 ExecStart=%h/.local/share/repos/polybar/polybar.sh
-ExecStop=%h/.local/share/repos/polybar/polybar.sh -k
+ExecStop=%h/.local/share/repos/polybar/polybar.sh --kill
 
 [Install]
 WantedBy=i3.target
