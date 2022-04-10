@@ -1,0 +1,16 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/pacman/hooks/99-dashbinsh.hook
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/pacman-hooks
+# date:   2022-04-10T08:36:23+0200
+
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = bash
+
+[Action]
+Description = Re-pointing /bin/sh symlink to dash...
+When = PostTransaction
+Exec = /bin/ln -sfn dash /bin/sh
+Depends = dash
