@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-08T20:33:39+0200
+# date:   2022-04-11T13:24:06+0200
 
 # colors
 [colors]
@@ -48,15 +48,15 @@
     tray-position = right
     tray-reparent = true
     tray-background = ${colors.background}
-    modules-left = i3 services pacman pacman_timer inoreader inoreader_timer xwindow
+    modules-left = i3 services packages packages_timer rss rss_timer xwindow
     # modules-right = music wlan alsa xbacklight battery xkeyboard date
-    modules-right = music wlan xkeyboard date
+    modules-right = music wlan xkeyboard weather weather_timer date
 
 [bar/main_small]
     inherit = bar/main
-    modules-left = i3 services pacman pacman_timer inoreader inoreader_timer xwindow_small
+    modules-left = i3 services packages packages_timer rss rss_timer xwindow_small
     # modules-right = music wlan_small alsa_small xbacklight_small battery xkeyboard date
-    modules-right = music wlan_small xkeyboard date
+    modules-right = music wlan_small xkeyboard weather weather_timer date
 
 [bar/empty]
     inherit = bar/general
