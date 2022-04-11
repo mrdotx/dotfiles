@@ -41,5 +41,5 @@ found in my other repositories.
 | zathura           | document viewer                                      |
 | zsh               | shell                                                |
 
-![monitor1](screenshot_monitor1.jpg)
-![monitor2](screenshot_monitor2.jpg)
+![monitor1](screenshot_monitor1.png)
+![monitor2](screenshot_monitor2.png)
