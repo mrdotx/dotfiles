@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-13T10:00:01+0200
+# date:   2022-04-13T19:11:31+0200
 
 # colors
 [colors]
@@ -49,12 +49,12 @@
     tray-reparent = true
     tray-background = ${colors.background}
     modules-left = i3 services trash trash_timer packages packages_timer rss rss_timer xwindow
-    modules-right = music wlan eth xkeyboard weather weather_timer date
+    modules-right = music wlan xkeyboard weather weather_timer date
 
 [bar/main_small]
     inherit = bar/main
     modules-left = i3 services trash trash_timer packages packages_timer rss rss_timer xwindow_small
-    modules-right = music wlan_small eth_small xkeyboard weather weather_timer date
+    modules-right = music wlan_small xkeyboard weather weather_timer date
 
 [bar/empty]
     inherit = bar/general
