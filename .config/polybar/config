@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-11T13:24:06+0200
+# date:   2022-04-13T08:30:23+0200
 
 # colors
 [colors]
@@ -49,14 +49,12 @@
     tray-reparent = true
     tray-background = ${colors.background}
     modules-left = i3 services packages packages_timer rss rss_timer xwindow
-    # modules-right = music wlan alsa xbacklight battery xkeyboard date
-    modules-right = music wlan xkeyboard weather weather_timer date
+    modules-right = music wlan eth xkeyboard weather weather_timer date
 
 [bar/main_small]
     inherit = bar/main
     modules-left = i3 services packages packages_timer rss rss_timer xwindow_small
-    # modules-right = music wlan_small alsa_small xbacklight_small battery xkeyboard date
-    modules-right = music wlan_small xkeyboard weather weather_timer date
+    modules-right = music wlan_small eth_small xkeyboard weather weather_timer date
 
 [bar/empty]
     inherit = bar/general
@@ -64,7 +62,7 @@
 
 [bar/sys_info]
     inherit = bar/empty
-    modules-right = cpu_temp cpu ram swap fs
+    modules-right = cpu_temp cpu ram swap fs_root fs_srv
 
 # modules
     # i3
@@ -72,7 +70,7 @@
     # xwindow, xwindow_small
     include-file = modules/xwindow.cfg
 
-    # wlan, wlan_small
+    # eth, eth_small, wlan, wlan_small
     include-file = modules/network.cfg
     # alsa, alsa_small, pulseaudio, pulseaudio_small
     include-file = modules/audio.cfg
@@ -91,7 +89,7 @@
     include-file = modules/cpu.cfg
     # ram, swap
     include-file = modules/memory.cfg
-    # fs
+    # fs_root, fs_srv
     include-file = modules/fs.cfg
 
     # services, music, pacman, pacman_timer, inoreader, inoreader_timer
