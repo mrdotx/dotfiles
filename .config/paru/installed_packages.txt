@@ -278,6 +278,7 @@ libavif
 libavtp
 libb2
 libbluray
+libbpf
 libbs2b
 libbsd
 libburn
