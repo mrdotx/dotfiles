@@ -74,7 +74,6 @@ kid3-qt
 kmon
 kodi
 kodi-addon-pvr-iptvsimple
-kodi-addon-visualization-spectrum
 kvantum
 libmad
 libreoffice-fresh
