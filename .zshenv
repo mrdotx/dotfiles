@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.zshenv
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-31T19:12:36+0200
+# date:   2022-04-18T11:36:51+0200
 
 # xdg paths
 export \
@@ -66,6 +66,8 @@ export \
 export \
     COLORTERM=truecolor \
     GPG_TTY=$(tty) \
+    ZSTD_NBTHREADS=0 \
+    XZ_DEFAULTS="--threads=0" \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
