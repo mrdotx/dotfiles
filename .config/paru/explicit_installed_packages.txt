@@ -23,7 +23,6 @@ bluez-utils
 btop
 btrfs-progs
 cdw
-chameleon-git
 clang
 cmus
 conky
@@ -182,6 +181,7 @@ which
 wmctrl
 xautolock
 xbanish-git
+xcolor
 xdg-utils
 xdotool
 xf86-input-wacom

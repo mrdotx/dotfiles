@@ -66,7 +66,6 @@ cblas
 cdparanoia
 cdrtools
 cdw
-chameleon-git
 chromaprint
 cifs-utils
 clang
@@ -641,7 +640,6 @@ python-discid
 python-distlib
 python-distro
 python-dnspython
-python-docopt
 python-fasteners
 python-html5lib
 python-idna
@@ -679,7 +677,6 @@ python-toml
 python-tomli
 python-urllib3
 python-webencodings
-python-xlib
 python-yaml
 python-zipp
 qpdf
@@ -823,6 +820,7 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
+xcolor
 xdg-dbus-proxy
 xdg-utils
 xdotool
