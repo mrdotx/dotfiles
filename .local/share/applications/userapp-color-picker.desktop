@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.1
 Type=Application
-Name=chameleon
+Name=color picker
 Comment=pick colors from screen and show hex value
 Icon=preferences-color
-Exec=chameleon.sh
+Exec=color_picker.sh
 Actions=
 Categories=Utility;Graphics;
