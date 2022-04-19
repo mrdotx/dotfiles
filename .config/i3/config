@@ -1,13 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-02T08:05:20+0200
+# date:   2022-04-19T12:20:30+0200
 
 # variables
 set $sup Mod4
 set $alt Mod1
-set $primary DisplayPort-0
-set $secondary HDMI-A-0
+set $monitor1 DisplayPort-0
+set $monitor2 HDMI-A-0
 set $font pango:DejaVu Sans Mono, Font Awesome 6 Free, Font Awesome 6 Brands 10
 
 # config
@@ -22,43 +22,32 @@ gaps outer 5
 smart_gaps on
 smart_borders on
 
-# colors
-set_from_resource $black0   i3wm.color0     #000000
-set_from_resource $grey0    i3wm.color8     #333333
-set_from_resource $red0     i3wm.color1     #df2800
-set_from_resource $red1     i3wm.color9     #ff5555
-set_from_resource $green0   i3wm.color2     #00b200
-set_from_resource $green1   i3wm.color10    #39ff14
-set_from_resource $yellow0  i3wm.color3     #b0b200
-set_from_resource $yellow1  i3wm.color11    #effd5f
-set_from_resource $blue0    i3wm.color4     #1f5393
-set_from_resource $blue1    i3wm.color12    #4185d7
-set_from_resource $purple0  i3wm.color5     #980096
-set_from_resource $purple1  i3wm.color13    #ff6fff
-set_from_resource $cyan0    i3wm.color6     #008081
-set_from_resource $cyan1    i3wm.color14    #7ef9ff
-set_from_resource $grey1    i3wm.color7     #cccccc
-set_from_resource $white0   i3wm.color15    #ffffff
+set_from_resource $black        i3wm.background
+set_from_resource $white        i3wm.foreground
+set_from_resource $primary      i3wm.primary
+set_from_resource $secondary    i3wm.secondary
+set_from_resource $grey         i3wm.grey
+set_from_resource $red          i3wm.red
 
-# class                 border   backgr.  text     indi.    child
-client.focused          $blue1   $blue0   $white0  $blue1   $blue1
-client.focused_inactive $grey0   $grey0   $white0  $grey0   $grey0
-client.unfocused        $grey0   $black0  $grey0   $grey0   $black0
-client.urgent           $grey0   $red1    $white0  $red1    $red1
-client.placeholder      $black0  $grey0   $white0  $black0  $grey0
-client.background       $white0
+# class                 border      backgr.     text    indi.       child
+client.focused          $primary    $secondary  $white  $primary    $primary
+client.focused_inactive $grey       $grey       $white  $grey       $grey
+client.unfocused        $grey       $black      $grey   $grey       $black
+client.urgent           $grey       $red        $white  $red        $red
+client.placeholder      $black      $grey       $white  $black      $grey
+client.background       $white
 
 # workspace output
-workspace 1 output $primary $secondary  # code
-workspace 2 output $secondary $primary  # terminal
-workspace 3 output $secondary $primary  # browser
-workspace 4 output $primary $secondary  # image
-workspace 5 output $primary $secondary  # office
-workspace 6 output $secondary $primary  # mail
-workspace 7 output $primary $secondary  # financial
-workspace 8 output $primary $secondary  # vms
-workspace 9 output $primary $secondary  # multimedia
-workspace 10 output $secondary $primary # spare
+workspace 1 output $monitor1 $monitor2  # code
+workspace 2 output $monitor2 $monitor1  # terminal
+workspace 3 output $monitor2 $monitor1  # browser
+workspace 4 output $monitor1 $monitor2  # image
+workspace 5 output $monitor1 $monitor2  # office
+workspace 6 output $monitor2 $monitor1  # mail
+workspace 7 output $monitor1 $monitor2  # financial
+workspace 8 output $monitor1 $monitor2  # vms
+workspace 9 output $monitor1 $monitor2  # multimedia
+workspace 10 output $monitor2 $monitor1 # spare
 
 # applications
 ##############
