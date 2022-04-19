@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/nsxiv
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/nsxiv
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:07:17+0200
+! date:   2022-04-19T19:52:13+0200
 
 Nsxiv.window.background: BLACK0
 Nsxiv.window.foreground: WHITE1

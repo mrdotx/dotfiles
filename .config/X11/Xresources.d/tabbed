@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/tabbed
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/tabbed
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:08:13+0200
+! date:   2022-04-19T19:53:34+0200
 
 tabbed.font:        FONT1
 tabbed.normbgcolor: SECONDARY

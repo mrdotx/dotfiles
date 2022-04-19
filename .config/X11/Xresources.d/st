@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/st
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/st
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:02:13+0200
+! date:   2022-04-19T19:53:31+0200
 
 st.font:         FONT
 st.font0:        FONT0

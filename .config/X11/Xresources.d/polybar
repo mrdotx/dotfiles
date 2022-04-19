@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/polybar
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/polybar
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:09:33+0200
+! date:   2022-04-19T19:53:22+0200
 
 Polybar.type.monitor1: main
 Polybar.type.monitor2: sys_info

@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/i3wm
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/i3wm
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:05:16+0200
+! date:   2022-04-19T19:52:09+0200
 
 i3wm.background: BLACK0
 i3wm.foreground: WHITE1

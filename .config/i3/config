@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-19T17:18:43+0200
+# date:   2022-04-19T20:07:31+0200
 
 # variables
 set $sup Mod4
@@ -49,10 +49,34 @@ workspace 8 output $monitor1 $monitor2  # vms
 workspace 9 output $monitor1 $monitor2  # multimedia
 workspace 10 output $monitor2 $monitor1 # spare
 
-# configs
-#########
+# applications
+##############
 
-include config.d/*.conf
+include config.d/applications.conf
+
+# keybindings
+#############
+
+include config.d/keybindings_applications.conf
+include config.d/keybindings_multimedia.conf
+include config.d/keybindings_system_management.conf
+include config.d/keybindings_windows.conf
+include config.d/keybindings_workspaces.conf
+
+# modes
+#######
+
+include config.d/mode_container.conf
+include config.d/mode_editor.conf
+include config.d/mode_exit.conf
+include config.d/mode_macros.conf
+include config.d/mode_services.conf
+include config.d/mode_ssh.conf
+
+# i3 status bar
+###############
+
+# include config.d/status_bar.conf
 
 # start systemd target
 ######################

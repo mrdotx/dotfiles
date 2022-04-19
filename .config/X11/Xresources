@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:20:04+0200
+! date:   2022-04-19T19:52:41+0200
 
 /* theme */
 #define PRIMARY         #4185d7
@@ -59,16 +59,16 @@
 *color14:               CYAN1
 *color15:               WHITE1
 
-/* modules */
-#include "modules/xft"
-#include "modules/xcursor"
-#include "modules/xautolock"
-#include "modules/wallpaper"
-#include "modules/tabbed"
-#include "modules/st"
-#include "modules/slock"
-#include "modules/rxvt-unicode"
-#include "modules/polybar"
-#include "modules/nsxiv"
-#include "modules/i3wm"
-#include "modules/dmenu"
+/* Xresources.d */
+#include "Xresources.d/xft"
+#include "Xresources.d/xcursor"
+#include "Xresources.d/xautolock"
+#include "Xresources.d/wallpaper"
+#include "Xresources.d/tabbed"
+#include "Xresources.d/st"
+#include "Xresources.d/slock"
+#include "Xresources.d/rxvt-unicode"
+#include "Xresources.d/polybar"
+#include "Xresources.d/nsxiv"
+#include "Xresources.d/i3wm"
+#include "Xresources.d/dmenu"

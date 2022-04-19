@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/slock
+! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/slock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T13:11:46+0200
+! date:   2022-04-19T19:53:28+0200
 
 slock.init:         BLACK0
 slock.input:        GREY0
