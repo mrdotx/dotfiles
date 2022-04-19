@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/polybar/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-13T19:11:31+0200
+# date:   2022-04-19T11:11:31+0200
 
 # colors
 [colors]
@@ -65,34 +65,24 @@
     modules-right = cpu_temp cpu ram swap fs_root fs_srv
 
 # modules
-    # i3
-    include-file = modules/i3.cfg
-    # xwindow, xwindow_small
-    include-file = modules/xwindow.cfg
+    # i3.cfg            -> i3
+    # xwindow.cfg       -> xwindow, xwindow_small
 
-    # eth, eth_small, wlan, wlan_small
-    include-file = modules/network.cfg
-    # alsa, alsa_small, pulseaudio, pulseaudio_small
-    include-file = modules/audio.cfg
-    # xbacklight, xbacklight_small
-    include-file = modules/xbacklight.cfg
-    # battery
-    include-file = modules/battery.cfg
-    # xkeyboard
-    include-file = modules/xkeyboard.cfg
-    # date
-    include-file = modules/date.cfg
+    # network.cfg       -> eth, eth_small, wlan, wlan_small
+    # audio.cfg         -> alsa, alsa_small, pulseaudio, pulseaudio_small
+    # xbacklight.cfg    -> xbacklight, xbacklight_small
+    # battery.cfg       -> battery
+    # xkeyboard.cfg     -> xkeyboard
+    # date.cfg          -> date
 
-    # cpu_temp
-    include-file = modules/temperature.cfg
-    # cpu
-    include-file = modules/cpu.cfg
-    # ram, swap
-    include-file = modules/memory.cfg
-    # fs_root, fs_srv
-    include-file = modules/fs.cfg
+    # temperature.cfg   -> cpu_temp
+    # cpu.cfg           -> cpu
+    # memory.cfg        -> ram, swap
+    # fs.cfg            -> fs_root, fs_srv
 
-    # services, music, pacman, pacman_timer, inoreader, inoreader_timer
-    include-file = modules/custom.cfg
+    # custom.cfg        -> services, music,
+    #                      pacman, pacman_timer, inoreader, inoreader_timer
+
+    include-directory = modules
 
 # vim:ft=cfg
