@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/filetypes.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-04-19T10:39:18+0200
+" date:   2022-04-19T19:43:28+0200
 
 " enable spell check
 autocmd FileType tex,latex,markdown,gitcommit
@@ -12,10 +12,10 @@ autocmd BufWritePost *.config/tmux/tmux.conf
     \ !pgrep tmux >/dev/null 2>&1
     \ && tmux source-file ~/.config/tmux/tmux.conf
 " merge xrdb whenever xresources are updated
-autocmd BufWritePost *.config/X11/modules/*
+autocmd BufWritePost *.config/X11/Xresources.d/*
                    \,*.config/X11/Xresources
     \ !xrdb -merge ~/.config/X11/Xresources
-autocmd BufWritePost *.config/X11/modules/wallpaper
+autocmd BufWritePost *.config/X11/Xresources.d/wallpaper
     \ !systemctl --user restart wallpaper.service
 " reload i3 whenever i3 configs are updated
 autocmd BufWritePost *.config/i3/*
@@ -24,7 +24,7 @@ autocmd BufWritePost *.config/i3/*
 " restart polybar whenever polybar configs are updated
 autocmd BufWritePost *.config/polybar/*
                    \,*.config/X11/Xresources
-                   \,*.config/X11/modules/polybar
+                   \,*.config/X11/Xresources.d/polybar
     \ !systemctl --user restart "polybar.service"
 
 " edit gpg encrypted files
