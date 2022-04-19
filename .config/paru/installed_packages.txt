@@ -664,7 +664,6 @@ python-pyopenssl
 python-pyparsing
 python-pyqt5
 python-pyqt5-sip
-python-pytz
 python-readability-lxml
 python-requests
 python-resolvelib
