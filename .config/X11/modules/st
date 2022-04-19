@@ -1,14 +1,14 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/st
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-12T17:10:46+0100
+! date:   2022-04-19T13:02:13+0200
 
 st.font:         FONT
 st.font0:        FONT0
 st.font1:        FONT1
-st.background:   BLACK
-st.foreground:   WHITE
-st.cursorColor:  BLUE1
+st.background:   BLACK0
+st.foreground:   WHITE1
+st.cursorColor:  PRIMARY
 st.termname:     st-256color
 st.shell:        /bin/sh
 st.minlatency:   8

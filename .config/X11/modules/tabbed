@@ -1,13 +1,13 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/tabbed
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-31T19:50:56+0200
+! date:   2022-04-19T13:08:13+0200
 
 tabbed.font:        FONT1
-tabbed.normbgcolor: BLUE0
-tabbed.normfgcolor: GREY3
-tabbed.selbgcolor:  BLUE1
-tabbed.selfgcolor:  WHITE
+tabbed.normbgcolor: SECONDARY
+tabbed.normfgcolor: WHITE0
+tabbed.selbgcolor:  PRIMARY
+tabbed.selfgcolor:  WHITE1
 tabbed.urgbgcolor:  GREY0
 tabbed.urgfgcolor:  RED0
 

@@ -1,22 +1,22 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/dmenu
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-28T16:15:28+0200
+! date:   2022-04-19T13:06:57+0200
 
 dmenu.font:                    FONT
 dmenu.font0:                   FONT0
 dmenu.font1:                   FONT1
-dmenu.foreground:              GREY3
-dmenu.background:              BLACK
-dmenu.selforeground:           GREY3
-dmenu.selbackground:           BLUE1
-dmenu.selhighlightforeground:  WHITE
-dmenu.selhighlightbackground:  BLUE1
-dmenu.normhighlightforeground: BLUE1
-dmenu.normhighlightbackground: BLACK
-dmenu.outforeground:           BLACK
-dmenu.outbackground:           BLUE0
-dmenu.outhighlightforeground:  GREY3
-dmenu.outhighlightbackground:  BLUE0
+dmenu.foreground:              WHITE0
+dmenu.background:              BLACK0
+dmenu.selforeground:           WHITE0
+dmenu.selbackground:           PRIMARY
+dmenu.selhighlightforeground:  WHITE1
+dmenu.selhighlightbackground:  PRIMARY
+dmenu.normhighlightforeground: PRIMARY
+dmenu.normhighlightbackground: BLACK0
+dmenu.outforeground:           BLACK0
+dmenu.outbackground:           SECONDARY
+dmenu.outhighlightforeground:  WHITE0
+dmenu.outhighlightbackground:  SECONDARY
 
 ! vim:ft=xdefaults

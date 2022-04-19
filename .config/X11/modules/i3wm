@@ -1,13 +1,13 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/i3wm
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T10:34:24+0200
+! date:   2022-04-19T13:05:16+0200
 
-i3wm.background: BLACK
-i3wm.foreground: WHITE
-i3wm.primary:    BLUE1
-i3wm.secondary:  BLUE0
-i3wm.grey:       GREY1
+i3wm.background: BLACK0
+i3wm.foreground: WHITE1
+i3wm.primary:    PRIMARY
+i3wm.secondary:  SECONDARY
+i3wm.grey:       BLACK1
 i3wm.red:        RED1
 
 ! vim:ft=xdefaults

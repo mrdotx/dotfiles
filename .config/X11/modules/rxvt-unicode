@@ -1,16 +1,16 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-12T17:11:25+0100
+! date:   2022-04-19T12:56:12+0200
 
 URxvt.font:                        xft:FONT, \
                                    xft:FONT0, \
                                    xft:FONT1
 URxvt.background:                  OPACITY0
-URxvt.foreground:                  WHITE
-URxvt.cursorColor:                 BLUE1
-URxvt.highlightColor:              BLUE1
-URxvt.highlightTextColor:          WHITE
+URxvt.foreground:                  WHITE1
+URxvt.cursorColor:                 PRIMARY
+URxvt.highlightColor:              PRIMARY
+URxvt.highlightTextColor:          WHITE1
 URxvt.termName:                    rxvt-unicode-256color
 URxvt.depth:                       32
 URxvt.scrollBar:                   false
@@ -42,6 +42,6 @@ URxvt.url-launcher:                link_handler.sh
 URxvt.keysym.Meta-o:               perl:matcher:select
 URxvt.matcher.button:              1
 URxvt.matcher.rend.0:              Italic Bold fg8
-URxvt.colorUL:                     BLUE1
+URxvt.colorUL:                     PRIMARY
 
 ! vim:ft=xdefaults

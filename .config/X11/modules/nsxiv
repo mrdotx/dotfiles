@@ -1,13 +1,13 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/modules/nsxiv
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-03-31T19:46:31+0200
+! date:   2022-04-19T13:07:17+0200
 
-Nsxiv.window.background: BLACK
-Nsxiv.window.foreground: WHITE
+Nsxiv.window.background: BLACK0
+Nsxiv.window.foreground: WHITE1
 Nsxiv.bar.font:          FONT1
-Nsxiv.bar.background:    BLACK
-Nsxiv.bar.foreground:    GREY3
-Nsxiv.mark.foreground:   BLUE1
+Nsxiv.bar.background:    BLACK0
+Nsxiv.bar.foreground:    WHITE0
+Nsxiv.mark.foreground:   PRIMARY
 
 ! vim:ft=xdefaults

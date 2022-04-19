@@ -1,9 +1,23 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T10:41:42+0200
+! date:   2022-04-19T13:20:04+0200
+
+/* theme */
+#define PRIMARY         #4185d7
+#define SECONDARY       #1f5393
+#define GREY0           #2b2b2b
+#define GREY1           #666666
+
+/* transparency */
+#define ALPHA           0.90
+#define OPACITY0        [90]#000000
+#define OPACITY1        #e6000000
 
 /* colors */
+#define BLACK0          #000000
+#define BLACK1          #333333
+
 #define RED0            #df2800
 #define RED1            #ff5555
 
@@ -22,41 +36,28 @@
 #define CYAN0           #008081
 #define CYAN1           #7ef9ff
 
-#define BLACK           #000000
-#define GREY0           #2b2b2b
-#define GREY1           #333333
-#define GREY2           #666666
-#define GREY3           #cccccc
-#define WHITE           #ffffff
-
-/* transparency */
-#define ALPHA           0.90
-#define OPACITY0        [90]#000000
-#define OPACITY1        #e6000000
-
-/* general */
-*background:            BLACK
-*foreground:            WHITE
+#define WHITE0          #cccccc
+#define WHITE1          #ffffff
 
 /* normal */
-*color0:                BLACK
+*color0:                BLACK0
 *color1:                RED0
 *color2:                GREEN0
 *color3:                YELLOW0
 *color4:                BLUE0
 *color5:                MAGENTA0
 *color6:                CYAN0
-*color7:                GREY3
+*color7:                WHITE0
 
 /* bright */
-*color8:                GREY1
+*color8:                BLACK1
 *color9:                RED1
 *color10:               GREEN1
 *color11:               YELLOW1
 *color12:               BLUE1
 *color13:               MAGENTA1
 *color14:               CYAN1
-*color15:               WHITE
+*color15:               WHITE1
 
 /* modules */
 #include "modules/xft"
