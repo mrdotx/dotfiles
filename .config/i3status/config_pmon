@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-11-20T19:39:36+0100
+# date:   2022-04-20T15:34:12+0200
 
 general {
         colors = true
@@ -41,3 +41,5 @@ battery 0 {
 time {
         format = " %a %d.%m.%Y %k:%M"
 }
+
+# vim:ft=i3config

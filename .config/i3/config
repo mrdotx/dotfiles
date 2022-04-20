@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-19T20:07:31+0200
+# date:   2022-04-20T15:26:43+0200
 
 # variables
 set $sup Mod4
@@ -82,5 +82,3 @@ include config.d/mode_ssh.conf
 ######################
 
 exec --no-startup-id systemctl --user start i3.target
-
-# vim:ft=config
