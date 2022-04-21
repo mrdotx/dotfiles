@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2021-12-18T20:53:36+0100
+date:   2022-04-21T08:53:43+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -19,7 +19,7 @@ class FzfFind(Command):
     Search(find) for files/folder and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        command="find -L . \\( -path '*/\\.*' \
+        command = "find -L . \\( -path '*/\\.*' \
                         -o -fstype 'dev' \
                         -o -fstype 'proc' \\) \
                     -prune -o -print 2> /dev/null \
@@ -44,7 +44,7 @@ class FzfLocate(Command):
     Search(locate) for files/folder and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        command="fzf_path=\"$(pwd)\"; \
+        command = "fzf_path=\"$(pwd)\"; \
                 plocate $fzf_path \
                 | sed \"1d;s#$fzf_path/##g\" \
                 | fzf -e -i --preview 'highlight {1}' \
@@ -63,11 +63,18 @@ class FzfGrep(Command):
     """
     :FzfGrep <query>
 
-    Search(grep) file content and use fzf to preview(highlight)/select.
+    Search(grep) file content, use fzf to preview(highlight)/select file and
+    open file with search string in editor.
     """
     def execute(self):
-        command="grep --color=never -irs -- " + str(self.rest(1)) + " \
-                | cut -d ':' -f1 \
+        if self.arg(1):
+            search_string = str(self.rest(1))
+        else:
+            self.fm.notify("Usage: fzfgrep \"<search string>\"", bad=True)
+            return
+
+        command = "grep --color=never -irs -- " + search_string + " \
+                | cut -d':' -f1 \
                 | uniq \
                 | fzf -e -i --preview 'highlight {1}' \
                     --preview-window 'right:70%'"
@@ -75,7 +82,7 @@ class FzfGrep(Command):
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
             fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
-            if os.path.isdir(fzf_file):
-                self.fm.cd(fzf_file)
-            else:
+            if os.path.isfile(fzf_file):
+                run_file = "$EDITOR %s -c /%s" % (fzf_file, search_string)
                 self.fm.select_file(fzf_file)
+                self.fm.run(run_file)
