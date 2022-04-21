@@ -549,7 +549,6 @@ ncdu
 ncurses
 neon
 neovim
-neovim-symlinks
 nerd-fonts-dejavu-complete
 net-snmp
 netpbm
