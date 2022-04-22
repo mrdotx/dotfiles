@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-10-12T13:09:59+0200
+# date:   2022-04-22T12:24:17+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -103,17 +103,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots) # hidden files
-
-# pip zsh completion
-function _pip_completion {
-    local words cword
-    read -Ac words
-    read -cn cword
-    reply=( $( COMP_WORDS="$words[*]" \
-               COMP_CWORD=$(( cword-1 )) \
-               PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-}
-compctl -K _pip_completion pip
 
 # fuzzy finder completion
 . /usr/share/fzf/completion.zsh
