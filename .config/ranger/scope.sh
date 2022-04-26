@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-12-18T17:49:38+0100
+# date:   2022-04-26T10:19:23+0200
 
 # exit | function   | action of ranger
 
@@ -115,21 +115,21 @@ handle_extension() {
             ;;
         otf | ttf | woff | ttc)
             preview_text() {
-                printf "%s\n%s\n%s\n%s\n%s\n%s" \
-                    "AÄBCDEFGHIJKLMN" \
-                    "OÖPQRSẞTUÜVWXYZ" \
-                    "aäbcdefghijklmn" \
-                    "oöpqrsßtuüvwxyz" \
-                    "1234567890,.*/+-=\%" \
+                printf "%s" \
+                    "AÄBCDEFGHIJKLMN\n" \
+                    "OÖPQRSẞTUÜVWXYZ\n" \
+                    "aäbcdefghijklmn\n" \
+                    "oöpqrsßtuüvwxyz\n" \
+                    "1234567890,.*/+-=\%\n" \
                     "~!?@#§$&(){}[]<>;:"
             }
-            font_name="$( \
+            font_name() {
                 fc-list \
                     | grep "$file_path" \
                     | cut -d ':' -f2 \
                     | sed 's/^ //' \
-                    | tail -1 \
-            )"
+                    | tail -1
+            }
             # workaround for transparent background due to hardcoded .jpg in
             # actions.py is convert to png and rename the file to jpg
             convert -size "960x960" xc:"#000000" \
@@ -142,7 +142,7 @@ handle_extension() {
                 -fill "#4185d7" \
                 -gravity SouthWest \
                 -pointsize 24 \
-                -annotate +0+0 "$font_name" \
+                -annotate +0+0 "$(font_name)" \
                 -flatten "$image_cache_path.png" \
                     && mv "$image_cache_path.png" "$image_cache_path" \
                     && exit 6
