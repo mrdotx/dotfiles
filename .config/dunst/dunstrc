@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-12T10:20:37+0200
+# date:   2022-04-27T11:05:20+0200
 
 [global]
     ### Display ###
@@ -33,10 +33,10 @@
     height = 1050
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-right
 
     # Offset from the origin
-    offset = 5x31
+    offset = 0x0
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -55,7 +55,7 @@
     progress_bar_height = 20
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 2
+    progress_bar_frame_width = 1
 
     # Set the minimum width for the progress bar
     progress_bar_min_width = 150
@@ -88,7 +88,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 2
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     frame_color = "#4185d7"
