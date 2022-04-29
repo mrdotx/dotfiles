@@ -21,7 +21,6 @@ bison
 bluez
 bluez-utils
 btop
-btrfs-progs
 cdw
 clang
 cmus

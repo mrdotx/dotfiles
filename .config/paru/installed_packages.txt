@@ -52,7 +52,6 @@ botan
 box2d
 brotli
 btop
-btrfs-progs
 bubblewrap
 bzip2
 c-ares
