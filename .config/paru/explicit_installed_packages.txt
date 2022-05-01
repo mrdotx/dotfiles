@@ -104,6 +104,7 @@ mesa-vdpau
 mpv
 ncdu
 neovim
+neovim-symlinks
 nerd-fonts-dejavu-complete
 newsboat
 nodejs

@@ -548,6 +548,7 @@ ncdu
 ncurses
 neon
 neovim
+neovim-symlinks
 nerd-fonts-dejavu-complete
 net-snmp
 netpbm
@@ -684,7 +685,7 @@ rxvt-unicode-truecolor-wide-glyphs
 sane
 sbc
 scribus
-sdl
+sdl12-compat
 sdl2
 sed
 semver
