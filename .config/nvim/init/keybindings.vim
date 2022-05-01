@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-31T09:18:50+0200
+" date:   2022-05-01T12:10:36+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -21,9 +21,9 @@ nnoremap <silent>       <leader>bn  :bnext<cr>
 nnoremap <silent>       <leader>bp  :bprevious<cr>
 
 " spell check
-nnoremap <silent>       <leader>de  :setlocal spell! spelllang=en_us<cr>
-nnoremap <silent>       <leader>dg  :setlocal spell! spelllang=de_de<cr>
-nnoremap <silent>       <leader>dx  :setlocal spell! spelllang=en_us,de_de<cr>
+nnoremap <silent>       <leader>se  :setlocal spell! spelllang=en_us<cr>
+nnoremap <silent>       <leader>sg  :setlocal spell! spelllang=de_de<cr>
+nnoremap <silent>       <leader>sx  :setlocal spell! spelllang=en_us,de_de<cr>
 
 " show hidden characters
 nnoremap <silent>       <leader>l   :set list! list?<cr>
@@ -33,7 +33,7 @@ nnoremap                <leader>r   :%s///gc<left><left><left>
 nnoremap <silent>       <leader>rt  :%s/	/    /g<cr>
 
 " terminal
-nnoremap <silent><expr> <leader>s   ":".winheight(0)/3
+nnoremap <silent><expr> <leader>c   ":".winheight(0)/3
                                     \ ."split term://shellcheck -x %:p<cr>"
 nnoremap <expr>         <leader>t   ":".winheight(0)/3
                                     \ ."split term://%:p"
