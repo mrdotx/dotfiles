@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.1
-Type=Application
-Name=vim
-Comment=shortcuts to start vim
-Icon=nvim
-Exec=dmenu_vim.sh
-Actions=
-Categories=Utility;
