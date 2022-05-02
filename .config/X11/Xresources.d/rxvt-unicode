@@ -1,11 +1,14 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T19:53:25+0200
+! date:   2022-05-02T10:40:36+0200
 
-URxvt.font:                        xft:FONT, \
-                                   xft:FONT0, \
-                                   xft:FONT1
+URxvt.font:                        xft:FONT0, \
+                                   xft:FONT1, \
+                                   xft:FONT2, \
+                                   xft:FONT3, \
+                                   xft:FONT4, \
+                                   xft:FONT5
 URxvt.background:                  OPACITY0
 URxvt.foreground:                  WHITE1
 URxvt.cursorColor:                 PRIMARY
