@@ -159,7 +159,6 @@ thunderbird-i18n-de
 tmux
 trash-cli
 tree
-ttf-font-awesome
 ttf-joypixels
 unarj
 unrar

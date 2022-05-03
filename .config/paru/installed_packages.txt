@@ -745,7 +745,6 @@ tree
 tree-sitter
 tslib
 ttf-dejavu
-ttf-font-awesome
 ttf-joypixels
 twolame
 tzdata
