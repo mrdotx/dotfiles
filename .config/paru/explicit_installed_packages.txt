@@ -135,7 +135,7 @@ python
 python-beautifulsoup4
 python-cssselect
 python-readability-lxml
-qt6ct
+qt5ct
 radeontop
 ranger
 rclone
