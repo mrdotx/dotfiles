@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-07-13T18:02:18+0200
+" date:   2022-05-04T17:48:01+0200
 
 hi clear
 set background=dark
@@ -17,7 +17,7 @@ let g:colors_name="klassiker"
 " GUI: #b0b200, Term: 3
 " GUI: #4185d7, Term: 12
 " GUI: #980096, Term: 5
-" GUI: #008081, Term: 12
+" GUI: #008081, Term: 6
 " GUI: #ffffff, Term: 15
 
 " GUI: #2b2b2b, Term: 234
@@ -34,18 +34,18 @@ let g:colors_name="klassiker"
 
 " popup Menu
 hi Pmenu guifg=#ffffff guibg=#223344 gui=NONE ctermfg=15 ctermbg=23 cterm=NONE
-hi PmenuSet guifg=#008081 guibg=#000000 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
-hi PmenuSBar guifg=#008081 guibg=#334455 gui=NONE ctermfg=12 ctermbg=59 cterm=NONE
-hi PmenuSel guifg=#008081 guibg=#334455 gui=NONE ctermfg=12 ctermbg=59 cterm=NONE
+hi PmenuSet guifg=#008081 guibg=#000000 gui=NONE ctermfg=6 ctermbg=0 cterm=NONE
+hi PmenuSBar guifg=#008081 guibg=#334455 gui=NONE ctermfg=6 ctermbg=59 cterm=NONE
+hi PmenuSel guifg=#008081 guibg=#334455 gui=NONE ctermfg=6 ctermbg=59 cterm=NONE
 hi PmenuThumb guifg=#778899 guibg=#778899 gui=NONE ctermfg=103 ctermbg=103 cterm=NONE
 
 " editor
 hi Normal guifg=#ffffff guibg=#000000 gui=NONE ctermfg=15 ctermbg=0 cterm=NONE
-hi Conceal guifg=#008081 guibg=#000000 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+hi Conceal guifg=#008081 guibg=#000000 gui=NONE ctermfg=6 ctermbg=0 cterm=NONE
 hi NonText guifg=#334455 guibg=NONE gui=NONE ctermfg=59 ctermbg=NONE cterm=NONE
-hi StatusLine guifg=#008081 guibg=#000000 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+hi StatusLine guifg=#008081 guibg=#000000 gui=NONE ctermfg=6 ctermbg=0 cterm=NONE
 hi StatusLineNC guifg=#778899 guibg=#000000 gui=NONE ctermfg=103 ctermbg=0 cterm=NONE
-hi Search guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=221 cterm=NONE
+hi Search guifg=#ffffff guibg=#b0b200 gui=NONE ctermfg=15 ctermbg=3 cterm=NONE
 hi VertSplit guifg=#4185d7 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -59,7 +59,7 @@ hi WarningMsg guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=N
 
 " spelling
 hi SpellBad guifg=#ffffff guibg=NONE gui=undercurl ctermfg=15 ctermbg=NONE cterm=undercurl guisp=#f92782
-hi SpellLocal guifg=#008081 guibg=NONE gui=undercurl ctermfg=12 ctermbg=NONE cterm=undercurl guisp=#008081
+hi SpellLocal guifg=#008081 guibg=NONE gui=undercurl ctermfg=6 ctermbg=NONE cterm=undercurl guisp=#008081
 
 " tabline
 hi TabLine guifg=#666666 guibg=#000000 gui=NONE ctermfg=242 ctermbg=0 cterm=NONE
@@ -69,7 +69,7 @@ hi TabLineFill guifg=#000000 guibg=#000000 gui=NONE ctermfg=0 ctermbg=0 cterm=NO
 " misc
 hi SpecialKey guifg=#334455 guibg=NONE gui=NONE ctermfg=59 ctermbg=NONE cterm=NONE
 hi Title guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
-hi Directory guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi Directory guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 
 " diff
 hi DiffAdd guifg=#ffffff guibg=#005f00 gui=NONE ctermfg=15 ctermbg=22 cterm=NONE
@@ -98,7 +98,7 @@ hi Float guifg=#980096 guibg=NONE gui=NONE ctermfg=5 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#980096 guibg=NONE gui=NONE ctermfg=5 ctermbg=NONE cterm=NONE
 hi Character guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
 hi String guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
-hi Type guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi Type guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 hi Structure guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi StorageClass guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi TypeDef guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
@@ -107,17 +107,17 @@ hi Function guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
 hi Statement guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Operator guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Label guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
-hi Keyword guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi Keyword guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 hi Preproc guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi Include guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
-hi Define guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi Include guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
+hi Define guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 hi Macro guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
 hi PreCondit guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
-hi Special guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi Special guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 hi SpecialChar guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Delimiter guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Comment guifg=#4185d7 guibg=NONE gui=italic ctermfg=12 ctermbg=NONE cterm=italic
-hi SpecialComment guifg=#008081 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
+hi SpecialComment guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 hi Tag guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
 hi Underlined guifg=#00b200 guibg=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
 hi Ignore guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
