@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-04T17:48:01+0200
+" date:   2022-05-05T17:54:23+0200
 
 hi clear
 set background=dark
@@ -15,13 +15,14 @@ let g:colors_name="klassiker"
 " GUI: #df2800, Term: 1
 " GUI: #00b200, Term: 2
 " GUI: #b0b200, Term: 3
-" GUI: #4185d7, Term: 12
 " GUI: #980096, Term: 5
 " GUI: #008081, Term: 6
+" GUI: #333333, Term: 8
+" GUI: #4185d7, Term: 12
+" GUI: #7ef9ff, Term: 14
 " GUI: #ffffff, Term: 15
 
 " GUI: #2b2b2b, Term: 234
-" GUI: #333333, Term: 8
 " GUI: #666666, Term: 242
 
 " GUI: #223344, Term: 23
@@ -45,7 +46,8 @@ hi Conceal guifg=#008081 guibg=#000000 gui=NONE ctermfg=6 ctermbg=0 cterm=NONE
 hi NonText guifg=#334455 guibg=NONE gui=NONE ctermfg=59 ctermbg=NONE cterm=NONE
 hi StatusLine guifg=#008081 guibg=#000000 gui=NONE ctermfg=6 ctermbg=0 cterm=NONE
 hi StatusLineNC guifg=#778899 guibg=#000000 gui=NONE ctermfg=103 ctermbg=0 cterm=NONE
-hi Search guifg=#ffffff guibg=#b0b200 gui=NONE ctermfg=15 ctermbg=3 cterm=NONE
+hi WildMenu guifg=#000000 guibg=#b0b200 gui=NONE ctermfg=0 ctermbg=3 cterm=NONE
+hi Search guifg=#000000 guibg=#7ef9ff gui=NONE ctermfg=0 ctermbg=14 cterm=NONE
 hi VertSplit guifg=#4185d7 guibg=NONE gui=NONE ctermfg=12 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#778899 guibg=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
