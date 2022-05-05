@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-05T17:54:23+0200
+" date:   2022-05-05T21:29:16+0200
 
 hi clear
 set background=dark
@@ -18,6 +18,8 @@ let g:colors_name="klassiker"
 " GUI: #980096, Term: 5
 " GUI: #008081, Term: 6
 " GUI: #333333, Term: 8
+" GUI: #ff5555, Term: 9
+" GUI: #39ff14, Term: 10
 " GUI: #4185d7, Term: 12
 " GUI: #7ef9ff, Term: 14
 " GUI: #ffffff, Term: 15
@@ -29,9 +31,6 @@ let g:colors_name="klassiker"
 " GUI: #334455, Term: 59
 " GUI: #778899, Term: 103
 " GUI: #f92782, Term: 197
-
-" GUI: #005f00, Term: 22
-" GUI: #5f0000, Term: 52
 
 " popup Menu
 hi Pmenu guifg=#ffffff guibg=#223344 gui=NONE ctermfg=15 ctermbg=23 cterm=NONE
@@ -56,11 +55,11 @@ hi SignColumn guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NON
 hi Question guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
 hi ModeMsg guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
 hi MoreMsg guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
-hi ErrorMsg guifg=#000000 guibg=#f92782 gui=NONE ctermfg=0 ctermbg=197 cterm=NONE
-hi WarningMsg guifg=#f92782 guibg=NONE gui=NONE ctermfg=197 ctermbg=NONE cterm=NONE
+hi ErrorMsg guifg=#000000 guibg=#ff5555 gui=NONE ctermfg=0 ctermbg=9 cterm=NONE
+hi WarningMsg guifg=#ff5555 guibg=NONE gui=NONE ctermfg=9 ctermbg=NONE cterm=NONE
 
 " spelling
-hi SpellBad guifg=#ffffff guibg=NONE gui=undercurl ctermfg=15 ctermbg=NONE cterm=undercurl guisp=#f92782
+hi SpellBad guifg=#ffffff guibg=NONE gui=undercurl ctermfg=15 ctermbg=NONE cterm=undercurl guisp=#ff5555
 hi SpellLocal guifg=#008081 guibg=NONE gui=undercurl ctermfg=6 ctermbg=NONE cterm=undercurl guisp=#008081
 
 " tabline
@@ -74,9 +73,9 @@ hi Title guifg=#b0b200 guibg=NONE gui=NONE ctermfg=3 ctermbg=NONE cterm=NONE
 hi Directory guifg=#008081 guibg=NONE gui=NONE ctermfg=6 ctermbg=NONE cterm=NONE
 
 " diff
-hi DiffAdd guifg=#ffffff guibg=#005f00 gui=NONE ctermfg=15 ctermbg=22 cterm=NONE
-hi DiffDelete guifg=#f92782 guibg=#5f0000 gui=NONE ctermfg=197 ctermbg=52 cterm=NONE
-hi DiffChange guifg=#b0b200 guibg=#5f0000 gui=NONE ctermfg=3 ctermbg=52 cterm=NONE
+hi DiffAdd guifg=#000000 guibg=#39ff14 gui=NONE ctermfg=0 ctermbg=10 cterm=NONE
+hi DiffDelete guifg=#666666 guibg=#ff5555 gui=NONE ctermfg=242 ctermbg=9 cterm=NONE
+hi DiffChange guifg=#2b2b2b guibg=#ff5555 gui=NONE ctermfg=234 ctermbg=9 cterm=NONE
 hi DiffText guifg=#ffffff guibg=NONE gui=NONE ctermfg=15 ctermbg=NONE cterm=NONE
 
 " folding
