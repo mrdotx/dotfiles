@@ -562,7 +562,6 @@ npth
 nspr
 nss
 nsxiv
-ntfs-3g
 ocl-icd
 odt2txt
 openal

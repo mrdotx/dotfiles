@@ -110,7 +110,6 @@ newsboat
 nodejs
 npm
 nsxiv
-ntfs-3g
 ocl-icd
 odt2txt
 opencl-mesa
