@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/highlight/klassiker.theme
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2021-05-28T11:51:20+0200
+-- date:   2022-05-05T17:43:19+0200
 
 Description="klassiker"
 
@@ -9,13 +9,13 @@ Categories = {"dark"}
 
 Default       = { Colour="#ffffff" }
 Canvas        = { Colour="#000000" }
-Number        = { Colour="#ae81ff" }
-Escape        = { Colour="#009698" }
+Number        = { Colour="#980096" }
+Escape        = { Colour="#008081" }
 String        = { Colour="#b0b200" }
 StringPreProc = { Colour="#00b200" }
 BlockComment  = { Colour="#4185d7" }
 PreProcessor  = { Colour="#00b200" }
-LineNum       = { Colour="#8f908a" }
+LineNum       = { Colour="#778899" }
 Operator      = { Colour="#f92782" }
 LineComment   = { Colour="#4185d7" }
 Interpolation = { Colour="#00b200" }
