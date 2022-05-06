@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-06T18:17:43+0200
+" date:   2022-05-06T19:07:48+0200
 
 hi clear
 set background=dark
@@ -10,30 +10,30 @@ if exists("syntax_on")
 endif
 let g:colors_name   = "klassiker"
 
-"   color       = gui       ,term
-let s:black0    = ["#000000","0"]
-let s:black1    = ["#333333","8"]
-let s:red0      = ["#df2800","1"]
-let s:red1      = ["#ff5555","9"]
-let s:green0    = ["#00b200","2"]
-let s:green1    = ["#39ff14","10"]
-let s:yellow0   = ["#b0b200","3"]
-let s:yellow1   = ["#effd5f","11"]
-let s:blue0     = ["#1f5393","4"]
-let s:blue1     = ["#4185d7","12"]
-let s:magenta0  = ["#980096","5"]
-let s:magenta1  = ["#ff6fff","13"]
-let s:cyan0     = ["#008081","6"]
-let s:cyan1     = ["#7ef9ff","14"]
-let s:white0    = ["#cccccc","7"]
-let s:white1    = ["#ffffff","15"]
+"   color           =  gui       ,term
+let s:black0        = ["#000000" ,"0"  ]
+let s:black1        = ["#333333" ,"8"  ]
+let s:red0          = ["#df2800" ,"1"  ]
+let s:red1          = ["#ff5555" ,"9"  ]
+let s:green0        = ["#00b200" ,"2"  ]
+let s:green1        = ["#39ff14" ,"10" ]
+let s:yellow0       = ["#b0b200" ,"3"  ]
+let s:yellow1       = ["#effd5f" ,"11" ]
+let s:blue0         = ["#1f5393" ,"4"  ]
+let s:blue1         = ["#4185d7" ,"12" ]
+let s:magenta0      = ["#980096" ,"5"  ]
+let s:magenta1      = ["#ff6fff" ,"13" ]
+let s:cyan0         = ["#008081" ,"6"  ]
+let s:cyan1         = ["#7ef9ff" ,"14" ]
+let s:white0        = ["#cccccc" ,"7"  ]
+let s:white1        = ["#ffffff" ,"15" ]
 
-let s:grey0     = ["#2b2b2b","234"]
-let s:grey1     = ["#666666","242"]
-let s:grey2     = ["#778899","103"]
-let s:grey3     = ["#334455","59"]
-let s:grey4     = ["#223344","23"]
-let s:pink      = ["#f92782","197"]
+let s:grey0         = ["#2b2b2b" ,"234"]
+let s:grey1         = ["#666666" ,"242"]
+let s:grey2         = ["#778899" ,"103"]
+let s:grey3         = ["#334455" ,"59" ]
+let s:grey4         = ["#223344" ,"23" ]
+let s:pink          = ["#f92782" ,"197"]
 
 function! s:hi(group, fg, bg, attr, guisp)
     let cmd = ""
@@ -66,7 +66,7 @@ call s:hi("PmenuSBar"       ,s:cyan0    ,s:grey3    ,"NONE"         ,"")
 call s:hi("PmenuSel"        ,s:cyan0    ,s:grey3    ,"NONE"         ,"")
 call s:hi("PmenuThumb"      ,s:grey2    ,s:grey2    ,"NONE"         ,"")
 
-" " editor
+" editor
 call s:hi("Normal"          ,s:white1   ,s:black0   ,"NONE"         ,"")
 call s:hi("Conceal"         ,s:cyan0    ,s:black0   ,"NONE"         ,"")
 call s:hi("NonText"         ,s:grey3    ,["NONE"]   ,"NONE"         ,"")
@@ -78,40 +78,40 @@ call s:hi("VertSplit"       ,s:blue1    ,["NONE"]   ,"NONE"         ,"")
 call s:hi("LineNr"          ,s:grey2    ,["NONE"]   ,"NONE"         ,"")
 call s:hi("SignColumn"      ,["NONE"]   ,["NONE"]   ,"NONE"         ,"")
 
-" " messages
+" messages
 call s:hi("Question"        ,s:yellow0  ,["NONE"]   ,"NONE"         ,"")
 call s:hi("ModeMsg"         ,s:yellow0  ,["NONE"]   ,"NONE"         ,"")
 call s:hi("MoreMsg"         ,s:yellow0  ,["NONE"]   ,"NONE"         ,"")
 call s:hi("ErrorMsg"        ,s:black0   ,s:red0     ,"NONE"         ,"")
 call s:hi("WarningMsg"      ,s:red0     ,["NONE"]   ,"NONE"         ,"")
 
-" " spelling
-call s:hi("SpellBad"        ,s:white1   ,["NONE"]   ,"undercurl"    ,s:white1)
-call s:hi("SpellCap"        ,s:grey1    ,["NONE"]   ,"undercurl"    ,s:grey1)
-call s:hi("SpellLocal"      ,s:cyan0    ,["NONE"]   ,"undercurl"    ,s:cyan0)
-call s:hi("SpellRare"       ,s:red1     ,["NONE"]   ,"undercurl"    ,s:red1)
+" spelling
+call s:hi("SpellBad"        ,["NONE"]   ,["NONE"]   ,"undercurl"    ,s:pink)
+call s:hi("SpellCap"        ,["NONE"]   ,["NONE"]   ,"undercurl"    ,s:red1)
+call s:hi("SpellLocal"      ,["NONE"]   ,["NONE"]   ,"undercurl"    ,s:cyan0)
+call s:hi("SpellRare"       ,["NONE"]   ,["NONE"]   ,"undercurl"    ,s:grey1)
 
-" " tabline
+" tabline
 call s:hi("TabLine"         ,s:grey1    ,s:black0   ,"NONE"         ,"")
 call s:hi("TabLineSel"      ,s:white1   ,s:grey3    ,"NONE"         ,"")
 call s:hi("TabLineFill"     ,s:black0   ,s:black0   ,"NONE"         ,"")
 
-" " misc
+" misc
 call s:hi("SpecialKey"      ,s:grey3    ,["NONE"]   ,"NONE"         ,"")
 call s:hi("Title"           ,s:yellow0  ,["NONE"]   ,"NONE"         ,"")
 call s:hi("Directory"       ,s:cyan0    ,["NONE"]   ,"NONE"         ,"")
 
-" " diff
+" diff
 call s:hi("DiffAdd"         ,s:grey0    ,s:green1   ,"NONE"         ,"")
 call s:hi("DiffDelete"      ,s:grey0    ,s:red1     ,"NONE"         ,"")
 call s:hi("DiffChange"      ,s:grey0    ,s:red1     ,"NONE"         ,"")
 call s:hi("DiffText"        ,s:white1   ,["NONE"]   ,"NONE"         ,"")
 
-" " folding
+" folding
 call s:hi("Folded"          ,s:grey2    ,s:grey0    ,"NONE"         ,"")
 call s:hi("FoldColumn"      ,["NONE"]   ,s:grey0    ,"NONE"         ,"")
 
-" " cursor colors
+" cursor colors
 call s:hi("ColorColumn"     ,["NONE"]   ,s:grey4    ,"NONE"         ,"")
 call s:hi("CursorColumn"    ,["NONE"]   ,s:grey4    ,"NONE"         ,"")
 call s:hi("CursorLine"      ,["NONE"]   ,s:grey4    ,"NONE"         ,"")
@@ -121,7 +121,7 @@ call s:hi("MatchParen"      ,s:black0   ,s:yellow0  ,"NONE"         ,"")
 call s:hi("TermCursor"      ,s:black0   ,s:blue1    ,"NONE"         ,"")
 call s:hi("TermCursorNC"    ,s:black0   ,s:grey2    ,"NONE"         ,"")
 
-" " general highlighting
+" general highlighting
 call s:hi("Constant"        ,s:magenta0 ,["NONE"]   ,"NONE"         ,"")
 call s:hi("Number"          ,s:magenta0 ,["NONE"]   ,"NONE"         ,"")
 call s:hi("Float"           ,s:magenta0 ,["NONE"]   ,"NONE"         ,"")
