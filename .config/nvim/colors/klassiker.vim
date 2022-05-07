@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-07T18:09:04+0200
+" date:   2022-05-07T19:03:47+0200
 
 hi clear
 set background=dark
@@ -175,7 +175,7 @@ call s:hi("Delimiter"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
 call s:hi("SpecialComment"  ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 call s:hi("Debug"           ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 
-call s:hi("Underlined"      ,s:green0   ,s:NONE     ,"NONE"         ,"")
+call s:hi("Underlined"      ,s:cyan1    ,s:NONE     ,"NONE"         ,"")
 
 call s:hi("Ignore"          ,s:NONE     ,s:NONE     ,"NONE"         ,"")
 
