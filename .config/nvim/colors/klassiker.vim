@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-07T08:36:17+0200
+" date:   2022-05-07T18:09:04+0200
 
 hi clear
 set background=dark
@@ -60,29 +60,41 @@ endfunction
 "          group            ,fg         ,bg         ,attr           ,guisp
 " popup Menu
 call s:hi("Pmenu"           ,s:white1   ,s:grey5    ,"NONE"         ,"")
-call s:hi("PmenuSet"        ,s:cyan0    ,s:black0   ,"NONE"         ,"")
-call s:hi("PmenuSBar"       ,s:cyan0    ,s:grey4    ,"NONE"         ,"")
-call s:hi("PmenuSel"        ,s:cyan0    ,s:grey4    ,"NONE"         ,"")
+call s:hi("PmenuSBar"       ,s:blue1    ,s:grey4    ,"NONE"         ,"")
+call s:hi("PmenuSel"        ,s:blue1    ,s:grey4    ,"NONE"         ,"")
 call s:hi("PmenuThumb"      ,s:grey3    ,s:grey3    ,"NONE"         ,"")
 
 " editor
 call s:hi("Normal"          ,s:white1   ,s:black0   ,"NONE"         ,"")
+call s:hi("NormalFloat"     ,s:white1   ,s:grey5    ,"NONE"         ,"")
+call s:hi("NormalNC"        ,s:NONE     ,s:NONE     ,"NONE"         ,"")
 call s:hi("Conceal"         ,s:cyan0    ,s:black0   ,"NONE"         ,"")
 call s:hi("NonText"         ,s:grey4    ,s:NONE     ,"NONE"         ,"")
-call s:hi("StatusLine"      ,s:cyan0    ,s:black0   ,"NONE"         ,"")
+call s:hi("EndOfBuffer"     ,s:grey4    ,s:NONE     ,"NONE"         ,"")
+call s:hi("Whitespace"      ,s:grey4    ,s:NONE     ,"NONE"         ,"")
+call s:hi("ExtraWhitespace" ,s:grey1    ,s:red0     ,"NONE"         ,"")
+call s:hi("StatusLine"      ,s:blue1    ,s:black0   ,"NONE"         ,"")
 call s:hi("StatusLineNC"    ,s:grey3    ,s:black0   ,"NONE"         ,"")
-call s:hi("WildMenu"        ,s:black0   ,s:yellow0  ,"NONE"         ,"")
+call s:hi("WildMenu"        ,s:white1   ,s:blue1    ,"NONE"         ,"")
 call s:hi("Search"          ,s:white1   ,s:blue0    ,"NONE"         ,"")
+call s:hi("Substitute"      ,s:white1   ,s:blue0    ,"NONE"         ,"")
+call s:hi("IncSearch"       ,s:NONE     ,s:NONE     ,"reverse"      ,"")
+call s:hi("QuickFixLine"    ,s:white1   ,s:blue0    ,"NONE"         ,"")
 call s:hi("VertSplit"       ,s:blue1    ,s:NONE     ,"NONE"         ,"")
+call s:hi("WinSeparator"    ,s:blue1    ,s:NONE     ,"NONE"         ,"")
 call s:hi("LineNr"          ,s:grey3    ,s:NONE     ,"NONE"         ,"")
+call s:hi("LineNrAbove"     ,s:grey3    ,s:NONE     ,"NONE"         ,"")
+call s:hi("LineNrBelow"     ,s:grey3    ,s:NONE     ,"NONE"         ,"")
 call s:hi("SignColumn"      ,s:NONE     ,s:NONE     ,"NONE"         ,"")
 
 " messages
 call s:hi("Question"        ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
+call s:hi("MsgSeparator"    ,s:blue1    ,s:black0   ,"NONE"         ,"")
+call s:hi("MsgArea"         ,s:NONE     ,s:NONE     ,"NONE"         ,"")
 call s:hi("ModeMsg"         ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
 call s:hi("MoreMsg"         ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
-call s:hi("ErrorMsg"        ,s:black0   ,s:red0     ,"NONE"         ,"")
-call s:hi("WarningMsg"      ,s:red0     ,s:NONE     ,"NONE"         ,"")
+call s:hi("ErrorMsg"        ,s:white1   ,s:red1     ,"NONE"         ,"")
+call s:hi("WarningMsg"      ,s:red1     ,s:NONE     ,"NONE"         ,"")
 
 " spelling
 call s:hi("SpellBad"        ,s:NONE     ,s:NONE     ,"undercurl"    ,s:pink)
@@ -112,44 +124,61 @@ call s:hi("FoldColumn"      ,s:NONE     ,s:grey1    ,"NONE"         ,"")
 
 " cursor colors
 call s:hi("ColorColumn"     ,s:NONE     ,s:grey5    ,"NONE"         ,"")
-call s:hi("CursorColumn"    ,s:NONE     ,s:grey5    ,"NONE"         ,"")
-call s:hi("CursorLine"      ,s:NONE     ,s:grey5    ,"NONE"         ,"")
 call s:hi("Cursor"          ,s:black0   ,s:white1   ,"NONE"         ,"")
+call s:hi("lCursor"         ,s:black0   ,s:white1   ,"NONE"         ,"")
+call s:hi("CursorLine"      ,s:NONE     ,s:grey5    ,"NONE"         ,"")
+call s:hi("CursorLineNr"    ,s:yellow1  ,s:NONE     ,"bold"         ,"")
+call s:hi("CursorLineSign"  ,s:NONE     ,s:NONE     ,"NONE"         ,"")
+call s:hi("CursorLineFold"  ,s:NONE     ,s:grey1    ,"NONE"         ,"")
+call s:hi("CursorColumn"    ,s:NONE     ,s:grey5    ,"NONE"         ,"")
 call s:hi("Visual"          ,s:NONE     ,s:black1   ,"NONE"         ,"")
 call s:hi("MatchParen"      ,s:black0   ,s:yellow0  ,"NONE"         ,"")
 call s:hi("TermCursor"      ,s:black0   ,s:blue1    ,"NONE"         ,"")
 call s:hi("TermCursorNC"    ,s:black0   ,s:grey3    ,"NONE"         ,"")
 
-" general highlighting
+" naming conventions
+call s:hi("Comment"         ,s:blue1    ,s:NONE     ,"italic"       ,"")
+
 call s:hi("Constant"        ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
-call s:hi("Number"          ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
-call s:hi("Float"           ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
-call s:hi("Boolean"         ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
-call s:hi("Character"       ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
 call s:hi("String"          ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
-call s:hi("Type"            ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
-call s:hi("Structure"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
-call s:hi("StorageClass"    ,s:pink     ,s:NONE     ,"NONE"         ,"")
-call s:hi("TypeDef"         ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Character"       ,s:yellow0  ,s:NONE     ,"NONE"         ,"")
+call s:hi("Number"          ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
+call s:hi("Boolean"         ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
+call s:hi("Float"           ,s:magenta0 ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Identifier"      ,s:green0   ,s:NONE     ,"NONE"         ,"")
 call s:hi("Function"        ,s:green0   ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Statement"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
-call s:hi("Operator"        ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Conditional"     ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Repeat"          ,s:pink     ,s:NONE     ,"NONE"         ,"")
 call s:hi("Label"           ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Operator"        ,s:pink     ,s:NONE     ,"NONE"         ,"")
 call s:hi("Keyword"         ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
+call s:hi("Exception"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Preproc"         ,s:green0   ,s:NONE     ,"NONE"         ,"")
 call s:hi("Include"         ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 call s:hi("Define"          ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 call s:hi("Macro"           ,s:green0   ,s:NONE     ,"NONE"         ,"")
 call s:hi("PreCondit"       ,s:green0   ,s:NONE     ,"NONE"         ,"")
+
+call s:hi("Type"            ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
+call s:hi("StorageClass"    ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Structure"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("TypeDef"         ,s:pink     ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Special"         ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 call s:hi("SpecialChar"     ,s:pink     ,s:NONE     ,"NONE"         ,"")
-call s:hi("Delimiter"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
-call s:hi("Comment"         ,s:blue1    ,s:NONE     ,"italic"       ,"")
-call s:hi("SpecialComment"  ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
 call s:hi("Tag"             ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("Delimiter"       ,s:pink     ,s:NONE     ,"NONE"         ,"")
+call s:hi("SpecialComment"  ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
+call s:hi("Debug"           ,s:cyan0    ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Underlined"      ,s:green0   ,s:NONE     ,"NONE"         ,"")
+
 call s:hi("Ignore"          ,s:NONE     ,s:NONE     ,"NONE"         ,"")
-call s:hi("Todo"            ,s:white1   ,s:NONE     ,"bold"         ,"")
+
 call s:hi("Error"           ,s:red0     ,s:NONE     ,"NONE"         ,"")
-call s:hi("ExtraWhitespace" ,s:grey1    ,s:red0     ,"NONE"         ,"")
+
+call s:hi("Todo"            ,s:white1   ,s:NONE     ,"bold"         ,"")
