@@ -1,67 +1,68 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:56:18+0200
+" date:   2022-05-07T08:37:52+0200
 
 " klassiker color scheme
-let s:black     = [ '#121212', 233 ]
-let s:red       = [ '#df2800', 1 ]
-let s:green     = [ '#00b200', 2 ]
-let s:yellow    = [ '#b0b200', 3 ]
-let s:blue      = [ '#4185d7', 12 ]
-let s:magenta   = [ '#980096', 5 ]
-let s:cyan      = [ '#008081', 6 ]
-let s:white     = [ '#ffffff', 15 ]
+"   color           =  gui          ,term
+let s:black1        = ['#333333'    ,8  ]
+let s:red0          = ['#df2800'    ,1  ]
+let s:green0        = ['#00b200'    ,2  ]
+let s:yellow0       = ['#b0b200'    ,3  ]
+let s:blue1         = ['#4185d7'    ,12 ]
+let s:magenta0      = ['#980096'    ,5  ]
+let s:cyan0         = ['#008081'    ,6  ]
+let s:white0        = ['#cccccc'    ,7  ]
+let s:white1        = ['#ffffff'    ,15 ]
 
-let s:base0     = [ '#2b2b2b', 234 ]
-let s:base1     = [ '#333333', 8 ]
-let s:base2     = [ '#666666', 242 ]
-let s:base3     = [ '#cccccc', 251 ]
+let s:grey0         = ['#121212'    ,233]
+let s:grey1         = ['#2b2b2b'    ,234]
+let s:grey2         = ['#666666'    ,242]
 
 let s:p = {
     \ 'normal': {
-        \ 'left': [ [ s:white, s:blue ],
-        \           [ s:base3, s:base2 ],
-        \           [ s:base3, s:base0 ] ],
-        \ 'middle': [ [ s:base3, s:base0 ] ],
-        \ 'right': [ [ s:white, s:blue ],
-        \            [ s:base3, s:base2 ] ],
-        \ 'error': [ [ s:red, s:base0 ] ],
-        \ 'warning': [ [ s:yellow, s:base1 ] ]
+        \ 'left': [ [ s:white1, s:blue1 ],
+        \           [ s:white0, s:grey2 ],
+        \           [ s:white0, s:grey1 ] ],
+        \ 'middle': [ [ s:white0, s:grey1 ] ],
+        \ 'right': [ [ s:white1, s:blue1 ],
+        \            [ s:white0, s:grey2 ] ],
+        \ 'error': [ [ s:red0, s:grey1 ] ],
+        \ 'warning': [ [ s:yellow0, s:black1 ] ]
     \ },
     \ 'inactive': {
-        \ 'left': [ [ s:base3, s:base2 ],
-        \           [ s:base2, s:base0 ] ],
-        \ 'middle': [ [ s:base3, s:black ] ],
-        \ 'right': [ [ s:base3, s:base2 ],
-        \            [ s:base2, s:base1 ] ]
+        \ 'left': [ [ s:white0, s:grey2 ],
+        \           [ s:grey2, s:grey1 ] ],
+        \ 'middle': [ [ s:white0, s:grey0 ] ],
+        \ 'right': [ [ s:white0, s:grey2 ],
+        \            [ s:grey2, s:black1 ] ]
     \ },
     \ 'insert': {
-        \ 'left': [ [ s:white, s:green ],
-        \           [ s:base3, s:base2 ],
-        \           [ s:base3, s:base0 ] ],
-        \ 'right': [ [ s:white, s:green ],
-        \            [ s:base3, s:base2 ] ]
+        \ 'left': [ [ s:white1, s:green0 ],
+        \           [ s:white0, s:grey2 ],
+        \           [ s:white0, s:grey1 ] ],
+        \ 'right': [ [ s:white1, s:green0 ],
+        \            [ s:white0, s:grey2 ] ]
     \ },
     \ 'replace': {
-        \ 'left': [ [ s:white, s:red ],
-        \           [ s:base3, s:base2 ],
-        \           [ s:base3, s:base0 ] ],
-        \ 'right': [ [ s:white, s:red ],
-        \            [ s:base3, s:base2 ] ]
+        \ 'left': [ [ s:white1, s:red0 ],
+        \           [ s:white0, s:grey2 ],
+        \           [ s:white0, s:grey1 ] ],
+        \ 'right': [ [ s:white1, s:red0 ],
+        \            [ s:white0, s:grey2 ] ]
     \ },
     \ 'visual': {
-        \ 'left': [ [ s:white, s:magenta ],
-        \           [ s:base3, s:base2 ],
-        \           [ s:base3, s:base0 ] ],
-        \ 'right': [ [ s:white, s:magenta ],
-        \            [ s:base3, s:base2 ] ]
+        \ 'left': [ [ s:white1, s:magenta0 ],
+        \           [ s:white0, s:grey2 ],
+        \           [ s:white0, s:grey1 ] ],
+        \ 'right': [ [ s:white1, s:magenta0 ],
+        \            [ s:white0, s:grey2 ] ]
     \ },
     \ 'tabline': {
-        \ 'left': [ [ s:base3, s:base2 ] ],
-        \ 'middle': [ [ s:base3, s:base0 ] ],
-        \ 'right': [ [ s:base3, s:base0 ] ],
-        \ 'tabsel': [ [ s:white, s:blue ] ]
+        \ 'left': [ [ s:white0, s:grey2 ] ],
+        \ 'middle': [ [ s:white0, s:grey1 ] ],
+        \ 'right': [ [ s:white0, s:grey1 ] ],
+        \ 'tabsel': [ [ s:white1, s:blue1 ] ]
     \ }
 \ }
 
@@ -129,22 +130,22 @@ let g:lightline = {
         \ 'right': '│'
     \ },
     \ 'active': {
-		\ 'left': [ [ 'mode', 'paste' ],
+        \ 'left': [ [ 'mode', 'paste' ],
         \           [ 'gitstatus' ],
-		\           [ 'filename_modified_readonly', 'spell' ] ],
-		\ 'right': [ [ 'line_info' ],
-		\            [ 'cocstatus' ],
-		\            [ 'file_type', 'file_encoding' ] ]
+        \           [ 'filename_modified_readonly', 'spell' ] ],
+        \ 'right': [ [ 'line_info' ],
+        \            [ 'cocstatus' ],
+        \            [ 'file_type', 'file_encoding' ] ]
     \ },
-	\ 'inactive': {
-		\ 'left': [ [ 'filename' ],
+    \ 'inactive': {
+        \ 'left': [ [ 'filename' ],
         \           [ 'gitstatus' ] ],
-		\ 'right': [ [ 'line_info' ],
-		\            [ 'cocstatus' ] ]
+        \ 'right': [ [ 'line_info' ],
+        \            [ 'cocstatus' ] ]
     \ },
     \ 'component': {
-		\ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
-		\ 'file_type': '%{&ft!=#""?&ft:"[no ft]"}',
+        \ 'file_encoding': '%{&fenc!=#""?&fenc:&enc}[%{&ff}]',
+        \ 'file_type': '%{&ft!=#""?&ft:"[no ft]"}',
         \ 'line_info': '%1p%% ↓%1l/%L≡ →%-1v%<'
     \ },
     \ 'component_function': {
