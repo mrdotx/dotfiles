@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-09T08:36:01+0200
+" date:   2022-05-09T17:52:52+0200
 
 hi clear
 set background=dark
@@ -113,10 +113,10 @@ call s:hi("Title"           ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("Directory"       ,s:blue1    ,s:NONE     ,"NONE"         ,"NONE")
 
 " diff
-call s:hi("DiffAdd"         ,s:grey1    ,s:green1   ,"NONE"         ,"NONE")
-call s:hi("DiffDelete"      ,s:grey1    ,s:red1     ,"NONE"         ,"NONE")
-call s:hi("DiffChange"      ,s:grey1    ,s:red1     ,"NONE"         ,"NONE")
-call s:hi("DiffText"        ,s:white1   ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("DiffAdd"         ,s:grey0    ,s:green1   ,"NONE"         ,"NONE")
+call s:hi("DiffDelete"      ,s:grey0    ,s:red1     ,"NONE"         ,"NONE")
+call s:hi("DiffChange"      ,s:grey0    ,s:red1     ,"NONE"         ,"NONE")
+call s:hi("DiffText"        ,s:white0   ,s:grey4    ,"NONE"         ,"NONE")
 
 " folding
 call s:hi("Folded"          ,s:grey3    ,s:grey1    ,"NONE"         ,"NONE")
