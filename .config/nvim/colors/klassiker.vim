@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-09T17:52:52+0200
+" date:   2022-05-09T18:04:27+0200
 
 hi clear
 set background=dark
@@ -72,7 +72,7 @@ call s:hi("Conceal"         ,s:cyan0    ,s:black0   ,"NONE"         ,"NONE")
 call s:hi("NonText"         ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("EndOfBuffer"     ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("Whitespace"      ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
-call s:hi("ExtraWhitespace" ,s:grey1    ,s:red0     ,"NONE"         ,"NONE")
+call s:hi("ExtraWhitespace" ,s:red0     ,s:red0     ,"NONE"         ,"NONE")
 call s:hi("StatusLine"      ,s:blue1    ,s:black0   ,"NONE"         ,"NONE")
 call s:hi("StatusLineNC"    ,s:grey3    ,s:black0   ,"NONE"         ,"NONE")
 call s:hi("WildMenu"        ,s:white1   ,s:blue0    ,"NONE"         ,"NONE")
