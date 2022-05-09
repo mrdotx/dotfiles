@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-27T11:05:20+0200
+# date:   2022-05-09T10:29:11+0200
 
 [global]
     ### Display ###
@@ -337,6 +337,11 @@
 
 [c_music_player]
     summary = "C* Music Player*"
+    history_ignore = yes
+    frame_color = "#4185d7"
+
+[weather]
+    summary = "Weather Icons*"
     history_ignore = yes
     frame_color = "#4185d7"
 
