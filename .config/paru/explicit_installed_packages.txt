@@ -29,6 +29,7 @@ cpupower
 cups
 darktable
 dash
+dbus-broker
 dmidecode
 dragon-drop-git
 dunst

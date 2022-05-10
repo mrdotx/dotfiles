@@ -88,6 +88,7 @@ dash
 dav1d
 db
 dbus
+dbus-broker
 dbus-glib
 dconf
 desktop-file-utils
