@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-01T12:10:36+0200
+" date:   2022-05-14T07:18:05+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -30,6 +30,7 @@ nnoremap <silent>       <leader>l   :set list! list?<cr>
 
 " replace
 nnoremap                <leader>r   :%s///gc<left><left><left>
+nnoremap <silent>       <leader>rs  :%s/\s\+$//e<cr>
 nnoremap <silent>       <leader>rt  :%s/	/    /g<cr>
 
 " terminal

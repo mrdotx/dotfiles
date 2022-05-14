@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-01T12:10:52+0200
+" date:   2022-05-14T07:18:45+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -55,6 +55,7 @@ let g:main_dict = {
     \ 'l': 'toggle control characters',
     \ 'p': 'preview hunk',
     \ 'r': 'replace',
+    \ 'rs': 'remove trailing spaces',
     \ 'rt': 'replace tabs with spaces',
     \ 's': {
         \ 'name': '+spell',
