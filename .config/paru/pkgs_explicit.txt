@@ -193,7 +193,7 @@ xorg-xkill
 xorg-xwininfo
 xsel
 xwallpaper
-youtube-dl-git
+yt-dlp
 zathura
 zathura-cb
 zathura-djvu

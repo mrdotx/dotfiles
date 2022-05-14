@@ -37,7 +37,7 @@ found in my other repositories.
 | w3m               | text oriented browser                                |
 | wget              | the non-interactive network downloader               |
 | X11               | x window system related, xinit, xressources, xmodmap |
-| youtube-dl        | youtube downloader                                   |
+| yt-dlp            | youtube downloader                                   |
 | zathura           | document viewer                                      |
 | zsh               | shell                                                |
 

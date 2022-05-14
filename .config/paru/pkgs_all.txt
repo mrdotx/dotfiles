@@ -627,6 +627,7 @@ pugixml
 python
 python-appdirs
 python-beautifulsoup4
+python-certifi
 python-chardet
 python-cssselect
 python-dateutil
@@ -829,7 +830,7 @@ xwallpaper
 xxhash
 xz
 yajl
-youtube-dl-git
+yt-dlp
 zathura
 zathura-cb
 zathura-djvu
