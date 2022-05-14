@@ -829,7 +829,7 @@ xwallpaper
 xxhash
 xz
 yajl
-youtube-dl
+youtube-dl-git
 zathura
 zathura-cb
 zathura-djvu
