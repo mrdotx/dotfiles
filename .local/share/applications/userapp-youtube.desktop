@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=youtube
-Comment=search youtube with youtube-dl and play it with mpv
+Comment=search youtube with yt-dlp and play it with mpv
 Icon=multimedia-video-player
 Exec=dmenu_youtube.sh
 Actions=
