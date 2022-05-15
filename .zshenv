@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-04T19:28:50+0200
+# date:   2022-05-15T17:41:48+0200
 
 # xdg paths
 export \
@@ -75,7 +75,7 @@ export \
     NO_AT_BRIDGE=1 \
     LESSHISTFILE=- \
     HIGHLIGHT_OPTIONS="\
-        --max-size=2M \
+        --max-size=16M \
         --replace-tabs=4 \
         --out-format=xterm256 \
         --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
