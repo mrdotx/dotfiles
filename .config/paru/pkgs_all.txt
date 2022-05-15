@@ -130,6 +130,7 @@ flex
 flickcurl
 fluidsynth
 fontconfig
+freeglut
 freetype2
 fribidi
 fuse-common
