@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-15T17:41:48+0200
+# date:   2022-05-15T23:14:40+0200
 
 # xdg paths
 export \
@@ -68,12 +68,13 @@ export \
     GPG_TTY=$(tty) \
     ZSTD_NBTHREADS=0 \
     XZ_DEFAULTS="--threads=0" \
+    LESS='-R --use-color -Dd+b$Dk+b$Du+C$DEWb$DPWb$DSWb' \
+    LESSHISTFILE=- \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1 \
-    LESSHISTFILE=- \
     HIGHLIGHT_OPTIONS="\
         --max-size=16M \
         --replace-tabs=4 \
@@ -94,13 +95,3 @@ export \
     BROWSER="w3m.sh" \
     BROWSER_BACKUP="surf.sh" \
     EXEC_AS_USER="doas"
-
-# colored man pages
-export \
-    LESS_TERMCAP_mb=$'\e[1;31m' \
-    LESS_TERMCAP_md=$'\e[1;34m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;37m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[1;4;36m' \
-    LESS_TERMCAP_ue=$'\e[0m'
