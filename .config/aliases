@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-17T15:54:37+0200
+# date:   2022-05-17T19:07:08+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -64,8 +64,8 @@ alias \
 
 # maintenance
 alias \
-    ch='systemctl --failed' \
-    jo='journalctl -p4 -xb' \
+    ch='systemctl --failed; journalctl -xb -p3' \
+    jo='journalctl -b -p4; journalctl -b -g"error|failed|warn"' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
     sc='system_cleanup.sh' \
