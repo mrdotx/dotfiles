@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-17T15:17:31+0200
+# date:   2022-05-17T18:03:09+0200
 
 # xdg paths
 export \
@@ -68,7 +68,7 @@ export \
     GPG_TTY=$(tty) \
     ZSTD_NBTHREADS=0 \
     XZ_DEFAULTS="--threads=0" \
-    LESS='-R --use-color -Dd+b$Dk+b$Du+C$DEWb$DPWb$DRWb$DSWb' \
+    LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
     LESSHISTFILE=- \
     RANGER_LOAD_DEFAULT_RC=false \
     QT_QPA_PLATFORMTHEME="qt5ct" \
@@ -91,7 +91,7 @@ export \
     EDITOR="vim" \
     FILE="ranger" \
     PAGER="less" \
-    SYSTEMD_LESS="-FSXMK $LESS" \
+    SYSTEMD_LESS="-FSXK $LESS" \
     READER="zathura" \
     BROWSER="w3m.sh" \
     BROWSER_BACKUP="surf.sh" \
