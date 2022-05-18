@@ -108,7 +108,7 @@ neovim
 neovim-symlinks
 nerd-fonts-dejavu-complete
 newsboat
-nodejs-lts-gallium
+nodejs
 npm
 nsxiv
 ocl-icd

@@ -557,7 +557,7 @@ netpbm
 nettle
 newsboat
 node-gyp
-nodejs-lts-gallium
+nodejs
 nodejs-nopt
 npm
 npth
