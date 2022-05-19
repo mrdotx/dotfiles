@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-05-03T12:55:25+0200
+! date:   2022-05-19T08:33:11+0200
 
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \
@@ -43,5 +43,9 @@ URxvt.keysym.Meta-o:               perl:matcher:select
 URxvt.matcher.button:              1
 URxvt.matcher.rend.0:              Italic Bold fg8
 URxvt.colorUL:                     PRIMARY
+
+/* keysym compatibility */
+URxvt.keysym.Shift-Up:             \033[1;2A
+URxvt.keysym.Shift-Down:           \033[1;2B
 
 ! vim:ft=xdefaults
