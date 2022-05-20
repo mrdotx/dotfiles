@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-17T18:03:09+0200
+# date:   2022-05-20T06:31:52+0200
 
 # xdg paths
 export \
@@ -75,7 +75,7 @@ export \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1 \
-    HIGHLIGHT_OPTIONS="\
+    HIGHLIGHT_OPTIONS=" \
         --max-size=16M \
         --replace-tabs=4 \
         --out-format=xterm256 \
