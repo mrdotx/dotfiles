@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-07T08:37:52+0200
+" date:   2022-05-22T19:20:52+0200
 
 " klassiker color scheme
 "   color           =  gui          ,term
@@ -77,7 +77,7 @@ function! GitGutterStatus()
         call add(l:indicators, ' '.l:add)
     endif
     if l:change!=0
-        call add(l:indicators, ' '.l:change)
+        call add(l:indicators, ' '.l:change)
     endif
     if l:remove!=0
         call add(l:indicators, ' '.l:remove)
