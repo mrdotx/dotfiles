@@ -1,40 +1,40 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2022-03-27T10:31:44+0200
+// date:   2022-05-22T13:01:11+0200
 
 {
     "suggest.completionItemKindLabels": {
         "method": "",
-        "function": "",
-        "variable": "[]",
+        "function": "",
+        "constructor": "",
+        "variable": "",
         "field": "",
-        "typeParameter": "<>",
-        "constant": "",
+        "typeParameter": "",
+        "constant": "",
         "class": "פּ",
-        "interface": "蘒",
-        "struct": "",
-        "event": "",
+        "interface": "",
+        "struct": "囹",
+        "event": "",
         "operator": "",
         "module": "",
-        "property": "",
+        "property": "襁",
+        "value": "",
         "enum": "練",
+        "enumMember": "",
         "reference": "",
         "keyword": "",
-        "file": "",
+        "file": "",
         "folder": "ﱮ",
-        "color": "",
+        "color": "",
         "unit": "塞",
         "snippet": "",
-        "text": "",
-        "constructor": "",
-        "value": "",
-        "enumMember": ""
+        "text": ""
     },
-    "diagnostic.errorSign": "",
-    "diagnostic.warningSign": "",
-    "diagnostic.infoSign": "",
-    "diagnostic.hintSign": "",
+    "diagnostic.errorSign": "",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": "",
     "diagnostic.maxWindowHeight": 20,
     "diagnostic-languageserver.filetypes": {
         "sh": "shellcheck"
