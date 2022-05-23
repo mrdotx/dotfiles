@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-01-11T08:21:27+0100
+" date:   2022-05-23T16:59:40+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -56,6 +56,9 @@ set smartcase                       " ...unless capital letters are used
 filetype on                         " enable file type detection
 filetype plugin on                  " load the plugins for specific file types
 filetype indent on                  " automatically indent code
+
+" command to write current buffer as root
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 " if config exists source file
 function! IfConfigExists(action, file)
