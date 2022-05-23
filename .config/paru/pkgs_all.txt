@@ -330,7 +330,6 @@ libgudev
 libgusb
 libhandy
 libheif
-libibus
 libical
 libice
 libid3tag
