@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=alsa
+Comment=set the default alsa playback device
+Icon=virtualbox
+Exec=dmenu_alsa.sh
+Actions=audio-speakers
+Categories=Utility;

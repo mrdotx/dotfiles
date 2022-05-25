@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=virtualbox
+Comment=start virtual machine without frontend
+Icon=virtualbox
+Exec=dmenu_virtualbox.sh
+Actions=
+Categories=Utility;

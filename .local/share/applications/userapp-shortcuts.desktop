@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=shortcuts
+Comment=search for defined shortcuts
+Icon=keyboard
+Exec=dmenu_shortcuts.sh
+Actions=
+Categories=Utility;
