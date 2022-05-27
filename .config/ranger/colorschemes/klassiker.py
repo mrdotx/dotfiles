@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/colorschemes/klassiker.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-05-27T08:53:40+0200
+date:   2022-05-27T12:55:40+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -14,11 +14,10 @@ from ranger.gui.color import (
     default_colors,
 )
 
-
 class Default(ColorScheme):
     progress_bar_color = blue
 
-    def use(self, context):  # pylint: disable=too-many-branches,too-many-statements
+    def use(self, context):
         fg, bg, attr = default_colors
 
         if context.reset:
@@ -78,8 +77,6 @@ class Default(ColorScheme):
                     attr |= dim
                     fg = white
             if context.main_column:
-                # Doubling up with BRIGHT here causes issues because it's
-                # additive not idempotent.
                 if context.selected:
                     attr |= bold
                 if context.marked:
