@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-28T18:00:04+0200
+# date:   2022-05-28T19:43:29+0200
 
 # variables
 set $sup Mod4
@@ -9,6 +9,10 @@ set $alt Mod1
 set $monitor1 DisplayPort-0
 set $monitor2 HDMI-A-0
 set $font pango:DejaVu Sans 9
+set $px 20 px
+set $ppt 5 ppt
+set $gaps_in 10
+set $gaps_px 5
 
 # config
 floating_modifier $sup
@@ -17,7 +21,7 @@ mouse_warping none
 font $font
 default_border pixel 1
 default_floating_border normal
-gaps inner 5
+gaps inner $gaps_in
 gaps outer 0
 # smart_gaps on
 smart_borders no_gaps
@@ -32,9 +36,9 @@ set_from_resource $grey1        i3wm.grey1
 set_from_resource $red          i3wm.red
 
 # class                 border      backgr.     text    indi.       child
-client.focused          $primary    $secondary  $white  $secondary  $primary
-client.focused_inactive $grey0      $grey1      $white  $grey0      $grey1
-client.unfocused        $grey0      $black      $grey1  $grey0      $black
+client.focused          $primary    $secondary  $white  $primary    $primary
+client.focused_inactive $grey0      $grey1      $white  $grey1      $grey1
+client.unfocused        $grey0      $black      $grey1  $black      $black
 client.urgent           $grey0      $red        $white  $red        $red
 client.placeholder      $black      $grey0      $white  $black      $grey0
 client.background       $white
