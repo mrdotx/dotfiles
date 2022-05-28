@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-01T20:36:31+0200
+# date:   2022-05-28T11:26:28+0200
 
 # variables
 set $sup Mod4
@@ -17,7 +17,7 @@ mouse_warping none
 font $font
 default_border pixel 1
 default_floating_border normal
-gaps inner 0
+gaps inner 5
 gaps outer 0
 smart_gaps on
 smart_borders on
