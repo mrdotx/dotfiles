@@ -5,5 +5,4 @@ Name=unicode-symbols
 Comment=unicode symbols emojies
 Icon=face-smile
 Exec=dmenu_unicode_symbols.sh
-Actions=
 Categories=Utility;

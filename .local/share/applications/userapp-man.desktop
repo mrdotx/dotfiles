@@ -5,5 +5,4 @@ Name=man
 Comment=search man pages
 Icon=utilities-terminal
 Exec=dmenu_man.sh
-Actions=
 Categories=Utility;

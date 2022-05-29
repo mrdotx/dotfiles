@@ -5,5 +5,4 @@ Name=youtube
 Comment=search youtube with yt-dlp and play it with mpv
 Icon=multimedia-video-player
 Exec=dmenu_youtube.sh
-Actions=
 Categories=Video;

@@ -5,5 +5,4 @@ Name=surf
 Comment=suckless surf browser
 Icon=web-browser
 Exec=surf.sh %u
-Actions=
 Categories=Network;WebBrowser;

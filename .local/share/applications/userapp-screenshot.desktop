@@ -5,5 +5,4 @@ Name=screenshot
 Comment=take screenshot from desktop, window or selection
 Icon=applets-screenshooter
 Exec=dmenu_screenshot.sh
-Actions=
 Categories=Utility;Graphics;

@@ -2,8 +2,7 @@
 Version=1.1
 Type=Application
 Name=display settings
-Comment=select and config display settings
+Comment=config and select display settings
 Icon=cs-display
 Exec=dmenu_display.sh
-Actions=
 Categories=Utility;System;

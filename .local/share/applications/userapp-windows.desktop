@@ -5,5 +5,4 @@ Name=window switcher
 Comment=window switcher
 Icon=desktop
 Exec=dmenu_windows.sh
-Actions=
 Categories=Utility;

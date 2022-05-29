@@ -5,5 +5,4 @@ Name=bookmarks
 Comment=bookmarks menu to open with link handler
 Icon=bookmark-new
 Exec=dmenu_bookmarks.sh
-Actions=
 Categories=Utility;

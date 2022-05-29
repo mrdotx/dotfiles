@@ -2,8 +2,7 @@
 Version=1.1
 Type=Application
 Name=mount
-Comment=mount unmount eject drives
+Comment=mount/unmount/eject drives
 Icon=drive-removable-media
 Exec=dmenu_mount.sh
-Actions=
 Categories=Utility;

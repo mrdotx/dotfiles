@@ -5,5 +5,4 @@ Name=ssh
 Comment=connect to hosts over ssh
 Icon=utilities-terminal
 Exec=dmenu_ssh.sh
-Actions=
 Categories=Utility;

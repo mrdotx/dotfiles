@@ -5,5 +5,4 @@ Name=network manager
 Comment=connect to wlan
 Icon=preferences-system-network
 Exec=dmenu_iwd.sh
-Actions=
 Categories=Network;

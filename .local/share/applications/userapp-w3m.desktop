@@ -5,5 +5,4 @@ Name=w3m
 Comment=text orientated browser
 Icon=web-browser
 Exec=w3m.sh %u
-Actions=
 Categories=Network;WebBrowser;

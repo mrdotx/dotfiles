@@ -5,5 +5,4 @@ Name=st
 Comment=simple-terminal emulator for X
 Icon=utilities-terminal
 Exec=st
-Actions=
 Categories=System;TerminalEmulator;

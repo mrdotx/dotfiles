@@ -2,8 +2,7 @@
 Version=1.1
 Type=Application
 Name=calc
-Comment=calculate with python
+Comment=calculate with bc
 Icon=accessories-calculator
 Exec=$TERMINAL -T "calculator" -e bc
-Actions=
 Categories=Utility;
