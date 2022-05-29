@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-28T20:26:39+0200
+# date:   2022-05-29T17:42:25+0200
 
 # variables
 set $sup Mod4
@@ -9,10 +9,9 @@ set $alt Mod1
 set $monitor1 DisplayPort-0
 set $monitor2 HDMI-A-0
 set $font pango:DejaVu Sans 9
-set $px 20 px
-set $ppt 5 ppt
-set $gaps_in 10
-set $gaps_px 5
+set $px 10
+set $ppt 5
+set $gaps 0
 
 # config
 floating_modifier $sup
@@ -21,10 +20,10 @@ mouse_warping none
 font $font
 default_border pixel 1
 default_floating_border normal
-gaps inner $gaps_in
+gaps inner $gaps
 # smart_gaps on
-smart_borders no_gaps
-hide_edge_borders smart_no_gaps
+# smart_borders no_gaps
+# hide_edge_borders smart_no_gaps
 
 set_from_resource $black        i3wm.background
 set_from_resource $white        i3wm.foreground
