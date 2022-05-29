@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.1
-Type=Application
-Name=btop
-Comment=Show System Processes
-Icon=utilities-terminal
-Exec=$TERMINAL -T "btop" -e btop
-Actions=
-Categories=System;Monitor;ConsoleOnly;
