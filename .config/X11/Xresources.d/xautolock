@@ -1,12 +1,12 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/xautolock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T19:53:41+0200
+! date:   2022-06-01T20:31:50+0200
 
 Xautolock.corners:  ----
 Xautolock.time:     9
 Xautolock.locker:   i3_exit.sh --suspend
-Xautolock.notify:   30
-Xautolock.notifier: notify-send 'i3' 'Suspend in 30 seconds!' --icon=messagebox_warning
+Xautolock.notify:   60
+Xautolock.notifier: notify-send -u critical 'i3' 'Suspend in 60 seconds!' --icon=messagebox_warning
 
 ! vim:ft=xdefaults
