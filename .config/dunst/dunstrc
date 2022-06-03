@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-06-01T20:45:47+0200
+# date:   2022-06-03T13:06:20+0200
 
 [global]
     ### Display ###
@@ -27,13 +27,13 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (0,720)
+    width = (0,960)
 
     # The maximum height of a single notification, excluding the frame.
-    height = 1050
+    height = 1053
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    origin = bottom-center
 
     # Offset from the origin
     offset = 0x0
@@ -52,7 +52,7 @@
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 20
+    progress_bar_height = 17
 
     # Set the frame width of the progress bar
     progress_bar_frame_width = 1
