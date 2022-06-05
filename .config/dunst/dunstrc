@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-06-03T13:06:20+0200
+# date:   2022-06-05T08:43:59+0200
 
 [global]
     ### Display ###
@@ -20,23 +20,23 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = keyboard
+    follow = none
 
     ### Geometry ###
 
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (0,960)
+    width = (300,720)
 
     # The maximum height of a single notification, excluding the frame.
-    height = 1053
+    height = 1043
 
     # Position the notification in the top right corner
-    origin = bottom-center
+    origin = top-right
 
     # Offset from the origin
-    offset = 0x0
+    offset = 5x30
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -70,12 +70,12 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 10
+    transparency = 0
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 1
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -187,7 +187,7 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = right
+    icon_position = left
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
