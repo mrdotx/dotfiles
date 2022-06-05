@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-06-05T08:43:59+0200
+# date:   2022-06-05T09:37:06+0200
 
 [global]
     ### Display ###
@@ -27,7 +27,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (300,720)
+    width = (250,720)
 
     # The maximum height of a single notification, excluding the frame.
     height = 1043
