@@ -575,6 +575,7 @@ openexr
 openjpeg2
 openmp
 openmpi
+openpmix
 openscenegraph
 openssh
 openssl
