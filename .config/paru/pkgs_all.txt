@@ -448,6 +448,7 @@ libva
 libva-mesa-driver
 libva-utils
 libvdpau
+libverto
 libvisio
 libvisual
 libvorbis
