@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-06-07T16:35:46+0200
+# date:   2022-06-10T17:17:25+0200
 
 [global]
     ### Display ###
@@ -33,10 +33,10 @@
     height = 1043
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-right
 
     # Offset from the origin
-    offset = 5x30
+    offset = 5x5
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
