@@ -637,10 +637,14 @@ python-discid
 python-fasteners
 python-html5lib
 python-importlib-metadata
+python-jaraco.context
+python-jaraco.functools
+python-jaraco.text
 python-lxml
 python-markdown
 python-more-itertools
 python-mutagen
+python-nspektr
 python-ordered-set
 python-packaging
 python-pillow
