@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-04-21T08:53:43+0200
+date:   2022-06-11T13:14:59+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -16,7 +16,7 @@ class FzfFind(Command):
     """
     :FzfFind
 
-    Search(find) for files/folder and use fzf to preview(highlight)/select.
+    Search(find) for files/folders and use fzf to preview(highlight)/select.
     """
     def execute(self):
         command = "find -L . \\( -path '*/\\.*' \
@@ -41,7 +41,7 @@ class FzfLocate(Command):
     """
     :FzfLocate
 
-    Search(locate) for files/folder and use fzf to preview(highlight)/select.
+    Search(locate) for files/folders and use fzf to preview(highlight)/select.
     """
     def execute(self):
         command = "fzf_path=\"$(pwd)\"; \
@@ -49,6 +49,27 @@ class FzfLocate(Command):
                 | sed \"1d;s#$fzf_path/##g\" \
                 | fzf -e -i --preview 'highlight {1}' \
                     --preview-window 'right:70%'"
+        fzf = self.fm.execute_command(command, stdout=PIPE)
+        stdout, sys.stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
+            if os.path.isdir(fzf_file):
+                self.fm.cd(fzf_file)
+            else:
+                self.fm.select_file(fzf_file)
+
+# fuzzy tagged files
+class FzfTagged(Command):
+    """
+    :FzfTagged
+
+    Use fzf to preview(highlight)/select tagged files/folders and jump to them.
+    """
+    def execute(self):
+        command = "sort \"$HOME/.local/share/ranger/tagged\" \
+                | cut -d':' -f2 \
+                | fzf -e -i --preview 'highlight {1}' \
+                    --preview-window 'right:50%'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
