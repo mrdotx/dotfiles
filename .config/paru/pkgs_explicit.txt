@@ -109,6 +109,7 @@ neovim-symlinks
 nerd-fonts-dejavu-complete
 newsboat
 nodejs-lts-gallium
+noto-fonts-emoji
 npm
 nsxiv
 ocl-icd
@@ -159,7 +160,6 @@ thunderbird-i18n-de
 tmux
 trash-cli
 tree
-ttf-joypixels
 unarj
 unrar
 unzip
