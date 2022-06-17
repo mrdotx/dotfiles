@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/qutebrowser/config.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2021-05-28T11:55:45+0200
+date:   2022-06-17T12:56:24+0200
 """
 
 ## Documentation:
@@ -1120,7 +1120,7 @@ c.editor.command = ['st', '-e', 'vim', '{file}']
 
 ## Font family for fixed fonts.
 ## Type: FontFamily
-# c.fonts.web.family.fixed = ''
+c.fonts.web.family.fixed = '"DejaVu Sans Mono"'
 
 ## Font family for sans-serif fonts.
 ## Type: FontFamily
