@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-06-14T10:10:20+0200
+# date:   2022-06-21T14:01:02+0200
 
 [global]
     ### Display ###
@@ -319,6 +319,15 @@
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+[xautolock]
+    summary = "xautolock"
+    history_ignore = yes
+    background = "#df2800"
+    frame_color = "#ff5555"
+    highlight = "#ff5555"
+    timeout = 1
+    new_icon = messagebox_warning
 
 [volume]
     summary = "Volume*"
