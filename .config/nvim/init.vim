@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-23T17:04:25+0200
+" date:   2022-06-23T19:47:50+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -59,6 +59,7 @@ filetype indent on                  " automatically indent code
 
 " command to write current buffer as root
 command W :execute ':silent w !$EXEC_AS_USER tee % > /dev/null' | :edit!
+command Wq :execute ':silent w !$EXEC_AS_USER tee % > /dev/null' | :quit!
 
 " if config exists source file
 function! IfConfigExists(action, file)
