@@ -101,6 +101,7 @@ dnssec-anchors
 dosfstools
 double-conversion
 dragon-drop-git
+duktape
 dunst
 e2fsprogs
 efibootmgr
