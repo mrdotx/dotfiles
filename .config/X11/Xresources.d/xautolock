@@ -1,9 +1,9 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/xautolock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-06-21T19:53:26+0200
+! date:   2022-06-24T18:51:35+0200
 
-Xautolock.corners:  ----
+Xautolock.corners:  0-00
 Xautolock.time:     9
 Xautolock.locker:   i3_exit.sh --suspend
 Xautolock.notify:   60
