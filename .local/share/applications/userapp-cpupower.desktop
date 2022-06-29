@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=cpupower
+Comment=manage cpupower
+Icon=utilities-terminal
+Exec=$TERMINAL -T "cpupower" -e fzf_cpupower.sh
+Categories=Utility;System;
