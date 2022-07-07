@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=usb
+Comment=un-/re-/bind usb ports
+Icon=utilities-terminal
+Exec=dmenu_usb.sh
+Categories=Utility;
