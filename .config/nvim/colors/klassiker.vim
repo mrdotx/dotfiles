@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-09T18:04:27+0200
+" date:   2022-07-08T08:47:15+0200
 
 hi clear
 set background=dark
@@ -132,7 +132,7 @@ call s:hi("CursorLineSign"  ,s:NONE     ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("CursorLineFold"  ,s:NONE     ,s:grey1    ,"NONE"         ,"NONE")
 call s:hi("CursorColumn"    ,s:NONE     ,s:grey5    ,"NONE"         ,"NONE")
 call s:hi("Visual"          ,s:NONE     ,s:black1   ,"NONE"         ,"NONE")
-call s:hi("MatchParen"      ,s:black0   ,s:yellow0  ,"NONE"         ,"NONE")
+call s:hi("MatchParen"      ,s:white1   ,s:pink     ,"NONE"         ,"NONE")
 call s:hi("TermCursor"      ,s:black0   ,s:blue1    ,"NONE"         ,"NONE")
 call s:hi("TermCursorNC"    ,s:black0   ,s:grey3    ,"NONE"         ,"NONE")
 
