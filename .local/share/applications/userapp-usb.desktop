@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=usb
-Comment=un-/re-/bind usb ports
+Comment=manage usb devices
 Icon=utilities-terminal
-Exec=dmenu_usb.sh
-Categories=Utility;
+Exec=$TERMINAL -T "usb" -e fzf_usb.sh
+Categories=Utility;System;
