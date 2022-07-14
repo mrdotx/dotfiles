@@ -240,7 +240,6 @@ jre-openjdk
 jre-openjdk-headless
 jre11-openjdk
 jre11-openjdk-headless
-js78
 json-c
 json-glib
 jsoncpp
