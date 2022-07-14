@@ -3,13 +3,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/xinit/xinitrc.d/20-monitor.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-07-14T10:42:14+0200
+# date:   2022-07-14T11:11:00+0200
 
 xrandr | grep "DisplayPort-0 connected" \
     && xrandr \
         --output "DisplayPort-0" --primary \
         --mode "1920x1080" \
-        --pos "0x176" \
+        --pos "0x177" \
         --rotate "normal" \
         --output "HDMI-A-0" \
         --mode "1920x1080" \
