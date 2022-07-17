@@ -1,41 +1,34 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-27T08:46:55+0200
+# date:   2022-07-17T18:30:26+0200
 
 # home special
 /.w3m/bookmark.html
 /.w3m/cookie
-/.w3m/w3mcache*
-/.w3m/w3msrc*
-/.w3m/w3mtmp*
+/.w3m/w3m*
 
 # .config special
 /.config/aria2/aria2-download-links
 /.config/btop/themes/
 /.config/btop/btop.log
 /.config/cmus/playlists/
+/.config/cmus/*-history
 /.config/cmus/autosave
 /.config/cmus/cache
-/.config/cmus/command-history
 /.config/cmus/lib.pl
 /.config/cmus/queue.pl
 /.config/cmus/resume
-/.config/cmus/search-history
 /.config/mc/mcedit/
 /.config/mc/hotlist.bak
 /.config/neofetch/images
-/.config/newsboat/history.cmdline
-/.config/newsboat/history.search
+/.config/newsboat/history.*
 /.config/qutebrowser/bookmarks/
 /.config/qutebrowser/qsettings/
 /.config/qutebrowser/autoconfig.yml
 /.config/qutebrowser/quickmarks
-/.config/ranger/colorschemes/__pycache__*
-/.config/ranger/colorschemes/__init__.py
-/.config/systemd/user/default.target.wants/
-/.config/systemd/user/timers.target.wants/
-/.config/systemd/user/i3.target.wants/
+/.config/ranger/colorschemes/__*
+/.config/systemd/user/*.target.wants/
 /.config/zsh/.zcompdump
 
 # .local special
