@@ -544,6 +544,7 @@ mpg123
 mpv
 msgpack-c
 mtdev
+mtools
 mujs
 mypaint-brushes1
 ncdu
