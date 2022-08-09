@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-07-08T08:47:15+0200
+" date:   2022-08-09T10:21:15+0200
 
 hi clear
 set background=dark
@@ -58,11 +58,16 @@ function! s:hi(group, fg, bg, attr, guisp)
 endfunction
 
 "          group            ,fg         ,bg         ,attr           ,guisp
-" popup Menu
+" popup menu
 call s:hi("Pmenu"           ,s:white1   ,s:grey5    ,"NONE"         ,"NONE")
 call s:hi("PmenuSBar"       ,s:blue1    ,s:grey4    ,"NONE"         ,"NONE")
 call s:hi("PmenuSel"        ,s:blue1    ,s:grey4    ,"NONE"         ,"NONE")
 call s:hi("PmenuThumb"      ,s:grey3    ,s:grey3    ,"NONE"         ,"NONE")
+
+" coc menu
+call s:hi("CocPum"          ,s:white1   ,s:grey5    ,"NONE"         ,"NONE")
+call s:hi("CocSymbol"       ,s:blue1    ,s:grey4    ,"NONE"         ,"NONE")
+call s:hi("CocMenuSel"      ,s:blue1    ,s:grey4    ,"NONE"         ,"NONE")
 
 " editor
 call s:hi("Normal"          ,s:white1   ,s:black0   ,"NONE"         ,"NONE")
