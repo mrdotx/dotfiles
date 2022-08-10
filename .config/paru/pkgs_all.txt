@@ -188,7 +188,6 @@ gst-plugins-good
 gst-plugins-ugly
 gstreamer
 gstreamer-vaapi
-gtest
 gtk-update-icon-cache
 gtk2
 gtk3
