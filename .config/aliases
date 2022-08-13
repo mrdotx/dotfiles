@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-08-09T09:37:01+0200
+# date:   2022-08-12T14:08:00+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -73,7 +73,8 @@ alias \
     dm='$EXEC_AS_USER delete_metafiles.sh' \
     fa='fzf_alsa.sh' \
     fcp='fzf_cpupower.sh' \
-    fm='fzf_man.sh' \
+    fm='fzf_mount.sh' \
+    fman='fzf_man.sh' \
     fp='fzf_pacman.sh' \
     ft='fzf_trash.sh' \
     fu='fzf_usb.sh'
