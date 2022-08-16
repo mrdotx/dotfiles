@@ -83,6 +83,7 @@ cryptsetup
 cups
 cups-filters
 curl
+cython
 darktable
 dash
 dav1d
@@ -630,6 +631,7 @@ psmisc
 pugixml
 python
 python-appdirs
+python-autocommand
 python-beautifulsoup4
 python-certifi
 python-chardet
@@ -639,6 +641,7 @@ python-discid
 python-fasteners
 python-html5lib
 python-importlib-metadata
+python-inflect
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
@@ -653,6 +656,7 @@ python-packaging
 python-pillow
 python-psutil
 python-pycryptodomex
+python-pydantic
 python-pyjwt
 python-pyparsing
 python-pyqt5
@@ -664,6 +668,7 @@ python-six
 python-soupsieve
 python-tomli
 python-trove-classifiers
+python-typing_extensions
 python-validate-pyproject
 python-webencodings
 python-yaml
