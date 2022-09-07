@@ -80,7 +80,7 @@ libreoffice-fresh-de
 libtool
 libva-mesa-driver
 libva-utils
-libxft-bgra
+libxft
 linux
 linux-firmware
 linux-headers

@@ -475,7 +475,7 @@ libxdmcp
 libxext
 libxfixes
 libxfont2
-libxft-bgra
+libxft
 libxi
 libxinerama
 libxkbcommon
