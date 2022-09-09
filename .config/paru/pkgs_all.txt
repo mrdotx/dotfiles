@@ -290,7 +290,6 @@ libcdr
 libcec
 libclc
 libcloudproviders
-libcmis
 libcolord
 libconfig
 libcups
