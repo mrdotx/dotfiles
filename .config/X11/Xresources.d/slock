@@ -1,10 +1,11 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/slock
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T19:53:28+0200
+! date:   2022-09-22T10:32:33+0200
 
 slock.init:         BLACK0
 slock.input:        GREY0
+slock.input.alt:    BLACK1
 slock.failed:       RED0
 slock.message:      WHITE0
 slock.message.font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
