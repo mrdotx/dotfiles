@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-20T06:31:52+0200
+# date:   2022-09-23T12:37:04+0200
 
 # xdg paths
 export \
@@ -22,7 +22,6 @@ typeset -U PATH path
 path=( \
     "$XDG_DATA_HOME/repos/backlight" \
     "$XDG_DATA_HOME/repos/compressor" \
-    "$XDG_DATA_HOME/repos/conky" \
     "$XDG_DATA_HOME/repos/dmenu/scripts" \
     "$XDG_DATA_HOME/repos/efistub" \
     "$XDG_DATA_HOME/repos/fzf" \

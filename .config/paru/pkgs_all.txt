@@ -76,7 +76,6 @@ colord-gtk-common
 colord-sane
 compiler-rt
 confuse
-conky
 coreutils
 cpupower
 cryptsetup
@@ -482,7 +481,6 @@ libxkbcommon-x11
 libxkbfile
 libxml2
 libxmu
-libxnvctrl
 libxpm
 libxrandr
 libxrender
@@ -795,7 +793,6 @@ wget
 which
 wildmidi
 wireless-regdb
-wireless_tools
 wmctrl
 woff2
 wpebackend-fdo
