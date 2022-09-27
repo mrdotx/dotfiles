@@ -22,9 +22,7 @@ aspell
 aspell-de
 aspell-en
 asunder
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 atomicparsley
 attr
@@ -691,7 +689,6 @@ rav1e
 rclone
 readline
 redland
-rest
 rsync
 rtmpdump
 rubberband
