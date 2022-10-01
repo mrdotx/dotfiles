@@ -450,7 +450,7 @@ libvisio
 libvisual
 libvorbis
 libvpx
-libvterm01
+libvterm
 libwacom
 libwebp
 libwmf
