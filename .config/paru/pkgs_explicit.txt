@@ -53,9 +53,6 @@ gimp-stripped
 git
 grep
 groff
-gst-libav
-gst-plugins-ugly
-gstreamer-vaapi
 gzip
 hibiscus
 highlight
@@ -65,6 +62,7 @@ hunspell-en_us
 hyphen-de
 hyphen-en
 i3-gaps
+imagemagick
 inetutils
 inkscape
 iwd
