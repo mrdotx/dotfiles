@@ -607,7 +607,6 @@ python-lxml
 python-markdown
 python-more-itertools
 python-mutagen
-python-nspektr
 python-numpy
 python-ordered-set
 python-packaging
