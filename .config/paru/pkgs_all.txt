@@ -598,7 +598,6 @@ python-dateutil
 python-discid
 python-fasteners
 python-html5lib
-python-importlib-metadata
 python-inflect
 python-jaraco.context
 python-jaraco.functools
@@ -629,7 +628,6 @@ python-typing_extensions
 python-validate-pyproject
 python-webencodings
 python-yaml
-python-zipp
 qpdf
 qt5-base
 qt5-declarative
