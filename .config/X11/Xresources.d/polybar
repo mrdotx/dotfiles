@@ -1,8 +1,9 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/polybar
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-06-07T12:43:11+0200
+! date:   2022-10-14T09:08:11+0200
 
+/* type = main, main_small, empty, sys_info, disabled */
 Polybar.type.monitor1: main
 Polybar.type.monitor2: sys_info
 Polybar.background:    OPACITY1
