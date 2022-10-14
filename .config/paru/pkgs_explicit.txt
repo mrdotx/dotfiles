@@ -22,6 +22,7 @@ bluez
 bluez-utils
 btop
 cdw
+cinfo
 clang
 cmus
 cpupower
