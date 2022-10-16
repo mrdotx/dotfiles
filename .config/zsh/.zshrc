@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-22T12:24:17+0200
+# date:   2022-10-16T09:02:55+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -124,3 +124,6 @@ bindkey '^[[B' history-substring-search-down
 # zsh-syntax-highlighting
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+# autostart
+cinfo
