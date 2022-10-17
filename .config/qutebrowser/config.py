@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/qutebrowser/config.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-06-17T12:56:24+0200
+date:   2022-10-17T19:33:31+0200
 """
 
 ## Documentation:
@@ -1731,7 +1731,7 @@ c.fonts.web.family.standard = '"DejaVu Sans"'
 ## Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 ## for a blank page.
 ## Type: FuzzyUrl
-# c.url.default_page = 'https://start.duckduckgo.com/'
+# c.url.default_page = 'about:blank'
 
 ## URL segments where `:navigate increment/decrement` will search for a
 ## number.
@@ -1758,11 +1758,13 @@ c.fonts.web.family.standard = '"DejaVu Sans"'
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-# c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
+# c.url.searchengines = {'e': 'https://www.ecosia.org/search?q={}'}
+# c.url.searchengines = {'d': 'https://duckduckgo.com/?q={}'}
+# c.url.searchengines = {'g': 'https://www.google.com/search?q={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://start.duckduckgo.com']
+# c.url.start_pages = ['https://www.ecosia.org']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
