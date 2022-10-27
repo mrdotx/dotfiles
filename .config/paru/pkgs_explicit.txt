@@ -106,7 +106,7 @@ neovim
 neovim-symlinks
 nerd-fonts-dejavu-complete
 newsboat
-nodejs-lts-gallium
+nodejs
 noto-fonts-emoji
 npm
 nsxiv
