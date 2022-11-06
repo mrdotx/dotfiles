@@ -167,7 +167,6 @@ virtualbox
 virtualbox-ext-oracle
 virtualbox-guest-iso
 vorbis-tools
-vpnc
 vulkan-radeon
 w3m
 webkit2gtk
