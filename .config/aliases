@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-11-07T09:10:34+0100
+# date:   2022-11-08T18:55:15+0100
 
 # ranger change directory on exit
 ranger_cd() {
@@ -77,9 +77,5 @@ alias \
     fp='fzf_pacman.sh' \
     ft='fzf_trash.sh' \
     fu='fzf_usb.sh'
-
-# wireguard
-alias \
-    wg0='$EXEC_AS_USER wireguard_toggle.sh wg0'
 
 # vim:ft=sh
