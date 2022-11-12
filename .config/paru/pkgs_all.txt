@@ -499,7 +499,6 @@ md4c
 mesa
 mesa-utils
 mesa-vdpau
-metis
 mkinitcpio
 mkinitcpio-busybox
 mpfr
