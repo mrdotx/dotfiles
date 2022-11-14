@@ -263,6 +263,7 @@ libbpf
 libbs2b
 libbsd
 libburn
+libcamera
 libcap
 libcap-ng
 libcddb
@@ -450,6 +451,7 @@ libxkbfile
 libxml2
 libxmu
 libxpm
+libxpresent
 libxrandr
 libxrender
 libxshmfence
@@ -573,6 +575,7 @@ perl-timedate
 picard
 picom
 pinentry
+pipewire
 pixman
 pkgconf
 plocate
