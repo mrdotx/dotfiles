@@ -7,7 +7,7 @@ Color2_fore = WHITE
 Color2_bg   = BLUE
 
 # Title
-Color3_fore = RED
+Color3_fore = BLUE
 Color3_bg   = BLACK
 
 # Menu
@@ -23,7 +23,7 @@ Color6_fore = WHITE
 Color6_bg   = BLACK
 
 # Warning
-Color7_fore = BLACK
+Color7_fore = WHITE
 Color7_bg   = BLUE
 
 # was: size info
@@ -47,5 +47,5 @@ Color12_fore = WHITE
 Color12_bg   = BLACK
 
 # Error
-Color13_fore = BLACK
+Color13_fore = WHITE
 Color13_bg   = RED
