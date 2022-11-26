@@ -1,14 +1,14 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-09-29T08:57:21+0200
+# date:   2022-11-26T13:47:50+0100
 
 # general
 refresh-on-startup yes
-reload-threads 128
+reload-threads 4
 prepopulate-query-feeds yes
 show-read-feeds yes
-keep-articles-days 30
+keep-articles-days 90
 cleanup-on-quit yes
 scrolloff 5
 
@@ -16,15 +16,13 @@ browser "link_handler.sh %u"
 player "mpv --no-audio-display"
 download-path "~/Downloads/"
 
-# inoreader
-urls-source "inoreader"
-inoreader-app-id "1000004403"
-inoreader-app-key "G2dyK13gu4QO1qHfuoQRZhgwGWLHRFKx"
-inoreader-login "klassiker"
-inoreader-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/social/inoreader.gpg"
-inoreader-flag-share "a"
-inoreader-flag-star "b"
-inoreader-min-items 999
+# freshrss
+urls-source "freshrss"
+freshrss-url "http://pi/freshrss/api/greader.php"
+freshrss-login "klassiker"
+freshrss-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/development/freshrss.gpg"
+freshrss-flag-star "s"
+freshrss-min-items 999
 
 # keybindings
 bind-key SPACE toggle-article-read articlelist
