@@ -1,26 +1,30 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-20T18:17:15+0200
+# date:   2022-11-30T17:38:16+0100
 
 # queries
 "query:┌─unread:unread = \"yes\""
+"query:├─keywords:title =~ \"AfD|Brexit|Corona|COVID|Trump|Ukraine\""
+"query:│ ├─Afd:title =~ \"AfD\""
+"query:│ ├─Brexit:title =~ \"Brexit\""
+"query:│ ├─Corona:title =~ \"Corona|COVID\""
+"query:│ ├─Trump:title =~ \"Trump\""
+"query:│ └─Ukraine:title =~ \"Ukraine\""
 "query:├─all:tags != \"\""
-"query:│ ├─ news:tags # \"news\""
-"query:│ ├─ local:tags # \"local\""
-"query:│ ├─ linux:tags # \"linux\""
-"query:│ ├─ tech:tags # \"tech\""
-"query:│ ├─ reddit:tags # \"reddit\""
-"query:│ ├─ suckless:tags # \"suckless\""
-"query:│ ├─ youtube:tags # \"youtube\""
-"query:│ ├─ podcast:tags # \"podcast\""
-"query:│ ├─ twitter:tags # \"twitter\""
-"query:│ └─ business:tags # \"business\""
-"query:├─keywords:title =~ \"Ukraine|Corona|COVID|AfD|Brexit|Trump\" or feedtitle =~ \"@realDonaldTrump\""
-"query:│ ├─ Ukraine:title =~ \"Ukraine\""
-"query:│ ├─ Corona:title =~ \"Corona|COVID\""
-"query:│ ├─ Afd:title =~ \"AfD\""
-"query:│ ├─ Brexit:title =~ \"Brexit\""
-"query:│ └─ Trump:title =~ \"Trump\" or feedtitle =~ \"@realDonaldTrump\""
+"query:│ ├─news:tags # \"news\""
+"query:│ │ ├─international:tags # \"news/international\""
+"query:│ │ └─local:tags # \"news/local\""
+"query:│ ├─tech:tags # \"tech\""
+"query:│ ├─linux:tags # \"linux\""
+"query:│ │ ├─reddit:tags # \"linux/reddit\""
+"query:│ │ └─suckless:tags # \"linux/suckless\""
+"query:│ ├─podcast:tags # \"podcast\""
+"query:│ │ ├─dlf:tags # \"podcast/dlf\""
+"query:│ │ └─hr-iNFO:tags # \"podcast/hr-iNFO\""
+"query:│ ├─youtube:tags # \"youtube\""
+"query:│ │ ├─linux:tags # \"youtube/linux\""
+"query:│ │ └─science:tags # \"youtube/science\""
+"query:│ └─business:tags # \"business\""
 
 # vim:ft=config
