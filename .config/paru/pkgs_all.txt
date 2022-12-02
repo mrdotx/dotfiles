@@ -1,6 +1,7 @@
 acl
 acorn
 adobe-source-code-pro-fonts
+adwaita-cursors
 adwaita-icon-theme
 alsa-firmware
 alsa-lib
@@ -88,6 +89,7 @@ dbus
 dbus-broker
 dbus-glib
 dconf
+default-cursors
 desktop-file-utils
 device-mapper
 diffutils
