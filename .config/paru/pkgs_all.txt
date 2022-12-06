@@ -193,6 +193,7 @@ hicolor-icon-theme
 hidapi
 highlight
 htop
+http-parser
 hunspell
 hunspell-de
 hunspell-en_us
@@ -303,6 +304,7 @@ libfreehand
 libftdi
 libgcrypt
 libgexiv2
+libgit2
 libglvnd
 libgpg-error
 libgphoto2
