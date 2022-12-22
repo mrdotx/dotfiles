@@ -162,6 +162,7 @@ gmic
 gmp
 gnupg
 gnutls
+gperftools
 gpgme
 gpm
 graphene
@@ -192,6 +193,7 @@ hibiscus
 hicolor-icon-theme
 hidapi
 highlight
+highway
 htop
 http-parser
 hunspell
@@ -324,6 +326,7 @@ libinput
 libisl
 libixion
 libjpeg-turbo
+libjxl
 libksba
 liblangtag
 libldap
