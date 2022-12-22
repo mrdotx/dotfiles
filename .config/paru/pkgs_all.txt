@@ -65,14 +65,12 @@ cdw
 chromaprint
 cifs-utils
 cinfo
-clang
 clucene
 cmus
 colord
 colord-gtk
 colord-gtk-common
 colord-sane
-compiler-rt
 confuse
 coreutils
 cpupower
@@ -276,7 +274,6 @@ libcdio
 libcdio-paranoia
 libcdr
 libcec
-libclc
 libcloudproviders
 libcolord
 libconfig
@@ -520,6 +517,7 @@ mujs
 mypaint-brushes1
 ncdu
 ncurses
+ncurses5-compat-libs
 neon
 neovim
 neovim-symlinks
@@ -537,10 +535,11 @@ npth
 nspr
 nss
 nsxiv
+numactl
 ocl-icd
 odt2txt
 openal
-opencl-mesa
+opencl-amd
 opencore-amr
 opencv
 opendoas

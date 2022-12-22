@@ -23,7 +23,6 @@ bluez-utils
 btop
 cdw
 cinfo
-clang
 cmus
 cpupower
 cups
@@ -112,7 +111,7 @@ npm
 nsxiv
 ocl-icd
 odt2txt
-opencl-mesa
+opencl-amd
 opendoas
 opendoas-sudo
 openssh
