@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-28T19:38:47+0200
+" date:   2022-12-24T09:22:50+0100
 
 let g:which_key_fallback_to_native_key=1
 
@@ -88,6 +88,7 @@ let g:coc_dict = {
     \ '/': 'show all diagnostics',
     \ 'a': 'action selected code',
     \ 'ac': 'action current line',
+    \ 'as': 'action whole buffer',
     \ 'c': 'show all commands',
     \ 'cl': 'code lens action current line',
     \ 'e': 'show all extensions',
@@ -98,12 +99,11 @@ let g:coc_dict = {
     \ 'p': 'resume latest list',
     \ 'q': {
         \ 'name': '+quickfix',
-        \ 'f': 'autofix current line'
+        \ 'f': 'quickfix current line'
     \ },
-    \ 'r': {
-        \ 'name': '+rename',
-        \ 'n': 'symbol renaming'
-    \ },
+    \ 'r': 'refactor selected',
+    \ 're': 'refactor',
+    \ 'rn': 'rename symbol',
     \ 's': 'search workspace symbols'
 \ }
 
