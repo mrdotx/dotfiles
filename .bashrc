@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-07-12T18:21:12+0200
+# date:   2022-12-24T11:51:49+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -23,7 +23,10 @@ export \
     HISTFILESIZE=5000 \
     HISTCONTROL=ignoreboth
 
-# aliases
+# functions and aliases
+[ -f "$HOME/.config/functions" ] \
+    && . "$HOME/.config/functions"
+
 [ -f "$HOME/.config/aliases" ] \
     && . "$HOME/.config/aliases"
 

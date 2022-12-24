@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-10-16T09:02:55+0200
+# date:   2022-12-24T11:51:27+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -17,7 +17,10 @@ setopt hist_verify
 # add commands to HISTFILE in order of execution
 setopt inc_append_history
 
-# aliases
+# functions and aliases
+[ -f "$HOME/.config/functions" ] \
+    && . "$HOME/.config/functions"
+
 [ -f "$HOME/.config/aliases" ] \
     && . "$HOME/.config/aliases"
 
