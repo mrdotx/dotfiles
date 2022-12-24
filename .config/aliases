@@ -1,34 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-11-08T18:55:15+0100
-
-# ranger change directory on exit
-ranger_cd() {
-    local tmp_file
-    tmp_file="$(mktemp -t ranger_cd.XXXXXX)"
-
-    ranger --choosedir="$tmp_file" "$@"
-
-    [ -e "$tmp_file" ] \
-        && cd "$(cat "$tmp_file")" \
-        && rm -f "$tmp_file" \
-        || exit 1
-}
-
-# folder navigation
-..() {
-    local elements directory
-    elements="${1:-1}"
-
-    while [ "$elements" -ge 1 ]; do
-        directory="../$directory"
-        elements=$((elements - 1))
-    done
-
-    cd "$directory" \
-        || exit 1
-}
+# date:   2022-12-24T11:52:29+0100
 
 # color
 alias \
