@@ -111,6 +111,8 @@ autodetect_codeset=
 clipboard_store=xsel --input --clipboard
 clipboard_paste=xsel --output --clipboard
 
+spell_language=en
+
 [Colors]
 base_color=
 tmux-256color=
