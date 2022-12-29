@@ -1,15 +1,12 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-12-16T13:39:30+0100
+# date:   2022-12-29T09:05:53+0100
 
 # general
 refresh-on-startup yes
 reload-threads 16
 prepopulate-query-feeds yes
-show-read-feeds yes
-keep-articles-days 90
-cleanup-on-quit yes
 scrolloff 5
 
 browser "link_handler.sh %u"
@@ -22,7 +19,7 @@ freshrss-url "http://pi/freshrss/api/greader.php"
 freshrss-login "klassiker"
 freshrss-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/development/freshrss_api.gpg"
 freshrss-flag-star "s"
-freshrss-min-items 999
+freshrss-min-items 99999
 
 # keybindings
 bind-key SPACE toggle-article-read articlelist
