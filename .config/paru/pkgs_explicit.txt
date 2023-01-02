@@ -61,7 +61,7 @@ hunspell-de
 hunspell-en_us
 hyphen-de
 hyphen-en
-i3-gaps
+i3-wm
 imagemagick
 inetutils
 inkscape

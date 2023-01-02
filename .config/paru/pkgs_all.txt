@@ -202,7 +202,7 @@ hwloc
 hyphen
 hyphen-de
 hyphen-en
-i3-gaps
+i3-wm
 iana-etc
 icu
 id3lib
