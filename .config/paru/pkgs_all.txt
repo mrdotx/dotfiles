@@ -509,6 +509,7 @@ mesa-vdpau
 mkinitcpio
 mkinitcpio-busybox
 mpfr
+mpg123
 mpv
 msgpack-c
 mtdev
