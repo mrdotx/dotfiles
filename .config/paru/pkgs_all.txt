@@ -422,7 +422,6 @@ libva-utils
 libvdpau
 libverto
 libvisio
-libvisual
 libvorbis
 libvpx
 libvterm
