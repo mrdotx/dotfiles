@@ -814,4 +814,5 @@ zsh-completions
 zsh-history-substring-search
 zsh-syntax-highlighting
 zstd
+zxing-cpp
 zziplib
