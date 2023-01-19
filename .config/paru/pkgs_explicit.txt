@@ -121,7 +121,7 @@ pacman
 pacman-contrib
 pam-gnupg
 pandoc-bin
-paru
+paru-bin
 patch
 perl-image-exiftool
 picard

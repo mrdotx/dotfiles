@@ -569,7 +569,7 @@ pambase
 pandoc-bin
 pango
 pangomm
-paru
+paru-bin
 patch
 pciutils
 pcre
