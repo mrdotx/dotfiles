@@ -521,7 +521,6 @@ ncurses5-compat-libs
 neon
 neovim
 neovim-symlinks
-nerd-fonts-dejavu-complete
 net-snmp
 netpbm
 nettle
@@ -720,6 +719,7 @@ tree
 tree-sitter
 tslib
 ttf-dejavu
+ttf-dejavu-nerd
 tzdata
 uchardet
 unarj

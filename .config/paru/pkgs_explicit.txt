@@ -103,7 +103,6 @@ mpv
 ncdu
 neovim
 neovim-symlinks
-nerd-fonts-dejavu-complete
 newsboat
 nodejs
 noto-fonts-emoji
@@ -157,6 +156,7 @@ thunderbird-i18n-de
 tmux
 trash-cli
 tree
+ttf-dejavu-nerd
 unarj
 unrar
 unzip
