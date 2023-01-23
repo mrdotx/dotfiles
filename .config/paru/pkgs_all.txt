@@ -607,6 +607,7 @@ python-cssselect
 python-dateutil
 python-discid
 python-fasteners
+python-fastjsonschema
 python-html5lib
 python-inflect
 python-jaraco.context
