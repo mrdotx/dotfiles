@@ -520,7 +520,6 @@ ncurses
 ncurses5-compat-libs
 neon
 neovim
-neovim-symlinks
 net-snmp
 netpbm
 nettle
