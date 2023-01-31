@@ -102,6 +102,7 @@ mesa-vdpau
 mpv
 ncdu
 neovim
+neovim-vim
 newsboat
 nodejs
 noto-fonts-emoji

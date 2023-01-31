@@ -125,6 +125,7 @@ firefox-developer-edition-i18n-de
 flac
 flex
 flickcurl
+fmt
 fontconfig
 freeglut
 freetype2
@@ -520,6 +521,7 @@ ncurses
 ncurses5-compat-libs
 neon
 neovim
+neovim-vim
 net-snmp
 netpbm
 nettle
@@ -681,6 +683,7 @@ slang
 slop
 smartmontools
 smbclient
+spdlog
 speedtest-cli
 speex
 speexdsp
