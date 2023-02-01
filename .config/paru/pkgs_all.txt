@@ -683,6 +683,7 @@ slang
 slop
 smartmontools
 smbclient
+sndio
 spdlog
 speedtest-cli
 speex
