@@ -599,7 +599,6 @@ protobuf
 psmisc
 pugixml
 python
-python-appdirs
 python-autocommand
 python-beautifulsoup4
 python-certifi
@@ -622,11 +621,11 @@ python-numpy
 python-ordered-set
 python-packaging
 python-pillow
+python-platformdirs
 python-psutil
 python-pycryptodomex
 python-pydantic
 python-pyjwt
-python-pyparsing
 python-pyqt5
 python-pyqt5-sip
 python-readability-lxml
