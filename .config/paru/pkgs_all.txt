@@ -35,6 +35,7 @@ avr-libc
 avrdude
 babl
 base
+base-devel
 bash
 bash-language-server
 bc
@@ -87,6 +88,7 @@ dbus
 dbus-broker
 dbus-glib
 dconf
+debugedit
 default-cursors
 desktop-file-utils
 device-mapper
