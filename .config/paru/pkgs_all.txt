@@ -369,6 +369,7 @@ libpaper
 libpcap
 libpciaccess
 libpipeline
+libpipewire
 libplacebo
 libplist
 libpng
