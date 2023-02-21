@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
+# path:   /home/klassiker/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-02-12T17:43:12+0100
+# date:   2023-02-21T13:43:16+0100
 
 # xdg paths
 export \
@@ -71,8 +71,7 @@ export \
     FONTCONFIG_FILE=fonts.conf \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
     WGETRC="$XDG_CONFIG_HOME/wget/wgetrc" \
-    KODI_DATA="$XDG_DATA_HOME/kodi" \
-    KODI_AE_SINK="ALSA"
+    KODI_DATA="$XDG_DATA_HOME/kodi"
 
 # app settings
 export \
