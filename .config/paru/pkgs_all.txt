@@ -269,7 +269,6 @@ libbpf
 libbs2b
 libbsd
 libburn
-libcamera
 libcap
 libcap-ng
 libcddb
@@ -585,7 +584,6 @@ perl-timedate
 picard
 picom
 pinentry
-pipewire
 pixman
 pkgconf
 plocate
