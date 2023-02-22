@@ -105,6 +105,7 @@ ncdu
 neovim
 neovim-vim
 newsboat
+nfs-utils
 nodejs
 noto-fonts-emoji
 npm

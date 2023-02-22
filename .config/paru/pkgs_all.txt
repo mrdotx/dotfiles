@@ -93,6 +93,7 @@ default-cursors
 desktop-file-utils
 device-mapper
 diffutils
+ding-libs
 djvulibre
 dkms
 dmidecode
@@ -177,6 +178,7 @@ gsfonts
 gsl
 gsm
 gspell
+gssproxy
 gst-plugins-base
 gst-plugins-base-libs
 gstreamer
@@ -528,6 +530,8 @@ net-snmp
 netpbm
 nettle
 newsboat
+nfs-utils
+nfsidmap
 node-gyp
 nodejs
 nodejs-nopt
@@ -661,6 +665,7 @@ rav1e
 rclone
 readline
 redland
+rpcbind
 rsync
 rubberband
 run-parts
