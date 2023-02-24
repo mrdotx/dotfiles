@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-07-17T18:30:26+0200
+# date:   2023-02-24T13:20:54+0100
 
 # home special
 /.w3m/bookmark.html
@@ -9,7 +9,6 @@
 /.w3m/w3m*
 
 # .config special
-/.config/aria2/aria2-download-links
 /.config/btop/themes/
 /.config/btop/btop.log
 /.config/cmus/playlists/
