@@ -668,7 +668,6 @@ redland
 rpcbind
 rsync
 rubberband
-run-parts
 rxvt-unicode-truecolor-wide-glyphs
 sane
 scribus
