@@ -81,11 +81,11 @@ libva-utils
 libxft
 linux
 linux-firmware
+linux-hardened
+linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers
-linux-zen
-linux-zen-headers
 logrotate
 lsb-release
 lshw

@@ -478,11 +478,11 @@ linux
 linux-api-headers
 linux-firmware
 linux-firmware-whence
+linux-hardened
+linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers
-linux-zen
-linux-zen-headers
 lirc
 llvm-libs
 lm_sensors
