@@ -116,7 +116,6 @@ faad2
 fakeroot
 ffcall
 ffmpeg
-ffmpeg4.4
 ffmpegthumbnailer
 fftw
 file
