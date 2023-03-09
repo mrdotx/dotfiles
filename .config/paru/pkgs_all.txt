@@ -362,6 +362,7 @@ libnumbertext
 libodfgen
 libogg
 libomxil-bellagio
+libopenmpt
 liborcus
 libp11-kit
 libpagemaker
@@ -597,6 +598,7 @@ poppler
 poppler-data
 poppler-glib
 popt
+portaudio
 potrace
 procps-ng
 protobuf
