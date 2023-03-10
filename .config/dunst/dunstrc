@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-08-28T08:28:48+0200
+# date:   2023-03-10T21:15:48+0100
 
 [global]
     ### Display ###
@@ -63,6 +63,12 @@
     # Set the maximum width for the progress bar
     progress_bar_max_width = 720
 
+    # Corner radius for the progress bar. 0 disables rounded corners.
+    progress_bar_corner_radius = 0
+
+    # Corner radius for the icon image.
+    icon_corner_radius = 0
+
     # Show how many messages are currently hidden (because of
     # notification_limit).
     indicate_hidden = yes
@@ -75,6 +81,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
+    # If gap_size is greater than 0, this setting will be ignored.
     separator_height = 2
 
     # Padding between text and separator.
@@ -92,6 +99,12 @@
 
     # Defines color of the frame around the notification window.
     frame_color = "#4185d7"
+
+    # Size of gap to display between notifications - requires a compositor.
+    # If value is greater than 0, separator_height will be ignored and a border
+    # of size frame_width will be drawn around each notification instead.
+    # Click events on gaps do not currently propagate to applications below.
+    gap_size = 2
 
     # Define a color for the separator.
     # possible values are:
@@ -186,7 +199,16 @@
 
     ### Icons ###
 
-    # Align icons left/right/off
+    # Recursive icon lookup. You can set a single theme, instead of having to
+    # define all lookup paths.
+    enable_recursive_icon_lookup = true
+
+    # Set icon theme (only used for recursive icon lookup)
+    icon_theme = Arc
+    # You can also set multiple icon themes, with the leftmost one being used first.
+    # icon_theme = "Adwaita, breeze"
+
+    # Align icons left/right/top/off
     icon_position = left
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
@@ -290,6 +312,7 @@
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
+
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
