@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-03-10T21:15:48+0100
+# date:   2023-03-11T08:03:28+0100
 
 [global]
     ### Display ###
@@ -201,10 +201,10 @@
 
     # Recursive icon lookup. You can set a single theme, instead of having to
     # define all lookup paths.
-    enable_recursive_icon_lookup = true
+    enable_recursive_icon_lookup = false
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Arc
+    icon_theme = Adwaita
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
