@@ -543,6 +543,7 @@ nsxiv
 numactl
 ocl-icd
 odt2txt
+onetbb
 openal
 opencl-amd
 opencore-amr
@@ -694,7 +695,6 @@ taglib
 talloc
 tar
 task-spooler
-tbb
 tdb
 tevent
 texinfo
