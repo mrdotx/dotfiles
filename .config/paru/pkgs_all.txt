@@ -72,6 +72,7 @@ colord
 colord-gtk
 colord-gtk-common
 colord-sane
+comgr
 confuse
 coreutils
 cpupower
@@ -195,6 +196,8 @@ hicolor-icon-theme
 hidapi
 highlight
 highway
+hsa-rocr
+hsakmt-roct
 htop
 http-parser
 hunspell
@@ -521,7 +524,6 @@ mujs
 mypaint-brushes1
 ncdu
 ncurses
-ncurses5-compat-libs
 neon
 neovim
 neovim-vim
@@ -545,7 +547,6 @@ ocl-icd
 odt2txt
 onetbb
 openal
-opencl-amd
 opencore-amr
 opencv
 opendoas
@@ -650,6 +651,8 @@ rav1e
 rclone
 readline
 redland
+rocm-device-libs
+rocm-opencl-runtime
 rpcbind
 rsync
 rubberband

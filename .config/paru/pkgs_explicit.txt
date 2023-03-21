@@ -112,7 +112,6 @@ npm
 nsxiv
 ocl-icd
 odt2txt
-opencl-amd
 opendoas
 opendoas-sudo
 openssh
@@ -138,6 +137,7 @@ qt5ct
 radeontop
 ranger
 rclone
+rocm-opencl-runtime
 rsync
 rxvt-unicode-truecolor-wide-glyphs
 scribus
