@@ -177,7 +177,9 @@ gsfonts
 gsl
 gsm
 gspell
+gssdp
 gssproxy
+gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gstreamer
@@ -188,6 +190,8 @@ gtkmm3
 gts
 guile
 gumbo-parser
+gupnp
+gupnp-igd
 gzip
 harfbuzz
 harfbuzz-icu
@@ -357,6 +361,7 @@ libnfnetlink
 libnfs
 libnftnl
 libnghttp2
+libnice
 libnl
 libnotify
 libnsl
@@ -739,6 +744,7 @@ vulkan-radeon
 w3m
 wavpack
 wayland
+wayland-protocols
 waylandpp
 webkit2gtk
 wget
