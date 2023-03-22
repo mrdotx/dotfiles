@@ -73,6 +73,7 @@ kodi
 kodi-addon-pvr-iptvsimple
 kvantum
 libmad
+libnotify
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
