@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-06-23T19:47:50+0200
+" date:   2023-03-26T11:31:21+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -61,6 +61,10 @@ filetype indent on                  " automatically indent code
 command W :execute ':silent w !$EXEC_AS_USER tee % > /dev/null' | :edit!
 command Wq :execute ':silent w !$EXEC_AS_USER tee % > /dev/null' | :quit!
 
+" command for terminal execution in split window
+command -nargs=1 -complete=file -bar TermExec
+    \ :execute winheight(0)/3'split term://<args>'
+
 " if config exists source file
 function! IfConfigExists(action, file)
     let l:config=g:inits_config_folder.a:file
@@ -72,7 +76,9 @@ function! IfConfigExists(action, file)
 endfunction
 
 call IfConfigExists('source', 'filetypes.vim')
+call IfConfigExists('source', 'header.vim')
 call IfConfigExists('source', 'plugins.vim')
 call IfConfigExists('source', 'netrw.vim')
 call IfConfigExists('source', 'coding.vim')
+call IfConfigExists('source', 'templates.vim')
 call IfConfigExists('source', 'keybindings.vim')
