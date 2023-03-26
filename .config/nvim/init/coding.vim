@@ -1,9 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T12:06:04+0200
-
-let g:template_folder='~/.config/nvim/init/templates/'
+" date:   2023-03-26T10:26:43+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -31,30 +29,3 @@ autocmd BufNewFile,BufRead *.py call AutoPy()
 
 " get correct comment highlighting for json
 autocmd FileType json syntax match Comment +\/\/.\+$+
-
-" use template for specific file types when creating new file
-function! NewTemplate(file)
-    let l:file_type=split(a:file, '\.')
-    let l:config=g:template_folder.a:file
-    let l:template='autocmd BufNewFile *.'.l:file_type[1]
-        \ .' 0r '
-        \ .l:config
-        \ .' | startinsert'
-        \ .' | inoremap <space><space> <esc>/<++><enter>"_c4l'
-    if !empty(glob(l:config))
-        execute l:template
-    else
-        echo l:config." not found\n"
-    endif
-endfunction
-
-if has("autocmd")
-    augroup templates
-        call NewTemplate('skeleton.c')
-        call NewTemplate('skeleton.lua')
-        call NewTemplate('skeleton.md')
-        call NewTemplate('skeleton.py')
-        call NewTemplate('skeleton.sh')
-        call NewTemplate('skeleton.vim')
-    augroup END
-endif
