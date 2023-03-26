@@ -291,6 +291,7 @@ libdaemon
 libdatrie
 libdc1394
 libde265
+libdecor
 libdiscid
 libdrm
 libdvdnav
