@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-14T07:18:05+0200
+" date:   2023-03-26T11:24:32+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -34,7 +34,7 @@ nnoremap <silent>       <leader>rs  :%s/\s\+$//e<cr>
 nnoremap <silent>       <leader>rt  :%s/	/    /g<cr>
 
 " terminal
-nnoremap <silent><expr> <leader>c   ":".winheight(0)/3
-                                    \ ."split term://shellcheck -x %:p<cr>"
-nnoremap <expr>         <leader>t   ":".winheight(0)/3
-                                    \ ."split term://%:p"
+nnoremap <silent><expr> <leader>c   ":TermExec shellcheck -x "
+                                    \ .expand('%:t')."<cr>"
+nnoremap <expr>         <leader>t   ":TermExec "
+                                    \ .expand('%:t')
