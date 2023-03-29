@@ -549,6 +549,7 @@ nspr
 nss
 nsxiv
 numactl
+nvtop
 ocl-icd
 odt2txt
 onetbb
@@ -648,7 +649,6 @@ qt5ct
 qt6-base
 qt6-svg
 qt6-translations
-radeontop
 ragel
 ranger
 raptor

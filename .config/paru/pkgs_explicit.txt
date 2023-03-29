@@ -111,6 +111,7 @@ nodejs
 noto-fonts-emoji
 npm
 nsxiv
+nvtop
 ocl-icd
 odt2txt
 opendoas
@@ -135,7 +136,6 @@ python-beautifulsoup4
 python-cssselect
 python-readability-lxml
 qt5ct
-radeontop
 ranger
 rclone
 rocm-opencl-runtime
