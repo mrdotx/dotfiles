@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-27T08:15:08+0200
+" date:   2023-03-29T18:24:41+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -25,8 +25,11 @@ nnoremap <silent>       <leader>se  :setlocal spell! spelllang=en_us<cr>
 nnoremap <silent>       <leader>sg  :setlocal spell! spelllang=de_de<cr>
 nnoremap <silent>       <leader>sx  :setlocal spell! spelllang=en_us,de_de<cr>
 
-" show hidden characters
-nnoremap <silent>       <leader>l   :set list! list?<cr>
+" control characters
+nnoremap <silent>       <leader>n   :set list! list?<cr>
+
+" visible line wrap
+nnoremap <silent>       <leader>l   :set wrap! nowrap?<cr>
 
 " replace
 nnoremap                <leader>r   :%s///gc<left><left><left>

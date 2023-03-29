@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-26T11:39:45+0200
+" date:   2023-03-29T18:15:05+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -52,7 +52,8 @@ let g:main_dict = {
     \ 'g': 'goyo',
     \ 'h': 'stage hunk',
     \ 'i': 'toggle indent characters',
-    \ 'l': 'toggle control characters',
+    \ 'l': 'toggle visible line wrap',
+    \ 'n': 'toggle control characters',
     \ 'p': 'preview hunk',
     \ 'r': 'replace',
     \ 'rs': 'remove trailing spaces',
