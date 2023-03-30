@@ -19,8 +19,6 @@ bash-language-server
 bc
 binutils
 bison
-bluez
-bluez-utils
 btop
 cdw
 cinfo

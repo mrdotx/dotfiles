@@ -42,9 +42,7 @@ bc
 binutils
 bison
 blas
-bluez
 bluez-libs
-bluez-utils
 boost-libs
 botan
 box2d
@@ -321,7 +319,6 @@ libgudev
 libgusb
 libhandy
 libheif
-libical
 libice
 libid3tag
 libidn
