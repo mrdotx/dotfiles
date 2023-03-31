@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-29T18:15:05+0200
+" date:   2023-03-31T21:17:21+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -48,24 +48,27 @@ let g:main_dict = {
     \ },
     \ 'c': 'check posix shell',
     \ 'd': 'diff origin',
+    \ 'e': 'execute terminal command',
     \ 'f': 'fold hunk',
     \ 'g': 'goyo',
     \ 'h': 'stage hunk',
-    \ 'i': 'toggle indent characters',
-    \ 'l': 'toggle visible line wrap',
-    \ 'n': 'toggle control characters',
     \ 'p': 'preview hunk',
     \ 'r': 'replace',
-    \ 'rs': 'remove trailing spaces',
-    \ 'rt': 'replace tabs with spaces',
-    \ 's': {
-        \ 'name': '+spell',
+    \ 's': 'remove trailing spaces',
+    \ 't': 'replace tabs with 4 spaces',
+    \ 'l': {
+        \ 'name': '+language',
         \ 'g': 'german toggle',
         \ 'e': 'english toggle',
         \ 'x': 'english and german toggle'
     \ },
-    \ 't': 'terminal execution',
     \ 'u': 'undo hunk',
+    \ 'v': {
+        \ 'name': '+visible',
+        \ 'c': 'control characters toggle',
+        \ 'i': 'indent line toggle',
+        \ 'w': 'wrap line toggle'
+    \ },
     \ 'w': {
         \ 'name': '+vimwiki',
         \ ',': {
