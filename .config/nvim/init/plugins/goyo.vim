@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/goyo.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T11:56:08+0200
+" date:   2023-03-31T21:19:44+0200
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
@@ -14,6 +14,8 @@ function! s:goyo_enter()
     set norelativenumber
     set nonumber
     set scrolloff=999
+    set wrap
+    set nolist
     hi Normal ctermbg=black
     hi Normal guibg=black
 endfunction
@@ -32,8 +34,8 @@ function! s:goyo_leave()
         autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
     augroup END
     set scrolloff=5
-    hi Normal ctermbg=NONE
-    hi Normal guibg=NONE
+    set nowrap
+    set list
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
