@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2021-06-28T12:05:51+0200
+" date:   2023-04-01T18:38:00+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/init/plugins/'
@@ -23,6 +23,7 @@ call plug#begin(g:plugged_folder)
     Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'fidian/hexmode'
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
@@ -55,4 +56,5 @@ call IfPluginExists('source', 'indentLine')
 call IfPluginExists('source', 'vim-commentary')
 call IfPluginExists('source', 'vim-gitgutter')
 call IfPluginExists('source', 'coc.nvim')
+call IfPluginExists('source', 'hexmode')
 call IfPluginExists('source', 'vimwiki')
