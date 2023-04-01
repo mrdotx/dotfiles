@@ -794,6 +794,7 @@ xorgproto
 xsel
 xvidcore
 xwallpaper
+xxd-standalone
 xxhash
 xz
 yajl

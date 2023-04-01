@@ -190,6 +190,7 @@ xorg-xkill
 xorg-xwininfo
 xsel
 xwallpaper
+xxd-standalone
 yt-dlp
 zathura
 zathura-cb
