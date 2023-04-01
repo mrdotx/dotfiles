@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-15T16:57:59+0200
+# date:   2023-04-01T18:55:34+0200
 
 # exit | function   | action of ranger
 
@@ -65,8 +65,8 @@ handle_image() {
                 -singlefile \
                 -jpeg \
                 -tiffcompression jpeg "$file_path" "${image_cache_path%.*}" \
-                    && exit 6 \
-                    || exit 1
+                    && exit 6
+            exit 1
             ;;
     esac
 }
@@ -151,10 +151,12 @@ handle_extension() {
         htm | html | xhtml)
             w3m -dump "$file_path" \
                 && exit 5
+            exit 2
             ;;
         json)
             python -m json.tool "$file_path" \
                 && exit 5
+            exit 2
             ;;
         gpg | asc)
             printf "%s" "$(pwd)" \
@@ -165,16 +167,24 @@ handle_extension() {
                     gpg -d "$file_path" \
                         | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
                         && exit 5
+                    exit 1
                     ;;
                 *)
                     gpg -d "$file_path" \
                         && exit 5
+                    exit 1
                     ;;
             esac
             ;;
         dff | dsf | wv | wvc)
             exiftool "$file_path" \
                 && exit 5
+            exit 1
+            ;;
+        bin | exe | dat | o)
+            xxd "$file_path" \
+                && exit 5
+            exit 1
             ;;
     esac
 }
@@ -244,5 +254,3 @@ handle_fallback() {
 handle_extension
 handle_mime "$mime_type"
 handle_fallback
-
-exit 1
