@@ -1,72 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-05-22T19:20:52+0200
-
-" klassiker color scheme
-"   color           =  gui          ,term
-let s:black1        = ['#333333'    ,8  ]
-let s:red0          = ['#df2800'    ,1  ]
-let s:green0        = ['#00b200'    ,2  ]
-let s:yellow0       = ['#b0b200'    ,3  ]
-let s:blue1         = ['#4185d7'    ,12 ]
-let s:magenta0      = ['#980096'    ,5  ]
-let s:cyan0         = ['#008081'    ,6  ]
-let s:white0        = ['#cccccc'    ,7  ]
-let s:white1        = ['#ffffff'    ,15 ]
-
-let s:grey0         = ['#121212'    ,233]
-let s:grey1         = ['#2b2b2b'    ,234]
-let s:grey2         = ['#666666'    ,242]
-
-let s:p = {
-    \ 'normal': {
-        \ 'left': [ [ s:white1, s:blue1 ],
-        \           [ s:white0, s:grey2 ],
-        \           [ s:white0, s:grey1 ] ],
-        \ 'middle': [ [ s:white0, s:grey1 ] ],
-        \ 'right': [ [ s:white1, s:blue1 ],
-        \            [ s:white0, s:grey2 ] ],
-        \ 'error': [ [ s:red0, s:grey1 ] ],
-        \ 'warning': [ [ s:yellow0, s:black1 ] ]
-    \ },
-    \ 'inactive': {
-        \ 'left': [ [ s:white0, s:grey2 ],
-        \           [ s:grey2, s:grey1 ] ],
-        \ 'middle': [ [ s:white0, s:grey0 ] ],
-        \ 'right': [ [ s:white0, s:grey2 ],
-        \            [ s:grey2, s:black1 ] ]
-    \ },
-    \ 'insert': {
-        \ 'left': [ [ s:white1, s:green0 ],
-        \           [ s:white0, s:grey2 ],
-        \           [ s:white0, s:grey1 ] ],
-        \ 'right': [ [ s:white1, s:green0 ],
-        \            [ s:white0, s:grey2 ] ]
-    \ },
-    \ 'replace': {
-        \ 'left': [ [ s:white1, s:red0 ],
-        \           [ s:white0, s:grey2 ],
-        \           [ s:white0, s:grey1 ] ],
-        \ 'right': [ [ s:white1, s:red0 ],
-        \            [ s:white0, s:grey2 ] ]
-    \ },
-    \ 'visual': {
-        \ 'left': [ [ s:white1, s:magenta0 ],
-        \           [ s:white0, s:grey2 ],
-        \           [ s:white0, s:grey1 ] ],
-        \ 'right': [ [ s:white1, s:magenta0 ],
-        \            [ s:white0, s:grey2 ] ]
-    \ },
-    \ 'tabline': {
-        \ 'left': [ [ s:white0, s:grey2 ] ],
-        \ 'middle': [ [ s:white0, s:grey1 ] ],
-        \ 'right': [ [ s:white0, s:grey1 ] ],
-        \ 'tabsel': [ [ s:white1, s:blue1 ] ]
-    \ }
-\ }
-
-let g:lightline#colorscheme#klassiker#palette = lightline#colorscheme#flatten(s:p)
+" date:   2023-04-02T17:19:16+0200
 
 " gitgutter status
 function! GitGutterStatus()
