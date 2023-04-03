@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.zshenv
+# path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-02-21T13:43:16+0100
+# date:   2023-04-03T11:28:55+0200
 
 # xdg paths
 export \
@@ -94,6 +94,7 @@ export \
         --force=sh" \
     CARGO_HOME="$XDG_DATA_HOME/cargo" \
     WWW_HOME="www.ecosia.org" \
+    W3M_DIR="$XDG_STATE_HOME/w3m"
     MESA_DEBUG=silent
 
 # standard apps
