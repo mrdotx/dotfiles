@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.local/state/w3m/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-04-03T11:35:52+0200
+# date:   2023-04-03T13:04:43+0200
 
 tabstop 8
 indent_incr 4
@@ -81,10 +81,10 @@ document_root
 personal_document_root 
 cgi_bin 
 index_file 
-tmp_dir ~/.cache/w3m
+tmp_dir /tmp/w3m
 mime_types ~/.mime.types, /etc/mime.types
-mailcap ~/.w3m/mailcap, /etc/w3m/mailcap
-urimethodmap ~/.w3m/urimethodmap, /etc/w3m/urimethodmap
+mailcap ~/.config/w3m/mailcap, /etc/w3m/mailcap
+urimethodmap ~/.config/w3m/urimethodmap, /etc/w3m/urimethodmap
 editor $EDITOR
 mailto_options 1
 mailer thunderbird
@@ -99,12 +99,12 @@ extbrowser8
 extbrowser9 
 bgextviewer 1
 use_lessopen 0
-passwd_file ~/.w3m/passwd
+passwd_file ~/.config/w3m/passwd
 disable_secret_security_check 0
 ftppasswd 
 ftppass_hostnamegen 1
-pre_form_file ~/.w3m/pre_form
-siteconf_file ~/.w3m/siteconf
+pre_form_file ~/.config/w3m/pre_form
+siteconf_file ~/.config/w3m/siteconf
 user_agent 
 no_referer 0
 cross_origin_referer 1
