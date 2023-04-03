@@ -1,12 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-02-24T13:20:54+0100
-
-# home special
-/.w3m/bookmark.html
-/.w3m/cookie
-/.w3m/w3m*
+# date:   2023-04-03T11:38:23+0200
 
 # .config special
 /.config/btop/themes/
@@ -34,3 +29,5 @@
 /.local/share/mc/mcedit/
 /.local/share/mc/filepos
 /.local/share/mc/history
+/.local/state/w3m/bookmark.html
+/.local/state/w3m/cookie
