@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-06-11T13:14:59+0200
+date:   2023-04-05T18:17:23+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -94,9 +94,7 @@ class FzfGrep(Command):
             self.fm.notify("Usage: fzfgrep \"<search string>\"", bad=True)
             return
 
-        command = "grep --color=never -irs -- " + search_string + " \
-                | cut -d':' -f1 \
-                | uniq \
+        command = "grep --color=never -irsl -- " + search_string + " \
                 | fzf -e -i --preview 'highlight {1}' \
                     --preview-window 'right:70%'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
