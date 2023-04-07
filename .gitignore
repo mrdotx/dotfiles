@@ -1,9 +1,9 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-04-03T11:38:23+0200
+# date:   2023-04-07T08:12:59+0200
 
-# .config special
+# .config
 /.config/btop/themes/
 /.config/btop/btop.log
 /.config/cmus/playlists/
@@ -25,7 +25,7 @@
 /.config/systemd/user/*.target.wants/
 /.config/zsh/.zcompdump
 
-# .local special
+# .local
 /.local/share/mc/mcedit/
 /.local/share/mc/filepos
 /.local/share/mc/history
