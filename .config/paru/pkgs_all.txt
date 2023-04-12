@@ -268,7 +268,6 @@ libasyncns
 libatomic_ops
 libavc1394
 libavif
-libb2
 libbluray
 libbpf
 libbs2b
@@ -643,9 +642,6 @@ qt5-tools
 qt5-translations
 qt5-x11extras
 qt5ct
-qt6-base
-qt6-svg
-qt6-translations
 ragel
 ranger
 raptor
@@ -736,7 +732,6 @@ virtualbox-guest-iso
 virtualbox-host-dkms
 vmaf
 vorbis-tools
-vulkan-headers
 vulkan-icd-loader
 vulkan-radeon
 w3m
