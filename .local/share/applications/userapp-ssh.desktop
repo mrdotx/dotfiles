@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=ssh
-Comment=connect to hosts over ssh
+Comment=open configured ssh sessions
 Icon=utilities-terminal
-Exec=dmenu_ssh.sh
+Exec=$TERMINAL -T "ssh" -e fzf_ssh.sh
 Categories=Utility;
