@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-01-25T11:14:44+0100
+# date:   2023-04-25T09:33:09+0200
 
 # color
 alias \
@@ -49,6 +49,7 @@ alias \
     fm='fzf_mount.sh' \
     fman='fzf_man.sh' \
     fp='fzf_pacman.sh' \
+    fs='fzf_ssh.sh' \
     ft='fzf_trash.sh' \
     fu='fzf_usb.sh'
 
