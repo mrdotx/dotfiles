@@ -1,5 +1,6 @@
 ENTRY "-HOME-" URL "/home/klassiker"
 ENTRY "m625q" URL "/sftp://m625q/home/klassiker"
+ENTRY "m75q" URL "/sftp://m75q/home/klassiker"
 ENTRY "mi" URL "/sftp://mi/home/klassiker"
 ENTRY "macbook" URL "/sftp://macbook/home/klassiker"
 ENTRY "n10" URL "/sftp://n10/storage/emulated/0"
