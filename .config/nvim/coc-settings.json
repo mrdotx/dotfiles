@@ -1,35 +1,35 @@
-// path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
+// path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json_
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2022-10-20T18:43:41+0200
+// date:   2023-05-01T21:56:21+0200
 
 {
     "suggest.completionItemKindLabels": {
         "method": "",
-        "function": "",
+        "function": "󰊕",
         "constructor": "",
-        "variable": "",
-        "field": "﬍",
-        "typeParameter": "",
-        "constant": "",
-        "class": "פּ",
+        "variable": "󰅪",
+        "field": "󰘎",
+        "typeParameter": "󰅴",
+        "constant": "󰏿",
+        "class": "󰙅",
         "interface": "",
-        "struct": "囹",
-        "event": "",
-        "operator": "",
-        "module": "",
-        "property": "襁",
-        "value": "",
-        "enum": "",
-        "enumMember": "惡",
+        "struct": "󰒪",
+        "event": "󰃯",
+        "operator": "󰆕",
+        "module": "󰅩",
+        "property": "󰖷",
+        "value": "󰎠",
+        "enum": "󰉻",
+        "enumMember": "󰒺",
         "reference": "",
-        "keyword": "",
-        "file": "",
-        "folder": "ﱮ",
-        "color": "",
-        "unit": "塞",
-        "snippet": "",
-        "text": ""
+        "keyword": "󰌆",
+        "file": "󰈔",
+        "folder": "󰝰",
+        "color": "󰏘",
+        "unit": "󰑭",
+        "snippet": "󱔗",
+        "text": "󰀬"
     },
     "diagnostic.errorSign": "",
     "diagnostic.warningSign": "",
