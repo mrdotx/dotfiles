@@ -12,7 +12,7 @@ function! GitGutterStatus()
         call add(l:indicators, ' '.l:add)
     endif
     if l:change!=0
-        call add(l:indicators, ' '.l:change)
+        call add(l:indicators, '󰆗 '.l:change)
     endif
     if l:remove!=0
         call add(l:indicators, ' '.l:remove)
