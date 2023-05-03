@@ -44,7 +44,7 @@ bison
 blas
 bluez-libs
 boost-libs
-botan
+botan2
 box2d
 brotli
 btop
@@ -273,6 +273,7 @@ libbpf
 libbs2b
 libbsd
 libburn
+libcanberra
 libcap
 libcap-ng
 libcddb
@@ -675,6 +676,7 @@ slop
 smartmontools
 smbclient
 sndio
+sound-theme-freedesktop
 spdlog
 speedtest-cli
 speex
