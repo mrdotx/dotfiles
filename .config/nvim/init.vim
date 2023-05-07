@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-29T18:02:22+0200
+" date:   2023-05-07T06:15:15+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -34,8 +34,6 @@ augroup END
 set noshowmode                      " don't show normal, insert replace etc.
 set showcmd                         " show command in bottom bar
 set showmatch                       " highlight matching [{()}]
-"set cursorline                     " highlight current line
-"set cursorcolumn                   " highlight current column
 set nowrap                          " no visible line wrap
 set scrolloff=5                     " number of lines to retain on top/bottom
 set nocompatible                    " to ward off unexpected things

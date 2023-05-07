@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-04-01T19:17:06+0200
+" date:   2023-05-07T06:34:47+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -65,8 +65,10 @@ let g:main_dict = {
     \ 'u': 'undo hunk',
     \ 'v': {
         \ 'name': '+visible',
-        \ 'c': 'control characters toggle',
+        \ 'c': 'screen column highlight toggle',
+        \ 'h': 'hidden characters toggle',
         \ 'i': 'indent line toggle',
+        \ 'l': 'text line highlight toggle',
         \ 'w': 'wrap line toggle'
     \ },
     \ 'w': {
