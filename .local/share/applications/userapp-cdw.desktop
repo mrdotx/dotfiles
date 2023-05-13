@@ -4,5 +4,5 @@ Type=Application
 Name=cdw
 Comment=burn/erase cd/dvd
 Icon=disk-burner
-Exec=$TERMINAL -T "cdw" -e cdw
+Exec=$TERMINAL -T "cdw floating" -e cdw
 Categories=Utility;ConsoleOnly;

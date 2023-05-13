@@ -4,5 +4,5 @@ Type=Application
 Name=ssh
 Comment=open configured ssh sessions
 Icon=utilities-terminal
-Exec=$TERMINAL -T "ssh" -e fzf_ssh.sh
+Exec=$TERMINAL -T "ssh floating" -e fzf_ssh.sh
 Categories=Utility;

@@ -4,5 +4,5 @@ Type=Application
 Name=cpupower
 Comment=manage cpupower
 Icon=utilities-terminal
-Exec=$TERMINAL -T "cpupower" -e fzf_cpupower.sh
+Exec=$TERMINAL -T "cpupower floating" -e fzf_cpupower.sh
 Categories=Utility;System;

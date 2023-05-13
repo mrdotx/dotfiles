@@ -4,5 +4,5 @@ Type=Application
 Name=pacman
 Comment=manage packages with pacman and paru
 Icon=software-center
-Exec=$TERMINAL -T "pacman" -e fzf_pacman.sh
+Exec=$TERMINAL -T "pacman floating" -e fzf_pacman.sh
 Categories=Utility;

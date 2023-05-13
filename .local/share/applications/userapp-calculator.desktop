@@ -4,5 +4,5 @@ Type=Application
 Name=calc
 Comment=calculate with bc
 Icon=accessories-calculator
-Exec=$TERMINAL -T "calculator" -e bc
+Exec=$TERMINAL -T "calculator floating" -e bc
 Categories=Utility;
