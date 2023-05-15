@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-05-07T06:34:47+0200
+" date:   2023-05-15T08:27:24+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -52,6 +52,7 @@ let g:main_dict = {
     \ 'f': 'fold hunk',
     \ 'g': 'goyo',
     \ 'h': 'stage hunk',
+    \ 'n': 'sync notes to webserver',
     \ 'p': 'preview hunk',
     \ 'r': 'replace',
     \ 's': 'remove trailing spaces',
