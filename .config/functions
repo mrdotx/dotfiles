@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-04-06T13:40:55+0200
+# date:   2023-05-17T10:29:48+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -18,8 +18,8 @@ ranger_cd() {
 
 # folder navigation
 ..() {
-    local elements directory
-    elements="${1:-1}"
+    local elements="${1:-1}" \
+        directory
 
     while [ "$elements" -ge 1 ]; do
         directory="../$directory"
