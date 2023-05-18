@@ -4,5 +4,5 @@ Type=Application
 Name=virtualbox
 Comment=start virtual machine without frontend
 Icon=virtualbox
-Exec=dmenu_virtualbox.sh
+Exec=$TERMINAL -T "virtualbox floating" -e fzf_virtualbox.sh
 Categories=Utility;
