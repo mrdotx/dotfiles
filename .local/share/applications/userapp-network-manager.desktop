@@ -4,5 +4,5 @@ Type=Application
 Name=network manager
 Comment=connect to wlan
 Icon=preferences-system-network
-Exec=dmenu_iwd.sh
+Exec=$TERMINAL -T "iwd floating" -e fzf_iwd.sh
 Categories=Network;
