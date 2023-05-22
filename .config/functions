@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-22T08:33:35+0200
+# date:   2023-05-22T08:36:27+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -52,7 +52,7 @@ cpc() {
         -exec printf ":: {}\n" \; \
         -exec paccache -dvk "$keep_versions" -c {} \;
 
-    printf ":: clear pacman cache in \"%s\" and keep the last %s version(s) [y]es/[N]o: " \
+    printf "clear pacman cache in \"%s\" and keep the last %s version(s) [y]es/[N]o: " \
         "$pkgs_path" \
         "$keep_versions" \
         && read -r clear_cache \
