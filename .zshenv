@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-04-12T13:45:36+0200
+# date:   2023-05-24T22:30:16+0200
 
 # xdg paths
 export \
@@ -81,17 +81,24 @@ export \
     XZ_DEFAULTS="--threads=0" \
     LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
     LESSHISTFILE=- \
-    RANGER_LOAD_DEFAULT_RC=false \
-    QT_QPA_PLATFORMTHEME="qt5ct" \
-    QT_AUTO_SCREEN_SCALE_FACTOR=0 \
-    MOZ_USE_XINPUT2=1 \
-    NO_AT_BRIDGE=1 \
+    FZF_DEFAULT_OPTS=" \
+        --prompt='» ' --pointer='»' --marker='»' \
+        --color='fg:7,preview-fg:15,bg:-1,hl:12' \
+        --color='fg+:7,bg+:12,gutter:8,hl+:15' \
+        --color='info:7,prompt:12,pointer:15' \
+        --color='marker:7,spinner:12,header:15' \
+        --no-bold" \
     HIGHLIGHT_OPTIONS=" \
         --max-size=16M \
         --replace-tabs=4 \
         --out-format=xterm256 \
         --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
         --force=sh" \
+    RANGER_LOAD_DEFAULT_RC=false \
+    QT_QPA_PLATFORMTHEME="qt5ct" \
+    QT_AUTO_SCREEN_SCALE_FACTOR=0 \
+    MOZ_USE_XINPUT2=1 \
+    NO_AT_BRIDGE=1 \
     CARGO_HOME="$XDG_DATA_HOME/cargo" \
     WWW_HOME="www.ecosia.org" \
     W3M_DIR="$XDG_STATE_HOME/w3m"
