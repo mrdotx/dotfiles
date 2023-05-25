@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-24T22:30:16+0200
+# date:   2023-05-25T09:10:14+0200
 
 # xdg paths
 export \
@@ -67,8 +67,6 @@ export \
     PASSWORD_STORE_DIR="$XDG_DATA_HOME/repos/password-store" \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
     GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
-    FONTCONFIG_PATH=/etc/fonts \
-    FONTCONFIG_FILE=fonts.conf \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
     WGETRC="$XDG_CONFIG_HOME/wget/wgetrc" \
     KODI_DATA="$XDG_DATA_HOME/kodi"
@@ -95,13 +93,13 @@ export \
         --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
         --force=sh" \
     RANGER_LOAD_DEFAULT_RC=false \
+    W3M_DIR="$XDG_STATE_HOME/w3m" \
+    WWW_HOME="lite.duckduckgo.com" \
+    CARGO_HOME="$XDG_DATA_HOME/cargo" \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1 \
-    CARGO_HOME="$XDG_DATA_HOME/cargo" \
-    WWW_HOME="www.ecosia.org" \
-    W3M_DIR="$XDG_STATE_HOME/w3m"
     MESA_DEBUG=silent
 
 # standard apps
