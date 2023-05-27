@@ -593,7 +593,6 @@ picom
 pinentry
 pixman
 pkgconf
-plocate
 podofo
 polkit
 polybar
@@ -688,7 +687,6 @@ stfl
 suitesparse
 svt-av1
 sweethome3d
-sysfsutils
 systemd
 systemd-libs
 systemd-sysvcompat
@@ -696,7 +694,6 @@ t1lib
 taglib
 talloc
 tar
-task-spooler
 tdb
 tevent
 texinfo
@@ -711,6 +708,7 @@ tracker3
 trash-cli
 tree
 tree-sitter
+ts
 tslib
 ttf-dejavu
 ttf-dejavu-nerd
