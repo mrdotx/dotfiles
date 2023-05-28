@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-20T17:46:52+0200
+# date:   2023-05-27T08:57:28+0200
 
 # color
 alias \
@@ -10,8 +10,6 @@ alias \
     dir='dir --color=auto' \
     vdir='vdir --color=auto' \
     grep='grep --color=auto' \
-    egrep='egrep --color=auto' \
-    fgrep='fgrep --color=auto' \
     diff='diff --color=auto' \
     ncdu='ncdu --color dark' \
     tree='tree -C' \
