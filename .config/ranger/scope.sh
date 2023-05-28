@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-28T08:08:23+0200
+# date:   2023-05-28T08:19:35+0200
 
 # exit | function   | action of ranger
 
@@ -128,7 +128,7 @@ handle_extension() {
             exit 1
             ;;
         pdf)
-            pdftotext -l 10 -nopgbrk -q "$file_path" \
+            pdftotext -l 10 -nopgbrk -q "$file_path" - \
                 | fmt --width="$preview_width" \
                     && exit 5
             exit 1
