@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-04-01T18:55:34+0200
+# date:   2023-05-28T08:08:23+0200
 
 # exit | function   | action of ranger
 
@@ -58,6 +58,41 @@ handle_image() {
                 && exit 6
             exit 1
             ;;
+        font/* | *opentype)
+            preview_text() {
+                printf "%s" \
+                    "AÄBCDEFGHIJKLMN\n" \
+                    "OÖPQRSẞTUÜVWXYZ\n" \
+                    "aäbcdefghijklmn\n" \
+                    "oöpqrsßtuüvwxyz\n" \
+                    "1234567890,.*/+-=\%\n" \
+                    "~!?@#§$&(){}[]<>;:"
+            }
+            font_name() {
+                fc-list \
+                    | grep "$file_path" \
+                    | cut -d ':' -f2 \
+                    | sed 's/^ //' \
+                    | tail -1
+            }
+            # workaround for transparent background due to hardcoded .jpg in
+            # actions.py is convert to png and rename the file to jpg
+            convert -size "960x960" xc:"#000000" \
+                -font "$file_path" \
+                -fill "#cccccc" \
+                -gravity Center \
+                -pointsize 72 \
+                -annotate +0+0 "$(preview_text)" \
+                -font "" \
+                -fill "#4185d7" \
+                -gravity SouthWest \
+                -pointsize 24 \
+                -annotate +0+0 "$(font_name)" \
+                -flatten "$image_cache_path.png" \
+                    && mv "$image_cache_path.png" "$image_cache_path" \
+                    && exit 6
+            exit 1
+            ;;
         application/pdf)
             pdftoppm -f 1 -l 1 \
                 -scale-to-x 960 \
@@ -93,8 +128,8 @@ handle_extension() {
             exit 1
             ;;
         pdf)
-            pdftotext -l 10 -nopgbrk -q -- "$file_path" - \
-                | fmt -w "$preview_width" \
+            pdftotext -l 10 -nopgbrk -q "$file_path" \
+                | fmt --width="$preview_width" \
                     && exit 5
             exit 1
             ;;
@@ -113,64 +148,24 @@ handle_extension() {
                 && exit 5
             exit 1
             ;;
-        otf | ttf | woff | ttc)
-            preview_text() {
-                printf "%s" \
-                    "AÄBCDEFGHIJKLMN\n" \
-                    "OÖPQRSẞTUÜVWXYZ\n" \
-                    "aäbcdefghijklmn\n" \
-                    "oöpqrsßtuüvwxyz\n" \
-                    "1234567890,.*/+-=\%\n" \
-                    "~!?@#§$&(){}[]<>;:"
-            }
-            font_name() {
-                fc-list \
-                    | grep "$file_path" \
-                    | cut -d ':' -f2 \
-                    | sed 's/^ //' \
-                    | tail -1
-            }
-            # workaround for transparent background due to hardcoded .jpg in
-            # actions.py is convert to png and rename the file to jpg
-            convert -size "960x960" xc:"#000000" \
-                -font "$file_path" \
-                -fill "#cccccc" \
-                -gravity Center \
-                -pointsize 72 \
-                -annotate +0+0 "$(preview_text)" \
-                -font "" \
-                -fill "#4185d7" \
-                -gravity SouthWest \
-                -pointsize 24 \
-                -annotate +0+0 "$(font_name)" \
-                -flatten "$image_cache_path.png" \
-                    && mv "$image_cache_path.png" "$image_cache_path" \
-                    && exit 6
-            exit 1
-            ;;
         htm | html | xhtml)
             w3m -dump "$file_path" \
                 && exit 5
             exit 2
             ;;
-        json)
-            python -m json.tool "$file_path" \
-                && exit 5
-            exit 2
-            ;;
         gpg | asc)
             printf "%s" "$(pwd)" \
-                | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
+                | grep -quiet "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
                 && password_store=1
             case "$password_store" in
                 1)
-                    gpg -d "$file_path" \
+                    gpg --decrypt "$file_path" \
                         | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
                         && exit 5
                     exit 1
                     ;;
                 *)
-                    gpg -d "$file_path" \
+                    gpg --decrypt "$file_path" \
                         && exit 5
                     exit 1
                     ;;
@@ -197,7 +192,7 @@ handle_mime() {
             exit 1
             ;;
         *wordprocessingml.document | */epub+zip | */x-fictionbook+xml)
-            pandoc -s -t markdown "$file_path" \
+            pandoc --standalone --to markdown "$file_path" \
                 && exit 5
             exit 1
             ;;
@@ -206,15 +201,7 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
-        text/* | */csv | */json | */xml)
-            # syntax highlight
-            [ "$(stat --printf='%s' "$file_path")" -gt 16384 ] \
-                && exit 2
-            highlight "$file_path" \
-                && exit 5
-            exit 2
-            ;;
-        application/*sqlite3)
+        *sqlite3)
             sqlite3 -header -column "$file_path" \
                 "SELECT name, type
                  FROM sqlite_master
@@ -224,20 +211,26 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
-        image/vnd.djvu)
+        */csv)
+            column --separator ',' --table "$file_path" \
+                && exit 5
+            exit 2
+            ;;
+        text/* | */json | */xml)
+            highlight --max-size=256K "$file_path" \
+                && exit 5
+            exit 2
+            ;;
+        image/* | video/* | audio/*)
             exiftool "$file_path" \
                 && exit 5
             exit 1
             ;;
-        image/*)
-            exiftool "$file_path" \
-                && exit 5
-            exit 1
-            ;;
-        video/* | audio/*)
-            exiftool "$file_path" \
-                && exit 5
-            exit 1
+        application/x-executable | application/x-pie-executable \
+            | application/x-sharedlib)
+                readelf --wide --demangle --all "$file_path" \
+                    && exit 5
+                exit 1
             ;;
     esac
 }
