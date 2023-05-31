@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-23T08:48:08+0200
+# date:   2023-05-31T07:58:37+0200
 
 # ranger change directory on exit
 ranger_cd() {
@@ -38,31 +38,6 @@ keypress() {
 
     xev -event "keyboard" \
         | awk -F'[ )]+' '/^KeyPress/ {a[NR+2]} NR in a {printf "%-4s %s\n", $5, $8}'
-}
-
-# clear pacman cache (default: keep 2 versions in /var/cache/pacman/pkg)
-cpc() {
-    local \
-        auth="${EXEC_AS_USER:-sudo}" \
-        keep_versions="${1:-2}" \
-        pkgs_path="${2:-"/var/cache/pacman/pkg"}" \
-        clear_cache
-
-    $auth find "$pkgs_path" -type d \
-        -exec printf ":: {}\n" \; \
-        -exec paccache -dvk "$keep_versions" -c {} \;
-
-    printf "clear cache in \"%s\" and keep the last %s version(s) [y]es/[N]o: " \
-        "$pkgs_path" \
-        "$keep_versions" \
-        && read -r clear_cache \
-        && case "$clear_cache" in
-            y|Y|yes|Yes)
-                $auth find "$pkgs_path" -type d \
-                    -exec printf ":: {}\n" \; \
-                    -exec paccache -rvk "$keep_versions" -c {} \;
-                ;;
-        esac
 }
 
 # vim:ft=sh
