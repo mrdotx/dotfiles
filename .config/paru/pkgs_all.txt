@@ -694,6 +694,7 @@ t1lib
 taglib
 talloc
 tar
+task-spooler
 tdb
 tevent
 texinfo
@@ -708,7 +709,6 @@ tracker3
 trash-cli
 tree
 tree-sitter
-ts
 tslib
 ttf-dejavu
 ttf-dejavu-nerd

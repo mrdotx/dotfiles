@@ -148,6 +148,7 @@ smartmontools
 speedtest-cli
 splix
 sweethome3d
+task-spooler
 texinfo
 texlive-core
 thunderbird
@@ -155,7 +156,6 @@ thunderbird-i18n-de
 tmux
 trash-cli
 tree
-ts
 ttf-dejavu-nerd
 unarj
 unrar
