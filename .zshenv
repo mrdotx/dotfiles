@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-27T20:13:27+0200
+# date:   2023-05-30T19:13:32+0200
 
 # xdg paths
 export \
@@ -88,7 +88,7 @@ export \
         --prompt='» ' --pointer='»' --marker='»' \
         --color='fg:7,preview-fg:15,bg:-1,hl:12' \
         --color='fg+:7,bg+:12,gutter:8,hl+:15' \
-        --color='info:7,prompt:12,pointer:15' \
+        --color='info:7,prompt:15,pointer:15' \
         --color='marker:7,spinner:12,header:15' \
         --no-bold" \
     RANGER_LOAD_DEFAULT_RC=false \
