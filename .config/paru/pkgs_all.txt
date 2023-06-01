@@ -101,6 +101,7 @@ double-conversion
 dragon-drop-git
 duktape
 dunst
+dvisvgm
 e2fsprogs
 efibootmgr
 efivar
