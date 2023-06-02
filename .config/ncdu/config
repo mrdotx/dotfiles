@@ -1,0 +1,19 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/ncdu/config
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2023-06-02T07:05:11+0200
+
+# color scheme
+--color dark
+
+# graph style
+--graph-style eighth-block
+
+# directories before files
+--group-directories-first
+
+# modification time
+--show-mtime
+
+# ownership, permissions and last modification time
+--extended
