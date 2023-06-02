@@ -133,7 +133,7 @@ python-beautifulsoup4
 python-cssselect
 python-readability-lxml
 qt5ct
-ranger
+ranger-git
 rclone
 rocm-opencl-runtime
 rsync

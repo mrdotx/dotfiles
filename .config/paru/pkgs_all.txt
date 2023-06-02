@@ -642,7 +642,7 @@ qt5-translations
 qt5-x11extras
 qt5ct
 ragel
-ranger
+ranger-git
 raptor
 rasqal
 rav1e
