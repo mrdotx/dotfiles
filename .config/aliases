@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-27T08:57:28+0200
+# date:   2023-06-04T15:51:53+0200
 
 # color
 alias \
@@ -37,6 +37,7 @@ alias \
     ch='systemctl --failed; journalctl -xb -p3' \
     jo='journalctl -b -p4; journalctl -b -g"error|failed|warning"' \
     tm='systemctl list-timers --all; systemctl --user list-timers --all' \
+    dr='systemctl --user daemon-reload; $EXEC_AS_USER systemctl daemon-reload' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
     sc='system_cleanup.sh' \
