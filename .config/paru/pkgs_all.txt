@@ -594,7 +594,7 @@ picom
 pinentry
 pixman
 pkgconf
-podofo
+podofo-0.9
 polkit
 polybar
 poppler
