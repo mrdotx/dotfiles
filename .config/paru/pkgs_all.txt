@@ -325,6 +325,7 @@ libidn2
 libiec61883
 libieee1284
 libimagequant
+libinih
 libinput
 libisl
 libixion
