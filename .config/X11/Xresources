@@ -1,13 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-04-19T19:52:41+0200
-
-/* theme */
-#define PRIMARY         #4185d7
-#define SECONDARY       #1f5393
-#define GREY0           #2b2b2b
-#define GREY1           #666666
+! date:   2023-06-09T10:00:07+0200
 
 /* transparency */
 #define ALPHA           0.90
@@ -38,6 +32,12 @@
 
 #define WHITE0          #cccccc
 #define WHITE1          #ffffff
+
+/* theme */
+#define PRIMARY         BLUE1
+#define SECONDARY       BLUE0
+#define GREY0           #2b2b2b
+#define GREY1           #666666
 
 /* normal */
 *color0:                BLACK0
