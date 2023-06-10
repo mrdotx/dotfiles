@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-28T08:19:35+0200
+# date:   2023-06-10T10:57:42+0200
 
 # exit | function   | action of ranger
 
@@ -154,11 +154,10 @@ handle_extension() {
             exit 2
             ;;
         gpg | asc)
-            printf "%s" "$(pwd)" \
-                | grep -quiet "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
-                && password_store=1
-            case "$password_store" in
-                1)
+            pwd \
+                | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}"
+            case "$?" in
+                0)
                     gpg --decrypt "$file_path" \
                         | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
                         && exit 5
