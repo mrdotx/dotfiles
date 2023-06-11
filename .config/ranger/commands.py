@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2023-05-27T07:04:53+0200
+date:   2023-06-11T08:15:02+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -14,12 +14,15 @@ from ranger.api.commands import Command
 # fuzzy find files
 class FzfFind(Command):
     """
-    :FzfFind
+    :FzfFind <optional find options>
 
     Search(find) for files/folders and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        command = "find . -name '*' 2> /dev/null \
+        options = ''
+        if self.arg(1):
+            options = str(self.rest(1))
+        command = "find . -name '*' " + options + " 2> /dev/null \
                 | sed 1d \
                 | cut -b3- \
                 | fzf -e \
