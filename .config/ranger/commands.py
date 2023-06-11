@@ -2,29 +2,25 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2023-06-11T08:15:02+0200
+date:   2023-06-11T11:16:01+0200
 """
 
-from __future__ import (absolute_import, division, print_function)
+# from __future__ import (absolute_import, division, print_function)
 import os
 import sys
 from subprocess import PIPE
 from ranger.api.commands import Command
 
-# fuzzy find files
-class FzfFind(Command):
+# fuzzy tagged files
+class FzfTagged(Command):
     """
-    :FzfFind <optional find options>
+    :FzfTagged
 
-    Search(find) for files/folders and use fzf to preview(highlight)/select.
+    Use fzf to preview(highlight)/select tagged files/folders and jump to them.
     """
     def execute(self):
-        options = ''
-        if self.arg(1):
-            options = str(self.rest(1))
-        command = "find . -name '*' " + options + " 2> /dev/null \
-                | sed 1d \
-                | cut -b3- \
+        command = "sort \"$HOME/.local/share/ranger/tagged\" \
+                | cut -d':' -f2 \
                 | fzf -e \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
@@ -37,16 +33,22 @@ class FzfFind(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fuzzy tagged files
-class FzfTagged(Command):
+# fuzzy find files
+class FzfFind(Command):
     """
-    :FzfTagged
+    :FzfFind <optional find options>
 
-    Use fzf to preview(highlight)/select tagged files/folders and jump to them.
+    Search(find) for files/folders and use fzf to preview(highlight)/select.
     """
     def execute(self):
-        command = "sort \"$HOME/.local/share/ranger/tagged\" \
-                | cut -d':' -f2 \
+        if self.arg(1):
+            options = str(self.rest(1))
+        else:
+            options = ''
+
+        command = "find . -name '*' " + options + " 2> /dev/null \
+                | sed 1d \
+                | cut -b3- \
                 | fzf -e \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
