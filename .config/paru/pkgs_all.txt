@@ -81,6 +81,7 @@ curl
 darktable
 dash
 dav1d
+db
 db5.3
 dbus
 dbus-broker
