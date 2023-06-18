@@ -102,7 +102,6 @@ double-conversion
 dragon-drop-git
 duktape
 dunst
-dvisvgm
 e2fsprogs
 efibootmgr
 efivar
@@ -701,8 +700,8 @@ task-spooler
 tdb
 tevent
 texinfo
+texlive-basic
 texlive-bin
-texlive-core
 thunderbird
 thunderbird-i18n-de
 tinyxml

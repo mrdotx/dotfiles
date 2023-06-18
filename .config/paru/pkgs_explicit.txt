@@ -150,7 +150,7 @@ splix
 sweethome3d
 task-spooler
 texinfo
-texlive-core
+texlive-basic
 thunderbird
 thunderbird-i18n-de
 tmux
