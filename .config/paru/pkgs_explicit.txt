@@ -38,8 +38,8 @@ fakeroot
 ffmpegthumbnailer
 file
 findutils
-firefox-developer-edition
-firefox-developer-edition-i18n-de
+firefox
+firefox-i18n-de
 flex
 fzf
 gawk

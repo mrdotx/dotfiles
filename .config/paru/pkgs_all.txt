@@ -122,8 +122,8 @@ fftw
 file
 filesystem
 findutils
-firefox-developer-edition
-firefox-developer-edition-i18n-de
+firefox
+firefox-i18n-de
 flac
 flex
 flickcurl
