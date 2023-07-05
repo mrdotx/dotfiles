@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-01T17:38:11+0200
+# date:   2023-07-04T22:28:36+0200
 
 # general
 refresh-on-startup yes
@@ -31,7 +31,7 @@ macro / set browser "surf.sh %u"; open-in-browser; set browser "link_handler.sh 
 macro e set browser "printf '%s\n' '%u' >> ~/.local/share/newsboat/queue"; open-in-browser; set browser "link_handler.sh %u" -- "export url to podboat queue"
 macro o set browser "link_handler.sh --readable %u"; open-in-browser; set browser "link_handler.sh %u" -- "open url with link_handler.sh readable"
 macro O set browser "$TERMINAL -e link_handler.sh --readable %u &"; open-in-browser; set browser "link_handler.sh %u" -- "open url with link_handler.sh readable in new terminal"
-macro w set browser "firefox-developer-edition %u"; open-in-browser; set browser "link_handler.sh %u" -- "open url with firefox-developer-edition"
+macro w set browser "firefox %u"; open-in-browser; set browser "link_handler.sh %u" -- "open url with firefox"
 macro W set browser "$TERMINAL -e w3m.sh %u &"; open-in-browser; set browser "link_handler.sh %u" -- "open url with w3m.sh in new terminal"
 macro y set browser "printf '%u' | xsel -b"; open-in-browser; set browser "link_handler.sh %u" -- "copy url to clipboard"
 
