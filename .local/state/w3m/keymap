@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.w3m/keymap
+# path:   /home/klassiker/.local/share/repos/dotfiles/.local/state/w3m/keymap
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T11:49:47+0200
+# date:   2023-07-04T22:30:27+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -168,7 +168,7 @@ keymap	,u	LIST_MENU
 keymap	,U	MOVE_LIST_MENU
 
 # browser
-keymap  ,w  EXTERN          "firefox-developer-edition &"
+keymap  ,w  EXTERN          "firefox &"
 keymap  ,W  EXTERN_LINK     "link_handler.sh"
 keymap  ,/  EXTERN          "surf.sh"
 
