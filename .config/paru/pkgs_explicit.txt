@@ -46,7 +46,6 @@ gawk
 gcc
 gcr
 gettext
-gimp-help-de
 gimp-plugin-gmic
 gimp-stripped
 git
