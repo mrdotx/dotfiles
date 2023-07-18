@@ -622,6 +622,7 @@ python-lxml
 python-markdown
 python-mutagen
 python-numpy
+python-packaging
 python-pillow
 python-psutil
 python-pycryptodomex
