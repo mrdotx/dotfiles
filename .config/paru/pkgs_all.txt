@@ -551,6 +551,7 @@ ocl-icd
 odt2txt
 onetbb
 openal
+opencl-headers
 opencore-amr
 opencv
 opendoas
