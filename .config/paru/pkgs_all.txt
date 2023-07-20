@@ -729,7 +729,6 @@ v4l-utils
 ventoy-bin
 vid.stab
 virtualbox
-virtualbox-ext-oracle
 virtualbox-guest-iso
 virtualbox-host-dkms
 vmaf

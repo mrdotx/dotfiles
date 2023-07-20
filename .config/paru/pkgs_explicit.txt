@@ -162,7 +162,6 @@ unzip
 usbutils
 ventoy-bin
 virtualbox
-virtualbox-ext-oracle
 virtualbox-guest-iso
 vorbis-tools
 vulkan-radeon
