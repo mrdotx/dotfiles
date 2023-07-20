@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-06-28T13:16:33+0200
+# date:   2023-07-20T11:11:08+0200
 
 # exit | function   | action of ranger
 
@@ -140,7 +140,7 @@ handle_extension() {
             exit 1
             ;;
         torrent)
-            transmission-show "$file_path" \
+            aria2c -S "$file_path" \
                 && exit 5
             exit 1
             ;;
