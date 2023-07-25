@@ -4,6 +4,6 @@
 ! date:   2022-04-29T09:23:58+0200
 
 wallpaper.tool: xwallpaper --no-randr --zoom
-wallpaper.uri:  /home/klassiker/Pictures/Wallpaper/Dark_Blue/pcb.jpg
+wallpaper.uri:  /home/klassiker/.cache/wallpaper/Dark_Blue/pcb.jpg
 
 ! vim:ft=xdefaults
