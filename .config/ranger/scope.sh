@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-07-20T11:11:08+0200
+# date:   2023-07-27T19:43:33+0200
 
 # exit | function   | action of ranger
 
@@ -36,7 +36,7 @@ file_extension="$(printf "%s" "${file_path##*.}" \
 
 handle_image() {
     case "$1" in
-        image/svg+xml | image/svg)
+        */svg*)
             convert "$file_path" "$image_cache_path" \
                 && exit 6
             exit 1
@@ -99,7 +99,7 @@ handle_image() {
                     && exit 6
             exit 1
             ;;
-        application/pdf)
+        */pdf)
             pdftoppm -f 1 -l 1 \
                 -scale-to-x 960 \
                 -scale-to-y -1 \
@@ -113,7 +113,7 @@ handle_image() {
 }
 
 handle_extension() {
-    case "$file_extension" in
+    case "$1" in
         a | ace | alz | arc | arj | bz | bz2 | cab | cpio | deb | gz | jar \
             | lha | lz | lzh | lzma | lzo | rpm | rz | t7z | tar | tbz | tbz2 \
             | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip | zst)
@@ -133,12 +133,6 @@ handle_extension() {
                 && exit 5
             exit 1
             ;;
-        pdf)
-            pdftotext -l 10 -nopgbrk -q "$file_path" - \
-                | fmt --width="$preview_width" \
-                    && exit 5
-            exit 1
-            ;;
         torrent)
             aria2c -S "$file_path" \
                 && exit 5
@@ -148,16 +142,6 @@ handle_extension() {
             odt2txt "$file_path" \
                 && exit 5
             exit 1
-            ;;
-        xlsx)
-            xlsx2csv "$file_path" \
-                && exit 5
-            exit 1
-            ;;
-        htm | html | xhtml)
-            w3m -dump "$file_path" \
-                && exit 5
-            exit 2
             ;;
         gpg | asc)
             pwd \
@@ -191,19 +175,30 @@ handle_extension() {
 
 handle_mime() {
     case "$1" in
-        text/rtf | *msword)
+        *openxmlformats-officedocument.spreadsheetml*)
+            xlsx2csv "$file_path" \
+                && exit 5
+            exit 1
+            ;;
+        *ms-excel*)
+            xls2csv "$file_path" \
+                && exit 5
+            exit 1
+            ;;
+        *msword)
             catdoc "$file_path" \
                 && exit 5
             exit 1
             ;;
-        *wordprocessingml.document | */epub+zip | */x-fictionbook+xml)
+        *wordprocessingml.document | */rtf | */epub+zip | */x-fictionbook+xml)
             pandoc --standalone --to markdown "$file_path" \
                 && exit 5
             exit 1
             ;;
-        *ms-excel)
-            xls2csv "$file_path" \
-                && exit 5
+        */pdf)
+            pdftotext -l 10 -nopgbrk -q "$file_path" - \
+                | fmt --width="$preview_width" \
+                    && exit 5
             exit 1
             ;;
         *sqlite3)
@@ -216,13 +211,18 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
+        */*html*)
+            w3m -dump "$file_path" \
+                && exit 5
+            exit 2
+            ;;
         */csv)
-            column --separator ',' --table "$file_path" \
+            column --separator ';,|' --table "$file_path" \
                 && exit 5
             exit 2
             ;;
         text/* | */json | */xml)
-            highlight --max-size=256K "$file_path" \
+            highlight --max-size=1M "$file_path" \
                 && exit 5
             exit 2
             ;;
@@ -231,8 +231,7 @@ handle_mime() {
                 && exit 5
             exit 1
             ;;
-        application/x-executable | application/x-pie-executable \
-            | application/x-sharedlib)
+        */x-executable | */x-pie-executable | */x-sharedlib)
                 readelf --wide --demangle --all "$file_path" \
                     && exit 5
                 exit 1
@@ -243,12 +242,13 @@ handle_mime() {
 handle_fallback() {
     printf '##### File Type Classification #####\n' \
         && file --dereference --brief "$file_path" \
+        && file --dereference --brief --mime-type "$file_path" \
         && exit 5
     exit 1
 }
 
 [ "$preview_image" = 'True' ] \
     && handle_image "$mime_type"
-handle_extension
+handle_extension "$file_extension"
 handle_mime "$mime_type"
 handle_fallback
