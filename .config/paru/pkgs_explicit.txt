@@ -62,7 +62,7 @@ hyphen-en
 i3-wm
 imagemagick
 inetutils
-inkscape
+inkscape-stripped
 iwd
 kid3-qt
 kmon
@@ -120,7 +120,7 @@ pacman
 pacman-contrib
 pam-gnupg
 pandoc-bin
-paru-bin
+paru-git
 patch
 perl-image-exiftool
 picard

@@ -186,6 +186,7 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm3
+gtksourceview4
 gts
 guile
 gumbo-parser
@@ -219,7 +220,7 @@ imagemagick
 imath
 imlib2
 inetutils
-inkscape
+inkscape-stripped
 iproute2
 iptables
 iputils
@@ -581,7 +582,7 @@ pambase
 pandoc-bin
 pango
 pangomm
-paru-bin
+paru-git
 patch
 pciutils
 pcre
