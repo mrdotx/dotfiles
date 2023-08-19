@@ -49,6 +49,7 @@ gettext
 gimp-plugin-gmic
 gimp-stripped
 git
+go-scc-git
 grep
 groff
 gzip
