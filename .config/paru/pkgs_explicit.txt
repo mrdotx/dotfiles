@@ -137,6 +137,7 @@ rclone
 rocm-opencl-runtime
 rsync
 rxvt-unicode-truecolor-wide-glyphs
+scc-bin
 scribus
 sed
 sg3_utils

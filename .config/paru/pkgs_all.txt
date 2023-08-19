@@ -660,6 +660,7 @@ rsync
 rubberband
 rxvt-unicode-truecolor-wide-glyphs
 sane
+scc-bin
 scribus
 sdl12-compat
 sdl2
