@@ -162,7 +162,6 @@ gmic
 gmp
 gnupg
 gnutls
-go-scc-git
 gperftools
 gpgme
 gpm
