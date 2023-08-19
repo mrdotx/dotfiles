@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-30T19:13:32+0200
+# date:   2023-08-19T17:40:58+0200
 
 # xdg paths
 export \
@@ -95,6 +95,8 @@ export \
     W3M_DIR="$XDG_STATE_HOME/w3m" \
     WWW_HOME="lite.duckduckgo.com" \
     CARGO_HOME="$XDG_DATA_HOME/cargo" \
+    GOPATH="$XDG_DATA_HOME/go" \
+    GOMODCACHE="$XDG_DATA_HOME/go/mod" \
     QT_QPA_PLATFORMTHEME="qt5ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
     MOZ_USE_XINPUT2=1 \
