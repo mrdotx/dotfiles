@@ -21,7 +21,6 @@ found in my other repositories.
 | mc                | visual shell for unix-like systems                   |
 | mpv               | media player                                         |
 | ncdu              | ncurses disk usage                                   |
-| neofetch          | customizable system info script                      |
 | newsboat          | rss/atom feedreader                                  |
 | npm               | javascript package manager                           |
 | nsxiv             | image viewer                                         |
