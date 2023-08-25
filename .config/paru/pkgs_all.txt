@@ -235,8 +235,6 @@ java-runtime-common
 jbig2dec
 jre-openjdk
 jre-openjdk-headless
-jre11-openjdk
-jre11-openjdk-headless
 json-c
 json-glib
 jsoncpp
