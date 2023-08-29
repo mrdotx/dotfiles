@@ -115,7 +115,6 @@ exiv2
 expat
 faad2
 fakeroot
-ffcall
 ffmpeg
 ffmpegthumbnailer
 fftw
@@ -395,7 +394,6 @@ libsasl
 libseccomp
 libsecret
 libsigc++
-libsigsegv
 libsm
 libsndfile
 libsoup
@@ -444,7 +442,6 @@ libwpg
 libwps
 libx11
 libxau
-libxaw
 libxcb
 libxcomposite
 libxcrypt
@@ -693,7 +690,6 @@ sweethome3d
 systemd
 systemd-libs
 systemd-sysvcompat
-t1lib
 taglib
 talloc
 tar
@@ -701,8 +697,6 @@ task-spooler
 tdb
 tevent
 texinfo
-texlive-basic
-texlive-bin
 thunderbird
 thunderbird-i18n-de
 tinyxml
@@ -810,4 +804,3 @@ zsh-history-substring-search
 zsh-syntax-highlighting
 zstd
 zxing-cpp
-zziplib
