@@ -288,6 +288,7 @@ libdatrie
 libdc1394
 libde265
 libdecor
+libdeflate
 libdiscid
 libdrm
 libdvdnav
