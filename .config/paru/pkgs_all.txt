@@ -232,6 +232,7 @@ jansson
 jasper
 java-runtime-common
 jbig2dec
+jbigkit
 jre-openjdk
 jre-openjdk-headless
 json-c
