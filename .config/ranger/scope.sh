@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-07-27T19:43:33+0200
+# date:   2023-09-15T09:04:21+0200
 
 # exit | function   | action of ranger
 
@@ -118,29 +118,29 @@ handle_extension() {
             | lha | lz | lzh | lzma | lzo | rpm | rz | t7z | tar | tbz | tbz2 \
             | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip | zst)
                 bsdtar --list --file "$file_path" \
-                    && exit 5
+                    && exit 0
                 exit 1
             ;;
         rar)
             # avoid password prompt by providing empty password
             unrar lt -p- "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         7z)
             # avoid password prompt by providing empty password
             7z l -p "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         torrent)
             aria2c -S "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         odt | ods | odp | sxw)
             odt2txt "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         gpg | asc)
@@ -150,25 +150,30 @@ handle_extension() {
                 0)
                     gpg --decrypt "$file_path" \
                         | sed '1 s/^.*$/***/; 2 s/^username:.*$/username: ***/' \
-                        && exit 5
+                        && exit 0
                     exit 1
                     ;;
                 *)
                     gpg --decrypt "$file_path" \
-                        && exit 5
+                        && exit 0
                     exit 1
                     ;;
             esac
             ;;
         dff | dsf | wv | wvc)
             exiftool "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         bin | exe | dat | o)
             xxd "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
+            ;;
+        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)
+            man "$file_path" \
+                && exit 0
+            exit 2
             ;;
     esac
 }
@@ -177,28 +182,28 @@ handle_mime() {
     case "$1" in
         *openxmlformats-officedocument.spreadsheetml*)
             xlsx2csv "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         *ms-excel*)
             xls2csv "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         *msword)
             catdoc "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         *wordprocessingml.document | */rtf | */epub+zip | */x-fictionbook+xml)
             pandoc --standalone --to markdown "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         */pdf)
             pdftotext -l 10 -nopgbrk -q "$file_path" - \
                 | fmt --width="$preview_width" \
-                    && exit 5
+                    && exit 0
             exit 1
             ;;
         *sqlite3)
@@ -208,32 +213,32 @@ handle_mime() {
                  WHERE type IN ('table','view')
                  AND name NOT LIKE 'sqlite_%'
                  ORDER BY 1;" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         */*html*)
             w3m -dump "$file_path" \
-                && exit 5
+                && exit 0
             exit 2
             ;;
         */csv)
             column --separator ';,|' --table "$file_path" \
-                && exit 5
+                && exit 0
             exit 2
             ;;
         text/* | */json | */xml)
             highlight --max-size=1M "$file_path" \
-                && exit 5
+                && exit 0
             exit 2
             ;;
         image/* | video/* | audio/*)
             exiftool "$file_path" \
-                && exit 5
+                && exit 0
             exit 1
             ;;
         */x-executable | */x-pie-executable | */x-sharedlib)
                 readelf --wide --demangle --all "$file_path" \
-                    && exit 5
+                    && exit 0
                 exit 1
             ;;
     esac
@@ -243,7 +248,7 @@ handle_fallback() {
     printf '##### File Type Classification #####\n' \
         && file --dereference --brief "$file_path" \
         && file --dereference --brief --mime-type "$file_path" \
-        && exit 5
+        && exit 0
     exit 1
 }
 
