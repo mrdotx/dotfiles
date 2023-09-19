@@ -341,7 +341,6 @@ liblzf
 libmad
 libmanette
 libmd
-libmfx
 libmicrohttpd
 libmnl
 libmodplug
@@ -548,6 +547,7 @@ nvtop
 ocl-icd
 odt2txt
 onetbb
+onevpl
 openal
 opencl-headers
 opencore-amr
