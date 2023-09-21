@@ -351,6 +351,7 @@ libmpcdec
 libmpdclient
 libmspub
 libmtp
+libmupdf
 libmwaw
 libmypaint
 libnet
