@@ -248,7 +248,7 @@ kodi
 kodi-addon-pvr-iptvsimple
 krb5
 kvantum
-kwindowsystem
+kwindowsystem5
 l-smash
 lame
 lapack
@@ -284,6 +284,7 @@ libcloudproviders
 libcolord
 libconfig
 libcups
+libcupsfilters
 libdaemon
 libdatrie
 libdc1394
@@ -335,7 +336,6 @@ libjxl
 libksba
 liblangtag
 libldap
-liblouis
 liblqr
 libluv
 liblzf
@@ -380,6 +380,7 @@ libpipewire
 libplacebo
 libplist
 libpng
+libppd
 libproxy
 libpsl
 libptytty
