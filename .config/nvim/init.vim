@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-05-07T06:15:15+0200
+" date:   2023-10-07T13:39:17+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -63,6 +63,13 @@ command Wq :execute ':silent w !$EXEC_AS_USER tee % > /dev/null' | :quit!
 " command for terminal execution in split window
 command -nargs=1 -complete=file -bar TermExec
     \ :execute winheight(0)/3'split term://<args>'
+
+" command to sort by delimiter and column
+function! SortColumn(delimiter, column)
+    execute ':%!sort -t"'.a:delimiter.'" -k'.a:column
+endfunction
+command -nargs=* SortColumn
+    \ call SortColumn(<f-args>)
 
 " if config exists source file
 function! IfConfigExists(action, file)
