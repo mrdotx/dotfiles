@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-02T17:57:30+0200
+# date:   2023-10-08T16:27:48+0200
 
 # color
 alias \
@@ -41,7 +41,9 @@ alias \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu --needed' \
     sc='system_cleanup.sh' \
-    bu='backup.sh; backup_keys.sh' \
+    bu='backup.sh' \
+    bk='backup_keys.sh' \
+    bn='backup_nds.sh' \
     dm='$EXEC_AS_USER delete_metafiles.sh' \
     fa='fzf_alsa.sh' \
     fcp='fzf_cpupower.sh' \
