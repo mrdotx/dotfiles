@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-09-15T09:16:20+0200
+# date:   2023-10-14T19:25:05+0200
 
 # exit | function   | action of ranger
 
@@ -245,7 +245,9 @@ handle_mime() {
 }
 
 handle_fallback() {
-    printf '##### File Type Classification #####\n' \
+    printf '##### File Status #####\n' \
+        && stat "$file_path" \
+        && printf '\n##### File Type Classification #####\n' \
         && file --dereference --brief "$file_path" \
         && file --dereference --brief --mime-type "$file_path" \
         && exit 0
