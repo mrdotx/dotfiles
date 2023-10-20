@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-15T17:11:02+0200
+# date:   2023-10-20T08:26:13+0200
 
 # color
 alias \
@@ -43,7 +43,7 @@ alias \
     sc='system_cleanup.sh' \
     bs='backup_system.sh' \
     bk='backup_keys.sh' \
-    bn='backup_nds.sh $HOME/Desktop/nds_flashcards/backup' \
+    bn='backup_nds.sh $HOME/Public/nds/backup' \
     dm='$EXEC_AS_USER delete_metafiles.sh' \
     fa='fzf_alsa.sh' \
     fcp='fzf_cpupower.sh' \
