@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-14T19:25:05+0200
+# date:   2023-10-24T09:17:17+0200
 
 # exit | function   | action of ranger
 
@@ -15,6 +15,10 @@
 # 5    | fix both   | don't ever reload
 # 6    | image      | display the image ($image_cache_path) as an image
 # 7    | image      | display the file directly as an image
+
+# speed up script and avoid language problems by using standard c
+LC_ALL=C
+LANG=C
 
 # script arguments
 # full path of the highlighted file
