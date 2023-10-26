@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-24T09:17:17+0200
+# date:   2023-10-26T17:01:31+0200
 
 # exit | function   | action of ranger
 
@@ -19,6 +19,9 @@
 # speed up script and avoid language problems by using standard c
 LC_ALL=C
 LANG=C
+
+# time limit for preview creation in seconds
+time_out=5
 
 # script arguments
 # full path of the highlighted file
@@ -143,7 +146,7 @@ handle_extension() {
             exit 1
             ;;
         odt | ods | odp | sxw)
-            odt2txt "$file_path" \
+            timeout "$time_out" odt2txt "$file_path" \
                 && exit 0
             exit 1
             ;;
@@ -170,7 +173,7 @@ handle_extension() {
             exit 1
             ;;
         bin | exe | dat | o)
-            xxd "$file_path" \
+            timeout "$time_out" xxd "$file_path" \
                 && exit 0
             exit 1
             ;;
@@ -185,27 +188,27 @@ handle_extension() {
 handle_mime() {
     case "$1" in
         *openxmlformats-officedocument.spreadsheetml*)
-            xlsx2csv "$file_path" \
+            timeout "$time_out" xlsx2csv "$file_path" \
                 && exit 0
             exit 1
             ;;
         *ms-excel*)
-            xls2csv "$file_path" \
+            timeout "$time_out" xls2csv "$file_path" \
                 && exit 0
             exit 1
             ;;
         *msword)
-            catdoc "$file_path" \
+            timeout "$time_out" catdoc "$file_path" \
                 && exit 0
             exit 1
             ;;
         *wordprocessingml.document | */rtf | */epub+zip | */x-fictionbook+xml)
-            pandoc --standalone --to markdown "$file_path" \
+            timeout "$time_out" pandoc --standalone --to markdown "$file_path" \
                 && exit 0
             exit 1
             ;;
         */pdf)
-            pdftotext -l 10 -nopgbrk -q "$file_path" - \
+            timeout "$time_out" pdftotext -l 10 -nopgbrk -q "$file_path" - \
                 | fmt --width="$preview_width" \
                     && exit 5
             exit 1
