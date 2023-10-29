@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-26T17:01:31+0200
+# date:   2023-10-29T09:19:02+0100
 
 # exit | function   | action of ranger
 
@@ -150,6 +150,16 @@ handle_extension() {
                 && exit 0
             exit 1
             ;;
+        dff | dsf | wv | wvc)
+            exiftool "$file_path" \
+                && exit 0
+            exit 1
+            ;;
+        bin | exe | dat | o)
+            timeout "$time_out" xxd "$file_path" \
+                && exit 0
+            exit 1
+            ;;
         gpg | asc)
             pwd \
                 | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}"
@@ -167,18 +177,8 @@ handle_extension() {
                     ;;
             esac
             ;;
-        dff | dsf | wv | wvc)
-            exiftool "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        bin | exe | dat | o)
-            timeout "$time_out" xxd "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9)
-            man "$file_path" \
+        ini)
+            highlight --max-size=1M "$file_path" \
                 && exit 0
             exit 2
             ;;
@@ -233,8 +233,13 @@ handle_mime() {
                 && exit 0
             exit 2
             ;;
-        text/* | */json | */xml)
-            highlight --max-size=1M "$file_path" \
+        */x-executable | */x-pie-executable | */x-sharedlib)
+                readelf --wide --demangle --all "$file_path" \
+                    && exit 0
+                exit 1
+            ;;
+        text/troff)
+            man "$file_path" \
                 && exit 0
             exit 2
             ;;
@@ -243,10 +248,10 @@ handle_mime() {
                 && exit 0
             exit 1
             ;;
-        */x-executable | */x-pie-executable | */x-sharedlib)
-                readelf --wide --demangle --all "$file_path" \
-                    && exit 0
-                exit 1
+        text/* | */json | */xml)
+            highlight --max-size=1M "$file_path" \
+                && exit 0
+            exit 2
             ;;
     esac
 }
