@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-29T09:19:02+0100
+# date:   2023-11-01T10:35:54+0100
 
 # exit | function   | action of ranger
 
@@ -140,11 +140,6 @@ handle_extension() {
                 && exit 0
             exit 1
             ;;
-        torrent)
-            aria2c -S "$file_path" \
-                && exit 0
-            exit 1
-            ;;
         odt | ods | odp | sxw)
             timeout "$time_out" odt2txt "$file_path" \
                 && exit 0
@@ -227,6 +222,11 @@ handle_mime() {
             w3m -dump "$file_path" \
                 && exit 0
             exit 2
+            ;;
+        */x-bittorrent)
+            aria2c -S "$file_path" \
+                && exit 0
+            exit 1
             ;;
         */csv)
             column --separator ';,|' --table "$file_path" \
