@@ -256,6 +256,7 @@ lcms2
 ldb
 ldns
 lensfun
+leptonica
 less
 lib2geom
 libabw
@@ -700,6 +701,9 @@ talloc
 tar
 task-spooler
 tdb
+tesseract
+tesseract-data-deu
+tesseract-data-osd
 tevent
 texinfo
 thunderbird
