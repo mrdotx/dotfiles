@@ -739,7 +739,6 @@ vulkan-radeon
 w3m
 wavpack
 wayland
-wayland-protocols
 waylandpp
 webkit2gtk
 wget
