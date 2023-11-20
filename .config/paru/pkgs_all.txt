@@ -728,6 +728,7 @@ util-linux
 util-linux-libs
 v4l-utils
 ventoy-bin
+verdict
 vid.stab
 virtualbox
 virtualbox-guest-iso
