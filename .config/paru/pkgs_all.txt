@@ -420,6 +420,7 @@ libtirpc
 libtommath
 libtool
 libtpms
+libunibreak
 libunistring
 libunwind
 liburing
