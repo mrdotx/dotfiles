@@ -120,7 +120,7 @@ pacman
 pacman-contrib
 pam-gnupg
 pandoc-bin
-paru-git
+paru-bin
 patch
 perl-image-exiftool
 picard
