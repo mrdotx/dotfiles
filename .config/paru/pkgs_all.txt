@@ -679,6 +679,7 @@ slang
 slop
 smartmontools
 smbclient
+snappy
 sndio
 sound-theme-freedesktop
 spdlog
