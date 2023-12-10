@@ -1,22 +1,22 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-07T20:56:39+0100
+# date:   2023-12-09T13:25:41+0100
 
 # ranger use ram as cache and change directory on exit
 ranger_cd() {
     local \
-        tmp_file \
-        cache_folder
+        cache_folder \
+        tmp_file
 
-    tmp_file="$(mktemp -t ranger_cd.XXXXXX)"
     cache_folder="$(mktemp -t -d ranger_cache.XXXXXX)"
+    tmp_file="$cache_folder/ranger_cd"
 
     ranger --cachedir="$cache_folder" --choosedir="$tmp_file" "$@"
 
     [ -e "$tmp_file" ] \
         && cd "$(cat "$tmp_file")" \
-        && rm -rf "$cache_folder" "$tmp_file" \
+        && rm -rf "$cache_folder" \
         || exit 1
 }
 
