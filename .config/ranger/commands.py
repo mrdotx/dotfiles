@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2023-06-11T11:16:01+0200
+date:   2023-12-09T13:15:32+0100
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -12,9 +12,9 @@ from subprocess import PIPE
 from ranger.api.commands import Command
 
 # fuzzy tagged files
-class FzfTagged(Command):
+class fzf_tagged(Command):
     """
-    :FzfTagged
+    :fzf_tagged
 
     Use fzf to preview(highlight)/select tagged files/folders and jump to them.
     """
@@ -34,9 +34,9 @@ class FzfTagged(Command):
                 self.fm.select_file(fzf_file)
 
 # fuzzy find files
-class FzfFind(Command):
+class fzf_find(Command):
     """
-    :FzfFind <optional find options>
+    :fzf_find <optional find options>
 
     Search(find) for files/folders and use fzf to preview(highlight)/select.
     """
@@ -62,9 +62,9 @@ class FzfFind(Command):
                 self.fm.select_file(fzf_file)
 
 # fuzzy search file content
-class FzfGrep(Command):
+class fzf_grep(Command):
     """
-    :FzfGrep <query>
+    :fzf_grep <query>
 
     Search(grep) file content, use fzf to preview(highlight)/select file and
     open file with search string in editor.
@@ -73,7 +73,7 @@ class FzfGrep(Command):
         if self.arg(1):
             search_string = str(self.rest(1))
         else:
-            self.fm.notify("Usage: fzfgrep \"<search string>\"", bad=True)
+            self.fm.notify("Usage: fzf_grep \"<search string>\"", bad=True)
             return
 
         command = "grep --color=never -Iirsl " + search_string + " \
@@ -88,3 +88,16 @@ class FzfGrep(Command):
                 run_file = "$EDITOR %s -c /%s" % (fzf_file, search_string)
                 self.fm.select_file(fzf_file)
                 self.fm.run(run_file)
+
+# flat toggle
+class flat_toggle(Command):
+    """
+    :flat_toggle
+
+    Un-/flattends the directory view.
+    """
+    def execute(self):
+        if self.fm.thisdir.flat != 0:
+            self.fm.thisdir.flat = 0
+        else:
+            self.fm.thisdir.flat = -1
