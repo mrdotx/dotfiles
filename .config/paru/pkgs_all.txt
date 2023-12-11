@@ -479,7 +479,6 @@ libxv
 libxxf86vm
 libyaml
 libyuv
-libzip
 libzmf
 licenses
 linux
@@ -550,7 +549,6 @@ nsxiv
 numactl
 nvtop
 ocl-icd
-odt2txt
 onetbb
 onevpl
 openal

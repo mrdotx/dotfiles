@@ -110,7 +110,6 @@ npm
 nsxiv
 nvtop
 ocl-icd
-odt2txt
 opendoas
 opendoas-sudo
 openssh
