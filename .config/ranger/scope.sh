@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-11-01T10:35:54+0100
+# date:   2023-12-11T09:14:04+0100
 
 # exit | function   | action of ranger
 
@@ -27,7 +27,7 @@ time_out=5
 # full path of the highlighted file
 file_path="$1"
 # width of the preview pane (number of fitting characters)
-preview_width="$2"
+# preview_width="$2"
 # height of the preview pane (number of fitting characters)
 # preview_height is provided for convenience and unused
 # preview_height="$3"
@@ -116,6 +116,17 @@ handle_image() {
                     && exit 6
             exit 1
             ;;
+        */vnd.oasis.opendocument* \
+            | */vnd.openxmlformats-officedocument* \
+            | *ms-excel | *msword | *mspowerpoint | */rtf)
+                file_name="$(basename "${file_path%.*}")"
+                cache_dir="${image_cache_path%"$(basename "$image_cache_path")"}"
+
+                libreoffice --convert-to jpeg "$file_path" --outdir "$cache_dir" \
+                    && mv "$cache_dir$file_name.jpeg" "$image_cache_path" \
+                    && exit 6
+                exit 1
+            ;;
     esac
 }
 
@@ -137,11 +148,6 @@ handle_extension() {
         7z)
             # avoid password prompt by providing empty password
             7z l -p "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        odt | ods | odp | sxw)
-            timeout "$time_out" odt2txt "$file_path" \
                 && exit 0
             exit 1
             ;;
@@ -182,32 +188,6 @@ handle_extension() {
 
 handle_mime() {
     case "$1" in
-        *openxmlformats-officedocument.spreadsheetml*)
-            timeout "$time_out" xlsx2csv "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        *ms-excel*)
-            timeout "$time_out" xls2csv "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        *msword)
-            timeout "$time_out" catdoc "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        *wordprocessingml.document | */rtf | */epub+zip | */x-fictionbook+xml)
-            timeout "$time_out" pandoc --standalone --to markdown "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        */pdf)
-            timeout "$time_out" pdftotext -l 10 -nopgbrk -q "$file_path" - \
-                | fmt --width="$preview_width" \
-                    && exit 5
-            exit 1
-            ;;
         *sqlite3)
             sqlite3 -header -column "$file_path" \
                 "SELECT name, type
