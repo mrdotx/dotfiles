@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-10-20T08:26:13+0200
+# date:   2023-12-14T10:59:53+0100
 
 # color
 alias \
@@ -39,7 +39,7 @@ alias \
     tm='systemctl list-timers --all; systemctl --user list-timers --all' \
     dr='systemctl --user daemon-reload; $EXEC_AS_USER systemctl daemon-reload' \
     cu='checkupdates; paru -Qua' \
-    up='paru -Syu --needed' \
+    up='paru -Syu' \
     sc='system_cleanup.sh' \
     bs='backup_system.sh' \
     bk='backup_keys.sh' \
