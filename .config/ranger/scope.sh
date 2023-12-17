@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-11T09:14:04+0100
+# date:   2023-12-16T21:10:07+0100
 
 # exit | function   | action of ranger
 
@@ -15,10 +15,6 @@
 # 5    | fix both   | don't ever reload
 # 6    | image      | display the image ($image_cache_path) as an image
 # 7    | image      | display the file directly as an image
-
-# speed up script and avoid language problems by using standard c
-LC_ALL=C
-LANG=C
 
 # time limit for preview creation in seconds
 time_out=5
@@ -151,6 +147,11 @@ handle_extension() {
                 && exit 0
             exit 1
             ;;
+        csv)
+            column --separator ';,|' --table "$file_path" \
+                && exit 0
+            exit 2
+            ;;
         dff | dsf | wv | wvc)
             exiftool "$file_path" \
                 && exit 0
@@ -160,6 +161,11 @@ handle_extension() {
             timeout "$time_out" xxd "$file_path" \
                 && exit 0
             exit 1
+            ;;
+        ini)
+            highlight --max-size=1M "$file_path" \
+                && exit 0
+            exit 2
             ;;
         gpg | asc)
             pwd \
@@ -177,11 +183,6 @@ handle_extension() {
                     exit 1
                     ;;
             esac
-            ;;
-        ini)
-            highlight --max-size=1M "$file_path" \
-                && exit 0
-            exit 2
             ;;
     esac
 }
@@ -207,11 +208,6 @@ handle_mime() {
             aria2c -S "$file_path" \
                 && exit 0
             exit 1
-            ;;
-        */csv)
-            column --separator ';,|' --table "$file_path" \
-                && exit 0
-            exit 2
             ;;
         */x-executable | */x-pie-executable | */x-sharedlib)
                 readelf --wide --demangle --all "$file_path" \
