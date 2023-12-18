@@ -65,13 +65,14 @@ cdw
 chromaprint
 cifs-utils
 cinfo
+clang
 clucene
 cmus
 colord
 colord-gtk
 colord-gtk-common
 colord-sane
-comgr
+compiler-rt
 confuse
 coreutils
 cpupower
@@ -199,8 +200,6 @@ hicolor-icon-theme
 hidapi
 highlight
 highway
-hsa-rocr
-hsakmt-roct
 htop
 hunspell
 hunspell-de
@@ -280,6 +279,7 @@ libcdio
 libcdio-paranoia
 libcdr
 libcec
+libclc
 libcloudproviders
 libcmis
 libcolord
@@ -546,13 +546,12 @@ npth
 nspr
 nss
 nsxiv
-numactl
 nvtop
 ocl-icd
 onetbb
 onevpl
 openal
-opencl-headers
+opencl-rusticl-mesa
 opencore-amr
 opencv
 opendoas
@@ -653,8 +652,6 @@ rav1e
 rclone
 readline
 redland
-rocm-device-libs
-rocm-opencl-runtime
 rpcbind
 rsync
 rubberband
@@ -684,6 +681,7 @@ spdlog
 speedtest-cli
 speex
 speexdsp
+spirv-llvm-translator
 spirv-tools
 splix
 sqlite

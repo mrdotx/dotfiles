@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-11-21T07:36:03+0100
+# date:   2023-12-17T20:08:58+0100
 
 # xdg paths
 export \
@@ -73,6 +73,7 @@ export \
 
 # app settings
 export \
+    RUSTICL_ENABLE=radeonsi \
     COLORTERM=truecolor \
     GPG_TTY=$(tty) \
     ZSTD_NBTHREADS=0 \

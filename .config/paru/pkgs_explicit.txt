@@ -110,6 +110,7 @@ npm
 nsxiv
 nvtop
 ocl-icd
+opencl-rusticl-mesa
 opendoas
 opendoas-sudo
 openssh
@@ -133,7 +134,6 @@ python-readability-lxml
 qt5ct
 ranger-git
 rclone
-rocm-opencl-runtime
 rsync
 rxvt-unicode-truecolor-wide-glyphs
 scribus
