@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-12-24T11:51:27+0100
+# date:   2023-12-21T21:56:27+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -116,17 +116,18 @@ _comp_options+=(globdots) # hidden files
 
 # zsh-autosuggestion
 . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#1f5393,bg=black,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=blue,bg=black,underline"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
-
-# history-substring-search
-. /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 # zsh-syntax-highlighting
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_HIGHLIGHTERS+=(brackets)
+
+# history-substring-search
+. /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=white,bg=blue,bold'
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # autostart
 cinfo
