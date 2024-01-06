@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-31T10:45:46+0100
+# date:   2024-01-06T18:37:08+0100
 
 # ranger use ram as cache and change directory on exit
 ranger_cd() {
@@ -42,6 +42,15 @@ keypress() {
     xev -event "keyboard" \
         | awk -F'[ )]+' \
             '/^KeyPress/ {a[NR+2]} NR in a {printf "%-4s %s\n", $5, $8}'
+}
+
+# cd ripping with cyanrip (determine the value for -s with -f)
+cd_rip() {
+    local \
+        folder="{album_artist} - {album} [{format}]" \
+        track="{album_artist} - {album} - {if #totaldiscs# > #1#|disc|-}{track} - {title}"
+
+    cyanrip -s 6 -o wav,mp3 -b 192 -D "$folder" -F "$track" -Q "$@"
 }
 
 # vim:ft=sh
