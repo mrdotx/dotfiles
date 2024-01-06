@@ -21,7 +21,6 @@ aria2
 aspell
 aspell-de
 aspell-en
-asunder
 at-spi2-core
 atkmm
 atomicparsley
@@ -80,6 +79,7 @@ cryptsetup
 cups
 cups-filters
 curl
+cyanrip
 darktable
 dash
 dav1d
@@ -274,7 +274,6 @@ libburn
 libcanberra
 libcap
 libcap-ng
-libcddb
 libcdio
 libcdio-paranoia
 libcdr
@@ -353,6 +352,7 @@ libmpdclient
 libmspub
 libmtp
 libmupdf
+libmusicbrainz5
 libmwaw
 libmypaint
 libnet
