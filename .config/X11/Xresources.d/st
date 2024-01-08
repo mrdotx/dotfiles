@@ -1,11 +1,12 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/st
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2022-05-03T12:55:34+0200
+! date:   2024-01-07T19:08:46+0100
 
 st.font:         FONT0
 st.font0:        FONT1
 st.font1:        FONT2
+st.font2:        FONT3
 st.background:   BLACK0
 st.foreground:   WHITE1
 st.cursorColor:  PRIMARY
