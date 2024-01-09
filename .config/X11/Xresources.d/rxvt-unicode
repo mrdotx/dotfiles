@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2024-01-07T21:28:09+0100
+! date:   2024-01-08T22:00:24+0100
 
 URxvt.geometry:                    80x-1
 URxvt.font:                        xft:FONT0, \
@@ -16,7 +16,6 @@ URxvt.highlightTextColor:          WHITE1
 URxvt.termName:                    rxvt-unicode-256color
 URxvt.depth:                       32
 URxvt.refreshRate:                 0
-URxvt.skipScroll:                  false
 URxvt.scrollBar:                   false
 URxvt.mouseWheelScrollPage:        false
 URxvt.cursorBlink:                 false
@@ -46,7 +45,6 @@ URxvt.url-launcher:                link_handler.sh
 URxvt.keysym.Meta-o:               perl:matcher:select
 URxvt.matcher.button:              1
 URxvt.matcher.rend.0:              Italic Bold fg8
-URxvt.colorUL:                     PRIMARY
 
 /* keysym compatibility */
 URxvt.keysym.Shift-Up:             \033[1;2A
