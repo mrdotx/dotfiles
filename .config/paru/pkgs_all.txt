@@ -23,7 +23,6 @@ aspell-de
 aspell-en
 at-spi2-core
 atkmm
-atomicparsley
 attr
 audit
 autoconf
@@ -399,6 +398,7 @@ libsasl
 libseccomp
 libsecret
 libsigc++
+libsixel
 libsm
 libsndfile
 libsoup
@@ -730,6 +730,7 @@ usbutils
 util-linux
 util-linux-libs
 v4l-utils
+vapoursynth
 ventoy-bin
 verdict
 vid.stab
