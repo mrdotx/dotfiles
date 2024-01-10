@@ -86,6 +86,7 @@ db
 db5.3
 dbus
 dbus-broker
+dbus-broker-units
 dbus-glib
 dconf
 debugedit
@@ -436,6 +437,7 @@ libvdpau
 libverto
 libvisio
 libvorbis
+libvpl
 libvpx
 libvterm
 libwacom
@@ -549,7 +551,6 @@ nsxiv
 nvtop
 ocl-icd
 onetbb
-onevpl
 openal
 opencl-rusticl-mesa
 opencore-amr
