@@ -1,9 +1,8 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2024-01-08T22:00:24+0100
+! date:   2024-01-11T10:05:30+0100
 
-URxvt.geometry:                    80x-1
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \
                                    xft:FONT2, \
@@ -13,38 +12,36 @@ URxvt.foreground:                  WHITE1
 URxvt.cursorColor:                 PRIMARY
 URxvt.highlightColor:              PRIMARY
 URxvt.highlightTextColor:          WHITE1
-URxvt.termName:                    rxvt-unicode-256color
 URxvt.depth:                       32
+URxvt.geometry:                    80x-1
 URxvt.refreshRate:                 0
 URxvt.scrollBar:                   false
-URxvt.mouseWheelScrollPage:        false
-URxvt.cursorBlink:                 false
-URxvt.reverseVideo:                false
-URxvt.iso14770:                    false
-URxvt.iso14770_52:                 false
+URxvt.iso14755:                    false
+URxvt.iso14755_52:                 false
 URxvt.saveLines:                   500
 
 /* perl extensions */
-URxvt.perl-ext-common:             eval,keyboard-select,matcher,resize-font,searchable-scrollback,selection,selection-to-clipboard
+URxvt.perl-ext-common:             eval,matcher,selection,selection-to-clipboard,keyboard-select,resize-font
 
-/* copy and paste */
+/* copy and paste [eval] */
 URxvt.keysym.Control-C:            eval:selection_to_clipboard
 URxvt.keysym.Control-V:            eval:paste_clipboard
 URxvt.keysym.Control-Y:            eval:paste_primary
 
-/* resize-font */
-URxvt.resize-font.step:            1
+/* open url [matcher] */
+URxvt.url-launcher:                link_handler.sh
+URxvt.keysym.Meta-o:               matcher:select
+URxvt.keysym.Meta-O:               matcher:list
+URxvt.matcher.button:              1
+URxvt.matcher.rend.0:              Uline Italic fg16
 
 /* keyboard-select */
-URxvt.keysym.Control-Shift-Escape: perl:keyboard-select:activate
-URxvt.keysym.Meta-s:               perl:keyboard-select:search
+URxvt.keysym.Control-Shift-Escape: keyboard-select:activate
+URxvt.keysym.Meta-s:               keyboard-select:search
 URxvt.keyboard-select.clipboard:   true
 
-/* open url with matcher */
-URxvt.url-launcher:                link_handler.sh
-URxvt.keysym.Meta-o:               perl:matcher:select
-URxvt.matcher.button:              1
-URxvt.matcher.rend.0:              Italic Bold fg8
+/* resize-font */
+URxvt.resize-font.step:            1
 
 /* keysym compatibility */
 URxvt.keysym.Shift-Up:             \033[1;2A
