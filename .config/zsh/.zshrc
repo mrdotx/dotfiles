@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-26T19:06:35+0100
+# date:   2024-01-10T16:49:46+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -112,7 +112,7 @@ _comp_options+=(globdots) # hidden files
 
 # zsh-autosuggestion
 . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=blue,bg=black,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=blue,bg=default,underline"
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # zsh-syntax-highlighting
