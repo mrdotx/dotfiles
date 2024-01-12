@@ -1,11 +1,11 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-31T11:11:44+0100
+# date:   2024-01-11T17:12:16+0100
 
 # shellcheck disable=SC2154
 
-# color
+# colors
 alias \
     ls='ls --color=auto' \
     ip='ip -color=auto' \
@@ -15,8 +15,7 @@ alias \
     diff='diff --color=auto' \
     ncdu='ncdu --color dark' \
     tree='tree -C' \
-    kmon='$EXEC_AS_USER kmon -a #cccccc -c #4185d7' \
-    radeontop='radeontop -cT'
+    kmon='$EXEC_AS_USER kmon -a lightgray -c lightblue'
 
 # tools
 alias \
@@ -34,20 +33,8 @@ alias \
     calc='bc -q' \
     cl='tput reset; cinfo'
 
-# maintenance
+# fzf tools
 alias \
-    ch='systemctl --no-pager --failed; journalctl --no-pager -b -p4' \
-    jo='journalctl --no-pager -b -g"fail|emerg|alert|crit|error|warn"' \
-    sa='for o in "blame" "critical-chain" ""; do systemd-analyze --no-pager $o; done' \
-    tm='for o in "" "--user"; do systemctl --no-pager list-timers --all $o; done' \
-    dr='$EXEC_AS_USER systemctl daemon-reload; systemctl daemon-reload --user' \
-    cu='checkupdates; paru -Qua' \
-    up='paru -Syu' \
-    sc='system_cleanup.sh' \
-    bs='backup_system.sh' \
-    bk='backup_keys.sh' \
-    bn='backup_nds.sh $HOME/Public/nds/backup' \
-    dm='$EXEC_AS_USER delete_metafiles.sh' \
     fa='fzf_alsa.sh' \
     fcp='fzf_cpupower.sh' \
     fiwd='fzf_iwd.sh' \
@@ -58,5 +45,20 @@ alias \
     ft='fzf_trash.sh' \
     fu='fzf_usb.sh' \
     fvb='fzf_virtualbox.sh'
+
+# maintenance
+alias \
+    ch='systemctl --no-pager --failed; journalctl --no-pager -b -p4' \
+    jo='journalctl --no-pager -b -g"fail|emerg|alert|crit|error|warn"' \
+    sa='for o in "blame" "critical-chain" ""; do systemd-analyze --no-pager $o; done' \
+    tm='for o in "" "--user"; do systemctl --no-pager list-timers --all $o; done' \
+    dr='$EXEC_AS_USER systemctl daemon-reload; systemctl daemon-reload --user' \
+    cu='checkupdates; paru -Qua' \
+    up='paru -Syu' \
+    sc='system_cleanup.sh' \
+    dm='$EXEC_AS_USER delete_metafiles.sh' \
+    bs='backup_system.sh' \
+    bk='backup_keys.sh' \
+    bn='backup_nds.sh $HOME/Public/nds/backup'
 
 # vim:ft=sh
