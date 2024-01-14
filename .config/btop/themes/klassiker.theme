@@ -1,0 +1,96 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2024-01-14T10:21:32+0100
+
+# Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
+# "#RRGGBB", "#BW" or "0-255 0-255 0-255"
+# "#ffffff", "#ff" or "255 255 255" as an example for white
+
+# All graphs and meters can be gradients
+# For single color graphs leave "mid" and "end" variable empty
+# Use "start" and "end" variables for two color gradient
+# Use "start", "mid" and "end" for three color gradient
+
+# Main background, empty for terminal default,
+# need to be empty if you want transparent background
+theme[main_bg]=""
+
+# Main text color
+theme[main_fg]="#cccccc"
+
+# Title color for boxes
+theme[title]="#ffffff"
+
+# Higlight color for keyboard shortcuts
+theme[hi_fg]="#666666"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#1f5393"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ffffff"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#333333"
+
+# Misc colors for processes box including mini cpu graphs,
+# details memory graph and details status text
+theme[proc_misc]="#1f5393"
+
+# Cpu box outline color
+theme[cpu_box]="#4185d7"
+
+# Memory/disks box outline color
+theme[mem_box]="#4185d7"
+
+# Net up/down box outline color
+theme[net_box]="#4185d7"
+
+# Processes box outline color
+theme[proc_box]="#4185d7"
+
+# Box divider line and small boxes line color
+theme[div_line]="#2b2b2b"
+
+# CPU graph colors
+theme[cpu_start]="#4185d7"
+theme[cpu_mid]="#1f5393"
+theme[cpu_end]="#008081"
+
+# Temperature graph colors
+theme[temp_start]="#4185d7"
+theme[temp_mid]="#980096"
+theme[temp_end]="#df2800"
+
+# Mem/Disk used meter
+theme[used_start]="#008081"
+theme[used_mid]="#1f5393"
+theme[used_end]="#4185d7"
+
+# Mem/Disk available meter
+theme[available_start]="#980096"
+theme[available_mid]="#1f5393"
+theme[available_end]="#008081"
+
+# Mem/Disk cached meter
+theme[cached_start]="#008081"
+theme[cached_mid]="#980096"
+theme[cached_end]="#ff6fff"
+
+# Mem/Disk free meter
+theme[free_start]="#1f5393"
+theme[free_mid]="#008081"
+theme[free_end]="#7ef9ff"
+
+# Download graph colors
+theme[download_start]="#7ef9ff"
+theme[download_mid]="#008081"
+theme[download_end]="#39ff14"
+
+# Upload graph colors
+theme[upload_start]="#ff6fff"
+theme[upload_mid]="#980096"
+theme[upload_end]="#ff5555"
+
+# vim:ft=cfg
