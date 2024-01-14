@@ -29,7 +29,6 @@ found in my other repositories.
 | paru              | aur helper                                           |
 | picom             | compositor                                           |
 | polybar           | status bar                                           |
-| pipewire          | media server                                         |
 | qutebrowser       | web browser                                          |
 | ranger            | file manager                                         |
 | rofi              | application launcher and dmenu replacement           |
