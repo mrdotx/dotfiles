@@ -46,7 +46,7 @@ boost-libs
 botan2
 box2d
 brotli
-btop-git
+btop
 bubblewrap
 bzip2
 c-ares
