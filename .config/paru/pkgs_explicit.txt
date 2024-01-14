@@ -17,7 +17,7 @@ bash-language-server
 bc
 binutils
 bison
-btop-git
+btop
 cdw
 cinfo
 cmus
