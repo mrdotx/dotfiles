@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-15T16:26:56+0100
+# date:   2024-01-15T17:22:17+0100
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"
@@ -64,24 +64,24 @@ theme[temp_mid]="#980096"
 theme[temp_end]="#df2800"
 
 # Mem/Disk used meter
-theme[used_start]="#008081"
+theme[used_start]="#1f5393"
 theme[used_mid]="#4185d7"
-theme[used_end]="#1f5393"
+theme[used_end]="#ff6fff"
 
 # Mem/Disk available meter
-theme[available_start]="#980096"
-theme[available_mid]="#1f5393"
-theme[available_end]="#4185d7"
+theme[available_start]="#1f5393"
+theme[available_mid]="#4185d7"
+theme[available_end]="#008081"
 
 # Mem/Disk cached meter
-theme[cached_start]="#4185d7"
-theme[cached_mid]="#1f5393"
+theme[cached_start]="#1f5393"
+theme[cached_mid]="#4185d7"
 theme[cached_end]="#980096"
 
 # Mem/Disk free meter
 theme[free_start]="#1f5393"
 theme[free_mid]="#4185d7"
-theme[free_end]="#008081"
+theme[free_end]="#7ef9ff"
 
 # Download graph colors
 theme[download_start]="#008081"
