@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-15T17:22:17+0100
+# date:   2024-01-15T17:46:36+0100
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"
@@ -59,8 +59,8 @@ theme[cpu_mid]="#1f5393"
 theme[cpu_end]="#7ef9ff"
 
 # Temperature graph colors
-theme[temp_start]="#008081"
-theme[temp_mid]="#980096"
+theme[temp_start]="#4185d7"
+theme[temp_mid]="#1f5393"
 theme[temp_end]="#df2800"
 
 # Mem/Disk used meter
@@ -84,13 +84,13 @@ theme[free_mid]="#4185d7"
 theme[free_end]="#7ef9ff"
 
 # Download graph colors
-theme[download_start]="#008081"
-theme[download_mid]="#7ef9ff"
+theme[download_start]="#1f5393"
+theme[download_mid]="#4185d7"
 theme[download_end]="#39ff14"
 
 # Upload graph colors
-theme[upload_start]="#980096"
-theme[upload_mid]="#ff6fff"
+theme[upload_start]="#1f5393"
+theme[upload_mid]="#4185d7"
 theme[upload_end]="#ff5555"
 
 # vim:ft=cfg
