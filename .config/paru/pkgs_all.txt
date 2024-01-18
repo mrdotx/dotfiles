@@ -361,6 +361,8 @@ libnfnetlink
 libnfs
 libnftnl
 libnghttp2
+libnghttp3
+libngtcp2
 libnice
 libnl
 libnotify
