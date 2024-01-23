@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-17T22:14:16+0100
+# date:   2024-01-23T10:31:07+0100
 
 # exit | function   | action of ranger
 
@@ -148,7 +148,7 @@ handle_extension() {
             exit 1
             ;;
         csv)
-            column --separator ';,|	' --table "$file_path" \
+            column --separator '	;,' --table "$file_path" \
                 && exit 0
             exit 2
             ;;
