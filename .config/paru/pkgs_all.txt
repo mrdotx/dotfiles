@@ -639,6 +639,7 @@ python-requests
 python-simplejson
 python-six
 python-soupsieve
+python-typing_extensions
 python-urllib3
 python-webencodings
 python-yaml
