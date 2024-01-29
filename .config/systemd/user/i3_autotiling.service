@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/i3_autotiling.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-25T10:23:06+0200
+# date:   2024-01-29T16:51:45+0100
 
 [Unit]
 Description=i3 optimal tiling
@@ -9,7 +9,7 @@ PartOf=i3.target
 
 [Service]
 Type=simple
-ExecStart=%h/.local/share/repos/i3/i3_autotiling.sh -w 1 4 5 7 8 9
+ExecStart=%h/.local/share/repos/i3/i3_autotiling.sh
 
 [Install]
 WantedBy=i3.target
