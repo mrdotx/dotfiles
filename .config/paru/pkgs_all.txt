@@ -610,6 +610,7 @@ portaudio
 potrace
 procps-ng
 protobuf
+prrte
 psmisc
 pugixml
 python
