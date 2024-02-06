@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-12-24T11:51:49+0100
+# date:   2024-02-05T20:44:08+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -31,19 +31,6 @@ export \
     && . "$HOME/.config/aliases"
 
 # prompt
-use_color=true
-if $use_color; then
-    if [ $EUID -eq 0 ]; then
-        PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
-    else
-        PS1='\[\033[01;34m\][\u@\h\[\033[01;37m\] \W\[\033[01;34m\]]\$\[\033[00m\] '
-    fi
-else
-    if [ $EUID -eq 0 ]; then
-        # show root@ if there is no color
-        PS1='\u@\h \W \$ '
-    else
-        PS1='\u@\h \w \$ '
-    fi
-fi
-unset use_color
+[ "$(id -u)" -eq 0 ] \
+    && PS1='\[\e[1;31m\][\[\e[0;97m\]\w\[\e[1;31m\]]\e[0;97m\]\$\[\e[0m\] ' \
+    || PS1='\[\e[1;34m\][\[\e[0;97m\]\w\[\e[1;34m\]]\e[0;97m\]\$\[\e[0m\] '
