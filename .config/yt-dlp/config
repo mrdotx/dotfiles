@@ -1,9 +1,9 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/yt-dlp/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-05-14T20:39:39+0200
+# date:   2024-02-09T17:37:09+0100
 
--o "~/Downloads/[%(upload_date)s][%(id)s] %(title)s (by %(uploader)s).%(ext)s"
+-o "~/Downloads/%(creator,uploader|NA)s - %(title,id|NA)s [%(release_date,upload_date|NA)s].%(ext)s"
 --force-ipv4
 --downloader aria2c
 --downloader-args "-x8 -s8 -k1M"
