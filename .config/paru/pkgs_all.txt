@@ -82,7 +82,6 @@ cyanrip
 darktable
 dash
 dav1d
-db
 db5.3
 dbus
 dbus-broker
@@ -307,6 +306,7 @@ libevdev
 libevent
 libexif
 libexttextcat
+libfabric
 libffi
 libfontenc
 libfreehand
@@ -550,6 +550,7 @@ npth
 nspr
 nss
 nsxiv
+numactl
 nvtop
 ocl-icd
 onetbb
