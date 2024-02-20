@@ -306,7 +306,6 @@ libevdev
 libevent
 libexif
 libexttextcat
-libfabric
 libffi
 libfontenc
 libfreehand
@@ -550,7 +549,6 @@ npth
 nspr
 nss
 nsxiv
-numactl
 nvtop
 ocl-icd
 onetbb
@@ -563,8 +561,6 @@ opendoas-sudo
 openexr
 openjpeg2
 openmp
-openmpi
-openpmix
 openscenegraph
 openssh
 openssl
@@ -611,7 +607,6 @@ portaudio
 potrace
 procps-ng
 protobuf
-prrte
 psmisc
 pugixml
 python
