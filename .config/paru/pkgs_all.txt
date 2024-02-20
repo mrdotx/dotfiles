@@ -97,7 +97,6 @@ ding-libs
 djvulibre
 dkms
 dmidecode
-dnssec-anchors
 dosfstools
 double-conversion
 dragon-drop-git
@@ -251,7 +250,6 @@ lame
 lapack
 lcms2
 ldb
-ldns
 lensfun
 leptonica
 less
