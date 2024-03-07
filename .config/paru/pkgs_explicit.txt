@@ -68,6 +68,7 @@ kmon
 kodi
 kodi-addon-pvr-iptvsimple
 kvantum
+kvantum-qt5
 libmad
 libnotify
 libreoffice-fresh
@@ -131,6 +132,7 @@ python-beautifulsoup4
 python-cssselect
 python-readability-lxml
 qt5ct
+qt6ct
 ranger-git
 rclone
 rsync
