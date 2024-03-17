@@ -245,6 +245,7 @@ kodi-addon-pvr-iptvsimple
 krb5
 kvantum
 kvantum-qt5
+kwindowsystem
 kwindowsystem5
 l-smash
 lame
@@ -653,6 +654,7 @@ qt6-multimedia
 qt6-multimedia-ffmpeg
 qt6-svg
 qt6-translations
+qt6-wayland
 qt6ct
 ragel
 ranger-git
