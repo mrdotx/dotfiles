@@ -12,6 +12,7 @@ alsa-ucm-conf
 alsa-utils
 amd-ucode
 aom
+appstream
 arc-gtk-theme
 arc-icon-theme
 archlinux-keyring
@@ -183,6 +184,7 @@ gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
+gtk4
 gtkmm3
 gtksourceview4
 gts
@@ -257,6 +259,7 @@ leptonica
 less
 lib2geom
 libabw
+libadwaita
 libao
 libarchive
 libass
@@ -298,6 +301,7 @@ libdvdnav
 libdvdread
 libe-book
 libedit
+libei
 libelf
 libepoxy
 libepubgen
@@ -318,7 +322,6 @@ libgpg-error
 libgphoto2
 libgudev
 libgusb
-libhandy
 libheif
 libice
 libid3tag
@@ -469,6 +472,7 @@ libxkbcommon
 libxkbcommon-x11
 libxkbfile
 libxml2
+libxmlb
 libxmu
 libxpm
 libxpresent
