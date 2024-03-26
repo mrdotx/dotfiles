@@ -821,7 +821,6 @@ zathura-ps
 zimg
 zip
 zlib
-zram-generator
 zsh
 zsh-autosuggestions
 zsh-completions

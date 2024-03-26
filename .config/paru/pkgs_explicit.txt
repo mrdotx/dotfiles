@@ -194,7 +194,6 @@ zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
 zip
-zram-generator
 zsh
 zsh-autosuggestions
 zsh-completions
