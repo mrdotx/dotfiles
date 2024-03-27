@@ -729,6 +729,13 @@ tracker3
 trash-cli
 tree
 tree-sitter
+tree-sitter-bash
+tree-sitter-c
+tree-sitter-lua
+tree-sitter-markdown
+tree-sitter-python
+tree-sitter-query
+tree-sitter-vimdoc
 tslib
 ttf-dejavu
 ttf-dejavu-nerd
