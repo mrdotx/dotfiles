@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-03-15T07:22:41+0100
+# date:   2024-03-30T20:22:31+0100
 
 # exit | function   | action of ranger
 
@@ -39,21 +39,15 @@ file_extension="$(printf "%s" "${file_path##*.}" \
 
 handle_image() {
     case "$1" in
-        */svg*)
-            convert "$file_path" "$image_cache_path" \
-                && exit 6
+        image/svg*)
+            rsvg-convert \
+                --keep-aspect-ratio \
+                --width 960 "$file_path" \
+                --output "$image_cache_path" \
+                    && exit 6
             exit 1
             ;;
         image/*)
-            orientation="$(identify -format '%[EXIF:Orientation]\n' "$file_path")"
-            # if orientation data is present and the image actually
-            # needs rotating ("1" means no rotation)...
-            [ -n "$orientation" ] \
-                && [ "$orientation" != 1 ] \
-                && convert "$file_path" -auto-orient "$image_cache_path" \
-                && exit 6
-            # w3mimgdisplay will be called for all images (unless overriden
-            # as above), but might fail for unsupported types.
             exit 7
             ;;
         video/*)
@@ -70,30 +64,30 @@ handle_image() {
         font/* | *opentype)
             preview_text() {
                 printf "%s" \
-                    "AÄBCDEFGHIJKLMN\n" \
-                    "OÖPQRSẞTUÜVWXYZ\n" \
-                    "aäbcdefghijklmn\n" \
-                    "oöpqrsßtuüvwxyz\n" \
-                    "1234567890,.*/+-=\%\n" \
-                    "~!?@#§$&(){}[]<>;:"
+                    'AÄBCDEFGHIJKLMN\n' \
+                    'OÖPQRSẞTUÜVWXYZ\n' \
+                    'aäbcdefghijklmn\n' \
+                    'oöpqrsßtuüvwxyz\n' \
+                    '1234567890,.*/+-=\%\n' \
+                    '~!?@#§$&(){}[]<>;:'
             }
             font_name() {
                 fc-list \
                     | grep "$file_path" \
                     | cut -d ':' -f2 \
-                    | sed 's/^ //' \
-                    | tail -1
+                    | sed 's/^ //g' \
+                    | uniq
             }
             # WORKAROUND: for transparent background convert to png and
             # rename the file to jpg (hardcoded .jpg in actions.py)
-            convert -size "960x960" xc:"#000000" \
+            convert -size '960x960' xc:'#000000' \
                 -font "$file_path" \
-                -fill "#cccccc" \
+                -fill '#cccccc' \
                 -gravity Center \
                 -pointsize 72 \
                 -annotate +0+0 "$(preview_text)" \
-                -font "" \
-                -fill "#4185d7" \
+                -font '' \
+                -fill '#4185d7' \
                 -gravity SouthWest \
                 -pointsize 24 \
                 -annotate +0+0 "$(font_name)" \
@@ -128,22 +122,12 @@ handle_image() {
 
 handle_extension() {
     case "$1" in
-        a | ace | alz | arc | arj | bz | bz2 | cab | cpio | deb | gz | jar \
-            | lha | lz | lzh | lzma | lzo | rpm | rz | t7z | tar | tbz | tbz2 \
-            | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip | zst)
-                bsdtar --list --file "$file_path" \
-                    && exit 0
-                exit 1
-            ;;
-        rar)
-            # avoid password prompt by providing empty password
-            unrar lt -p- "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        7z)
-            # avoid password prompt by providing empty password
-            7z l -p "$file_path" \
+        7z | a | alz | apk | arj | bz | bz2 | cab | cb7 | cbr | cbt | cbz \
+            | chm | cpio | deb | dmg | epub | gz | iso | jar | lha | lz | lzh \
+            | lzo | lzma | msi | pkg | rar | rpm | tar | tbz | tbz2 | tgz | tlz \
+            | txz | tz | tzo | udf | war | wim | xar | xpi | xz | z | zip | zst)
+            # requires compressor.sh (https://github.com/mrdotx/compressor)
+            timeout "$time_out" compressor.sh --list "$file_path" \
                 && exit 0
             exit 1
             ;;
@@ -198,24 +182,24 @@ handle_mime() {
             exit 2
             ;;
         */x-bittorrent)
-            aria2c -S "$file_path" \
+            aria2c --show-files "$file_path" \
                 && exit 0
             exit 1
             ;;
         */x-executable | */x-pie-executable | */x-sharedlib)
-                readelf --wide --demangle --all "$file_path" \
-                    && exit 0
-                exit 1
-            ;;
-        text/troff)
-            man "$file_path" \
+            readelf --wide --demangle --all "$file_path" \
                 && exit 0
-            exit 2
+            exit 1
             ;;
         image/* | video/* | audio/*)
             exiftool "$file_path" \
                 && exit 0
             exit 1
+            ;;
+        text/troff)
+            man "$file_path" \
+                && exit 0
+            exit 2
             ;;
         text/* | */javascript | */json | */xml)
             highlight --max-size=1M "$file_path" \
@@ -226,11 +210,11 @@ handle_mime() {
 }
 
 handle_fallback() {
-    printf '##### File Status #####\n' \
+    printf "##### File Status #####\n" \
         && stat --dereference "$file_path" \
-        && printf '\n##### File Type Classification #####\n' \
+        && printf "\n##### File Type Classification #####\n" \
         && file --dereference --brief "$file_path" \
-        && printf '%s\n' "$mime_type" \
+        && printf "%s\n" "$mime_type" \
         && exit 0
     exit 1
 }
