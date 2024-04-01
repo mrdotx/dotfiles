@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-03-30T20:22:31+0100
+# date:   2024-03-31T18:28:12+0200
 
 # exit | function   | action of ranger
 
@@ -122,10 +122,11 @@ handle_image() {
 
 handle_extension() {
     case "$1" in
-        7z | a | alz | apk | arj | bz | bz2 | cab | cb7 | cbr | cbt | cbz \
-            | chm | cpio | deb | dmg | epub | gz | iso | jar | lha | lz | lzh \
-            | lzo | lzma | msi | pkg | rar | rpm | tar | tbz | tbz2 | tgz | tlz \
-            | txz | tz | tzo | udf | war | wim | xar | xpi | xz | z | zip | zst)
+        7z | a | alz | apk | arj | bz | bz2 | bzip2 | cab | cb7 | cbt | chm \
+            | chw | cpio | deb | dmg | gz | gzip | hxs | iso | jar | lha | lz \
+            | lzh | lzma | lzo | msi | pkg | rar | rpm | swm | tar | taz | tbz \
+            | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf | war | wim | xar \
+            | xpi | xz | z | zip | zst)
             # requires compressor.sh (https://github.com/mrdotx/compressor)
             timeout "$time_out" compressor.sh --list "$file_path" \
                 && exit 0
