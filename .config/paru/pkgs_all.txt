@@ -19,9 +19,6 @@ archlinux-keyring
 arduino-avr-core
 argon2
 aria2
-aspell
-aspell-de
-aspell-en
 at-spi2-core
 atkmm
 attr
@@ -138,7 +135,6 @@ gawk
 gc
 gcc
 gcc-libs
-gcr
 gd
 gdbm
 gdk-pixbuf2
@@ -511,7 +507,6 @@ luajit
 lxappearance-gtk3
 lz4
 lzo
-lzop
 m4
 mailcap
 maim
@@ -741,9 +736,7 @@ ttf-dejavu
 ttf-dejavu-nerd
 tzdata
 uchardet
-unarj
 unibilium
-unrar
 unzip
 usbutils
 util-linux
@@ -826,7 +819,6 @@ zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
 zimg
-zip
 zlib
 zsh
 zsh-autosuggestions
