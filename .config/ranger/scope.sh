@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-03-31T18:28:12+0200
+# date:   2024-04-04T18:10:58+0200
 
 # exit | function   | action of ranger
 
@@ -36,6 +36,27 @@ preview_image="$5"
 mime_type="$(file --dereference --brief --mime-type "$file_path")"
 file_extension="$(printf "%s" "${file_path##*.}" \
                     | tr '[:upper:]' '[:lower:]')"
+
+handle_path() {
+    case "$1" in
+        *\.local/share/tty/issue*)
+            printf "%b\nhost login: _" "$(sed \
+                -e 's/m \\l/m tty1/g' \
+                -e 's/m\\s \\m/mLinux x86_64/g' \
+                -e 's/m\\r/m2.4.37-arch1-1/g' \
+                -e 's/m\\d/mFri Nov 11 2011/g' \
+                -e 's/m\\t/m11:11:11/g' \
+                -e 's/m\\n/mhost/g' \
+                -e 's/m\\b/m38400/g' \
+                -e 's/m\\U/m1 user/g' \
+                -e 's/e\[/033\[/g' \
+                "$1" \
+            )" \
+                && exit 0
+            exit 2
+            ;;
+    esac
+}
 
 handle_image() {
     case "$1" in
@@ -220,6 +241,7 @@ handle_fallback() {
     exit 1
 }
 
+LC_ALL=C LANG=C handle_path "$file_path"
 [ "$preview_image" = 'True' ] \
     && handle_image "$mime_type"
 handle_extension "$file_extension"
