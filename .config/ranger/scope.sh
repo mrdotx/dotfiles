@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-04T18:10:58+0200
+# date:   2024-04-04T18:40:47+0200
 
 # exit | function   | action of ranger
 
@@ -41,13 +41,17 @@ handle_path() {
     case "$1" in
         *\.local/share/tty/issue*)
             printf "%b\nhost login: _" "$(sed \
-                -e 's/m \\l/m tty1/g' \
-                -e 's/m\\s \\m/mLinux x86_64/g' \
+                -e 's/m\\l/mtty1/g' \
+                -e 's/m\\s/mLinux/g' \
+                -e 's/m\\m/mx86_64/g' \
                 -e 's/m\\r/m2.4.37-arch1-1/g' \
+                -e 's/m\\v/m#1 SMP PREEMPT_DYNAMIC Fri, 11 Nov 2011 11:11:11 +0000/g' \
                 -e 's/m\\d/mFri Nov 11 2011/g' \
                 -e 's/m\\t/m11:11:11/g' \
                 -e 's/m\\n/mhost/g' \
+                -e 's/m\\o/mdomain/g' \
                 -e 's/m\\b/m38400/g' \
+                -e 's/m\\u/m1/g' \
                 -e 's/m\\U/m1 user/g' \
                 -e 's/e\[/033\[/g' \
                 "$1" \
