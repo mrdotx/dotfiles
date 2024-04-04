@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-04T20:30:57+0200
+# date:   2024-04-04T21:32:12+0200
 
 # exit | function   | action of ranger
 
@@ -167,7 +167,7 @@ handle_extension() {
                 -e 's/m\\u/m1/g' \
                 -e 's/m\\U/m1 user/g' \
                 -e 's/e\[/033\[/g' \
-                "$1" \
+                "$file_path" \
             )" \
                 && exit 0
             exit 2
