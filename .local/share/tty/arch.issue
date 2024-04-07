@@ -1,20 +1,20 @@
-\e[1;36m                   -`                  \e[0;37m[ \e[0;32m\l \e[0;37m]
-\e[1;36m                  .o+`                 \e[0;37m--------
-\e[1;36m                 `ooo/
-\e[1;36m                `+oooo:                \e[0;37mOS:        \e[1;37m\s \e[0;37m\m
-\e[1;36m               `+oooooo:               \e[0;37mKernel:    \e[1;37m\r
-\e[1;36m               -+oooooo+:
-\e[1;36m             `/:-:++oooo+:             \e[0;37mDate:      \e[1;37m\d
-\e[1;36m            `/++++/+++++++:            \e[0;37mTime:      \e[1;37m\t
-\e[1;36m           `/++++++++++++++:
-\e[1;36m          `/+++ooooooooooooo/`         \e[0;37mHostname:  \e[1;37m\n
-\e[1;36m         ./ooosssso++osssssso+`        \e[0;37mBaudrate:  \e[1;37m\b
-\e[1;36m        .oossssso-````/ossssss+`
-\e[1;36m       -osssssso.      :ssssssso.      \e[0;37mLogged in: \e[1;37m\U
-\e[1;36m      :osssssss/        osssso+++.
-\e[1;36m     /ossssssss/        +ssssooo/-
-\e[1;36m   `/ossssso+/:-        -:/+osssso+-
-\e[1;36m  `+sso+:-`                 `.-/+oso:
-\e[1;36m `++:.                           `-/+/
-\e[1;36m .`                                 `/
+\e[1;36m                  -`                   \e[0;37m[ \e[0;32m\l \e[0;37m]
+\e[1;36m                 .o+`                  \e[0;37m--------
+\e[1;36m                `ooo/
+\e[1;36m               `+oooo:                 \e[0;37mOS:        \e[1;37m\s \e[0;37m\m
+\e[1;36m              `+oooooo:                \e[0;37mKernel:    \e[1;37m\r
+\e[1;36m              -+oooooo+:
+\e[1;36m            `/:-:++oooo+:              \e[0;37mDate:      \e[1;37m\d
+\e[1;36m           `/++++/+++++++:             \e[0;37mTime:      \e[1;37m\t
+\e[1;36m          `/++++++++++++++:
+\e[1;36m         `/+++ooooooooooooo/`          \e[0;37mHostname:  \e[1;37m\n
+\e[1;36m        ./ooosssso++osssssso+`         \e[0;37mBaudrate:  \e[1;37m\b
+\e[1;36m       .oossssso-````/ossssss+`
+\e[1;36m      -osssssso.      :ssssssso.       \e[0;37mLogged in: \e[1;37m\U
+\e[1;36m     :osssssss/        osssso+++.
+\e[1;36m    /ossssssss/        +ssssooo/-
+\e[1;36m  `/ossssso+/:-        -:/+osssso+-
+\e[1;36m `+sso+:-`                 `.-/+oso:
+\e[1;36m`++:.                           `-/+/
+\e[1;36m.`                                 `/
 \e[0m
