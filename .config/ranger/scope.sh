@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-04T21:32:12+0200
+# date:   2024-04-05T20:29:44+0200
 
 # exit | function   | action of ranger
 
@@ -154,19 +154,26 @@ handle_extension() {
             ;;
         issue)
             printf "%b\nhost login: _" "$(sed \
-                -e 's/m\\l/mtty1/g' \
-                -e 's/m\\s/mLinux/g' \
-                -e 's/m\\m/mx86_64/g' \
-                -e 's/m\\r/m2.4.37-arch1-1/g' \
-                -e 's/m\\v/m#1 SMP PREEMPT_DYNAMIC Fri, 11 Nov 2011 11:11:11 +0000/g' \
-                -e 's/m\\d/mFri Nov 11 2011/g' \
-                -e 's/m\\t/m11:11:11/g' \
-                -e 's/m\\n/mhost/g' \
-                -e 's/m\\o/mdomain/g' \
-                -e 's/m\\b/m38400/g' \
-                -e 's/m\\u/m1/g' \
-                -e 's/m\\U/m1 user/g' \
-                -e 's/e\[/033\[/g' \
+                -e 's/\\4{/INTERFACE{/g' \
+                -e 's/\\4/11.11.11.11/g' \
+                -e 's/\\6{/INTERFACE{/g' \
+                -e 's/\\6/::ffff:0b0b:0b0b/g' \
+                -e 's/\\b/38400/g' \
+                -e 's/\\d/Fri Nov 11 2011/g' \
+                -e 's/\\l/tty1/g' \
+                -e 's/\\m/x86_64/g' \
+                -e 's/\\n/host/g' \
+                -e 's/\\o/(none)/g' \
+                -e 's/\\O/unknown_domain/g' \
+                -e 's/\\r/2.4.37-arch1-1/g' \
+                -e 's/\\s/Linux/g' \
+                -e 's/\\S{/VARIABLE{/g' \
+                -e 's/\\S/Arch Linux/g' \
+                -e 's/\\t/11:11:11/g' \
+                -e 's/\\u/1/g' \
+                -e 's/\\U/1 user/g' \
+                -e 's/\\v/#1 SMP PREEMPT_DYNAMIC Fri, 11 Nov 2011 11:11:11 +0000/g' \
+                -e 's/\\e/\\033/g' \
                 "$file_path" \
             )" \
                 && exit 0
