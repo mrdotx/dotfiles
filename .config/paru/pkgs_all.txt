@@ -291,6 +291,7 @@ libde265
 libdecor
 libdeflate
 libdiscid
+libdisplay-info
 libdovi
 libdrm
 libdvdnav
@@ -718,6 +719,7 @@ texinfo
 thunderbird
 thunderbird-i18n-de
 tinyxml
+tinyxml2
 tmux
 tpm2-tss
 tracker3
