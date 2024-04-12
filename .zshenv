@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-17T17:57:46+0100
+# date:   2024-04-11T18:50:51+0200
 
 # xdg paths
 export \
@@ -33,7 +33,6 @@ export \
 # repository paths
 typeset -U PATH path
 path=( \
-    "$XDG_DATA_HOME/repos/compressor" \
     "$XDG_DATA_HOME/repos/dmenu/scripts" \
     "$XDG_DATA_HOME/repos/efistub" \
     "$XDG_DATA_HOME/repos/epg" \
@@ -44,9 +43,7 @@ path=( \
     "$XDG_DATA_HOME/repos/polybar" \
     "$XDG_DATA_HOME/repos/python" \
     "$XDG_DATA_HOME/repos/rclone" \
-    "$XDG_DATA_HOME/repos/rofi" \
     "$XDG_DATA_HOME/repos/shell" \
-    "$XDG_DATA_HOME/repos/stopwatch" \
     "$XDG_DATA_HOME/repos/surf" \
     "$XDG_DATA_HOME/repos/terminal-analysis" \
     "$XDG_DATA_HOME/repos/terminal-wrapper" \
