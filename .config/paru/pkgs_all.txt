@@ -135,6 +135,7 @@ gawk
 gc
 gcc
 gcc-libs
+gcr
 gd
 gdbm
 gdk-pixbuf2
