@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-08T20:17:06+0200
+# date:   2024-04-24T11:40:31+0200
 
 # exit | function   | action of ranger
 
@@ -195,7 +195,7 @@ handle_extension() {
 handle_mime() {
     case "$1" in
         *sqlite3)
-            sqlite3 -header -column "$file_path" \
+            sqlite3 -readonly -header -column "$file_path" \
                 "SELECT name, type
                  FROM sqlite_master
                  WHERE type IN ('table','view')
