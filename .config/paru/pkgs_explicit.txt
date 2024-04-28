@@ -116,6 +116,7 @@ sweethome3d
 task-spooler
 thunderbird
 thunderbird-i18n-de
+tinyxxd
 tmux
 trash-cli
 tree
@@ -147,7 +148,6 @@ xorg-xkill
 xorg-xwininfo
 xsel
 xwallpaper
-xxd-standalone
 yt-dlp
 zathura
 zathura-cb

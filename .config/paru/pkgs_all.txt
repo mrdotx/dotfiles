@@ -523,6 +523,7 @@ mesa-utils
 mesa-vdpau
 mkinitcpio
 mkinitcpio-busybox
+mpdecimal
 mpfr
 mpg123
 mpv
@@ -721,6 +722,7 @@ thunderbird
 thunderbird-i18n-de
 tinyxml
 tinyxml2
+tinyxxd
 tmux
 tpm2-tss
 tracker3
@@ -811,7 +813,6 @@ xorgproto
 xsel
 xvidcore
 xwallpaper
-xxd-standalone
 xxhash
 xz
 yajl
