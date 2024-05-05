@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.local/state/w3m/keymap
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-07-04T22:30:27+0200
+# date:   2024-05-04T10:22:19+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -29,7 +29,7 @@ keymap	C-l	REDRAW
 keymap	C-m	GOTO_LINK
 keymap	C-n	MOVE_DOWN
 keymap	C-p	MOVE_UP
-keymap	C-q	CLOSE_TAB
+# keymap	C-q	CLOSE_TAB
 keymap	C-r	ISEARCH_BACK
 keymap	C-s	ISEARCH
 keymap	C-t	TAB_LINK
@@ -92,7 +92,7 @@ keymap	l	MOVE_RIGHT
 keymap	m	MOUSE_TOGGLE
 keymap	n	SEARCH_NEXT
 keymap	o	OPTIONS
-keymap	q	QUIT
+# keymap	q	QUIT
 keymap	r	VERSION
 keymap	s	SELECT_MENU
 keymap	u	PEEK_LINK
@@ -147,9 +147,13 @@ keymap	M-[6~	NEXT_PAGE
 keymap	M-[28~	MENU
 
 # custom keymap
+# close
+keymap	C-q	QUIT
+keymap	q	CLOSE_TAB
+
 # clipboard
-keymap  ,y  EXTERN          "(printf %s | xsel -b)"
-keymap  ,Y  EXTERN_LINK     "(printf %s | xsel -b)"
+keymap	,y	EXTERN			"(printf %s | xsel -b)"
+keymap	,Y	EXTERN_LINK		"(printf %s | xsel -b)"
 
 # bookmarks
 keymap	,b	BOOKMARK
@@ -159,29 +163,29 @@ keymap	,B	ADD_BOOKMARK
 keymap	,e	EDIT_SCREEN
 
 # download
-keymap  ,I  SAVE_IMAGE
-keymap  ,d  SAVE_LINK
-keymap  ,D  DOWNLOAD_LIST
+keymap	,I	SAVE_IMAGE
+keymap	,d	SAVE_LINK
+keymap	,D	DOWNLOAD_LIST
 
 # links
 keymap	,u	LIST_MENU
 keymap	,U	MOVE_LIST_MENU
 
 # browser
-keymap  ,w  EXTERN          "firefox &"
-keymap  ,W  EXTERN_LINK     "link_handler.sh"
-keymap  ,/  EXTERN          "surf.sh"
+keymap	,w	EXTERN			"firefox &"
+keymap	,W	EXTERN_LINK		"link_handler.sh"
+keymap	,/	EXTERN			"surf.sh"
 
 # readable
-keymap  ,o  COMMAND         "SHELL 'python -W ignore -m readability.readability -u $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
+keymap	,o	COMMAND			"SHELL 'python -W ignore -m readability.readability -u $W3M_URL > /tmp/readable.html'; LOAD /tmp/readable.html"
 
 # search
-keymap  ,s  COMMAND         "GOTO https://lite.duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
+keymap	,s	COMMAND			"GOTO https://lite.duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
 
 # options
-keymap  ,c  COMMAND         "SET_OPTION color=toggle; RESHAPE"
-keymap  ,t  COMMAND         "SET_OPTION display_borders=toggle; RESHAPE"
-keymap  ,i  COMMAND         "SET_OPTION display_image=toggle; RELOAD"
-keymap  ,a  COMMAND         "SET_OPTION user_agent='DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)'; RELOAD"
-keymap  ,A  COMMAND         "SET_OPTION user_agent=''; RELOAD"
-keymap  ,?  COMMAND         "HELP; SEARCH Benutzerdefiniert; CENTER_V"
+keymap	,c	COMMAND			"SET_OPTION color=toggle; RESHAPE"
+keymap	,t	COMMAND			"SET_OPTION display_borders=toggle; RESHAPE"
+keymap	,i	COMMAND			"SET_OPTION display_image=toggle; RELOAD"
+keymap	,a	COMMAND			"SET_OPTION user_agent='DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)'; RELOAD"
+keymap	,A	COMMAND			"SET_OPTION user_agent=''; RELOAD"
+keymap	,?	COMMAND			"HELP; SEARCH Benutzerdefiniert; CENTER_V"
