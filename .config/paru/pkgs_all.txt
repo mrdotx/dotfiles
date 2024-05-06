@@ -536,7 +536,6 @@ ncdu
 ncurses
 neon
 neovim
-neovim-vim
 net-snmp
 netpbm
 nettle
