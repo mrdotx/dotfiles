@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-11T18:50:51+0200
+# date:   2024-05-05T17:24:58+0200
 
 # xdg paths
 export \
@@ -78,6 +78,7 @@ export \
     XZ_DEFAULTS="--threads=0" \
     LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
     LESSHISTFILE=- \
+    DIFFPROG="nvim -d" \
     HIGHLIGHT_OPTIONS=" \
         --replace-tabs=4 \
         --out-format=xterm256 \
@@ -96,22 +97,16 @@ export \
     CARGO_HOME="$XDG_DATA_HOME/cargo" \
     GOPATH="$XDG_DATA_HOME/go" \
     GOMODCACHE="$XDG_DATA_HOME/go/mod" \
-    QT_QPA_PLATFORMTHEME="qt5ct" \
+    QT_QPA_PLATFORMTHEME="qt6ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1
 
 # standard apps
 export \
+    EXEC_AS_USER="doas" \
     TERMINAL="urxvtc.sh" \
-    TERMINAL_B="st" \
-    EDITOR="vim" \
-    EDITOR_B="mcedit" \
-    FILE="ranger" \
+    EDITOR="nvim" \
     PAGER="less" \
     SYSTEMD_LESS="-FSXK $LESS" \
-    READER="zathura" \
-    BROWSER="w3m.sh" \
-    BROWSER_B="surf.sh" \
-    PRESENTER="sent" \
-    EXEC_AS_USER="doas"
+    BROWSER="w3m.sh"
