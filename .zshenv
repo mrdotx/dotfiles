@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-05T17:24:58+0200
+# date:   2024-05-06T21:22:02+0200
 
 # xdg paths
 export \
@@ -69,6 +69,14 @@ export \
     WGETRC="$XDG_CONFIG_HOME/wget/wgetrc" \
     KODI_DATA="$XDG_DATA_HOME/kodi"
 
+# standard apps
+export \
+    EXEC_AS_USER="doas" \
+    TERMINAL="urxvtc.sh" \
+    EDITOR="nvim" \
+    PAGER="less" \
+    BROWSER="w3m.sh"
+
 # app settings
 export \
     RUSTICL_ENABLE=radeonsi \
@@ -78,6 +86,7 @@ export \
     XZ_DEFAULTS="--threads=0" \
     LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
     LESSHISTFILE=- \
+    MANROFFOPT="-c" \
     DIFFPROG="nvim -d" \
     HIGHLIGHT_OPTIONS=" \
         --replace-tabs=4 \
@@ -102,11 +111,5 @@ export \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1
 
-# standard apps
 export \
-    EXEC_AS_USER="doas" \
-    TERMINAL="urxvtc.sh" \
-    EDITOR="nvim" \
-    PAGER="less" \
-    SYSTEMD_LESS="-FSXK $LESS" \
-    BROWSER="w3m.sh"
+    SYSTEMD_LESS="-FSXK $LESS"
