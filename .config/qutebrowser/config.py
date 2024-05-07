@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/qutebrowser/config.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-10-17T19:33:31+0200
+date:   2024-05-06T10:58:48+0200
 """
 
 ## Documentation:
@@ -1038,7 +1038,7 @@ c.content.user_stylesheets = ['default.css']
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
 # c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
-c.editor.command = ['st', '-e', 'vim', '{file}']
+c.editor.command = ['urxvtc.sh', '-e', 'nvim', '{file}']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
