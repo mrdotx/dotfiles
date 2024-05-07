@@ -24,7 +24,7 @@ found in my other repositories.
 | newsboat          | rss/atom feedreader                                  |
 | npm               | javascript package manager                           |
 | nsxiv             | image viewer                                         |
-| nvim              | text editor ,ide                                     |
+| nvim              | text editor, ide                                     |
 | pacman            | package manager utility                              |
 | paru              | aur helper                                           |
 | picom             | compositor                                           |
