@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-04-01T18:38:00+0200
+" date:   2024-05-08T08:51:34+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/init/plugins/'
@@ -17,7 +17,7 @@ endif
 call plug#begin(g:plugged_folder)
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/goyo.vim'
-    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'brenoprata10/nvim-highlight-colors'
     Plug 'liuchengxu/vim-which-key'
     Plug 'Yggdroot/indentLine'
     Plug 'tpope/vim-commentary'
@@ -50,7 +50,7 @@ endfunction
 
 call IfPluginExists('source', 'lightline.vim')
 call IfPluginExists('source', 'goyo.vim')
-call IfPluginExists('luafile', 'nvim-colorizer.lua')
+call IfPluginExists('luafile', 'nvim-highlight-colors')
 call IfPluginExists('source', 'vim-which-key')
 call IfPluginExists('source', 'indentLine')
 call IfPluginExists('source', 'vim-commentary')
