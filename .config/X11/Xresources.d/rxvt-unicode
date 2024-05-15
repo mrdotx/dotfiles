@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2024-01-11T10:05:30+0100
+! date:   2024-05-15T08:34:15+0200
 
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \
@@ -13,7 +13,7 @@ URxvt.cursorColor:                 PRIMARY
 URxvt.highlightColor:              PRIMARY
 URxvt.highlightTextColor:          WHITE1
 URxvt.depth:                       32
-URxvt.geometry:                    80x-1
+/* URxvt.geometry:                    80x-1 */
 URxvt.refreshRate:                 0
 URxvt.scrollBar:                   false
 URxvt.iso14755:                    false
