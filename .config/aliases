@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-11T17:12:16+0100
+# date:   2024-05-14T06:40:53+0200
 
 # shellcheck disable=SC2154
 
@@ -31,7 +31,7 @@ alias \
     mc='mc -x' \
     nb='newsboat -q' \
     calc='bc -q' \
-    cl='tput reset; cinfo'
+    cl='printf "\033c"; cinfo'
 
 # fzf tools
 alias \
