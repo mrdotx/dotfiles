@@ -1,9 +1,9 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-14T06:40:53+0200
+# date:   2024-05-16T18:45:44+0200
 
-# shellcheck disable=SC2154
+# shellcheck disable=SC2148,SC2154
 
 # colors
 alias \
