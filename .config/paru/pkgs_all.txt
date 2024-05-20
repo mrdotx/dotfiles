@@ -417,7 +417,6 @@ libstemmer
 libsynctex
 libsysprof-capture
 libtasn1
-libtermkey
 libthai
 libtheora
 libtiff
@@ -505,6 +504,8 @@ lpsolve
 lsb-release
 lshw
 lua
+lua51
+lua51-lpeg
 luajit
 lxappearance-gtk3
 lz4
