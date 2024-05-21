@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/nvim-highlight-colors.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-05-08T08:51:40+0200
+-- date:   2024-05-20T17:12:17+0200
 
 require("nvim-highlight-colors").setup {
     -- Render style
@@ -9,7 +9,7 @@ require("nvim-highlight-colors").setup {
     render = 'background',
 
     -- Set virtual symbol (requires render to be set to 'virtual')
-    virtual_symbol = '██',
+    virtual_symbol = '■',
 
     -- Highlight named colors, e.g. 'green'
     enable_named_colors = true,
