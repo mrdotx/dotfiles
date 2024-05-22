@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/coc.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2022-12-24T09:05:24+0100
+" date:   2024-05-21T18:49:37+0200
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
@@ -163,6 +163,10 @@ nnoremap <silent><nowait> <localleader>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <localleader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <localleader>p  :<C-u>CocListResume<CR>
+
+" toggle inlay hints
+xmap <silent> <localleader>h :CocCommand document.toggleInlayHint<CR>
+nmap <silent> <localleader>h :CocCommand document.toggleInlayHint<CR>
 
 " multiple cursor session
 nmap <expr> <silent> <c-c> <sid>select_current_word()
