@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-05-15T08:27:24+0200
+" date:   2024-05-22T06:47:32+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -9,11 +9,11 @@ let g:which_key_fallback_to_native_key=1
 set timeoutlen=500
 
 " color mappings
-highlight default link WhichKey          Operator
+highlight default link WhichKey          SpecialChar
 highlight default link WhichKeySeperator SpecialComment
 highlight default link WhichKeyGroup     Comment
-highlight default link WhichKeyDesc      Pmenu
-highlight default link WhichKeyFloating  Pmenu
+highlight default link WhichKeyDesc      Normal
+highlight default link WhichKeyFloating  NormalFloat
 
 " key mappings
 nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
@@ -101,6 +101,7 @@ let g:coc_dict = {
     \ 'cl': 'code lens action current line',
     \ 'e': 'show all extensions',
     \ 'f': 'formating selected code',
+    \ 'h': 'toggle inlay hint',
     \ 'j': 'default action next item',
     \ 'k': 'default action previous item',
     \ 'o': 'find symbol current document',
