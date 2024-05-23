@@ -178,6 +178,7 @@ gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gstreamer
+gtest
 gtk-update-icon-cache
 gtk2
 gtk3
@@ -504,7 +505,6 @@ lpsolve
 lsb-release
 lshw
 lua
-lua51
 lua51-lpeg
 luajit
 lxappearance-gtk3
