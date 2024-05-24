@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-05-22T06:49:28+0200
+" date:   2024-05-23T21:58:19+0200
 
 set background=dark
 
@@ -63,7 +63,7 @@ function! s:hi(group, fg, bg, attr, guisp)
     endif
 endfunction
 
-"          group (:h highlight-groups)  ,fg         ,bg         ,attr           ,guisp
+"    (:hi) group (:h highlight-groups)  ,fg         ,bg         ,attr           ,guisp
 " editor
 call s:hi("Normal"                      ,s:white1   ,s:black0   ,"NONE"         ,"NONE")
 call s:hi("NormalFloat"                 ,s:white1   ,s:grey5    ,"NONE"         ,"NONE")
@@ -132,8 +132,8 @@ call s:hi("Directory"                   ,s:blue1    ,s:NONE     ,"NONE"         
 " diff
 call s:hi("DiffAdd"                     ,s:grey0    ,s:green1   ,"NONE"         ,"NONE")
 call s:hi("DiffDelete"                  ,s:grey0    ,s:red1     ,"NONE"         ,"NONE")
-call s:hi("DiffChange"                  ,s:grey0    ,s:red1     ,"NONE"         ,"NONE")
-call s:hi("DiffText"                    ,s:white0   ,s:grey4    ,"NONE"         ,"NONE")
+call s:hi("DiffChange"                  ,s:grey4    ,s:yellow0  ,"NONE"         ,"NONE")
+call s:hi("DiffText"                    ,s:grey0    ,s:yellow1  ,"NONE"         ,"NONE")
 
 " folding
 call s:hi("Folded"                      ,s:grey3    ,s:grey1    ,"NONE"         ,"NONE")
@@ -197,6 +197,7 @@ call s:hi("Debug"                       ,s:cyan0    ,s:NONE     ,"NONE"         
 
 call s:hi("Added"                       ,s:green0   ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("Removed"                     ,s:red0     ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("Changed"                     ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 
 call s:hi("Underlined"                  ,s:cyan1    ,s:NONE     ,"NONE"         ,"NONE")
 
