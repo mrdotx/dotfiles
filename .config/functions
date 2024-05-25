@@ -1,9 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-16T18:46:10+0200
-
-# shellcheck disable=SC2148
+# date:   2024-05-24T23:19:50+0200
 
 # ranger use ram as cache and change directory on exit
 ranger_cd() {
