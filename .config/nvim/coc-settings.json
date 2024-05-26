@@ -1,9 +1,13 @@
 // path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/coc-settings.json
 // author: klassiker [mrdotx]
 // github: https://github.com/mrdotx/dotfiles
-// date:   2023-07-16T21:52:05+0200
+// date:   2024-05-25T12:01:06+0200
 
 {
+    "diagnostic.errorSign": "󰅙",
+    "diagnostic.warningSign": "󰀨",
+    "diagnostic.infoSign": "󰋼",
+    "diagnostic.hintSign": "󰋗",
     "suggest.completionItemKindLabels": {
         "method": "",
         "function": "󰊕",
@@ -31,44 +35,5 @@
         "snippet": "󱔗",
         "text": "󰀬"
     },
-    "diagnostic.errorSign": "",
-    "diagnostic.warningSign": "",
-    "diagnostic.infoSign": "",
-    "diagnostic.hintSign": "",
-    "diagnostic.maxWindowHeight": 20,
-    "diagnostic-languageserver.filetypes": {
-        "sh": "shellcheck"
-    },
-    "diagnostic-languageserver.linters": {
-        "shellcheck": {
-            "command": "shellcheck",
-            "debounce": 100,
-            "args": [
-                "--external-sources",
-                "--format",
-                "json",
-                "-"
-            ],
-            "sourceName": "shellcheck",
-            "parseJson": {
-                "line": "line",
-                "column": "column",
-                "endLine": "endLine",
-                "endColumn": "endColumn",
-                "message": "${message} [${code}]",
-                "security": "level"
-            },
-            "securities": {
-                "error": "error",
-                "warning": "warning",
-                "info": "info",
-                "style": "hint"
-            }
-        }
-    },
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--disable=F0001"
-    ],
     "inlayHint.display": false
 }
