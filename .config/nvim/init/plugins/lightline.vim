@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-04-02T17:19:16+0200
+" date:   2024-05-25T07:06:13+0200
 
 " gitgutter status
 function! GitGutterStatus()
@@ -9,13 +9,13 @@ function! GitGutterStatus()
     if l:add==0 && l:change==0 && l:remove==0 | return '' | endif
     let l:indicators=[]
     if l:add!=0
-        call add(l:indicators, ' '.l:add)
+        call add(l:indicators, '󰐗 '.l:add)
     endif
     if l:change!=0
         call add(l:indicators, '󰆗 '.l:change)
     endif
     if l:remove!=0
-        call add(l:indicators, ' '.l:remove)
+        call add(l:indicators, '󰍶 '.l:remove)
     endif
     return join(l:indicators, ' ')
 endfunction
@@ -26,16 +26,16 @@ function! CocDiagnosticStatus() abort
     if empty(l:info) | return '' | endif
     let l:indicators=[]
     if get(l:info, 'error', 0)
-        call add(l:indicators, ' '.l:info['error'])
+        call add(l:indicators, '󰅙 '.l:info['error'])
     endif
     if get(l:info, 'warning', 0)
-        call add(l:indicators, ' '.l:info['warning'])
+        call add(l:indicators, '󰀨 '.l:info['warning'])
     endif
     if get(l:info, 'information', 0)
-        call add(l:indicators, ' '.l:info['information'])
+        call add(l:indicators, '󰋼 '.l:info['information'])
     endif
     if get(l:info, 'hint', 0)
-        call add(l:indicators, ' '.l:info['hint'])
+        call add(l:indicators, '󰋗 '.l:info['hint'])
     endif
     return join(l:indicators, ' ').get(g:, 'coc_status', '')
 endfunction
