@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-05-22T06:47:32+0200
+" date:   2024-05-24T23:59:30+0200
 
 let g:which_key_fallback_to_native_key=1
 
@@ -46,7 +46,6 @@ let g:main_dict = {
         \ 'n': 'next buffer',
         \ 'p': 'previous buffer'
     \ },
-    \ 'c': 'check posix shell',
     \ 'd': 'diff origin',
     \ 'e': 'execute terminal command',
     \ 'f': 'fold hunk',
