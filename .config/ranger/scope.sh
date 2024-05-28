@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-04-24T11:40:31+0200
+# date:   2024-05-28T07:47:57+0200
 
 # exit | function   | action of ranger
 
@@ -15,9 +15,6 @@
 # 5    | fix both   | don't ever reload
 # 6    | image      | display the image ($image_cache_path) as an image
 # 7    | image      | display the file directly as an image
-
-# time limit for preview creation in seconds
-time_out=5
 
 # script arguments
 # full path of the highlighted file
@@ -36,6 +33,12 @@ preview_image="$5"
 mime_type="$(file --dereference --brief --mime-type "$file_path")"
 file_extension="$(printf "%s" "${file_path##*.}" \
                     | tr '[:upper:]' '[:lower:]')"
+
+# time limit to create previews in seconds (compressor.sh, xxd)
+time_out=5
+
+# max file size to create previews (highlight)
+max_size=1M
 
 handle_image() {
     case "$1" in
@@ -148,7 +151,7 @@ handle_extension() {
             exit 1
             ;;
         ini)
-            highlight --max-size=1M "$file_path" \
+            highlight --max-size="$max_size" "$file_path" \
                 && exit 0
             exit 2
             ;;
@@ -230,7 +233,7 @@ handle_mime() {
             exit 2
             ;;
         text/* | */javascript | */json | */xml)
-            highlight --max-size=1M "$file_path" \
+            highlight --max-size="$max_size" "$file_path" \
                 && exit 0
             exit 2
             ;;
