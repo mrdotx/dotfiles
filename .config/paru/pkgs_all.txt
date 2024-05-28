@@ -4,6 +4,7 @@ acorn
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
+adwaita-icon-theme-legacy
 alsa-firmware
 alsa-lib
 alsa-plugins
