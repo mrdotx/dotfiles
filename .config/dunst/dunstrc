@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-22T20:58:01+0200
+# date:   2024-05-27T07:09:30+0200
 
 [global]
     ### Display ###
@@ -338,9 +338,9 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#000000e6"
-    foreground = "#ffffff"
-    frame_color = "#333333"
-    highlight = "#333333"
+    foreground = "#cccccc"
+    frame_color = "#666666"
+    highlight = "#666666"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     default_icon = emblem-important
@@ -361,7 +361,7 @@
     highlight = "#ff5555"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    default_icon = dialog-error
+    default_icon = dialog-warning
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
