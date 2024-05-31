@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2023-12-09T13:15:32+0100
+date:   2024-05-30T20:03:07+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -11,7 +11,7 @@ import sys
 from subprocess import PIPE
 from ranger.api.commands import Command
 
-# fuzzy tagged files
+# fzf find tagged files
 class fzf_tagged(Command):
     """
     :fzf_tagged
@@ -33,7 +33,7 @@ class fzf_tagged(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fuzzy find files
+# fzf find files
 class fzf_find(Command):
     """
     :fzf_find <optional find options>
@@ -61,7 +61,27 @@ class fzf_find(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fuzzy search file content
+# fzf find pictures
+class fzf_pix(Command):
+    """
+    :fzf_pix <optional directory>
+
+    Search for pictures with fzf_pix.sh and select.
+    """
+    def execute(self):
+        if self.arg(1):
+            path = str(self.rest(1)) + '/'
+        else:
+            path = '.'
+
+        command = "fzf_pix.sh " + path
+        fzf = self.fm.execute_command(command, stdout=PIPE)
+        stdout, sys.stderr = fzf.communicate()
+        if fzf.returncode == 0:
+            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
+            self.fm.select_file(fzf_file)
+
+# fzf search file content
 class fzf_grep(Command):
     """
     :fzf_grep <query>
@@ -89,7 +109,7 @@ class fzf_grep(Command):
                 self.fm.select_file(fzf_file)
                 self.fm.run(run_file)
 
-# flat toggle
+# flat directory view toggle
 class flat_toggle(Command):
     """
     :flat_toggle
