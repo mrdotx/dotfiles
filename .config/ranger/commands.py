@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-05-30T20:03:07+0200
+date:   2024-05-31T22:30:11+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -46,10 +46,11 @@ class fzf_find(Command):
         else:
             options = ''
 
+        pwd = os.getcwd()
         command = "find . -name '*' " + options + " 2> /dev/null \
-                | sed 1d \
-                | cut -b3- \
+                | sed -e 1d -e 's/^.\\///' \
                 | fzf -e \
+                    --bind 'focus:transform-preview-label:echo [ " + pwd + " ]' \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
@@ -72,7 +73,7 @@ class fzf_pix(Command):
         if self.arg(1):
             path = str(self.rest(1)) + '/'
         else:
-            path = '.'
+            path = ''
 
         command = "fzf_pix.sh " + path
         fzf = self.fm.execute_command(command, stdout=PIPE)
@@ -96,8 +97,10 @@ class fzf_grep(Command):
             self.fm.notify("Usage: fzf_grep \"<search string>\"", bad=True)
             return
 
+        pwd = os.getcwd()
         command = "grep --color=never -Iirsl " + search_string + " \
                 | fzf -e \
+                    --bind 'focus:transform-preview-label:echo [ " + pwd + " ]' \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
