@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-06-01T21:54:40+0200
+date:   2024-06-03T10:47:19+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -62,12 +62,12 @@ class fzf_find(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fzf find pictures
-class fzf_pix(Command):
+# fzf find files with image preview
+class fzf_image(Command):
     """
-    :fzf_pix <optional directory>
+    :fzf_image <optional directory>
 
-    Search for pictures with fzf_pix.sh and select.
+    Search for files including image preview with fzf_find.sh and select.
     """
     def execute(self):
         if self.arg(1):
@@ -75,7 +75,7 @@ class fzf_pix(Command):
         else:
             path = ''
 
-        command = "fzf_pix.sh " + path
+        command = "fzf_find.sh " + path
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
