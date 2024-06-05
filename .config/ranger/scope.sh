@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-28T07:47:57+0200
+# date:   2024-06-04T23:00:14+0200
 
 # exit | function   | action of ranger
 
@@ -135,26 +135,6 @@ handle_extension() {
                 && exit 0
             exit 1
             ;;
-        csv)
-            column --separator '	;,' --table "$file_path" \
-                && exit 0
-            exit 2
-            ;;
-        dff | dsf | wv | wvc)
-            exiftool "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        bin | exe | dat | o)
-            timeout "$time_out" xxd "$file_path" \
-                && exit 0
-            exit 1
-            ;;
-        ini)
-            highlight --max-size="$max_size" "$file_path" \
-                && exit 0
-            exit 2
-            ;;
         issue)
             printf "%b\nhost login: _" "$(sed \
                 -e 's/\\4{/INTERFACE{/g' \
@@ -197,6 +177,11 @@ handle_extension() {
 
 handle_mime() {
     case "$1" in
+        */csv)
+            column --separator '	;,' --table "$file_path" \
+                && exit 0
+            exit 2
+            ;;
         *sqlite3)
             sqlite3 -readonly -header -column "$file_path" \
                 "SELECT name, type
@@ -217,7 +202,7 @@ handle_mime() {
                 && exit 0
             exit 1
             ;;
-        */x-executable | */x-pie-executable | */x-sharedlib)
+        */x-executable | */x-pie-executable | */x-sharedlib | */x-object)
             readelf --wide --demangle --all "$file_path" \
                 && exit 0
             exit 1
@@ -232,7 +217,7 @@ handle_mime() {
                 && exit 0
             exit 2
             ;;
-        text/* | */javascript | */json | */xml)
+        text/* | */javascript | */json | */xml | */x-wine-extension-ini)
             highlight --max-size="$max_size" "$file_path" \
                 && exit 0
             exit 2
@@ -241,17 +226,16 @@ handle_mime() {
 }
 
 handle_fallback() {
-    printf "##### File Status #####\n" \
-        && stat --dereference "$file_path" \
-        && printf "\n##### File Type Classification #####\n" \
-        && file --dereference --brief "$file_path" \
-        && printf "%s\n" "$mime_type" \
-        && exit 0
-    exit 1
+    printf "##### File Type Classification #####\n"
+    printf "MIME-Type: %s\n" "$mime_type"
+    file --dereference --brief "$file_path"
+    printf "\n##### Exif information #####\n"
+    exiftool "$file_path"
+    return 0
 }
 
 [ "$preview_image" = 'True' ] \
     && handle_image "$mime_type"
 handle_extension "$file_extension"
 handle_mime "$mime_type"
-LC_ALL=C LANG=C handle_fallback
+handle_fallback
