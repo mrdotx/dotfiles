@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-04T23:00:14+0200
+# date:   2024-06-06T06:40:54+0200
 
 # exit | function   | action of ranger
 
@@ -50,37 +50,19 @@ handle_image() {
                     && exit 6
             exit 1
             ;;
+        image/x-xcf)
+            return 0
+            ;;
         image/*)
             exit 7
             ;;
-        video/*)
-            ffmpegthumbnailer -i "$file_path" -o "$image_cache_path" -s 0 \
-                && exit 6
-            exit 1
-            ;;
-        audio/*)
-            # get embedded thumbnail
-            ffmpeg -y -i "$file_path" -c:v copy "$image_cache_path" \
+        audio/* | video/*)
+            ffmpegthumbnailer -i "$file_path" -m \
+                    -o "$image_cache_path" -s 0 \
                 && exit 6
             exit 1
             ;;
         font/* | *opentype)
-            preview_text() {
-                printf "%s" \
-                    'AÄBCDEFGHIJKLMN\n' \
-                    'OÖPQRSẞTUÜVWXYZ\n' \
-                    'aäbcdefghijklmn\n' \
-                    'oöpqrsßtuüvwxyz\n' \
-                    '1234567890,.*/+-=\%\n' \
-                    '~!?@#§$&(){}[]<>;:'
-            }
-            font_name() {
-                fc-list \
-                    | grep "$file_path" \
-                    | cut -d ':' -f2 \
-                    | sed 's/^ //g' \
-                    | uniq
-            }
             # WORKAROUND: for transparent background convert to png and
             # rename the file to jpg (hardcoded .jpg in actions.py)
             convert -size '960x960' xc:'#000000' \
@@ -88,12 +70,26 @@ handle_image() {
                 -fill '#cccccc' \
                 -gravity Center \
                 -pointsize 72 \
-                -annotate +0+0 "$(preview_text)" \
+                -annotate +0+0 "$( \
+                    printf "%s" \
+                        'AÄBCDEFGHIJKLMN\n' \
+                        'OÖPQRSẞTUÜVWXYZ\n' \
+                        'aäbcdefghijklmn\n' \
+                        'oöpqrsßtuüvwxyz\n' \
+                        '1234567890,.*/+-=\%\n' \
+                        '~!?@#§$&(){}[]<>;:' \
+                )" \
                 -font '' \
                 -fill '#4185d7' \
                 -gravity SouthWest \
                 -pointsize 24 \
-                -annotate +0+0 "$(font_name)" \
+                -annotate +0+0 "$( \
+                    fc-list \
+                        | grep "$file_path" \
+                        | cut -d ':' -f2 \
+                        | sed 's/^ //g' \
+                        | uniq \
+                )" \
                 -flatten "$image_cache_path.png" \
                     && mv "$image_cache_path.png" "$image_cache_path" \
                     && exit 6
@@ -130,10 +126,10 @@ handle_extension() {
             | lzh | lzma | lzo | msi | pkg | rar | rpm | swm | tar | taz | tbz \
             | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf | war | wim | xar \
             | xpi | xz | z | zip | zst)
-            # requires compressor.sh (https://github.com/mrdotx/compressor)
-            timeout "$time_out" compressor.sh --list "$file_path" \
-                && exit 0
-            exit 1
+                # requires compressor.sh (https://github.com/mrdotx/shell)
+                timeout "$time_out" compressor.sh --list "$file_path" \
+                    && exit 0
+                exit 1
             ;;
         issue)
             printf "%b\nhost login: _" "$(sed \
