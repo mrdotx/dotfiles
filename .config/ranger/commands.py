@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-06-03T10:47:19+0200
+date:   2024-06-05T16:27:22+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -47,7 +47,7 @@ class fzf_find(Command):
             options = ''
 
         pwd = os.getcwd()
-        command = "find . -name '*' " + options + " 2> /dev/null \
+        command = "find . " + options + " 2> /dev/null \
                 | sed -e 1d -e 's/^.\\///' \
                 | fzf -e \
                     --preview-label='[ " + pwd + " ]' \
