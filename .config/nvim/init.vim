@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-10-07T13:39:17+0200
+" date:   2024-06-06T17:46:36+0200
 
 let g:inits_config_folder='~/.config/nvim/init/'
 
@@ -82,6 +82,7 @@ function! IfConfigExists(action, file)
 endfunction
 
 call IfConfigExists('source', 'filetypes.vim')
+call IfConfigExists('source', 'pass.vim')
 call IfConfigExists('source', 'header.vim')
 call IfConfigExists('source', 'plugins.vim')
 call IfConfigExists('source', 'netrw.vim')
