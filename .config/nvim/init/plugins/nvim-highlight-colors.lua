@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/nvim-highlight-colors.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-05-23T20:26:43+0200
+-- date:   2024-06-07T18:26:15+0200
 
 require("nvim-highlight-colors").setup {
     -- Render style
@@ -27,6 +27,9 @@ require("nvim-highlight-colors").setup {
     -- Highlight hex colors, e.g. '#FFFFFF'
     enable_hex = true,
 
+    -- Highlight short hex colors e.g. '#fff'
+    enable_short_hex = true,
+
     -- Highlight rgb colors, e.g. 'rgb(0 0 0)'
     enable_rgb = true,
 
@@ -49,4 +52,8 @@ require("nvim-highlight-colors").setup {
     --     { label = '%-%-theme%-primary%-color', color = '#4185d7' },
     --     { label = '%-%-theme%-secondary%-color', color = '#1f5393' },
     -- }
+
+    -- Exclude filetypes or buftypes from highlighting e.g. 'exclude_buftypes = {'text'}'
+    exclude_filetypes = {},
+    exclude_buftypes = {}
 }
