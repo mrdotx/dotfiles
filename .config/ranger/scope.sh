@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-06T18:22:38+0200
+# date:   2024-06-08T21:47:35+0200
 
 # exit | function   | action of ranger
 
@@ -57,7 +57,7 @@ handle_image() {
             exit 7
             ;;
         audio/* | video/*)
-            ffmpegthumbnailer -i "$file_path" -m \
+            ffmpegthumbnailer -i "$file_path" \
                     -o "$image_cache_path" -s 0 \
                 && exit 6
             exit 1
