@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-08T21:47:35+0200
+# date:   2024-06-09T22:14:59+0200
 
 # exit | function   | action of ranger
 
@@ -31,8 +31,7 @@ preview_image="$5"
 
 # file identification
 mime_type="$(file --dereference --brief --mime-type "$file_path")"
-file_extension="$(printf "%s" "${file_path##*.}" \
-                    | tr '[:upper:]' '[:lower:]')"
+file_extension="$(printf "%s" "${file_path##*.}" | tr '[:upper:]' '[:lower:]')"
 
 # time limit to create previews in seconds (compressor.sh, xxd)
 time_out=5
@@ -58,7 +57,7 @@ handle_image() {
             ;;
         audio/* | video/*)
             ffmpegthumbnailer -i "$file_path" \
-                    -o "$image_cache_path" -s 0 \
+                    -o "$image_cache_path" -s0 \
                 && exit 6
             exit 1
             ;;
@@ -72,12 +71,12 @@ handle_image() {
                 -pointsize 72 \
                 -annotate +0+0 "$( \
                     printf "%s" \
-                        'AÄBCDEFGHIJKLMN\n' \
-                        'OÖPQRSẞTUÜVWXYZ\n' \
-                        'aäbcdefghijklmn\n' \
-                        'oöpqrsßtuüvwxyz\n' \
-                        '1234567890,.*/+-=\%\n' \
-                        '~!?@#§$&(){}[]<>;:' \
+                        "AÄBCDEFGHIJKLMN\n" \
+                        "OÖPQRSẞTUÜVWXYZ\n" \
+                        "aäbcdefghijklmn\n" \
+                        "oöpqrsßtuüvwxyz\n" \
+                        "1234567890,.*/+-=\%\n" \
+                        "~!?@#§$&(){}[]<>;:" \
                 )" \
                 -font '' \
                 -fill '#4185d7' \
@@ -111,8 +110,17 @@ handle_image() {
                 file_name="$(basename "${file_path%.*}")"
                 cache_dir="${image_cache_path%"$(basename "$image_cache_path")"}"
 
-                libreoffice --convert-to jpeg "$file_path" --outdir "$cache_dir" \
-                    && mv "$cache_dir$file_name.jpeg" "$image_cache_path" \
+                libreoffice \
+                    --convert-to 'jpg:writer_jpg_Export:
+                                    {
+                                        "PageRange":
+                                            {
+                                                "type":"string",
+                                                "value":"1"
+                                            }
+                                    }' "$file_path" \
+                    --outdir "$cache_dir" \
+                    && mv "$cache_dir$file_name.jpg" "$image_cache_path" \
                     && exit 6
                 exit 1
             ;;
@@ -167,7 +175,7 @@ handle_extension() {
                 return 0
             }
 
-            printf '%s\n' "$(cd "$(dirname "$3")" && pwd -P)/$(basename "$3")" \
+            printf "%s\n" "$(cd "$(dirname "$3")" && pwd -P)/$(basename "$3")" \
                 | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
                     && pass_preview "$(gpg --decrypt "$file_path")" \
                     && exit 0
