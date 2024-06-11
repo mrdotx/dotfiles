@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-09T22:14:59+0200
+# date:   2024-06-10T22:35:08+0200
 
 # exit | function   | action of ranger
 
@@ -49,7 +49,7 @@ handle_image() {
                     && exit 6
             exit 1
             ;;
-        image/x-xcf)
+        image/x-xcf | image/x-tga)
             return 0
             ;;
         image/*)
@@ -168,21 +168,24 @@ handle_extension() {
             ;;
         gpg | asc)
             pass_preview() {
-                printf "%s\n" "$1" | head -n 4 | sed '1 s/^.*$/***/' \
-                    && [ "$(printf "%s\n" "$1" | wc -l)" -gt 4 ] \
+                printf "%s\n" "$decrypted_file" | head -n 4 \
+                        | sed '1 s/^.*$/***/' \
+                    && [ "$(printf "%s\n" "$decrypted_file" | wc -l)" -gt 4 ] \
                     && printf "\n***"
 
-                return 0
+                exit 0
             }
 
-            printf "%s\n" "$(cd "$(dirname "$3")" && pwd -P)/$(basename "$3")" \
-                | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
-                    && pass_preview "$(gpg --decrypt "$file_path")" \
-                    && exit 0
+            decrypted_file="$(gpg --decrypt "$file_path")" \
+                || exit 1
 
-            gpg --decrypt "$file_path" \
+            printf "%s\n" "$(cd "$(dirname "$file_path")" \
+                    && pwd -P)/$(basename "$file_path")" \
+                | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
+                    && pass_preview
+
+            printf "%s\n" "$decrypted_file" \
                 && exit 0
-            exit 1
             ;;
     esac
 }
@@ -219,11 +222,6 @@ handle_mime() {
                 && exit 0
             exit 1
             ;;
-        image/* | video/* | audio/*)
-            exiftool "$file_path" \
-                && exit 0
-            exit 1
-            ;;
         text/troff)
             man "$file_path" \
                 && exit 0
@@ -243,7 +241,7 @@ handle_fallback() {
     file --dereference --brief "$file_path"
     printf "\n##### Exif information #####\n"
     exiftool "$file_path"
-    return 0
+    exit 0
 }
 
 [ "$preview_image" = 'True' ] \
