@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-10T22:35:08+0200
+# date:   2024-06-11T19:53:53+0200
 
 # exit | function   | action of ranger
 
@@ -41,14 +41,6 @@ max_size=1M
 
 handle_image() {
     case "$1" in
-        image/svg*)
-            rsvg-convert \
-                --keep-aspect-ratio \
-                --width 960 "$file_path" \
-                --output "$image_cache_path" \
-                    && exit 6
-            exit 1
-            ;;
         image/x-xcf | image/x-tga)
             return 0
             ;;
