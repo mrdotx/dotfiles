@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-06-07T21:26:58+0200
+date:   2024-06-12T21:41:17+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -19,9 +19,9 @@ class fzf_tagged(Command):
     Use fzf to preview(highlight)/select tagged files/folders and jump to them.
     """
     def execute(self):
-        command = "sort \"$HOME/.local/share/ranger/tagged\" \
-                | cut -d':' -f2 \
-                | fzf -e \
+        command = "cut -d':' -f2 \"$HOME/.local/share/ranger/tagged\" \
+                | sort -fV \
+                | fzf -e +s \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
         fzf = self.fm.execute_command(command, stdout=PIPE)
@@ -48,7 +48,8 @@ class fzf_find(Command):
 
         command = "find . " + options + " 2> /dev/null \
                 | sed -e 1d -e 's/^.\\///' \
-                | fzf -e \
+                | sort -fV \
+                | fzf -e +s\
                     --preview-label='[ " + os.getcwd() + " ]' \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
@@ -97,7 +98,8 @@ class fzf_grep(Command):
             return
 
         command = "grep --color=never -Iirsl " + search_string + " \
-                | fzf -e \
+                | sort -fV \
+                | fzf -e +s\
                     --preview-label='[ " + os.getcwd() + " ]' \
                     --preview-window 'up:75%:wrap' \
                     --preview 'highlight {}'"
