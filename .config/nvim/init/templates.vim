@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-06-15T07:40:53+0200
+" date:   2024-06-15T12:04:06+0200
 
 let g:template_folder='~/.config/nvim/init/templates/'
 
@@ -9,7 +9,7 @@ let g:template_folder='~/.config/nvim/init/templates/'
 function! NewTemplate(file)
     let l:file_type=split(a:file, '\.')
     let l:config=g:template_folder.a:file
-    let l:template='autocmd BufNewFile *.'.l:file_type[1]
+    let l:template='autocmd BufNewFile *.'.l:file_type[0]
         \ .' 0r '
         \ .l:config
         \ .' | startinsert'
