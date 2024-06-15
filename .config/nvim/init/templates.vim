@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-26T10:25:15+0200
+" date:   2024-06-15T07:37:46+0200
 
 let g:template_folder='~/.config/nvim/init/templates/'
 
@@ -25,6 +25,7 @@ if has("autocmd")
     augroup templates
         call NewTemplate('skeleton.c')
         call NewTemplate('skeleton.lua')
+        call NewTemplate('gpg.tpl')
         call NewTemplate('skeleton.md')
         call NewTemplate('skeleton.py')
         call NewTemplate('skeleton.sh')
