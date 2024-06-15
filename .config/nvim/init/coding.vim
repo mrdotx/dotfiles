@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-26T10:26:43+0200
+" date:   2024-06-14T07:29:23+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -26,6 +26,3 @@ function! AutoPy()
     set fileformat=unix
 endfunction
 autocmd BufNewFile,BufRead *.py call AutoPy()
-
-" get correct comment highlighting for json
-autocmd FileType json syntax match Comment +\/\/.\+$+
