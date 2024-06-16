@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-06-12T21:41:17+0200
+date:   2024-06-15T21:56:33+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -11,34 +11,12 @@ import sys
 from subprocess import PIPE
 from ranger.api.commands import Command
 
-# fzf find tagged files
-class fzf_tagged(Command):
-    """
-    :fzf_tagged
-
-    Use fzf to preview(highlight)/select tagged files/folders and jump to them.
-    """
-    def execute(self):
-        command = "cut -d':' -f2 \"$HOME/.local/share/ranger/tagged\" \
-                | sort -fV \
-                | fzf -e +s \
-                    --preview-window 'up:75%:wrap' \
-                    --preview 'highlight {}'"
-        fzf = self.fm.execute_command(command, stdout=PIPE)
-        stdout, sys.stderr = fzf.communicate()
-        if fzf.returncode == 0:
-            fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
-            if os.path.isdir(fzf_file):
-                self.fm.cd(fzf_file)
-            else:
-                self.fm.select_file(fzf_file)
-
 # fzf find files
 class fzf_find(Command):
     """
     :fzf_find <optional find options>
 
-    Search(find) for files/folders and use fzf to preview(highlight)/select.
+    Search(find) for files/folders and use fzf_find.sh to preview/select.
     """
     def execute(self):
         if self.arg(1):
@@ -46,13 +24,10 @@ class fzf_find(Command):
         else:
             options = ''
 
-        command = "find . " + options + " 2> /dev/null \
-                | sed -e 1d -e 's/^.\\///' \
+        command = "find . " + options + " 2>/dev/null \
+                | sed 's/^.\\///' \
                 | sort -fV \
-                | fzf -e +s\
-                    --preview-label='[ " + os.getcwd() + " ]' \
-                    --preview-window 'up:75%:wrap' \
-                    --preview 'highlight {}'"
+                | fzf_find.sh"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -62,32 +37,32 @@ class fzf_find(Command):
             else:
                 self.fm.select_file(fzf_file)
 
-# fzf find files with image preview
-class fzf_image(Command):
+# fzf find tagged files
+class fzf_tagged(Command):
     """
-    :fzf_image <optional directory>
+    :fzf_tagged
 
-    Search for files including image preview with fzf_find.sh and select.
+    Search for tagged files/folders and use fzf_find.sh to preview/select.
     """
     def execute(self):
-        if self.arg(1):
-            path = str(self.rest(1)) + '/'
-        else:
-            path = ''
-
-        command = "fzf_find.sh " + path
+        command = "cut -d':' -f2 \"$HOME/.local/share/ranger/tagged\" \
+                | sort -fV \
+                | fzf_find.sh"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
             fzf_file = os.path.abspath(stdout.decode('utf-8').rstrip('\n'))
-            self.fm.select_file(fzf_file)
+            if os.path.isdir(fzf_file):
+                self.fm.cd(fzf_file)
+            else:
+                self.fm.select_file(fzf_file)
 
 # fzf search file content
 class fzf_grep(Command):
     """
     :fzf_grep <query>
 
-    Search(grep) file content, use fzf to preview(highlight)/select file and
+    Search(grep) file content, use fzf_find.sh to preview/select file and
     open file with search string in editor.
     """
     def execute(self):
@@ -99,10 +74,7 @@ class fzf_grep(Command):
 
         command = "grep --color=never -Iirsl " + search_string + " \
                 | sort -fV \
-                | fzf -e +s\
-                    --preview-label='[ " + os.getcwd() + " ]' \
-                    --preview-window 'up:75%:wrap' \
-                    --preview 'highlight {}'"
+                | fzf_find.sh"
         fzf = self.fm.execute_command(command, stdout=PIPE)
         stdout, sys.stderr = fzf.communicate()
         if fzf.returncode == 0:
