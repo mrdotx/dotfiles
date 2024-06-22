@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-24T23:19:50+0200
+# date:   2024-06-21T07:27:37+0200
 
 # ranger use ram as cache and change directory on exit
 ranger_cd() {
@@ -37,11 +37,11 @@ ranger_cd() {
 
 # show pressed key of the keyboard (code and name)
 keypress() {
-    printf "code name\n"
+    printf "code name (ctrl+q to exit)\n"
 
     xev -event "keyboard" \
         | awk -F'[ )]+' \
-            '/^KeyPress/ {a[NR+2]} NR in a {printf "%-4s %s\n", $5, $8}'
+            '/^KeyPress/ {a[NR+2]} NR in a {printf "% 4s %s\n", $5, $8}'
 }
 
 # vim:ft=sh
