@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-14T10:30:24+0100
+# date:   2024-06-21T16:57:47+0200
 
 # .config
 /.config/btop/btop.log
@@ -14,7 +14,6 @@
 /.config/cmus/resume
 /.config/mc/mcedit/
 /.config/mc/hotlist.bak
-/.config/neofetch/images
 /.config/newsboat/history.*
 /.config/qutebrowser/bookmarks/
 /.config/qutebrowser/qsettings/
