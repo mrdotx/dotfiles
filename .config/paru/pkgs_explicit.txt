@@ -13,7 +13,7 @@ bc
 btop-git
 cdw
 cinfo
-cmus
+cmus-git
 cpupower
 cups
 cyanrip
