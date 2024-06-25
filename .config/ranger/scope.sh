@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-11T19:53:53+0200
+# date:   2024-06-24T15:58:20+0200
 
 # exit | function   | action of ranger
 
@@ -56,7 +56,7 @@ handle_image() {
         font/* | *opentype)
             # WORKAROUND: for transparent background convert to png and
             # rename the file to jpg (hardcoded .jpg in actions.py)
-            convert -size '960x960' xc:'#000000' \
+            magick -size '960x960' xc:'#000000' \
                 -font "$file_path" \
                 -fill '#cccccc' \
                 -gravity Center \
