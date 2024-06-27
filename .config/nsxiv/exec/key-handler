@@ -1,115 +1,85 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/sxiv/exec/key-handler
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/nsxiv/exec/key-handler
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-03-08T18:27:46+0100
+# date:   2024-06-26T19:45:24+0200
 
-# rotate function
-rotate() {
-    degree="$1"
-    tr '\n' '\0' \
-        | xargs -0 realpath \
-        | sort -u \
-        | while read -r file; do
-            case "$(file -b -i "$file")" in
-                image/jpeg*)
-                    jpegtran -rotate "$degree" -copy all -outfile "$file" "$file"
-                    ;;
-                *)
-                    mogrify  -rotate "$degree" "$file"
-                    ;;
-            esac
-        done
+realpaths() {
+    while read -r file; do
+        printf "%s " "$(realpath "$file")"
+    done
 }
 
-# flip function
-flip() {
-    direction="$1"
-    tr '\n' '\0' \
-        | xargs -0 realpath \
-        | sort -u \
-        | while read -r file; do
-            case "$(file -b -i "$file")" in
-                image/jpeg*)
-                    jpegtran -flip "$direction" -copy all -outfile "$file" "$file"
-                    ;;
-                *)
-                    if [ "$direction" = "horizontal" ]; then
-                        mogrify -flop "$file"
-                    elif [ "$direction" = "vertical" ]; then
-                        mogrify -flip "$file"
-                    fi
-                    ;;
-            esac
-        done
-}
-
-# trash function
-trash() {
-    tr '\n' '\0' \
-        | xargs -0 realpath \
-        | sort -u \
-        | while read -r file; do
-            case "$(file -b -i "$file")" in
-                *)
-                    trash-put "$file" \
-                        && notify-send \
-                            "sxiv" \
-                            "$file moved to trash" \
-                            --icon=messagebox_warning
-                    ;;
+transform() {
+    while read -r file; do
+        path=$(realpath "$file")
+        case "$(file --brief --mime "$path")" in
+            image/jpeg*)
+                case "$1" in
+                    horizontal | vertical)
+                        jpegtran -flip "$1" -copy all -outfile "$path" "$path"
+                        ;;
+                    *)
+                        jpegtran -rotate "$1" -copy all -outfile "$path" "$path"
+                        ;;
+                esac
+                ;;
+            *)
+                case "$1" in
+                    horizontal)
+                        mogrify -flop "$path"
+                        ;;
+                    vertical)
+                        mogrify -flip "$path"
+                        ;;
+                    *)
+                        mogrify  -rotate "$1" "$path"
+                        ;;
+                esac
+                ;;
         esac
     done
 }
 
-# wallaper function
-wallpaper() {
-    tr '\n' '\0' \
-        | xargs -0 realpath \
-        | sort -u \
-        | while read -r file; do
-            case "$(file -b -i "$file")" in
-                *)
-                    wallpaper.sh "$file" \
-                        && notify-send \
-                            "sxiv" \
-                            "$file set as wallpaper"
-                    ;;
-        esac
-    done
-}
-
-# keybindings
+# keybindings (ctrl+x)
 case "$1" in
-    "C-e")
-        while read -r file; do $TERMINAL -T "$file" -e \
-            sh -c "exiftool '$file' | $PAGER" \
-            & done
+    "d") # trash
+        paths=$(realpaths)
+        eval "trash-put $paths" \
+            && notify-send \
+                "nsxiv - moved to trash" \
+                "$(printf "%s" "$paths" | tr ' ' '\n')" \
+                --icon=messagebox_warning
         ;;
-    "C-w")
-        wallpaper
+    "e") # exif
+        paths=$(realpaths)
+        $TERMINAL -T "nsxiv" -e sh -c "exiftool $paths | $PAGER" &
         ;;
-    "C-g")
-        tr '\n' '\0' \
-            | xargs -0 gimp &
+    "g") # gimp
+        paths=$(realpaths)
+        eval "gimp $paths" &
         ;;
-    "C-comma")
-        rotate 270
+    "w") # wallpaper
+        path=$(realpath "$(head -n1)")
+        wallpaper.sh "$path" \
+            && notify-send \
+                "nsxiv - set as wallpaper" \
+                "$path"
         ;;
-    "C-period")
-        rotate 90
+    "comma")
+        transform 270
         ;;
-    "C-slash")
-        rotate 180
+    "period")
+        transform 90
         ;;
-    "C-semicolon")
-        flip 'horizontal'
+    "slash")
+        transform 180
         ;;
-    "C-apostrophe")
-        flip 'vertical'
+    "semicolon")
+        transform 'horizontal'
         ;;
-    "C-d")
-        trash
+    "apostrophe")
+        transform 'vertical'
         ;;
 esac
