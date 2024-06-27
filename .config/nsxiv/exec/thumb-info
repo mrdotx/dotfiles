@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/nsxiv/exec/thumb-info
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2024-06-26T19:45:30+0200
+
+# $1: path to image file (as provided by the user)
+# $2: empty
+# $3: empty
+# $4: fully resolved path to the image file
+
+printf "%s · %s · %s" \
+    "$(du -Hh "$1" | cut -f1)" \
+    "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
+    "$4"
