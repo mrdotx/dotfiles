@@ -64,7 +64,7 @@ cifs-utils
 cinfo
 clang
 clucene
-cmus-git
+cmus
 colord
 colord-gtk
 colord-gtk-common
