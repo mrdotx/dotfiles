@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=usb
 Comment=manage usb devices
 Icon=utilities-terminal
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "usb floating" -e fzf_usb.sh
 Categories=Utility;System;

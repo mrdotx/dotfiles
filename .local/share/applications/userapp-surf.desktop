@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=surf
 Comment=suckless surf browser
 Icon=web-browser
+StartupNotify=false
+Terminal=false
 Exec=surf.sh %u
 Categories=Network;WebBrowser;

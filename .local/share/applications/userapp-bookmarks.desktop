@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=bookmarks
 Comment=bookmarks menu to open with link handler
 Icon=bookmark-new
+StartupNotify=false
+Terminal=false
 Exec=dmenu_bookmarks.sh
 Categories=Utility;

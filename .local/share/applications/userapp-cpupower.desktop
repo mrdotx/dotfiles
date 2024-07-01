@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=cpupower
 Comment=manage cpupower
 Icon=utilities-terminal
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "cpupower floating" -e fzf_cpupower.sh
 Categories=Utility;System;

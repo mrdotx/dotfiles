@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=ssh
 Comment=open configured ssh sessions
 Icon=utilities-terminal
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "ssh floating" -e fzf_ssh.sh
 Categories=Utility;

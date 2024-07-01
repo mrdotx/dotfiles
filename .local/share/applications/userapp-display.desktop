@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=display settings
 Comment=config and select display settings
 Icon=cs-display
+StartupNotify=false
+Terminal=false
 Exec=dmenu_display.sh
 Categories=Utility;System;

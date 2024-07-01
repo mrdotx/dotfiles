@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=cdw
 Comment=burn/erase cd/dvd
 Icon=disk-burner
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "cdw floating" -e cdw
 Categories=Utility;ConsoleOnly;

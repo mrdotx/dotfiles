@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=unicode-symbols
 Comment=unicode symbols emojies
 Icon=face-smile
+StartupNotify=false
+Terminal=false
 Exec=dmenu_unicode_symbols.sh
 Categories=Utility;

@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=cmus
 Comment=c* music player
 Icon=multimedia-player
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "cmus floating" -e polybar_music.sh --start
 Categories=AudioVideo;ConsoleOnly;

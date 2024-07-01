@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=pacman
 Comment=manage packages with pacman and paru
 Icon=software-center
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "pacman floating" -e fzf_pacman.sh
 Categories=Utility;

@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=pass
 Comment=use username or password from gpg password-store
 Icon=password
+StartupNotify=false
+Terminal=false
 Exec=dmenu_pass.sh
 Categories=Utility;

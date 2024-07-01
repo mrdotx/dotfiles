@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=screenshot
 Comment=take screenshot from desktop, window or selection
 Icon=applets-screenshooter
+StartupNotify=false
+Terminal=false
 Exec=dmenu_screenshot.sh
 Categories=Utility;Graphics;

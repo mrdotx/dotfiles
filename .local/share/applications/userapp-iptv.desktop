@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=iptv
 Comment=search channels from m3u list and play it with mpv
 Icon=multimedia-video-player
+StartupNotify=false
+Terminal=false
 Exec=dmenu_iptv.sh
 Categories=AudioVideo;

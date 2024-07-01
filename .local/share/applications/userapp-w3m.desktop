@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=w3m
 Comment=text orientated browser
 Icon=web-browser
+StartupNotify=false
+Terminal=false
 Exec=w3m.sh %u
 Categories=Network;WebBrowser;

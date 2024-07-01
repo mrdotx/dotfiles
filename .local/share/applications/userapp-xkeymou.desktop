@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=xkeymou
 Comment=keyboard mouse
 Icon=mouse
+StartupNotify=false
+Terminal=false
 Exec=xkeymou
 Categories=Utility;

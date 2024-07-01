@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=network manager
 Comment=connect to wlan
 Icon=preferences-system-network
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "iwd floating" -e fzf_iwd.sh
 Categories=Network;

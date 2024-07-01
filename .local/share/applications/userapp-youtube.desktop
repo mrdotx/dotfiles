@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=youtube
 Comment=search youtube with yt-dlp and play it with mpv
 Icon=multimedia-video-player
+StartupNotify=false
+Terminal=false
 Exec=dmenu_youtube.sh
 Categories=AudioVideo;

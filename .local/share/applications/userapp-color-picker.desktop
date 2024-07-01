@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=color picker
 Comment=pick colors from screen and copy/show hex value
 Icon=preferences-color
+StartupNotify=false
+Terminal=false
 Exec=color_picker.sh
 Categories=Utility;Graphics;

@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=alsa
 Comment=set the default alsa playback device
 Icon=audio-speakers
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "alsa floating" -e fzf_alsa.sh
 Categories=Utility;

@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=mount
 Comment=mount/unmount/eject drives
 Icon=drive-removable-media
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "mount floating" -e fzf_mount.sh
 Categories=Utility;

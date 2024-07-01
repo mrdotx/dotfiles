@@ -1,8 +1,9 @@
 [Desktop Entry]
-Version=1.1
 Type=Application
 Name=calc
 Comment=calculate with bc
 Icon=accessories-calculator
+StartupNotify=false
+Terminal=false
 Exec=$TERMINAL -T "calculator floating" -e bc
 Categories=Utility;
