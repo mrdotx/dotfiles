@@ -30,6 +30,7 @@ ffmpegthumbnailer
 firefox
 firefox-i18n-de
 fzf
+gcr
 gimp-plugin-gmic
 gimp-stripped
 git
