@@ -1,7 +1,7 @@
--- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/quality.lua
+-- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-18T09:25:39+0200
+-- date:   2024-07-19T05:06:31+0200
 
 -- key bindings
 local toggle_menu_binding = "ctrl+f"
