@@ -1,10 +1,10 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-19T05:06:31+0200
+-- date:   2024-07-20T05:35:18+0200
 
 -- key bindings
-local toggle_menu_binding = "ctrl+f"
+local toggle_menu_binding = "y"
 local up_binding          = "UP"
 local down_binding        = "DOWN"
 local select_binding      = "ENTER"
@@ -12,33 +12,29 @@ local select_binding      = "ENTER"
 -- osd
 local osd_time = 5
 
--- paddings for top left corner
-local padding_x = 10
-local padding_y = 5
-
 -- formatting / cursors
-local selected_and_active     = "▶ - "
-local selected_and_inactive   = "● - "
-local unselected_and_active   = "▷ - "
-local unselected_and_inactive = "○ - "
+local selected_and_active     = "│󰑐 "
+local selected_and_inactive   = "│󰐊 "
+local unselected_and_active   = "│󰐎 "
+local unselected_and_inactive = "│  "
 
 -- default menu entries
 local quality_strings = [[
     [
-    {"4320p - 7680x4320 - 8K UHD" : "bestvideo[height<=?4320]+bestaudio/best"},
-    {"2160p - 3840x2160 - 4K UHD" : "bestvideo[height<=?2160]+bestaudio/best"},
-    {"1440p - 2560x1440 - WQHD" : "bestvideo[height<=?1440]+bestaudio/best"},
-    {"1080p - 1920x1080 - FHD" : "bestvideo[height<=?1080]+bestaudio/best"},
-    {" 720p - 1280x720  - WXGA" : "bestvideo[height<=?720]+bestaudio/best"},
-    {" 480p -  854x480  - FWVGA" : "bestvideo[height<=?480]+bestaudio/best"},
-    {" 360p -  640x360  - nHD" : "bestvideo[height<=?360]+bestaudio/best"},
-    {" 240p -  426x240  - NTSC" : "bestvideo[height<=?240]+bestaudio/best"},
-    {" 144p -  256x144  - YT" : "bestvideo[height<=?144]+bestaudio/best"}
+    {"7680x4320 4320p 8KUHD" : "bestvideo[height<=?4320]+bestaudio/best"},
+    {"3840x2160 2160p 4KUHD" : "bestvideo[height<=?2160]+bestaudio/best"},
+    {"2560x1440 1440p WQHD"  : "bestvideo[height<=?1440]+bestaudio/best"},
+    {"1920x1080 1080p FHD"   : "bestvideo[height<=?1080]+bestaudio/best"},
+    {"1280x720   720p WXGA"  : "bestvideo[height<=?720]+bestaudio/best"},
+    {" 854x480   480p FWVGA" : "bestvideo[height<=?480]+bestaudio/best"},
+    {" 640x360   360p nHD"   : "bestvideo[height<=?360]+bestaudio/best"},
+    {" 426x240   240p NTSC"  : "bestvideo[height<=?240]+bestaudio/best"},
+    {" 256x144   144p YT"    : "bestvideo[height<=?144]+bestaudio/best"}
     ]
 ]]
 
 -- use yt-dlp to fetch a list of available formats (overrides quality_strings)
-local fetch_formats = false
+local fetch_formats = true
 
 local mp = require 'mp'
 local utils = require 'mp.utils'
@@ -98,13 +94,10 @@ function show_menu()
 
         if     i ~= selected and i == active then return unselected_and_active
         elseif i ~= selected then return unselected_and_inactive end
-        return "> " -- shouldn't get here.
     end
 
     function draw_menu()
         local ass = assdraw.ass_new()
-
-        ass:pos(padding_x, padding_y)
 
         for i,v in ipairs(options) do
             ass:append(choose_prefix(i)..v.label.."\\N")
@@ -126,13 +119,16 @@ function show_menu()
     timeout = mp.add_periodic_timer(osd_time, destroy)
     destroyer = destroy
 
-    mp.add_forced_key_binding(up_binding,     "move_up",   function() selected_move(-1) end, {repeatable=true})
-    mp.add_forced_key_binding(down_binding,   "move_down", function() selected_move(1)  end, {repeatable=true})
-    mp.add_forced_key_binding(select_binding, "select",    function()
-        destroy()
-        mp.set_property("ytdl-format", options[selected].format)
-        reload_resume()
-    end)
+    mp.add_forced_key_binding(up_binding,     "move_up",
+        function() selected_move(-1) end, {repeatable=true})
+    mp.add_forced_key_binding(down_binding,   "move_down",
+        function() selected_move(1)  end, {repeatable=true})
+    mp.add_forced_key_binding(select_binding, "select",
+        function()
+            destroy()
+            mp.set_property("ytdl-format", options[selected].format)
+            reload_resume()
+        end)
     mp.add_forced_key_binding(toggle_menu_binding, "escape", destroy)
 
     draw_menu()
@@ -181,7 +177,8 @@ function download_formats()
         ytdl.searched = true
     end
 
-    local command = {ytdl.path, "--no-warnings", "--no-playlist", "-J"}
+    local command = {ytdl.path, 
+        "--no-warnings", "--no-playlist", "--dump-single-json"}
     table.insert(command, url)
     local es, json, result = exec(command)
 
@@ -203,11 +200,10 @@ function download_formats()
     msg.verbose("yt-dlp succeeded!")
     for i,v in ipairs(json.formats) do
         if v.vcodec ~= "none" then
-            local fps = v.fps and v.fps.."fps" or ""
-            local resolution = string.format("%sx%s", v.width, v.height)
-            local l = string.format("%-9s %-5s (%-4s / %s)", resolution, fps, v.ext, v.vcodec)
+            local l = string.format("%4sx%-4s %-2s %.5s %4s.%s", 
+                        v.width, v.height, v.fps, v.protocol, v.ext, v.vcodec)
             local f = string.format("%s+bestaudio/best", v.format_id)
-            table.insert(res, {label=l, format=f, width=v.width })
+            table.insert(res, {label=l, format=f, width=v.width})
         end
     end
 
