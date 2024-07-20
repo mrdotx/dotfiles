@@ -1,9 +1,9 @@
--- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/iptv_playlist.lua
+-- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-20T05:35:13+0200
+-- date:   2024-07-20T11:34:35+0200
 
--- usage: mpv --script-opts=iptv=1 playlist.m3u
+-- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
 -- key bindings
 local keybinds = {
@@ -416,7 +416,7 @@ function on_start_file()
     end
 end
 
-if mp.get_opt("iptv") then
+if mp.get_opt("menu_playlist") then
     mp.set_property_bool("idle", true)
     mp.set_property_bool("force-window", true)
     mp.register_event("start-file", on_start_file)
