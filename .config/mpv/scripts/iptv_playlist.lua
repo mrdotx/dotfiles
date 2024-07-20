@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/iptv_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-19T05:04:59+0200
+-- date:   2024-07-20T05:35:13+0200
 
 -- usage: mpv --script-opts=iptv=1 playlist.m3u
 
@@ -23,13 +23,13 @@ local entries = 20
 local favorites = {}
 
 -- formatting / cursors
-local indicator_search        = "󰈲   "
+local indicator_search        = "󰈲  "
 local indicator_up            = ""
 local indicator_down          = ""
-local selected_and_active     = "│ 󰜉 "
-local selected_and_inactive   = "│ 󰐊 "
-local unselected_and_active   = "│ 󰐎 "
-local unselected_and_inactive = "│   "
+local selected_and_active     = "│󰑐 "
+local selected_and_inactive   = "│󰐊 "
+local unselected_and_active   = "│󰐎 "
+local unselected_and_inactive = "│  "
 
 local pattern = ""
 local timer
@@ -108,7 +108,24 @@ end
 for i = string.byte('0'),string.byte('9') do
     table.insert(chars,i)
 end
-for _,v in ipairs({',','^','$','(',')','%','.','[',']','*','+','-','?','`',"'",";"}) do
+for _,v in ipairs({
+            ',',
+            '^',
+            '$',
+            '(',
+            ')',
+            '%',
+            '.',
+            '[',
+            ']',
+            '*',
+            '+',
+            '-',
+            '?',
+            '`',
+            "'",
+            ';'
+        }) do
     table.insert(chars,string.byte(v))
 end
 
@@ -122,7 +139,8 @@ local keybinder = {
         for i,key in ipairs(keybinds[action]) do
             assert(type(func) == "function", "not a function")
             if repeatable then
-                mp.add_forced_key_binding(key, action..tostring(i), func, "repeatable")
+                mp.add_forced_key_binding(key, action..tostring(i), func,
+                    "repeatable")
             else
                 mp.add_forced_key_binding(key, action..tostring(i), func)
             end
@@ -251,7 +269,8 @@ local playlister = {
     end,
 
     play = function(self)
-        mp.commandv("loadfile",self.pls[self.plsfiltered[self.wndstart+self.cursor]].filename)
+        mp.commandv("loadfile",
+            self.pls[self.plsfiltered[self.wndstart+self.cursor]].filename)
         if self.plspos then
             self.pls[self.plspos].current = false
         end
