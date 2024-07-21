@@ -1,13 +1,13 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-20T11:40:33+0200
+-- date:   2024-07-21T04:54:38+0200
 
 -- key bindings
-local toggle_menu_binding = "y"
-local up_binding          = "UP"
-local down_binding        = "DOWN"
-local select_binding      = "ENTER"
+local binding_menu   = "y"
+local binding_up     = "UP"
+local binding_down   = "DOWN"
+local binding_select = "ENTER"
 
 -- osd
 local osd_time = 5
@@ -119,17 +119,17 @@ function show_menu()
     timeout = mp.add_periodic_timer(osd_time, destroy)
     destroyer = destroy
 
-    mp.add_forced_key_binding(up_binding,     "move_up",
+    mp.add_forced_key_binding(binding_up,     "move_up",
         function() selected_move(-1) end, {repeatable=true})
-    mp.add_forced_key_binding(down_binding,   "move_down",
+    mp.add_forced_key_binding(binding_down,   "move_down",
         function() selected_move(1)  end, {repeatable=true})
-    mp.add_forced_key_binding(select_binding, "select",
+    mp.add_forced_key_binding(binding_select, "select",
         function()
             destroy()
             mp.set_property("ytdl-format", options[selected].format)
             reload_resume()
         end)
-    mp.add_forced_key_binding(toggle_menu_binding, "escape", destroy)
+    mp.add_forced_key_binding(binding_menu, "escape", destroy)
 
     draw_menu()
     return
@@ -178,7 +178,11 @@ function download_formats()
     end
 
     local command = {ytdl.path, 
-        "--no-warnings", "--no-playlist", "--dump-single-json"}
+        "--no-warnings",
+        "--no-playlist",
+        "--format-sort", "+res,+fps,+proto,ext",
+        "--dump-single-json"
+    }
     table.insert(command, url)
     local es, json, result = exec(command)
 
@@ -207,25 +211,10 @@ function download_formats()
         end
     end
 
-    table.sort(res, function(a, b) return a.width > b.width end)
-
     mp.osd_message("", 0)
     format_cache[url] = res
     return res, table_size(res)
 end
-
--- register script message to show menu
-mp.register_script_message("toggle-quality", 
-function()
-    if destroyer ~= nil then
-        destroyer()
-    else
-        show_menu()
-    end
-end)
-
--- keybind to launch menu
-mp.add_key_binding(toggle_menu_binding, "quality", show_menu)
 
 function reload_resume()
     local reload_duration = mp.get_property_native("duration")
@@ -241,3 +230,16 @@ function reload_resume()
         mp.register_event("file-loaded", seeker)
     end
 end
+
+-- register script message to show menu
+mp.register_script_message("toggle-quality", 
+function()
+    if destroyer ~= nil then
+        destroyer()
+    else
+        show_menu()
+    end
+end)
+
+-- keybind to launch menu
+mp.add_key_binding(binding_menu, "quality", show_menu)
