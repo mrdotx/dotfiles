@@ -1,16 +1,16 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-20T11:34:35+0200
+-- date:   2024-07-21T04:49:36+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
 -- key bindings
 local keybinds = {
-    activate = {'\\', 'MOUSE_BTN2'},
-    plsup    = {'UP', 'MOUSE_BTN3'},
-    plsdown  = {'DOWN', 'MOUSE_BTN4'},
-    plsenter = {'ENTER', 'MOUSE_BTN0'}
+    binding_menu   = {'\\'},
+    binding_up     = {'UP', 'MOUSE_BTN3'},
+    binding_down   = {'DOWN', 'MOUSE_BTN4'},
+    binding_select = {'ENTER', 'MOUSE_BTN0'}
 }
 
 -- osd
@@ -185,8 +185,6 @@ local playlister = {
             self.cursor = 0
         end
 
-        mp.command("script-message osc-idlescreen no no_osd")
-
         msg = ""
         i = self.wndstart
         local prefix
@@ -280,8 +278,8 @@ local playlister = {
 }
 
 function add_bindings()
-    keybinder.add("plsup", up, true)
-    keybinder.add("plsdown", down, true)
+    keybinder.add("binding_up", up, true)
+    keybinder.add("binding_down", down, true)
     for i,v in ipairs(chars) do
         c = string.char(v)
         mp.add_forced_key_binding(c, 'search'..v, typing(c),"repeatable")
@@ -289,13 +287,13 @@ function add_bindings()
     mp.add_forced_key_binding('SPACE', 'search32', typing(' '),"repeatable")
 
     mp.add_forced_key_binding('BS', 'searchbs', backspace,"repeatable")
-    keybinder.add("plsenter", play)
+    keybinder.add("binding_select", play)
 end
 
 function remove_bindings()
-    keybinder.remove('plsup')
-    keybinder.remove('plsdown')
-    keybinder.remove('plsenter')
+    keybinder.remove('binding_up')
+    keybinder.remove('binding_down')
+    keybinder.remove('binding_select')
     for i,v in ipairs(chars) do
         c = string.char(v)
         mp.remove_key_binding('search'..v)
@@ -417,8 +415,9 @@ function on_start_file()
 end
 
 if mp.get_opt("menu_playlist") then
+    mp.command("script-message osc-idlescreen no no_osd")
     mp.set_property_bool("idle", true)
     mp.set_property_bool("force-window", true)
     mp.register_event("start-file", on_start_file)
-    keybinder.add("activate", activate)
+    keybinder.add("binding_menu", activate)
 end
