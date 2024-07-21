@@ -5,5 +5,5 @@ Comment=search channels from m3u list and play it with mpv
 Icon=multimedia-video-player
 StartupNotify=false
 Terminal=false
-Exec=dmenu_iptv.sh
+Exec=mpv --terminal=no --script-opts=menu_playlist=1 "$HOME/.local/share/repos/epg/playlists/xitylight.m3u"
 Categories=AudioVideo;
