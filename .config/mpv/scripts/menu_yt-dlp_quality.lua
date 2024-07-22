@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-21T04:54:38+0200
+-- date:   2024-07-22T06:40:41+0200
 
 -- key bindings
 local binding_menu   = "y"
@@ -18,57 +18,22 @@ local selected_and_inactive   = "│󰐊 "
 local unselected_and_active   = "│󰐎 "
 local unselected_and_inactive = "│  "
 
--- default menu entries
-local quality_strings = [[
-    [
-    {"7680x4320 4320p 8KUHD" : "bestvideo[height<=?4320]+bestaudio/best"},
-    {"3840x2160 2160p 4KUHD" : "bestvideo[height<=?2160]+bestaudio/best"},
-    {"2560x1440 1440p WQHD"  : "bestvideo[height<=?1440]+bestaudio/best"},
-    {"1920x1080 1080p FHD"   : "bestvideo[height<=?1080]+bestaudio/best"},
-    {"1280x720   720p WXGA"  : "bestvideo[height<=?720]+bestaudio/best"},
-    {" 854x480   480p FWVGA" : "bestvideo[height<=?480]+bestaudio/best"},
-    {" 640x360   360p nHD"   : "bestvideo[height<=?360]+bestaudio/best"},
-    {" 426x240   240p NTSC"  : "bestvideo[height<=?240]+bestaudio/best"},
-    {" 256x144   144p YT"    : "bestvideo[height<=?144]+bestaudio/best"}
-    ]
-]]
-
--- use yt-dlp to fetch a list of available formats (overrides quality_strings)
-local fetch_formats = true
-
 local mp = require 'mp'
 local utils = require 'mp.utils'
 local msg = require 'mp.msg'
 local assdraw = require 'mp.assdraw'
 
-quality_strings = utils.parse_json(quality_strings)
-
 local destroyer = nil
 
 function show_menu()
     local selected = 1
-    local active = 0
+    local active = 1
     local current_ytdl_format = mp.get_property("ytdl-format")
     msg.verbose("current ytdl-format: "..current_ytdl_format)
     local num_options = 0
     local options = {}
 
-    if fetch_formats then
-        options, num_options = download_formats()
-    end
-
-    if next(options) == nil then
-        for i,v in ipairs(quality_strings) do
-            num_options = num_options + 1
-            for k,v2 in pairs(v) do
-                options[i] = {label = k, format = v2}
-                if v2 == current_ytdl_format then
-                    active = i
-                    selected = active
-                end
-            end
-        end
-    end
+    options, num_options = download_formats()
 
     -- set the cursor to the currently format
     for i,v in ipairs(options) do
@@ -89,7 +54,7 @@ function show_menu()
     end
 
     function choose_prefix(i)
-        if     i == selected and i == active then return selected_and_active 
+        if     i == selected and i == active then return selected_and_active
         elseif i == selected then return selected_and_inactive end
 
         if     i ~= selected and i == active then return unselected_and_active
@@ -162,7 +127,7 @@ function download_formats()
     url = string.gsub(url, "ytdl://", "")
 
     -- don't fetch the format list if we already have it
-    if format_cache[url] ~= nil then 
+    if format_cache[url] ~= nil then
         local res = format_cache[url]
         return res, table_size(res)
     end
@@ -177,7 +142,7 @@ function download_formats()
         ytdl.searched = true
     end
 
-    local command = {ytdl.path, 
+    local command = {ytdl.path,
         "--no-warnings",
         "--no-playlist",
         "--format-sort", "+res,+fps,+proto,ext",
@@ -204,10 +169,12 @@ function download_formats()
     msg.verbose("yt-dlp succeeded!")
     for i,v in ipairs(json.formats) do
         if v.vcodec ~= "none" then
-            local l = string.format("%4sx%-4s %-2s %.5s %4s.%s", 
-                        v.width, v.height, v.fps, v.protocol, v.ext, v.vcodec)
+            local l = string.format("%4sx%-4s %-2s %.5s %4s.%.4s",
+                        (v.width or ""), (v.height or ""), (v.fps or ""),
+                        (v.protocol or ""), (v.ext or ""), (v.vcodec or "")
+            )
             local f = string.format("%s+bestaudio/best", v.format_id)
-            table.insert(res, {label=l, format=f, width=v.width})
+            table.insert(res, {label=l, format=f})
         end
     end
 
@@ -232,7 +199,7 @@ function reload_resume()
 end
 
 -- register script message to show menu
-mp.register_script_message("toggle-quality", 
+mp.register_script_message("toggle-quality",
 function()
     if destroyer ~= nil then
         destroyer()
