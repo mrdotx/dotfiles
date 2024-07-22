@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-21T04:49:36+0200
+-- date:   2024-07-21T18:26:08+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
@@ -19,9 +19,6 @@ local osd_time = 5
 -- playlist entries
 local entries = 20
 
--- favorites on top of the playlist
-local favorites = {}
-
 -- formatting / cursors
 local indicator_search        = "󰈲  "
 local indicator_up            = ""
@@ -30,11 +27,6 @@ local selected_and_active     = "│󰑐 "
 local selected_and_inactive   = "│󰐊 "
 local unselected_and_active   = "│󰐎 "
 local unselected_and_inactive = "│  "
-
-local pattern = ""
-local timer
-local is_active
-local is_playlist_loaded
 
 -- UTF-8 lower/upper conversion
 local utf8_lc_uc = {
@@ -129,6 +121,11 @@ for _,v in ipairs({
     table.insert(chars,string.byte(v))
 end
 
+local pattern = ""
+local timer
+local is_active
+local is_playlist_loaded
+
 local keybinder = {
     remove = function(action)
         for i,_ in ipairs(keybinds[action]) do
@@ -149,118 +146,96 @@ local keybinder = {
 }
 
 local playlister = {
-    pls,
-    plsfiltered,
-    plspos,
-    wndstart,
-    wndend,
+    list,
+    filtered,
+    position,
+    start,
     cursor,
 
     init = function(self)
-        if not self.pls then
-            self.pls = mp.get_property_native("playlist")
+        if not self.list then
+            self.list = mp.get_property_native("playlist")
         end
         mp.commandv("stop")
         -- need to mark first entry non-current (mpv bug?)
-        if self.pls[1] then
-            self.pls[1].current = false
-        end
-        if favorites and #favorites > 0 then
-            self:sortfavs()
+        if self.list[1] then
+            self.list[1].current = false
         end
         pattern = ""
-        self.plsfiltered = tablekeys(self.pls)
+        self.filtered = tablekeys(self.list)
     end,
 
     show = function(self)
         local i
-        local newpos
         local msg
 
-        if not self.plsfiltered then
+        if not self.filtered then
             return
         end
-        if not self.wndstart or not self.cursor then
-            self.wndstart = 1
+        if not self.start or not self.cursor then
+            self.start = 1
             self.cursor = 0
         end
 
         msg = ""
-        i = self.wndstart
+        i = self.start
         local prefix
-        while self.plsfiltered[i] and i <= self.wndstart + entries - 1 do
-            if self.pls[self.plsfiltered[i]].current then
+        while self.filtered[i] and i <= self.start + entries - 1 do
+            if self.list[self.filtered[i]].current then
                 prefix = unselected_and_active
-            elseif i == self.wndstart + self.cursor then
+            elseif i == self.start + self.cursor then
                 prefix = selected_and_inactive
             else
                 prefix = unselected_and_inactive
             end
-            if self.pls[self.plsfiltered[i]].current
-                    and i == self.wndstart + self.cursor then
+            if self.list[self.filtered[i]].current
+                    and i == self.start + self.cursor then
                 prefix = selected_and_active
             end
-            msg = msg..prefix..(self.pls[self.plsfiltered[i]].title or "").."\n"
+            msg = msg..prefix..(self.list[self.filtered[i]].title or "").."\n"
             i = i + 1
         end
-        if self.wndstart > 1 then
+        if self.start > 1 then
             msg = indicator_up.."\n"..msg
         else
             msg = " \n"..msg
         end
-        if self.wndstart + entries - 1 < #self.plsfiltered then
+        if self.start + entries - 1 < #self.filtered then
             msg = msg..indicator_down
         end
         msg = indicator_search..pattern.."\n"..msg
         mp.osd_message(msg, osd_time)
     end,
 
-    sortfavs = function(self)
-        -- favorites on top
-        local favs = {}
-        local nonfavs = {}
-        for _,v in ipairs(self.pls) do
-            if in_array(favorites,v.title) then
-                favs[#favs + 1] = v
-            else
-                nonfavs[#nonfavs + 1] = v
-            end
-        end
-        for i = 1,#nonfavs do
-            favs[#favs + 1] = nonfavs[i]
-        end
-        self.pls = favs
-    end,
-
     filter = function(self)
-        self.plsfiltered = {}
-        for i,v in ipairs(self.pls) do
+        self.filtered = {}
+        for i,v in ipairs(self.list) do
             if string.match(mylower(v.title),'.*'..prepat(pattern)..'.*') then
-                table.insert(self.plsfiltered,i)
+                table.insert(self.filtered,i)
             end
         end
-        self.wndstart = 1
+        self.start = 1
         self.cursor = 0
     end,
 
     down = function(self)
-        if self.cursor >= #self.plsfiltered - 1 then return end
+        if self.cursor >= #self.filtered - 1 then return end
         if self.cursor < entries - 1 then
             self.cursor = self.cursor + 1
         else
-            if self.wndstart < #self.plsfiltered - entries + 1 then
-                self.wndstart = self.wndstart + 1
+            if self.start < #self.filtered - entries + 1 then
+                self.start = self.start + 1
             end
         end
         self.show(self)
     end,
     up = function(self)
         if self.cursor > 0 then
-            self.cursor = self.cursor-1
+            self.cursor = self.cursor - 1
             self.show(self)
         else
-            if self.wndstart > 1 then
-                self.wndstart = self.wndstart - 1
+            if self.start > 1 then
+                self.start = self.start - 1
                 self.show(self)
             end
         end
@@ -268,12 +243,12 @@ local playlister = {
 
     play = function(self)
         mp.commandv("loadfile",
-            self.pls[self.plsfiltered[self.wndstart+self.cursor]].filename)
-        if self.plspos then
-            self.pls[self.plspos].current = false
+            self.list[self.filtered[self.start + self.cursor]].filename)
+        if self.position then
+            self.list[self.position].current = false
         end
-        self.plspos = self.plsfiltered[self.wndstart + self.cursor]
-        self.pls[self.plspos].current = true
+        self.position = self.filtered[self.start + self.cursor]
+        self.list[self.position].current = true
     end
 }
 
