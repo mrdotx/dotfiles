@@ -433,6 +433,7 @@ liburing
 libusb
 libusb-compat
 libutempter
+libutf8proc
 libuv
 libva
 libva-mesa-driver
@@ -730,11 +731,9 @@ tracker3
 trash-cli
 tree
 tree-sitter
-tree-sitter-bash
 tree-sitter-c
 tree-sitter-lua
 tree-sitter-markdown
-tree-sitter-python
 tree-sitter-query
 tree-sitter-vimdoc
 tslib
