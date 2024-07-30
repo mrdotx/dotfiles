@@ -169,6 +169,7 @@ graphviz
 grep
 groff
 gsettings-desktop-schemas
+gsettings-system-schemas
 gsfonts
 gsl
 gsm
