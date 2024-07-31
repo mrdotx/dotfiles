@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-21T18:26:08+0200
+-- date:   2024-07-30T21:09:25+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
@@ -28,36 +28,7 @@ local selected_and_inactive   = "│󰐊 "
 local unselected_and_active   = "│󰐎 "
 local unselected_and_inactive = "│  "
 
--- UTF-8 lower/upper conversion
-local utf8_lc_uc = {
-    ["a"] = "A",
-    ["b"] = "B",
-    ["c"] = "C",
-    ["d"] = "D",
-    ["e"] = "E",
-    ["f"] = "F",
-    ["g"] = "G",
-    ["h"] = "H",
-    ["i"] = "I",
-    ["j"] = "J",
-    ["k"] = "K",
-    ["l"] = "L",
-    ["m"] = "M",
-    ["n"] = "N",
-    ["o"] = "O",
-    ["p"] = "P",
-    ["q"] = "Q",
-    ["r"] = "R",
-    ["s"] = "S",
-    ["t"] = "T",
-    ["u"] = "U",
-    ["v"] = "V",
-    ["w"] = "W",
-    ["x"] = "X",
-    ["y"] = "Y",
-    ["z"] = "Z"
-}
-
+-- UTF-8 lower conversion
 local utf8_uc_lc = {
     ["A"] = "a",
     ["B"] = "b",
@@ -101,22 +72,13 @@ for i = string.byte('0'),string.byte('9') do
     table.insert(chars,i)
 end
 for _,v in ipairs({
-            ',',
-            '^',
-            '$',
-            '(',
-            ')',
-            '%',
-            '.',
-            '[',
-            ']',
-            '*',
-            '+',
-            '-',
-            '?',
-            '`',
-            "'",
-            ';'
+            '`','~',
+            '!','@','#','$','%','^','&','*','(',')',
+            '-','_','+','=',
+            '[','{',']','}','|',
+            ';',':',"'",'"',
+            ',','<','.','>',
+            '?'
         }) do
     table.insert(chars,string.byte(v))
 end
@@ -157,7 +119,6 @@ local playlister = {
             self.list = mp.get_property_native("playlist")
         end
         mp.commandv("stop")
-        -- need to mark first entry non-current (mpv bug?)
         if self.list[1] then
             self.list[1].current = false
         end
@@ -201,8 +162,11 @@ local playlister = {
             msg = " \n"..msg
         end
         if self.start + entries - 1 < #self.filtered then
-            msg = msg..indicator_down
+            msg = msg..indicator_down.."  "
+        else
+            msg = msg.."   "
         end
+        msg = msg.."["..(self.start + self.cursor).."/"..#self.filtered.."]"
         msg = indicator_search..pattern.."\n"..msg
         mp.osd_message(msg, osd_time)
     end,
@@ -229,16 +193,16 @@ local playlister = {
         end
         self.show(self)
     end,
+
     up = function(self)
         if self.cursor > 0 then
             self.cursor = self.cursor - 1
-            self.show(self)
         else
             if self.start > 1 then
                 self.start = self.start - 1
-                self.show(self)
             end
         end
+        self.show(self)
     end,
 
     play = function(self)
@@ -314,13 +278,6 @@ end
 function mylower(s)
     local res,n = string.gsub(s,utf8_char,function (c)
                                     return utf8_uc_lc[c]
-                                end)
-    return res
-end
-
-function myupper(s)
-    local res,n = string.gsub(s,utf8_char,function (c)
-                                    return utf8_lc_uc[c]
                                 end)
     return res
 end
