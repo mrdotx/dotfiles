@@ -1,16 +1,18 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-30T21:09:25+0200
+-- date:   2024-07-31T19:32:14+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
 -- key bindings
 local keybinds = {
-    binding_menu   = {'\\'},
-    binding_up     = {'UP', 'MOUSE_BTN3'},
-    binding_down   = {'DOWN', 'MOUSE_BTN4'},
-    binding_select = {'ENTER', 'MOUSE_BTN0'}
+    binding_menu      = {'\\'},
+    binding_up        = {'UP', 'MOUSE_BTN3'},
+    binding_down      = {'DOWN', 'MOUSE_BTN4'},
+    binding_page_up   = {'PGUP'},
+    binding_page_down = {'PGDWN'},
+    binding_select    = {'ENTER', 'MOUSE_BTN0'}
 }
 
 -- osd
@@ -205,6 +207,47 @@ local playlister = {
         self.show(self)
     end,
 
+    page_down = function(self)
+        if #self.filtered < entries then
+            self.cursor = #self.filtered - 1
+        else
+            if self.start < #self.filtered - entries + 1 then
+                self.start = self.start + entries
+            else
+                if self.start + self.cursor >= #self.filtered - entries + 1 then
+                    self.cursor = entries - 1
+                end
+            end
+            if self.start >= #self.filtered - entries + 1 then
+                self.cursor = (#self.filtered
+                    - self.start - self.cursor - entries + 1) * -1
+                if self.cursor >= entries - 1 then
+                    self.cursor = entries - 1
+                end
+                self.start = #self.filtered - entries + 1
+            end
+        end
+        self.show(self)
+    end,
+
+    page_up = function(self)
+        if self.start == 1 then
+            self.cursor = 0
+        else
+            if self.start > 1 then
+                self.start = self.start - entries
+                if self.start < 1 then
+                    self.cursor = self.start + self.cursor - 1
+                    self.start = 1
+                    if self.cursor < 1 then
+                        self.cursor = 0
+                    end
+                end
+            end
+        end
+        self.show(self)
+    end,
+
     play = function(self)
         mp.commandv("loadfile",
             self.list[self.filtered[self.start + self.cursor]].filename)
@@ -219,6 +262,8 @@ local playlister = {
 function add_bindings()
     keybinder.add("binding_up", up, true)
     keybinder.add("binding_down", down, true)
+    keybinder.add("binding_page_up", page_up, true)
+    keybinder.add("binding_page_down", page_down, true)
     for i,v in ipairs(chars) do
         c = string.char(v)
         mp.add_forced_key_binding(c, 'search'..v, typing(c),"repeatable")
@@ -232,6 +277,8 @@ end
 function remove_bindings()
     keybinder.remove('binding_up')
     keybinder.remove('binding_down')
+    keybinder.remove('binding_page_up')
+    keybinder.remove('binding_page_down')
     keybinder.remove('binding_select')
     for i,v in ipairs(chars) do
         c = string.char(v)
@@ -333,6 +380,16 @@ end
 
 function up()
     playlister:up()
+    resumetimer()
+end
+
+function page_down()
+    playlister:page_down()
+    resumetimer()
+end
+
+function page_up()
+    playlister:page_up()
     resumetimer()
 end
 
