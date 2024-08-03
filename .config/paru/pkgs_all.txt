@@ -744,7 +744,6 @@ ttf-dejavu-nerd
 tzdata
 uchardet
 unibilium
-unzip
 usbutils
 util-linux
 util-linux-libs

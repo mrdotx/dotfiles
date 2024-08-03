@@ -121,7 +121,6 @@ tmux
 trash-cli
 tree
 ttf-dejavu-nerd
-unzip
 usbutils
 ventoy-bin
 virtualbox
