@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-22T06:40:41+0200
+-- date:   2024-08-04T07:03:53+0200
 
 -- key bindings
 local binding_menu   = "y"
@@ -11,23 +11,24 @@ local binding_select = "ENTER"
 
 -- osd
 local osd_time = 5
+local osd_font_size = 10
 
--- formatting / cursors
-local selected_and_active     = "│󰑐 "
-local selected_and_inactive   = "│󰐊 "
-local unselected_and_active   = "│󰐎 "
-local unselected_and_inactive = "│  "
+-- format
+local selected_active     = "│󰑐 "
+local selected_inactive   = "│󰐊 "
+local unselected_active   = "│󰐎 "
+local unselected_inactive = "│  "
 
-local mp = require 'mp'
-local utils = require 'mp.utils'
-local msg = require 'mp.msg'
+local mp      = require 'mp'
+local utils   = require 'mp.utils'
+local msg     = require 'mp.msg'
 local assdraw = require 'mp.assdraw'
 
 local destroyer = nil
 
 function show_menu()
     local selected = 1
-    local active = 1
+    local active = 0
     local current_ytdl_format = mp.get_property("ytdl-format")
     msg.verbose("current ytdl-format: "..current_ytdl_format)
     local num_options = 0
@@ -35,8 +36,8 @@ function show_menu()
 
     options, num_options = download_formats()
 
-    -- set the cursor to the currently format
-    for i,v in ipairs(options) do
+    -- set the cursor to the current format
+    for i, v in ipairs(options) do
         if v.format == current_ytdl_format then
             active = i
             selected = active
@@ -54,17 +55,18 @@ function show_menu()
     end
 
     function choose_prefix(i)
-        if     i == selected and i == active then return selected_and_active
-        elseif i == selected then return selected_and_inactive end
+        if     i == selected and i == active then return selected_active
+        elseif i == selected then return selected_inactive end
 
-        if     i ~= selected and i == active then return unselected_and_active
-        elseif i ~= selected then return unselected_and_inactive end
+        if     i ~= selected and i == active then return unselected_active
+        elseif i ~= selected then return unselected_inactive end
     end
 
     function draw_menu()
         local ass = assdraw.ass_new()
 
-        for i,v in ipairs(options) do
+        ass:append("{\\fs"..osd_font_size.."}")
+        for i, v in ipairs(options) do
             ass:append(choose_prefix(i)..v.label.."\\N")
         end
 
@@ -73,7 +75,7 @@ function show_menu()
 
     function destroy()
         timeout:kill()
-        mp.set_osd_ass(0,0,"")
+        mp.set_osd_ass(0, 0, "")
         mp.remove_key_binding("move_up")
         mp.remove_key_binding("move_down")
         mp.remove_key_binding("select")
@@ -84,10 +86,10 @@ function show_menu()
     timeout = mp.add_periodic_timer(osd_time, destroy)
     destroyer = destroy
 
-    mp.add_forced_key_binding(binding_up,     "move_up",
-        function() selected_move(-1) end, {repeatable=true})
-    mp.add_forced_key_binding(binding_down,   "move_down",
-        function() selected_move(1)  end, {repeatable=true})
+    mp.add_forced_key_binding(binding_up, "move_up",
+        function() selected_move(-1) end, "repeatable")
+    mp.add_forced_key_binding(binding_down, "move_down",
+        function() selected_move(1)  end, "repeatable")
     mp.add_forced_key_binding(binding_select, "select",
         function()
             destroy()
@@ -115,7 +117,7 @@ function download_formats()
 
     local function table_size(t)
         s = 0
-        for i,v in ipairs(t) do
+        for i, v in ipairs(t) do
             s = s + 1
         end
         return s
@@ -145,7 +147,7 @@ function download_formats()
     local command = {ytdl.path,
         "--no-warnings",
         "--no-playlist",
-        "--format-sort", "+res,+fps,+proto,ext",
+        "--format-sort", "+res,+fps,+vbr,+proto,ext",
         "--dump-single-json"
     }
     table.insert(command, url)
@@ -167,11 +169,19 @@ function download_formats()
 
     res = {}
     msg.verbose("yt-dlp succeeded!")
-    for i,v in ipairs(json.formats) do
+    for i, v in ipairs(json.formats) do
         if v.vcodec ~= "none" then
-            local l = string.format("%4sx%-4s %-2s %.5s %4s.%.4s",
-                        (v.width or ""), (v.height or ""), (v.fps or ""),
-                        (v.protocol or ""), (v.ext or ""), (v.vcodec or "")
+            local l = string.format("%4.0fx%-4.0f %2.0f %5.0fk %5s %4s.%.4s",
+                        (v.width or "-0"), (v.height or "-0"),
+                        (v.fps or "-0"),
+                        (v.vbr or "-0"),
+                        (v.protocol:gsub("%S+",
+                            {
+                                ["http_dash_segments"] = "hds",
+                                ["m3u8_native"] = "m3u8"
+                            }
+                            ) or "n/a"),
+                        (v.ext or "n/a"), v.vcodec
             )
             local f = string.format("%s+bestaudio/best", v.format_id)
             table.insert(res, {label=l, format=f})
