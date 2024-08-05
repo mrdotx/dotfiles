@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-07-31T19:32:14+0200
+-- date:   2024-08-04T15:41:55+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
@@ -17,18 +17,19 @@ local keybinds = {
 
 -- osd
 local osd_time = 5
+local osd_font_size = 10
 
 -- playlist entries
 local entries = 20
 
--- formatting / cursors
-local indicator_search        = "󰈲  "
-local indicator_up            = ""
-local indicator_down          = ""
-local selected_and_active     = "│󰑐 "
-local selected_and_inactive   = "│󰐊 "
-local unselected_and_active   = "│󰐎 "
-local unselected_and_inactive = "│  "
+-- format
+local indicator_search    = "󰈲  "
+local indicator_up        = ""
+local indicator_down      = ""
+local selected_active     = "│󰑐 "
+local selected_inactive   = "│󰐊 "
+local unselected_active   = "│󰐎 "
+local unselected_inactive = "│  "
 
 -- UTF-8 lower conversion
 local utf8_uc_lc = {
@@ -64,25 +65,25 @@ local utf8_uc_lc = {
 local utf8_char = "[\1-\127\192-\223][\128-\191]*"
 
 local chars = {}
-for i = string.byte('a'),string.byte('z') do
-    table.insert(chars,i)
+for i = string.byte('a'), string.byte('z') do
+    table.insert(chars, i)
 end
-for i = string.byte('A'),string.byte('Z') do
-    table.insert(chars,i)
+for i = string.byte('A'), string.byte('Z') do
+    table.insert(chars, i)
 end
-for i = string.byte('0'),string.byte('9') do
-    table.insert(chars,i)
+for i = string.byte('0'), string.byte('9') do
+    table.insert(chars, i)
 end
 for _,v in ipairs({
-            '`','~',
-            '!','@','#','$','%','^','&','*','(',')',
-            '-','_','+','=',
-            '[','{',']','}','|',
-            ';',':',"'",'"',
-            ',','<','.','>',
+            '`', '~',
+            '!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
+            '-', '_', '+', '=',
+            '[', '{', ']', '}', '|',
+            ';', ':', "'", '"',
+            ',', '<', '.', '>',
             '?'
         }) do
-    table.insert(chars,string.byte(v))
+    table.insert(chars, string.byte(v))
 end
 
 local pattern = ""
@@ -92,12 +93,12 @@ local is_playlist_loaded
 
 local keybinder = {
     remove = function(action)
-        for i,_ in ipairs(keybinds[action]) do
+        for i, _ in ipairs(keybinds[action]) do
             mp.remove_key_binding(action..tostring(i))
         end
     end,
     add = function(action, func, repeatable)
-        for i,key in ipairs(keybinds[action]) do
+        for i, key in ipairs(keybinds[action]) do
             assert(type(func) == "function", "not a function")
             if repeatable then
                 mp.add_forced_key_binding(key, action..tostring(i), func,
@@ -145,15 +146,15 @@ local playlister = {
         local prefix
         while self.filtered[i] and i <= self.start + entries - 1 do
             if self.list[self.filtered[i]].current then
-                prefix = unselected_and_active
+                prefix = unselected_active
             elseif i == self.start + self.cursor then
-                prefix = selected_and_inactive
+                prefix = selected_inactive
             else
-                prefix = unselected_and_inactive
+                prefix = unselected_inactive
             end
             if self.list[self.filtered[i]].current
                     and i == self.start + self.cursor then
-                prefix = selected_and_active
+                prefix = selected_active
             end
             msg = msg..prefix..(self.list[self.filtered[i]].title or "").."\n"
             i = i + 1
@@ -170,14 +171,16 @@ local playlister = {
         end
         msg = msg.."["..(self.start + self.cursor).."/"..#self.filtered.."]"
         msg = indicator_search..pattern.."\n"..msg
-        mp.osd_message(msg, osd_time)
+        mp.osd_message(mp.get_property_osd("osd-ass-cc/0")..
+            "{\\fs"..osd_font_size.."}"..msg..
+            mp.get_property_osd("osd-ass-cc/1"), osd_time)
     end,
 
     filter = function(self)
         self.filtered = {}
-        for i,v in ipairs(self.list) do
-            if string.match(mylower(v.title),'.*'..prepat(pattern)..'.*') then
-                table.insert(self.filtered,i)
+        for i, v in ipairs(self.list) do
+            if string.match(mylower(v.title), '.*'..prepat(pattern)..'.*') then
+                table.insert(self.filtered, i)
             end
         end
         self.start = 1
@@ -266,11 +269,11 @@ function add_bindings()
     keybinder.add("binding_page_down", page_down, true)
     for i,v in ipairs(chars) do
         c = string.char(v)
-        mp.add_forced_key_binding(c, 'search'..v, typing(c),"repeatable")
+        mp.add_forced_key_binding(c, 'search'..v, typing(c), "repeatable")
     end
-    mp.add_forced_key_binding('SPACE', 'search32', typing(' '),"repeatable")
+    mp.add_forced_key_binding('SPACE', 'search32', typing(' '), "repeatable")
 
-    mp.add_forced_key_binding('BS', 'searchbs', backspace,"repeatable")
+    mp.add_forced_key_binding('BS', 'searchbs', backspace, "repeatable")
     keybinder.add("binding_select", play)
 end
 
@@ -280,7 +283,7 @@ function remove_bindings()
     keybinder.remove('binding_page_up')
     keybinder.remove('binding_page_down')
     keybinder.remove('binding_select')
-    for i,v in ipairs(chars) do
+    for i, v in ipairs(chars) do
         c = string.char(v)
         mp.remove_key_binding('search'..v)
     end
@@ -307,14 +310,14 @@ end
 
 function tablekeys(t)
   local result = {}
-  for i,v in ipairs(t) do
-    table.insert(result,i)
+  for i, v in ipairs(t) do
+    table.insert(result, i)
   end
   return result
 end
 
 function in_array(array, value)
-    for _,v in ipairs(array) do
+    for _, v in ipairs(array) do
         if v == value then
             return true
         end
@@ -323,7 +326,7 @@ function in_array(array, value)
 end
 
 function mylower(s)
-    local res,n = string.gsub(s,utf8_char,function (c)
+    local res, n = string.gsub(s, utf8_char, function (c)
                                     return utf8_uc_lc[c]
                                 end)
     return res
@@ -331,7 +334,7 @@ end
 
 function prepat(s)
     -- prepare nocase and magic chars
-    s = string.gsub(s, "[%^%$%(%)%%%.%[%]%*%+%-%?]",function (c)
+    s = string.gsub(s, "[%^%$%(%)%%%.%[%]%*%+%-%?]", function (c)
           return '%'..c
         end)
     return s
@@ -354,7 +357,7 @@ end
 
 function backspace()
     if string.len(pattern) > 0 then
-        pattern = string.match(pattern,"(.*)"..utf8_char.."$")
+        pattern = string.match(pattern, "(.*)"..utf8_char.."$")
         playlister:filter()
         playlister:show()
         resumetimer()
