@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.local/state/w3m/keymap
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-05-04T10:22:19+0200
+# date:   2024-08-05T09:09:06+0200
 
 # Ctrl  : C-, ^
 # Escape: ESC-, M-, ^[
@@ -92,7 +92,7 @@ keymap	l	MOVE_RIGHT
 keymap	m	MOUSE_TOGGLE
 keymap	n	SEARCH_NEXT
 keymap	o	OPTIONS
-# keymap	q	QUIT
+keymap	q	QUIT
 keymap	r	VERSION
 keymap	s	SELECT_MENU
 keymap	u	PEEK_LINK
@@ -148,8 +148,7 @@ keymap	M-[28~	MENU
 
 # custom keymap
 # close
-keymap	C-q	QUIT
-keymap	q	CLOSE_TAB
+keymap	M-q	CLOSE_TAB
 
 # clipboard
 keymap	,y	EXTERN			"(printf %s | xsel -b)"
