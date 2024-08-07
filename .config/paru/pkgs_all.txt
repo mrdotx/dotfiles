@@ -14,6 +14,7 @@ alsa-utils
 amd-ucode
 aom
 appstream
+appstream-glib
 arc-gtk-theme
 arc-icon-theme
 archlinux-keyring
