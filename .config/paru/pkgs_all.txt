@@ -121,7 +121,6 @@ file
 filesystem
 findutils
 firefox
-firefox-i18n-de
 flac
 flex
 flickcurl
@@ -398,7 +397,6 @@ libraqm
 libraw
 libraw1394
 libreoffice-fresh
-libreoffice-fresh-de
 librevenge
 librsvg
 libsamplerate
@@ -724,7 +722,6 @@ tesseract-data-osd
 tevent
 texinfo
 thunderbird
-thunderbird-i18n-de
 tinyxml
 tinyxml2
 tinyxxd

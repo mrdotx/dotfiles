@@ -28,7 +28,6 @@ eslint
 exfatprogs
 ffmpegthumbnailer
 firefox
-firefox-i18n-de
 fzf
 gcr
 gimp-plugin-gmic
@@ -55,7 +54,6 @@ kvantum-qt5
 libmad
 libnotify
 libreoffice-fresh
-libreoffice-fresh-de
 libva-utils
 linux
 linux-firmware
@@ -115,7 +113,6 @@ splix
 sweethome3d
 task-spooler
 thunderbird
-thunderbird-i18n-de
 tinyxxd
 tmux
 trash-cli
