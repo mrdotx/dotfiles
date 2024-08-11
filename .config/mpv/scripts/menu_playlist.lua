@@ -1,13 +1,14 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-08-04T15:41:55+0200
+-- date:   2024-08-10T07:04:55+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
 -- key bindings
 local keybinds = {
-    binding_menu      = {'\\'},
+    binding_open      = {'\\'},
+    binding_close     = {'ESC'},
     binding_up        = {'UP', 'MOUSE_BTN3'},
     binding_down      = {'DOWN', 'MOUSE_BTN4'},
     binding_page_up   = {'PGUP'},
@@ -16,13 +17,11 @@ local keybinds = {
 }
 
 -- osd
-local osd_time = 5
+local osd_time      = 10
 local osd_font_size = 10
 
--- playlist entries
-local entries = 20
-
--- format
+-- menu
+local entries             = 24
 local indicator_search    = "󰈲  "
 local indicator_up        = ""
 local indicator_down      = ""
@@ -263,6 +262,7 @@ local playlister = {
 }
 
 function add_bindings()
+    keybinder.add("binding_close", shutdown)
     keybinder.add("binding_up", up, true)
     keybinder.add("binding_down", down, true)
     keybinder.add("binding_page_up", page_up, true)
@@ -278,6 +278,7 @@ function add_bindings()
 end
 
 function remove_bindings()
+    keybinder.remove('binding_close')
     keybinder.remove('binding_up')
     keybinder.remove('binding_down')
     keybinder.remove('binding_page_up')
@@ -411,5 +412,5 @@ if mp.get_opt("menu_playlist") then
     mp.set_property_bool("idle", true)
     mp.set_property_bool("force-window", true)
     mp.register_event("start-file", on_start_file)
-    keybinder.add("binding_menu", activate)
+    keybinder.add("binding_open", activate)
 end

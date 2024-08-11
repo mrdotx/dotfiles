@@ -1,19 +1,20 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-08-04T07:03:53+0200
+-- date:   2024-08-10T07:05:00+0200
 
 -- key bindings
-local binding_menu   = "y"
+local binding_open   = "y"
+local binding_close  = "ESC"
 local binding_up     = "UP"
 local binding_down   = "DOWN"
 local binding_select = "ENTER"
 
 -- osd
-local osd_time = 5
+local osd_time      = 10
 local osd_font_size = 10
 
--- format
+-- menu
 local selected_active     = "│󰑐 "
 local selected_inactive   = "│󰐊 "
 local unselected_active   = "│󰐎 "
@@ -76,6 +77,7 @@ function show_menu()
     function destroy()
         timeout:kill()
         mp.set_osd_ass(0, 0, "")
+        mp.remove_key_binding("close")
         mp.remove_key_binding("move_up")
         mp.remove_key_binding("move_down")
         mp.remove_key_binding("select")
@@ -86,6 +88,7 @@ function show_menu()
     timeout = mp.add_periodic_timer(osd_time, destroy)
     destroyer = destroy
 
+    mp.add_forced_key_binding(binding_close, "close", destroy)
     mp.add_forced_key_binding(binding_up, "move_up",
         function() selected_move(-1) end, "repeatable")
     mp.add_forced_key_binding(binding_down, "move_down",
@@ -96,7 +99,7 @@ function show_menu()
             mp.set_property("ytdl-format", options[selected].format)
             reload_resume()
         end)
-    mp.add_forced_key_binding(binding_menu, "escape", destroy)
+    mp.add_forced_key_binding(binding_open, "escape", destroy)
 
     draw_menu()
     return
@@ -219,4 +222,4 @@ function()
 end)
 
 -- keybind to launch menu
-mp.add_key_binding(binding_menu, "quality", show_menu)
+mp.add_key_binding(binding_open, "quality", show_menu)
