@@ -1,11 +1,14 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-05-24T23:59:10+0200
+" date:   2024-08-11T08:46:16+0200
+
+" tabulator
+inoremap                <s-tab>     <c-v><tab>
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
-nnoremap                <S-tab>     <c-w>x
+nnoremap                <s-tab>     <c-w>x
 
 " turn off search highlight
 nnoremap <silent>       <leader>/   :nohlsearch<cr>
