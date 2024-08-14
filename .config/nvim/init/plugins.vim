@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-05-08T08:51:34+0200
+" date:   2024-08-13T14:10:47+0200
 
 let g:plugged_folder='~/.local/share/nvim/plugged/'
 let g:plugged_config_folder='~/.config/nvim/init/plugins/'
@@ -28,18 +28,18 @@ call plug#begin(g:plugged_folder)
 call plug#end()
 
 " if plugin folder exists source config file
-function! IfPluginExists(action, plugin_name)
+function! SourcePlugin(action, plugin_name)
     let l:plugin=g:plugged_folder.a:plugin_name
     let l:config_name=split(a:plugin_name, '\.')
     let l:config=g:plugged_config_folder.l:config_name[0]
-    if a:action=='luafile'
+    if a:action=='lua'
         let l:config=l:config.'.lua'
     else
         let l:config=l:config.'.vim'
     endif
     if !empty(glob(l:plugin))
         if !empty(glob(l:config))
-            execute a:action l:config
+            execute 'source' l:config
         else
             echo l:config." not found\n"
         endif
@@ -48,13 +48,13 @@ function! IfPluginExists(action, plugin_name)
     endif
 endfunction
 
-call IfPluginExists('source', 'lightline.vim')
-call IfPluginExists('source', 'goyo.vim')
-call IfPluginExists('luafile', 'nvim-highlight-colors')
-call IfPluginExists('source', 'vim-which-key')
-call IfPluginExists('source', 'indentLine')
-call IfPluginExists('source', 'vim-commentary')
-call IfPluginExists('source', 'vim-gitgutter')
-call IfPluginExists('source', 'coc.nvim')
-call IfPluginExists('source', 'hexmode')
-call IfPluginExists('source', 'vimwiki')
+call SourcePlugin('vim', 'lightline.vim')
+call SourcePlugin('vim', 'goyo.vim')
+call SourcePlugin('lua', 'nvim-highlight-colors')
+call SourcePlugin('vim', 'vim-which-key')
+call SourcePlugin('vim', 'indentLine')
+call SourcePlugin('vim', 'vim-commentary')
+call SourcePlugin('vim', 'vim-gitgutter')
+call SourcePlugin('vim', 'coc.nvim')
+call SourcePlugin('vim', 'hexmode')
+call SourcePlugin('vim', 'vimwiki')
