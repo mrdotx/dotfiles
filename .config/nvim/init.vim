@@ -1,9 +1,15 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-06-14T07:30:09+0200
+" date:   2024-08-13T14:04:23+0200
 
-let g:inits_config_folder='~/.config/nvim/init/'
+let g:init_config_folder='~/.config/nvim/init/'
+
+" provider
+let g:loaded_node_provider=0
+let g:loaded_perl_provider=0
+let g:loaded_python3_provider=0
+let g:loaded_ruby_provider=0
 
 " leader keys
 let mapleader=','                   " for global plugins
@@ -52,22 +58,22 @@ set ignorecase                      " do case insensitive search
 set smartcase                       " ...unless capital letters are used
 
 " if config exists source file
-function! IfConfigExists(action, file)
-    let l:config=g:inits_config_folder.a:file
+function! SourceConfig(file)
+    let l:config=g:init_config_folder.a:file
     if !empty(glob(l:config))
-        execute a:action l:config
+        execute 'source' l:config
     else
         echo l:config." not found\n"
     endif
 endfunction
 
-call IfConfigExists('source', 'filetypes.vim')
-call IfConfigExists('source', 'commands.vim')
-call IfConfigExists('source', 'reload.vim')
-call IfConfigExists('source', 'pass.vim')
-call IfConfigExists('source', 'header.vim')
-call IfConfigExists('source', 'plugins.vim')
-call IfConfigExists('source', 'netrw.vim')
-call IfConfigExists('source', 'coding.vim')
-call IfConfigExists('source', 'templates.vim')
-call IfConfigExists('source', 'keybindings.vim')
+call SourceConfig('filetypes.vim')
+call SourceConfig('commands.vim')
+call SourceConfig('reload.vim')
+call SourceConfig('pass.vim')
+call SourceConfig('header.vim')
+call SourceConfig('plugins.vim')
+call SourceConfig('netrw.vim')
+call SourceConfig('coding.vim')
+call SourceConfig('templates.vim')
+call SourceConfig('keybindings.vim')
