@@ -450,7 +450,6 @@ libwbclient
 libwebp
 libwmf
 libwpd
-libwpe
 libwpg
 libwps
 libx11
@@ -769,7 +768,6 @@ which
 wireless-regdb
 wmctrl
 woff2
-wpebackend-fdo
 x264
 x265
 xautolock
