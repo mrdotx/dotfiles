@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-03-16T07:32:29+0100
+# date:   2024-08-16T15:59:31+0200
 
 # general variables
 set $sup Mod4
@@ -12,7 +12,7 @@ set $font pango:DejaVu Sans 9
 
 # window variables
 set $border border pixel 1
-set $resize resize set 1024 576
+set $resize resize set 1280 720
 set $px 10
 set $ppt 5
 set $gaps 0
