@@ -518,7 +518,6 @@ make
 man-db
 man-pages
 mariadb-libs
-mbedtls2
 mc
 md4c
 mesa
