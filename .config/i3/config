@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-18T06:31:17+0200
+# date:   2024-08-21T22:24:26+0200
 
 # general variables
 set $sup Mod4
@@ -75,6 +75,7 @@ include config.d/keybindings_workspaces.conf
 include config.d/mode_container.conf
 include config.d/mode_editor.conf
 include config.d/mode_exit.conf
+include config.d/mode_floating.conf
 include config.d/mode_macros.conf
 include config.d/mode_nfs.conf
 include config.d/mode_notes.conf
