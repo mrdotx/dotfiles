@@ -63,6 +63,7 @@ linux-headers
 linux-lts
 linux-lts-headers
 logrotate
+losslesscut-bin
 lsb-release
 lshw
 lxappearance-gtk3

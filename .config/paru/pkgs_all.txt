@@ -502,6 +502,7 @@ llvm-libs
 lm_sensors
 lmdb
 logrotate
+losslesscut-bin
 lpsolve
 lsb-release
 lshw
