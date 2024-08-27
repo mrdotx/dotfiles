@@ -1,34 +1,29 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zathura/zathurarc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-05-28T12:00:02+0200
+# date:   2024-08-26T06:44:23+0200
 
-set selection-clipboard clipboard
-set adjust-open best-fit
-set window-title-home-tilde true
-set statusbar-home-tilde true
-set database null
+# general
+set database                "null"
+set dbus-service            "false"
+set recolor                 "true"
+set recolor-keephue         "true"
+set selection-clipboard     "clipboard"
+set statusbar-home-tilde    "true"
+set window-title-home-tilde "true"
 
-# Shortcuts
-map [normal]        u       scroll half-up
-map [fullscreen]    u       scroll half-up
-map [normal]        d       scroll half-down
-map [fullscreen]    d       scroll half-down
-map [normal]        r       rotate
-map [fullscreen]    r       rotate
-map [normal]        <C-r>   reload
-map [fullscreen]    <C-r>   reload
-map [normal]        a       adjust_window best-fit
-map [fullscreen]    a       adjust_window best-fit
-map [normal]        s       adjust_window width
-map [fullscreen]    s       adjust_window width
-map [normal]        <Tab>   toggle_index
-map [fullscreen]    <Tab>   toggle_index
-map [normal]        D       toggle_page_mode
-map [fullscreen]    D       toggle_page_mode
+# keybindings
 map [normal]        p       print
 map [fullscreen]    p       print
+map [presentation]  p       print
 map [normal]        i       recolor
 map [fullscreen]    i       recolor
+map [presentation]  i       recolor
+map [normal]        <C-r>   reload
+map [fullscreen]    <C-r>   reload
+map [presentation]  <C-r>   reload
+
+# theme
+include klassiker.theme
 
 # vim:ft=config
