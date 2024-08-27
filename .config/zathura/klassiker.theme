@@ -1,0 +1,42 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/zathura/klassiker.theme
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2024-08-26T06:43:27+0200
+
+# colors girara
+set completion-bg           "#2b2b2b"
+set compeltion-fg           "#cccccc"
+set completion-group-bg     "#000000"
+set completion-group-fg     "#cccccc"
+set completion-highlight-bg "#4185d7"
+set completion-highlight-fg "#2b2b2b"
+set default-bg              "#000000"
+set default-fg              "#cccccc"
+set inputbar-bg             "#000000"
+set inputbar-fg             "#4185d7"
+set notification-bg         "#4185d7"
+set notification-fg         "#ffffff"
+set notification-error-bg   "#df2800"
+set notification-error-fg   "#ffffff"
+set notification-warning-bg "#b0b200"
+set notification-warning-fg "#000000"
+set statusbar-bg            "#000000"
+set statusbar-fg            "#ffffff"
+
+# colors zathura
+set highlight-active-color  "rgba(239,253,95,0.5)"
+set highlight-color         "rgba(126,249,255,0.5)"
+set highlight-fg            "rgba(0,0,0,0.5)"
+set index-active-bg         "#4185d7"
+set index-active-fg         "#cccccc"
+set index-bg                "#2b2b2b"
+set index-fg                "#cccccc"
+set recolor-darkcolor       "#ffffff"
+set recolor-lightcolor      "#000000"
+set render-loading-bg       "#ffffff"
+set render-loading-fg       "#000000"
+set signature-error-color   "rgba(92%,11%,14%,0.9)"
+set signature-success-color "rgba(18%,80%,33%,0.9)"
+set signature-warning-color "rgba(100%,84%,0%,0.9)"
+
+# vim:ft=config
