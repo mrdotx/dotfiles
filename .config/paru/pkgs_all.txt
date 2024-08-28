@@ -44,7 +44,6 @@ blas
 bluez-libs
 boost-libs
 botan2
-box2d
 brotli
 btop-git
 bubblewrap
