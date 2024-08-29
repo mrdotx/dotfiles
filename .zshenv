@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-20T17:16:34+0200
+# date:   2024-08-29T12:16:58+0200
 
 # xdg paths
 export \
@@ -74,8 +74,7 @@ export \
     EXEC_AS_USER="doas" \
     TERMINAL="urxvtc.sh" \
     EDITOR="nvim" \
-    PAGER="less" \
-    BROWSER="w3m.sh"
+    PAGER="less"
 
 # app settings
 export \
