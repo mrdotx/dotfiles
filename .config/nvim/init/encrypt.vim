@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/pass.vim
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/encrypt.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-06-06T17:46:22+0200
+" date:   2024-08-29T06:07:20+0200
 
 " edit gpg encrypted files
 augroup encrypt
