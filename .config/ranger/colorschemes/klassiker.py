@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/colorschemes/klassiker.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-05-27T12:55:40+0200
+date:   2024-09-01T21:49:14+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -127,13 +127,13 @@ class Default(ColorScheme):
                 bg = self.progress_bar_color
                 bg += BRIGHT
             if context.vcsinfo:
-                fg = blue
-                attr &= ~bold
-            if context.vcscommit:
-                fg = yellow
+                fg = green
                 attr &= ~bold
             if context.vcsdate:
                 fg = cyan
+                attr &= ~bold
+            if context.vcscommit:
+                fg = yellow
                 attr &= ~bold
 
         if context.text:
