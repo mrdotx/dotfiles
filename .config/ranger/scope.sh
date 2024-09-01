@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-06-24T15:58:20+0200
+# date:   2024-08-31T07:05:34+0200
 
 # exit | function   | action of ranger
 
@@ -173,7 +173,7 @@ handle_extension() {
 
             printf "%s\n" "$(cd "$(dirname "$file_path")" \
                     && pwd -P)/$(basename "$file_path")" \
-                | grep -q "^${PASSWORD_STORE_DIR-$HOME/.password-store}" \
+                | grep -q "password-store" \
                     && pass_preview
 
             printf "%s\n" "$decrypted_file" \
