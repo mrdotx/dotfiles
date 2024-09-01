@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2024-06-15T21:56:33+0200
+date:   2024-08-31T07:05:52+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -89,10 +89,12 @@ class flat_toggle(Command):
     """
     :flat_toggle
 
-    Un-/flattends the directory view.
+    Un-/flattens the directory view.
     """
     def execute(self):
+        self.fm.thisdir.unload()
         if self.fm.thisdir.flat != 0:
             self.fm.thisdir.flat = 0
         else:
             self.fm.thisdir.flat = -1
+        self.fm.thisdir.load_content()
