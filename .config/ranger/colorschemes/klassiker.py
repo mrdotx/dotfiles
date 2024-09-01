@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/colorschemes/klassiker.py
 author: klassiker [mrdotx]
 github: https://github.com/mrdotx/dotfiles
-date:   2022-05-27T12:55:40+0200
+date:   2024-08-31T11:52:13+0200
 """
 
 from __future__ import (absolute_import, division, print_function)
@@ -31,7 +31,8 @@ class Default(ColorScheme):
             if context.empty or context.error:
                 bg = red
             if context.border:
-                fg = default
+                fg = black
+                fg += BRIGHT
             if context.media:
                 if context.image:
                     fg = yellow
@@ -66,7 +67,7 @@ class Default(ColorScheme):
                     fg = white
                 else:
                     fg = red
-                fg += BRIGHT
+                    fg += BRIGHT
             if not context.selected and (context.cut or context.copied):
                 attr |= bold
                 fg = black
