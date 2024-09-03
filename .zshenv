@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-29T12:16:58+0200
+# date:   2024-09-02T22:36:39+0200
 
 # xdg paths
 export \
@@ -74,6 +74,7 @@ export \
     EXEC_AS_USER="doas" \
     TERMINAL="urxvtc.sh" \
     EDITOR="nvim" \
+    DIFFPROG="nvim -d" \
     PAGER="less"
 
 # app settings
@@ -86,7 +87,6 @@ export \
     LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
     LESSHISTFILE=- \
     MANROFFOPT="-c" \
-    DIFFPROG="nvim -d" \
     HIGHLIGHT_OPTIONS=" \
         --replace-tabs=4 \
         --out-format=xterm256 \
