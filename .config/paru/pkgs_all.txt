@@ -301,7 +301,6 @@ libdvdnav
 libdvdread
 libe-book
 libedit
-libei
 libelf
 libepoxy
 libepubgen
@@ -381,6 +380,7 @@ libpagemaker
 libpaper
 libpcap
 libpciaccess
+libpgm
 libpipeline
 libpipewire
 libplacebo
@@ -406,6 +406,7 @@ libsigc++
 libsixel
 libsm
 libsndfile
+libsodium
 libsoup
 libsoup3
 libsoxr
@@ -655,7 +656,9 @@ qt6-base
 qt6-declarative
 qt6-multimedia
 qt6-multimedia-ffmpeg
+qt6-scxml
 qt6-svg
+qt6-tools
 qt6-translations
 qt6-wayland
 qt6ct
@@ -720,12 +723,12 @@ tesseract-data-osd
 tevent
 texinfo
 thunderbird
+tinysparql
 tinyxml
 tinyxml2
 tinyxxd
 tmux
 tpm2-tss
-tracker3
 trash-cli
 tree
 tree-sitter
@@ -819,6 +822,7 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zeromq
 zimg
 zlib
 zsh
