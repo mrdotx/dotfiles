@@ -1,20 +1,25 @@
-# Main window
+# path:   /home/klassiker/.local/share/repos/dotfiles/.cdw/cdw.colors
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2024-09-28T06:43:03+0200
+
+# main window
 Color1_fore = BLUE
 Color1_bg   = BLACK
 
-# Dialog
+# dialog
 Color2_fore = WHITE
 Color2_bg   = BLUE
 
-# Title
-Color3_fore = BLUE
+# title
+Color3_fore = WHITE
 Color3_bg   = BLACK
 
-# Menu
+# menu
 Color4_fore = WHITE
 Color4_bg   = BLACK
 
-# Progress bar
+# progress bar
 Color5_fore = YELLOW
 Color5_bg   = BLACK
 
@@ -22,30 +27,30 @@ Color5_bg   = BLACK
 Color6_fore = WHITE
 Color6_bg   = BLACK
 
-# Warning
+# warning
 Color7_fore = WHITE
-Color7_bg   = BLUE
+Color7_bg   = RED
 
 # was: size info
 Color8_fore = YELLOW
 Color8_bg   = WHITE
 
-# Disables
+# disables
 Color9_fore = BLACK
 Color9_bg   = WHITE
 
-# Not used
+# not used
 Color10_fore = YELLOW
 Color10_bg   = WHITE
 
-# Tooltips
-Color11_fore = BLUE
+# tooltips
+Color11_fore = WHITE
 Color11_bg   = BLACK
 
-# Text area
+# text area
 Color12_fore = WHITE
 Color12_bg   = BLACK
 
-# Error
+# error
 Color13_fore = WHITE
 Color13_bg   = RED
