@@ -1,30 +1,41 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/highlight/klassiker.theme
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2022-05-05T17:43:19+0200
+-- date:   2024-10-02T07:46:46+0200
 
 Description="klassiker"
 
-Categories = {"dark"}
+Categories = { "dark" }
 
-Default       = { Colour="#ffffff" }
-Canvas        = { Colour="#000000" }
-Number        = { Colour="#980096" }
-Escape        = { Colour="#008081" }
-String        = { Colour="#b0b200" }
-StringPreProc = { Colour="#00b200" }
-BlockComment  = { Colour="#4185d7" }
-PreProcessor  = { Colour="#00b200" }
-LineNum       = { Colour="#778899" }
-Operator      = { Colour="#f92782" }
-LineComment   = { Colour="#4185d7" }
-Interpolation = { Colour="#00b200" }
+-- colors from vim (https://github.com/mrdotx/dotfiles/tree/master/.config/nvim)
+black0   = "#000000"
+green0   = "#00b200"
+yellow0  = "#b0b200"
+blue1    = "#4185d7"
+magenta0 = "#980096"
+cyan0    = "#008081"
+white1   = "#ffffff"
+grey3    = "#778899"
+pink     = "#f92782"
+
+Default       = { Colour = white1,   Italic = false, Bold = false }
+Canvas        = { Colour = black0,   Italic = false, Bold = false }
+Number        = { Colour = magenta0, Italic = false, Bold = false }
+Escape        = { Colour = cyan0,    Italic = false, Bold = false }
+String        = { Colour = yellow0,  Italic = false, Bold = false }
+StringPreProc = { Colour = green0,   Italic = false, Bold = false }
+BlockComment  = { Colour = blue1,    Italic = true,  Bold = false }
+PreProcessor  = { Colour = green0,   Italic = false, Bold = false }
+LineNum       = { Colour = grey3,    Italic = false, Bold = false }
+Operator      = { Colour = pink,     Italic = false, Bold = false }
+LineComment   = { Colour = blue1,    Italic = true,  Bold = false }
+Interpolation = { Colour = green0,   Italic = false, Bold = false }
 
 Keywords = {
-  { Colour= "#f92782" },
-  { Colour= "#00b200" },
-  { Colour= "#f92782" },
-  { Colour= "#00b200" },
+  { Colour = pink,   Italic = false, Bold = false },
+  { Colour = green0, Italic = false, Bold = false },
+  { Colour = pink,   Italic = false, Bold = false },
+  { Colour = green0, Italic = false, Bold = false },
 }
 
 -- vim:ft=lua
