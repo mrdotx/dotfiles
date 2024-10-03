@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-09-02T22:36:39+0200
+# date:   2024-10-03T05:43:09+0200
 
 # xdg paths
 export \
@@ -88,10 +88,10 @@ export \
     LESSHISTFILE=- \
     MANROFFOPT="-c" \
     HIGHLIGHT_OPTIONS=" \
-        --replace-tabs=4 \
+        --force=sh \
         --out-format=xterm256 \
-        --style=$XDG_CONFIG_HOME/highlight/klassiker.theme \
-        --force=sh" \
+        --replace-tabs=4 \
+        --style=$XDG_CONFIG_HOME/highlight/klassiker.theme" \
     FZF_DEFAULT_OPTS=" \
         --exact \
         --prompt='» ' --pointer='»' --marker='»' \
