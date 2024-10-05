@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-31T07:05:34+0200
+# date:   2024-10-04T09:38:08+0200
 
 # exit | function   | action of ranger
 
@@ -32,12 +32,6 @@ preview_image="$5"
 # file identification
 mime_type="$(file --dereference --brief --mime-type "$file_path")"
 file_extension="$(printf "%s" "${file_path##*.}" | tr '[:upper:]' '[:lower:]')"
-
-# time limit to create previews in seconds (compressor.sh, xxd)
-time_out=5
-
-# max file size to create previews (highlight)
-max_size=1M
 
 handle_image() {
     case "$1" in
@@ -127,7 +121,7 @@ handle_extension() {
             | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf | war | wim | xar \
             | xpi | xz | z | zip | zst)
                 # requires compressor.sh (https://github.com/mrdotx/shell)
-                timeout "$time_out" compressor.sh --list "$file_path" \
+                timeout 5 compressor.sh --list "$file_path" \
                     && exit 0
                 exit 1
             ;;
@@ -164,7 +158,6 @@ handle_extension() {
                         | sed '1 s/^.*$/***/' \
                     && [ "$(printf "%s\n" "$decrypted_file" | wc -l)" -gt 4 ] \
                     && printf "\n***"
-
                 exit 0
             }
 
@@ -220,7 +213,7 @@ handle_mime() {
             exit 2
             ;;
         text/* | */javascript | */json | */xml | */x-wine-extension-ini)
-            highlight --max-size="$max_size" "$file_path" \
+            highlight --max-size=1M "$file_path" \
                 && exit 0
             exit 2
             ;;
