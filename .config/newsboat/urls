@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-05-01T17:39:09+0200
+# date:   2024-11-04T05:41:44+0100
 
 # queries
 "query:┌─unread:unread = \"yes\""
@@ -21,10 +21,11 @@
 "query:│ │ └─suckless:tags # \"linux/suckless\""
 "query:│ ├─youtube:tags # \"youtube\""
 "query:│ │ ├─linux:tags # \"youtube/linux\""
-"query:│ │ └─science:tags # \"youtube/science\""
+"query:│ │ ├─science:tags # \"youtube/science\""
 "query:│ │ └─tech:tags # \"youtube/tech\""
-"query:│ └─podcast:tags # \"podcast\""
-"query:│   ├─dlf:tags # \"podcast/dlf\""
-"query:│   └─hr-iNFO:tags # \"podcast/hr-iNFO\""
+"query:│ ├─podcast:tags # \"podcast\""
+"query:│ │ ├─dlf:tags # \"podcast/dlf\""
+"query:│ │ └─hr-iNFO:tags # \"podcast/hr-iNFO\""
+"query:│ └─other:tags # \"other\""
 
 # vim:ft=config
