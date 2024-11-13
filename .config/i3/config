@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-21T22:24:26+0200
+# date:   2024-11-13T07:42:22+0100
 
 # general variables
 set $sup Mod4
@@ -17,6 +17,7 @@ set $gaps 0
 
 # config
 floating_modifier $sup
+tiling_drag swap_modifier $sup
 focus_follows_mouse no
 mouse_warping none
 font $font
@@ -24,7 +25,6 @@ default_border pixel 1
 default_floating_border normal
 gaps inner $gaps
 # smart_gaps on
-# smart_borders no_gaps
 # hide_edge_borders smart_no_gaps
 
 set_from_resource $black        i3wm.background
