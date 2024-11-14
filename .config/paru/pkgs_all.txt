@@ -435,7 +435,6 @@ libutempter
 libutf8proc
 libuv
 libva
-libva-mesa-driver
 libva-utils
 libvdpau
 libverto
@@ -522,7 +521,6 @@ mc
 md4c
 mesa
 mesa-utils
-mesa-vdpau
 mkinitcpio
 mkinitcpio-busybox
 mpdecimal

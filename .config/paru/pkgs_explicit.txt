@@ -72,7 +72,6 @@ man-db
 man-pages
 mc
 mesa-utils
-mesa-vdpau
 mpv
 ncdu
 neovim
