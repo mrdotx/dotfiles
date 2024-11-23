@@ -504,6 +504,7 @@ losslesscut-bin
 lpsolve
 lsb-release
 lshw
+lsof
 lua
 lua51-lpeg
 luajit
