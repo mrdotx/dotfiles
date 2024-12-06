@@ -371,7 +371,6 @@ libnsl
 libnumbertext
 libodfgen
 libogg
-libomxil-bellagio
 libopenmpt
 liborcus
 libp11-kit
