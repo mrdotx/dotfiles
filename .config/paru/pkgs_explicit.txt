@@ -1,3 +1,4 @@
+7zip
 alsa-firmware
 alsa-plugins
 alsa-utils
@@ -85,7 +86,6 @@ opencl-rusticl-mesa
 opendoas
 opendoas-sudo
 openssh
-p7zip
 pacman-contrib
 pam-gnupg
 pandoc-bin

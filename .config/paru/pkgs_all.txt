@@ -1,3 +1,4 @@
+7zip
 abseil-cpp
 acl
 acorn
@@ -571,7 +572,6 @@ opusfile
 orc
 osm-gps-map
 p11-kit
-p7zip
 p8-platform
 pacman
 pacman-contrib
