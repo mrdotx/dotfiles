@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-12-08T08:01:56+0100
+# date:   2024-12-24T08:23:56+0100
 
 [global]
     ### Display ###
@@ -30,7 +30,6 @@
     # constant width of 300
     width = (250,720)
 
-    # The maximum height of a single notification, excluding the frame.
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
     height = (0,1054)
@@ -242,7 +241,6 @@
     max_icon_size = 0
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
     icon_path = /usr/share/icons/Arc/status/16/:/usr/share/icons/Arc/devices/16/
 
     ### History ###
@@ -352,7 +350,7 @@
     highlight = "#4185d7"
     timeout = 5
     # Icon for notifications with low urgency
-    # default_icon = /path/to/icon
+    default_icon = dialog-information
 
 [urgency_normal]
     background = "#1f5393e6"
@@ -361,7 +359,7 @@
     highlight = "#4185d7"
     timeout = 5
     # Icon for notifications with normal urgency
-    # default_icon = /path/to/icon
+    default_icon = dialog-information
 
 [urgency_critical]
     background = "#df2800e6"
@@ -370,7 +368,7 @@
     highlight = "#ff5555"
     timeout = 0
     # Icon for notifications with critical urgency
-    # default_icon = /path/to/icon
+    default_icon = dialog-warning
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
