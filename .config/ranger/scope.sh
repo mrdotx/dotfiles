@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-10-19T08:13:16+0200
+# date:   2024-12-25T08:14:00+0100
 
 # exit | function   | action of ranger
 
@@ -35,7 +35,7 @@ file_extension="$(printf "%s" "${file_path##*.}" | tr '[:upper:]' '[:lower:]')"
 
 handle_image() {
     case "$1" in
-        image/x-xcf | image/x-tga)
+        image/x-xcf | image/x-tga | */x-mpegurl)
             return 0
             ;;
         image/*)
@@ -213,7 +213,8 @@ handle_mime() {
             exit 2
             ;;
         text/* | message/* \
-            | */javascript | */json | */xml | */x-wine-extension-ini)
+            | */javascript | */json | */xml \
+            | */x-mpegurl | */x-wine-extension-ini)
                 highlight --max-size=1M "$file_path" \
                     && exit 0
                 exit 2
