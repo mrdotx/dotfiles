@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-31T07:06:10+0200
+# date:   2025-01-01T08:29:54+0100
 
 # ranger (use ram as cache and change directory on exit)
 ranger_cd() {
@@ -12,6 +12,7 @@ ranger_cd() {
     cache_folder="$(mktemp -t -d ranger_cache.XXXXXX)"
     tmp_file="$cache_folder/ranger_cd"
 
+    # WORKAROUND: flag t (https://github.com/ranger/ranger/issues?q=termcmd)
     TERMCMD=$TERMINAL ranger \
         --cachedir="$cache_folder" \
         --choosedir="$tmp_file" "$@"
