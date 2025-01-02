@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-10-03T05:43:09+0200
+# date:   2025-01-01T18:40:37+0100
 
 # xdg paths
 export \
@@ -111,5 +111,8 @@ export \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1
 
+# WORKAROUND: force gtk4 theme (https://wiki.archlinux.org/title/GTK#Themes)
+# WORKAROUND: LESS must be defined in order to assign it
 export \
+    GTK_THEME="Arc-Dark" \
     SYSTEMD_LESS="-FSXK $LESS"
