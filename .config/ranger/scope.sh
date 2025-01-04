@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-12-27T07:28:37+0100
+# date:   2025-01-04T08:15:53+0100
 
 # exit | function   | action of ranger
 
@@ -34,9 +34,14 @@ mime_type="$(file --dereference --brief --mime-type "$file_path")"
 file_extension="$(printf "%s" "${file_path##*.}" | tr '[:upper:]' '[:lower:]')"
 
 handle_image() {
-    case "$1" in
-        image/x-xcf | image/x-tga | */x-mpegurl)
+    case "$mime_type" in
+        */x-mpegurl)
             return 0
+            ;;
+        image/x-xcf | image/x-tga )
+            magick "$file_path" -flatten "$image_cache_path" \
+                && exit 6
+            exit 1
             ;;
         image/*)
             exit 7
@@ -51,43 +56,43 @@ handle_image() {
             # WORKAROUND: for transparent background convert to png and
             # rename the file to jpg (hardcoded .jpg in actions.py)
             magick -size '960x960' xc:'#000000' \
-                -font "$file_path" \
-                -fill '#cccccc' \
-                -gravity Center \
-                -pointsize 72 \
-                -annotate +0+0 "$( \
-                    printf "%s" \
-                        "AÄBCDEFGHIJKLMN\n" \
-                        "OÖPQRSẞTUÜVWXYZ\n" \
-                        "aäbcdefghijklmn\n" \
-                        "oöpqrsßtuüvwxyz\n" \
-                        "1234567890,.*/+-=\%\n" \
-                        "~!?@#§$&(){}[]<>;:" \
-                )" \
-                -font '' \
-                -fill '#4185d7' \
-                -gravity SouthWest \
-                -pointsize 24 \
-                -annotate +0+0 "$( \
-                    fc-list \
-                        | grep "$file_path" \
-                        | cut -d ':' -f2 \
-                        | sed 's/^ //g' \
-                        | uniq \
-                )" \
-                -flatten "$image_cache_path.png" \
-                    && mv "$image_cache_path.png" "$image_cache_path" \
-                    && exit 6
+                    -font "$file_path" \
+                    -fill '#cccccc' \
+                    -gravity Center \
+                    -pointsize 72 \
+                    -annotate +0+0 \
+                        "$(printf "%s" \
+                            "AÄBCDEFGHIJKLMN\n" \
+                            "OÖPQRSẞTUÜVWXYZ\n" \
+                            "aäbcdefghijklmn\n" \
+                            "oöpqrsßtuüvwxyz\n" \
+                            "1234567890,.*/+-=\%\n" \
+                            "~!?@#§$&(){}[]<>;:" \
+                        )" \
+                    -font '' \
+                    -fill '#4185d7' \
+                    -gravity SouthWest \
+                    -pointsize 24 \
+                    -annotate +0+0 \
+                        "$(fc-list \
+                            | grep "$file_path" \
+                            | cut -d ':' -f2 \
+                            | sed 's/^ //g' \
+                            | uniq \
+                        )" \
+                    -flatten "$image_cache_path.png" \
+                && mv "$image_cache_path.png" "$image_cache_path" \
+                && exit 6
             exit 1
             ;;
         */pdf)
             pdftoppm -f 1 -l 1 \
-                -scale-to-x 960 \
-                -scale-to-y -1 \
-                -singlefile \
-                -jpeg \
-                -tiffcompression jpeg "$file_path" "${image_cache_path%.*}" \
-                    && exit 6
+                    -scale-to-x 960 \
+                    -scale-to-y -1 \
+                    -singlefile \
+                    -jpeg \
+                    "$file_path" "${image_cache_path%.*}" \
+                && exit 6
             exit 1
             ;;
         */vnd.oasis.opendocument* \
@@ -97,15 +102,15 @@ handle_image() {
                 cache_dir="${image_cache_path%"$(basename "$image_cache_path")"}"
 
                 libreoffice \
-                    --convert-to 'jpg:writer_jpg_Export:
-                                    {
-                                        "PageRange":
-                                            {
-                                                "type":"string",
-                                                "value":"1"
-                                            }
-                                    }' "$file_path" \
-                    --outdir "$cache_dir" \
+                        --convert-to 'jpg:writer_jpg_Export:
+                                        {
+                                            "PageRange":
+                                                {
+                                                    "type":"string",
+                                                    "value":"1"
+                                                }
+                                        }' "$file_path" \
+                        --outdir "$cache_dir" \
                     && mv "$cache_dir$file_name.jpg" "$image_cache_path" \
                     && exit 6
                 exit 1
@@ -114,7 +119,7 @@ handle_image() {
 }
 
 handle_extension() {
-    case "$1" in
+    case "$file_extension" in
         7z | a | alz | apk | arj | bz | bz2 | bzip2 | cab | cb7 | cbt | chm \
             | chw | cpio | deb | dmg | gz | gzip | hxs | iso | jar | lha | lz \
             | lzh | lzma | lzo | msi | pkg | rar | rpm | swm | tar | taz | tbz \
@@ -126,29 +131,30 @@ handle_extension() {
                 exit 1
             ;;
         issue)
-            printf "%b\nhost login: _" "$(sed \
-                -e 's/\\4{/INTERFACE{/g' \
-                -e 's/\\4/11.11.11.11/g' \
-                -e 's/\\6{/INTERFACE{/g' \
-                -e 's/\\6/::ffff:0b0b:0b0b/g' \
-                -e 's/\\b/38400/g' \
-                -e 's/\\d/Fri Nov 11  2011/g' \
-                -e 's/\\l/tty1/g' \
-                -e 's/\\m/x86_64/g' \
-                -e 's/\\n/host/g' \
-                -e 's/\\o/(none)/g' \
-                -e 's/\\O/unknown_domain/g' \
-                -e 's/\\r/2.4.37-arch1-1/g' \
-                -e 's/\\s/Linux/g' \
-                -e 's/\\S{/VARIABLE{/g' \
-                -e 's/\\S/Arch Linux/g' \
-                -e 's/\\t/11:11:11/g' \
-                -e 's/\\u/1/g' \
-                -e 's/\\U/1 user/g' \
-                -e 's/\\v/#1 SMP PREEMPT_DYNAMIC Fri, 11 Nov 2011 11:11:11 +0000/g' \
-                -e 's/\\e/\\033/g' \
-                "$file_path" \
-            )" \
+            printf "%b\nhost login: _" \
+                    "$(sed \
+                        -e 's/\\4{/INTERFACE{/g' \
+                        -e 's/\\4/11.11.11.11/g' \
+                        -e 's/\\6{/INTERFACE{/g' \
+                        -e 's/\\6/::ffff:0b0b:0b0b/g' \
+                        -e 's/\\b/38400/g' \
+                        -e 's/\\d/Fri Nov 11  2011/g' \
+                        -e 's/\\l/tty1/g' \
+                        -e 's/\\m/x86_64/g' \
+                        -e 's/\\n/host/g' \
+                        -e 's/\\o/(none)/g' \
+                        -e 's/\\O/unknown_domain/g' \
+                        -e 's/\\r/2.4.37-arch1-1/g' \
+                        -e 's/\\s/Linux/g' \
+                        -e 's/\\S{/VARIABLE{/g' \
+                        -e 's/\\S/Arch Linux/g' \
+                        -e 's/\\t/11:11:11/g' \
+                        -e 's/\\u/1/g' \
+                        -e 's/\\U/1 user/g' \
+                        -e 's/\\v/#1 SMP PREEMPT_DYNAMIC Fri, 11 Nov 2011 11:11:11 +0000/g' \
+                        -e 's/\\e/\\033/g' \
+                        "$file_path" \
+                    )" \
                 && exit 0
             exit 2
             ;;
@@ -176,7 +182,7 @@ handle_extension() {
 }
 
 handle_mime() {
-    case "$1" in
+    case "$mime_type" in
         */csv)
             column --separator '	;,' --table "$file_path" \
                 && exit 0
@@ -184,11 +190,11 @@ handle_mime() {
             ;;
         *sqlite3)
             sqlite3 -readonly -header -column "$file_path" \
-                "SELECT name, type
-                 FROM sqlite_master
-                 WHERE type IN ('table','view')
-                 AND name NOT LIKE 'sqlite_%'
-                 ORDER BY 1;" \
+                    "SELECT name, type
+                     FROM sqlite_master
+                     WHERE type IN ('table','view')
+                     AND name NOT LIKE 'sqlite_%'
+                     ORDER BY 1;" \
                 && exit 0
             exit 1
             ;;
@@ -212,9 +218,9 @@ handle_mime() {
                 && exit 0
             exit 2
             ;;
-        text/* | message/* \
+        text/* | message/* | */mbox \
             | */javascript | */json | */xml \
-            | */x-pem-file | */x-mpegurl | */x-wine-extension-ini)
+            | */x-pem-file | */x-wine-extension-ini | */x-mpegurl)
                 highlight --max-size=1M "$file_path" \
                     && exit 0
                 exit 2
@@ -226,13 +232,13 @@ handle_fallback() {
     printf "##### File Type Classification #####\n"
     printf "MIME-Type: %s\n" "$mime_type"
     file --dereference --brief "$file_path"
-    printf "\n##### Exif information #####\n"
+    printf "\n##### Exif Information #####\n"
     exiftool "$file_path"
     exit 0
 }
 
 [ "$preview_image" = 'True' ] \
-    && handle_image "$mime_type"
-handle_extension "$file_extension"
-handle_mime "$mime_type"
+    && handle_image
+handle_extension
+handle_mime
 handle_fallback
