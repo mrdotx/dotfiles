@@ -156,6 +156,7 @@ glslang
 glu
 gmic
 gmp
+gnulib-l10n
 gnupg
 gnutls
 gperftools
