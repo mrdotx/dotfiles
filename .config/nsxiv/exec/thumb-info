@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/nsxiv/exec/thumb-info
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-11-30T07:07:56+0100
+# date:   2025-01-13T08:12:46+0100
 
 # $1: path to image file (as provided by the user)
 # $2: empty
@@ -11,6 +11,6 @@
 # $4: fully resolved path to the image file
 
 printf "» %s │ %s │ %s «" \
-    "$(du -Hh "$1" | cut -f1)" \
+    "$(basename "$4")" \
     "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
-    "$4"
+    "$(du -Hh "$1" | cut -f1)"
