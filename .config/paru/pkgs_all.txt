@@ -384,7 +384,6 @@ libpgm
 libpipeline
 libpipewire
 libplacebo
-libplist
 libpng
 libppd
 libproxy
@@ -681,7 +680,6 @@ semver
 sg3_utils
 shaderc
 shadow
-shairplay
 shared-mime-info
 shellcheck-bin
 simple-mtpfs
