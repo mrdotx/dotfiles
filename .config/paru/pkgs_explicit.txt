@@ -81,7 +81,7 @@ nfs-utils
 noto-fonts-emoji
 npm
 nsxiv
-nvtop
+nvtop-git
 opencl-rusticl-mesa
 opendoas
 opendoas-sudo

@@ -552,7 +552,7 @@ npth
 nspr
 nss
 nsxiv
-nvtop
+nvtop-git
 ocl-icd
 onetbb
 openal
