@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-01-20T07:17:32+0100
+" date:   2025-01-20T08:09:13+0100
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'
@@ -15,14 +15,6 @@ highlight default link WhichKeySeperator SpecialComment
 highlight default link WhichKeyGroup     Comment
 highlight default link WhichKeyDesc      Normal
 highlight default link WhichKeyFloating  NormalFloat
-
-" key mappings
-nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
-vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ','<cr>
-nnoremap <silent> <localleader> :<c-u>WhichKey ' '<cr>
-vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ' '<cr>
-nnoremap <silent> g             :<c-u>WhichKey 'g'<cr>
-vnoremap <silent> g             :<c-u>WhichKeyVisual 'g'<cr>
 
 " define description dictionaries
 call which_key#register(',', "g:main_dict")
@@ -130,3 +122,11 @@ let g:goto_dict = {
     \ 'x': 'netrw browse x',
     \ 'y': 'type definition'
 \ }
+
+" key mappings
+nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
+vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ','<cr>
+nnoremap <silent> <localleader> :<c-u>WhichKey ' '<cr>
+vnoremap <silent> <localleader> :<c-u>WhichKeyVisual ' '<cr>
+nnoremap <silent> g             :<c-u>WhichKey 'g'<cr>
+vnoremap <silent> g             :<c-u>WhichKeyVisual 'g'<cr>
