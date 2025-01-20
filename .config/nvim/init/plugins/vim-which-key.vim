@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-01-20T08:16:51+0100
+" date:   2025-01-20T08:21:42+0100
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'
@@ -10,11 +10,11 @@ let g:which_key_sep = '»'
 set timeoutlen=500
 
 " color mappings
-highlight default link WhichKey          SpecialChar
-highlight default link WhichKeySeperator SpecialComment
-highlight default link WhichKeyGroup     Comment
-highlight default link WhichKeyDesc      Normal
-highlight default link WhichKeyFloating  NormalFloat
+hi default link WhichKey          SpecialChar
+hi default link WhichKeySeperator SpecialComment
+hi default link WhichKeyGroup     Comment
+hi default link WhichKeyDesc      Normal
+hi default link WhichKeyFloating  NormalFloat
 
 " define description dictionaries
 call which_key#register(',', "g:main_dict")
