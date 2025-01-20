@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-01-20T08:09:13+0100
+" date:   2025-01-20T08:16:51+0100
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'
@@ -123,7 +123,7 @@ let g:goto_dict = {
     \ 'y': 'type definition'
 \ }
 
-" key mappings
+" keybindings
 nnoremap <silent> <leader>      :<c-u>WhichKey ','<cr>
 vnoremap <silent> <leader>      :<c-u>WhichKeyVisual ','<cr>
 nnoremap <silent> <localleader> :<c-u>WhichKey ' '<cr>
