@@ -1,9 +1,10 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-05-24T23:59:30+0200
+" date:   2025-01-20T07:17:32+0100
 
 let g:which_key_fallback_to_native_key=1
+let g:which_key_sep = '»'
 
 " by default timeoutlen is 1000 ms
 set timeoutlen=500
