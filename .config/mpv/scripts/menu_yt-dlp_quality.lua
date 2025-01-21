@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-08-10T07:05:00+0200
+-- date:   2025-01-21T06:33:07+0100
 
 -- key bindings
 local binding_open   = "y"
@@ -12,7 +12,7 @@ local binding_select = "ENTER"
 
 -- osd
 local osd_time      = 10
-local osd_font_size = 10
+local osd_font_size = 8
 
 -- menu
 local selected_active     = "│󰑐 "
