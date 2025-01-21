@@ -1,13 +1,13 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
 -- github: https://github.com/mrdotx/dotfiles
--- date:   2024-12-12T06:51:07+0100
+-- date:   2025-01-21T06:33:11+0100
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 
 -- key bindings
 local keybinds = {
-    binding_open      = {'TAB'},
+    binding_open      = {'\\'},
     binding_close     = {'ESC'},
     binding_up        = {'UP', 'MOUSE_BTN3'},
     binding_down      = {'DOWN', 'MOUSE_BTN4'},
@@ -18,10 +18,10 @@ local keybinds = {
 
 -- osd
 local osd_time      = 10
-local osd_font_size = 10
+local osd_font_size = 8
 
 -- menu
-local entries             = 24
+local entries             = 30
 local indicator_search    = "󰈲  "
 local indicator_up        = ""
 local indicator_down      = ""
