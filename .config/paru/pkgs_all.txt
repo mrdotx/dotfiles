@@ -674,7 +674,8 @@ rxvt-unicode-truecolor-wide-glyphs
 sane
 scribus
 sdl12-compat
-sdl2
+sdl2-compat
+sdl3
 sed
 semver
 sg3_utils
