@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-02-05T07:30:15+0100
+# date:   2025-02-05T07:37:58+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -128,7 +128,7 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red,bold'
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# autostart (if interactive shell is not started by ranger)
+# autostart
 [ -z "$RANGER_LEVEL" ] \
     && [ $(id -u) -eq 1000 ] \
     && cinfo
