@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2024-05-15T08:34:15+0200
+! date:   2025-02-07T07:56:20+0100
 
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \
@@ -13,37 +13,37 @@ URxvt.cursorColor:                 PRIMARY
 URxvt.highlightColor:              PRIMARY
 URxvt.highlightTextColor:          WHITE1
 URxvt.depth:                       32
-/* URxvt.geometry:                    80x-1 */
+!URxvt.geometry:                    80x-1
 URxvt.refreshRate:                 0
 URxvt.scrollBar:                   false
 URxvt.iso14755:                    false
 URxvt.iso14755_52:                 false
 URxvt.saveLines:                   500
 
-/* perl extensions */
+! perl extensions
 URxvt.perl-ext-common:             eval,matcher,selection,selection-to-clipboard,keyboard-select,resize-font
 
-/* copy and paste [eval] */
+! copy and paste [eval]
 URxvt.keysym.Control-C:            eval:selection_to_clipboard
 URxvt.keysym.Control-V:            eval:paste_clipboard
 URxvt.keysym.Control-Y:            eval:paste_primary
 
-/* open url [matcher] */
+! open url [matcher]
 URxvt.url-launcher:                link_handler.sh
 URxvt.keysym.Meta-o:               matcher:select
 URxvt.keysym.Meta-O:               matcher:list
 URxvt.matcher.button:              1
 URxvt.matcher.rend.0:              Uline Italic fg16
 
-/* keyboard-select */
+! keyboard-select
 URxvt.keysym.Control-Shift-Escape: keyboard-select:activate
 URxvt.keysym.Meta-s:               keyboard-select:search
 URxvt.keyboard-select.clipboard:   true
 
-/* resize-font */
+! resize-font
 URxvt.resize-font.step:            1
 
-/* keysym compatibility */
+! keysym compatibility
 URxvt.keysym.Shift-Up:             \033[1;2A
 URxvt.keysym.Shift-Down:           \033[1;2B
 

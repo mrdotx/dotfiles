@@ -1,14 +1,14 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2023-06-09T10:00:07+0200
+! date:   2025-02-07T07:55:44+0100
 
-/* transparency */
+! transparency
 #define ALPHA           0.90
 #define OPACITY0        [90]#000000
 #define OPACITY1        #e6000000
 
-/* colors */
+! colors
 #define BLACK0          #000000
 #define BLACK1          #333333
 
@@ -33,13 +33,13 @@
 #define WHITE0          #cccccc
 #define WHITE1          #ffffff
 
-/* theme */
+! theme
 #define PRIMARY         BLUE1
 #define SECONDARY       BLUE0
 #define GREY0           #2b2b2b
 #define GREY1           #666666
 
-/* normal */
+! normal
 *color0:                BLACK0
 *color1:                RED0
 *color2:                GREEN0
@@ -49,7 +49,7 @@
 *color6:                CYAN0
 *color7:                WHITE0
 
-/* bright */
+! bright
 *color8:                BLACK1
 *color9:                RED1
 *color10:               GREEN1
@@ -59,7 +59,7 @@
 *color14:               CYAN1
 *color15:               WHITE1
 
-/* Xresources.d */
+! Xresources.d
 #include "Xresources.d/xft"
 #include "Xresources.d/xcursor"
 #include "Xresources.d/xautolock"
