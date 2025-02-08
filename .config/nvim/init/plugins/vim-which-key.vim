@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-01-20T08:21:42+0100
+" date:   2025-02-08T07:59:00+0100
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'
@@ -114,8 +114,9 @@ let g:goto_dict = {
     \ '[': 'previous diagnostics list item',
     \ ']': 'next diasnostics list item',
     \ '%': 'matchit operation backward',
-    \ 'c': 'comment',
-    \ 'cc': 'comment line',
+    \ 'c': 'comment out',
+    \ 'cc': 'comment out line',
+    \ 'cgc': 'uncomment block',
     \ 'd': 'definition',
     \ 'i': 'implementation',
     \ 'r': 'references',
