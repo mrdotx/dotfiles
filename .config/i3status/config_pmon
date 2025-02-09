@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2022-04-20T15:34:12+0200
+# date:   2025-02-09T07:57:41+0100
 
 general {
         colors = true
@@ -10,7 +10,7 @@ general {
 
 order += "wireless _first_"
 order += "volume master"
-# order += "battery 0"
+#order += "battery 0"
 order += "time"
 
 wireless _first_ {
