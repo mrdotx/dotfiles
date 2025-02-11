@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/nsxiv/exec/win-title
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-01-13T08:20:04+0100
+# date:   2025-02-11T08:00:56+0100
 
 # $1: resolved absolute path of the current file
 # $2: current file number
@@ -12,22 +12,22 @@
 # $5: image height (Optional: Disabled on thumbnails mode)
 # $6: current zoom (Optional: Disabled on thumbnails mode)
 
-# [ -n "$6" ] \
-#     && printf "%s │ %s │ %s | %dx%d │ %s%% | %s/%s" \
-#         "$(basename "$1")" \
-#         "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
-#         "$(du -Hh "$1" | cut -f1)" \
-#         "$4" \
-#         "$5" \
-#         "$6" \
-#         "$2" \
-#         "$3" \
-#     || printf "%s │ %s │ %s | %s/%s" \
-#         "$(basename "$1")" \
-#         "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
-#         "$(du -Hh "$1" | cut -f1)" \
-#         "$2" \
-#         "$3"
+#[ -n "$6" ] \
+#    && printf "%s │ %s │ %s | %dx%d │ %s%% | %s/%s" \
+#        "$(basename "$1")" \
+#        "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
+#        "$(du -Hh "$1" | cut -f1)" \
+#        "$4" \
+#        "$5" \
+#        "$6" \
+#        "$2" \
+#        "$3" \
+#    || printf "%s │ %s │ %s | %s/%s" \
+#        "$(basename "$1")" \
+#        "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
+#        "$(du -Hh "$1" | cut -f1)" \
+#        "$2" \
+#        "$3"
 
 printf "%s │ nsxiv" \
     "$(dirname "$1")"
