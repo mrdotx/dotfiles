@@ -254,6 +254,7 @@ lame
 lapack
 lcms2
 ldb
+leancrypto
 lensfun
 leptonica
 less
