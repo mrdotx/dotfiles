@@ -1,17 +1,17 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.local/state/w3m/keymap
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-08-05T09:09:06+0200
+# date:   2025-02-15T07:01:00+0100
 
-# Ctrl  : C-, ^
-# Escape: ESC-, M-, ^[
-# Space : SPC, ' '
-# Tab   : TAB, ^i, ^I
-# Delete: DEL, ^?
-# Up    : UP, ^[[A
-# Down  : DOWN, ^[[B
-# Right : RIGHT, ^[[C
-# Left  : LEFT, ^[[D
+#Ctrl  : C-, ^
+#Escape: ESC-, M-, ^[
+#Space : SPC, ' '
+#Tab   : TAB, ^i, ^I
+#Delete: DEL, ^?
+#Up    : UP, ^[[A
+#Down  : DOWN, ^[[B
+#Right : RIGHT, ^[[C
+#Left  : LEFT, ^[[D
 
 # default keymap
 keymap	C-@	MARK
@@ -29,7 +29,7 @@ keymap	C-l	REDRAW
 keymap	C-m	GOTO_LINK
 keymap	C-n	MOVE_DOWN
 keymap	C-p	MOVE_UP
-# keymap	C-q	CLOSE_TAB
+#keymap	C-q	CLOSE_TAB
 keymap	C-r	ISEARCH_BACK
 keymap	C-s	ISEARCH
 keymap	C-t	TAB_LINK
@@ -46,9 +46,9 @@ keymap	$	LINE_END
 keymap	(	UNDO
 keymap	)	REDO
 keymap	+	NEXT_PAGE
-# keymap	,	LEFT
+#keymap	,	LEFT
 keymap	-	PREV_PAGE
-# keymap	.	RIGHT
+#keymap	.	RIGHT
 keymap	/	SEARCH
 keymap	:	MARK_URL
 keymap	";"	MARK_WORD
