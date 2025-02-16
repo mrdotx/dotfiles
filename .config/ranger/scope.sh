@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-01-04T08:15:53+0100
+# date:   2025-02-16T07:13:36+0100
 
 # exit | function   | action of ranger
 
@@ -218,9 +218,9 @@ handle_mime() {
                 && exit 0
             exit 2
             ;;
-        text/* | message/* | */mbox \
-            | */javascript | */json | */xml \
-            | */x-pem-file | */x-wine-extension-ini | */x-mpegurl)
+        text/* | message/* | */mbox | */javascript | */json | */xml \
+            | */x-pem-file | */x-wine-extension-ini | */x-mpegurl \
+            | */x-avm-export)
                 highlight --max-size=1M "$file_path" \
                     && exit 0
                 exit 2
