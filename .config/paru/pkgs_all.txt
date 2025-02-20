@@ -771,7 +771,6 @@ woff2
 x264
 x265
 xautolock
-xbanish-git
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -787,6 +786,7 @@ xdotool
 xf86-input-libinput
 xf86-input-wacom
 xf86-video-amdgpu
+xhidecursor
 xkeyboard-config
 xmlsec
 xorg-fonts-alias-misc
