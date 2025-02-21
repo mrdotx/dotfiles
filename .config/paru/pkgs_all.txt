@@ -684,6 +684,7 @@ shaderc
 shadow
 shared-mime-info
 shellcheck-bin
+simdjson
 simple-mtpfs
 simple-scan
 slang
