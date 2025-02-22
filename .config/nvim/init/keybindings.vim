@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-08-11T08:46:16+0200
+" date:   2025-02-22T05:49:54+0100
 
 " tabulator
 inoremap                <s-tab>     <c-v><tab>
@@ -33,6 +33,7 @@ nnoremap <silent>       <leader>vc  :set cursorcolumn! cursorcolumn?<cr>
 nnoremap <silent>       <leader>vh  :set list! list?<cr>
 nnoremap <silent>       <leader>vl  :set cursorline! cursorline?<cr>
 nnoremap <silent>       <leader>vw  :set wrap! wrap?<cr>
+nnoremap <silent>       <leader>vm  :call MarkCharactersToggle()<cr>
 
 " replace
 nnoremap                <leader>r   :%s///gc<left><left><left>
