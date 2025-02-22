@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-02-08T07:59:00+0100
+" date:   2025-02-22T05:50:53+0100
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'
@@ -62,6 +62,7 @@ let g:main_dict = {
         \ 'h': 'hidden characters toggle',
         \ 'i': 'indent line toggle',
         \ 'l': 'text line highlight toggle',
+        \ 'm': 'mark characters toggle',
         \ 'w': 'wrap line toggle'
     \ },
     \ 'w': {
@@ -93,7 +94,7 @@ let g:coc_dict = {
     \ 'cl': 'code lens action current line',
     \ 'e': 'show all extensions',
     \ 'f': 'formating selected code',
-    \ 'h': 'toggle inlay hint',
+    \ 'h': 'inlay hint toggle',
     \ 'j': 'default action next item',
     \ 'k': 'default action previous item',
     \ 'o': 'find symbol current document',
