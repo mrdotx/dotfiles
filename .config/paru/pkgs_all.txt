@@ -248,7 +248,6 @@ krb5
 kvantum
 kvantum-qt5
 kwindowsystem
-kwindowsystem5
 l-smash
 lame
 lapack
