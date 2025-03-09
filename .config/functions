@@ -1,14 +1,10 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-01-07T08:14:14+0100
+# date:   2025-03-09T06:28:23+0100
 
 # ranger (use ram as cache and change directory on exit)
 ranger_cd() {
-    local \
-        cachedir \
-        choosedir
-
     cachedir="/tmp/ranger-$(id -u)"
     [ -d "$cachedir" ] || mkdir -m 700 "$cachedir"
     choosedir=$(mktemp -p "$cachedir" -t ".choosedir.XXXXXX")
@@ -18,22 +14,23 @@ ranger_cd() {
         --cachedir="$cachedir" \
         --choosedir="$choosedir" "$@"
 
+    trap 'rm -rf "$choosedir"; unset cachedir choosedir' EXIT
+
     [ -e "$choosedir" ] \
         && cd "$(cat "$choosedir")" \
-        && rm -rf "$choosedir" \
         || exit 1
 }
 
 # jump to the nth parent directory (default: 1 directory)
 ..() {
-    local \
-        elements="${1:-1}" \
-        directory
+    elements="${1:-1}" \
 
     while [ "$elements" -ge 1 ]; do
         directory="../$directory"
         elements=$((elements - 1))
     done
+
+    trap 'unset elements directory' EXIT
 
     cd "$directory" \
         || exit 1
