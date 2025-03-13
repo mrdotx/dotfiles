@@ -1,7 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ncdu/config
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2023-06-02T07:05:11+0200
+# date:   2025-03-13T06:19:49+0100
+
+# threads
+--threads 16
+
+# international system of units (base 10 <- base 2)
+--si
 
 # color scheme
 --color dark
