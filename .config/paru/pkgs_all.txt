@@ -15,6 +15,7 @@ alsa-utils
 amd-ucode
 aom
 appstream
+appstream-glib
 arc-gtk-theme
 arc-icon-theme
 archlinux-keyring
@@ -159,6 +160,7 @@ gmp
 gnulib-l10n
 gnupg
 gnutls
+gobject-introspection-runtime
 gperftools
 gpgme
 gpm
@@ -182,7 +184,6 @@ gst-plugins-base-libs
 gstreamer
 gtest
 gtk-update-icon-cache
-gtk2
 gtk3
 gtk4
 gtkmm3
@@ -317,6 +318,7 @@ libfreehand
 libftdi
 libgcrypt
 libgexiv2
+libgirepository
 libglvnd
 libgpg-error
 libgphoto2
@@ -620,6 +622,7 @@ python-cssselect
 python-dateutil
 python-discid
 python-fasteners
+python-gobject
 python-html5lib
 python-idna
 python-lxml
