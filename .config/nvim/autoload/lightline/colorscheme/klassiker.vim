@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/autoload/lightline/colorscheme/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2023-04-02T17:23:38+0200
+" date:   2025-03-20T06:17:14+0100
 
 "   color           =  gui          ,term
 let s:black1        = ['#333333'    ,8  ]
@@ -16,7 +16,7 @@ let s:white1        = ['#ffffff'    ,15 ]
 
 let s:grey0         = ['#121212'    ,233]
 let s:grey1         = ['#2b2b2b'    ,234]
-let s:grey2         = ['#666666'    ,242]
+let s:grey2         = ['#585858'    ,240]
 
 let s:p = {
     \ 'normal': {
