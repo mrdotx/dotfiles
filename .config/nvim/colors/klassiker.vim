@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-02-06T07:50:46+0100
+" date:   2025-03-20T06:16:13+0100
 
 set background=dark
 
@@ -38,7 +38,7 @@ let s:white1        = ["#ffffff"    ,15    ]
 
 let s:grey0         = ['#121212'    ,233   ]
 let s:grey1         = ["#2b2b2b"    ,234   ]
-let s:grey2         = ["#666666"    ,242   ]
+let s:grey2         = ["#585858"    ,240   ]
 let s:grey3         = ["#778899"    ,103   ]
 let s:grey4         = ["#334455"    ,59    ]
 let s:grey5         = ["#223344"    ,23    ]
