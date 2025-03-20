@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/colors/klassiker.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2025-03-20T06:16:13+0100
+" date:   2025-03-20T11:27:01+0100
 
 set background=dark
 
@@ -221,31 +221,31 @@ call s:hi("RedrawDebugRecompose"        ,s:NONE     ,s:red0     ,"NONE"         
 call s:hi("DiagnosticError"             ,s:red0     ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticWarn"              ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticInfo"              ,s:blue1    ,s:NONE     ,"NONE"         ,"NONE")
-call s:hi("DiagnosticHint"              ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("DiagnosticHint"              ,s:grey3    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticOk"                ,s:green0   ,s:NONE     ,"NONE"         ,"NONE")
 
 call s:hi("DiagnosticUnderlineError"    ,s:NONE     ,s:NONE     ,"underline"    ,s:red0)
 call s:hi("DiagnosticUnderlineWarn"     ,s:NONE     ,s:NONE     ,"underline"    ,s:yellow0)
 call s:hi("DiagnosticUnderlineInfo"     ,s:NONE     ,s:NONE     ,"underline"    ,s:blue1)
-call s:hi("DiagnosticUnderlineHint"     ,s:NONE     ,s:NONE     ,"underline"    ,s:grey4)
+call s:hi("DiagnosticUnderlineHint"     ,s:NONE     ,s:NONE     ,"underline"    ,s:grey3)
 call s:hi("DiagnosticUnderlineOk"       ,s:NONE     ,s:NONE     ,"underline"    ,s:green0)
 
 call s:hi("DiagnosticVirtualTextError"  ,s:red0     ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticVirtualTextWarn"   ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticVirtualTextInfo"   ,s:blue1    ,s:NONE     ,"NONE"         ,"NONE")
-call s:hi("DiagnosticVirtualTextHint"   ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("DiagnosticVirtualTextHint"   ,s:grey3    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticVirtualTextOk"     ,s:green0   ,s:NONE     ,"NONE"         ,"NONE")
 
 call s:hi("DiagnosticFloatingError"     ,s:red0     ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticFloatingWarn"      ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticFloatingInfo"      ,s:blue1    ,s:NONE     ,"NONE"         ,"NONE")
-call s:hi("DiagnosticFloatingHint"      ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("DiagnosticFloatingHint"      ,s:grey3    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticFloatingOk"        ,s:green0   ,s:NONE     ,"NONE"         ,"NONE")
 
 call s:hi("DiagnosticSignError"         ,s:red0     ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticSignWarn"          ,s:yellow0  ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticSignInfo"          ,s:blue1    ,s:NONE     ,"NONE"         ,"NONE")
-call s:hi("DiagnosticSignHint"          ,s:grey4    ,s:NONE     ,"NONE"         ,"NONE")
+call s:hi("DiagnosticSignHint"          ,s:grey3    ,s:NONE     ,"NONE"         ,"NONE")
 call s:hi("DiagnosticSignOk"            ,s:green0   ,s:NONE     ,"NONE"         ,"NONE")
 
 call s:hi("DiagnosticDeprecated"        ,s:NONE     ,s:NONE     ,"strikethrough",s:red0)
