@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! github: https://github.com/mrdotx/dotfiles
-! date:   2025-02-07T07:55:44+0100
+! date:   2025-03-21T06:07:18+0100
 
 ! transparency
 #define ALPHA           0.90
@@ -37,7 +37,7 @@
 #define PRIMARY         BLUE1
 #define SECONDARY       BLUE0
 #define GREY0           #2b2b2b
-#define GREY1           #666666
+#define GREY1           #585858
 
 ! normal
 *color0:                BLACK0
