@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2024-01-16T10:49:09+0100
+# date:   2025-03-25T06:26:04+0100
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"
@@ -23,7 +23,7 @@ theme[main_fg]="#cccccc"
 theme[title]="#ffffff"
 
 # Higlight color for keyboard shortcuts
-theme[hi_fg]="#666666"
+theme[hi_fg]="#585858"
 
 # Background color of selected item in processes box
 theme[selected_bg]="#1f5393"
@@ -36,7 +36,7 @@ theme[inactive_fg]="#333333"
 
 # Color of graph text
 # If not available, the color of the inactive/disabled text is used
-theme[graph_text]="#666666"
+theme[graph_text]="#585858"
 
 # Background color of meters
 # If not available, the color of the inactive/disabled text is used
