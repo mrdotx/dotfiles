@@ -652,11 +652,13 @@ qt5-tools
 qt5-translations
 qt5-x11extras
 qt5ct
+qt6-5compat
 qt6-base
 qt6-declarative
 qt6-multimedia
 qt6-multimedia-ffmpeg
 qt6-scxml
+qt6-shadertools
 qt6-svg
 qt6-tools
 qt6-translations
