@@ -16,8 +16,8 @@ amd-ucode
 aom
 appstream
 appstream-glib
-arc-gtk-theme
-arc-icon-theme
+arc-gtk-theme-git
+arc-icon-theme-git
 archlinux-keyring
 arduino-avr-core
 argon2

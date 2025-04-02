@@ -3,8 +3,8 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
-arc-gtk-theme
-arc-icon-theme
+arc-gtk-theme-git
+arc-icon-theme-git
 arduino-avr-core
 aria2
 base
