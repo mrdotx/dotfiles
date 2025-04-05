@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-03-18T06:55:46+0100
+# date:   2025-04-05T06:50:24+0200
 
 # if shell is not running interactive, break up
 tty -s \
@@ -123,8 +123,8 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=14'
 
 # history-substring-search
 . /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=15,bg=8'
-HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=15,bg=1'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=12'
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=9,bold'
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
