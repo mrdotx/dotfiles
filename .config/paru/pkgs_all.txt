@@ -760,7 +760,6 @@ virtualbox-guest-iso
 virtualbox-host-dkms
 vmaf
 vorbis-tools
-vulkan-headers
 vulkan-icd-loader
 vulkan-radeon
 w3m
