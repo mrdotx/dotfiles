@@ -767,7 +767,7 @@ w3m
 wavpack
 wayland
 waylandpp
-webkit2gtk
+webkit2gtk-4.1
 wget
 which
 wireless-regdb
