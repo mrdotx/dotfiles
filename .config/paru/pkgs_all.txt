@@ -78,7 +78,7 @@ cryptsetup
 cups
 cups-filters
 curl
-cyanrip
+cyanrip-git
 darktable
 dash
 dav1d
@@ -580,7 +580,7 @@ pacman-contrib
 pacman-mirrorlist
 pahole
 pam
-pam-gnupg
+pam-gnupg-git
 pambase
 pandoc-bin
 pango
@@ -690,7 +690,7 @@ shadow
 shared-mime-info
 shellcheck-bin
 simdjson
-simple-mtpfs
+simple-mtpfs-git
 simple-scan
 slang
 slop

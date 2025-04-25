@@ -17,7 +17,7 @@ cinfo
 cmus
 cpupower
 cups
-cyanrip
+cyanrip-git
 darktable
 dash
 dbus-broker
@@ -87,7 +87,7 @@ opendoas
 opendoas-sudo
 openssh
 pacman-contrib
-pam-gnupg
+pam-gnupg-git
 pandoc-bin
 paru-bin
 perl-image-exiftool
@@ -105,7 +105,7 @@ rxvt-unicode-truecolor-wide-glyphs
 scribus
 sg3_utils
 shellcheck-bin
-simple-mtpfs
+simple-mtpfs-git
 simple-scan
 smartmontools
 speedtest-cli
