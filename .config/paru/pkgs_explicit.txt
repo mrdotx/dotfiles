@@ -58,8 +58,6 @@ libreoffice-fresh
 libva-utils
 linux
 linux-firmware
-linux-hardened
-linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers

@@ -492,8 +492,6 @@ linux
 linux-api-headers
 linux-firmware
 linux-firmware-whence
-linux-hardened
-linux-hardened-headers
 linux-headers
 linux-lts
 linux-lts-headers
