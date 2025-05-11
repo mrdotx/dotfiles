@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/reload.vim
 " author: klassiker [mrdotx]
 " github: https://github.com/mrdotx/dotfiles
-" date:   2024-06-14T07:29:54+0200
+" date:   2025-05-11T05:41:25+0200
 
 " if tmux is running reload tmux config whenever tmux config is updated
 autocmd BufWritePost *.config/tmux/tmux.conf
@@ -25,3 +25,7 @@ autocmd BufWritePost *.config/polybar/*
                    \,*.config/X11/Xresources
                    \,*.config/X11/Xresources.d/polybar
     \ !systemctl --user restart polybar.service
+
+" restart dunst whenever dunst config is updated
+autocmd BufWritePost *.config/dunst/dunstrc
+    \ !killall dunst && notify-send 'i3' 'dunst restarted'
