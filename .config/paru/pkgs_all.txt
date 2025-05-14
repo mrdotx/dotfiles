@@ -826,6 +826,7 @@ zathura-ps
 zeromq
 zimg
 zlib
+zlib-ng
 zsh
 zsh-autosuggestions
 zsh-completions
