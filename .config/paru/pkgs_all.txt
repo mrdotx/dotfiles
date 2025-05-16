@@ -55,7 +55,6 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cairomm
-cantarell-fonts
 cblas
 cdparanoia
 cdrtools
