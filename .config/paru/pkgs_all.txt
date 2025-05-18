@@ -19,7 +19,6 @@ appstream-glib
 arc-gtk-theme-git
 arc-icon-theme-git
 archlinux-keyring
-arduino-avr-core
 argon2
 aria2
 at-spi2-core

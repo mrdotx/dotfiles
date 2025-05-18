@@ -5,8 +5,9 @@ alsa-utils
 amd-ucode
 arc-gtk-theme-git
 arc-icon-theme-git
-arduino-avr-core
 aria2
+avr-libc
+avrdude
 base
 base-devel
 bash-language-server
