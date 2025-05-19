@@ -59,9 +59,7 @@ libreoffice-fresh
 libva-utils
 linux
 linux-firmware
-linux-headers
 linux-lts
-linux-lts-headers
 logrotate
 losslesscut-bin
 lsb-release

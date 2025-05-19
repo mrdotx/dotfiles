@@ -93,7 +93,6 @@ device-mapper
 diffutils
 ding-libs
 djvulibre
-dkms
 dmidecode
 dosfstools
 double-conversion
@@ -490,9 +489,7 @@ linux
 linux-api-headers
 linux-firmware
 linux-firmware-whence
-linux-headers
 linux-lts
-linux-lts-headers
 lirc
 llvm-libs
 lm_sensors
@@ -574,7 +571,6 @@ p8-platform
 pacman
 pacman-contrib
 pacman-mirrorlist
-pahole
 pam
 pam-gnupg-git
 pambase
@@ -754,7 +750,7 @@ verdict
 vid.stab
 virtualbox
 virtualbox-guest-iso
-virtualbox-host-dkms
+virtualbox-host-modules-arch
 vmaf
 vorbis-tools
 vulkan-icd-loader
