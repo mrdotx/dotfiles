@@ -79,7 +79,7 @@ noto-fonts-emoji
 npm
 nsxiv
 nvtop-git
-opencl-rusticl-mesa
+opencl-mesa
 opendoas
 opendoas-sudo
 openssh

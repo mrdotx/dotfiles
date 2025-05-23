@@ -551,7 +551,7 @@ nvtop-git
 ocl-icd
 onetbb
 openal
-opencl-rusticl-mesa
+opencl-mesa
 opencore-amr
 opencv
 opendoas
