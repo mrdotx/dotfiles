@@ -157,7 +157,6 @@ gmp
 gnulib-l10n
 gnupg
 gnutls
-gobject-introspection-runtime
 gperftools
 gpgme
 gpgmepp
@@ -316,7 +315,6 @@ libfreehand
 libftdi
 libgcrypt
 libgexiv2
-libgirepository
 libglvnd
 libgpg-error
 libgphoto2
@@ -615,7 +613,6 @@ python-cssselect
 python-dateutil
 python-discid
 python-fasteners
-python-gobject
 python-html5lib
 python-idna
 python-lxml
