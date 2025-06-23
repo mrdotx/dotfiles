@@ -6,7 +6,6 @@ adwaita-cursors
 adwaita-fonts
 adwaita-icon-theme
 adwaita-icon-theme-legacy
-alsa-firmware
 alsa-lib
 alsa-plugins
 alsa-topology-conf
@@ -487,6 +486,15 @@ licenses
 linux
 linux-api-headers
 linux-firmware
+linux-firmware-amdgpu
+linux-firmware-atheros
+linux-firmware-broadcom
+linux-firmware-intel
+linux-firmware-mediatek
+linux-firmware-nvidia
+linux-firmware-other
+linux-firmware-radeon
+linux-firmware-realtek
 linux-firmware-whence
 linux-lts
 lirc

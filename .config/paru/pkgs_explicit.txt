@@ -1,5 +1,4 @@
 7zip
-alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
