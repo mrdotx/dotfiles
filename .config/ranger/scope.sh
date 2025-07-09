@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-02-17T07:21:33+0100
+# date:   2025-07-09T05:30:06+0200
 
 # exit | function   | action of ranger
 
@@ -38,7 +38,7 @@ handle_image() {
         */x-mpegurl)
             return 0
             ;;
-        image/x-xcf | image/x-tga )
+        image/x-xcf | image/x-tga)
             magick "$file_path" -flatten "$image_cache_path" \
                 && exit 6
             exit 1
@@ -178,13 +178,34 @@ handle_extension() {
             printf "%s\n" "$decrypted_file" \
                 && exit 0
             ;;
+        csv)
+            mime_type="text/csv"
+            ;;
     esac
 }
 
 handle_mime() {
     case "$mime_type" in
         */csv)
-            column --separator '	;,' --table "$file_path" \
+            count_char() {
+                tr -cd "$1" < "$file_path" | wc -c
+            }
+
+            tabulator="$(count_char '	')"
+            semicolon="$(count_char ';')"
+            comma="$(count_char ',')"
+
+            if [ "$tabulator" -ge "$semicolon" ] \
+                && [ "$tabulator" -ge "$comma" ]; then
+                    separator='	'
+            elif [ "$semicolon" -ge "$tabulator" ] \
+                && [ "$semicolon" -ge "$comma" ]; then
+                    separator=';'
+            else
+                separator=','
+            fi
+
+            column --separator "$separator" --table "$file_path" \
                 && exit 0
             exit 2
             ;;
