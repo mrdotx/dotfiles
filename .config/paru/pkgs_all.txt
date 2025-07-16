@@ -641,6 +641,7 @@ python-requests
 python-simplejson
 python-six
 python-soupsieve
+python-tinycss2
 python-typing_extensions
 python-urllib3
 python-webencodings
