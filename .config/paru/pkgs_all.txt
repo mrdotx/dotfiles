@@ -676,6 +676,7 @@ redland
 rpcbind
 rsync
 rubberband
+rustymeter
 rxvt-unicode-truecolor-wide-glyphs
 sane
 scribus

@@ -97,6 +97,7 @@ qt6ct
 ranger-git
 rclone
 rsync
+rustymeter
 rxvt-unicode-truecolor-wide-glyphs
 scribus
 sg3_utils
