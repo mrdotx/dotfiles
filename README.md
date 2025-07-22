@@ -31,7 +31,6 @@ found in my other repositories.
 | polybar           | status bar                                           |
 | qutebrowser       | web browser                                          |
 | ranger            | file manager                                         |
-| rofi              | application launcher and dmenu replacement           |
 | systemd           | units, timers and targets                            |
 | tmux              | terminal multiplexer                                 |
 | w3m               | text oriented browser                                |
