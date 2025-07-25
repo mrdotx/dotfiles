@@ -1,0 +1,16 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/i3_defaults.service
+# author: klassiker [mrdotx]
+# github: https://github.com/mrdotx/dotfiles
+# date:   2025-07-25T05:44:39+0200
+
+[Unit]
+Description=set i3 defaults
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/share/repos/shell/alsa.sh --absolute 35
+ExecStart=%h/.local/share/repos/shell/alsa.sh --unmute
+ExecStart=%h/.local/share/repos/i3/i3_mouse_move.sh -ne
+
+[Install]
+WantedBy=i3.target
