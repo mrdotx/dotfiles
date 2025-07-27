@@ -1,15 +1,15 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/aria2cd.service
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2021-06-23T11:08:05+0200
+# date:   2025-07-27T05:42:47+0200
 
 [Unit]
 Description=aria2 daemon
-PartOf=i3.target
+After=network.target
 
 [Service]
 Type=forking
 ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2d.conf
 
 [Install]
-WantedBy=i3.target
+WantedBy=multi-user.target
