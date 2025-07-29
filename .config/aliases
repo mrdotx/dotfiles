@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-06-28T04:53:27+0200
+# date:   2025-07-29T06:02:21+0200
 
 # colors
 alias \
@@ -52,6 +52,7 @@ alias \
     jo='journalctl --no-pager -b -g"fail|emerg|alert|crit|error|warn"' \
     sa='systemd-analyze --no-pager blame; systemd-analyze --no-pager critical-chain; systemd-analyze --no-pager' \
     tm='systemctl --no-pager list-timers --all; systemctl --no-pager list-timers --all --user' \
+    ur='systemctl --no-pager list-units --state=running; systemctl --no-pager --user list-units --state=running' \
     dr='$EXEC_AS_USER systemctl daemon-reload; systemctl daemon-reload --user' \
     cu='checkupdates; paru -Qua' \
     up='paru -Syu' \
