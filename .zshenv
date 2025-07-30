@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # github: https://github.com/mrdotx/dotfiles
-# date:   2025-01-01T18:40:37+0100
+# date:   2025-07-30T05:29:12+0200
 
 # xdg paths
 export \
@@ -79,13 +79,14 @@ export \
 
 # app settings
 export \
-    RUSTICL_ENABLE=radeonsi \
-    COLORTERM=truecolor \
-    GPG_TTY=$(tty) \
+    RUSTICL_ENABLE="radeonsi" \
+    OCL_ICD_VENDORS="/etc/OpenCL/vendors/rusticl.icd" \
+    COLORTERM="truecolor" \
+    GPG_TTY="$(tty)" \
     ZSTD_NBTHREADS=0 \
     XZ_DEFAULTS="--threads=0" \
     LESS='-MR --use-color -Dd+b$Dk+b$Du+C$DEWb$DNc$DPWb$DRWb$DSWb$DWWB' \
-    LESSHISTFILE=- \
+    LESSHISTFILE="-" \
     MANROFFOPT="-c" \
     HIGHLIGHT_OPTIONS=" \
         --force=sh \
