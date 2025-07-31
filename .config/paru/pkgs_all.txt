@@ -565,6 +565,7 @@ opencv
 opendoas
 opendoas-sudo
 openexr
+openh264
 openjpeg2
 openmp
 openscenegraph
