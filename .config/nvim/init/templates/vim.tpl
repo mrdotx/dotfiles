@@ -1,6 +1,6 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/skeleton.vim
+" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/vim.tpl
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/<++>
-" date:   2021-06-28T11:55:28+0200
+" url:    https://github.com/mrdotx/<++>
+" date:   2025-08-05T05:32:11+0200
 
 <++>

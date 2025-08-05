@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/aria2cd.service
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2025-07-27T05:42:47+0200
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:41:09+0200
 
 [Unit]
 Description=aria2 daemon

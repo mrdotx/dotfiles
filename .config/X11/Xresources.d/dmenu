@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/dmenu
 ! author: klassiker [mrdotx]
-! github: https://github.com/mrdotx/dotfiles
-! date:   2024-01-07T18:46:06+0100
+! url:    https://github.com/mrdotx/dotfiles
+! date:   2025-08-05T05:42:49+0200
 
 dmenu.font:                    FONT0
 dmenu.font0:                   FONT1

@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/coc.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2024-12-29T08:29:13+0100
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:30:02+0200
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence

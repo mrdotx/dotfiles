@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_playlist.lua
 -- author: klassiker [mrdotx]
--- github: https://github.com/mrdotx/dotfiles
--- date:   2025-01-21T06:33:11+0100
+-- url:    https://github.com/mrdotx/dotfiles
+-- date:   2025-08-05T05:28:38+0200
 
 -- usage: mpv --script-opts=menu_playlist=1 playlist.m3u
 

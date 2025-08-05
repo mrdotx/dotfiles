@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/skeleton.sh
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/sh.tpl
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/<++>
-# date:   2021-06-28T11:55:20+0200
+# url:    https://github.com/mrdotx/<++>
+# date:   2025-08-05T05:32:06+0200
 
 script=$(basename "$0")
 help="$script [-h/--help] -- script to <++>

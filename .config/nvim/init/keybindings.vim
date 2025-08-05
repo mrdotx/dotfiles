@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2025-07-07T05:11:56+0200
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:32:39+0200
 
 " tabulator
 inoremap                <s-tab>     <c-v><tab>

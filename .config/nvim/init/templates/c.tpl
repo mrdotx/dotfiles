@@ -1,8 +1,8 @@
 /*
- * path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/skeleton.c
+ * path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/c.tpl
  * author: klassiker [mrdotx]
- * github: https://github.com/mrdotx/<++>
- * date:   2021-06-28T11:54:34+0200
+ * url:    https://github.com/mrdotx/<++>
+ * date:   2025-08-05T05:30:48+0200
  */
 
 #include <stdio.h>

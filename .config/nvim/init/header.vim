@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/header.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2023-03-26T10:34:25+0200
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:32:35+0200
 
 " last modfied | actual path
 " if buffer modified, update any 'date: ' | 'path: ' in the first 10 lines.

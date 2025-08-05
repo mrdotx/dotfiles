@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2025-02-22T05:50:53+0100
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:30:30+0200
 
 let g:which_key_fallback_to_native_key=1
 let g:which_key_sep = '»'

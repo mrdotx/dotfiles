@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ncdu/config
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2025-03-13T06:19:49+0100
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:28:55+0200
 
 # threads
 --threads 16

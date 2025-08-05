@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/npm/npmrc
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2023-12-19T18:47:27+0100
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:29:11+0200
 
 prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm

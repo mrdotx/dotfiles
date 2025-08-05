@@ -2,7 +2,7 @@
 title:           <++>
 subtitle:        <++>
 author:          klassiker [mrdotx]
-date:            2021-01-15T12:48:27+0100
+date:            2025-08-05T05:31:29+0200
 numbersections:  true
 autoEqnLabels:   true
 papersize:       a4

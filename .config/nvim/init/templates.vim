@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2024-06-15T12:04:06+0200
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:33:01+0200
 
 let g:template_folder='~/.config/nvim/init/templates/'
 

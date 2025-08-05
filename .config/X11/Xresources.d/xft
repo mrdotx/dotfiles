@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/xft
 ! author: klassiker [mrdotx]
-! github: https://github.com/mrdotx/dotfiles
-! date:   2025-02-07T07:57:00+0100
+! url:    https://github.com/mrdotx/dotfiles
+! date:   2025-08-05T05:43:32+0200
 
 ! fonts
 #define FONT0  DejaVu Sans Mono:pixelsize=16

@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2025-02-09T07:57:24+0100
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:27:13+0200
 
 # general variables
 set $sup Mod4

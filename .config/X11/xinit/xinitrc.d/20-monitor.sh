@@ -2,8 +2,8 @@
 
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/xinit/xinitrc.d/20-monitor.sh
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2025-06-25T05:41:29+0200
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:42:10+0200
 
 output_state=$(xrandr)
 

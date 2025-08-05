@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/autoload/lightline/colorscheme/klassiker.vim
 " author: klassiker [mrdotx]
-" github: https://github.com/mrdotx/dotfiles
-" date:   2025-03-20T06:17:14+0100
+" url:    https://github.com/mrdotx/dotfiles
+" date:   2025-08-05T05:29:43+0200
 
 "   color           =  gui          ,term
 let s:black1        = ['#333333'    ,8  ]

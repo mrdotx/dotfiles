@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2025-02-09T07:57:41+0100
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:28:26+0200
 
 general {
         colors = true

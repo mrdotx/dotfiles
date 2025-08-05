@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zathura/zathurarc
 # author: klassiker [mrdotx]
-# github: https://github.com/mrdotx/dotfiles
-# date:   2024-09-27T07:09:30+0200
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2025-08-05T05:44:15+0200
 
 # general
 set database                "null"
