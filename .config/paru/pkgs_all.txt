@@ -770,7 +770,6 @@ wavpack
 wayland
 waylandpp
 webkit2gtk-4.1
-wget
 which
 wireless-regdb
 wmctrl

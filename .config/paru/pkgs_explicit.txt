@@ -123,7 +123,6 @@ vorbis-tools
 vulkan-radeon
 w3m
 webkit2gtk-4.1
-wget
 wmctrl
 xautolock
 xcolor
