@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:25:40+0200
+# date:   2025-08-24T03:28:52+0200
 
 # xdg paths
 export \
@@ -66,7 +66,6 @@ export \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
     GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
-    WGETRC="$XDG_CONFIG_HOME/wget/wgetrc" \
     KODI_DATA="$XDG_DATA_HOME/kodi"
 
 # standard apps
