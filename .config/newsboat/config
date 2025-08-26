@@ -1,12 +1,14 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:29:01+0200
+# date:   2025-08-26T05:29:02+0200
 
 # general
 refresh-on-startup yes
 reload-threads 16
 prepopulate-query-feeds yes
+keep-articles-days 90
+cleanup-on-quit yes
 scrolloff 5
 
 browser "link_handler.sh %u"
