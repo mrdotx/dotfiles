@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:32:22+0200
+" date:   2025-08-27T04:04:12+0200
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -11,27 +11,41 @@ set encoding=utf-8                  " file encoding
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " mark characters
-let g:mark_characters_enabled = 0
+let g:mark_characters_enabled=0
 function! MarkCharactersToggle()
-    if g:mark_characters_enabled == 1
+    if g:mark_characters_enabled==1
         call matchdelete(g:match_nonascii)
         call matchdelete(g:match_trailingspace)
-        let g:mark_characters_enabled = 0
+        let g:mark_characters_enabled=0
     else
         " match non ascii characters
-        let g:match_nonascii = matchadd('ErrorMsg', '[^\d0-\d255]', 42)
+        let g:match_nonascii=matchadd('ErrorMsg', '[^\d0-\d255]', 42)
         " match trailing space
-        let g:match_trailingspace = matchadd('ExtraWhitespace', '\s\+$', 42)
-        let g:mark_characters_enabled = 1
+        let g:match_trailingspace=matchadd('ExtraWhitespace', '\s\+$', 42)
+        let g:mark_characters_enabled=1
     endif
 endfunction
 silent! call MarkCharactersToggle()
+
+" indentation
+let g:spaces_enabled=1
+function! IndentationToggle()
+    if g:spaces_enabled==1
+        set expandtab               " tabs are spaces
+        inoremap <s-tab> <c-v><tab>
+        let g:spaces_enabled=0
+    else
+        set noexpandtab             " tabs are tabulators
+        inoremap <s-tab> <c-v><space><space><space><space>
+        let g:spaces_enabled=1
+    endif
+endfunction
+silent! call IndentationToggle()
 
 " style guide
 set tabstop=4                       " number of visual spaces per TAB
 set softtabstop=4                   " number of spaces in tab when editing
 set shiftwidth=4                    " the size of an indent
-set expandtab                       " tabs are spaces
 set autoindent                      " indent when moving to the next line
 set colorcolumn=80                  " show width indicator
 
