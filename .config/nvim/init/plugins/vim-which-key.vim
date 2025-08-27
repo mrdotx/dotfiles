@@ -1,13 +1,15 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:30:30+0200
+" date:   2025-08-27T04:09:05+0200
 
+set timeoutlen=500                  " by default timeoutlen is 1000 ms
+
+let g:which_key_sep='»'
 let g:which_key_fallback_to_native_key=1
-let g:which_key_sep = '»'
-
-" by default timeoutlen is 1000 ms
-set timeoutlen=500
+let g:which_key_display_names={ ' ': 'space' }
+let g:which_key_disable_default_offset=1
+let g:which_key_centered=0
 
 " color mappings
 hi default link WhichKey          SpecialChar
@@ -22,7 +24,7 @@ call which_key#register(' ', "g:coc_dict")
 call which_key#register('g', "g:goto_dict")
 
 " main description dictionary
-let g:main_dict = {
+let g:main_dict={
     \ 'name': '+main',
     \ ',': 'netrw file explorer',
     \ '/': 'reset search highlighting',
@@ -44,16 +46,21 @@ let g:main_dict = {
     \ 'f': 'fold hunk',
     \ 'g': 'goyo',
     \ 'h': 'stage hunk',
-    \ 'n': 'sync notes to webserver',
-    \ 'p': 'preview hunk',
-    \ 'r': 'replace',
-    \ 's': 'remove trailing spaces',
-    \ 't': 'replace tabs with 4 spaces',
+    \ 'i': 'indentation toggle',
     \ 'l': {
         \ 'name': '+language',
         \ 'g': 'german toggle',
         \ 'e': 'english toggle',
         \ 'x': 'english and german toggle'
+    \ },
+    \ 'n': 'sync notes to webserver',
+    \ 'p': 'preview hunk',
+    \ 'r': {
+        \ 'name': '+replace',
+        \ '4': '4 spaces with tabs',
+        \ 'r': 'remove trailing spaces',
+        \ 's': 'searched string',
+        \ 't': 'tabs with 4 spaces',
     \ },
     \ 'u': 'undo hunk',
     \ 'v': {
@@ -84,7 +91,7 @@ let g:main_dict = {
 \ }
 
 " coc description dictionary
-let g:coc_dict = {
+let g:coc_dict={
     \ 'name': '+coc',
     \ '/': 'show all diagnostics',
     \ 'a': 'action selected code',
@@ -110,7 +117,7 @@ let g:coc_dict = {
 \ }
 
 " goto description dictionary
-let g:goto_dict = {
+let g:goto_dict={
     \ 'name': '+goto',
     \ '[': 'previous diagnostics list item',
     \ ']': 'next diasnostics list item',
