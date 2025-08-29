@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/goyo.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:30:06+0200
+" date:   2025-08-29T04:31:39+0200
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
@@ -50,7 +50,7 @@ endfunction
 
 function! s:goyo_after()
     " Quit Vim if this is the only remaining buffer
-    if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+    if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))==1
         if b:quitting_bang
             qa!
         else

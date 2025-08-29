@@ -1,11 +1,11 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/lightline.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:30:16+0200
+" date:   2025-08-29T04:32:46+0200
 
 " gitgutter status
 function! GitGutterStatus()
-    let [l:add,l:change,l:remove] = GitGutterGetHunkSummary()
+    let [l:add,l:change,l:remove]=GitGutterGetHunkSummary()
     if l:add==0 && l:change==0 && l:remove==0 | return '' | endif
     let l:indicators=[]
     if l:add!=0
@@ -22,7 +22,7 @@ endfunction
 
 " coc status
 function! CocDiagnosticStatus() abort
-    let l:info = get(b:, 'coc_diagnostic_info', {})
+    let l:info=get(b:, 'coc_diagnostic_info', {})
     if empty(l:info) | return '' | endif
     let l:indicators=[]
     if get(l:info, 'error', 0)
@@ -58,7 +58,7 @@ function! FilenameModifiedReadonly()
 endfunction
 
 " lightline elements
-let g:lightline = {
+let g:lightline={
     \ 'colorscheme': 'klassiker',
     \ 'subseparator': {
         \ 'left': '│',
