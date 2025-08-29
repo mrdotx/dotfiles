@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-27T04:09:05+0200
+" date:   2025-08-29T04:48:46+0200
 
 set timeoutlen=500                  " by default timeoutlen is 1000 ms
 
@@ -60,11 +60,11 @@ let g:main_dict={
         \ '4': '4 spaces with tabs',
         \ 'r': 'remove trailing spaces',
         \ 's': 'searched string',
-        \ 't': 'tabs with 4 spaces',
+        \ 't': 'tabs with 4 spaces'
     \ },
     \ 'u': 'undo hunk',
     \ 'v': {
-        \ 'name': '+visible',
+        \ 'name': '+visibility',
         \ 'c': 'screen column highlight toggle',
         \ 'h': 'hidden characters toggle',
         \ 'i': 'indent line toggle',

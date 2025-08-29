@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-27T04:06:13+0200
+" date:   2025-08-29T04:47:27+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -31,7 +31,7 @@ nnoremap <silent>       <leader>rr  :%s/\s\+$//e<cr>
 nnoremap                <leader>rs  :%s///gc<left><left><left>
 nnoremap <silent>       <leader>rt  :%s/	/    /g<cr>
 
-" visible characters
+" visibility
 nnoremap <silent>       <leader>vc  :set cursorcolumn! cursorcolumn?<cr>
 nnoremap <silent>       <leader>vh  :set list! list?<cr>
 nnoremap <silent>       <leader>vl  :set cursorline! cursorline?<cr>
