@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-29T04:47:27+0200
+" date:   2025-08-30T05:10:30+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
@@ -43,4 +43,4 @@ nnoremap <silent>       <leader>i   :call IndentationToggle()<cr>
 
 " terminal execution
 nnoremap                <leader>e   :TermExec %:p
-nnoremap <silent>       <leader>n   :TermExec fzf_ssh.sh --exec m625q sync_notes.sh<cr>
+nnoremap <silent>       <leader>n   :TermExec fzf_ssh.sh --exec m625q wiki2web.sh<cr>
