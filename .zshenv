@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-24T03:28:52+0200
+# date:   2025-08-31T05:12:43+0200
 
 # xdg paths
 export \
@@ -47,6 +47,7 @@ path=( \
     "$XDG_DATA_HOME/repos/surf" \
     "$XDG_DATA_HOME/repos/terminal-analysis" \
     "$XDG_DATA_HOME/repos/terminal-wrapper" \
+    "$XDG_DATA_HOME/repos/vimwiki-pandoc" \
     "$XDG_DATA_HOME/repos/wacom" \
     "$XDG_DATA_HOME/repos/zram" \
     "$path[@]" \
