@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/netrw.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-29T04:39:40+0200
+" date:   2025-09-02T04:48:33+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -51,7 +51,7 @@ set autochdir
 "autostart netrw
 "autocmd VimEnter * :call NetrwToggle()
 
-" keybindings
+" mappings
 function! NetrwMappings()
     noremap <buffer> <c-l> <c-w>l
     noremap <silent> <c-f> :call NetrwToggle()<cr>
@@ -65,4 +65,12 @@ augroup netrw_mappings
     autocmd FileType netrw call NetrwMappings()
 augroup END
 
+" keybindings
 nnoremap <silent>   <leader><leader>    :call NetrwToggle()<cr>
+
+nnoremap <silent>   <leader>.b  :edit scp://macbook/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>.d  :edit scp://m75q/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>.m  :edit scp://m625q/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>.n  :edit scp://t14/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>.p  :edit scp://prinzipal/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>.r  :edit ftp://marcus/ <bar> call NetrwToggle()<cr>
