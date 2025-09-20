@@ -765,6 +765,7 @@ virtualbox-host-modules-arch
 vmaf
 vorbis-tools
 vulkan-icd-loader
+vulkan-mesa-device-select
 vulkan-radeon
 w3m
 wavpack
