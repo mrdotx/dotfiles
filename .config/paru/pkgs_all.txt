@@ -151,6 +151,7 @@ glibc
 glibmm
 glslang
 glu
+glycin
 gmic
 gmp
 gnulib-l10n
