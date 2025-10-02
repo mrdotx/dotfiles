@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-31T05:12:43+0200
+# date:   2025-10-02T05:37:35+0200
 
 # xdg paths
 export \
@@ -109,6 +109,7 @@ export \
     GOMODCACHE="$XDG_DATA_HOME/go/mod" \
     QT_QPA_PLATFORMTHEME="qt6ct" \
     QT_AUTO_SCREEN_SCALE_FACTOR=0 \
+    MOZ_CRASHREPORTER_DISABLE=1 \
     MOZ_USE_XINPUT2=1 \
     NO_AT_BRIDGE=1
 
