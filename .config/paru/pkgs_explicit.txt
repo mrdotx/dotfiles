@@ -89,6 +89,7 @@ paru-bin
 perl-image-exiftool
 picard
 picom
+polkit
 polybar
 python-beautifulsoup4
 python-readability-lxml
@@ -99,11 +100,11 @@ rclone
 rsync
 rustymeter
 rxvt-unicode-truecolor-wide-glyphs
+sane
 scribus
 sg3_utils
 shellcheck-bin
 simple-mtpfs-git
-simple-scan
 smartmontools
 speedtest-cli
 splix

@@ -13,7 +13,6 @@ alsa-ucm-conf
 alsa-utils
 amd-ucode
 aom
-appstream
 appstream-glib
 arc-gtk-theme-git
 arc-icon-theme-git
@@ -63,10 +62,8 @@ cinfo
 clang
 clucene
 cmus
-colord
 colord-gtk
 colord-gtk-common
-colord-sane
 compiler-rt
 confuse
 coreutils
@@ -111,6 +108,7 @@ expat
 faad2
 fakeroot
 ffmpeg
+ffmpeg4.4
 ffmpegthumbnailer
 fftw
 file
@@ -182,7 +180,6 @@ gstreamer
 gtest
 gtk-update-icon-cache
 gtk3
-gtk4
 gtkmm3
 gtksourceview4
 gts
@@ -257,7 +254,6 @@ leptonica
 less
 lib2geom
 libabw
-libadwaita
 libao
 libarchive
 libass
@@ -313,14 +309,12 @@ libffi
 libfontenc
 libfreehand
 libftdi
-libfyaml
 libgcrypt
 libgexiv2
 libglvnd
 libgpg-error
 libgphoto2
 libgudev
-libgusb
 libheif
 libice
 libid3tag
@@ -344,6 +338,7 @@ liblzf
 libmad
 libmanette
 libmd
+libmfx
 libmicrohttpd
 libmnl
 libmodplug
@@ -468,7 +463,6 @@ libxkbcommon
 libxkbcommon-x11
 libxkbfile
 libxml2
-libxmlb
 libxmu
 libxpm
 libxpresent
@@ -695,7 +689,6 @@ shared-mime-info
 shellcheck-bin
 simdjson
 simple-mtpfs-git
-simple-scan
 slang
 slop
 smartmontools
