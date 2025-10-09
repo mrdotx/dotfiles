@@ -162,12 +162,10 @@ gpm
 graphene
 graphicsmagick
 graphite
-graphviz
 grep
 groff
 gsettings-desktop-schemas
 gsettings-system-schemas
-gsfonts
 gsl
 gsm
 gspell
@@ -182,7 +180,6 @@ gtk-update-icon-cache
 gtk3
 gtkmm3
 gtksourceview4
-gts
 guile
 gumbo-parser
 gupnp
@@ -537,7 +534,6 @@ ncurses
 neon
 neovim
 net-snmp
-netpbm
 nettle
 newsboat
 nfs-utils
