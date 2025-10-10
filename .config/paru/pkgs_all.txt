@@ -13,7 +13,7 @@ alsa-ucm-conf
 alsa-utils
 amd-ucode
 aom
-appstream-glib
+appstream
 arc-gtk-theme-git
 arc-icon-theme-git
 archlinux-keyring
@@ -306,6 +306,7 @@ libffi
 libfontenc
 libfreehand
 libftdi
+libfyaml
 libgcrypt
 libgexiv2
 libglvnd
@@ -460,6 +461,7 @@ libxkbcommon
 libxkbcommon-x11
 libxkbfile
 libxml2
+libxmlb
 libxmu
 libxpm
 libxpresent
