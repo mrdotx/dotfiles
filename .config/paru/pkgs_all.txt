@@ -658,7 +658,6 @@ qt6-shadertools
 qt6-svg
 qt6-tools
 qt6-translations
-qt6-wayland
 qt6ct
 ragel
 ranger-git
