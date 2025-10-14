@@ -23,7 +23,7 @@ dash
 dbus-broker
 dmidecode
 dragon-drop-git
-dunst
+dunst-git
 efibootmgr
 eslint
 exfatprogs
@@ -90,7 +90,7 @@ perl-image-exiftool
 picard
 picom
 polkit
-polybar
+polybar-git
 python-beautifulsoup4
 python-readability-lxml
 qt5ct

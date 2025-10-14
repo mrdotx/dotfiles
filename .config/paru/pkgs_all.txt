@@ -94,7 +94,7 @@ dosfstools
 double-conversion
 dragon-drop-git
 duktape
-dunst
+dunst-git
 e2fsprogs
 efibootmgr
 efivar
@@ -597,7 +597,7 @@ pixman
 pkgconf
 podofo
 polkit
-polybar
+polybar-git
 poppler
 poppler-data
 poppler-glib
