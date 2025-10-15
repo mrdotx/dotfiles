@@ -41,7 +41,7 @@ hunspell-de
 hunspell-en_us
 hyphen-de
 hyphen-en
-i3-wm
+i3-git
 imagemagick
 inetutils
 inkscape-stripped
