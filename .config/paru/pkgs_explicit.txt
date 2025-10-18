@@ -76,7 +76,7 @@ newsboat
 nfs-utils
 noto-fonts-emoji
 npm
-nsxiv
+nsxiv-git
 nvtop-git
 opencl-mesa
 opendoas
