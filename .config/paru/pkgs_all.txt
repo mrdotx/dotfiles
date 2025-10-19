@@ -56,7 +56,6 @@ cblas
 cdparanoia
 cdrtools
 cdw
-chromaprint
 cifs-utils
 cinfo
 clang
@@ -204,7 +203,6 @@ hyphen-en
 i3-git
 iana-etc
 icu
-id3lib
 ijs
 imagemagick
 imath
@@ -230,8 +228,6 @@ json-glib
 jsoncpp
 kbd
 keyutils
-kid3-common
-kid3-qt
 kmod
 kmon
 kodi
@@ -315,7 +311,6 @@ libgphoto2
 libgudev
 libheif
 libice
-libid3tag
 libidn
 libidn2
 libiec61883
@@ -340,7 +335,6 @@ libmfx
 libmicrohttpd
 libmnl
 libmodplug
-libmp4v2
 libmpc
 libmpcdec
 libmpdclient
@@ -650,9 +644,6 @@ qt5-x11extras
 qt5ct
 qt6-5compat
 qt6-base
-qt6-declarative
-qt6-multimedia
-qt6-multimedia-ffmpeg
 qt6-scxml
 qt6-shadertools
 qt6-svg
