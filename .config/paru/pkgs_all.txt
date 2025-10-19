@@ -56,6 +56,7 @@ cblas
 cdparanoia
 cdrtools
 cdw
+chromaprint
 cifs-utils
 cinfo
 clang
