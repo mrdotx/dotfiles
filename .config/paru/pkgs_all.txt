@@ -501,7 +501,7 @@ lsof
 lua
 lua51-lpeg
 luajit
-lxappearance-gtk3
+lxappearance
 lz4
 lzo
 m4

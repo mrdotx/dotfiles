@@ -62,7 +62,7 @@ logrotate
 losslesscut-bin
 lsb-release
 lshw
-lxappearance-gtk3
+lxappearance
 maim
 man-db
 man-pages
