@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-10-28T05:33:12+0100
+# date:   2025-10-29T05:37:35+0100
 
 # general variables
 set $sup Mod4
@@ -27,22 +27,6 @@ gaps inner $gaps
 #smart_gaps on
 #hide_edge_borders smart_no_gaps
 
-set_from_resource $black        i3wm.background
-set_from_resource $white        i3wm.foreground
-set_from_resource $primary      i3wm.primary
-set_from_resource $secondary    i3wm.secondary
-set_from_resource $grey0        i3wm.grey0
-set_from_resource $grey1        i3wm.grey1
-set_from_resource $red          i3wm.red
-
-# class                 border      background  text    indicator   child_border
-client.focused          $primary    $secondary  $white  $primary    $primary
-client.focused_inactive $grey0      $grey1      $white  $grey0      $grey0
-client.unfocused        $grey0      $black      $grey1  $black      $black
-client.urgent           $grey0      $red        $white  $red        $red
-client.placeholder      $grey1      $grey0      $white  $grey1      $grey1
-client.background       $black
-
 # workspace output
 workspace  1 output    primary  nonprimary  # main
 workspace  2 output nonprimary     primary  # terminal
@@ -55,14 +39,13 @@ workspace  8 output    primary  nonprimary  # vms
 workspace  9 output nonprimary     primary  # multimedia
 workspace 10 output    primary  nonprimary  # spare
 
-# applications
+# config files
 ##############
 
+# applications
 include config.d/applications.conf
 
 # keybindings
-#############
-
 include config.d/keybindings_applications.conf
 include config.d/keybindings_multimedia.conf
 include config.d/keybindings_system_management.conf
@@ -70,8 +53,6 @@ include config.d/keybindings_windows.conf
 include config.d/keybindings_workspaces.conf
 
 # modes
-#######
-
 include config.d/mode_container.conf
 include config.d/mode_editor.conf
 include config.d/mode_exit.conf
@@ -82,12 +63,13 @@ include config.d/mode_notes.conf
 include config.d/mode_services.conf
 include config.d/mode_ssh.conf
 
-# i3 status bar
-###############
+# theme
+include config.d/theme.conf
 
-# include config.d/status_bar.conf
+# status bar
+#include config.d/status_bar.conf
 
-# start systemd target
-######################
+# autostart
+###########
 
 exec --no-startup-id systemctl --user start i3.target
