@@ -1,43 +1,52 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-10-29T05:37:35+0100
+# date:   2025-10-31T05:49:38+0100
 
-# general variables
+# variables
+###########
+
 set $sup Mod4
 set $alt Mod1
 set $font pango:DejaVu Sans 9
+set $nofont pango:DejaVu Sans 0
 
-# window variables
-set $border border pixel 1
+# windows
+set $border_px 1
 set $px 10
 set $ppt 5
 set $gaps 0
 set $720p resize set 1280 720
 
 # config
+########
+
+font $nofont
 floating_modifier $sup
-tiling_drag swap_modifier $sup
+#workspace_layout tabbed
+title_align center
+default_border pixel $border_px
+default_floating_border pixel $border_px
+#hide_edge_borders smart_no_gaps
 focus_follows_mouse no
 mouse_warping none
-font $font
-default_border pixel 1
-default_floating_border normal
+tiling_drag swap_modifier $sup
 gaps inner $gaps
 #smart_gaps on
-#hide_edge_borders smart_no_gaps
 
 # workspace output
-workspace  1 output    primary  nonprimary  # main
-workspace  2 output nonprimary     primary  # terminal
-workspace  3 output nonprimary     primary  # browser
-workspace  4 output    primary  nonprimary  # image
-workspace  5 output    primary  nonprimary  # office
-workspace  6 output nonprimary     primary  # mail
-workspace  7 output    primary  nonprimary  # financial
-workspace  8 output    primary  nonprimary  # vms
-workspace  9 output nonprimary     primary  # multimedia
-workspace 10 output    primary  nonprimary  # spare
+# [1] main, [2] terminal, [3] browser, [4] graphic,    [5] office
+# [6] mail, [7] finance,  [8] vm,      [9] multimedia, [0] spare
+workspace  1 output    primary nonprimary
+workspace  2 output nonprimary    primary
+workspace  3 output nonprimary    primary
+workspace  4 output    primary nonprimary
+workspace  5 output    primary nonprimary
+workspace  6 output nonprimary    primary
+workspace  7 output    primary nonprimary
+workspace  8 output    primary nonprimary
+workspace  9 output nonprimary    primary
+workspace 10 output    primary nonprimary
 
 # config files
 ##############
