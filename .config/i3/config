@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-10-31T05:49:38+0100
+# date:   2025-11-05T05:11:54+0100
 
 # variables
 ###########
@@ -13,9 +13,10 @@ set $nofont pango:DejaVu Sans 0
 
 # windows
 set $border_px 1
-set $px 10
-set $ppt 5
-set $gaps 0
+set $gap_size 0
+set $gap_px 10
+set $move 10 px
+set $resize 10 px or 5 ppt
 set $720p resize set 1280 720
 
 # config
@@ -31,7 +32,7 @@ default_floating_border pixel $border_px
 focus_follows_mouse no
 mouse_warping none
 tiling_drag swap_modifier $sup
-gaps inner $gaps
+gaps inner $gap_size
 #smart_gaps on
 
 # workspace output
