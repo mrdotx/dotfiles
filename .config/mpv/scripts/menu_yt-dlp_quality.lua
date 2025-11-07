@@ -1,7 +1,7 @@
 -- path:   /home/klassiker/.local/share/repos/dotfiles/.config/mpv/scripts/menu_yt-dlp_quality.lua
 -- author: klassiker [mrdotx]
 -- url:    https://github.com/mrdotx/dotfiles
--- date:   2025-08-05T05:28:41+0200
+-- date:   2025-11-07T04:03:01+0100
 
 -- key bindings
 local binding_open   = "y"
@@ -138,9 +138,9 @@ function download_formats()
     end
     mp.osd_message("fetching available formats with yt-dlp...", 60)
 
-    if not (ytdl.searched) then
+    if not ytdl.searched then
         local ytdl_mcd = mp.find_config_file("yt-dlp")
-        if not (ytdl_mcd == nil) then
+        if not ytdl_mcd == nil then
             msg.verbose("found yt-dlp at: "..ytdl_mcd)
             ytdl.path = ytdl_mcd
         end
@@ -156,7 +156,7 @@ function download_formats()
     table.insert(command, url)
     local es, json, result = exec(command)
 
-    if (es < 0) or (json == nil) or (json == "") then
+    if es < 0 or json == nil or json == "" then
         mp.osd_message("fetching formats failed...", 1)
         msg.error("failed to get format list: "..err)
         return {}, 0
@@ -164,7 +164,7 @@ function download_formats()
 
     local json, err = utils.parse_json(json)
 
-    if (json == nil) then
+    if json == nil then
         mp.osd_message("fetching formats failed...", 1)
         msg.error("failed to parse JSON data: "..err)
         return {}, 0
@@ -173,18 +173,18 @@ function download_formats()
     res = {}
     msg.verbose("yt-dlp succeeded!")
     for i, v in ipairs(json.formats) do
-        if v.vcodec ~= "none" then
-            local l = string.format("%4.0fx%-4.0f %2.0f %5.0fk %5s %4s.%.4s",
-                        (v.width or "-0"), (v.height or "-0"),
-                        (v.fps or "-0"),
-                        (v.vbr or "-0"),
-                        (v.protocol:gsub("%S+",
+        -- show only items that have a video codec and no specific language
+        if v.vcodec ~= "none" and v.language == nil then
+            local l = string.format("%4.0fx%-4.0f %2.0fp %5.0fk %5s %4s.%s",
+                        v.width or -0, v.height or -0,
+                        v.fps or -0,
+                        v.vbr or -0,
+                        v.protocol:gsub("%S+",
                             {
                                 ["http_dash_segments"] = "hds",
                                 ["m3u8_native"] = "m3u8"
-                            }
-                            ) or "n/a"),
-                        (v.ext or "n/a"), v.vcodec
+                            }) or "n/a",
+                        v.ext or "n/a", string.match(v.vcodec, "[^.]+")
             )
             local f = string.format("%s+bestaudio/best", v.format_id)
             table.insert(res, {label=l, format=f})
