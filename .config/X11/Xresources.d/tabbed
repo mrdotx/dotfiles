@@ -1,14 +1,22 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/tabbed
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2025-08-05T05:43:17+0200
+! date:   2025-11-14T05:50:20+0100
 
-tabbed.font:        FONT4
-tabbed.normbgcolor: SECONDARY
-tabbed.normfgcolor: WHITE0
-tabbed.selbgcolor:  PRIMARY
-tabbed.selfgcolor:  WHITE1
-tabbed.urgbgcolor:  GREY0
-tabbed.urgfgcolor:  RED0
+tabbed.font:         FONT4
+tabbed.normbgcolor:  GREY0
+tabbed.normfgcolor:  WHITE0
+tabbed.selbgcolor:   PRIMARY
+tabbed.selfgcolor:   WHITE0
+tabbed.urgbgcolor:   RED0
+tabbed.urgfgcolor:   WHITE0
+tabbed.before:       <
+tabbed.after:        >
+tabbed.titletrim:    ...
+tabbed.tabwidth:     200
+tabbed.focusnew:     1
+tabbed.urgentswitch: 0
+tabbed.newposition:  0
+tabbed.npisrelative: 0
 
 ! vim:ft=xdefaults
