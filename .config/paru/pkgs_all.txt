@@ -41,7 +41,7 @@ bison
 blas
 bluez-libs
 boost-libs
-botan2
+botan
 brotli
 btop-git
 bubblewrap
