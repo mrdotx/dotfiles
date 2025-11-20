@@ -1,10 +1,12 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/yt-dlp/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:06+0200
+# date:   2025-11-20T06:09:46+0100
 
 # general
 --ignore-errors
+--js-runtimes node
+--remote-components ejs:github
 
 # network
 --force-ipv4
@@ -16,4 +18,4 @@
 --output "~/Downloads/%(creator,uploader|NA)s - %(title,id|NA)s [%(release_date,upload_date,epoch|NA)s].%(ext)s"
 --no-overwrites
 --continue
---cache-dir "/tmp/yt-dlp"
+--cache-dir "~/Downloads/yt-dlp"
