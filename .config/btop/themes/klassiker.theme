@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:25:58+0200
+# date:   2025-11-25T06:22:40+0100
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"
@@ -61,35 +61,35 @@ theme[proc_box]="#1f5393"
 # Box divider line and small boxes line color
 theme[div_line]="#2b2b2b"
 
-# CPU graph colors
-theme[cpu_start]="#1f5393"
-theme[cpu_mid]="#4185d7"
-theme[cpu_end]="#7ef9ff"
-
 # Temperature graph colors
 theme[temp_start]="#1f5393"
 theme[temp_mid]="#4185d7"
 theme[temp_end]="#df2800"
 
-# Mem/Disk used meter
-theme[used_start]="#1f5393"
-theme[used_mid]="#4185d7"
-theme[used_end]="#ff6fff"
+# CPU graph colors
+theme[cpu_start]="#1f5393"
+theme[cpu_mid]="#4185d7"
+theme[cpu_end]="#7ef9ff"
 
-# Mem/Disk available meter
-theme[available_start]="#1f5393"
-theme[available_mid]="#4185d7"
-theme[available_end]="#008081"
+# Mem/Disk free meter
+theme[free_start]="#1f5393"
+theme[free_mid]="#4185d7"
+theme[free_end]="#7ef9ff"
 
 # Mem/Disk cached meter
 theme[cached_start]="#1f5393"
 theme[cached_mid]="#4185d7"
 theme[cached_end]="#980096"
 
-# Mem/Disk free meter
-theme[free_start]="#1f5393"
-theme[free_mid]="#4185d7"
-theme[free_end]="#7ef9ff"
+# Mem/Disk available meter
+theme[available_start]="#1f5393"
+theme[available_mid]="#4185d7"
+theme[available_end]="#008081"
+
+# Mem/Disk used meter
+theme[used_start]="#1f5393"
+theme[used_mid]="#4185d7"
+theme[used_end]="#ff6fff"
 
 # Download graph colors
 theme[download_start]="#1f5393"
@@ -106,5 +106,8 @@ theme[upload_end]="#ff5555"
 theme[process_start]="#4185d7"
 theme[process_mid]="#4185d7"
 theme[process_end]="#7ef9ff"
+
+# Background color of the message when the process list is paused
+theme[proc_pause_bg]="#1f5393"
 
 # vim:ft=cfg
