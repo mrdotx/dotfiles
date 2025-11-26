@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-11-05T05:11:54+0100
+# date:   2025-11-26T06:12:41+0100
 
 # variables
 ###########
@@ -18,6 +18,15 @@ set $gap_px 10
 set $move 10 px
 set $resize 10 px or 5 ppt
 set $720p resize set 1280 720
+
+# colors (xresources)
+set_from_resource $black     i3wm.background
+set_from_resource $white     i3wm.foreground
+set_from_resource $primary   i3wm.primary
+set_from_resource $secondary i3wm.secondary
+set_from_resource $grey0     i3wm.grey0
+set_from_resource $grey1     i3wm.grey1
+set_from_resource $red       i3wm.red
 
 # config
 ########
@@ -49,6 +58,16 @@ workspace  8 output    primary nonprimary
 workspace  9 output nonprimary    primary
 workspace 10 output    primary nonprimary
 
+# colors
+# class                  border   background text   indicator child_border
+client.focused           $primary $secondary $white $primary  $primary
+client.focused_inactive  $grey1   $grey1     $white $grey0    $grey0
+client.focused_tab_title $primary $primary   $white
+client.unfocused         $grey0   $grey0     $white $black    $black
+client.urgent            $red     $red       $white $red      $red
+client.placeholder       #000000  $grey0     $white #000000   $grey0
+client.background        $black
+
 # config files
 ##############
 
@@ -72,9 +91,6 @@ include config.d/mode_nfs.conf
 include config.d/mode_notes.conf
 include config.d/mode_services.conf
 include config.d/mode_ssh.conf
-
-# theme
-include config.d/theme.conf
 
 # status bar
 #include config.d/status_bar.conf
