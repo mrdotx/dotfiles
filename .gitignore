@@ -1,10 +1,9 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.gitignore
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:25:32+0200
+# date:   2025-11-30T05:34:45+0100
 
 # .config
-/.config/btop/btop.log
 /.config/cmus/playlists/
 /.config/cmus/*-history
 /.config/cmus/autosave
@@ -12,7 +11,6 @@
 /.config/cmus/lib.pl
 /.config/cmus/queue.pl
 /.config/cmus/resume
-/.config/mc/mcedit/
 /.config/newsboat/history.*
 /.config/qutebrowser/bookmarks/
 /.config/qutebrowser/qsettings/
@@ -23,8 +21,6 @@
 /.config/zsh/.zcompdump
 
 # .local
-/.local/share/mc/mcedit/
-/.local/share/mc/filepos
 /.local/share/mc/history
 /.local/state/w3m/bookmark.html
 /.local/state/w3m/cookie
