@@ -1,11 +1,11 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zathura/klassiker.theme
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:11+0200
+# date:   2025-12-05T05:39:10+0100
 
 # colors girara
 set completion-bg           "#2b2b2b"
-set compeltion-fg           "#cccccc"
+set completion-fg           "#cccccc"
 set completion-group-bg     "#000000"
 set completion-group-fg     "#cccccc"
 set completion-highlight-bg "#4185d7"
