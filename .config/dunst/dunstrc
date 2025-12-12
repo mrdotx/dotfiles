@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-09-03T05:16:04+0200
+# date:   2025-12-12T05:55:05+0100
 
 [global]
     ### Display ###
@@ -347,31 +347,31 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#000000e6"
+    background = "#2b2b2bf2"
     foreground = "#ffffff"
-    frame_color = "#4185d7"
-    highlight = "#4185d7"
+    highlight = "#585858"
+    frame_color = "#585858"
     timeout = 5
     # Icon for notifications with low urgency
-    default_icon = dialog-information
+    default_icon = dialog-warning
 
 [urgency_normal]
-    background = "#1f5393e6"
+    background = "#1f5393f2"
     foreground = "#ffffff"
-    frame_color = "#4185d7"
     highlight = "#4185d7"
+    frame_color = "#4185d7"
     timeout = 5
     # Icon for notifications with normal urgency
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#df2800e6"
+    background = "#df2800f2"
     foreground = "#ffffff"
-    frame_color = "#ff5555"
     highlight = "#ff5555"
+    frame_color = "#ff5555"
     timeout = 0
     # Icon for notifications with critical urgency
-    default_icon = dialog-warning
+    default_icon = dialog-error
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
