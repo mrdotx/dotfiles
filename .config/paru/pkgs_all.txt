@@ -330,6 +330,7 @@ liblqr
 libluv
 liblzf
 libmad
+libmakepkg-dropins
 libmanette
 libmd
 libmfx
