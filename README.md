@@ -25,6 +25,7 @@ found in my other repositories.
 | npm               | javascript package manager                           |
 | nsxiv             | image viewer                                         |
 | nvim              | text editor, ide                                     |
+| nvtop             | interactive gpu process viewer                       |
 | pacman            | package manager utility                              |
 | paru              | aur helper                                           |
 | picom             | compositor                                           |
