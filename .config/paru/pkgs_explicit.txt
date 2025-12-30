@@ -84,7 +84,7 @@ openssh
 pacman-contrib
 pam-gnupg-git
 pandoc-bin
-paru-bin
+paru-git
 perl-image-exiftool
 picard
 picom
