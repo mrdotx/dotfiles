@@ -1,21 +1,25 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:23+0200
+# date:   2025-12-31T04:39:08+0100
 
 # if shell is not running interactive, break up
 tty -s \
     || return
 
 # history (same functionality as bash)
-# ignore duplicated commands history list
-setopt hist_ignore_dups
-# ignore commands that start with space
-setopt hist_ignore_space
 # show command with history expansion to user before running it
 setopt hist_verify
 # add commands to HISTFILE in order of execution
 setopt inc_append_history
+# ignore duplicate commands
+setopt hist_ignore_dups
+# ignore commands that start with a space
+setopt hist_ignore_space
+export \
+    HISTFILE="$HOME/.local/share/cmd_history" \
+    HISTSIZE=10000 \
+    SAVEHIST=5000
 
 # functions and aliases
 [ -f "$HOME/.config/functions" ] \

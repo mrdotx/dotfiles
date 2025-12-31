@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-10-02T05:37:35+0200
+# date:   2025-12-31T04:39:25+0100
 
 # xdg paths
 export \
@@ -23,12 +23,6 @@ export \
     XDG_PUBLICSHARE_DIR="$HOME/Public" \
     XDG_TEMPLATES_DIR="$HOME/Templates" \
     XDG_VIDEOS_DIR="$HOME/Videos"
-
-# history (same functionality as bash)
-export \
-    HISTFILE="$XDG_DATA_HOME/cmd_history" \
-    HISTSIZE=10000 \
-    SAVEHIST=5000
 
 # repository paths
 typeset -U PATH path
