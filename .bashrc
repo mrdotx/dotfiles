@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:25:28+0200
+# date:   2026-01-01T01:08:29+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -15,13 +15,16 @@ tty -s \
 shopt -s checkwinsize
 
 # history (same functionality as zsh)
-shopt -s histverify # show command with history expansion to user before running it
-shopt -s histappend # add commands to HISTFILE in order of execution
+# show command with history expansion to user before running it
+shopt -s histverify
+# add commands to HISTFILE in order of execution
+shopt -s histappend
+# ignore duplicate commands and commands that start with a space
 export \
+    HISTCONTROL=ignoreboth \
     HISTFILE="$HOME/.local/share/cmd_history" \
     HISTSIZE=10000 \
-    HISTFILESIZE=5000 \
-    HISTCONTROL=ignoreboth
+    HISTFILESIZE=5000
 
 # functions and aliases
 [ -f "$HOME/.config/functions" ] \
