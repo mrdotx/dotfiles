@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-11-25T06:22:40+0100
+# date:   2026-01-03T05:57:14+0100
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"
@@ -109,5 +109,16 @@ theme[process_end]="#7ef9ff"
 
 # Background color of the message when the process list is paused
 theme[proc_pause_bg]="#1f5393"
+
+# Background color of the message when the process is being followed
+theme[proc_follow_bg]="#4185d7"
+
+# Colors of the combined messages above
+theme[proc_banner_bg]="#4185d7"
+theme[proc_banner_fg]="#ffffff"
+
+# Colors of the followed process
+theme[followed_bg]="#4185d7"
+theme[followed_fg]="#ffffff"
 
 # vim:ft=cfg
