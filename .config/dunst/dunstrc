@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-12-12T05:55:05+0100
+# date:   2026-01-12T06:50:48+0100
 
 [global]
     ### Display ###
@@ -28,11 +28,11 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (250,720)
+    width = (250, 720)
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
-    height = (0,1054)
+    height = (0, 1054)
     # constant height of 300
     # height = 300
     # NOTE: Dunst from version 1.11 and older don't support dynamic height
@@ -44,7 +44,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (0,24)
+    offset = (0, 24)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
