@@ -73,6 +73,7 @@ ncdu
 neovim
 newsboat
 nfs-utils
+nodejs-readability-cli
 noto-fonts-emoji
 npm
 nsxiv-git
@@ -91,7 +92,6 @@ picom
 polkit
 polybar-git
 python-beautifulsoup4
-python-readability-lxml
 qt5ct
 qt6ct
 ranger-git

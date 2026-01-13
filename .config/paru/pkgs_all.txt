@@ -539,6 +539,7 @@ nfsidmap
 node-gyp
 nodejs
 nodejs-nopt
+nodejs-readability-cli
 noto-fonts-emoji
 npm
 npth
@@ -607,16 +608,13 @@ pugixml
 python
 python-beautifulsoup4
 python-certifi
-python-chardet
 python-charset-normalizer
-python-cssselect
 python-dateutil
 python-discid
 python-fasteners
 python-html5lib
 python-idna
 python-lxml
-python-lxml-html-clean
 python-markdown
 python-mutagen
 python-numpy
@@ -627,7 +625,6 @@ python-pycryptodomex
 python-pyjwt
 python-pyqt5
 python-pyqt5-sip
-python-readability-lxml
 python-requests
 python-simplejson
 python-six
