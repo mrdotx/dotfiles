@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:30+0200
+# date:   2026-01-22T06:49:48+0100
 
 # ranger (use ram as cache and change directory on exit)
 ranger_cd() {
@@ -36,7 +36,7 @@ ranger_cd() {
         || exit 1
 }
 
-# show pressed key of the keyboard (code and name)
+# show pressed keyboard key (code and name)
 keypress() {
     printf "code name (ctrl+q to exit)\n"
 
