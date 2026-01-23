@@ -1,7 +1,12 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-27T04:04:12+0200
+" date:   2026-01-23T06:28:16+0100
+
+" file type specific settings
+filetype on                         " enable file type detection
+filetype plugin on                  " load the plugins for specific file types
+filetype indent on                  " automatically indent code
 
 let python_highlight_all=1          " enable all python syntax highlightings
 set foldmethod=indent               " enable folding
@@ -48,6 +53,10 @@ set softtabstop=4                   " number of spaces in tab when editing
 set shiftwidth=4                    " the size of an indent
 set autoindent                      " indent when moving to the next line
 set colorcolumn=80                  " show width indicator
+
+" enable spell check
+autocmd FileType tex,latex,markdown,gitcommit
+    \ setlocal spell spelllang=en_us,de_de
 
 " python pep 8 style guide
 function! AutoPy()
