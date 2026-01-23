@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:33:17+0200
+" date:   2026-01-23T06:26:02+0100
 
 let g:init_config_folder='~/.config/nvim/init/'
 
@@ -67,7 +67,6 @@ function! SourceConfig(file)
     endif
 endfunction
 
-call SourceConfig('filetypes.vim')
 call SourceConfig('commands.vim')
 call SourceConfig('reload.vim')
 call SourceConfig('encrypt.vim')
