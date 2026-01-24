@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-01-12T06:50:48+0100
+# date:   2026-01-24T06:17:03+0100
 
 [global]
     ### Display ###
@@ -342,6 +342,12 @@
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
     per_monitor_dpi = false
+
+    # Pause notification timeout when mouse hovers over the notification window.
+    # When enabled, notifications won't timeout while the mouse pointer is over
+    # them. The timeout resumes when the pointer leaves the window.
+    # Only works on Wayland.
+    pause_on_mouse_over = false
 
 
 [urgency_low]
