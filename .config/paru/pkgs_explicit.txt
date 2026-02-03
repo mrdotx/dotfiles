@@ -140,7 +140,7 @@ xorg-xkill
 xorg-xwininfo
 xsel
 xwallpaper
-yt-dlp
+yt-dlp-stripped
 zathura
 zathura-cb
 zathura-djvu

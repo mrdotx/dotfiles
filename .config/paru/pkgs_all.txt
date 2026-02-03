@@ -803,7 +803,7 @@ xwallpaper
 xxhash
 xz
 yajl
-yt-dlp
+yt-dlp-stripped
 zathura
 zathura-cb
 zathura-djvu
