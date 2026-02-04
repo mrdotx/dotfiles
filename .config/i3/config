@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-11-26T06:12:41+0100
+# date:   2026-02-04T06:24:06+0100
 
 # variables
 ###########
@@ -61,7 +61,7 @@ workspace 10 output    primary nonprimary
 # colors
 # class                  border   background text   indicator child_border
 client.focused           $primary $secondary $white $primary  $primary
-client.focused_inactive  $grey1   $grey1     $white $grey0    $grey0
+client.focused_inactive  $grey1   $grey1     $white $grey1    $grey1
 client.focused_tab_title $primary $primary   $white
 client.unfocused         $grey0   $grey0     $white $black    $black
 client.urgent            $red     $red       $white $red      $red
