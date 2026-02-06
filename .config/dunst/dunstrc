@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-01-24T06:17:03+0100
+# date:   2026-02-06T06:10:18+0100
 
 [global]
     ### Display ###
@@ -453,6 +453,8 @@
 #        If the notification is already drawn, it won't get undrawn.
 # pushback: same as delay, but when switching into fullscreen, the notification will get
 #           withdrawn from screen again and will get delayed like a new notification
+# suppress: withdraw the displayed notification when entering fullscreen and never show
+#           the new notifications that arrive during fullscreen mode
 #[fullscreen_delay_everything]
 #    fullscreen = delay
 #[fullscreen_show_critical]
