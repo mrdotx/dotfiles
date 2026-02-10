@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-12-31T04:39:08+0100
+# date:   2026-02-10T06:16:38+0100
 
 # if shell is not running interactive, break up
 tty -s \
@@ -135,4 +135,5 @@ bindkey '^[[B' history-substring-search-down
 # autostart
 [ -z "$RANGER_LEVEL" ] \
     && [ $(id -u) -eq 1000 ] \
-    && cinfo
+    && cinfo \
+    || return 0
