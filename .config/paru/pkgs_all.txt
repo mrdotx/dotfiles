@@ -250,9 +250,11 @@ lib2geom
 libabw
 libao
 libarchive
+libasan
 libass
 libassuan
 libasyncns
+libatomic
 libatomic_ops
 libavc1394
 libavif
@@ -304,9 +306,12 @@ libfontenc
 libfreehand
 libftdi
 libfyaml
+libgcc
 libgcrypt
 libgexiv2
+libgfortran
 libglvnd
+libgomp
 libgpg-error
 libgphoto2
 libgudev
@@ -327,6 +332,7 @@ libksba
 liblangtag
 libldap
 liblqr
+liblsan
 libluv
 liblzf
 libmad
@@ -359,6 +365,7 @@ libnl
 libnotify
 libnsl
 libnumbertext
+libobjc
 libodfgen
 libogg
 libopenmpt
@@ -378,6 +385,7 @@ libproxy
 libpsl
 libptytty
 libpulse
+libquadmath
 libqxp
 libraqm
 libraw
@@ -402,6 +410,7 @@ libspiro
 libssh
 libssh2
 libstaroffice
+libstdc++
 libstemmer
 libsynctex
 libsysprof-capture
@@ -413,6 +422,8 @@ libtirpc
 libtommath
 libtool
 libtpms
+libtsan
+libubsan
 libunibreak
 libunistring
 libunwind
@@ -811,6 +822,7 @@ zathura-pdf-mupdf
 zathura-ps
 zeromq
 zimg
+zint
 zlib
 zlib-ng
 zsh
