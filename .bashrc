@@ -1,30 +1,25 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-01-01T01:08:29+0100
+# date:   2026-02-28T05:25:45+0100
 
 # if shell is not running interactive, break up
 tty -s \
     || return
 
-# SIGWINCH
-# Bash won't get SIGWINCH if another process is in the foreground.
-# Enable checkwinsize so that bash will check the terminal size when
-# it regains control.  #65623
-# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
-shopt -s checkwinsize
-
 # history (same functionality as zsh)
 # show command with history expansion to user before running it
 shopt -s histverify
-# add commands to HISTFILE in order of execution
+# add commands to HISTFILE when shell exits
 shopt -s histappend
-# ignore duplicate commands and commands that start with a space
+# ignore command line that start with a space
+# ignore command line if it is identical to the previous one
+# older duplicate command lines are removed when saving
 export \
-    HISTCONTROL=ignoreboth \
+    HISTCONTROL=ignorespace:ignoredups:erasedups \
     HISTFILE="$HOME/.local/share/cmd_history" \
-    HISTSIZE=10000 \
-    HISTFILESIZE=5000
+    HISTSIZE=2000 \
+    HISTFILESIZE=20000
 
 # functions and aliases
 [ -f "$HOME/.config/functions" ] \
