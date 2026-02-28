@@ -1,13 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-02-28T05:25:45+0100
+# date:   2026-02-28T08:34:54+0100
 
 # if shell is not running interactive, break up
 tty -s \
     || return
 
-# history (same functionality as zsh)
+# history (almost the same functionality as zsh)
 # show command with history expansion to user before running it
 shopt -s histverify
 # add commands to HISTFILE when shell exits
