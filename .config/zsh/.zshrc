@@ -1,17 +1,17 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zshrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-02-28T05:26:04+0100
+# date:   2026-02-28T08:34:04+0100
 
 # if shell is not running interactive, break up
 tty -s \
     || return
 
-# history (same functionality as bash)
+# history (almost the same functionality as bash)
 # show command with history expansion to user before running it
 setopt hist_verify
-# add commands to HISTFILE when shell exits
-setopt append_history
+# add commands to HISTFILE as soon as ther entered
+setopt inc_append_history
 # ignore command line that start with a space
 setopt hist_ignore_space
 # ignore command line if it is identical to the previous one
