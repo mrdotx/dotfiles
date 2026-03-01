@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2025-08-05T05:43:07+0200
+! date:   2026-03-01T06:30:14+0100
 
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \
@@ -18,7 +18,7 @@ URxvt.refreshRate:                 0
 URxvt.scrollBar:                   false
 URxvt.iso14755:                    false
 URxvt.iso14755_52:                 false
-URxvt.saveLines:                   500
+URxvt.saveLines:                   2000
 
 ! perl extensions
 URxvt.perl-ext-common:             eval,matcher,selection,selection-to-clipboard,keyboard-select,resize-font
