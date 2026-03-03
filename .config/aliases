@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:27+0200
+# date:   2026-03-03T05:58:22+0100
 
 # colors
 alias \
@@ -23,7 +23,6 @@ alias \
     ln='ln -i' \
     md='mkdir -pv' \
     rd='rmdir -v' \
-    tx='i3_tmux.sh' \
     rg='ranger_cd' \
     rs='$EXEC_AS_USER ranger' \
     mc='mc -x' \
@@ -36,11 +35,11 @@ alias \
     fa='fzf_alsa.sh' \
     fbr='fzf_bulkrename.sh' \
     fcp='fzf_cpupower.sh' \
+    ff='fzf_find.sh' \
     fiwd='fzf_iwd.sh' \
     fm='fzf_mount.sh' \
     fman='fzf_man.sh' \
     fp='fzf_pacman.sh' \
-    ff='fzf_find.sh' \
     fs='fzf_ssh.sh' \
     ft='fzf_trash.sh' \
     fu='fzf_usb.sh' \
