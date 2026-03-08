@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aliases
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-03-03T05:58:22+0100
+# date:   2026-03-08T05:23:55+0100
 
 # colors
 alias \
@@ -53,8 +53,8 @@ alias \
     tm='systemctl --no-pager list-timers --all; systemctl --no-pager list-timers --all --user' \
     ur='systemctl --no-pager list-units --state=running; systemctl --no-pager --user list-units --state=running' \
     dr='$EXEC_AS_USER systemctl daemon-reload; systemctl daemon-reload --user' \
-    cu='checkupdates; paru -Qua' \
-    up='paru -Syu' \
+    cu='checkupdates' \
+    up='$EXEC_AS_USER pacman -Syu' \
     sc='system_cleanup.sh' \
     bs='backup_system.sh' \
     bk='backup_keys.sh' \
