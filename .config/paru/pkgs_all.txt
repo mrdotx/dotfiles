@@ -569,6 +569,7 @@ opendoas-sudo
 openexr
 openh264
 openjpeg2
+openjph
 openmp
 openscenegraph
 openssh
