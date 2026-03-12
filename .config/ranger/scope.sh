@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:41:01+0200
+# date:   2026-03-12T05:47:00+0100
 
 # exit | function   | action of ranger
 
@@ -125,7 +125,7 @@ handle_extension() {
             | lz | lzh | lzma | lzo | msi | pkg | rar | rpm | swm | tar | taz \
             | tbz | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf | war | wim \
             | xar | xpi | xz | z | zip | zst)
-                # requires compressor.sh (https://github.com/mrdotx/shell)
+                # REQUIRES: compressor.sh (https://github.com/mrdotx/shell)
                 timeout 5 compressor.sh --list "$file_path" \
                     && exit 0
                 exit 1
