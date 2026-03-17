@@ -2,6 +2,7 @@
 abseil-cpp
 acl
 acorn
+ada
 adwaita-cursors
 adwaita-fonts
 adwaita-icon-theme
