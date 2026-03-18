@@ -538,7 +538,7 @@ msgpack-c
 mtdev
 mtools
 mujs
-mypaint-brushes1
+mypaint-brushes
 ncdu
 ncurses
 neon
