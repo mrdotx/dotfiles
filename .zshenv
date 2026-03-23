@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-12-31T04:39:25+0100
+# date:   2026-03-23T05:32:31+0100
 
 # xdg paths
 export \
@@ -54,7 +54,7 @@ systemctl --user import-environment PATH
 # config paths
 export \
     XINITRC="$XDG_CONFIG_HOME/X11/xinit/xinitrc" \
-    XAUTHORITY="$XDG_DATA_HOME/xorg/Xauthority" \
+    XAUTHORITY="$XDG_STATE_HOME/xorg/Xauthority" \
     ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
     PASSWORD_STORE_DIR="$XDG_DATA_HOME/repos/password-store" \
