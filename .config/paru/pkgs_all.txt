@@ -513,6 +513,7 @@ lshw
 lsof
 lua
 lua51-lpeg
+lua54
 luajit
 lxappearance
 lz4
