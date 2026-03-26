@@ -344,6 +344,7 @@ libmfx
 libmicrohttpd
 libmnl
 libmodplug
+libmp4v2
 libmpc
 libmpcdec
 libmpdclient
