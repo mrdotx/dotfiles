@@ -7,6 +7,7 @@ found in my other repositories.
 | config            | description                                          |
 | :---------------- | :--------------------------------------------------- |
 | aria2             | download manager                                     |
+| aurutils          | aur helper tools                                     |
 | bash              | shell                                                |
 | btop              | resource monitor that shows usage and stats          |
 | cdw               | terminal front-end for cdrecord                      |
