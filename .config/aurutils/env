@@ -1,12 +1,12 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/aurutils/env
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/etc
-# date:   2026-04-02T05:58:41+0200
+# date:   2026-04-04T05:52:26+0200
 
-AUR_DBROOT=/srv/aurbuild
+AUR_DBROOT=/srv/pkgs/aurbuild
 AUR_REPO=aurbuild
-#AURDEST=/srv/aurutils/sync
-#AUR_VIEW_DB=/srv/aurutils/view
+#AURDEST=/srv/pkgs/aurutils/sync
+#AUR_VIEW_DB=/srv/pkgs/aurutils/view
 AUR_PAGER=ranger
 AUR_PACMAN_AUTH=doas
 
