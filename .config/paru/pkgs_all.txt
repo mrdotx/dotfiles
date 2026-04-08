@@ -550,6 +550,7 @@ nettle
 newsboat
 nfs-utils
 nfsidmap
+nftables
 node-gyp
 nodejs
 nodejs-nopt
