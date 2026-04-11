@@ -665,7 +665,6 @@ qt6-svg
 qt6-tools
 qt6-translations
 qt6ct
-ragel
 ranger-git
 raptor
 rasqal
