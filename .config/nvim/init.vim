@@ -1,9 +1,9 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-01-26T06:06:56+0100
+" date:   2026-04-23T05:19:26+0200
 
-let g:init_config_folder='~/.config/nvim/init/'
+let g:init_config_dir='~/.config/nvim/init/'
 
 " provider
 let g:loaded_node_provider=0
@@ -59,7 +59,7 @@ set smartcase                       " ...unless capital letters are used
 
 " config files
 function! SourceConfig(file)
-    let l:config=g:init_config_folder.a:file
+    let l:config=g:init_config_dir.a:file
     if !empty(glob(l:config))
         execute 'source' l:config
     else
