@@ -1,10 +1,10 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:32:53+0200
+" date:   2026-04-23T05:19:46+0200
 
-let g:plugged_folder='~/.local/share/nvim/plugged/'
-let g:plugged_config_folder='~/.config/nvim/init/plugins/'
+let g:plugged_dir='~/.local/share/nvim/plugged/'
+let g:plugged_config_dir='~/.config/nvim/init/plugins/'
 
 " vim-plug autoinstall
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -14,7 +14,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 " plugins
-call plug#begin(g:plugged_folder)
+call plug#begin(g:plugged_dir)
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'brenoprata10/nvim-highlight-colors'
@@ -27,11 +27,11 @@ call plug#begin(g:plugged_folder)
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
-" if plugin folder exists source config file
+" if plugin directory exists source config file
 function! SourcePlugin(action, plugin_name)
-    let l:plugin=g:plugged_folder.a:plugin_name
+    let l:plugin=g:plugged_dir.a:plugin_name
     let l:config_name=split(a:plugin_name, '\.')
-    let l:config=g:plugged_config_folder.l:config_name[0]
+    let l:config=g:plugged_config_dir.l:config_name[0]
     if a:action=='lua'
         let l:config=l:config.'.lua'
     else
