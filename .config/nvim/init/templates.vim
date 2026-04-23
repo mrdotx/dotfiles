@@ -1,14 +1,14 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:33:01+0200
+" date:   2026-04-23T05:19:56+0200
 
-let g:template_folder='~/.config/nvim/init/templates/'
+let g:template_dir='~/.config/nvim/init/templates/'
 
 " use template for specific file types when creating new file
 function! NewTemplate(file)
     let l:file_type=split(a:file, '\.')
-    let l:config=g:template_folder.a:file
+    let l:config=g:template_dir.a:file
     let l:template='autocmd BufNewFile *.'.l:file_type[0]
         \ .' 0r '
         \ .l:config
