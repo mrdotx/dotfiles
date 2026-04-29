@@ -2,7 +2,7 @@
 path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/commands.py
 author: klassiker [mrdotx]
 url:    https://github.com/mrdotx/dotfiles
-date:   2025-08-05T05:40:48+0200
+date:   2026-04-29T05:07:23+0200
 """
 
 # from __future__ import (absolute_import, division, print_function)
@@ -16,7 +16,7 @@ class fzf_find(Command):
     """
     :fzf_find <optional find options>
 
-    Search(find) for files/folders and use fzf_find.sh to preview/select.
+    Search(find) for files/directories and use fzf_find.sh to preview/select.
     """
     def execute(self):
         if self.arg(1):
@@ -42,7 +42,7 @@ class fzf_tagged(Command):
     """
     :fzf_tagged
 
-    Search for tagged files/folders and use fzf_find.sh to preview/select.
+    Search for tagged files/directories and use fzf_find.sh to preview/select.
     """
     def execute(self):
         command = "cut -d':' -f2 \"$HOME/.local/share/ranger/tagged\" \
