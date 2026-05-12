@@ -68,6 +68,7 @@ colord-gtk-common
 compiler-rt
 confuse
 coreutils
+cpio
 cpupower
 cryptsetup
 cups
@@ -133,6 +134,8 @@ gcc
 gcc-libs
 gcr
 gd
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gegl
@@ -697,6 +700,7 @@ smbclient
 snappy
 sndio
 sound-theme-freedesktop
+source-highlight
 spdlog
 speedtest-cli
 speex
