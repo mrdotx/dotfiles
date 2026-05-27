@@ -1,25 +1,26 @@
 ! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/st
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2025-08-05T05:43:14+0200
+! date:   2026-05-27T05:07:00+0200
 
-st.font:         FONT0
-st.font0:        FONT1
-st.font1:        FONT2
-st.font2:        FONT3
-st.background:   BLACK0
-st.foreground:   WHITE1
-st.cursorColor:  PRIMARY
-st.termname:     st-256color
-st.shell:        /bin/sh
-st.minlatency:   8
-st.maxlatency:   33
-st.blinktimeout: 800
-st.bellvolume:   0
-st.tabspaces:    8
-st.borderpx:     2
-st.cwscale:      1.0
-st.chscale:      1.0
-st.alpha:        ALPHA
+st.font:           FONT0
+st.font0:          FONT1
+st.font1:          FONT2
+st.font2:          FONT3
+st.background:     BLACK0
+st.foreground:     WHITE1
+st.cursorColor:    PRIMARY
+st.termname:       st-256color
+st.shell:          /bin/sh
+st.minlatency:     8
+st.maxlatency:     33
+st.blinktimeout:   800
+st.bellvolume:     0
+st.tabspaces:      8
+st.borderpx:       2
+st.disable_errmsg: 1
+st.cwscale:        1.0
+st.chscale:        1.0
+st.alpha:          ALPHA
 
 ! vim:ft=xdefaults
