@@ -535,6 +535,7 @@ mesa
 mesa-utils
 mkinitcpio
 mkinitcpio-busybox
+moka-icon-theme-git
 mpdecimal
 mpfr
 mpg123
@@ -627,7 +628,9 @@ pugixml
 python
 python-beautifulsoup4
 python-certifi
+python-cffi
 python-charset-normalizer
+python-cryptography
 python-dateutil
 python-discid
 python-fasteners
@@ -640,6 +643,7 @@ python-numpy
 python-packaging
 python-pillow
 python-psutil
+python-pycparser
 python-pycryptodomex
 python-pyjwt
 python-pyqt5
