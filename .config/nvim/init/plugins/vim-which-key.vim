@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-09-02T04:48:43+0200
+" date:   2026-06-03T05:06:30+0200
 
 set timeoutlen=500                  " by default timeoutlen is 1000 ms
 
@@ -10,6 +10,12 @@ let g:which_key_fallback_to_native_key=1
 let g:which_key_display_names={ ' ': 'space' }
 let g:which_key_disable_default_offset=1
 let g:which_key_centered=0
+
+" hide statusline
+autocmd! FileType which_key
+    \ set laststatus=0 noruler
+autocmd FileType which_key
+    \ autocmd BufLeave <buffer> set laststatus=2 ruler
 
 " color mappings
 hi default link WhichKey          SpecialChar
