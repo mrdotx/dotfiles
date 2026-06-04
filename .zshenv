@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-05-19T05:13:40+0200
+# date:   2026-06-04T04:50:48+0200
 
 # xdg paths
 export \
@@ -20,6 +20,7 @@ export \
     XDG_DOWNLOAD_DIR="$HOME/Downloads" \
     XDG_MUSIC_DIR="$HOME/Music" \
     XDG_PICTURES_DIR="$HOME/Pictures" \
+    XDG_PROJECTS_DIR="$HOME/Projects" \
     XDG_PUBLICSHARE_DIR="$HOME/Public" \
     XDG_TEMPLATES_DIR="$HOME/Templates" \
     XDG_VIDEOS_DIR="$HOME/Videos"
