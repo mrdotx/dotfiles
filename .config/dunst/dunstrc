@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-03-27T05:35:37+0100
+# date:   2026-06-08T05:12:59+0200
 
 [global]
     ### Display ###
@@ -35,8 +35,6 @@
     height = (0, 1054)
     # constant height of 300
     # height = 300
-    # NOTE: Dunst from version 1.11 and older don't support dynamic height
-    #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
     origin = top-center
