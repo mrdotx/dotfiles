@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/wacom.service
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/wacom
-# date:   2025-08-05T05:41:28+0200
+# date:   2026-06-12T05:44:14+0200
 
 [Unit]
 Description=configure wacom tablet
@@ -10,7 +10,7 @@ PartOf=i3.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=%h/.local/share/repos/wacom/wacom.sh
+ExecStart=%h/Projects/repos/wacom/wacom.sh
 
 [Install]
 WantedBy=i3.target
