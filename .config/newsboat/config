@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-02-16T06:31:22+0100
+# date:   2026-06-13T04:42:07+0200
 
 # general
 refresh-on-startup yes
@@ -19,7 +19,7 @@ download-path "~/Downloads/"
 urls-source "freshrss"
 freshrss-url "http://m625q/freshrss/api/greader.php"
 freshrss-login "klassiker"
-freshrss-passwordeval "gpg -q -d ~/.local/share/repos/password-store/www/development/freshrss_api.gpg"
+freshrss-passwordeval "gpg -q -d ~/Projects/repos/password-store/www/development/freshrss_api.gpg"
 freshrss-flag-star "s"
 freshrss-min-items 99999
 
