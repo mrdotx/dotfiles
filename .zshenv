@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-06-12T04:53:15+0200
+# date:   2026-06-13T04:39:35+0200
 
 # xdg paths
 export \
@@ -58,7 +58,7 @@ export \
     XAUTHORITY="$XDG_STATE_HOME/xorg/Xauthority" \
     ZDOTDIR="$XDG_CONFIG_HOME/zsh" \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
-    PASSWORD_STORE_DIR="$XDG_DATA_HOME/repos/password-store" \
+    PASSWORD_STORE_DIR="$XDG_PROJECTS_DIR/repos/password-store" \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
     GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
