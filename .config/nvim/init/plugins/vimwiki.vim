@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vimwiki.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:30:34+0200
+" date:   2026-06-15T04:46:08+0200
 
 let notes={
     \ 'path': '$HOME/Documents/Notes',
@@ -10,10 +10,10 @@ let notes={
     \ 'ext': '.md',
     \ 'auto_export': 1,
     \ 'automatic_nested_syntaxes': 1,
-    \ 'template_path': '$HOME/.local/share/repos/vimwiki-pandoc/template/',
+    \ 'template_path': '$HOME/Projects/repos/vimwiki-pandoc/template/',
     \ 'template_default': 'github',
     \ 'template_ext': '.html5',
-    \ 'custom_wiki2html': '$HOME/.local/share/repos/vimwiki-pandoc/wiki2html.sh'
+    \ 'custom_wiki2html': '$HOME/Projects/repos/vimwiki-pandoc/wiki2html.sh'
 \ }
 
 let g:vimwiki_list=[notes]
