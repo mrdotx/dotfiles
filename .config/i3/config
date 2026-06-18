@@ -1,12 +1,13 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-02-04T06:24:06+0100
+# date:   2026-06-18T04:17:56+0200
 
 # variables
 ###########
 
 set $sup Mod4
+set $num Mod2
 set $alt Mod1
 set $font pango:DejaVu Sans 9
 set $nofont pango:DejaVu Sans 0
