@@ -1,0 +1,17 @@
+# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/numlockx.service
+# author: klassiker [mrdotx]
+# url:    https://github.com/mrdotx/dotfiles
+# date:   2026-06-18T04:09:50+0200
+
+[Unit]
+Description=enable numlock
+PartOf=i3.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/numlockx on
+ExecStop=/usr/bin/numlockx off
+
+[Install]
+WantedBy=i3.target
