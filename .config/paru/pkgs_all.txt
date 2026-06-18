@@ -565,6 +565,7 @@ npth
 nspr
 nss
 nsxiv-git
+numlockx
 nvtop-git
 ocl-icd
 onetbb
