@@ -263,6 +263,7 @@ libatomic_ops
 libavc1394
 libavif
 libb2
+libblake3
 libbluray
 libbpf
 libbs2b
