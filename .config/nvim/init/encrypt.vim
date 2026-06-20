@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/encrypt.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-06-05T04:55:46+0200
+" date:   2026-06-20T05:00:00+0200
 
 " edit gpg encrypted files
 augroup encrypt
@@ -22,10 +22,8 @@ augroup encrypt
     " convert text to encrypted data before writing
     autocmd BufWritePre,FileWritePre *.asc
         \ %!gpg --quiet --encrypt --default-recipient-self --armor
-    " WORKAROUND: shelltemp to split \r, \n and \r\n correctly
-    " https://github.com/neovim/neovim/pull/39558
     autocmd BufWritePre,FileWritePre *.gpg
-        \ setlocal binary shelltemp
+        \ setlocal binary
         \ | %!gpg --quiet --encrypt --default-recipient-self
     autocmd BufWritePost,FileWritePost *.asc,*.gpg
         \ silent undo
