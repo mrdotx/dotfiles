@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/nsxiv/exec/key-handler
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:29:21+0200
+# date:   2026-06-25T03:41:32+0200
 
 realpaths() {
     while read -r file; do
@@ -34,7 +34,7 @@ transform() {
                         mogrify -flip "$path"
                         ;;
                     *)
-                        mogrify  -rotate "$1" "$path"
+                        mogrify -rotate "$1" "$path"
                         ;;
                 esac
                 ;;
