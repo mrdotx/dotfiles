@@ -1,31 +1,31 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/reload.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-09-07T06:12:48+0200
+" date:   2026-06-26T03:35:13+0200
 
 " if tmux is running reload tmux config whenever the tmux config is updated
 autocmd BufWritePost *.config/tmux/tmux.conf
-    \ !pgrep tmux >/dev/null 2>&1
+    \ silent !pgrep tmux >/dev/null 2>&1
     \ && tmux source-file ~/.config/tmux/tmux.conf
 
 " merge xrdb whenever the xresources configs are updated
 autocmd BufWritePost *.config/X11/Xresources.d/*
                    \,*.config/X11/Xresources
-    \ !xrdb -merge ~/.config/X11/Xresources
+    \ silent !xrdb -merge ~/.config/X11/Xresources
 autocmd BufWritePost *.config/X11/Xresources.d/wallpaper
-    \ !systemctl --user restart wallpaper.service
+    \ silent !systemctl --user restart wallpaper.service
 
 " reload i3 whenever the i3 configs are updated
 autocmd BufWritePost *.config/i3/*
                    \,*.config/X11/Xresources
-    \ !i3-msg -- reload >/dev/null 2>&1
+    \ silent !i3-msg -- reload >/dev/null 2>&1
 
 " restart polybar whenever the polybar configs are updated
 autocmd BufWritePost *.config/polybar/*
                    \,*.config/X11/Xresources
                    \,*.config/X11/Xresources.d/polybar
-    \ !systemctl --user restart polybar.service
+    \ silent !systemctl --user restart polybar.service
 
 " reload dunst whenever the dunst config is updated
 autocmd BufWritePost *.config/dunst/dunstrc
-    \ !dunstctl reload && notify-send 'dunst' 'restarted'
+    \ silent !dunstctl reload
