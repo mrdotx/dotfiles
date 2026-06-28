@@ -321,6 +321,7 @@ libgpg-error
 libgphoto2
 libgudev
 libheif
+libhwasan
 libice
 libidn
 libidn2
