@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-07T04:43:51+0200
+# date:   2026-07-07T04:46:58+0200
 
 # xdg paths
 export \
@@ -60,17 +60,17 @@ export \
     RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd" \
     PASSWORD_STORE_DIR="$XDG_PROJECTS_DIR/repos/password-store" \
     NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc" \
-    GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc:$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine" \
     PYLINTHOME="$XDG_CACHE_HOME/pylint" \
     KODI_DATA="$XDG_DATA_HOME/kodi"
 
-# standard apps
+# standards
 export \
     EXEC_AS_USER="doas" \
     TERMINAL="st" \
     EDITOR="nvim" \
     DIFFPROG="nvim -d" \
-    PAGER="less"
+    PAGER="less" \
+    PRINTER="ML-2525"
 
 # app settings
 export \
