@@ -3,7 +3,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-03-12T05:47:00+0100
+# date:   2026-07-07T04:50:29+0200
 
 # exit | function   | action of ranger
 
@@ -120,11 +120,11 @@ handle_image() {
 
 handle_extension() {
     case "$file_extension" in
-        7z | a | alz | apk | arj | bz | bz2 | bzip2 | cab | cb7 | cbt | chm \
-            | chw | cpio | deb | dmg | gz | gzip | hxs | img | iso | jar | lha \
-            | lz | lzh | lzma | lzo | msi | pkg | rar | rpm | swm | tar | taz \
-            | tbz | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf | war | wim \
-            | xar | xpi | xz | z | zip | zst)
+        7z | a | alz | apk | arj | bz | bz2 | bzip2 | cab | cb7 | cbr | cbt \
+            | cbz | chm | chw | cpio | deb | dmg | gz | gzip | hxs | img | iso \
+            | jar | lha | lz | lzh | lzma | lzo | msi | pkg | rar | rpm | swm \
+            | tar | taz | tbz | tbz2 | tgz | tlz | txz | tz2 | tzo | tzst | udf \
+            | war | wim | xar | xpi | xz | z | zip | zst)
                 # REQUIRES: compressor.sh (https://github.com/mrdotx/shell)
                 timeout 5 compressor.sh --list "$file_path" \
                     && exit 0
