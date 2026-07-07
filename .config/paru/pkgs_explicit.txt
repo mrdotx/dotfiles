@@ -69,6 +69,7 @@ man-pages
 mc
 mesa-utils
 mpv
+mupdf
 ncdu
 neovim
 newsboat
@@ -142,11 +143,6 @@ xorg-xwininfo
 xsel
 xwallpaper
 yt-dlp-stripped
-zathura
-zathura-cb
-zathura-djvu
-zathura-pdf-mupdf
-zathura-ps
 zsh
 zsh-autosuggestions
 zsh-completions
