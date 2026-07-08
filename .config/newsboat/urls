@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:29:05+0200
+# date:   2026-07-08T04:56:45+0200
 
 # queries
 "query:┌─unread:unread = \"yes\""
@@ -17,7 +17,7 @@
 "query:│ │ └─local:tags # \"news/local\""
 "query:│ ├─tech:tags # \"tech\""
 "query:│ ├─linux:tags # \"linux\""
-"query:│ │ ├─reddit:tags # \"linux/reddit\""
+"query:│ │ ├─tools:tags # \"linux/tools\""
 "query:│ │ └─suckless:tags # \"linux/suckless\""
 "query:│ ├─youtube:tags # \"youtube\""
 "query:│ │ ├─linux:tags # \"youtube/linux\""
