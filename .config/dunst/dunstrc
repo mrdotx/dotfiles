@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/dunst/dunstrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-06-08T05:12:59+0200
+# date:   2026-07-10T00:53:48+0200
 
 [global]
     ### Display ###
@@ -245,7 +245,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 0
+    max_icon_size = 100
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/Arc/status/16/:/usr/share/icons/Arc/devices/16/
