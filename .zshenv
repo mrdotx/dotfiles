@@ -1,7 +1,7 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.zshenv
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-09T05:23:45+0200
+# date:   2026-07-10T00:52:29+0200
 
 # xdg paths
 export \
@@ -30,7 +30,7 @@ typeset -U PATH path
 path=( \
     "$XDG_DATA_HOME/repos/dmenu/scripts" \
     "$XDG_DATA_HOME/repos/efistub" \
-    "$XDG_DATA_HOME/repos/epg" \
+    "$XDG_PROJECTS_DIR/repos/epg" \
     "$XDG_DATA_HOME/repos/fzf" \
     "$XDG_DATA_HOME/repos/i3" \
     "$XDG_PROJECTS_DIR/repos/ironos-flasher" \
