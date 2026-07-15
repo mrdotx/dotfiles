@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-04-23T05:19:26+0200
+" date:   2026-07-15T03:29:29+0200
 
 let g:init_config_dir='~/.config/nvim/init/'
 
@@ -30,6 +30,7 @@ hi FoldedColumn guibg=NONE
 
 " ui config
 set clipboard+=unnamedplus          " clipboard
+set history=25                      " history size
 set noswapfile                      " swapfile
 set number relativenumber           " show hybrid line numbers and numbertoggle
 augroup numbertoggle
