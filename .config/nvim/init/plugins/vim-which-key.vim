@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-06-03T05:06:30+0200
+" date:   2026-07-15T03:30:02+0200
 
 set timeoutlen=500                  " by default timeoutlen is 1000 ms
 
@@ -32,8 +32,10 @@ call which_key#register('g', "g:goto_dict")
 " main description dictionary
 let g:main_dict={
     \ 'name': '+main',
-    \ ',': 'netrw file explorer',
-    \ '.': {
+    \ '.': 'search random line',
+    \ '/': 'reset search highlighting',
+    \ ';': 'netrw file explorer',
+    \ '''': {
         \ 'name': '+remote',
         \ 'b': 'macbook',
         \ 'd': 'm75q',
@@ -42,7 +44,6 @@ let g:main_dict={
         \ 'p': 'prinzipal',
         \ 'r': 'marcus'
     \ },
-    \ '/': 'reset search highlighting',
     \ '[': 'goto previous changed git hunk',
     \ ']': 'goto next changed git hunk',
     \ 'b': {

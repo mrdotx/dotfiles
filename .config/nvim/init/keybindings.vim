@@ -1,13 +1,14 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/keybindings.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-30T05:10:30+0200
+" date:   2026-07-15T03:29:48+0200
 
 " switch/exchange windows
 nnoremap                <tab>       <c-w>w
 nnoremap                <s-tab>     <c-w>x
 
-" turn off search highlight
+" search/turn off search highlighting
+nnoremap <silent>       <leader>.   :call SearchRandomLine()<cr>
 nnoremap <silent>       <leader>/   :nohlsearch<cr>
 
 " buffers

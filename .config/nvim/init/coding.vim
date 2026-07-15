@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-01-25T06:34:13+0100
+" date:   2026-07-15T03:29:39+0200
 
 " general
 set autoindent                      " indent when moving to the next line
@@ -57,3 +57,15 @@ function! MarkCharactersToggle()
     endif
 endfunction
 silent! call MarkCharactersToggle()
+
+" search random line
+function! SearchRandomLine()
+    while 1
+        let l:random_line = 1 + (rand() % line('$'))
+        if getline(l:random_line) !~? '^\s*$'
+            call feedkeys('/\%'.l:random_line.'l'."\<cr>zz")
+            call timer_start(50, {-> histdel('/', -1)})
+            break
+        endif
+    endwhile
+endfunction

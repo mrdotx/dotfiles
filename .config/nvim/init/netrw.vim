@@ -1,7 +1,7 @@
 " path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/netrw.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-09-02T04:48:33+0200
+" date:   2026-07-15T03:29:53+0200
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -66,11 +66,11 @@ augroup netrw_mappings
 augroup END
 
 " keybindings
-nnoremap <silent>   <leader><leader>    :call NetrwToggle()<cr>
+nnoremap <silent>   <leader>;   :call NetrwToggle()<cr>
 
-nnoremap <silent>   <leader>.b  :edit scp://macbook/ <bar> call NetrwToggle()<cr>
-nnoremap <silent>   <leader>.d  :edit scp://m75q/ <bar> call NetrwToggle()<cr>
-nnoremap <silent>   <leader>.m  :edit scp://m625q/ <bar> call NetrwToggle()<cr>
-nnoremap <silent>   <leader>.n  :edit scp://t14/ <bar> call NetrwToggle()<cr>
-nnoremap <silent>   <leader>.p  :edit scp://prinzipal/ <bar> call NetrwToggle()<cr>
-nnoremap <silent>   <leader>.r  :edit ftp://marcus/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'b  :edit scp://macbook/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'d  :edit scp://m75q/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'m  :edit scp://m625q/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'n  :edit scp://t14/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'p  :edit scp://prinzipal/ <bar> call NetrwToggle()<cr>
+nnoremap <silent>   <leader>'r  :edit ftp://marcus/ <bar> call NetrwToggle()<cr>
