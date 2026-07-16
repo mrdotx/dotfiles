@@ -1,14 +1,14 @@
 # path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/wallpaper.service
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:41:32+0200
+# date:   2026-07-16T04:58:19+0200
 
 [Unit]
 Description=set wallpaper
 
 [Service]
 Type=oneshot
-ExecStart=%h/.local/share/repos/shell/wallpaper.sh
+ExecStart=%h/Projects/repos/shell/wallpaper.sh
 
 [Install]
 WantedBy=i3.target
