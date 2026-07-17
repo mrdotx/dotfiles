@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/reload.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/reload.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-06-26T03:35:13+0200
+" date:   2026-07-17T02:31:14+0200
 
 " if tmux is running reload tmux config whenever the tmux config is updated
 autocmd BufWritePost *.config/tmux/tmux.conf

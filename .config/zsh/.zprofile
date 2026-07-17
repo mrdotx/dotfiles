@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/zsh/.zprofile
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/zsh/.zprofile
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:44:20+0200
+# date:   2026-07-17T02:37:18+0200
 
 systemctl -q is-active multi-user.target \
     && [ -z "$SSH_CONNECTION" ] \

@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-15T03:30:02+0200
+" date:   2026-07-17T02:29:24+0200
 
 set timeoutlen=500                  " by default timeoutlen is 1000 ms
 

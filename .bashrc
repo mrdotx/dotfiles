@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.bashrc
+# path:   /home/klassiker/Projects/repos/dotfiles/.bashrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-02-28T08:34:54+0100
+# date:   2026-07-17T02:23:57+0200
 
 # if shell is not running interactive, break up
 tty -s \

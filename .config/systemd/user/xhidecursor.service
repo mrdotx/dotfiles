@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/xhidecursor.service
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/systemd/user/xhidecursor.service
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:41:39+0200
+# date:   2026-07-17T02:34:57+0200
 
 [Unit]
 Description=xhidecursor to remove mouse cursor on keypress

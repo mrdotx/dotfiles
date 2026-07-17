@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/polybar
+! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources.d/polybar
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2025-08-05T05:43:00+0200
+! date:   2026-07-17T02:36:08+0200
 
 Polybar.background: OPACITY1
 Polybar.foreground: WHITE0

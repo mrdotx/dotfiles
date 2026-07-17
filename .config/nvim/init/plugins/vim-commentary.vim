@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-commentary.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/vim-commentary.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:30:23+0200
+" date:   2026-07-17T02:29:17+0200
 
 " correct commenting for json
 autocmd FileType json syntax match Comment +\/\/.\+$+

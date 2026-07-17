@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-04-23T05:19:46+0200
+" date:   2026-07-17T02:31:10+0200
 
 let g:plugged_dir='~/.local/share/nvim/plugged/'
 let g:plugged_config_dir='~/.config/nvim/init/plugins/'

@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/cmus/rc
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/cmus/rc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2025-08-05T05:26:18+0200
+# date:   2026-07-17T02:25:29+0200
 
 set auto_expand_albums_follow=false
 set auto_expand_albums_search=false

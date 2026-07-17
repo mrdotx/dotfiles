@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/newsboat/urls
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-08T04:56:45+0200
+# date:   2026-07-17T02:27:58+0200
 
 # queries
 "query:┌─unread:unread = \"yes\""

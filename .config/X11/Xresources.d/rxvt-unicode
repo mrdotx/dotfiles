@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
+! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources.d/rxvt-unicode
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2026-03-01T06:30:14+0100
+! date:   2026-07-17T02:36:12+0200
 
 URxvt.font:                        xft:FONT0, \
                                    xft:FONT1, \

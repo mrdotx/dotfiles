@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/indentLine.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/indentLine.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-29T04:32:29+0200
+" date:   2026-07-17T02:29:08+0200
 
 "let g:indentLine_enabled=0
 let g:indentLine_char='┆'

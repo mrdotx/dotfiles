@@ -1,8 +1,8 @@
 """
-path:   /home/klassiker/.local/share/repos/dotfiles/.config/qutebrowser/config.py
+path:   /home/klassiker/Projects/repos/dotfiles/.config/qutebrowser/config.py
 author: klassiker [mrdotx]
 url:    https://github.com/mrdotx/dotfiles
-date:   2026-05-19T05:20:33+0200
+date:   2026-07-17T02:33:13+0200
 """
 
 ## Documentation:

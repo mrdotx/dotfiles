@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources.d/xft
+! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources.d/xft
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2026-06-24T03:53:23+0200
+! date:   2026-07-17T02:36:37+0200
 
 ! fonts
 #define FONT0  DejaVuSansM Nerd Font:pixelsize=16

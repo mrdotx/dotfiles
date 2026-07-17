@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/vim-gitgutter.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/vim-gitgutter.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-12-21T06:21:53+0100
+" date:   2026-07-17T02:29:20+0200
 
 let g:gitgutter_enabled=1
 let g:gitgutter_map_keys=0

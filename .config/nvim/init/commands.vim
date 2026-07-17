@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/commands.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/commands.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2025-08-05T05:32:25+0200
+" date:   2026-07-17T02:30:50+0200
 
 " write current buffer as root
 command W :silent execute 'w !$EXEC_AS_USER tee ' .

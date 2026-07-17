@@ -1,7 +1,7 @@
--- path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/plugins/nvim-highlight-colors.lua
+-- path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/nvim-highlight-colors.lua
 -- author: klassiker [mrdotx]
 -- url:    https://github.com/mrdotx/dotfiles
--- date:   2025-08-28T04:27:26+0200
+-- date:   2026-07-17T02:29:14+0200
 
 require("nvim-highlight-colors").setup {
     -- Render style

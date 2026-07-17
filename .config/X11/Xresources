@@ -1,7 +1,7 @@
-! path:   /home/klassiker/.local/share/repos/dotfiles/.config/X11/Xresources
+! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2025-08-05T05:43:41+0200
+! date:   2026-07-17T02:36:52+0200
 
 ! transparency
 #define ALPHA           0.90

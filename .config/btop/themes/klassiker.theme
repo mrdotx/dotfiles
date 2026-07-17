@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/btop/themes/klassiker.theme
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/btop/themes/klassiker.theme
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-01-03T05:57:14+0100
+# date:   2026-07-17T02:25:13+0200
 
 # Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal
 # "#RRGGBB", "#BW" or "0-255 0-255 0-255"

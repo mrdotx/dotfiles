@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/wacom.service
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/systemd/user/wacom.service
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/wacom
-# date:   2026-06-12T05:44:14+0200
+# date:   2026-07-17T02:34:47+0200
 
 [Unit]
 Description=configure wacom tablet

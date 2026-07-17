@@ -1,8 +1,8 @@
 /*
- * path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/templates/c.tpl
+ * path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/templates/c.tpl
  * author: klassiker [mrdotx]
  * url:    https://github.com/mrdotx/<++>
- * date:   2025-08-05T05:30:48+0200
+ * date:   2026-07-17T02:29:37+0200
  */
 
 #include <stdio.h>

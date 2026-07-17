@@ -1,8 +1,8 @@
 """
-path:   /home/klassiker/.local/share/repos/dotfiles/.config/ranger/colorschemes/klassiker.py
+path:   /home/klassiker/Projects/repos/dotfiles/.config/ranger/colorschemes/klassiker.py
 author: klassiker [mrdotx]
 url:    https://github.com/mrdotx/dotfiles
-date:   2025-08-05T05:40:43+0200
+date:   2026-07-17T02:33:33+0200
 """
 
 from __future__ import (absolute_import, division, print_function)

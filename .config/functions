@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/functions
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/functions
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-01-22T06:49:48+0100
+# date:   2026-07-17T02:37:31+0200
 
 # ranger (use ram as cache and change directory on exit)
 ranger_cd() {

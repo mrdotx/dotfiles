@@ -1,7 +1,7 @@
-# path:   /home/klassiker/.local/share/repos/dotfiles/.config/systemd/user/i3_defaults.service
+# path:   /home/klassiker/Projects/repos/dotfiles/.config/systemd/user/i3_defaults.service
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-16T04:58:15+0200
+# date:   2026-07-17T02:34:30+0200
 
 [Unit]
 Description=set i3 defaults

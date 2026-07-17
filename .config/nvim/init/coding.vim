@@ -1,7 +1,7 @@
-" path:   /home/klassiker/.local/share/repos/dotfiles/.config/nvim/init/coding.vim
+" path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/coding.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-15T03:29:39+0200
+" date:   2026-07-17T02:30:32+0200
 
 " general
 set autoindent                      " indent when moving to the next line
