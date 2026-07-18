@@ -3,7 +3,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/ranger/scope.sh
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:33:53+0200
+# date:   2026-07-18T03:56:54+0200
 
 # exit | function   | action of ranger
 
@@ -32,6 +32,14 @@ preview_image="$5"
 # file identification
 mime_type="$(file --dereference --brief --mime-type "$file_path")"
 file_extension="$(printf "%s" "${file_path##*.}" | tr '[:upper:]' '[:lower:]')"
+
+# WORKAROUND: mime types not determined by file
+case $file_extension in
+    ttf | otf) # last working file version 5.47
+        [ "$mime_type" = "application/octet-stream" ] \
+            && mime_type="font/"
+        ;;
+esac
 
 handle_image() {
     case "$mime_type" in
