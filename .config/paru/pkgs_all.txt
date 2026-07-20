@@ -62,6 +62,7 @@ cifs-utils
 cinfo
 clang
 clucene
+cmark-gfm
 cmus
 colord-gtk
 colord-gtk-common
