@@ -91,6 +91,7 @@ desktop-file-utils
 device-mapper
 diffutils
 ding-libs
+dkms
 dmidecode
 dosfstools
 double-conversion
@@ -502,6 +503,7 @@ linux-firmware-other
 linux-firmware-radeon
 linux-firmware-realtek
 linux-firmware-whence
+linux-headers
 linux-lts
 lirc
 litehtml0.9
@@ -592,6 +594,7 @@ p8-platform
 pacman
 pacman-contrib
 pacman-mirrorlist
+pahole
 pam
 pam-gnupg-git
 pambase
@@ -765,7 +768,7 @@ verdict
 vid.stab
 virtualbox
 virtualbox-guest-iso
-virtualbox-host-modules-arch
+virtualbox-host-dkms
 vmaf
 vorbis-tools
 vulkan-icd-loader

@@ -57,6 +57,7 @@ libreoffice-fresh
 libva-utils
 linux
 linux-firmware
+linux-headers
 linux-lts
 logrotate
 losslesscut-bin
@@ -121,6 +122,7 @@ usbutils
 ventoy-bin
 virtualbox
 virtualbox-guest-iso
+virtualbox-host-dkms
 vorbis-tools
 vulkan-radeon
 w3m
