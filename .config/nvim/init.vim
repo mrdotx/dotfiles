@@ -1,7 +1,7 @@
 " path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-17T02:31:32+0200
+" date:   2026-07-29T03:19:08+0200
 
 let g:init_config_dir='~/.config/nvim/init/'
 
@@ -68,12 +68,16 @@ function! SourceConfig(file)
     endif
 endfunction
 
-call SourceConfig('commands.vim')
-call SourceConfig('reload.vim')
-call SourceConfig('encrypt.vim')
-call SourceConfig('header.vim')
-call SourceConfig('plugins.vim')
-call SourceConfig('netrw.vim')
-call SourceConfig('coding.vim')
-call SourceConfig('templates.vim')
-call SourceConfig('keybindings.vim')
+for file in [
+            \ 'commands.vim',
+            \ 'reload.vim',
+            \ 'encrypt.vim',
+            \ 'header.vim',
+            \ 'plugins.vim',
+            \ 'netrw.vim',
+            \ 'coding.vim',
+            \ 'templates.vim',
+            \ 'keybindings.vim'
+        \ ]
+    call SourceConfig(file)
+endfor
