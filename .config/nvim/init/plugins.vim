@@ -1,7 +1,7 @@
 " path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-17T02:31:10+0200
+" date:   2026-07-29T03:19:22+0200
 
 let g:plugged_dir='~/.local/share/nvim/plugged/'
 let g:plugged_config_dir='~/.config/nvim/init/plugins/'
@@ -28,11 +28,11 @@ call plug#begin(g:plugged_dir)
 call plug#end()
 
 " if plugin directory exists source config file
-function! SourcePlugin(action, plugin_name)
-    let l:plugin=g:plugged_dir.a:plugin_name
-    let l:config_name=split(a:plugin_name, '\.')
+function! SourcePlugin(type, name)
+    let l:plugin=g:plugged_dir.a:name
+    let l:config_name=split(a:name, '\.')
     let l:config=g:plugged_config_dir.l:config_name[0]
-    if a:action=='lua'
+    if a:type=='lua'
         let l:config=l:config.'.lua'
     else
         let l:config=l:config.'.vim'
@@ -48,13 +48,17 @@ function! SourcePlugin(action, plugin_name)
     endif
 endfunction
 
-call SourcePlugin('vim', 'lightline.vim')
-call SourcePlugin('vim', 'goyo.vim')
-call SourcePlugin('lua', 'nvim-highlight-colors')
-call SourcePlugin('vim', 'vim-which-key')
-call SourcePlugin('vim', 'indentLine')
-call SourcePlugin('vim', 'vim-commentary')
-call SourcePlugin('vim', 'vim-gitgutter')
-call SourcePlugin('vim', 'coc.nvim')
-call SourcePlugin('vim', 'hexmode')
-call SourcePlugin('vim', 'vimwiki')
+for [type, name] in [
+            \ ['vim', 'lightline.vim'],
+            \ ['vim', 'goyo.vim'],
+            \ ['lua', 'nvim-highlight-colors'],
+            \ ['vim', 'vim-which-key'],
+            \ ['vim', 'indentLine'],
+            \ ['vim', 'vim-commentary'],
+            \ ['vim', 'vim-gitgutter'],
+            \ ['vim', 'coc.nvim'],
+            \ ['vim', 'hexmode'],
+            \ ['vim', 'vimwiki']
+        \ ]
+    call SourcePlugin(type, name)
+endfor
