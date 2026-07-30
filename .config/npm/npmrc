@@ -1,9 +1,11 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/npm/npmrc
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:28:03+0200
+# date:   2026-07-30T02:22:55+0200
 
 prefix=${XDG_DATA_HOME}/npm
 cache=${XDG_CACHE_HOME}/npm
 init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 shell=/bin/sh
+logs-max=0
+loglevel=silent
