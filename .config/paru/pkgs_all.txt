@@ -506,7 +506,7 @@ linux-firmware-whence
 linux-headers
 linux-lts
 lirc
-litehtml0.9
+litehtml
 llvm-libs
 lm_sensors
 lmdb
