@@ -141,6 +141,7 @@ gdbm
 gdk-pixbuf2
 gegl
 gettext
+gexiv2-common
 ghostscript
 giflib
 gimp-plugin-gmic
