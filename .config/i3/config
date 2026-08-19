@@ -1,7 +1,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:27:09+0200
+# date:   2026-08-19T03:44:46+0200
 
 # variables
 ###########
@@ -21,13 +21,14 @@ set $resize 10 px or 5 ppt
 set $720p resize set 1280 720
 
 # colors (xresources)
-set_from_resource $black     i3wm.background
-set_from_resource $white     i3wm.foreground
-set_from_resource $primary   i3wm.primary
-set_from_resource $secondary i3wm.secondary
-set_from_resource $grey0     i3wm.grey0
-set_from_resource $grey1     i3wm.grey1
-set_from_resource $red       i3wm.red
+set_from_resource $black     i3wm.background #000000
+set_from_resource $white     i3wm.foreground #ffffff
+set_from_resource $primary   i3wm.primary    #4185d7
+set_from_resource $secondary i3wm.secondary  #1f5393
+set_from_resource $grey0     i3wm.grey0      #2b2b2b
+set_from_resource $grey1     i3wm.grey1      #585858
+set_from_resource $red       i3wm.red        #df2800
+set_from_resource $opacity   i3wm.opacity    #000000e6
 
 # config
 ########
