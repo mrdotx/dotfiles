@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources.d/i3wm
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2026-07-17T02:36:02+0200
+! date:   2026-08-19T03:43:48+0200
 
 i3wm.background: BLACK0
 i3wm.foreground: WHITE0
@@ -10,5 +10,6 @@ i3wm.secondary:  SECONDARY
 i3wm.grey0:      GREY0
 i3wm.grey1:      GREY1
 i3wm.red:        RED0
+i3wm.opacity:    OPACITY2
 
 ! vim:ft=xdefaults
