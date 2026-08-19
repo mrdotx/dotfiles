@@ -1,45 +1,62 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:27:14+0200
+# date:   2026-08-19T03:47:02+0200
 
 general {
+        output_format = "i3bar"
         colors = true
         interval = 5
 }
 
-order += "wireless _first_"
-order += "volume master"
-#order += "battery 0"
-order += "time"
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "disk /srv"
 
-wireless _first_ {
+cpu_temperature 0 {
         color_good = "#ffffff"
         color_degraded = "#b0b200"
         color_bad = "#df2800"
-        format_up = " %quality %essid %bitrate %frequency"
-        format_down = " disconnected"
+        path = "/sys/class/hwmon/hwmon1/temp1_input"
+        max_threshold = 90
+        format = " %degrees °C"
 }
 
-volume master {
-        format = " %volume"
-        format_muted = ""
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+cpu_usage {
+        color_good = "#ffffff"
+        color_degraded = "#b0b200"
+        color_bad = "#df2800"
+        max_threshold = 95
+        degraded_threshold = 85
+        format = "󰍛 %usage"
 }
 
-battery 0 {
-        status_bat = ""
-        status_chr = ""
-        status_unk = "?"
-        status_full = ""
-        last_full_capacity = true
-        format = "%status %percentage %remaining"
+memory {
+        color_good = "#ffffff"
+        color_degraded = "#b0b200"
+        color_bad = "#df2800"
+        format = "󰘚 %used/%total"
+        format_degraded = "󰘚 %available"
+        threshold_degraded = "10%"
+        threshold_critical = "5%"
 }
 
-time {
-        format = " %a %d.%m.%Y %k:%M"
+disk "/" {
+        color_good = "#ffffff"
+        color_degraded = "#b0b200"
+        color_bad = "#df2800"
+        low_threshold = 25
+        format = "󰋊 %used/%total"
+}
+
+disk "/srv" {
+        color_good = "#ffffff"
+        color_degraded = "#b0b200"
+        color_bad = "#df2800"
+        low_threshold = 25
+        format = "󰋊 %used/%total"
 }
 
 # vim:ft=i3config
