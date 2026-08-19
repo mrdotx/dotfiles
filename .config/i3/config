@@ -1,7 +1,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/i3/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-08-19T03:44:46+0200
+# date:   2026-08-19T03:50:09+0200
 
 # variables
 ###########
@@ -94,7 +94,7 @@ include config.d/mode_notes.conf
 include config.d/mode_services.conf
 include config.d/mode_ssh.conf
 
-# status bar
+# status bar (i3status required)
 #include config.d/status_bar.conf
 
 # autostart
