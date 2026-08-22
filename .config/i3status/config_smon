@@ -1,46 +1,46 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/i3status/config_smon
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-08-19T03:47:05+0200
+# date:   2026-08-22T02:48:00+0200
 
 general {
-        output_format = "i3bar"
-        colors = true
-        interval = 5
+    output_format = "i3bar"
+    colors = true
+    color_good = "#ffffff"
+    color_degraded = "#b0b200"
+    color_bad = "#df2800"
+    interval = 5
 }
 
 order += "wireless _first_"
 order += "volume master"
-#order += "battery 0"
+order += "battery all"
 order += "time"
 
 wireless _first_ {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        format_up = "󰤨 %quality %bitrate"
-        format_down = "󰤭"
+    format_up = "󰤨 %quality %bitrate"
+    format_down = "󰤭"
 }
 
 volume master {
-        format = "󰕾 %volume"
-        format_muted = "󰝟"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
+    format = "󰕾 %volume"
+    format_muted = "󰝟"
+    device = "default"
+    mixer = "PCM"
+    mixer_idx = 0
 }
 
-battery 0 {
-        status_bat = "󰂌"
-        status_chr = "󰂄"
-        status_unk = "󰂑"
-        status_full = "󰁹"
-        last_full_capacity = true
-        format = "%status %percentage %remaining"
+battery all {
+    status_bat = "󰂌"
+    status_chr = "󰂄"
+    status_unk = "󰂑"
+    status_full = "󰁹"
+    last_full_capacity = true
+    format = "%status %percentage %remaining"
+    format_down = "󱉝"
+    low_threshold = 20
 }
 
 time {
-        format = "󰥔 %a %d.%m.%Y %H:%M"
+    format = "󰥔 %a %d.%m.%Y %H:%M"
 }
-
-# vim:ft=i3config
