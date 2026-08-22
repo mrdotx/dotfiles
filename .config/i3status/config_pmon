@@ -1,62 +1,42 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/i3status/config_pmon
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-08-19T03:47:02+0200
+# date:   2026-08-22T02:47:55+0200
 
 general {
-        output_format = "i3bar"
-        colors = true
-        interval = 5
+    output_format = "i3bar"
+    colors = true
+    color_good = "#ffffff"
+    color_degraded = "#b0b200"
+    color_bad = "#df2800"
+    interval = 5
 }
 
 order += "cpu_temperature 0"
 order += "cpu_usage"
 order += "memory"
 order += "disk /"
-order += "disk /srv"
 
 cpu_temperature 0 {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        path = "/sys/class/hwmon/hwmon1/temp1_input"
-        max_threshold = 90
-        format = " %degrees °C"
+    path = "/sys/class/hwmon/hwmon1/temp1_input"
+    max_threshold = 90
+    format = " %degrees °C"
 }
 
 cpu_usage {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        max_threshold = 95
-        degraded_threshold = 85
-        format = "󰍛 %usage"
+    max_threshold = 95
+    degraded_threshold = 85
+    format = "󰍛 %usage"
 }
 
 memory {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        format = "󰘚 %used/%total"
-        format_degraded = "󰘚 %available"
-        threshold_degraded = "10%"
-        threshold_critical = "5%"
+    format = "󰘚 %used/%total"
+    format_degraded = "󰘚 %available"
+    threshold_degraded = "10%"
+    threshold_critical = "5%"
 }
 
 disk "/" {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        low_threshold = 25
-        format = "󰋊 %used/%total"
+    low_threshold = 25
+    format = "󰋊 %used/%total"
 }
-
-disk "/srv" {
-        color_good = "#ffffff"
-        color_degraded = "#b0b200"
-        color_bad = "#df2800"
-        low_threshold = 25
-        format = "󰋊 %used/%total"
-}
-
-# vim:ft=i3config
