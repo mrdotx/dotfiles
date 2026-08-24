@@ -3,7 +3,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/nsxiv/exec/image-info
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:28:12+0200
+# date:   2026-08-24T03:45:58+0200
 
 # $1: path to image file (as provided by the user)
 # $2: image width
@@ -12,7 +12,7 @@
 
 printf "» %s │ %s │ %s | %dx%d «" \
     "$(basename "$1")" \
-    "$(date '+%d.%m.%Y %H:%M' -r "$1")" \
+    "$(date '+%d.%m.%Y %H:%M:%S' -r "$1")" \
     "$(du -Hh "$1" | cut -f1)" \
     "$2" \
     "$3"
