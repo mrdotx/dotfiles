@@ -607,6 +607,7 @@ patch
 pciutils
 pcre
 pcre2
+pdfio
 perl
 perl-error
 perl-image-exiftool
@@ -662,7 +663,6 @@ python-typing_extensions
 python-urllib3
 python-webencodings
 python-yaml
-qpdf
 qt5-base
 qt5-svg
 qt5-translations
