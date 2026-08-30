@@ -57,6 +57,7 @@ cblas
 cdparanoia
 cdrtools
 cdw
+cfitsio
 chromaprint
 cifs-utils
 cinfo
@@ -277,6 +278,7 @@ libcdio
 libcdio-paranoia
 libcdr
 libcec
+libcgif
 libclc
 libcloudproviders
 libcmis
@@ -442,6 +444,7 @@ libva
 libva-utils
 libvdpau
 libverto
+libvips
 libvisio
 libvorbis
 libvpl
