@@ -193,6 +193,7 @@ gupnp-igd
 gzip
 harfbuzz
 harfbuzz-icu
+hdf5
 hibiscus
 hicolor-icon-theme
 hidapi
@@ -254,6 +255,7 @@ leptonica
 less
 lib2geom
 libabw
+libaec
 libao
 libarchive
 libasan
@@ -347,6 +349,7 @@ liblzf
 libmad
 libmakepkg-dropins
 libmanette
+libmatio
 libmd
 libmfx
 libmicrohttpd
