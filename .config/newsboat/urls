@@ -1,7 +1,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-07-17T02:27:58+0200
+# date:   2026-09-02T05:11:01+0200
 
 # queries
 "query:┌─unread:unread = \"yes\""
@@ -12,20 +12,19 @@
 "query:│ ├─Trump:title =~ \"Trump\""
 "query:│ └─Ukraine:title =~ \"Ukraine\""
 "query:├─all:tags != \"\""
-"query:│ ├─news:tags # \"news\""
-"query:│ │ ├─international:tags # \"news/international\""
-"query:│ │ └─local:tags # \"news/local\""
-"query:│ ├─tech:tags # \"tech\""
-"query:│ ├─linux:tags # \"linux\""
-"query:│ │ ├─tools:tags # \"linux/tools\""
-"query:│ │ └─suckless:tags # \"linux/suckless\""
-"query:│ ├─youtube:tags # \"youtube\""
-"query:│ │ ├─linux:tags # \"youtube/linux\""
-"query:│ │ ├─science:tags # \"youtube/science\""
-"query:│ │ └─tech:tags # \"youtube/tech\""
-"query:│ ├─podcast:tags # \"podcast\""
-"query:│ │ ├─dlf:tags # \"podcast/dlf\""
-"query:│ │ └─hr-iNFO:tags # \"podcast/hr-iNFO\""
-"query:│ └─other:tags # \"other\""
+"query:│ ├─10 - news:tags # \"news\""
+"query:│ │ ├─11 - international:tags # \"news (international)\""
+"query:│ │ └─12 - local:tags # \"news (local)\""
+"query:│ ├─20 - tech:tags # \"tech\""
+"query:│ ├─30 - linux:tags # \"linux\""
+"query:│ │ ├─31 - tools:tags # \"linux (tools)\""
+"query:│ │ ├─32 - pkgs:tags # \"linux (pkgs)\""
+"query:│ │ └─33 - suckless:tags # \"linux (suckless)\""
+"query:│ ├─40 - android:tags # \"android\""
+"query:│ ├─70 - youtube:tags # \"youtube\""
+"query:│ │ ├─71 - linux:tags # \"youtube (linux)\""
+"query:│ │ ├─72 - science:tags # \"youtube (science)\""
+"query:│ │ └─73 - tech:tags # \"youtube (tech)\""
+"query:│ └─90 - other:tags # \"other\""
 
 # vim:ft=config
