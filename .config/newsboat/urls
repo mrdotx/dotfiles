@@ -1,30 +1,35 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-09-02T05:11:01+0200
+# date:   2026-09-03T05:29:25+0200
 
 # queries
 "query:┌─unread:unread = \"yes\""
 "query:├─keywords:title =~ \"AfD|Brexit|Corona|COVID|Trump|Ukraine\""
-"query:│ ├─Afd:title =~ \"AfD\""
+"query:│ ├─AfD:title =~ \"AfD\""
 "query:│ ├─Brexit:title =~ \"Brexit\""
 "query:│ ├─Corona:title =~ \"Corona|COVID\""
 "query:│ ├─Trump:title =~ \"Trump\""
 "query:│ └─Ukraine:title =~ \"Ukraine\""
 "query:├─all:tags != \"\""
-"query:│ ├─10 - news:tags # \"news\""
-"query:│ │ ├─11 - international:tags # \"news (international)\""
-"query:│ │ └─12 - local:tags # \"news (local)\""
-"query:│ ├─20 - tech:tags # \"tech\""
-"query:│ ├─30 - linux:tags # \"linux\""
-"query:│ │ ├─31 - tools:tags # \"linux (tools)\""
-"query:│ │ ├─32 - pkgs:tags # \"linux (pkgs)\""
-"query:│ │ └─33 - suckless:tags # \"linux (suckless)\""
-"query:│ ├─40 - android:tags # \"android\""
-"query:│ ├─70 - youtube:tags # \"youtube\""
-"query:│ │ ├─71 - linux:tags # \"youtube (linux)\""
-"query:│ │ ├─72 - science:tags # \"youtube (science)\""
-"query:│ │ └─73 - tech:tags # \"youtube (tech)\""
-"query:│ └─90 - other:tags # \"other\""
+"query:│ ├─10 - news:tags # \"10\""
+"query:│ ├─11 - news (international):tags # \"11\""
+"query:│ ├─12 - news (local):tags # \"12\""
+"query:│ ├─20 - tech:tags # \"20\""
+"query:│ ├─30 - linux:tags # \"30\""
+"query:│ ├─31 - linux (tools):tags # \"31\""
+"query:│ ├─32 - linux (pkgs):tags # \"32\""
+"query:│ ├─33 - linux (suckless):tags # \"33\""
+"query:│ ├─40 - android:tags # \"40\""
+"query:│ ├─70 - youtube:tags # \"70\""
+"query:│ ├─71 - youtube (science):tags # \"71\""
+"query:│ ├─72 - youtube (create):tags # \"72\""
+"query:│ ├─73 - youtube (restore):tags # \"73\""
+"query:│ ├─74 - youtube (retro):tags # \"74\""
+"query:│ ├─75 - youtube (repair):tags # \"75\""
+"query:│ ├─76 - youtube (tech):tags # \"76\""
+"query:│ ├─77 - youtube (linux):tags # \"77\""
+"query:│ ├─78 - youtube (music):tags # \"78\""
+"query:│ └─90 - other:tags # \"90\""
 
 # vim:ft=config
