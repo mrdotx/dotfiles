@@ -1,16 +1,16 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/newsboat/urls
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-09-03T05:29:25+0200
+# date:   2026-09-06T04:51:35+0200
 
 # queries
 "query:┌─unread:unread = \"yes\""
-"query:├─keywords:title =~ \"AfD|Brexit|Corona|COVID|Trump|Ukraine\""
-"query:│ ├─AfD:title =~ \"AfD\""
-"query:│ ├─Brexit:title =~ \"Brexit\""
-"query:│ ├─Corona:title =~ \"Corona|COVID\""
-"query:│ ├─Trump:title =~ \"Trump\""
-"query:│ └─Ukraine:title =~ \"Ukraine\""
+"query:├─keywords:title =~ \"afd|russia|russland|sanction|sanktion|trump|ukraine\""
+"query:│ ├─AfD:title =~ \"afd\""
+"query:│ ├─Russia:title =~ \"russia|russland\""
+"query:│ ├─Sanction:title =~ \"sanction|sanktion\""
+"query:│ ├─Trump:title =~ \"trump\""
+"query:│ └─Ukraine:title =~ \"ukraine\""
 "query:├─all:tags != \"\""
 "query:│ ├─10 - news:tags # \"10\""
 "query:│ ├─11 - news (international):tags # \"11\""
