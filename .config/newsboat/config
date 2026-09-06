@@ -1,7 +1,7 @@
 # path:   /home/klassiker/Projects/repos/dotfiles/.config/newsboat/config
 # author: klassiker [mrdotx]
 # url:    https://github.com/mrdotx/dotfiles
-# date:   2026-09-04T05:53:55+0200
+# date:   2026-09-06T04:52:27+0200
 
 # general
 refresh-on-startup yes
@@ -37,31 +37,31 @@ macro w set browser "firefox %u"; open-in-browser; set browser "link_handler.sh 
 macro W set browser "$TERMINAL -e w3m.sh %u &"; open-in-browser; set browser "link_handler.sh %u" -- "open url with w3m.sh in new terminal"
 macro y set browser "printf '%u' | xsel -b"; open-in-browser; set browser "link_handler.sh %u" -- "copy url to clipboard"
 
-# colors                            fg          bg      style
-color background                    white       default
-color listnormal                    blue        default bold
-color listfocus                     cyan        blue    bold
-color listnormal_unread             red         default
-color listfocus_unread              magenta     blue    bold
-color title                         cyan        default
-color info                          cyan        default
-color hint-key                      white       default
-color hint-keys-delimiter           cyan        default
-color hint-separator                cyan        default
-color hint-description              cyan        default
-color article                       white       default
-color end-of-text-marker            cyan        default
+# colors                                                fg          bg      style
+color background                                        white       default
+color listnormal                                        blue        default bold
+color listfocus                                         cyan        blue    bold
+color listnormal_unread                                 red         default
+color listfocus_unread                                  magenta     blue    bold
+color title                                             cyan        default
+color info                                              cyan        default
+color hint-key                                          white       default
+color hint-keys-delimiter                               cyan        default
+color hint-separator                                    cyan        default
+color hint-description                                  cyan        default
+color article                                           white       default
+color end-of-text-marker                                cyan        default
 
-# Highlight                         fg          bg      style
-search-highlight-colors             black       yellow  bold
+# Highlight                                             fg          bg      style
+search-highlight-colors                                 black       yellow  bold
 
-highlight all "Afd"                 cyan        default underline   bold
-highlight all "Brexit"              cyan        default underline
-highlight all "Corona|COVID"        magenta     default underline
-highlight all "Trump"               magenta     default underline   bold
-highlight all "Ukraine"             yellow      default underline   bold
+highlight all "afd"                                     cyan        default underline   bold
+highlight all "russia|russland"                         cyan        default underline
+highlight all "sanction|sanktion"                       magenta     default underline
+highlight all "trump"                                   magenta     default underline   bold
+highlight all "ukraine"                                 yellow      default underline   bold
 
-highlight article "^(Feed|Titel|Author|Link|Datum):"    blue    default underline   bold
+highlight article "^(feed|titel|author|link|datum):"    blue    default underline   bold
 
 # titles
 feedlist-title-format "%N %V | %u/%t | Feeds"
