@@ -599,7 +599,6 @@ opusfile
 orc
 osm-gps-map
 p11-kit
-p8-platform
 pacman
 pacman-contrib
 pacman-mirrorlist
