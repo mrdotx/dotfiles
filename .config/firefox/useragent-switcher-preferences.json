@@ -2,7 +2,7 @@
   "blacklist": [],
   "custom": {},
   "json-forced": false,
-  "json-guid": "dba6cb05-a34b-48ec-b5ef-43c5e3328522",
+  "json-guid": "d23c69cd-3946-4d79-9bb1-6d915248f9ee",
   "last-update": 1787999377206,
   "mode": "blacklist",
   "parser": {},
@@ -31,7 +31,7 @@
     "gitlab.com/users/sign_in",
     "challenges.cloudflare.com"
   ],
-  "remote-address": "https://github.com/mrdotx/dotfiles/blob/master/.config/firefox/useragent-switcher-preferences.json",
+  "remote-address": "https://raw.githubusercontent.com/mrdotx/dotfiles/refs/heads/master/.config/firefox/useragent-switcher-preferences.json",
   "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:${browser.version|ua-parser}) Gecko/20100101 Firefox/${browser.version|ua-parser}",
   "user-styling": "",
   "userAgentData": false,
