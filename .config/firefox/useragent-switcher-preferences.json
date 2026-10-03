@@ -1,0 +1,39 @@
+{
+  "blacklist": [],
+  "custom": {},
+  "json-forced": false,
+  "json-guid": "dba6cb05-a34b-48ec-b5ef-43c5e3328522",
+  "last-update": 1787999377206,
+  "mode": "blacklist",
+  "parser": {},
+  "popular-browsers": [
+    "Internet Explorer",
+    "Safari",
+    "Chrome",
+    "Firefox",
+    "Opera",
+    "Edge",
+    "Vivaldi"
+  ],
+  "popular-oss": [
+    "Windows",
+    "Mac OS",
+    "Linux",
+    "Chromium OS",
+    "Android"
+  ],
+  "popup-browser": "Firefox",
+  "protected": [
+    "google.com/recaptcha",
+    "gstatic.com/recaptcha",
+    "accounts.google.com",
+    "accounts.youtube.com",
+    "gitlab.com/users/sign_in",
+    "challenges.cloudflare.com"
+  ],
+  "remote-address": "https://github.com/mrdotx/dotfiles/blob/master/.config/firefox/useragent-switcher-preferences.json",
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:${browser.version|ua-parser}) Gecko/20100101 Firefox/${browser.version|ua-parser}",
+  "user-styling": "",
+  "userAgentData": false,
+  "whitelist": []
+}
