@@ -1,11 +1,11 @@
 {
 	"name": "Vimium C",
-	"@time": "29.8.2026, 06:57:42",
-	"time": 1787979462025,
+	"@time": "4.10.2026, 05:49:19",
+	"time": 1791085759793,
 	"environment": {
 		"extension": "2.12.3",
 		"platform": "linux",
-		"firefox": 154
+		"firefox": 157
 	},
 	"extAllowList": "# extension id or hostname",
 	"keyMappings": [
@@ -58,7 +58,8 @@
 		"yo: https://www.youtube.com/results?search_query=$s blank=https://www.youtube.com/ YouTube",
 		"tw: https://www.twitch.tv/search?term=$s blank=https://www.twitch.com/ Twitch",
 		"#https://github.com/zedeus/nitter/wiki/Instances",
-		"ni: https://nitter.catsarch.com/search?q=$s blank=https://nitter.catsarch.com/ Nitter (Twitter)",
+		"#https://codeberg.org/mv12star/shitter/wiki/Instances",
+		"ni: https://shi.meowing.de/search?q=$s blank=https://shi.meowing.de/ Nitter (Twitter)",
 		"",
 		"## shopping",
 		"eb: https://www.ebay.de/sch/?_nkw=$s blank=https://www.ebay.de/ eBay",
