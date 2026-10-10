@@ -1,7 +1,7 @@
 {
 	"name": "Vimium C",
-	"@time": "4.10.2026, 05:49:19",
-	"time": 1791085759793,
+	"@time": "10.10.2026, 05:51:07",
+	"time": 1791604267219,
 	"environment": {
 		"extension": "2.12.3",
 		"platform": "linux",
@@ -39,10 +39,10 @@
 		"g: https://www.google.com/search?q=$s blank=https://www.google.com/ Google",
 		"",
 		"## ai",
-		"ai: https://www.ecosia.org/ai-chat?q=$s&origin=search  blank=https://www.ecosia.org/ai-chat Ecosia Mistral",
+		"ai: https://www.ecosia.org/ai-chat?q=$s&origin=search  blank=https://www.ecosia.org/ai-chat Ecosia AI-Chat",
 		"",
 		"## search other",
-		"t: https://www.deepl.com/de/translator/q/en/$s{%20}/de/x/x blank=https://www.deepl.com/ DeepL",
+		"t: https://www.deepl.com/translator#en/de/%s{%20} blank=https://www.deepl.com/ DeepL",
 		"w: https://de.wikipedia.org/w/index.php?search=$s blank=https://www.wikipedia.org/ Wikipedia",
 		"",
 		"## development",
