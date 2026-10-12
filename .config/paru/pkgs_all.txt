@@ -659,8 +659,8 @@ python-psutil
 python-pycparser
 python-pycryptodomex
 python-pyjwt
-python-pyqt5
-python-pyqt5-sip
+python-pyqt6
+python-pyqt6-sip
 python-requests
 python-simplejson
 python-six
