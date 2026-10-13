@@ -320,6 +320,7 @@ libgcc
 libgcrypt
 libgexiv2
 libgfortran
+libgit2
 libglvnd
 libgomp
 libgpg-error
@@ -516,6 +517,7 @@ linux-headers
 linux-lts
 lirc
 litehtml
+llhttp
 llvm-libs
 lm_sensors
 lmdb
@@ -658,6 +660,7 @@ python-pillow
 python-psutil
 python-pycparser
 python-pycryptodomex
+python-pygit2
 python-pyjwt
 python-pyqt6
 python-pyqt6-sip
