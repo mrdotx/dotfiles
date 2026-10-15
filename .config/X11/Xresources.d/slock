@@ -1,7 +1,7 @@
 ! path:   /home/klassiker/Projects/repos/dotfiles/.config/X11/Xresources.d/slock
 ! author: klassiker [mrdotx]
 ! url:    https://github.com/mrdotx/dotfiles
-! date:   2026-07-17T02:36:15+0200
+! date:   2026-10-15T06:08:19+0200
 
 slock.init:         BLACK0
 slock.input:        GREY0
@@ -9,6 +9,6 @@ slock.input.alt:    GREY0
 slock.failed:       RED0
 slock.pam:          PRIMARY
 slock.message:      WHITE0
-slock.message.font: -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso8859-1
+slock.message.font: FONT1:FONTATTR3
 
 ! vim:ft=xdefaults
