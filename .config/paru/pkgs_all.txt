@@ -518,7 +518,9 @@ linux-lts
 lirc
 litehtml
 llhttp
+llvm
 llvm-libs
+llvm-lit
 lm_sensors
 lmdb
 logrotate
