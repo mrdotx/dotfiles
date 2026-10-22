@@ -62,6 +62,7 @@ chromaprint
 cifs-utils
 cinfo
 clang
+clang-libs
 clucene
 cmark-gfm
 cmus
