@@ -30,7 +30,6 @@ exfatprogs
 ffmpegthumbnailer
 firefox
 fzf
-gcr
 gimp-plugin-gmic
 gimp-stripped
 git
