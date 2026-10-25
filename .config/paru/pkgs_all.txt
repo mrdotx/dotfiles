@@ -134,6 +134,7 @@ gawk
 gc
 gcc
 gcc-libs
+gcr
 gd
 gdb
 gdb-common
