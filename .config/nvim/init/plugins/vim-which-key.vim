@@ -1,7 +1,7 @@
 " path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/plugins/vim-which-key.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-17T02:29:24+0200
+" date:   2026-10-26T05:50:27+0100
 
 set timeoutlen=500                  " by default timeoutlen is 1000 ms
 
@@ -37,7 +37,6 @@ let g:main_dict={
     \ ';': 'netrw file explorer',
     \ '''': {
         \ 'name': '+remote',
-        \ 'b': 'macbook',
         \ 'd': 'm75q',
         \ 'm': 'm625q',
         \ 'n': 't14',

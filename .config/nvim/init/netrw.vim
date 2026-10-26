@@ -1,7 +1,7 @@
 " path:   /home/klassiker/Projects/repos/dotfiles/.config/nvim/init/netrw.vim
 " author: klassiker [mrdotx]
 " url:    https://github.com/mrdotx/dotfiles
-" date:   2026-07-17T02:31:07+0200
+" date:   2026-10-26T05:50:11+0100
 
 let g:netrw_banner=0
 let g:netrw_liststyle=3
@@ -68,7 +68,6 @@ augroup END
 " keybindings
 nnoremap <silent>   <leader>;   :call NetrwToggle()<cr>
 
-nnoremap <silent>   <leader>'b  :edit scp://macbook/ <bar> call NetrwToggle()<cr>
 nnoremap <silent>   <leader>'d  :edit scp://m75q/ <bar> call NetrwToggle()<cr>
 nnoremap <silent>   <leader>'m  :edit scp://m625q/ <bar> call NetrwToggle()<cr>
 nnoremap <silent>   <leader>'n  :edit scp://t14/ <bar> call NetrwToggle()<cr>
