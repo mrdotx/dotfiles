@@ -2,7 +2,7 @@
 path:   /home/klassiker/Projects/repos/dotfiles/.config/firefox/userChrome.css
 author: klassiker [mrdotx]
 url:    https://github.com/mrdotx/dotfiles
-date:   2026-10-09T04:23:43+0200
+date:   2026-10-29T05:44:50+0100
 */
 
 /* change the rounded corners (nova) */
@@ -14,6 +14,9 @@ date:   2026-10-09T04:23:43+0200
     --border-radius-large: 4px !important;
     --border-radius-xlarge: 4px !important;
     --border-radius-circle: 8px !important;
+
+    /* drop-down menus */
+    --panel-border-radius: 3px !important;
 }
 
 /* hide original profile from menu-bar and account-menu (nova) */
