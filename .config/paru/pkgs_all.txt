@@ -647,9 +647,7 @@ python-certifi
 python-cffi
 python-charset-normalizer
 python-cryptography
-python-dateutil
 python-discid
-python-fasteners
 python-html5lib
 python-idna
 python-lxml
