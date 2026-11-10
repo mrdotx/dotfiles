@@ -597,6 +597,7 @@ openmp
 openscenegraph
 openssh
 openssl
+openssl-3
 opus
 opusfile
 orc
