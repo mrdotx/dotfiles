@@ -59,6 +59,7 @@ cdrtools
 cdw
 cfitsio
 chromaprint
+chrono-date
 cifs-utils
 cinfo
 clang
@@ -112,6 +113,7 @@ exiv2
 expat
 faad2
 fakeroot
+fast_float
 ffmpeg
 ffmpegthumbnailer
 fftw
@@ -770,6 +772,7 @@ tzdata
 uchardet
 unibilium
 usbutils
+utf8cpp
 util-linux
 util-linux-libs
 v4l-utils
